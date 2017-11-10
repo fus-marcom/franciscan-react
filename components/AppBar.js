@@ -26,7 +26,7 @@ const styles = theme => ({
 })
 
 function ButtonAppBar (props) {
-  const { classes } = props
+  const { classes, toggleDrawer } = props
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -35,6 +35,7 @@ function ButtonAppBar (props) {
             className={classes.menuButton}
             color="contrast"
             aria-label="Menu"
+            onClick={toggleDrawer}
           >
             <MenuIcon />
           </IconButton>
