@@ -3,7 +3,7 @@
 node_modules
 .cache/
 # Build directory
-public/
+.next
 .DS_Store
 yarn-error.log
 .env

@@ -1,13 +1,16 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link from 'next/link'
+import withRoot from '../components/Layout'
 
 const IndexPage = () => (
   <div>
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Link href={'/page'}>
+      <a>Go to page 2</a>
+    </Link>
   </div>
 )
 
-export default IndexPage
+export default withRoot(IndexPage)
