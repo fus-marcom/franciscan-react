@@ -6,13 +6,8 @@ New version of [Franciscan University of Steubenville](https://www.franciscan.ed
 To navigate your way through applications built with Create React App & perform common tasks visit the official guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 ## Contributing
-If you are interested in contributing to the project then checkout this repo. You will need <code>[node](https://nodejs.org/en/)</code> (v7.6 or later) & <code>[npm](https://www.npmjs.com/)</code> installed. You can also use <code>[yarn](https://yarnpkg.com/en/)</code> instead of <code>npm</code>. Now start the process with the following:
-```
-> git clone https://github.com/fus-marcom/bulletin-react.git
-> cd bulletin-react
-> npm install or yarn install
-> npm start or yarn start
-```
+See CONTRUBUTING.md
+
 
 ### Not Familiar with Git?
 You can just download the .zip file. Extract the contents, then move to the project directory, open your terminal, and use:
