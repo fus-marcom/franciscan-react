@@ -20,4 +20,5 @@ Require NODE > 8
 7. Running tests before commit is recommended
 8. Do not commit package-lock.json as we are using yarn.lock
 9. Keep you environment vars in .env file
-10. Happy coding!!
+10. Keep  you master branch up to date
+11. Happy coding!!
