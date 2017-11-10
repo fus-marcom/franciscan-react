@@ -1,7 +1,3 @@
-/*
-JUST ADDED FOR TESTING
-USE RESPONSIVE DRAWER LATER!!!
-*/
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
@@ -19,9 +15,17 @@ const styles = theme => ({
   flex: {
     flex: 1
   },
+  appBar: {
+    background: '#ffffff',
+    borderBottom: `solid 3px #998643`
+  },
   menuButton: {
+    color: `${theme.palette.primary[500]}`,
     marginLeft: -12,
-    marginRight: 20
+    marginRight: 10
+  },
+  headerImage: {
+    maxHeight: '3rem'
   }
 })
 
@@ -29,20 +33,23 @@ function ButtonAppBar (props) {
   const { classes, toggleDrawer } = props
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar className={classes.appBar} position="static">
         <Toolbar>
           <IconButton
             className={classes.menuButton}
-            color="contrast"
             aria-label="Menu"
             onClick={toggleDrawer}
           >
             <MenuIcon />
           </IconButton>
-          <Typography type="title" color="inherit" className={classes.flex}>
-            Title
+          <Typography type="title" component="span" className={classes.flex}>
+            <img
+              className={classes.headerImage}
+              src="https://franciscan.university/cdn/fus-logo.svg"
+              alt=""
+            />
           </Typography>
-          <Button color="contrast">Login</Button>
+          <Button>Login</Button>
         </Toolbar>
       </AppBar>
     </div>
