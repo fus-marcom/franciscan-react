@@ -17,9 +17,9 @@ const theme = createMuiTheme({
       A200: '#21412a',
       A400: '#21412a',
       A700: '#21412a',
-      contrastDefaultColor: 'light',
-    },
-  },
+      contrastDefaultColor: 'light'
+    }
+  }
 })
 
 export default theme

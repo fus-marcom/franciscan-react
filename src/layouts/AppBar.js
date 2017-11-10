@@ -14,18 +14,18 @@ import MenuIcon from 'material-ui-icons/Menu'
 
 const styles = theme => ({
   root: {
-    width: '100%',
+    width: '100%'
   },
   flex: {
-    flex: 1,
+    flex: 1
   },
   menuButton: {
     marginLeft: -12,
-    marginRight: 20,
-  },
+    marginRight: 20
+  }
 })
 
-function ButtonAppBar(props) {
+function ButtonAppBar (props) {
   const { classes } = props
   return (
     <div className={classes.root}>
@@ -49,7 +49,7 @@ function ButtonAppBar(props) {
 }
 
 ButtonAppBar.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 }
 
 export default withStyles(styles)(ButtonAppBar)
