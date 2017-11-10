@@ -3369,6 +3369,14 @@ gatsby-module-loader@^1.0.7:
     babel-runtime "^6.26.0"
     loader-utils "^0.2.16"
 
+gatsby-plugin-material-ui@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-material-ui/-/gatsby-plugin-material-ui-0.1.3.tgz#cc8fc328d56b68e117fb84526eb5a594d0129dc0"
+  dependencies:
+    babel-runtime "^6.26.0"
+    material-ui "^1.0.0-beta.9"
+    react-jss "^7.0.2"
+
 gatsby-plugin-react-helmet@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-1.0.8.tgz#1adf87229cd54f11c95bb16b25e3cc5f20fee871"
@@ -4986,7 +4994,7 @@ material-ui-icons@^1.0.0-beta.17:
   dependencies:
     recompose "^0.26.0"
 
-material-ui@^1.0.0-beta.20:
+material-ui@^1.0.0-beta.20, material-ui@^1.0.0-beta.9:
   version "1.0.0-beta.20"
   resolved "https://registry.yarnpkg.com/material-ui/-/material-ui-1.0.0-beta.20.tgz#b8d9a79f88056cd1226f0b8bd36adfaf9a8d330f"
   dependencies:
@@ -6629,7 +6637,7 @@ react-hot-loader@^3.0.0-beta.6:
     redbox-react "^1.3.6"
     source-map "^0.6.1"
 
-react-jss@^7.2.0:
+react-jss@^7.0.2, react-jss@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/react-jss/-/react-jss-7.2.0.tgz#30a5ed51d8388a33767c6d19790b222c1f33f48f"
   dependencies:
