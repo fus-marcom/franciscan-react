@@ -21,10 +21,10 @@ const styles = theme => ({
     color: '#fff'
   },
   card: {
-    minWidth: 400
+    width: '100%'
   },
   media: {
-    minHeight: 270
+    minHeight: 280
   },
   heroCards: {
     padding: '3rem',
@@ -48,7 +48,7 @@ const IndexPage = ({ classes }) => (
     </div>
     <div className={classes.heroCards}>
       <Grid container>
-        <Grid item xs={12} sm={6} md={6} lg={6} justify={'flex-end'}>
+        <Grid item xs={12} sm={6} md={6} lg={6}>
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
@@ -62,7 +62,7 @@ const IndexPage = ({ classes }) => (
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={12} sm={6} md={6} lg={6} alignItems={'center'}>
+        <Grid item xs={12} sm={6} md={6} lg={6}>
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
