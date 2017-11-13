@@ -20,11 +20,7 @@ const TemporaryDrawer = props => {
     <div className={classes.list}>
       <List>
         <ListItem>
-          <img
-            width="200"
-            src="https://franciscan.university/cdn/fus-logo.svg"
-            alt="logo"
-          />
+          <img width="200" src="/static/img/fus-logo.svg" alt="logo" />
         </ListItem>
         <ListItem button>
           <ListItemText primary={'Item'} inset />

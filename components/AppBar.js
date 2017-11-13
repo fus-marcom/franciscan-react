@@ -45,7 +45,7 @@ function ButtonAppBar (props) {
           <Typography type="title" component="span" className={classes.flex}>
             <img
               className={classes.headerImage}
-              src="https://franciscan.university/cdn/fus-logo.svg"
+              src="/static/img/fus-logo.svg"
               alt=""
             />
           </Typography>
