@@ -16,19 +16,6 @@ const styles = {
 
 const TemporaryDrawer = props => {
   const { classes, toggleDrawer, open } = props
-  const sideList = (
-    <div className={classes.list}>
-      <List>
-        <ListItem>
-          <img width="200" src="/static/img/fus-logo.svg" alt="logo" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary={'Item'} inset />
-        </ListItem>
-      </List>
-      <Divider />
-    </div>
-  )
 
   return (
     <Drawer open={open} onRequestClose={toggleDrawer}>
@@ -38,7 +25,22 @@ const TemporaryDrawer = props => {
         onClick={toggleDrawer}
         onKeyDown={toggleDrawer}
       >
-        {sideList}
+        <div className={classes.list}>
+          <List>
+            <ListItem>
+              <img
+                className="drawerImg"
+                width="200"
+                src="/static/img/fus-logo.svg"
+                alt="logo"
+              />
+            </ListItem>
+            <ListItem button>
+              <ListItemText primary={'Item'} inset />
+            </ListItem>
+          </List>
+          <Divider />
+        </div>
       </div>
     </Drawer>
   )
