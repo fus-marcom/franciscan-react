@@ -5,6 +5,7 @@ import withStyles from 'material-ui/styles/withStyles'
 import Button from 'material-ui/Button'
 import Layout from '../components/Layout'
 import Grid from 'material-ui/Grid'
+import withRoot from '../components/withRoot'
 
 const styles = theme => ({
   parallax: {
@@ -12,7 +13,7 @@ const styles = theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: '80vh',
-    backgroundImage: 'url(https://unsplash.it/1200/800?image=823)',
+    backgroundImage: 'url(https://unsplash.it/1200/800?image=1062)',
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
     flexDirection: 'column'
@@ -53,7 +54,7 @@ const IndexPage = ({ classes }) => (
             <CardMedia
               className={classes.media}
               image="/static/img/adventure2-400w.jpg"
-              title="Contemplative Reptile"
+              title="Austria Campus"
             />
             <CardActions>
               <Typography type="subheading" gutterBottom>
@@ -81,4 +82,4 @@ const IndexPage = ({ classes }) => (
   </Layout>
 )
 
-export default withStyles(styles)(IndexPage)
+export default withRoot(withStyles(styles)(IndexPage))

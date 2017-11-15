@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "franciscan-university-react",
+  "description": "The main website for Franciscan University of Steubenville. Built with React, NextJS, and MaterialUI.",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jesse Weigel <jesseweigel@gmail.com>",
   "dependencies": {
     "material-ui": "^1.0.0-beta.21",
     "material-ui-icons": "^1.0.0-beta.17",
@@ -10,7 +10,7 @@
     "react": "^16.1.0",
     "react-dom": "^16.1.0"
   },
-  "keywords": ["gatsby"],
+  "keywords": ["next"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
