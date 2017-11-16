@@ -2,6 +2,7 @@ import React from 'react'
 import { withStyles } from 'material-ui/styles'
 import Grid from 'material-ui/Grid'
 import Typography from 'material-ui/Typography'
+import classNames from 'classnames'
 
 const styles = theme => ({
   root: {
@@ -24,25 +25,22 @@ const styles = theme => ({
     color: '#fff',
     fontSize: '18px',
     lineHeight: 1.5
+  },
+  white: {
+    color: '#ffffff'
   }
 })
 
 class Footer extends React.Component {
-  getYear () {
-    const dateToday = new Date()
-    console.log(dateToday.getFullYear())
-    return dateToday.getFullYear()
-  }
-
   render () {
     const { classes } = this.props
-
+    const currentYear = new Date().getFullYear()
     return (
       <div className={classes.root}>
         <Grid container spacing={0}>
           <Grid item xs={12} sm={4}>
             <Typography
-              className={[classes.footerText, classes.footerSections]}
+              className={classNames(classes.footerText, classes.footerSections)}
             >
               Bacon ipsum dolor amet rump leberkas doner, andouille tenderloin
               beef ribs ham shankle kielbasa drumstick tail brisket. Beef ribs
@@ -57,7 +55,7 @@ class Footer extends React.Component {
           </Grid>
           <Grid item xs={12} sm={4}>
             <Typography
-              className={[classes.footerText, classes.footerSections]}
+              className={classNames(classes.footerText, classes.footerSections)}
             >
               Bacon ipsum dolor amet rump leberkas doner, andouille tenderloin
               beef ribs ham shankle kielbasa drumstick tail brisket. Beef ribs
@@ -72,7 +70,7 @@ class Footer extends React.Component {
           </Grid>
           <Grid item xs={12} sm={4}>
             <Typography
-              className={[classes.footerText, classes.footerSections]}
+              className={classNames(classes.footerText, classes.footerSections)}
             >
               Bacon ipsum dolor amet rump leberkas doner, andouille tenderloin
               beef ribs ham shankle kielbasa drumstick tail brisket. Beef ribs
@@ -86,9 +84,13 @@ class Footer extends React.Component {
             </Typography>
           </Grid>
           <Grid className={classes.subFooter} item xs={12}>
-            <span>
-              © {() => this.getYear()} Franciscan University of Steubenville
-            </span>
+            <Typography
+              className={classes.white}
+              type="subheading"
+              component={'span'}
+            >
+              © {currentYear} Franciscan University of Steubenville
+            </Typography>
           </Grid>
         </Grid>
       </div>

@@ -1,9 +1,11 @@
 {
   "name": "franciscan-university-react",
-  "description": "The main website for Franciscan University of Steubenville. Built with React, NextJS, and MaterialUI.",
+  "description":
+    "The main website for Franciscan University of Steubenville. Built with React, NextJS, and MaterialUI.",
   "version": "1.0.0",
   "author": "Jesse Weigel <jesseweigel@gmail.com>",
   "dependencies": {
+    "classnames": "^2.2.5",
     "material-ui": "^1.0.0-beta.21",
     "material-ui-icons": "^1.0.0-beta.17",
     "next": "^4.1.4",
