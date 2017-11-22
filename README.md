@@ -1,17 +1,24 @@
 # franciscan-react
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-New version of [Franciscan University of Steubenville](https://www.franciscan.edu/) site built with [Gatsby](https://gatsbyjs.org) & [Material UI](https://github.com/callemall/material-ui). You can checkout the [FreeCodeCamp YouTube Channel](https://www.youtube.com/playlist?list=PLWKjhJtqVAbknyJ7hSrf1WKh_Xnv9RL1r) for live coding sessions & details of this project.
+New version of [Franciscan University of Steubenville](https://www.franciscan.edu/) site built with [Next](https://zeit.co/next) & [Material UI](https://github.com/callemall/material-ui). You can checkout the [FreeCodeCamp YouTube Channel](https://www.youtube.com/playlist?list=PLWKjhJtqVAbknyJ7hSrf1WKh_Xnv9RL1r) for live coding sessions & details of this project.
 
 To navigate your way through applications built with Create React App & perform common tasks visit the official guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 ## Contributing
 See CONTRUBUTING.md
 
+## Common catches
+If end to end tests are failing make sure the server is running in the background. You may also try rebuilding puppeteer
+```bash
+> npm rebuild puppeteer --force
+```
+
+This will redownload chromium.
 
 ### Not Familiar with Git?
 You can just download the .zip file. Extract the contents, then move to the project directory, open your terminal, and use:
-```
+```bash
 > npm install
 > npm start
 ```

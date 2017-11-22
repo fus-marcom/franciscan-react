@@ -1,6 +1,6 @@
 ## Contribution
 
-Require NODE > 8
+Require node version > 8
 
 ### Getting started
 
@@ -8,7 +8,7 @@ Require NODE > 8
 > git clone https://github.com/fus-marcom/franciscan-react.git
 > cd franciscan-react
 > yarn install
-> yarn develop
+> yarn dev
 ```
 
 1. Use `yarn` package manager as we have used yarn to scaffolde the app. See https://yarnpkg.com
