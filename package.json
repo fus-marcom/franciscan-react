@@ -5,6 +5,8 @@
   "author": "Jesse Weigel <jesseweigel@gmail.com>",
   "dependencies": {
     "classnames": "^2.2.5",
+    "express": "^4.16.2",
+    "lru-cache": "^4.1.1",
     "material-ui": "^1.0.0-beta.21",
     "material-ui-icons": "^1.0.0-beta.17",
     "next": "^4.1.4",
@@ -17,9 +19,9 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "precommit": "lint-staged && npm run test",
     "unit": "jest test.js",
