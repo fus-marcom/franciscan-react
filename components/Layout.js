@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import withRoot from '../components/withRoot'
 import AppBar from './AppBar'
 import Drawer from './Drawer'
 import Footer from './Footer'
@@ -25,4 +24,4 @@ class Layout extends Component {
   }
 }
 
-export default withRoot(Layout)
+export default Layout

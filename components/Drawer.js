@@ -14,7 +14,7 @@ import { FormControl } from 'material-ui/Form'
 
 const styles = theme => ({
   list: {
-    width: 250
+    width: 300
   },
   listFull: {
     width: 'auto'

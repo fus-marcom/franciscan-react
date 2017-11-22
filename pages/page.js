@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Layout from '../components/Layout'
+import withRoot from '../components/withRoot'
 
 const SecondPage = () => (
   <Layout>
@@ -12,4 +13,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default withRoot(SecondPage)
