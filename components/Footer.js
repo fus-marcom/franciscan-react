@@ -6,7 +6,6 @@ import classNames from 'classnames'
 
 const styles = theme => ({
   root: {
-    flexGrow: 1,
     marginTop: 30,
     backgroundColor: `${theme.palette.primary[500]}`,
     borderTop: 'solid 3px #998643',
