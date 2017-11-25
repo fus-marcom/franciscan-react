@@ -9,6 +9,7 @@ import IconButton from 'material-ui/IconButton'
 import MenuIcon from 'material-ui-icons/Menu'
 import Grid from 'material-ui/Grid'
 import SvgIcon from 'material-ui/SvgIcon'
+import Link from 'next/link'
 
 const styles = theme => ({
   root: {
@@ -93,11 +94,15 @@ function ButtonAppBar (props) {
               <MenuIcon />
             </IconButton>
             <Typography type="title" component="span" className={classes.flex}>
-              <img
-                className={classes.headerImage}
-                src="/static/img/fus-logo.svg"
-                alt=""
-              />
+              <Link href="/">
+                <a>
+                  <img
+                    className={classes.headerImage}
+                    src="/static/img/fus-logo.svg"
+                    alt="Logo of Franciscan University of Steubenville"
+                  />
+                </a>
+              </Link>
             </Typography>
           </div>
           <Grid container className={classes.col2}>
