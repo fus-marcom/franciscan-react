@@ -22,7 +22,7 @@ You can just download the .zip file. Extract the contents, then move to the proj
 > npm install
 > npm start
 ```
-Now Fork the project from [here](https://github.com/fus-marcom/bulletin-react), make your changes and open a [Pull](https://github.com/fus-marcom/bulletin-react/pulls) Request.
+Now Fork the project from [here](https://github.com/fus-marcom/franciscan-react), make your changes and open a [Pull](https://github.com/fus-marcom/franciscan-react/pulls) Request.
 
 ### Learning Git
 Those who are not yet familiar with Git but want to learn more about how to use it, check out these resources to dive into git workflow -
