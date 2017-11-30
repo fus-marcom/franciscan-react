@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 
-class Faculty extends React.Component {
+export class Faculty extends React.Component {
   static getInitialProps ({ query: { id } }) {
     return { id }
   }
