@@ -40,19 +40,13 @@ Require node version > 8
 > git remote add upstream https://github.com/fus-marcom/franciscan-react.git
 ```
 
-2. Fetch changes made to the upstream repository
+2. Simply pull the changes to your branch
 
 ```sh
-> git fetch upstream
+> git pull upstream master
 ```
 
-3. Merge those changes into your local master branch.
-
-```sh
-> git merge upstream/master master
-```
-
-4. Push your repository to your remote
+3. Push your repository to your remote
 
 ```sh
 > git push origin master
