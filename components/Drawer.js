@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
+import Link from 'next/link'
 import Drawer from 'material-ui/Drawer'
 import List, { ListItem, ListItemText } from 'material-ui/List'
 import Collapse from 'material-ui/transitions/Collapse'
@@ -50,12 +51,14 @@ class TemporaryDrawer extends React.Component {
           <div className={classes.list}>
             <List>
               <ListItem>
-                <img
-                  className="drawerImg"
-                  width="200"
-                  src="/static/img/fus-logo.svg"
-                  alt="logo"
-                />
+                <Link href={'/'}>
+                  <img
+                    className="drawerImg"
+                    width="200"
+                    src="/static/img/fus-logo.svg"
+                    alt="logo"
+                  />
+                </Link>
               </ListItem>
               <ListItem>
                 <FormControl className={classes.formControl}>
