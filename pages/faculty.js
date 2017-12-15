@@ -1,23 +1,29 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { graphql, compose } from 'react-apollo'
+import { SampleQuery } from '../lib/queries/posts'
+import withData from '../lib/withData'
 import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 
-export class Faculty extends React.Component {
+class Faculty extends Component {
   static getInitialProps ({ query: { id } }) {
     return { id }
   }
-
   render () {
+    const { data } = this.props
     return (
       <Layout>
-        <h1>My {this.props.id} blog post</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <h1>hello</h1>
+        <pre>{JSON.stringify(data.faculty, null, 2)}</pre>
       </Layout>
     )
   }
 }
 
-export default withRoot(Faculty)
+export default compose(
+  withRoot,
+  withData,
+  graphql(SampleQuery, {
+    options: ({ id }) => ({ variables: { name: id } })
+  })
+)(Faculty)
