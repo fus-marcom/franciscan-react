@@ -9,13 +9,29 @@ class Test extends Component {
   render () {
     const { data } = this.props
     const loading = data.loading
-    if (loading) return
+    if (loading) {
+      return (
+        <Layout>
+          <h1>Loading</h1>
+        </Layout>
+      )
+    }
     return (
       <Layout>
-        <h1>{data.Post.title}</h1>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: data.faculty.edges[0].node.content
+          }}
+        />
       </Layout>
     )
   }
 }
 
-export default compose(withRoot, withData, graphql(SampleQuery))(Test)
+export default compose(
+  withRoot,
+  withData,
+  graphql(SampleQuery, {
+    options: ({ match }) => ({ variables: { name: 'haenni-eric' } })
+  })
+)(Test)
