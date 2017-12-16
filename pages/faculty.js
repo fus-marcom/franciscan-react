@@ -23,6 +23,7 @@ class Faculty extends Component {
     return (
       <Layout>
         <div
+          data-testid="content"
           dangerouslySetInnerHTML={{
             __html: data.faculty.edges[0].node.content
           }}
