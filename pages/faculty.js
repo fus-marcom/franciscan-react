@@ -4,12 +4,15 @@ import { SampleQuery } from '../lib/queries/posts'
 import withData from '../lib/withData'
 import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
+import Head from 'next/head'
+import Grid from 'material-ui/Grid'
 
 class Faculty extends Component {
   static async getInitialProps ({ query: { id } }) {
     console.log(id)
     return { id }
   }
+
   render () {
     const { data } = this.props
     const loading = data.loading
@@ -20,18 +23,29 @@ class Faculty extends Component {
         </Layout>
       )
     }
+
+    const content = data.faculty.edges[0].node.content.replace('<Details', '<div class="details"').replace('</Details', '</div')
+
     return (
       <Layout>
-        <div
-          data-testid="content"
-          dangerouslySetInnerHTML={{
-            __html: data.faculty.edges[0].node.content
-          }}
-        />
+        <Head>
+          <link rel='stylesheet' href='/static/styles/faculty.css' type='text/css' />
+        </Head>
+        <Grid container>
+          <Grid item xs={12}>
+            <div
+              data-testid="content"
+              dangerouslySetInnerHTML={{
+                __html: content
+              }}
+            />
+          </Grid>
+        </Grid>
       </Layout>
     )
   }
 }
+
 
 export default compose(
   withRoot,
