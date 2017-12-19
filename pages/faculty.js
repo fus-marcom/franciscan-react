@@ -25,8 +25,9 @@ class Faculty extends Component {
     }
 
     const content = data.faculty.edges[0].node.content
-      .replace('<Details', '<div class="details"')
-      .replace('</Details', '</div')
+      .replace(/<Details/g, '<div class="details"')
+      .replace(/<Details/g, '</div')
+    global.x = content
 
     return (
       <Layout>
