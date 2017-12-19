@@ -20,7 +20,7 @@ class Faculty extends Component {
         </Layout>
       )
     }
-    const content =  data.faculty.edges[0].node.content.replace('details','div');
+    const content =  data.faculty.edges[0].node.content.replace('<details','<div class="details').replace('</details','</div);
     return (
       <Layout>
         <div
