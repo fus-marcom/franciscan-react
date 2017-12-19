@@ -53,7 +53,8 @@ describe('Faculty', () => {
       })
       const jsonData = await data.json()
       const content = jsonData.data.faculty.edges[0].node.content
-      console.log(JSON.stringify(jsonData, null, 2))
+        .replace(/<Details/g, '<div class="details"')
+        .replace(/<Details/g, '</div')
       const page = await browser.newPage()
       await page.goto(`${opts.appUrl}/faculty/haenni-eric`)
       const CONTENT_SELECTOR = 'div[data-testid*="content"]'
