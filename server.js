@@ -26,6 +26,11 @@ app.prepare().then(() => {
     renderAndCache(req, res, '/faculty', queryParams)
   })
 
+  server.get('/contact/:id', (req, res) => {
+    const queryParams = { id: req.params.id }
+    renderAndCache(req, res, '/directory', queryParams)
+  })
+
   server.get('*', (req, res) => {
     return handle(req, res)
   })
