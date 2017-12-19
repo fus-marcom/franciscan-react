@@ -20,12 +20,13 @@ class Faculty extends Component {
         </Layout>
       )
     }
+    const content =  data.faculty.edges[0].node.content.replace('details','div');
     return (
       <Layout>
         <div
           data-testid="content"
           dangerouslySetInnerHTML={{
-            __html: data.faculty.edges[0].node.content
+            __html: content
           }}
         />
       </Layout>
