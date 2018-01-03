@@ -1,11 +1,13 @@
 import React from 'react'
-import Card, { CardMedia, CardActions } from 'material-ui/Card'
+import Card, { CardMedia, CardActions, CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import withStyles from 'material-ui/styles/withStyles'
 import Button from 'material-ui/Button'
 import Layout from '../components/Layout'
 import Grid from 'material-ui/Grid'
 import withRoot from '../components/withRoot'
+import List, { ListItem, ListItemText } from 'material-ui/List'
+import Avatar from 'material-ui/Avatar'
 
 const styles = theme => ({
   parallax: {
@@ -17,6 +19,10 @@ const styles = theme => ({
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
     flexDirection: 'column'
+  },
+  heroBtn: {
+    display: 'flex',
+    justifyContent: 'center'
   },
   white: {
     color: '#fff'
@@ -43,13 +49,37 @@ const IndexPage = ({ classes }) => (
       <Typography type="subheading" className={classes.white} gutterBottom>
         Add your own text and images for a quick one page site.
       </Typography>
-      <Button color="accent" raised>
-        CALL TO AUDIO
-      </Button>
+      <Grid container>
+        <Grid item className={classes.heroBtn} xs={12}>
+          <Button color="accent" raised style={{ width: '192px' }}>
+            Apply
+          </Button>
+        </Grid>
+        <Grid
+          item
+          className={classes.heroBtn}
+          xs={6}
+          style={{ justifyContent: 'flex-end' }}
+        >
+          <Button color="accent" raised>
+            Inquire
+          </Button>
+        </Grid>
+        <Grid
+          item
+          className={classes.heroBtn}
+          xs={6}
+          style={{ justifyContent: 'flex-start' }}
+        >
+          <Button color="accent" raised>
+            Visit
+          </Button>
+        </Grid>
+      </Grid>
     </div>
     <div className={classes.heroCards}>
       <Grid container>
-        <Grid item xs={12} sm={6} md={6} lg={6}>
+        <Grid item xs={12} sm={6}>
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
@@ -63,18 +93,43 @@ const IndexPage = ({ classes }) => (
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={12} sm={6} md={6} lg={6}>
+        <Grid item xs={12} sm={6}>
           <Card className={classes.card}>
-            <CardMedia
-              className={classes.media}
-              image="/static/img/mission3-400w.jpg"
-              title="Contemplative Reptile"
-            />
-            <CardActions>
-              <Typography type="subheading" gutterBottom>
-                Austria
+            <CardContent>
+              <Typography type="headline" component="h2">
+                Events
               </Typography>
-            </CardActions>
+              <List>
+                <ListItem dense button className={classes.listItem}>
+                  <Avatar
+                    alt="Random"
+                    src="https://picsum.photos/200/200/?random"
+                  />
+                  <ListItemText primary="Event One" />
+                </ListItem>
+                <ListItem dense button className={classes.listItem}>
+                  <Avatar
+                    alt="Random"
+                    src="https://picsum.photos/200/200/?random"
+                  />
+                  <ListItemText primary="Event Two" />
+                </ListItem>
+                <ListItem dense button className={classes.listItem}>
+                  <Avatar
+                    alt="Random"
+                    src="https://picsum.photos/200/200/?random"
+                  />
+                  <ListItemText primary="Event Three" />
+                </ListItem>
+                <ListItem dense button className={classes.listItem}>
+                  <Avatar
+                    alt="Random"
+                    src="https://picsum.photos/200/200/?random"
+                  />
+                  <ListItemText primary="Event Four" />
+                </ListItem>
+              </List>
+            </CardContent>
           </Card>
         </Grid>
       </Grid>
