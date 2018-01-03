@@ -43,9 +43,18 @@ const IndexPage = ({ classes }) => (
       <Typography type="subheading" className={classes.white} gutterBottom>
         Add your own text and images for a quick one page site.
       </Typography>
-      <Button color="accent" raised>
+
+      <Button color="accent" raised style={{ margin: '10px' }}>
         CALL TO AUDIO
       </Button>
+      <Grid item container justify="center" xs={6} md={12}>
+        <Button color="accent" raised style={{ margin: '10px' }}>
+          CALL TO AUDIO
+        </Button>
+        <Button color="accent" raised style={{ margin: '10px' }}>
+          CALL TO AUDIO
+        </Button>
+      </Grid>
     </div>
     <div className={classes.heroCards}>
       <Grid container>
