@@ -18,6 +18,9 @@ const styles = theme => ({
     backgroundSize: 'cover',
     flexDirection: 'column'
   },
+  'flex-row': {
+    display: 'flex'
+  },
   white: {
     color: '#fff'
   },
@@ -31,6 +34,9 @@ const styles = theme => ({
     padding: '3rem',
     display: 'flex',
     justifyContent: 'center'
+  },
+  margin: {
+    margin: '8px'
   }
 })
 
@@ -43,9 +49,17 @@ const IndexPage = ({ classes }) => (
       <Typography type="subheading" className={classes.white} gutterBottom>
         Add your own text and images for a quick one page site.
       </Typography>
-      <Button color="accent" raised>
-        CALL TO AUDIO
-      </Button>
+      <div className="flex-row">
+        <Button color="accent" raised className={classes.margin}>
+          CALL TO AUDIO
+        </Button>
+        <Button color="accent" raised className={classes.margin}>
+          CALL TO AUDIO
+        </Button>
+        <Button color="accent" raised className={classes.margin}>
+          CALL TO AUDIO
+        </Button>
+      </div>
     </div>
     <div className={classes.heroCards}>
       <Grid container>
