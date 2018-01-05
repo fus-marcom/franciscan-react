@@ -47,6 +47,21 @@ const styles = theme => ({
   },
   listItemTextBig: {
     fontSize: '34px'
+  },
+  videoIframe: {
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    border: 'none'
+  },
+  videoIframeContainer: {
+    width: '100%',
+    height: 0,
+    overflow: 'hidden',
+    position: 'relative',
+    paddingBottom: '56.25%'
   }
 })
 
@@ -153,10 +168,11 @@ const IndexPage = ({ classes }) => (
           </Card>
         </Grid>
         <Grid item className={classes.gridItemFix} xs={12} sm={6}>
-          <Card className={classes.card}>
+          <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
             <CardMedia
               src="https://www.youtube.com/embed/HdPhaJFcLbs?rel=0"
               component="iframe"
+              className={classes.videoIframe}
             />
           </Card>
         </Grid>
@@ -322,10 +338,11 @@ const IndexPage = ({ classes }) => (
           </Card>
         </Grid>
         <Grid item className={classes.gridItemFix} xs={12} sm={6}>
-          <Card className={classes.card}>
+          <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
             <CardMedia
               src="https://www.youtube.com/embed/HdPhaJFcLbs?rel=0"
               component="iframe"
+              className={classes.videoIframe}
             />
           </Card>
         </Grid>
