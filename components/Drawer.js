@@ -46,7 +46,7 @@ class TemporaryDrawer extends React.Component {
     const { classes, toggleDrawer, open } = this.props
 
     return (
-      <Drawer open={open} onRequestClose={toggleDrawer}>
+      <Drawer open={open} onClose={toggleDrawer}>
         <div tabIndex={0} role="button">
           <div className={classes.list}>
             <List>
@@ -85,7 +85,7 @@ class TemporaryDrawer extends React.Component {
               <Collapse
                 component="li"
                 in={this.state.openItems}
-                transitionDuration="auto"
+                timeout="auto"
                 unmountOnExit
               >
                 <List
