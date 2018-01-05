@@ -8,6 +8,7 @@ import Grid from 'material-ui/Grid'
 import withRoot from '../components/withRoot'
 import List, { ListItem, ListItemText } from 'material-ui/List'
 import Avatar from 'material-ui/Avatar'
+import Masonry from 'react-masonry-component'
 
 const styles = theme => ({
   parallax: {
@@ -34,9 +35,10 @@ const styles = theme => ({
     minHeight: 280
   },
   heroCards: {
-    padding: '3rem',
-    display: 'flex',
-    justifyContent: 'center'
+    padding: '3rem'
+  },
+  gridItemFix: {
+    width: '100%'
   }
 })
 
@@ -78,8 +80,18 @@ const IndexPage = ({ classes }) => (
       </Grid>
     </div>
     <div className={classes.heroCards}>
-      <Grid container>
-        <Grid item xs={12} sm={6}>
+      <Masonry>
+        <Grid item className={classes.gridItemFix} xs={12} sm={3}>
+          <Card className={classes.card}>
+            <CardContent>
+              <Typography type="display2">
+                99% of Graduates are Super Awesome!!! The other 1% are Super
+                Duper Awesome!!!
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item className={classes.gridItemFix} xs={12} sm={3}>
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
@@ -93,7 +105,7 @@ const IndexPage = ({ classes }) => (
             </CardActions>
           </Card>
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
           <Card className={classes.card}>
             <CardContent>
               <Typography type="headline" component="h2">
@@ -132,7 +144,30 @@ const IndexPage = ({ classes }) => (
             </CardContent>
           </Card>
         </Grid>
-      </Grid>
+        <Grid item className={classes.gridItemFix} xs={12} sm={3}>
+          <Card className={classes.card}>
+            <CardContent>
+              <Typography type="display2">
+                99% of Graduates are Super Awesome!!!
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item className={classes.gridItemFix} xs={12} sm={3}>
+          <Card className={classes.card}>
+            <CardMedia
+              className={classes.media}
+              image="/static/img/adventure2-400w.jpg"
+              title="Austria Campus"
+            />
+            <CardActions>
+              <Typography type="subheading" gutterBottom>
+                Austria
+              </Typography>
+            </CardActions>
+          </Card>
+        </Grid>
+      </Masonry>
     </div>
   </Layout>
 )
