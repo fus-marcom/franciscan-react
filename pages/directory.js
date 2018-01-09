@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { graphql, compose } from 'react-apollo'
-import { SampleQuery } from '../lib/queries/posts'
+import { DirectoryQuery } from '../lib/queries/directories'
 import withData from '../lib/withData'
 import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
@@ -36,7 +36,7 @@ class Directory extends Component {
 export default compose(
   withRoot,
   withData,
-  graphql(SampleQuery, {
+  graphql(DirectoryQuery, {
     options: ({ id }) => ({ variables: { name: id } })
   })
 )(Directory)
