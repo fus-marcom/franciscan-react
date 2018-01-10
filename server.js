@@ -31,6 +31,11 @@ app.prepare().then(() => {
     renderAndCache(req, res, '/directory', queryParams)
   })
 
+  server.get('/news/:id', (req, res) => {
+    const queryParams = { id: req.params.id }
+    renderAndCache(req, res, '/news', queryParams)
+  })
+
   server.get('*', (req, res) => {
     return handle(req, res)
   })
