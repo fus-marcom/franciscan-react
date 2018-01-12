@@ -25,6 +25,9 @@ const styles = theme => ({
   },
   formControl: {
     margin: theme.spacing.unit
+  },
+  drawerImg: {
+    margin: '0 auto'
   }
 })
 
@@ -53,7 +56,7 @@ class TemporaryDrawer extends React.Component {
               <ListItem>
                 <Link href={'/'}>
                   <img
-                    className="drawerImg"
+                    className={classes.drawerImg}
                     width="200"
                     src="/static/img/fus-logo.svg"
                     alt="logo"
