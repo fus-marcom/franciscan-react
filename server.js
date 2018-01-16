@@ -17,24 +17,28 @@ app.prepare().then(() => {
   const server = express()
 
   // Use the `renderAndCache` utility defined below to serve pages
-  server.get('/', (req, res) => {
-    renderAndCache(req, res, '/')
-  })
+  server.get('/', (req, res) => renderAndCache(req, res, '/'))
+  server.get('/faculty/:id', (req, res) =>
+    renderAndCache(req, res, '/faculty', { id: req.params.id })
+  )
+  server.get('/contact/:id', (req, res) =>
+    renderAndCache(req, res, '/directory', { id: req.params.id })
+  )
+  server.get('/news/:id', (req, res) =>
+    renderAndCache(req, res, '/news', { id: req.params.id })
+  )
 
-  server.get('/faculty/:id', (req, res) => {
-    const queryParams = { id: req.params.id }
-    renderAndCache(req, res, '/faculty', queryParams)
-  })
-
-  server.get('/contact/:id', (req, res) => {
-    const queryParams = { id: req.params.id }
-    renderAndCache(req, res, '/directory', queryParams)
-  })
-
-  server.get('/news/:id', (req, res) => {
-    const queryParams = { id: req.params.id }
-    renderAndCache(req, res, '/news', queryParams)
-  })
+  // Route to each page individually to one component (like majors) pass in the correct slug manually as the id
+  // Make a proper route (majors/business) and have it go to the same component
+  server.get('/economics', (req, res) =>
+    renderAndCache(req, res, '/major', { id: 'economics' })
+  )
+  server.get('/major/:id', (req, res) =>
+    renderAndCache(req, res, '/major', { id: req.params.id })
+  )
+  server.get('/accounting', (req, res) =>
+    renderAndCache(req, res, '/major', { id: 'accounting' })
+  )
 
   server.get('*', (req, res) => {
     return handle(req, res)
