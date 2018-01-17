@@ -24,6 +24,10 @@ class Layout extends Component {
     this.setState(state => ({ drawer: !state.drawer }))
   }
 
+  expandItem = () => {
+    this.setState(prevState => ({ openItems: !prevState.open }))
+  }
+
   render () {
     const { classes } = this.props
     return (

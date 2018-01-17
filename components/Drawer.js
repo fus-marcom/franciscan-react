@@ -3,15 +3,13 @@ import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Link from 'next/link'
 import Drawer from 'material-ui/Drawer'
-import List, { ListItem, ListItemText } from 'material-ui/List'
-import Collapse from 'material-ui/transitions/Collapse'
-import ExpandLess from 'material-ui-icons/ExpandLess'
-import ExpandMore from 'material-ui-icons/ExpandMore'
+import List, { ListItem } from 'material-ui/List'
 import SearchIcon from 'material-ui-icons/Search'
 import IconButton from 'material-ui/IconButton'
 import Divider from 'material-ui/Divider'
 import Input, { InputLabel, InputAdornment } from 'material-ui/Input'
 import { FormControl } from 'material-ui/Form'
+import DrawerItem from './DrawerItem'
 
 const styles = theme => ({
   list: {
@@ -19,9 +17,6 @@ const styles = theme => ({
   },
   listFull: {
     width: 'auto'
-  },
-  nested: {
-    paddingLeft: theme.spacing.unit * 4
   },
   formControl: {
     margin: theme.spacing.unit
@@ -81,26 +76,9 @@ class TemporaryDrawer extends React.Component {
                   />
                 </FormControl>
               </ListItem>
-              <ListItem button onClick={this.handleClick}>
-                <ListItemText inset primary="Inbox" />
-                {this.state.openItems ? <ExpandLess /> : <ExpandMore />}
-              </ListItem>
-              <Collapse
-                component="li"
-                in={this.state.openItems}
-                timeout="auto"
-                unmountOnExit
-              >
-                <List
-                  disablePadding
-                  onClick={toggleDrawer}
-                  onKeyDown={toggleDrawer}
-                >
-                  <ListItem button className={classes.nested}>
-                    <ListItemText inset primary="Starred" />
-                  </ListItem>
-                </List>
-              </Collapse>
+              <DrawerItem />
+              <DrawerItem />
+              <DrawerItem />
             </List>
             <Divider />
           </div>
