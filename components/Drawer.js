@@ -77,6 +77,8 @@ class TemporaryDrawer extends React.Component {
                 </FormControl>
               </ListItem>
               <DrawerItem
+                expandItem={this.props.expandItem}
+                itemId="about"
                 primaryText="About"
                 submenuItems={[
                   {
@@ -92,6 +94,7 @@ class TemporaryDrawer extends React.Component {
                     linkUrl: '#'
                   }
                 ]}
+                isOpen={this.props.drawerItems.about}
               />
               <DrawerItem
                 primaryText="Academics"
@@ -109,8 +112,13 @@ class TemporaryDrawer extends React.Component {
                     linkUrl: '#'
                   }
                 ]}
+                isOpen={this.props.drawerItems.academics}
+                expandItem={this.props.expandItem}
+                itemId="academics"
               />
               <DrawerItem
+                expandItem={this.props.expandItem}
+                itemId="admissions"
                 primaryText="Admissions"
                 submenuItems={[
                   {
@@ -126,8 +134,11 @@ class TemporaryDrawer extends React.Component {
                     linkUrl: '#'
                   }
                 ]}
+                isOpen={this.props.drawerItems.admissions}
               />
               <DrawerItem
+                expandItem={this.props.expandItem}
+                itemId="faith-and-life"
                 primaryText="Faith and Life"
                 submenuItems={[
                   {
@@ -143,6 +154,7 @@ class TemporaryDrawer extends React.Component {
                     linkUrl: '#'
                   }
                 ]}
+                isOpen={this.props.drawerItems['faith-and-life']}
               />
             </List>
             <Divider />

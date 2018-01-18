@@ -17,22 +17,39 @@ const styles = theme => ({
 
 class Layout extends Component {
   state = {
-    drawer: false
+    drawer: false,
+    drawerItems: {
+      about: false,
+      academics: false,
+      admissions: true,
+      'faith-and-life': false
+    }
   }
 
-  toggleDrawer = () => {
+  toggleDrawer = itemId => {
     this.setState(state => ({ drawer: !state.drawer }))
+    itemId && this.expandItem(itemId)
   }
 
-  expandItem = () => {
-    this.setState(prevState => ({ openItems: !prevState.open }))
+  expandItem = itemId => {
+    this.setState(prevState => ({
+      drawerItems: {
+        ...prevState.drawerItems,
+        [itemId]: !prevState.drawerItems[itemId]
+      }
+    }))
   }
 
   render () {
     const { classes } = this.props
     return (
       <div className={classes.layout}>
-        <Drawer open={this.state.drawer} toggleDrawer={this.toggleDrawer} />
+        <Drawer
+          open={this.state.drawer}
+          toggleDrawer={this.toggleDrawer}
+          drawerItems={this.state.drawerItems}
+          expandItem={this.expandItem}
+        />
         <AppBar toggleDrawer={this.toggleDrawer} />
         <main className={classes.main}>{this.props.children}</main>
         <Footer />

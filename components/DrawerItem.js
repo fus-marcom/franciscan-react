@@ -12,28 +12,23 @@ const styles = theme => ({
 })
 
 class DrawerItem extends React.Component {
-  state = {
-    openItems: false
-  }
-
-  expandItem = () => {
-    this.setState(prevState => ({ openItems: !prevState.openItems }))
-  }
-
   render () {
-    const { classes, toggleDrawer, primaryText, submenuItems } = this.props
+    const {
+      classes,
+      toggleDrawer,
+      primaryText,
+      submenuItems,
+      isOpen,
+      expandItem,
+      itemId
+    } = this.props
     return (
       <div>
-        <ListItem button onClick={this.expandItem}>
+        <ListItem button onClick={() => expandItem(itemId)}>
           <ListItemText inset primary={primaryText} />
-          {this.state.openItems ? <ExpandLess /> : <ExpandMore />}
+          {isOpen ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
-        <Collapse
-          component="li"
-          in={this.state.openItems}
-          timeout="auto"
-          unmountOnExit
-        >
+        <Collapse component="li" in={isOpen} timeout="auto" unmountOnExit>
           <List disablePadding onClick={toggleDrawer} onKeyDown={toggleDrawer}>
             {submenuItems.map(item => (
               <ListItem button className={classes.nested} key={item.text}>
