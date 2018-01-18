@@ -10,6 +10,7 @@ import MenuIcon from 'material-ui-icons/Menu'
 import Grid from 'material-ui/Grid'
 import SvgIcon from 'material-ui/SvgIcon'
 import Link from 'next/link'
+import AppBarMenuItem from './AppBarMenuItem'
 
 const styles = theme => ({
   root: {
@@ -169,51 +170,26 @@ function ButtonAppBar (props) {
             </Grid>
             <Grid item md={12} className={classes.alignReverse}>
               <ul className={classes.listStyles}>
-                <li className={classes.listLi}>
-                  <Typography
-                    component={'a'}
-                    type={'headline'}
-                    id="about-link"
-                    className={classes.ulLink}
-                    href="#"
-                  >
-                    About
-                  </Typography>
-                </li>
-                <li className={classes.listLi}>
-                  <Typography
-                    component={'a'}
-                    type={'headline'}
-                    id="academics-link"
-                    className={classes.ulLink}
-                    href="#"
-                  >
-                    Academics
-                  </Typography>
-                </li>
-                <li className={classes.listLi}>
-                  <Typography
-                    component={'a'}
-                    type={'headline'}
-                    id="admissions-link"
-                    className={classes.ulLink}
-                    href="#"
-                  >
-                    Admissions
-                  </Typography>
-                </li>
-                <li className={classes.listLi}>
-                  <Typography
-                    component={'a'}
-                    type={'headline'}
-                    id="faith-and-life-link"
-                    href="#"
-                    title="Link Three"
-                    className={classes.ulLink}
-                  >
-                    Faith and Life
-                  </Typography>
-                </li>
+                <AppBarMenuItem
+                  toggleDrawer={toggleDrawer}
+                  linkId="about"
+                  content="About"
+                />
+                <AppBarMenuItem
+                  toggleDrawer={toggleDrawer}
+                  linkId="academics"
+                  content="Academics"
+                />
+                <AppBarMenuItem
+                  toggleDrawer={toggleDrawer}
+                  linkId="admissions"
+                  content="Admissions"
+                />
+                <AppBarMenuItem
+                  toggleDrawer={toggleDrawer}
+                  linkId="faith-and-life"
+                  content="Faith and Life"
+                />
                 <li id="top-nav-search" className={classes.listLi}>
                   <div className="search-icon">
                     <SvgIcon viewBox="0 0 24 24" className={classes.searchSVG}>
