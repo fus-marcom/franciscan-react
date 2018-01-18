@@ -76,9 +76,74 @@ class TemporaryDrawer extends React.Component {
                   />
                 </FormControl>
               </ListItem>
-              <DrawerItem />
-              <DrawerItem />
-              <DrawerItem />
+              <DrawerItem
+                primaryText="About"
+                submenuItems={[
+                  {
+                    text: 'Link 1',
+                    linkUrl: '#'
+                  },
+                  {
+                    text: 'Link 2',
+                    linkUrl: '#'
+                  },
+                  {
+                    text: 'Link 3',
+                    linkUrl: '#'
+                  }
+                ]}
+              />
+              <DrawerItem
+                primaryText="Academics"
+                submenuItems={[
+                  {
+                    text: 'Link 1',
+                    linkUrl: '#'
+                  },
+                  {
+                    text: 'Link 2',
+                    linkUrl: '#'
+                  },
+                  {
+                    text: 'Link 3',
+                    linkUrl: '#'
+                  }
+                ]}
+              />
+              <DrawerItem
+                primaryText="Admissions"
+                submenuItems={[
+                  {
+                    text: 'Link 1',
+                    linkUrl: '#'
+                  },
+                  {
+                    text: 'Link 2',
+                    linkUrl: '#'
+                  },
+                  {
+                    text: 'Link 3',
+                    linkUrl: '#'
+                  }
+                ]}
+              />
+              <DrawerItem
+                primaryText="Faith and Life"
+                submenuItems={[
+                  {
+                    text: 'Link 1',
+                    linkUrl: '#'
+                  },
+                  {
+                    text: 'Link 2',
+                    linkUrl: '#'
+                  },
+                  {
+                    text: 'Link 3',
+                    linkUrl: '#'
+                  }
+                ]}
+              />
             </List>
             <Divider />
           </div>

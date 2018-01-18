@@ -21,11 +21,11 @@ class DrawerItem extends React.Component {
   }
 
   render () {
-    const { classes, toggleDrawer } = this.props
+    const { classes, toggleDrawer, primaryText, submenuItems } = this.props
     return (
       <div>
         <ListItem button onClick={this.expandItem}>
-          <ListItemText inset primary="Inbox" />
+          <ListItemText inset primary={primaryText} />
           {this.state.openItems ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
         <Collapse
@@ -35,9 +35,15 @@ class DrawerItem extends React.Component {
           unmountOnExit
         >
           <List disablePadding onClick={toggleDrawer} onKeyDown={toggleDrawer}>
-            <ListItem button className={classes.nested}>
-              <ListItemText inset primary="Starred" />
-            </ListItem>
+            {submenuItems.map(item => (
+              <ListItem button className={classes.nested} key={item.text}>
+                <ListItemText
+                  inset
+                  primary={item.text}
+                  linkUrl={item.linkUrl}
+                />
+              </ListItem>
+            ))}
           </List>
         </Collapse>
       </div>
