@@ -31,13 +31,13 @@ const styles = theme => ({
   headerImage: {
     maxHeight: '3rem'
   },
-  // social: {
-  //   position: 'fixed',
-  //   top: '8px',
-  //   right: '116px'
-  // },
+  social: {
+    display: 'flex',
+    alignItems: 'center'
+  },
   svgStyle: {
-    width: '30px',
+    width: 'auto',
+    height: '32px',
     fill: `${theme.palette.primary[500]}`
   },
   // secondaryCTA: {
