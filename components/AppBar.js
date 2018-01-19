@@ -45,6 +45,10 @@ const styles = theme => ({
   //   top: '8px',
   //   right: '16px'
   // },
+  secondaryCTALink: {
+    color: '#ffffff',
+    textDecoration: 'none'
+  },
   // appBarLinks: {
   //   lineHeight: '48px'
   // },
@@ -164,7 +168,14 @@ function ButtonAppBar (props) {
 
             */}
                 <Button raised color="primary" className={classes.secondaryCTA}>
-                  Donate
+                  <a
+                    href="https://accessfus.franciscan.edu/"
+                    className={classes.secondaryCTALink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Access FUS
+                  </a>
                 </Button>
               </div>
             </Grid>
