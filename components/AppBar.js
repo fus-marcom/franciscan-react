@@ -45,10 +45,6 @@ const styles = theme => ({
   //   top: '8px',
   //   right: '16px'
   // },
-  secondaryCTALink: {
-    color: '#ffffff',
-    textDecoration: 'none'
-  },
   // appBarLinks: {
   //   lineHeight: '48px'
   // },
@@ -167,15 +163,15 @@ function ButtonAppBar (props) {
                 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
             */}
-                <Button raised color="primary" className={classes.secondaryCTA}>
-                  <a
-                    href="https://accessfus.franciscan.edu/"
-                    className={classes.secondaryCTALink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Access FUS
-                  </a>
+                <Button
+                  raised
+                  color="primary"
+                  className={classes.secondaryCTA}
+                  href="https://accessfus.franciscan.edu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Access FUS
                 </Button>
               </div>
             </Grid>
