@@ -13,7 +13,7 @@
     "graphql-tag": "^2.6.1",
     "isomorphic-unfetch": "^2.0.0",
     "lru-cache": "^4.1.1",
-    "material-ui": "^1.0.0-beta.26",
+    "material-ui": "^1.0.0-beta.29",
     "material-ui-icons": "^1.0.0-beta.17",
     "next": "^4.2.1",
     "react": "^16.2.0",
