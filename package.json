@@ -39,6 +39,7 @@
   "devDependencies": {
     "babel-eslint": "^8.1.2",
     "chai": "^4.1.2",
+    "cz-conventional-changelog": "^2.1.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.14.0",
@@ -67,5 +68,10 @@
     "setupFiles": [
       "<rootDir>/shim.js"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
