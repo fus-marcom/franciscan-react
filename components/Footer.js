@@ -41,7 +41,7 @@ class Footer extends React.Component {
             <Typography
               className={classNames(classes.footerText, classes.footerSections)}
             >
-              Test ipsum dolor amet rump leberkas doner, andouille tenderloin
+              Testing ipsum dolor amet rump leberkas doner, andouille tenderloin
               beef ribs ham shankle kielbasa drumstick tail brisket. Beef ribs
               kielbasa venison, chicken sausage bresaola turkey tongue andouille
               pork belly meatball. Bresaola sausage t-bone frankfurter. Pig
