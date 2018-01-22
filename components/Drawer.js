@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Link from 'next/link'
 import Drawer from 'material-ui/Drawer'
-import List, { ListItem } from 'material-ui/List'
+import List, { ListItem, ListItemText, ListItemIcon } from 'material-ui/List'
 import SearchIcon from 'material-ui-icons/Search'
+import OpenInNewIcon from 'material-ui-icons/OpenInNew'
 import IconButton from 'material-ui/IconButton'
 import Divider from 'material-ui/Divider'
 import Input, { InputLabel, InputAdornment } from 'material-ui/Input'
@@ -156,8 +157,44 @@ class TemporaryDrawer extends React.Component {
                 ]}
                 isOpen={this.props.drawerItems['faith-and-life']}
               />
+              <Divider />
+              <a
+                href="http://alumni.franciscan.edu/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ListItem button>
+                  <ListItemIcon>
+                    <OpenInNewIcon />
+                  </ListItemIcon>
+                  <ListItemText inset primary={'Alumni'} />
+                </ListItem>
+              </a>
+              <a
+                href="http://giving.franciscan.edu/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ListItem button>
+                  <ListItemIcon>
+                    <OpenInNewIcon />
+                  </ListItemIcon>
+                  <ListItemText inset primary={'Development'} />
+                </ListItem>
+              </a>
+              <a
+                href="http://www.steubenvilleconferences.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ListItem button>
+                  <ListItemIcon>
+                    <OpenInNewIcon />
+                  </ListItemIcon>
+                  <ListItemText inset primary={'Conferences'} />
+                </ListItem>
+              </a>
             </List>
-            <Divider />
           </div>
         </div>
       </Drawer>
