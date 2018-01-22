@@ -26,7 +26,8 @@ const styles = theme => ({
     margin: '0 auto'
   },
   externalLink: {
-    textDecoration: 'none'
+    textDecoration: 'none',
+    color: 'inherit'
   }
 })
 
