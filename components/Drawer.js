@@ -24,6 +24,9 @@ const styles = theme => ({
   },
   drawerImg: {
     margin: '0 auto'
+  },
+  externalLink: {
+    textDecoration: 'none'
   }
 })
 
@@ -159,6 +162,7 @@ class TemporaryDrawer extends React.Component {
               />
               <Divider />
               <a
+                className={classes.externalLink}
                 href="http://alumni.franciscan.edu/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -171,6 +175,7 @@ class TemporaryDrawer extends React.Component {
                 </ListItem>
               </a>
               <a
+                className={classes.externalLink}
                 href="http://giving.franciscan.edu/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -183,6 +188,7 @@ class TemporaryDrawer extends React.Component {
                 </ListItem>
               </a>
               <a
+                className={classes.externalLink}
                 href="http://www.steubenvilleconferences.com/"
                 target="_blank"
                 rel="noopener noreferrer"
