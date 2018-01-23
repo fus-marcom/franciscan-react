@@ -70,7 +70,6 @@ const styles = theme => ({
     justifyContent: 'flex-end',
     alignItems: 'center'
   },
-
   ulLink: {
     textDecoration: 'none',
     paddingBottom: '6px'
@@ -82,6 +81,11 @@ const styles = theme => ({
   searchClosed: {
     transition: 'all .5s',
     width: '0px'
+  },
+  searchInput: {
+    '&:after': {
+      backgroundColor: '#998643'
+    }
   }
 })
 
@@ -240,7 +244,12 @@ class ButtonAppBar extends Component {
                       ? classes.searchOpen
                       : classes.searchClosed
                   }
-                  hintText="Search"
+                  placeholder="Search"
+                  InputProps={{
+                    classes: {
+                      input: classes.searchInput
+                    }
+                  }}
                 />
               </Grid>
             </Grid>
