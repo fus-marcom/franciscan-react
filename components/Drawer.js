@@ -28,6 +28,15 @@ const styles = theme => ({
   externalLink: {
     textDecoration: 'none',
     color: 'inherit'
+  },
+  inputLabelFocused: {
+    color: '#998643'
+  },
+  inputInkbar: {
+    '&:after': {
+      backgroundColor: '#998643'
+    }
+
   }
 })
 
@@ -65,10 +74,20 @@ class TemporaryDrawer extends React.Component {
               </ListItem>
               <ListItem>
                 <FormControl className={classes.formControl}>
-                  <InputLabel htmlFor="search">Search</InputLabel>
+                  <InputLabel
+                    FormControlClasses={{
+                      focused: classes.inputLabelFocused
+                    }}
+                    htmlFor="search"
+                  >
+                    Search
+                  </InputLabel>
                   <Input
                     id="search"
                     type="text"
+                    classes={{
+                      inkbar: classes.inputInkbar
+                    }}
                     value={this.state.search}
                     onChange={this.handleSearchChange}
                     endAdornment={
