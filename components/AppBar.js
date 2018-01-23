@@ -41,20 +41,11 @@ const styles = theme => ({
     height: '32px',
     fill: `${theme.palette.primary[500]}`
   },
-  // secondaryCTA: {
-  //   position: 'fixed',
-  //   top: '8px',
-  //   right: '16px'
-  // },
-  // appBarLinks: {
-  //   lineHeight: '48px'
-  // },
   socialIcon: {
     display: 'inline-flex'
   },
   searchSVG: {
     cursor: 'pointer',
-    width: '27px',
     fill: `${theme.palette.primary[500]}`
   },
   listStyles: {
@@ -65,16 +56,21 @@ const styles = theme => ({
     margin: '0 8px'
   },
   col1: {
-    display: 'flex',
-    flex: 1
+    display: 'flex'
   },
   col2: {
     flex: 1
   },
-  alignReverse: {
+  col2Top: {
     display: 'flex',
-    flexDirection: 'row-reverse'
+    justifyContent: 'flex-end'
   },
+  col2Bottom: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center'
+  },
+
   ulLink: {
     textDecoration: 'none',
     paddingBottom: '6px'
@@ -129,7 +125,7 @@ class ButtonAppBar extends Component {
               </Typography>
             </div>
             <Grid container className={classes.col2}>
-              <Grid item md={12} className={classes.alignReverse}>
+              <Grid item md={12} className={classes.col2Top}>
                 <div className={classes.social}>
                   <a id="facebook" className={classes.socialIcon}>
                     <SvgIcon className={classes.svgStyle} viewBox="0 0 800 800">
@@ -198,7 +194,6 @@ class ButtonAppBar extends Component {
                   <Button
                     raised
                     color="primary"
-                    className={classes.secondaryCTA}
                     href="https://accessfus.franciscan.edu/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -207,52 +202,46 @@ class ButtonAppBar extends Component {
                   </Button>
                 </div>
               </Grid>
-              <Grid item md={12} className={classes.alignReverse}>
-                <ul className={classes.listStyles}>
-                  <AppBarMenuItem
-                    toggleDrawer={toggleDrawer}
-                    linkId="about"
-                    content="About"
+              <Grid item md={12} className={classes.col2Bottom}>
+                <AppBarMenuItem
+                  toggleDrawer={toggleDrawer}
+                  linkId="about"
+                  content="About"
+                />
+                <AppBarMenuItem
+                  toggleDrawer={toggleDrawer}
+                  linkId="academics"
+                  content="Academics"
+                />
+                <AppBarMenuItem
+                  toggleDrawer={toggleDrawer}
+                  linkId="admissions"
+                  content="Admissions"
+                />
+                <AppBarMenuItem
+                  toggleDrawer={toggleDrawer}
+                  linkId="faith-and-life"
+                  content="Faith and Life"
+                />
+                <SvgIcon
+                  viewBox="0 0 24 24"
+                  className={classes.searchSVG}
+                  onClick={this.onSearchClick}
+                >
+                  <path
+                    xmlns="http://www.w3.org/2000/svg"
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
                   />
-                  <AppBarMenuItem
-                    toggleDrawer={toggleDrawer}
-                    linkId="academics"
-                    content="Academics"
-                  />
-                  <AppBarMenuItem
-                    toggleDrawer={toggleDrawer}
-                    linkId="admissions"
-                    content="Admissions"
-                  />
-                  <AppBarMenuItem
-                    toggleDrawer={toggleDrawer}
-                    linkId="faith-and-life"
-                    content="Faith and Life"
-                  />
-                  <li id="top-nav-search" className={classes.listLi}>
-                    <div className="search-icon">
-                      <SvgIcon
-                        viewBox="0 0 24 24"
-                        className={classes.searchSVG}
-                        onClick={this.onSearchClick}
-                      >
-                        <path
-                          xmlns="http://www.w3.org/2000/svg"
-                          d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-                        />
-                        <path d="M0 0h24v24H0z" fill="none" />
-                      </SvgIcon>
-                    </div>
-                    <TextField
-                      className={
-                        this.state.isSearchOpen
-                          ? classes.searchOpen
-                          : classes.searchClosed
-                      }
-                      hintText="Search"
-                    />
-                  </li>
-                </ul>
+                  <path d="M0 0h24v24H0z" fill="none" />
+                </SvgIcon>
+                <TextField
+                  className={
+                    this.state.isSearchOpen
+                      ? classes.searchOpen
+                      : classes.searchClosed
+                  }
+                  hintText="Search"
+                />
               </Grid>
             </Grid>
           </Toolbar>
