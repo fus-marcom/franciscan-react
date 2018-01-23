@@ -247,7 +247,7 @@ class ButtonAppBar extends Component {
                   placeholder="Search"
                   InputProps={{
                     classes: {
-                      input: classes.searchInput
+                      inkbar: classes.searchInput
                     }
                   }}
                 />
