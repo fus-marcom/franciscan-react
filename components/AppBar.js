@@ -91,12 +91,13 @@ const styles = theme => ({
 
 class ButtonAppBar extends Component {
   state = {
-    isSearchOpen: false
+    isSearchOpen: false,
+    searchText: ''
   }
   onSearchClick = () => {
     this.setState(
-      (state, props) => {
-        return { isSearchOpen: !state.isSearchOpen }
+      prevState => {
+        return { isSearchOpen: !prevState.isSearchOpen }
       },
       () => {
         if (this.state.isSearchOpen) {
@@ -105,12 +106,11 @@ class ButtonAppBar extends Component {
       }
     )
   }
-  // componentDidMount () {
-  //   this.state.isSearchOpen ? this.searchBar.focus() : undefined
-  // }
+  onSeachChange = e => this.setState({ searchText: e.target.value })
+
   render () {
     const { classes, toggleDrawer } = this.props
-    const { isSearchOpen } = this.state
+    const { isSearchOpen, searchText } = this.state
     return (
       <div className={classes.root}>
         <AppBar className={classes.appBar} position="static">
@@ -259,6 +259,8 @@ class ButtonAppBar extends Component {
                   inputRef={inp => {
                     this.searchInput = inp
                   }}
+                  value={searchText}
+                  onChange={this.onSeachChange}
                 />
               </Grid>
             </Grid>
