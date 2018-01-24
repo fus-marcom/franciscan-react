@@ -11,7 +11,7 @@ import Grid from 'material-ui/Grid'
 import SvgIcon from 'material-ui/SvgIcon'
 import Link from 'next/link'
 import AppBarMenuItem from './AppBarMenuItem'
-import TextField from 'material-ui/TextField'
+import Input from 'material-ui/Input'
 
 const styles = theme => ({
   root: {
@@ -94,12 +94,23 @@ class ButtonAppBar extends Component {
     isSearchOpen: false
   }
   onSearchClick = () => {
-    this.setState((state, props) => {
-      return { isSearchOpen: !state.isSearchOpen }
-    })
+    this.setState(
+      (state, props) => {
+        return { isSearchOpen: !state.isSearchOpen }
+      },
+      () => {
+        if (this.state.isSearchOpen) {
+          this.searchInput && this.searchInput.focus()
+        }
+      }
+    )
   }
+  // componentDidMount () {
+  //   this.state.isSearchOpen ? this.searchBar.focus() : undefined
+  // }
   render () {
     const { classes, toggleDrawer } = this.props
+    const { isSearchOpen } = this.state
     return (
       <div className={classes.root}>
         <AppBar className={classes.appBar} position="static">
@@ -129,7 +140,7 @@ class ButtonAppBar extends Component {
               </Typography>
             </div>
             <Grid container className={classes.col2}>
-              <Grid item md={12} className={classes.col2Top}>
+              <Grid item xs={12} className={classes.col2Top}>
                 <div className={classes.social}>
                   <a id="facebook" className={classes.socialIcon}>
                     <SvgIcon className={classes.svgStyle} viewBox="0 0 800 800">
@@ -206,7 +217,7 @@ class ButtonAppBar extends Component {
                   </Button>
                 </div>
               </Grid>
-              <Grid item md={12} className={classes.col2Bottom}>
+              <Grid item xs={12} className={classes.col2Bottom}>
                 <AppBarMenuItem
                   toggleDrawer={toggleDrawer}
                   linkId="about"
@@ -238,17 +249,15 @@ class ButtonAppBar extends Component {
                   />
                   <path d="M0 0h24v24H0z" fill="none" />
                 </SvgIcon>
-                <TextField
+
+                <Input
                   className={
-                    this.state.isSearchOpen
-                      ? classes.searchOpen
-                      : classes.searchClosed
+                    isSearchOpen ? classes.searchOpen : classes.searchClosed
                   }
                   placeholder="Search"
-                  InputProps={{
-                    classes: {
-                      inkbar: classes.searchInput
-                    }
+                  classes={{ inkbar: classes.searchInput }}
+                  inputRef={inp => {
+                    this.searchInput = inp
                   }}
                 />
               </Grid>
