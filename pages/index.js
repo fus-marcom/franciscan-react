@@ -19,7 +19,8 @@ const styles = theme => ({
     backgroundImage: 'url(https://unsplash.it/1200/800?image=1062)',
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    textAlign: 'center'
   },
   heroBtn: {
     display: 'flex',
@@ -34,19 +35,23 @@ const styles = theme => ({
   media: {
     minHeight: 280
   },
-  heroCards: {
-    padding: '3rem'
-  },
   gridItemFix: {
     width: '100%',
     padding: '16px'
   },
   avatarBig: {
     width: '200px',
-    height: '200px'
+    height: '200px',
+    [theme.breakpoints.down('sm')]: {
+      width: '100px',
+      height: '100px'
+    }
   },
   listItemTextBig: {
-    fontSize: '34px'
+    fontSize: '34px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '24px'
+    }
   },
   videoIframe: {
     width: '100%',
@@ -74,7 +79,7 @@ const IndexPage = ({ classes }) => (
       <Typography type="subheading" className={classes.white} gutterBottom>
         Add your own text and images for a quick one page site.
       </Typography>
-      <Grid container>
+      <Grid container style={{ width: '100%' }}>
         <Grid item className={classes.heroBtn} xs={12}>
           <Button color="accent" raised style={{ width: '192px' }}>
             Apply
@@ -236,7 +241,7 @@ const IndexPage = ({ classes }) => (
             </CardContent>
           </Card>
         </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
+        <Grid item className={classes.gridItemFix} xs={12} md={6}>
           <Card className={classes.card}>
             <CardContent>
               <Typography type="headline" component="h2">
