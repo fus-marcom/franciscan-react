@@ -30,6 +30,11 @@ app.prepare().then(() => {
 
   // Route to each page individually to one component (like majors) pass in the correct slug manually as the id
   // Make a proper route (majors/business) and have it go to the same component
+  // server.get('/:id', (req, res) =>
+  //   renderAndCache(req, res, '/major', { id: 'economics' })
+  // )
+
+  // Majors
   server.get('/economics', (req, res) =>
     renderAndCache(req, res, '/major', { id: 'economics' })
   )
@@ -38,6 +43,15 @@ app.prepare().then(() => {
   )
   server.get('/accounting', (req, res) =>
     renderAndCache(req, res, '/major', { id: 'accounting' })
+  )
+
+  // Departments
+  // server.get('/department', (req, res) =>
+  //   renderAndCache(req, res, '/departmentList', { id: req.params.id })
+  // )
+
+  server.get('/department/:id', (req, res) =>
+    renderAndCache(req, res, '/department', { id: req.params.id })
   )
 
   server.get('*', (req, res) => {
