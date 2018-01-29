@@ -45,6 +45,28 @@ app.prepare().then(() => {
     renderAndCache(req, res, '/major', { id: 'accounting' })
   )
 
+  // server.get('/dept/:dept_id/minor/:minor_id', (req, res) =>
+  //   renderAndCache(req, res, '/minor', { id: req.params.id })
+  // )
+
+  // Minors
+  server.get('/comm-arts/film-studies', (req, res) =>
+    renderAndCache(req, res, '/minor', { id: 'film-studies-minor' })
+  )
+
+  server.get('/minor/:id', (req, res) =>
+    renderAndCache(req, res, '/minor', { id: req.params.id })
+  )
+
+  // Associate Degree Programs
+  server.get('/associate', (req, res) =>
+    renderAndCache(req, res, '/associate', { id: 'main' })
+  )
+
+  server.get('/associate/:id', (req, res) =>
+    renderAndCache(req, res, '/associate', { id: req.params.id })
+  )
+
   // Departments
   // server.get('/department', (req, res) =>
   //   renderAndCache(req, res, '/departmentList', { id: req.params.id })
