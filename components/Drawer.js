@@ -11,6 +11,12 @@ import Divider from 'material-ui/Divider'
 import Input, { InputLabel, InputAdornment } from 'material-ui/Input'
 import { FormControl } from 'material-ui/Form'
 import DrawerItem from './DrawerItem'
+import {
+  aboutMenu,
+  academicsMenu,
+  admissionsMenu,
+  faithMenu
+} from '../data/drawerMenu'
 
 const styles = theme => ({
   list: {
@@ -36,7 +42,6 @@ const styles = theme => ({
     '&:after': {
       backgroundColor: '#998643'
     }
-
   }
 })
 
@@ -104,38 +109,12 @@ class TemporaryDrawer extends React.Component {
                 expandItem={this.props.expandItem}
                 itemId="about"
                 primaryText="About"
-                submenuItems={[
-                  {
-                    text: 'Link 1',
-                    linkUrl: '#'
-                  },
-                  {
-                    text: 'Link 2',
-                    linkUrl: '#'
-                  },
-                  {
-                    text: 'Link 3',
-                    linkUrl: '#'
-                  }
-                ]}
+                submenuItems={aboutMenu}
                 isOpen={this.props.drawerItems.about}
               />
               <DrawerItem
                 primaryText="Academics"
-                submenuItems={[
-                  {
-                    text: 'Link 1',
-                    linkUrl: '#'
-                  },
-                  {
-                    text: 'Link 2',
-                    linkUrl: '#'
-                  },
-                  {
-                    text: 'Link 3',
-                    linkUrl: '#'
-                  }
-                ]}
+                submenuItems={academicsMenu}
                 isOpen={this.props.drawerItems.academics}
                 expandItem={this.props.expandItem}
                 itemId="academics"
@@ -144,40 +123,14 @@ class TemporaryDrawer extends React.Component {
                 expandItem={this.props.expandItem}
                 itemId="admissions"
                 primaryText="Admissions"
-                submenuItems={[
-                  {
-                    text: 'Link 1',
-                    linkUrl: '#'
-                  },
-                  {
-                    text: 'Link 2',
-                    linkUrl: '#'
-                  },
-                  {
-                    text: 'Link 3',
-                    linkUrl: '#'
-                  }
-                ]}
+                submenuItems={admissionsMenu}
                 isOpen={this.props.drawerItems.admissions}
               />
               <DrawerItem
                 expandItem={this.props.expandItem}
                 itemId="faith-and-life"
                 primaryText="Faith and Life"
-                submenuItems={[
-                  {
-                    text: 'Link 1',
-                    linkUrl: '#'
-                  },
-                  {
-                    text: 'Link 2',
-                    linkUrl: '#'
-                  },
-                  {
-                    text: 'Link 3',
-                    linkUrl: '#'
-                  }
-                ]}
+                submenuItems={faithMenu}
                 isOpen={this.props.drawerItems['faith-and-life']}
               />
               <Divider />
