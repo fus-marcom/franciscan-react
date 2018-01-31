@@ -81,7 +81,7 @@ const IndexPage = ({ classes }) => (
       </Typography>
       <Grid container style={{ width: '100%' }}>
         <Grid item className={classes.heroBtn} xs={12}>
-          <Button color="accent" raised style={{ width: '192px' }}>
+          <Button color="secondary" raised style={{ width: '192px' }}>
             Apply
           </Button>
         </Grid>
@@ -91,7 +91,7 @@ const IndexPage = ({ classes }) => (
           xs={6}
           style={{ justifyContent: 'flex-end' }}
         >
-          <Button color="accent" raised>
+          <Button color="secondary" raised>
             Inquire
           </Button>
         </Grid>
@@ -101,7 +101,7 @@ const IndexPage = ({ classes }) => (
           xs={6}
           style={{ justifyContent: 'flex-start' }}
         >
-          <Button color="accent" raised>
+          <Button color="secondary" raised>
             Visit
           </Button>
         </Grid>
