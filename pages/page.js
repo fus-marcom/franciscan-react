@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { compose } from 'react-apollo'
+import { PageQuery } from '../lib/queries/page'
+import { Query, compose } from 'react-apollo'
 
 import withData from '../lib/withData'
 import Layout from '../components/Layout'
@@ -11,23 +12,6 @@ class Page extends Component {
     return { id, type }
   }
   render () {
-    const { data } = this.props
-    const loading = data.loading
-    const query = gql`
-      query SomeQuery {
-        foo {
-          bar
-          baz
-        }
-      }
-    `
-    if (loading) {
-      return (
-        <Layout>
-          <h1>Loading</h1>
-        </Layout>
-      )
-    }
     return (
       <Layout>
         <Head>
@@ -37,18 +21,30 @@ class Page extends Component {
             type="text/css"
           />
         </Head>
-        <div
-          data-testid="content"
-          dangerouslySetInnerHTML={{
-            __html: data[this.props.type].edges[0].node.content
+        <Query
+          query={PageQuery(this.props.type)}
+          variables={{ name: this.props.id }}>
+          {result => {
+            if (result.loading) {
+              return <h1>Loading</h1>
+            }
+            if (result.error) return <h3>{result.error}</h3>
+
+            const { data } = result
+
+            return (
+              <div
+                data-testid="content"
+                dangerouslySetInnerHTML={{
+                  __html: data[this.props.type].edges[0].node.content
+                }}
+              />
+            )
           }}
-        />
+        </Query>
       </Layout>
     )
   }
 }
 
-export default compose(
-  withRoot,
-  withData
-)(Page)
+export default compose(withRoot, withData)(Page)
