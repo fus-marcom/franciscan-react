@@ -76,9 +76,20 @@ app.prepare().then(() => {
     renderAndCache(req, res, '/department', { id: req.params.id })
   )
 
-  server.get('/about/:id', (req, res) =>
-    renderAndCache(req, res, '/page', { id: req.params.id, type: 'aboutPages' })
+  server.get('/hr/:id', (req, res) =>
+    renderAndCache(req, res, '/page', {
+      id: req.params.id,
+      type: 'humanResources'
+    })
   )
+
+  // Make a universal Route
+  server.get('/:type/:id', (req, res) => {
+    renderAndCache(req, res, '/page', {
+      id: req.params.id,
+      type: `${req.params.type}Pages`
+    })
+  })
 
   server.get('*', (req, res) => {
     return handle(req, res)
@@ -94,11 +105,11 @@ app.prepare().then(() => {
  * NB: make sure to modify this to take into account anything that should trigger
  * an immediate page change (e.g a locale stored in req.session)
  */
-function getCacheKey(req) {
+function getCacheKey (req) {
   return `${req.url}`
 }
 
-function renderAndCache(req, res, pagePath, queryParams) {
+function renderAndCache (req, res, pagePath, queryParams) {
   const key = getCacheKey(req)
 
   // If we have a page in the cache, let's serve it
