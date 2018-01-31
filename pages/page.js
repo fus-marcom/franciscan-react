@@ -23,8 +23,7 @@ class Page extends Component {
         </Head>
         <Query
           query={PageQuery(this.props.type)}
-          variables={{ name: this.props.id }}
-        >
+          variables={{ name: this.props.id }}>
           {result => {
             if (result.loading) {
               return <h1>Loading</h1>
@@ -37,7 +36,7 @@ class Page extends Component {
               <div
                 data-testid="content"
                 dangerouslySetInnerHTML={{
-                  __html: data.aboutPages.edges[0].node.content
+                  __html: data[this.props.type].edges[0].node.content
                 }}
               />
             )
