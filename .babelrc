@@ -9,5 +9,15 @@
     "test": {
       "presets": [["env", { "modules": "commonjs" }], "next/babel"]
     }
-  }
+  },
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "^react-apollo$": "react-apollo/index"
+        }
+      }
+    ]
+  ]
 }
