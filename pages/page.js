@@ -17,13 +17,14 @@ class Page extends Component {
         <Head>
           <link
             rel="stylesheet"
-            href="/static/styles/news.css"
+            href="/static/styles/page.css"
             type="text/css"
           />
         </Head>
         <Query
           query={PageQuery(this.props.type)}
-          variables={{ name: this.props.id }}>
+          variables={{ name: this.props.id }}
+        >
           {result => {
             if (result.loading) {
               return <h1>Loading</h1>
@@ -31,12 +32,16 @@ class Page extends Component {
             if (result.error) return <h3>{result.error}</h3>
 
             const { data } = result
+            const content = data[this.props.type].edges[0].node.content
+              .replace(/<Title>/g, '<h2 class="title">')
+              .replace(/<\/Title>/g, '</h2>')
+            global.x = content
 
             return (
               <div
                 data-testid="content"
                 dangerouslySetInnerHTML={{
-                  __html: data[this.props.type].edges[0].node.content
+                  __html: content
                 }}
               />
             )
