@@ -83,6 +83,13 @@ app.prepare().then(() => {
     })
   )
 
+  server.get('/campus-security/:id', (req, res) =>
+    renderAndCache(req, res, '/page', {
+      id: req.params.id,
+      type: 'campusSecurity'
+    })
+  )
+
   // Make a universal Route
   server.get('/:type/:id', (req, res) => {
     renderAndCache(req, res, '/page', {
