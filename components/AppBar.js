@@ -23,7 +23,8 @@ const styles = theme => ({
   },
   appBar: {
     background: '#ffffff',
-    borderBottom: `solid 3px #998643`
+    borderBottom: `solid 3px #998643`,
+    paddingTop: '6px'
   },
   menuButton: {
     color: `${theme.palette.primary[500]}`,
@@ -40,7 +41,8 @@ const styles = theme => ({
   svgStyle: {
     width: 'auto',
     height: '32px',
-    fill: `${theme.palette.primary[500]}`
+    fill: `${theme.palette.primary[500]}`,
+    paddingLeft: '8px'
   },
   socialIcon: {
     display: 'inline-flex'
