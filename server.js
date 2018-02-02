@@ -90,12 +90,14 @@ app.prepare().then(() => {
     })
   )
 
-  // Make a universal Route
+  // // Make a universal Route
   server.get('/:type/:id', (req, res) => {
-    renderAndCache(req, res, '/page', {
-      id: req.params.id,
-      type: `${req.params.type}Pages`
-    })
+    if (req.params.type !== '_next') {
+      renderAndCache(req, res, '/page', {
+        id: req.params.id,
+        type: `${req.params.type}Pages`
+      })
+    }
   })
 
   server.get('*', (req, res) => {
