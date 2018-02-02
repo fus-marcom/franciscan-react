@@ -21,7 +21,7 @@ class Layout extends Component {
     drawerItems: {
       about: false,
       academics: false,
-      admissions: true,
+      admissions: false,
       'faith-and-life': false
     }
   }

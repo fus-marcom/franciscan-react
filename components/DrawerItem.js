@@ -25,7 +25,11 @@ class DrawerItem extends React.Component {
     return (
       <div>
         <ListItem button onClick={() => expandItem(itemId)}>
-          <ListItemText inset primary={primaryText} />
+          <ListItemText
+            style={{ paddingLeft: '16px' }}
+            inset
+            primary={primaryText}
+          />
           {isOpen ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
         <Collapse component="li" in={isOpen} timeout="auto" unmountOnExit>
@@ -34,6 +38,7 @@ class DrawerItem extends React.Component {
               <ListItem button className={classes.nested} key={item.text}>
                 <ListItemText
                   inset
+                  style={{ paddingLeft: '16px' }}
                   primary={item.text}
                   linkUrl={item.linkUrl}
                 />

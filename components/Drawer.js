@@ -20,7 +20,7 @@ import {
 
 const styles = theme => ({
   list: {
-    width: 300
+    width: 265
   },
   listFull: {
     width: 'auto'
