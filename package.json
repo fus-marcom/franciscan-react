@@ -1,6 +1,7 @@
 {
   "name": "franciscan-university-react",
-  "description": "The main website for Franciscan University of Steubenville. Built with React, NextJS, and MaterialUI.",
+  "description":
+    "The main website for Franciscan University of Steubenville. Built with React, NextJS, and MaterialUI.",
   "version": "1.0.0",
   "author": "Jesse Weigel <jesseweigel@gmail.com>",
   "dependencies": {
@@ -21,16 +22,15 @@
     "react-dom": "^16.2.0",
     "react-masonry-component": "^6.0.2"
   },
-  "keywords": [
-    "next"
-  ],
+  "keywords": ["next"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "./node_modules/.bin/nodemon --watch server.js server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "format":
+      "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "cm": "git-cz",
     "precommit": "lint-staged && npm run test",
     "unit": "jest test.js",
@@ -56,6 +56,7 @@
     "jest": "^22.0.4",
     "lint-staged": "^6.0.0",
     "mocha": "^4.1.0",
+    "nodemon": "^1.14.12",
     "prettier": "^1.9.2",
     "puppeteer": "^0.13.0",
     "raf": "^3.4.0"
@@ -68,9 +69,7 @@
     ]
   },
   "jest": {
-    "setupFiles": [
-      "<rootDir>/shim.js"
-    ]
+    "setupFiles": ["<rootDir>/shim.js"]
   },
   "config": {
     "commitizen": {
