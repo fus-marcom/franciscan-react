@@ -17,10 +17,10 @@ const translationObj = {
   major: { page: '/major' },
   minor: { page: '/minor' },
   department: { page: '/department' },
-  economics: { page: '/major', id: 'economics' },
-  accounting: { page: '/major', id: 'accounting' },
-  'comm-arts': { page: '/minor', id: 'film-studies-minor' },
-  associate: { page: '/associate' },
+  economics: { page: '/major', id: { default: 'economics' } },
+  accounting: { page: '/major', id: { default: 'accounting' } },
+  'comm-arts': { page: '/minor', id: { 'film-studies': 'film-studies-minor' } },
+  associate: { page: '/associate', id: { default: 'main' } },
   hr: { page: '/page', type: 'humanResources' },
   'campus-security': { page: '/page', type: 'campusSecurity' }
 }
@@ -37,21 +37,38 @@ app.prepare().then(() => {
   // Use the `renderAndCache` utility defined below to serve pages
   server.get('/', (req, res) => renderAndCache(req, res, '/'))
 
-  // Associate Degree Programs
-  server.get('/associate', (req, res) =>
-    renderAndCache(req, res, '/associate', { id: 'main' })
-  )
-
   // universal Route
   server.get('/:type/:id', (req, res, next) => {
     if (req.params.type !== '_next') {
-      const type = translationObj[req.params.type].type
-        ? translationObj[req.params.type].type
-        : null
-      const id = translationObj[req.params.type].id
-        ? translationObj[req.params.type].id
-        : req.params.id
-      const page = translationObj[req.params.type].page
+      let type = null
+      if (req.params.type) {
+        type = `${req.params.type}Pages`
+        if (translationObj[req.params.type]) {
+          if (translationObj[req.params.type].type) {
+            type = translationObj[req.params.type].type
+          }
+        }
+      }
+      let id = null
+      if (req.params.id) {
+        if (translationObj[req.params.type].id) {
+          if (translationObj[req.params.type].id[req.params.id]) {
+            id = translationObj[req.params.type].id[req.params.id]
+          }
+        } else {
+          id = req.params.id
+        }
+      } else {
+        id = translationObj[req.params.type].id.default
+          ? translationObj[req.params.type].id.default
+          : null
+      }
+      let page = '/page'
+      if (translationObj[req.params.type]) {
+        if (translationObj[req.params.type].page) {
+          page = translationObj[req.params.type].page
+        }
+      }
       let options = {}
       if (id) {
         options.id = id
