@@ -38,7 +38,7 @@ app.prepare().then(() => {
   server.get('/', (req, res) => renderAndCache(req, res, '/'))
 
   // universal Route
-  server.get('/:type/:id', (req, res, next) => {
+  server.get('/:type/:id?', (req, res, next) => {
     if (req.params.type !== '_next') {
       let type = null
       if (req.params.type) {
@@ -59,9 +59,11 @@ app.prepare().then(() => {
           id = req.params.id
         }
       } else {
-        id = translationObj[req.params.type].id.default
-          ? translationObj[req.params.type].id.default
-          : null
+        if (translationObj[req.params.type].id) {
+          if (translationObj[req.params.type].id.default) {
+            id = translationObj[req.params.type].id.default
+          }
+        }
       }
       let page = '/page'
       if (translationObj[req.params.type]) {
@@ -76,10 +78,10 @@ app.prepare().then(() => {
       if (type) {
         options.type = type
       }
-      console.log(type)
-      console.log(id)
-      console.log(page)
-      console.log(options)
+      // console.log('type:', type)
+      // console.log('id:', id)
+      // console.log('page:', page)
+      // console.log('options:', options)
       return renderAndCache(req, res, page, options)
     }
     return handle(req, res)
