@@ -47,6 +47,11 @@ app.prepare().then(() => {
           if (translationObj[req.params.type].type) {
             type = translationObj[req.params.type].type
           }
+        } else {
+          return renderAndCache(req, res, '/page', {
+            id: req.params.id,
+            type: `${req.params.type}Pages`
+          })
         }
       }
       let id = null
