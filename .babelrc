@@ -7,13 +7,24 @@
       "presets": "next/babel"
     },
     "test": {
-      "presets": [["env", { "modules": "commonjs" }], "next/babel"]
+      "presets": [
+        [
+          "env",
+          {
+            "modules": "commonjs"
+          }
+        ],
+        "next/babel"
+      ]
     }
   },
   "plugins": [
     [
       "module-resolver",
       {
+        "root": [
+          "./src"
+        ],
         "alias": {
           "^react-apollo$": "react-apollo/index"
         }
