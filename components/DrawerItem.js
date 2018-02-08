@@ -4,10 +4,15 @@ import List, { ListItem, ListItemText } from 'material-ui/List'
 import Collapse from 'material-ui/transitions/Collapse'
 import ExpandLess from 'material-ui-icons/ExpandLess'
 import ExpandMore from 'material-ui-icons/ExpandMore'
+import Link from 'next/link'
 
 const styles = theme => ({
   nested: {
     paddingLeft: theme.spacing.unit * 4
+  },
+  subLink: {
+    textDecoration: 'none',
+    color: 'rgba(0,0,0,0.54)'
   }
 })
 
@@ -39,7 +44,11 @@ class DrawerItem extends React.Component {
                 <ListItemText
                   inset
                   style={{ paddingLeft: '16px' }}
-                  primary={item.text}
+                  primary={
+                    <Link prefetch href={item.linkUrl}>
+                      <a className={classes.subLink}>{item.text}</a>
+                    </Link>
+                  }
                   linkUrl={item.linkUrl}
                 />
               </ListItem>
