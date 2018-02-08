@@ -55,6 +55,7 @@ describe('Faculty', () => {
       const content = jsonData.data.faculty.edges[0].node.content
         .replace(/<Details>/g, '<div class="details">')
         .replace(/<\/Details>/g, '</div>')
+        .replace(/src="/g, 'src="https://www.franciscan.edu')
       const page = await browser.newPage()
       await page.goto(`${opts.appUrl}/faculty/haenni-eric`)
       const CONTENT_SELECTOR = 'div[data-testid*="content"]'
