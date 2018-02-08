@@ -1,23 +1,23 @@
 export const aboutMenu = [
   {
     text: 'Academically Excellent',
-    linkUrl: '#'
+    linkUrl: '/about/academically-excellent'
   },
   {
     text: 'Passionately Catholic',
-    linkUrl: '#'
+    linkUrl: '/about/passionately-catholic'
   },
   {
     text: 'At A Glance',
-    linkUrl: '#'
+    linkUrl: 'about/at-a-glance'
   },
   {
     text: 'Employment & HR',
-    linkUrl: '#'
+    linkUrl: '/hr'
   },
   {
     text: 'Consumer Information',
-    linkUrl: '#'
+    linkUrl: '/consumer-information'
   },
   {
     text: 'The Inn at Franciscan Square',
@@ -25,7 +25,7 @@ export const aboutMenu = [
   },
   {
     text: 'Our Vision & Charisms',
-    linkUrl: '#'
+    linkUrl: '/about/vision-charisms'
   },
   {
     text: 'Our Mission Statement',
