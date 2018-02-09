@@ -8,6 +8,15 @@ p, ul {
   line-height: 1.5;
 }
 
+img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+detailviewimage {
+  display: block;
+}
+
 div[data-testid='content'] {
   max-width: 90%;
   margin: 0 auto;

@@ -1,35 +1,16 @@
 import React, { Component } from 'react'
-import { graphql, compose } from 'react-apollo'
-import { SampleQuery } from '../lib/queries/posts'
+import { Query, compose } from 'react-apollo'
 import withData from '../lib/withData'
 import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 import Head from 'next/head'
-import Grid from 'material-ui/Grid'
+import { ProfileQuery } from '../lib/queries/profile'
 
 class Faculty extends Component {
-  static async getInitialProps ({ query: { id } }) {
-    console.log(id)
-    return { id }
+  static async getInitialProps ({ query: { id, type } }) {
+    return { id, type }
   }
-
   render () {
-    const { data } = this.props
-    const loading = data.loading
-    if (loading) {
-      return (
-        <Layout>
-          <h1>Loading</h1>
-        </Layout>
-      )
-    }
-
-    const content = data.faculty.edges[0].node.content
-      .replace(/<Details>/g, '<div class="details">')
-      .replace(/<\/Details>/g, '</div>')
-      .replace(/src="/g, 'src="https://www.franciscan.edu')
-    global.x = content
-
     return (
       <Layout>
         <Head>
@@ -39,25 +20,36 @@ class Faculty extends Component {
             type="text/css"
           />
         </Head>
-        <Grid container>
-          <Grid item xs={12}>
-            <div
-              data-testid="content"
-              dangerouslySetInnerHTML={{
-                __html: content
-              }}
-            />
-          </Grid>
-        </Grid>
+        <Query
+          query={ProfileQuery(this.props.type)}
+          variables={{ name: this.props.id }}
+        >
+          {result => {
+            if (result.loading) {
+              return <h1>Loading</h1>
+            }
+            if (result.error) return <h3>{result.error}</h3>
+
+            const { data } = result
+            const content = data[this.props.type].edges[0].node.content
+              .replace(/<Details>/g, '<div class="details">')
+              .replace(/<\/Details>/g, '</div>')
+              .replace(/src="\//g, 'src="https://www.franciscan.edu/')
+            global.x = content
+
+            return (
+              <div
+                data-testid="content"
+                dangerouslySetInnerHTML={{
+                  __html: content
+                }}
+              />
+            )
+          }}
+        </Query>
       </Layout>
     )
   }
 }
 
-export default compose(
-  withRoot,
-  withData,
-  graphql(SampleQuery, {
-    options: ({ id }) => ({ variables: { name: id } })
-  })
-)(Faculty)
+export default compose(withRoot, withData)(Faculty)

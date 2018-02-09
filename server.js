@@ -11,7 +11,7 @@ const app = next({
 const handle = app.getRequestHandler()
 
 const translationObj = {
-  faculty: { page: '/faculty' },
+  faculty: { page: '/faculty', type: 'faculty' },
   contact: { page: '/directory' },
   news: { page: '/news' },
   major: { page: '/major' },
@@ -22,7 +22,8 @@ const translationObj = {
   'comm-arts': { page: '/minor', id: { 'film-studies': 'film-studies-minor' } },
   associate: { page: '/associate', id: { default: 'main' } },
   hr: { page: '/page', type: 'humanResources' },
-  'campus-security': { page: '/page', type: 'campusSecurity' }
+  'campus-security': { page: '/page', type: 'campusSecurity' },
+  studentprofiles: { page: '/faculty', type: 'studentProfilePages' }
 }
 
 // This is where we cache our rendered HTML pages
