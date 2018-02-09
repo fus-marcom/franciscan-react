@@ -29,34 +29,34 @@ export const aboutMenu = [
   },
   {
     text: 'Our Mission Statement',
-    linkUrl: '#'
+    linkUrl: '/about/mission-statement'
   },
   {
     text: 'Franciscans TOR',
-    linkUrl: '#'
+    linkUrl: '/chapel/franciscans-tor'
   },
   {
     text: 'Our History',
-    linkUrl: '#'
+    linkUrl: '/about/history'
   },
   {
     text: 'Fact Book',
-    linkUrl: '#'
+    linkUrl: '/fact-book'
   }
 ]
 
 export const academicsMenu = [
   {
     text: 'Undergraduate',
-    linkUrl: '#'
+    linkUrl: '/academics/ug/majors'
   },
   {
     text: 'Graduate',
-    linkUrl: '#'
+    linkUrl: '/academics/graduate-programs'
   },
   {
     text: 'Online',
-    linkUrl: '#'
+    linkUrl: '/admissions/online'
   },
   {
     text: 'Undergraduate Catalog',
@@ -69,11 +69,11 @@ export const academicsMenu = [
   },
   {
     text: 'Our Core Curriculum',
-    linkUrl: '#'
+    linkUrl: '/core-curriculum'
   },
   {
     text: 'Institutes & Centers',
-    linkUrl: '#'
+    linkUrl: '/institutes-centers'
   },
   {
     text: 'Academic Departments',
@@ -81,54 +81,54 @@ export const academicsMenu = [
   },
   {
     text: 'Academic Affairs',
-    linkUrl: '#'
+    linkUrl: '/academic-affairs/leadership'
   },
   {
     text: 'Austrian Semester',
-    linkUrl: '#'
+    linkUrl: '/austria'
   }
 ]
 
 export const admissionsMenu = [
   {
     text: 'Undergraduate',
-    linkUrl: '#'
+    linkUrl: '/admissions/undergraduate'
   },
   {
     text: 'Graduate',
-    linkUrl: '#'
+    linkUrl: '/admissions/graduate/'
   },
   {
     text: 'Online',
-    linkUrl: '#'
+    linkUrl: '/admissions/online'
   },
   {
     text: 'Local High School Students',
-    linkUrl: '#'
+    linkUrl: '/savings-for-local-graduates'
   },
   {
     text: 'Transfer Students',
-    linkUrl: '#'
+    linkUrl: '/admissions/undergraduate/requirements/transfer/'
   },
   {
     text: 'International Students',
-    linkUrl: '#'
+    linkUrl: '/admissions/undergraduate/requirements/international/'
   },
   {
     text: 'Homeschool',
-    linkUrl: '#'
+    linkUrl: '/admissions/undergraduate/requirements/'
   },
   {
     text: 'General Requirements',
-    linkUrl: '#'
+    linkUrl: '/admissions/undergraduate/requirements/'
   },
   {
     text: 'Financial Aid',
-    linkUrl: '#'
+    linkUrl: '/sfs/new/'
   },
   {
     text: 'Military Benefits Information',
-    linkUrl: '#'
+    linkUrl: '/military-benefits/'
   }
 ]
 
