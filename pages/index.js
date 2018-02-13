@@ -1,5 +1,5 @@
 import React from 'react'
-import Card, { CardMedia, CardActions, CardContent } from 'material-ui/Card'
+import Card, { CardMedia, CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import withStyles from 'material-ui/styles/withStyles'
 import Button from 'material-ui/Button'
@@ -9,6 +9,7 @@ import withRoot from '../components/withRoot'
 import List, { ListItem, ListItemText } from 'material-ui/List'
 import Avatar from 'material-ui/Avatar'
 import Masonry from 'react-masonry-component'
+import ProfileCard from '../components/ProfileCard'
 
 const styles = theme => ({
   parallax: {
@@ -67,16 +68,6 @@ const styles = theme => ({
     overflow: 'hidden',
     position: 'relative',
     paddingBottom: '56.25%'
-  },
-  category: {
-    color: '#ffb41f',
-    textTransform: 'uppercase',
-    fontSize: '14px'
-  },
-  quote: {
-    fontSize: '16px',
-    paddingLeft: '8px',
-    borderLeft: '4px solid rgba(0, 0, 0, 0.24)'
   }
 })
 
@@ -130,66 +121,18 @@ const IndexPage = ({ classes }) => (
           </Card>
         </Grid>
         <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
-          <Card className={classes.card}>
-            <CardMedia
-              className={classes.media}
-              image="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Students/Noah_Fisher_landing_v2.jpg"
-              title="Austria Campus"
-            />
-            <CardContent>
-              <Typography type="caption" className={classes.category}>
-                Student Profile
-              </Typography>
-              <Typography type="headline" component="h2">
-                Noah Fisher
-              </Typography>
-              <Typography component="p" className={classes.quote}>
-                I first learned about Franciscan from some people at my parish
+          <ProfileCard
+            profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Students/Noah_Fisher_landing_v2.jpg"
+            profileImgTitle="Noah Fisher"
+            profileType="Student Profile"
+            profileName="Noah Fisher"
+            content="I first learned about Franciscan from some people at my parish
                 who studied here. They recommended I check it out, but I wasn’t
                 so sure. When I visited, though, I was blown away by the people
                 I met; they were so genuine and helpful. They were the biggest
-                reason I decided to come to Franciscan.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small" color="primary">
-                Learn More
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
-          <Card className={classes.card}>
-            <CardMedia
-              className={classes.media}
-              image="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Students/Noah_Fisher_landing_v2.jpg"
-              title="Austria Campus"
-            />
-            <CardContent>
-              <Typography type="caption" className={classes.category}>
-                Student Profile
-              </Typography>
-              <Typography type="headline" component="h2">
-                Noah Fisher
-              </Typography>
-              <Typography
-                component="p"
-                className={classes.quote}
-                style={{ fontStyle: 'italic' }}
-              >
-                I first learned about Franciscan from some people at my parish
-                who studied here. They recommended I check it out, but I wasn’t
-                so sure. When I visited, though, I was blown away by the people
-                I met; they were so genuine and helpful. They were the biggest
-                reason I decided to come to Franciscan.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small" color="primary">
-                Learn More
-              </Button>
-            </CardActions>
-          </Card>
+                reason I decided to come to Franciscan."
+            profileLink="/studentprofiles/noah-fisher"
+          />
         </Grid>
         <Grid item className={classes.gridItemFix} xs={12} sm={6}>
           <Card className={classes.card}>
