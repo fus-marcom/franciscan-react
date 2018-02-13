@@ -38,7 +38,15 @@ const styles = theme => ({
   },
   gridItemFix: {
     width: '100%',
-    padding: '16px'
+    padding: '16px',
+    [theme.breakpoints.down('sm')]: {
+      padding: '8px'
+    }
+  },
+  avatar: {
+    width: '80px',
+    height: '80px',
+    borderRadius: 0
   },
   avatarBig: {
     width: '200px',
@@ -142,32 +150,36 @@ const IndexPage = ({ classes }) => (
               </Typography>
               <List>
                 <ListItem dense button className={classes.listItem}>
+                  <ListItemText primary="In Crisis: American Higher Education" />
                   <Avatar
+                    className={classes.avatar}
                     alt="Random"
                     src="https://picsum.photos/200/200/?random"
-                  />
-                  <ListItemText primary="Event One" />
+                  />{' '}
                 </ListItem>
                 <ListItem dense button className={classes.listItem}>
+                  <ListItemText primary="Final Examinations Spring 2018" />
                   <Avatar
+                    className={classes.avatar}
                     alt="Random"
                     src="https://picsum.photos/200/200/?random"
-                  />
-                  <ListItemText primary="Event Two" />
+                  />{' '}
                 </ListItem>
                 <ListItem dense button className={classes.listItem}>
+                  <ListItemText primary="Baccalaureate Mass" />
                   <Avatar
+                    className={classes.avatar}
                     alt="Random"
                     src="https://picsum.photos/200/200/?random"
-                  />
-                  <ListItemText primary="Event Three" />
+                  />{' '}
                 </ListItem>
                 <ListItem dense button className={classes.listItem}>
+                  <ListItemText primary="Commencement Exercises 2018" />
                   <Avatar
+                    className={classes.avatar}
                     alt="Random"
                     src="https://picsum.photos/200/200/?random"
-                  />
-                  <ListItemText primary="Event Four" />
+                  />{' '}
                 </ListItem>
               </List>
             </CardContent>
