@@ -135,19 +135,19 @@ export const admissionsMenu = [
 export const faithMenu = [
   {
     text: 'Student Life',
-    linkUrl: '#'
+    linkUrl: '/studentlife'
   },
   {
     text: 'Chapel Ministries',
-    linkUrl: '#'
+    linkUrl: '/chapel/'
   },
   {
     text: 'Households',
-    linkUrl: '#'
+    linkUrl: '/households/'
   },
   {
     text: 'Pilgrimages',
-    linkUrl: '#'
+    linkUrl: '/pilgrimages/'
   },
   {
     text: 'Franciscan University Presents',
@@ -155,34 +155,34 @@ export const faithMenu = [
   },
   {
     text: 'Franciscan Magazine',
-    linkUrl: '#'
+    linkUrl: '/franciscanmagazine/'
   },
   {
     text: 'Missionary Outreach',
-    linkUrl: '#'
+    linkUrl: '/missionary-outreach/'
   },
   {
     text: 'Priestly Discernment Program',
-    linkUrl: '#'
+    linkUrl: '/pdp'
   },
   {
     text: 'Veritas Center',
-    linkUrl: '#'
+    linkUrl: '/veritas'
   },
   {
     text: 'Institute of Science and Health',
-    linkUrl: '#'
+    linkUrl: '/fish'
   },
   {
     text: 'Institute for World Health',
-    linkUrl: '#'
+    linkUrl: '/fiwh'
   },
   {
     text: 'Center for Bioethics',
-    linkUrl: '#'
+    linkUrl: '/center-for-bioethics/'
   },
   {
     text: 'Franciscan University Press',
-    linkUrl: '#'
+    linkUrl: '/fupress'
   }
 ]
