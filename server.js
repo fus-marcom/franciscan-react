@@ -19,7 +19,10 @@ const translationObj = {
   department: { page: '/department' },
   economics: { page: '/major', id: { default: 'economics' } },
   accounting: { page: '/major', id: { default: 'accounting' } },
-  'comm-arts': { page: '/minor', id: { 'film-studies': 'film-studies-minor' } },
+  'comm-arts': {
+    page: '/minor',
+    id: { 'film-studies': 'film-studies-minor' }
+  },
   associate: { page: '/associate', id: { default: 'main' } },
   hr: { page: '/page', type: 'humanResources' },
   'campus-security': { page: '/page', type: 'campusSecurity' },
@@ -40,7 +43,12 @@ app.prepare().then(() => {
 
   // universal Route
   server.get('/:type/:id?', (req, res, next) => {
-    if (req.params.type !== '_next') {
+    if (
+      req.params.type !== '_next' &&
+      req.params.type !== 'robots.txt' &&
+      req.params.type !== 'service-worker.js' &&
+      req.params.type !== 'favicon.ico'
+    ) {
       let type = null
       if (req.params.type) {
         type = `${req.params.type}Pages`
