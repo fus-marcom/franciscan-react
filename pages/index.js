@@ -10,6 +10,7 @@ import List, { ListItem, ListItemText } from 'material-ui/List'
 import Avatar from 'material-ui/Avatar'
 import Masonry from 'react-masonry-component'
 import ProfileCard from '../components/ProfileCard'
+// import ListCard from '../components/ListCard'
 
 const styles = theme => ({
   parallax: {
@@ -42,6 +43,11 @@ const styles = theme => ({
     [theme.breakpoints.down('sm')]: {
       padding: '8px'
     }
+  },
+  listItem: {
+    paddingLeft: 0,
+    paddingRight: 0,
+    alignItems: 'start'
   },
   avatar: {
     width: '80px',
@@ -144,13 +150,18 @@ const IndexPage = ({ classes }) => (
         </Grid>
         <Grid item className={classes.gridItemFix} xs={12} sm={6}>
           <Card className={classes.card}>
-            <CardContent>
+            <CardContent className={classes.listCardContent}>
               <Typography type="headline" component="h2">
                 Events
               </Typography>
               <List>
                 <ListItem dense button className={classes.listItem}>
-                  <ListItemText primary="In Crisis: American Higher Education" />
+                  <ListItemText
+                    primary="In Crisis: American Higher Education"
+                    secondary="American higher education is in turmoil like never before. Student debt is at an all-time high, casting doubt on the value of a college education. The liberal arts are imperiled. Serious campus debate and free speech are threatened by politicization. An “anything goes” morality is the norm on many campuses.
+
+Against this backdrop, the Veritas Center for Ethics in Public Life at Franciscan University of Steubenville will host a two-day conference, “The State of American Higher Education, 2018,” to be held at Franciscan University April 6-7, 2018."
+                  />
                   <Avatar
                     className={classes.avatar}
                     alt="Random"
