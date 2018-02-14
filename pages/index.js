@@ -10,7 +10,8 @@ import List, { ListItem, ListItemText } from 'material-ui/List'
 import Avatar from 'material-ui/Avatar'
 import Masonry from 'react-masonry-component'
 import ProfileCard from '../components/ProfileCard'
-// import ListCard from '../components/ListCard'
+import ListCard from '../components/ListCard'
+import { eventsData } from '../data/listData'
 
 const styles = theme => ({
   parallax: {
@@ -124,6 +125,15 @@ const IndexPage = ({ classes }) => (
     </div>
     <div className={classes.heroCards}>
       <Masonry>
+        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
+          <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
+            <CardMedia
+              src="https://www.youtube.com/embed/HpzwoD2oVSQ?modestbranding=1&rel=0"
+              component="iframe"
+              className={classes.videoIframe}
+            />
+          </Card>
+        </Grid>
         <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
           <Card className={classes.card}>
             <CardContent>
@@ -149,62 +159,9 @@ const IndexPage = ({ classes }) => (
           />
         </Grid>
         <Grid item className={classes.gridItemFix} xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardContent className={classes.listCardContent}>
-              <Typography type="headline" component="h2">
-                Events
-              </Typography>
-              <List>
-                <ListItem dense button className={classes.listItem}>
-                  <ListItemText
-                    primary="In Crisis: American Higher Education"
-                    secondary="American higher education is in turmoil like never before. Student debt is at an all-time high, casting doubt on the value of a college education. The liberal arts are imperiled. Serious campus debate and free speech are threatened by politicization. An “anything goes” morality is the norm on many campuses.
+          <ListCard listTitle="Events" itemsArray={eventsData} />
+        </Grid>
 
-Against this backdrop, the Veritas Center for Ethics in Public Life at Franciscan University of Steubenville will host a two-day conference, “The State of American Higher Education, 2018,” to be held at Franciscan University April 6-7, 2018."
-                  />
-                  <Avatar
-                    className={classes.avatar}
-                    alt="Random"
-                    src="https://picsum.photos/200/200/?random"
-                  />{' '}
-                </ListItem>
-                <ListItem dense button className={classes.listItem}>
-                  <ListItemText primary="Final Examinations Spring 2018" />
-                  <Avatar
-                    className={classes.avatar}
-                    alt="Random"
-                    src="https://picsum.photos/200/200/?random"
-                  />{' '}
-                </ListItem>
-                <ListItem dense button className={classes.listItem}>
-                  <ListItemText primary="Baccalaureate Mass" />
-                  <Avatar
-                    className={classes.avatar}
-                    alt="Random"
-                    src="https://picsum.photos/200/200/?random"
-                  />{' '}
-                </ListItem>
-                <ListItem dense button className={classes.listItem}>
-                  <ListItemText primary="Commencement Exercises 2018" />
-                  <Avatar
-                    className={classes.avatar}
-                    alt="Random"
-                    src="https://picsum.photos/200/200/?random"
-                  />{' '}
-                </ListItem>
-              </List>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
-          <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
-            <CardMedia
-              src="https://www.youtube.com/embed/HdPhaJFcLbs?rel=0"
-              component="iframe"
-              className={classes.videoIframe}
-            />
-          </Card>
-        </Grid>
         <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
           <Card className={classes.card}>
             <CardContent>
@@ -369,7 +326,7 @@ Against this backdrop, the Veritas Center for Ethics in Public Life at Francisca
         <Grid item className={classes.gridItemFix} xs={12} sm={6}>
           <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
             <CardMedia
-              src="https://www.youtube.com/embed/HdPhaJFcLbs?rel=0"
+              src="https://www.youtube.com/embed/HzfPBp3lHTU?rel=0"
               component="iframe"
               className={classes.videoIframe}
             />

@@ -32,27 +32,23 @@ class ListCard extends React.Component {
             {listTitle}
           </Typography>
           <List>
-            {itemsArray.map(item => (
-              <ListItem
-                dense
-                button
-                className={classes.listItem}
-                key={item.link}
-              >
-                <Link prefetch href={item.link}>
+            {itemsArray.map((item, i) => (
+              <Link prefetch href={item.link} key={item.link + i}>
+                <ListItem dense button divider className={classes.listItem}>
                   <ListItemText
-                    primary={item.primary}
-                    secondary="American higher education is in turmoil like never before. Student debt is at an all-time high, casting doubt on the value of a college education. The liberal arts are imperiled. Serious campus debate and free speech are threatened by politicization. An “anything goes” morality is the norm on many campuses.
-
-Against this backdrop, the Veritas Center for Ethics in Public Life at Franciscan University of Steubenville will host a two-day conference, “The State of American Higher Education, 2018,” to be held at Franciscan University April 6-7, 2018."
+                    primary={item.primaryText}
+                    secondary={item.secondaryText}
                   />
-                  <Avatar
-                    className={classes.avatar}
-                    alt="Random"
-                    src="https://picsum.photos/200/200/?random"
-                  />{' '}
-                </Link>
-              </ListItem>
+                  {item.image && (
+                    <Avatar
+                      className={classes.avatar}
+                      alt={item.imgAlt}
+                      title={item.imgTitle}
+                      src={item.image}
+                    />
+                  )}
+                </ListItem>
+              </Link>
             ))}
           </List>
         </CardContent>
