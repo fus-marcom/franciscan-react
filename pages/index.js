@@ -127,10 +127,12 @@ const IndexPage = ({ classes }) => (
       <Masonry>
         <Grid item className={classes.gridItemFix} xs={12} sm={6}>
           <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
-            <CardMedia
-              src="https://www.youtube.com/embed/HpzwoD2oVSQ?modestbranding=1&rel=0"
-              component="iframe"
+            <iframe
               className={classes.videoIframe}
+              src="https://www.youtube.com/embed/HpzwoD2oVSQ?modestbranding=1&rel=0&color=white"
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
             />
           </Card>
         </Grid>
@@ -325,10 +327,12 @@ const IndexPage = ({ classes }) => (
         </Grid>
         <Grid item className={classes.gridItemFix} xs={12} sm={6}>
           <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
-            <CardMedia
-              src="https://www.youtube.com/embed/HzfPBp3lHTU?rel=0"
-              component="iframe"
+            <iframe
               className={classes.videoIframe}
+              src="https://www.youtube.com/embed/HzfPBp3lHTU?modestbranding=1&rel=0&color=white"
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
             />
           </Card>
         </Grid>
