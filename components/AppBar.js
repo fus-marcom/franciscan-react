@@ -19,7 +19,12 @@ const styles = theme => ({
     width: '100%'
   },
   flex: {
-    flex: 1
+    flex: 1,
+    [theme.breakpoints.down('sm')]: {
+      position: 'absolute',
+      left: '50%',
+      transform: 'translate(-50%)'
+    }
   },
   appBar: {
     background: '#ffffff',

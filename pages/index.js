@@ -93,7 +93,7 @@ const IndexPage = ({ classes }) => (
         Franciscan University of Steubenville
       </Typography>
       <Typography type="subheading" className={classes.white} gutterBottom>
-        Add your own text and images for a quick one page site.
+        Academically Excellent, Passionately Catholic
       </Typography>
       <Grid container style={{ width: '100%' }}>
         <Grid item className={classes.heroBtn} xs={12}>
@@ -140,8 +140,7 @@ const IndexPage = ({ classes }) => (
           <Card className={classes.card}>
             <CardContent>
               <Typography type="display1">
-                99% of Graduates are Super Awesome!!! The other 1% are Super
-                Duper Awesome!!!
+                15 to 1 Student to Faculty Ratio!
               </Typography>
             </CardContent>
           </Card>
