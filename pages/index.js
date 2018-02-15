@@ -17,7 +17,8 @@ const styles = theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: '80vh',
-    backgroundImage: 'url(../static/img/hero.jpg)',
+    backgroundImage:
+      'linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../static/img/hero.jpg)',
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -91,12 +92,13 @@ const styles = theme => ({
 const IndexPage = ({ classes }) => (
   <Layout>
     <div className={classes.parallax}>
-      <Typography type="display2" gutterBottom>
+      <Typography type="display2" className={classes.white} gutterBottom>
         Franciscan University of Steubenville
       </Typography>
       <Typography
+        className={classes.white}
         type="subheading"
-        style={{ fontWeight: 500, color: 'rgba(0, 0, 0, 0.7)' }}
+        style={{ fontWeight: 500, fontSize: '18px' }}
         gutterBottom
       >
         Academically Excellent, Passionately Catholic

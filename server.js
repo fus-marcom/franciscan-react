@@ -81,7 +81,9 @@ app.prepare().then(() => {
       let id = null
       if (req.params.id) {
         if (translationObj[req.params.type].id) {
-          if (translationObj[req.params.type].id[req.params.id]) {
+          if (req.params.id) {
+            id = req.params.id
+          } else if (translationObj[req.params.type].id[req.params.id]) {
             id = translationObj[req.params.type].id[req.params.id]
           }
         } else {
