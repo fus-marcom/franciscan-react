@@ -56,6 +56,12 @@ const styles = theme => ({
     cursor: 'pointer',
     fill: `${theme.palette.primary[500]}`
   },
+  invertedBtn: {
+    color: '#21412a',
+    backgroundColor: 'transparent',
+    border: '2px #21412a solid',
+    boxShadow: 'none'
+  },
   listStyles: {
     display: 'flex',
     margin: 0
@@ -243,6 +249,7 @@ class ButtonAppBar extends Component {
 
               */}
                     <Button
+                      className={classes.invertedBtn}
                       raised
                       color="primary"
                       href="https://accessfus.franciscan.edu/"

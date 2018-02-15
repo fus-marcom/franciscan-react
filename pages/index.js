@@ -32,6 +32,12 @@ const styles = theme => ({
     display: 'flex',
     justifyContent: 'center'
   },
+  invertedBtn: {
+    color: '#fff',
+    backgroundColor: 'transparent',
+    border: '2px #fff solid',
+    boxShadow: 'none'
+  },
   white: {
     color: '#fff'
   },
@@ -105,7 +111,12 @@ const IndexPage = ({ classes }) => (
       </Typography>
       <Grid container style={{ width: '100%' }}>
         <Grid item className={classes.heroBtn} xs={12}>
-          <Button color="secondary" raised style={{ width: '192px' }}>
+          <Button
+            className={classes.invertedBtn}
+            color="secondary"
+            raised
+            style={{ width: '192px' }}
+          >
             Apply
           </Button>
         </Grid>
@@ -115,7 +126,7 @@ const IndexPage = ({ classes }) => (
           xs={6}
           style={{ justifyContent: 'flex-end' }}
         >
-          <Button color="secondary" raised>
+          <Button className={classes.invertedBtn} color="secondary" raised>
             Inquire
           </Button>
         </Grid>
@@ -125,7 +136,7 @@ const IndexPage = ({ classes }) => (
           xs={6}
           style={{ justifyContent: 'flex-start' }}
         >
-          <Button color="secondary" raised>
+          <Button className={classes.invertedBtn} color="secondary" raised>
             Visit
           </Button>
         </Grid>
