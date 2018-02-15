@@ -6,8 +6,6 @@ import Button from 'material-ui/Button'
 import Layout from '../components/Layout'
 import Grid from 'material-ui/Grid'
 import withRoot from '../components/withRoot'
-import List, { ListItem, ListItemText } from 'material-ui/List'
-import Avatar from 'material-ui/Avatar'
 import Masonry from 'react-masonry-component'
 import ProfileCard from '../components/ProfileCard'
 import ListCard from '../components/ListCard'
@@ -144,6 +142,9 @@ const IndexPage = ({ classes }) => (
             />
           </Card>
         </Grid>
+        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
+          <ListCard listTitle="Events" itemsArray={eventsData} />
+        </Grid>
         <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
           <Card className={classes.card}>
             <CardContent>
@@ -167,171 +168,16 @@ const IndexPage = ({ classes }) => (
             profileLink="/studentprofiles/noah-fisher"
           />
         </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
-          <ListCard listTitle="Events" itemsArray={eventsData} />
+        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
+          <Card className={classes.card}>
+            <CardMedia
+              className={classes.media}
+              image="/static/img/adventure2-400w.jpg"
+              title="Austria Campus"
+            />
+          </Card>
         </Grid>
 
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
-          <Card className={classes.card}>
-            <CardContent>
-              <Typography type="display2">
-                99% of Graduates are Super Awesome!!!
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
-          <Card className={classes.card}>
-            <CardMedia
-              className={classes.media}
-              image="/static/img/adventure2-400w.jpg"
-              title="Austria Campus"
-            />
-          </Card>
-        </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardContent>
-              <Typography type="headline" component="h2">
-                Latest Posts
-              </Typography>
-              <List>
-                <ListItem dense button className={classes.listItem}>
-                  <Avatar
-                    alt="Random"
-                    src="https://picsum.photos/200/200/?random"
-                  />
-                  <ListItemText
-                    primary="Post One"
-                    secondary="This is some secondary text!"
-                  />
-                </ListItem>
-                <ListItem dense button className={classes.listItem}>
-                  <Avatar
-                    alt="Random"
-                    src="https://picsum.photos/200/200/?random"
-                  />
-                  <ListItemText primary="Post Two" />
-                </ListItem>
-                <ListItem dense button className={classes.listItem}>
-                  <Avatar
-                    alt="Random"
-                    src="https://picsum.photos/200/200/?random"
-                  />
-                  <ListItemText primary="Post Three" />
-                </ListItem>
-                <ListItem dense button className={classes.listItem}>
-                  <Avatar
-                    alt="Random"
-                    src="https://picsum.photos/200/200/?random"
-                  />
-                  <ListItemText primary="Post Four" />
-                </ListItem>
-              </List>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} md={6}>
-          <Card className={classes.card}>
-            <CardContent>
-              <Typography type="headline" component="h2">
-                Featured Staff Member
-              </Typography>
-              <List>
-                <ListItem dense button className={classes.listItem}>
-                  <Avatar
-                    alt="Random"
-                    src="https://media-exp2.licdn.com/mpr/mpr/shrinknp_200_200/p/2/000/022/248/207e4f5.jpg"
-                    className={classes.avatarBig}
-                  />
-                  <ListItemText
-                    primary="Thomas Crowe"
-                    secondary="Just look at that beard. He obviously knows what he is doing."
-                    className={classes.listItemTextBig}
-                  />
-                </ListItem>
-              </List>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
-          <Card className={classes.card}>
-            <CardMedia
-              className={classes.media}
-              image="/static/img/adventure2-400w.jpg"
-              title="Austria Campus"
-            />
-          </Card>
-        </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardContent>
-              <Typography type="headline" component="h2">
-                Featured Staff Member
-              </Typography>
-              <List>
-                <ListItem dense button className={classes.listItem}>
-                  <Avatar
-                    alt="Random"
-                    src="https://media-exp2.licdn.com/mpr/mpr/shrinknp_200_200/p/2/000/022/248/207e4f5.jpg"
-                    className={classes.avatarBig}
-                  />
-                  <ListItemText
-                    primary="Thomas Crowe"
-                    secondary="Just look at that beard. He obviously knows what he is doing."
-                    className={classes.listItemTextBig}
-                  />
-                </ListItem>
-              </List>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardContent>
-              <Typography type="headline" component="h2">
-                Featured Staff Member
-              </Typography>
-              <List>
-                <ListItem dense button className={classes.listItem}>
-                  <Avatar
-                    alt="Random"
-                    src="https://media-exp2.licdn.com/mpr/mpr/shrinknp_200_200/p/2/000/022/248/207e4f5.jpg"
-                    className={classes.avatarBig}
-                  />
-                  <ListItemText
-                    primary="Thomas Crowe"
-                    secondary="Just look at that beard. He obviously knows what he is doing."
-                    className={classes.listItemTextBig}
-                  />
-                </ListItem>
-              </List>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardContent>
-              <Typography type="headline" component="h2">
-                Featured Staff Member
-              </Typography>
-              <List>
-                <ListItem dense button className={classes.listItem}>
-                  <Avatar
-                    alt="Random"
-                    src="https://media-exp2.licdn.com/mpr/mpr/shrinknp_200_200/p/2/000/022/248/207e4f5.jpg"
-                    className={classes.avatarBig}
-                  />
-                  <ListItemText
-                    primary="Thomas Crowe"
-                    secondary="Just look at that beard. He obviously knows what he is doing."
-                    className={classes.listItemTextBig}
-                  />
-                </ListItem>
-              </List>
-            </CardContent>
-          </Card>
-        </Grid>
         <Grid item className={classes.gridItemFix} xs={12} sm={6}>
           <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
             <iframe
@@ -341,48 +187,6 @@ const IndexPage = ({ classes }) => (
               allow="autoplay; encrypted-media"
               allowFullScreen
             />
-          </Card>
-        </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
-          <Card className={classes.card}>
-            <CardContent>
-              <Typography type="headline" component="h2">
-                Latest Posts
-              </Typography>
-              <List>
-                <ListItem dense button className={classes.listItem}>
-                  <Avatar
-                    alt="Random"
-                    src="https://picsum.photos/200/200/?random"
-                  />
-                  <ListItemText
-                    primary="Post One"
-                    secondary="This is some secondary text!"
-                  />
-                </ListItem>
-                <ListItem dense button className={classes.listItem}>
-                  <Avatar
-                    alt="Random"
-                    src="https://picsum.photos/200/200/?random"
-                  />
-                  <ListItemText primary="Post Two" />
-                </ListItem>
-                <ListItem dense button className={classes.listItem}>
-                  <Avatar
-                    alt="Random"
-                    src="https://picsum.photos/200/200/?random"
-                  />
-                  <ListItemText primary="Post Three" />
-                </ListItem>
-                <ListItem dense button className={classes.listItem}>
-                  <Avatar
-                    alt="Random"
-                    src="https://picsum.photos/200/200/?random"
-                  />
-                  <ListItemText primary="Post Four" />
-                </ListItem>
-              </List>
-            </CardContent>
           </Card>
         </Grid>
       </Masonry>

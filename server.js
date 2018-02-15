@@ -24,6 +24,21 @@ const translationObj = {
     id: { 'film-studies': 'film-studies-minor' }
   },
   associate: { page: '/associate', id: { default: 'main' } },
+  studentlife: {
+    page: '/page',
+    type: 'studentLifePages',
+    id: { default: 'student-life' }
+  },
+  households: {
+    page: '/page',
+    type: 'householdsPages',
+    id: { default: 'main' }
+  },
+  excite: {
+    page: '/page',
+    type: 'studentLifePages',
+    id: { default: 'excite' }
+  },
   hr: { page: '/page', type: 'humanResources' },
   'campus-security': { page: '/page', type: 'campusSecurity' },
   studentprofiles: { page: '/faculty', type: 'studentProfilePages' }
