@@ -49,7 +49,6 @@ class DrawerItem extends React.Component {
                       <a className={classes.subLink}>{item.text}</a>
                     </Link>
                   }
-                  linkUrl={item.linkUrl}
                 />
               </ListItem>
             ))}

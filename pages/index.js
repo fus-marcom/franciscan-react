@@ -139,7 +139,7 @@ const IndexPage = ({ classes }) => (
               className={classes.videoIframe}
               src="https://www.youtube.com/embed/HpzwoD2oVSQ?modestbranding=1&rel=0&color=white"
               frameBorder="0"
-              allow="autoplay; encrypted-media"
+              allow="encrypted-media"
               allowFullScreen
             />
           </Card>
@@ -186,7 +186,7 @@ const IndexPage = ({ classes }) => (
               className={classes.videoIframe}
               src="https://www.youtube.com/embed/HzfPBp3lHTU?modestbranding=1&rel=0&color=white"
               frameBorder="0"
-              allow="autoplay; encrypted-media"
+              allow="encrypted-media"
               allowFullScreen
             />
           </Card>
