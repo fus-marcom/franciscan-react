@@ -45,9 +45,9 @@ const styles = theme => ({
   },
   svgStyle: {
     width: 'auto',
-    height: '32px',
+    height: '28px',
     fill: `${theme.palette.primary[500]}`,
-    paddingLeft: '8px'
+    paddingRight: '4px'
   },
   socialIcon: {
     display: 'inline-flex'
@@ -146,7 +146,7 @@ class ButtonAppBar extends Component {
                   <a>
                     <img
                       className={classes.headerImage}
-                      src="/static/img/fus-logo.svg"
+                      src="/static/img/franciscan-logo.svg"
                       alt="Logo of Franciscan University of Steubenville"
                     />
                   </a>
@@ -255,6 +255,7 @@ class ButtonAppBar extends Component {
                       href="https://accessfus.franciscan.edu/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      size="small"
                     >
                       Access FUS
                     </Button>
