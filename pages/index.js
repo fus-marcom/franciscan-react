@@ -9,6 +9,7 @@ import withRoot from '../components/withRoot'
 import Masonry from 'react-masonry-component'
 import ProfileCard from '../components/ProfileCard'
 import ListCard from '../components/ListCard'
+import TextSection from '../components/TextSection'
 import { eventsData } from '../data/listData'
 
 const styles = theme => ({
@@ -81,6 +82,12 @@ const IndexPage = ({ classes }) => (
       secondaryBtnLink="https://franciscan.secure.force.com/form?formid=217772"
       tertiaryBtnText="Visit"
       tertiaryBtnLink="https://franciscan.secure.force.com/events"
+    />
+    <TextSection
+      sectionTitle="Mission Summary"
+      text="Our mission as a Franciscan and Catholic university that embraces the call to dynamic orthodoxy is “to educate, to evangelize, and to send forth joyful disciples to restore all things in Christ.”"
+      btnLink="#"
+      btnText="Learn More"
     />
     <div className={classes.heroCards}>
       <Masonry>
