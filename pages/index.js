@@ -2,8 +2,8 @@ import React from 'react'
 import Card, { CardMedia, CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import withStyles from 'material-ui/styles/withStyles'
-import Button from 'material-ui/Button'
 import Layout from '../components/Layout'
+import Hero from '../components/Hero'
 import Grid from 'material-ui/Grid'
 import withRoot from '../components/withRoot'
 import Masonry from 'react-masonry-component'
@@ -12,32 +12,6 @@ import ListCard from '../components/ListCard'
 import { eventsData } from '../data/listData'
 
 const styles = theme => ({
-  parallax: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    minHeight: '80vh',
-    backgroundImage:
-      'linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../static/img/hero.jpg)',
-    backgroundAttachment: 'fixed',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    flexDirection: 'column',
-    textAlign: 'center',
-    [theme.breakpoints.down('sm')]: {
-      backgroundPosition: 'right'
-    }
-  },
-  heroBtn: {
-    display: 'flex',
-    justifyContent: 'center'
-  },
-  invertedBtn: {
-    color: '#fff',
-    backgroundColor: 'transparent',
-    border: '2px #fff solid',
-    boxShadow: 'none'
-  },
   white: {
     color: '#fff'
   },
@@ -97,51 +71,17 @@ const styles = theme => ({
 
 const IndexPage = ({ classes }) => (
   <Layout>
-    <div className={classes.parallax}>
-      <Typography type="display2" className={classes.white} gutterBottom>
-        Franciscan University of Steubenville
-      </Typography>
-      <Typography
-        className={classes.white}
-        type="subheading"
-        style={{ fontWeight: 500, fontSize: '18px' }}
-        gutterBottom
-      >
-        Academically Excellent, Passionately Catholic
-      </Typography>
-      <Grid container style={{ width: '100%' }}>
-        <Grid item className={classes.heroBtn} xs={12}>
-          <Button
-            className={classes.invertedBtn}
-            color="secondary"
-            raised
-            style={{ width: '192px' }}
-          >
-            Apply
-          </Button>
-        </Grid>
-        <Grid
-          item
-          className={classes.heroBtn}
-          xs={6}
-          style={{ justifyContent: 'flex-end' }}
-        >
-          <Button className={classes.invertedBtn} color="secondary" raised>
-            Inquire
-          </Button>
-        </Grid>
-        <Grid
-          item
-          className={classes.heroBtn}
-          xs={6}
-          style={{ justifyContent: 'flex-start' }}
-        >
-          <Button className={classes.invertedBtn} color="secondary" raised>
-            Visit
-          </Button>
-        </Grid>
-      </Grid>
-    </div>
+    <Hero
+      backgroundImg="../static/img/biology-students.jpg"
+      titleText="Franciscan University of Steubenville"
+      subtitleText="Academically Excellent, Passionately Catholic"
+      primaryBtnText="Apply"
+      primaryBtnLink="https://franciscanuniversity.force.com/portal"
+      secondaryBtnText="Inquire"
+      secondaryBtnLink="https://franciscan.secure.force.com/form?formid=217772"
+      tertiaryBtnText="Visit"
+      tertiaryBtnLink="https://franciscan.secure.force.com/events"
+    />
     <div className={classes.heroCards}>
       <Masonry>
         <Grid item className={classes.gridItemFix} xs={12} sm={6}>
