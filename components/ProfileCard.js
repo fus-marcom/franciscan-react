@@ -16,7 +16,7 @@ const styles = theme => ({
       minHeight: '1366px'
     },
     [theme.breakpoints.up('lg')]: {
-      minHeight: 800
+      minHeight: 500
     }
   },
   category: {
