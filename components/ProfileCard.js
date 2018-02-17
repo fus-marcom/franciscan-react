@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { withStyles } from 'material-ui/styles'
 import Card, { CardMedia, CardActions, CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
@@ -11,7 +11,13 @@ const styles = theme => ({
     width: '100%'
   },
   media: {
-    minHeight: 280
+    minHeight: '280px',
+    [theme.breakpoints.up('xl')]: {
+      minHeight: '1366px'
+    },
+    [theme.breakpoints.up('lg')]: {
+      minHeight: 800
+    }
   },
   category: {
     color: '#ffb41f',
@@ -55,11 +61,13 @@ class ProfileCard extends React.Component {
           </Typography>
         </CardContent>
         <CardActions>
-          <Link prefetch href={profileLink}>
-            <Button size="small" color="primary">
-              Learn More
-            </Button>
-          </Link>
+          <Fragment>
+            <Link prefetch href={profileLink}>
+              <Button size="small" color="primary">
+                Learn More
+              </Button>
+            </Link>
+          </Fragment>
         </CardActions>
       </Card>
     )

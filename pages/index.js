@@ -20,7 +20,13 @@ const styles = theme => ({
     width: '100%'
   },
   media: {
-    minHeight: 280
+    minHeight: 280,
+    [theme.breakpoints.up('xl')]: {
+      minHeight: 1366
+    },
+    [theme.breakpoints.up('lg')]: {
+      minHeight: '400px'
+    }
   },
   gridItemFix: {
     width: '100%',
@@ -91,7 +97,7 @@ const IndexPage = ({ classes }) => (
     />
     <div className={classes.heroCards}>
       <Masonry>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
+        <Grid item className={classes.gridItemFix} xs={12} sm={6} md={6} lg={6}>
           <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
             <iframe
               className={classes.videoIframe}
@@ -102,10 +108,10 @@ const IndexPage = ({ classes }) => (
             />
           </Card>
         </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
+        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
           <ListCard listTitle="Events" itemsArray={eventsData} />
         </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
+        <Grid item className={classes.gridItemFix} xs={12} sm={6} md={6} lg={6}>
           <Card className={classes.card}>
             <CardContent>
               <Typography type="display1">
@@ -114,7 +120,7 @@ const IndexPage = ({ classes }) => (
             </CardContent>
           </Card>
         </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
+        <Grid item className={classes.gridItemFix} xs={12} sm={6} md={6} lg={6}>
           <ProfileCard
             profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Students/Noah_Fisher_landing_v2.jpg"
             profileImgTitle="Noah Fisher"
@@ -128,17 +134,20 @@ const IndexPage = ({ classes }) => (
             profileLink="/studentprofiles/noah-fisher"
           />
         </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
+        <Grid item className={classes.gridItemFix} xs={12} sm={6} md={6} lg={6}>
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
               image="/static/img/adventure2-400w.jpg"
               title="Austria Campus"
             />
+            <CardContent>
+              <Typography type="display1">Austria</Typography>
+            </CardContent>
           </Card>
         </Grid>
 
-        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
+        <Grid item className={classes.gridItemFix} xs={12} sm={6} md={6} lg={6}>
           <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
             <iframe
               className={classes.videoIframe}
@@ -147,6 +156,16 @@ const IndexPage = ({ classes }) => (
               allow="encrypted-media"
               allowFullScreen
             />
+          </Card>
+        </Grid>
+        <Grid item className={classes.gridItemFix} xs={12} sm={6} md={6} lg={6}>
+          <Card className={classes.card}>
+            <CardContent>
+              <Typography type="display1">
+                Something more awesome to fill up some space! Lorem ipsum dolor
+                sit amet consectetur, adipisicing elit. Ut, beatae?
+              </Typography>
+            </CardContent>
           </Card>
         </Grid>
       </Masonry>
