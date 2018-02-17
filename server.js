@@ -109,10 +109,10 @@ app.prepare().then(() => {
       if (type) {
         options.type = type
       }
-      // console.log('type:', type)
-      // console.log('id:', id)
-      // console.log('page:', page)
-      // console.log('options:', options)
+      console.log('type:', type)
+      console.log('id:', id)
+      console.log('page:', page)
+      console.log('options:', options)
       return renderAndCache(req, res, page, options)
     }
     return handle(req, res)

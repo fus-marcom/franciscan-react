@@ -1,188 +1,232 @@
 export const aboutMenu = [
   {
     text: 'Academically Excellent',
-    linkUrl: '/about/academically-excellent'
+    linkUrl: '/about/academically-excellent',
+    asUrl: '/page?type=aboutPages&id=academically-excellent'
   },
   {
     text: 'Passionately Catholic',
-    linkUrl: '/about/passionately-catholic'
+    linkUrl: '/about/passionately-catholic',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'At A Glance',
-    linkUrl: 'about/at-a-glance'
+    linkUrl: '/about/at-a-glance',
+    asUrl: '/page?type=aboutPages&id=at-a-glance'
   },
   {
     text: 'Employment & HR',
-    linkUrl: '/hr'
+    linkUrl: '/hr',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Consumer Information',
-    linkUrl: '/consumer-information'
+    linkUrl: '/consumer-information',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'The Inn at Franciscan Square',
-    linkUrl: 'https://franciscansquare.com/hotel'
+    linkUrl: 'https://franciscansquare.com/hotel',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Our Vision & Charisms',
-    linkUrl: '/about/vision-charisms'
+    linkUrl: '/about/vision-charisms',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Our Mission Statement',
-    linkUrl: '/about/mission-statement'
+    linkUrl: '/about/mission-statement',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Franciscans TOR',
-    linkUrl: '/chapel/franciscans-tor'
+    linkUrl: '/chapel/franciscans-tor',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Our History',
-    linkUrl: '/about/history'
+    linkUrl: '/about/history',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Fact Book',
-    linkUrl: '/fact-book'
+    linkUrl: '/fact-book',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   }
 ]
 
 export const academicsMenu = [
   {
     text: 'Undergraduate',
-    linkUrl: '/academics/ug/majors'
+    linkUrl: '/academics/ug/majors',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Graduate',
-    linkUrl: '/academics/graduate-programs'
+    linkUrl: '/academics/graduate-programs',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Online',
-    linkUrl: '/admissions/online'
+    linkUrl: '/admissions/online',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Undergraduate Catalog',
     linkUrl:
-      'http://franciscan.smartcatalogiq.com/current/Undergraduate-Catalog'
+      'http://franciscan.smartcatalogiq.com/current/Undergraduate-Catalog',
+    asUrl: 'http://franciscan.smartcatalogiq.com/current/Undergraduate-Catalog'
   },
   {
     text: 'Graduate Catalog',
-    linkUrl: 'http://franciscan.smartcatalogiq.com/current/Graduate-Catalog'
+    linkUrl: 'http://franciscan.smartcatalogiq.com/current/Graduate-Catalog',
+    asUrl: 'http://franciscan.smartcatalogiq.com/current/Graduate-Catalog'
   },
   {
     text: 'Our Core Curriculum',
-    linkUrl: '/core-curriculum'
+    linkUrl: '/core-curriculum',
+    asUrl: 'http://franciscan.smartcatalogiq.com/current/Graduate-Catalog'
   },
   {
     text: 'Institutes & Centers',
-    linkUrl: '/institutes-centers'
+    linkUrl: '/institutes-centers',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Academic Departments',
-    linkUrl: '/departments'
+    linkUrl: '/departments',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Academic Affairs',
-    linkUrl: '/academic-affairs/leadership'
+    linkUrl: '/academic-affairs/leadership',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Austrian Semester',
-    linkUrl: '/austria'
+    linkUrl: '/austria',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   }
 ]
 
 export const admissionsMenu = [
   {
     text: 'Undergraduate',
-    linkUrl: '/admissions/undergraduate'
+    linkUrl: '/admissions/undergraduate',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Graduate',
-    linkUrl: '/admissions/graduate/'
+    linkUrl: '/admissions/graduate/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Online',
-    linkUrl: '/admissions/online'
+    linkUrl: '/admissions/online',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Local High School Students',
-    linkUrl: '/savings-for-local-graduates'
+    linkUrl: '/savings-for-local-graduates',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Transfer Students',
-    linkUrl: '/admissions/undergraduate/requirements/transfer/'
+    linkUrl: '/admissions/undergraduate/requirements/transfer/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'International Students',
-    linkUrl: '/admissions/undergraduate/requirements/international/'
+    linkUrl: '/admissions/undergraduate/requirements/international/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Homeschool',
-    linkUrl: '/admissions/undergraduate/requirements/'
+    linkUrl: '/admissions/undergraduate/requirements/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'General Requirements',
-    linkUrl: '/admissions/undergraduate/requirements/'
+    linkUrl: '/admissions/undergraduate/requirements/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Financial Aid',
-    linkUrl: '/sfs/new/'
+    linkUrl: '/sfs/new/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Military Benefits Information',
-    linkUrl: '/military-benefits/'
+    linkUrl: '/military-benefits/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   }
 ]
 
 export const faithMenu = [
   {
     text: 'Student Life',
-    linkUrl: '/studentlife'
+    linkUrl: '/studentlife',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Chapel Ministries',
-    linkUrl: '/chapel/'
+    linkUrl: '/chapel/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Households',
-    linkUrl: '/households/'
+    linkUrl: '/households/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Pilgrimages',
-    linkUrl: '/pilgrimages/'
+    linkUrl: '/pilgrimages/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Franciscan University Presents',
-    linkUrl: 'http://www.faithandreason.com/franciscan-university-presents/'
+    linkUrl: 'http://www.faithandreason.com/franciscan-university-presents/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Franciscan Magazine',
-    linkUrl: '/franciscanmagazine/'
+    linkUrl: '/franciscanmagazine/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Missionary Outreach',
-    linkUrl: '/missionary-outreach/'
+    linkUrl: '/missionary-outreach/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Priestly Discernment Program',
-    linkUrl: '/pdp'
+    linkUrl: '/pdp',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Veritas Center',
-    linkUrl: '/veritas'
+    linkUrl: '/veritas',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Institute of Science and Health',
-    linkUrl: '/fish'
+    linkUrl: '/fish',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Institute for World Health',
-    linkUrl: '/fiwh'
+    linkUrl: '/fiwh',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Center for Bioethics',
-    linkUrl: '/center-for-bioethics/'
+    linkUrl: '/center-for-bioethics/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
     text: 'Franciscan University Press',
-    linkUrl: '/fupress'
+    linkUrl: '/fupress',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
   }
 ]

@@ -27,7 +27,6 @@ class DrawerItem extends React.Component {
       expandItem,
       itemId
     } = this.props
-    const reg = new RegExp(/\/[a-z-]+/gi)
     return (
       <div>
         <ListItem button onClick={() => expandItem(itemId)}>
@@ -40,27 +39,21 @@ class DrawerItem extends React.Component {
         </ListItem>
         <Collapse component="li" in={isOpen} timeout="auto" unmountOnExit>
           <List disablePadding onClick={toggleDrawer} onKeyDown={toggleDrawer}>
-            {submenuItems.map(item => {
-              const matches = item.linkUrl.match(reg)
-              let href = item.linkUrl
-              let as = item.linkUrl
-              if (matches.length === 2) {
-                href = `/page?id=${matches[1].replace('/', '')}`
-              }
-              return (
-                <ListItem button className={classes.nested} key={item.text}>
-                  <ListItemText
-                    inset
-                    style={{ paddingLeft: '16px' }}
-                    primary={
-                      <Link prefetch as={as} href={href}>
-                        <a className={classes.subLink}>{item.text}</a>
-                      </Link>
-                    }
-                  />
-                </ListItem>
-              )
-            })}
+            {submenuItems.map(item => (
+              <ListItem button className={classes.nested} key={item.text}>
+                <ListItemText
+                  inset
+                  style={{ paddingLeft: '16px' }}
+                  primary={
+                    <Link prefetch href={item.asUrl} as={item.linkUrl}>
+                      <a onClick={toggleDrawer} className={classes.subLink}>
+                        {item.text}
+                      </a>
+                    </Link>
+                  }
+                />
+              </ListItem>
+            ))}
           </List>
         </Collapse>
       </div>
