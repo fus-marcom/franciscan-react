@@ -12,7 +12,7 @@ import Input, { InputLabel, InputAdornment } from 'material-ui/Input'
 import { FormControl } from 'material-ui/Form'
 import DrawerItem from './DrawerItem'
 import {
-  aboutMenu,
+  studentMenu,
   academicsMenu,
   admissionsMenu,
   faithMenu
@@ -83,7 +83,8 @@ class TemporaryDrawer extends React.Component {
                     FormControlClasses={{
                       focused: classes.inputLabelFocused
                     }}
-                    htmlFor="search">
+                    htmlFor="search"
+                  >
                     Search
                   </InputLabel>
                   <Input
@@ -104,14 +105,7 @@ class TemporaryDrawer extends React.Component {
                   />
                 </FormControl>
               </ListItem>
-              <DrawerItem
-                toggleDrawer={toggleDrawer}
-                expandItem={this.props.expandItem}
-                itemId="about"
-                primaryText="About"
-                submenuItems={aboutMenu}
-                isOpen={this.props.drawerItems.about}
-              />
+
               <DrawerItem
                 toggleDrawer={toggleDrawer}
                 primaryText="Academics"
@@ -131,9 +125,17 @@ class TemporaryDrawer extends React.Component {
               <DrawerItem
                 toggleDrawer={toggleDrawer}
                 expandItem={this.props.expandItem}
-                itemId="faith-and-life"
-                primaryText="Faith and Life"
+                itemId="evangelization"
+                primaryText="Evangelization"
                 submenuItems={faithMenu}
+                isOpen={this.props.drawerItems.evangelization}
+              />
+              <DrawerItem
+                toggleDrawer={toggleDrawer}
+                expandItem={this.props.expandItem}
+                itemId="faith-and-life"
+                primaryText="Student Life"
+                submenuItems={studentMenu}
                 isOpen={this.props.drawerItems['faith-and-life']}
               />
               <Divider />
@@ -141,7 +143,8 @@ class TemporaryDrawer extends React.Component {
                 className={classes.externalLink}
                 href="http://alumni.franciscan.edu/"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 <ListItem button>
                   <ListItemIcon>
                     <OpenInNewIcon />
@@ -151,26 +154,41 @@ class TemporaryDrawer extends React.Component {
               </a>
               <a
                 className={classes.externalLink}
-                href="http://giving.franciscan.edu/"
+                href="http://www.franciscanathletics.com/"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 <ListItem button>
                   <ListItemIcon>
                     <OpenInNewIcon />
                   </ListItemIcon>
-                  <ListItemText inset primary={'Development'} />
+                  <ListItemText inset primary={'Athletics'} />
                 </ListItem>
               </a>
               <a
                 className={classes.externalLink}
                 href="http://www.steubenvilleconferences.com/"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 <ListItem button>
                   <ListItemIcon>
                     <OpenInNewIcon />
                   </ListItemIcon>
                   <ListItemText inset primary={'Conferences'} />
+                </ListItem>
+              </a>
+              <a
+                className={classes.externalLink}
+                href="http://giving.franciscan.edu/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ListItem button>
+                  <ListItemIcon>
+                    <OpenInNewIcon />
+                  </ListItemIcon>
+                  <ListItemText inset primary={'Give'} />
                 </ListItem>
               </a>
             </List>

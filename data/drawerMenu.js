@@ -1,60 +1,60 @@
-export const aboutMenu = [
-  {
-    text: 'Academically Excellent',
-    linkUrl: '/about/academically-excellent',
-    asUrl: '/page?type=aboutPages&id=academically-excellent'
-  },
-  {
-    text: 'Passionately Catholic',
-    linkUrl: '/about/passionately-catholic',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'At A Glance',
-    linkUrl: '/about/at-a-glance',
-    asUrl: '/page?type=aboutPages&id=at-a-glance'
-  },
-  {
-    text: 'Employment & HR',
-    linkUrl: '/hr',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'Consumer Information',
-    linkUrl: '/consumer-information',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'The Inn at Franciscan Square',
-    linkUrl: 'https://franciscansquare.com/hotel',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'Our Vision & Charisms',
-    linkUrl: '/about/vision-charisms',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'Our Mission Statement',
-    linkUrl: '/about/mission-statement',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'Franciscans TOR',
-    linkUrl: '/chapel/franciscans-tor',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'Our History',
-    linkUrl: '/about/history',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'Fact Book',
-    linkUrl: '/fact-book',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  }
-]
+// export const aboutMenu = [
+//   {
+//     text: 'Academically Excellent',
+//     linkUrl: '/about/academically-excellent',
+//     asUrl: '/page?type=aboutPages&id=academically-excellent'
+//   },
+//   {
+//     text: 'Passionately Catholic',
+//     linkUrl: '/about/passionately-catholic',
+//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
+//   },
+//   {
+//     text: 'At A Glance',
+//     linkUrl: '/about/at-a-glance',
+//     asUrl: '/page?type=aboutPages&id=at-a-glance'
+//   },
+//   {
+//     text: 'Employment & HR',
+//     linkUrl: '/hr',
+//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
+//   },
+//   {
+//     text: 'Consumer Information',
+//     linkUrl: '/consumer-information',
+//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
+//   },
+//   {
+//     text: 'The Inn at Franciscan Square',
+//     linkUrl: 'https://franciscansquare.com/hotel',
+//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
+//   },
+//   {
+//     text: 'Our Vision & Charisms',
+//     linkUrl: '/about/vision-charisms',
+//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
+//   },
+//   {
+//     text: 'Our Mission Statement',
+//     linkUrl: '/about/mission-statement',
+//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
+//   },
+//   {
+//     text: 'Franciscans TOR',
+//     linkUrl: '/chapel/franciscans-tor',
+//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
+//   },
+//   {
+//     text: 'Our History',
+//     linkUrl: '/about/history',
+//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
+//   },
+//   {
+//     text: 'Fact Book',
+//     linkUrl: '/fact-book',
+//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
+//   }
+// ]
 
 export const academicsMenu = [
   {
@@ -165,43 +165,13 @@ export const admissionsMenu = [
 
 export const faithMenu = [
   {
-    text: 'Student Life',
-    linkUrl: '/studentlife',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'Chapel Ministries',
-    linkUrl: '/chapel/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'Households',
-    linkUrl: '/households/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
     text: 'Pilgrimages',
     linkUrl: '/pilgrimages/',
     asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
-    text: 'Franciscan University Presents',
-    linkUrl: 'http://www.faithandreason.com/franciscan-university-presents/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'Franciscan Magazine',
-    linkUrl: '/franciscanmagazine/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
     text: 'Missionary Outreach',
     linkUrl: '/missionary-outreach/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'Priestly Discernment Program',
-    linkUrl: '/pdp',
     asUrl: '/page?type=aboutPages&id=passionately-catholic'
   },
   {
@@ -227,6 +197,34 @@ export const faithMenu = [
   {
     text: 'Franciscan University Press',
     linkUrl: '/fupress',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+  }
+]
+
+export const studentMenu = [
+  {
+    text: 'Student Life Home',
+    linkUrl: '/studentlife',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+  },
+  {
+    text: 'Households',
+    linkUrl: '/households/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+  },
+  {
+    text: 'Franciscan University Presents',
+    linkUrl: 'http://www.faithandreason.com/franciscan-university-presents/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+  },
+  {
+    text: 'Franciscan Magazine',
+    linkUrl: '/franciscanmagazine/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+  },
+  {
+    text: 'Priestly Discernment Program',
+    linkUrl: '/pdp',
     asUrl: '/page?type=aboutPages&id=passionately-catholic'
   }
 ]
