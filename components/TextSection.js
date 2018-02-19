@@ -11,7 +11,7 @@ const styles = theme => ({
     justifyContent: 'center',
     flexDirection: 'column',
     padding: '32px 0',
-    backgroundColor: 'purple'
+    backgroundColor: '#fff'
   },
   innerContainer: {
     width: '70%',
@@ -67,7 +67,7 @@ class TextSection extends React.Component {
     return (
       <div className={classes.section}>
         <div className={classes.innerContainer}>
-          <Typography type="display2" gutterBottom>
+          <Typography type="display1" gutterBottom>
             {sectionTitle}
           </Typography>
 

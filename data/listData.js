@@ -1,9 +1,7 @@
 export const eventsData = [
   {
     primaryText: 'In Crisis: American Higher Education',
-    secondaryText: `American higher education is in turmoil like never before. Student debt is at an all-time high, casting doubt on the value of a college education. The liberal arts are imperiled. Serious campus debate and free speech are threatened by politicization. An “anything goes” morality is the norm on many campuses.
-
-Against this backdrop, the Veritas Center for Ethics in Public Life at Franciscan University of Steubenville will host a two-day conference, “The State of American Higher Education, 2018,” to be held at Franciscan University April 6-7, 2018.`,
+    secondaryText: `The Veritas Center for Ethics in Public Life at Franciscan University of Steubenville will host a two-day conference, “The State of American Higher Education, 2018,” to be held at Franciscan University April 6-7, 2018.`,
     link: '/events/in-crisis-american-higher-education'
   },
   {
