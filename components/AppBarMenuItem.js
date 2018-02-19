@@ -4,13 +4,15 @@ import Typography from 'material-ui/Typography'
 
 const styles = theme => ({
   listLi: {
-    margin: '0'
+    margin: '0',
+    padding: '0 4px'
   },
   ulLink: {
     textDecoration: 'none',
     paddingBottom: '6px',
     cursor: 'pointer',
-    display: 'inline-block'
+    display: 'inline-block',
+    padding: '0 4px'
   }
 })
 

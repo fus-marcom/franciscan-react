@@ -132,9 +132,7 @@ const IndexPage = ({ classes }) => (
             profileLink="/studentprofiles/noah-fisher"
           />
         </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-          <ListCard listTitle="Events" itemsArray={eventsData} />
-        </Grid>
+
         <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
           <ProfileCard
             profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Alumni_Profiles/IMG_1132.JPG"
@@ -159,7 +157,7 @@ const IndexPage = ({ classes }) => (
             profileLink="/alumni-outcomes/mcdermott-maggie"
           />
         </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
+        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}

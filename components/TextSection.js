@@ -10,8 +10,7 @@ const styles = theme => ({
     alignItems: 'start',
     justifyContent: 'center',
     flexDirection: 'column',
-    padding: '32px 0',
-    backgroundColor: '#fff'
+    padding: '32px 0'
   },
   innerContainer: {
     width: '70%',
