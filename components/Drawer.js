@@ -83,8 +83,7 @@ class TemporaryDrawer extends React.Component {
                     FormControlClasses={{
                       focused: classes.inputLabelFocused
                     }}
-                    htmlFor="search"
-                  >
+                    htmlFor="search">
                     Search
                   </InputLabel>
                   <Input
@@ -106,6 +105,7 @@ class TemporaryDrawer extends React.Component {
                 </FormControl>
               </ListItem>
               <DrawerItem
+                toggleDrawer={toggleDrawer}
                 expandItem={this.props.expandItem}
                 itemId="about"
                 primaryText="About"
@@ -113,6 +113,7 @@ class TemporaryDrawer extends React.Component {
                 isOpen={this.props.drawerItems.about}
               />
               <DrawerItem
+                toggleDrawer={toggleDrawer}
                 primaryText="Academics"
                 submenuItems={academicsMenu}
                 isOpen={this.props.drawerItems.academics}
@@ -120,6 +121,7 @@ class TemporaryDrawer extends React.Component {
                 itemId="academics"
               />
               <DrawerItem
+                toggleDrawer={toggleDrawer}
                 expandItem={this.props.expandItem}
                 itemId="admissions"
                 primaryText="Admissions"
@@ -127,6 +129,7 @@ class TemporaryDrawer extends React.Component {
                 isOpen={this.props.drawerItems.admissions}
               />
               <DrawerItem
+                toggleDrawer={toggleDrawer}
                 expandItem={this.props.expandItem}
                 itemId="faith-and-life"
                 primaryText="Faith and Life"
@@ -138,8 +141,7 @@ class TemporaryDrawer extends React.Component {
                 className={classes.externalLink}
                 href="http://alumni.franciscan.edu/"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 <ListItem button>
                   <ListItemIcon>
                     <OpenInNewIcon />
@@ -151,8 +153,7 @@ class TemporaryDrawer extends React.Component {
                 className={classes.externalLink}
                 href="http://giving.franciscan.edu/"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 <ListItem button>
                   <ListItemIcon>
                     <OpenInNewIcon />
@@ -164,8 +165,7 @@ class TemporaryDrawer extends React.Component {
                 className={classes.externalLink}
                 href="http://www.steubenvilleconferences.com/"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 <ListItem button>
                   <ListItemIcon>
                     <OpenInNewIcon />

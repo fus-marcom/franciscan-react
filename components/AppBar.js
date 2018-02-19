@@ -63,7 +63,11 @@ const styles = theme => ({
     color: '#21412a',
     backgroundColor: 'transparent',
     border: '2px #21412a solid',
-    boxShadow: 'none'
+    boxShadow: 'none',
+    '&:hover': {
+      backgroundColor: '#21412a',
+      color: 'white'
+    }
   },
   listStyles: {
     display: 'flex',

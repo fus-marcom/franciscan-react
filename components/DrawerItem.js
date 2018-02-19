@@ -45,8 +45,10 @@ class DrawerItem extends React.Component {
                   inset
                   style={{ paddingLeft: '16px' }}
                   primary={
-                    <Link prefetch href={item.linkUrl}>
-                      <a className={classes.subLink}>{item.text}</a>
+                    <Link prefetch href={item.asUrl} as={item.linkUrl}>
+                      <a onClick={toggleDrawer} className={classes.subLink}>
+                        {item.text}
+                      </a>
                     </Link>
                   }
                 />
