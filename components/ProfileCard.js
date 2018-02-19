@@ -40,7 +40,8 @@ class ProfileCard extends React.Component {
       profileType,
       profileName,
       content,
-      profileLink
+      profileLink,
+      bgPosY
     } = this.props
     return (
       <Card className={classes.card}>
@@ -48,6 +49,7 @@ class ProfileCard extends React.Component {
           className={classes.media}
           image={profileImg}
           title={profileImgTitle}
+          style={{ backgroundPositionY: bgPosY }}
         />
         <CardContent>
           <Typography type="caption" className={classes.category}>
