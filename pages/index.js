@@ -81,7 +81,9 @@ const IndexPage = ({ classes }) => (
     <Hero
       backgroundImg="../static/img/biology-students.jpg"
       titleText="Franciscan University of Steubenville"
-      subtitleText="Academically Excellent, Passionately Catholic"
+      subtitleText={
+        <span>Academically Excellent &#8226; Passionately Catholic</span>
+      }
       primaryBtnText="Apply"
       primaryBtnLink="https://franciscanuniversity.force.com/portal"
       secondaryBtnText="Inquire"

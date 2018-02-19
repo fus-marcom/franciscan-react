@@ -56,7 +56,7 @@ class Hero extends React.Component {
       <Typography
         className={classes.white}
         type="subheading"
-        style={{ fontWeight: 500, fontSize: '18px' }}
+        style={{ fontWeight: 500, fontSize: '22px' }}
         gutterBottom
       >
         {subtitleText}
