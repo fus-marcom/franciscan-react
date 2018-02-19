@@ -37,18 +37,10 @@ const styles = theme => ({
     marginRight: 10
   },
   mobileHeaderImage: {
-    maxHeight: '3rem',
-    display: 'block',
-    [theme.breakpoints.up('md')]: {
-      display: 'none'
-    }
+    maxHeight: '3rem'
   },
   headerImage: {
-    maxHeight: '3rem',
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'block'
-    }
+    maxHeight: '3rem'
   },
   social: {
     display: 'flex',
@@ -155,16 +147,20 @@ class ButtonAppBar extends Component {
               >
                 <Link href="/">
                   <a>
-                    <img
-                      className={classes.headerImage}
-                      src="/static/img/franciscan-logo.svg"
-                      alt="Logo of Franciscan University of Steubenville"
-                    />
-                    <img
-                      className={classes.mobileHeaderImage}
-                      src="/static/img/fus-logo.svg"
-                      alt="Logo of Franciscan University of Steubenville"
-                    />
+                    <Hidden mdUp>
+                      <img
+                        className={classes.mobileHeaderImage}
+                        src="/static/img/fus-logo.svg"
+                        alt="Logo of Franciscan University of Steubenville"
+                      />
+                    </Hidden>
+                    <Hidden smDown>
+                      <img
+                        className={classes.headerImage}
+                        src="/static/img/franciscan-logo.svg"
+                        alt="Logo of Franciscan University of Steubenville"
+                      />
+                    </Hidden>
                   </a>
                 </Link>
               </Typography>
