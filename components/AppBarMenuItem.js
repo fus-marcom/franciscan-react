@@ -5,7 +5,7 @@ import Typography from 'material-ui/Typography'
 const styles = theme => ({
   listLi: {
     margin: '0',
-    padding: '0 4px'
+    padding: '0 8px'
   },
   ulLink: {
     textDecoration: 'none',

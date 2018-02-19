@@ -90,8 +90,8 @@ const IndexPage = ({ classes }) => (
       tertiaryBtnLink="https://franciscan.secure.force.com/events"
     />
     <TextSection
-      sectionTitle="Mission Summary"
-      text="Our mission as a Franciscan and Catholic university that embraces the call to dynamic orthodoxy is “to educate, to evangelize, and to send forth joyful disciples to restore all things in Christ.”"
+      sectionTitle="Our Vision"
+      text=" To educate, evangelize, and send forth joyful disciples to restore all things in Christ."
       btnLink="#"
       btnText="Learn More"
     />
@@ -113,7 +113,7 @@ const IndexPage = ({ classes }) => (
           <Card className={classes.card}>
             <CardContent>
               <Typography type="display1">
-                15 to 1 Student to Faculty Ratio!
+                15 to 1 Student to Faculty Ratio
               </Typography>
             </CardContent>
           </Card>

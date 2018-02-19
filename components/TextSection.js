@@ -7,23 +7,24 @@ import Grid from 'material-ui/Grid'
 const styles = theme => ({
   section: {
     display: 'flex',
-    alignItems: 'start',
+    alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-    padding: '32px 0'
+    padding: '38px 0',
+    textAlign: 'center'
   },
   innerContainer: {
     width: '70%',
     margin: '0 auto'
   },
   sectionText: {
-    fontSize: '18px',
+    fontSize: '28px',
     fontWeight: 400,
     lineHeight: 1.5
   },
   heroBtn: {
     display: 'flex',
-    justifyContent: 'start',
+    justifyContent: 'center',
     marginTop: '16px'
   },
   invertedBtn: {
@@ -66,7 +67,7 @@ class TextSection extends React.Component {
     return (
       <div className={classes.section}>
         <div className={classes.innerContainer}>
-          <Typography type="display1" gutterBottom>
+          <Typography type="display2" gutterBottom>
             {sectionTitle}
           </Typography>
 
