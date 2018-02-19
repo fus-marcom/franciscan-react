@@ -102,18 +102,6 @@ const IndexPage = ({ classes }) => (
             />
           </Card>
         </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
-          <ListCard listTitle="Events" itemsArray={eventsData} />
-        </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
-          <Card className={classes.card}>
-            <CardContent>
-              <Typography type="display1">
-                15 to 1 Student to Faculty Ratio!
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
         <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
           <ProfileCard
             profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Students/Noah_Fisher_landing_v2.jpg"
@@ -126,6 +114,38 @@ const IndexPage = ({ classes }) => (
                 I met; they were so genuine and helpful. They were the biggest
                 reason I decided to come to Franciscan."
             profileLink="/studentprofiles/noah-fisher"
+          />
+        </Grid>
+        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
+          <Card className={classes.card}>
+            <CardContent>
+              <Typography type="display1">
+                15 to 1 Student to Faculty Ratio!
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
+          <ProfileCard
+            profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Alumni_Profiles/IMG_1132.JPG"
+            profileImgTitle="Maggie McDermott"
+            profileType="Alumni Profile"
+            profileName="Maggie McDermott"
+            content="My choice to say Yes to giving my all even in those trying moments can be attributed to the growth and education I received at Franciscan."
+            profileLink="/alumni-outcomes/mcdermott-maggie"
+          />
+        </Grid>
+        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
+          <ListCard listTitle="Events" itemsArray={eventsData} />
+        </Grid>
+        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
+          <ProfileCard
+            profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Faculty/Education/boury.jpg?n=1668"
+            profileImgTitle="Dr. Tiffany Boury"
+            profileType="Faculty Profile"
+            profileName="Dr. Tiffany Boury"
+            content="Associate Professor of Education"
+            profileLink="/alumni-outcomes/mcdermott-maggie"
           />
         </Grid>
         <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={3}>
