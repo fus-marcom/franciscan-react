@@ -47,7 +47,8 @@ class TextSection extends React.Component {
       btnLink,
       btnText,
       textColor,
-      bgColor
+      bgColor,
+      borderColor
     } = this.props
 
     const Button = (
@@ -65,18 +66,28 @@ class TextSection extends React.Component {
     )
 
     return (
-      <div className={classes.section}>
+      <div
+        className={classes.section}
+        style={{
+          backgroundColor: bgColor,
+          borderTop: `2px solid ${borderColor}`,
+          borderBottom: `2px solid ${borderColor}`
+        }}
+      >
         <div className={classes.innerContainer}>
-          <Typography type="display2" gutterBottom>
+          <Typography type="display2" gutterBottom style={{ color: textColor }}>
             {sectionTitle}
           </Typography>
 
-          <Typography className={classes.sectionText} type="body1" gutterBottom>
+          <Typography
+            className={classes.sectionText}
+            type="body1"
+            gutterBottom
+            style={{ color: textColor }}
+          >
             {text}
           </Typography>
           {btnLink && btnText ? Button : null}
-          {textColor}
-          {bgColor}
         </div>
       </div>
     )

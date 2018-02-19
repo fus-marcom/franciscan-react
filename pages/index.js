@@ -35,6 +35,17 @@ const styles = theme => ({
       padding: '8px'
     }
   },
+  contentContainer: {
+    width: '100%',
+    maxWidth: '70%',
+    margin: '0 auto',
+    [theme.breakpoints.down('md')]: {
+      maxWidth: '85%'
+    },
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '95%'
+    }
+  },
   listItem: {
     paddingLeft: 0,
     paddingRight: 0,
@@ -97,7 +108,13 @@ const IndexPage = ({ classes }) => (
       btnLink="#"
       btnText="Learn More"
     />
-    <div className={classes.heroCards}>
+    <TextSection
+      sectionTitle="15 to 1 Student to Faculty Ratio"
+      bgColor="#21412a"
+      textColor="#fff"
+      borderColor="#998643"
+    />
+    <div className={classes.contentContainer}>
       <Masonry>
         <Grid item className={classes.gridItemFix} xs={12} sm={6} md={6} lg={6}>
           <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
@@ -111,15 +128,6 @@ const IndexPage = ({ classes }) => (
           </Card>
         </Grid>
 
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} md={6} lg={6}>
-          <Card className={classes.card}>
-            <CardContent>
-              <Typography type="display1">
-                15 to 1 Student to Faculty Ratio
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
         <Grid item className={classes.gridItemFix} xs={12} sm={6} md={6} lg={6}>
           <ProfileCard
             profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Students/Noah_Fisher_landing_v2.jpg"
@@ -181,16 +189,6 @@ const IndexPage = ({ classes }) => (
               allow="encrypted-media"
               allowFullScreen
             />
-          </Card>
-        </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} md={6} lg={6}>
-          <Card className={classes.card}>
-            <CardContent>
-              <Typography type="display1">
-                Something more awesome to fill up some space! Lorem ipsum dolor
-                sit amet consectetur, adipisicing elit. Ut, beatae?
-              </Typography>
-            </CardContent>
           </Card>
         </Grid>
       </Masonry>
