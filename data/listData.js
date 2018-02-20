@@ -8,7 +8,7 @@ export const eventsData = [
     primaryText: 'Final Examinations Spring 2018',
     secondaryText: ``,
     link: '/events/in-crisis-american-higher-education',
-    image: 'https://picsum.photos/200/200/?random',
+    image: '../static/img/mission3-400w.jpg',
     imgTitle: 'Random Pic',
     imgAlt: 'Just an image from unsplash'
   },
@@ -21,7 +21,7 @@ export const eventsData = [
     primaryText: 'Commencement Exercises 2018',
     secondaryText: ``,
     link: '/events/in-crisis-american-higher-education',
-    image: 'https://picsum.photos/200/200/?random',
+    image: '../static/img/adventure2-400w.jpg',
     imgTitle: 'Random Pic',
     imgAlt: 'Just an image from unsplash'
   }

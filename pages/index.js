@@ -105,7 +105,7 @@ const IndexPage = ({ classes }) => (
     <TextSection
       sectionTitle="Our Vision"
       text=" To educate, evangelize, and send forth joyful disciples to restore all things in Christ."
-      btnLink="#"
+      btnLink="/about/our-mission"
       btnText="Learn More"
     />
     <TextSection
@@ -164,14 +164,14 @@ const IndexPage = ({ classes }) => (
             profileType="Faculty Profile"
             profileName="Dr. Tiffany Boury"
             content="Associate Professor of Education"
-            profileLink="/alumni-outcomes/mcdermott-maggie"
+            profileLink="/faculty/boury-tiffany"
           />
         </Grid>
         <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
-              image="/static/img/adventure2-400w.jpg"
+              image="/static/img/adventure2-800w.jpg"
               title="Austria Campus"
             />
             <CardContent>
