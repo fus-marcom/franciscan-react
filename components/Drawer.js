@@ -141,6 +141,19 @@ class TemporaryDrawer extends React.Component {
               <Divider />
               <a
                 className={classes.externalLink}
+                href="https://accessfus.franciscan.edu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ListItem button>
+                  <ListItemIcon>
+                    <OpenInNewIcon />
+                  </ListItemIcon>
+                  <ListItemText inset primary={'AccessFUS'} />
+                </ListItem>
+              </a>
+              <a
+                className={classes.externalLink}
                 href="http://alumni.franciscan.edu/"
                 target="_blank"
                 rel="noopener noreferrer"
