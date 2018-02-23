@@ -114,7 +114,7 @@ export const admissionsMenu = [
   {
     text: 'Undergraduate',
     linkUrl: '/admissions/undergraduate',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    asUrl: '/page?type=admissionsPages&id=undergraduate'
   },
   {
     text: 'Graduate',
@@ -205,7 +205,7 @@ export const studentMenu = [
   {
     text: 'Student Life Home',
     linkUrl: '/studentlife',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    asUrl: '/page?type=studentLifePages&id=student-life'
   },
   {
     text: 'Households',
