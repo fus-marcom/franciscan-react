@@ -39,6 +39,11 @@ const translationObj = {
     type: 'studentLifePages',
     id: { default: 'excite' }
   },
+  baronday: {
+    page: '/page',
+    type: 'admissionsPages',
+    id: { default: 'baron-day' }
+  },
   hr: { page: '/page', type: 'humanResources' },
   'campus-security': { page: '/page', type: 'campusSecurity' },
   studentprofiles: { page: '/faculty', type: 'studentProfilePages' }
