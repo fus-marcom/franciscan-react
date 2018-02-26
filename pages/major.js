@@ -1,25 +1,16 @@
 import React, { Component } from 'react'
-import { graphql, compose } from 'react-apollo'
-import { MajorQuery } from '../lib/queries/major'
+import { Query, compose } from 'react-apollo'
+import { PageQuery } from '../lib/queries/page'
 import withData from '../lib/withData'
 import Layout from '../components/Layout'
 import Head from 'next/head'
 import withRoot from '../components/withRoot'
 
 class Major extends Component {
-  static async getInitialProps ({ query: { id } }) {
-    return { id }
+  static async getInitialProps ({ query: { id, type } }) {
+    return { id, type }
   }
   render () {
-    const { data } = this.props
-    const loading = data.loading
-    if (loading) {
-      return (
-        <Layout>
-          <h1>Loading</h1>
-        </Layout>
-      )
-    }
     return (
       <Layout>
         <Head>
@@ -29,21 +20,36 @@ class Major extends Component {
             type="text/css"
           />
         </Head>
-        <div
-          data-testid="content"
-          dangerouslySetInnerHTML={{
-            __html: data.majors.edges[0].node.content
+        <Query
+          query={PageQuery(this.props.type)}
+          variables={{ name: this.props.id }}
+        >
+          {result => {
+            if (result.loading) {
+              return <h1>Loading</h1>
+            }
+            if (result.error) return <h3>{result.error}</h3>
+
+            const { data } = result
+            const content = data[this.props.type].edges[0].node.content
+              .replace(/<Title>/g, '<h2 class="title">')
+              .replace(/<\/Title>/g, '</h2>')
+              .replace(/src="\//g, 'src="https://www.franciscan.edu/')
+            global.x = content
+
+            return (
+              <div
+                data-testid="content"
+                dangerouslySetInnerHTML={{
+                  __html: content
+                }}
+              />
+            )
           }}
-        />
+        </Query>
       </Layout>
     )
   }
 }
 
-export default compose(
-  withRoot,
-  withData,
-  graphql(MajorQuery, {
-    options: ({ id }) => ({ variables: { name: id } })
-  })
-)(Major)
+export default compose(withRoot, withData)(Major)

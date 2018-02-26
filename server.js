@@ -17,8 +17,8 @@ const translationObj = {
   major: { page: '/major' },
   minor: { page: '/minor' },
   department: { page: '/department' },
-  economics: { page: '/major', id: { default: 'economics' } },
-  accounting: { page: '/major', id: { default: 'accounting' } },
+  economics: { page: '/major', type: 'majors', id: { default: 'economics' } },
+  accounting: { page: '/major', type: 'majors', id: { default: 'accounting' } },
   'comm-arts': {
     page: '/minor',
     id: { 'film-studies': 'film-studies-minor' }
@@ -44,6 +44,9 @@ const translationObj = {
     type: 'admissionsPages',
     id: { default: 'baron-day' }
   },
+  academics: {
+    page: '/page'
+  },
   hr: { page: '/page', type: 'humanResources' },
   'campus-security': { page: '/page', type: 'campusSecurity' },
   studentprofiles: { page: '/faculty', type: 'studentProfilePages' }
@@ -63,6 +66,8 @@ app.prepare().then(() => {
 
   // universal Route
   server.get('/:type/:id?', (req, res, next) => {
+    req.params.type = req.params.type ? req.params.type.toLowerCase() : null
+    req.params.id = req.params.id ? req.params.id.toLowerCase() : null
     if (
       req.params.type !== '_next' &&
       req.params.type !== 'robots.txt' &&
@@ -123,6 +128,69 @@ app.prepare().then(() => {
     return handle(req, res)
   })
 
+  server.get('/:type/:subtype/:id?', (req, res, next) => {
+    req.params.type = req.params.type ? req.params.type.toLowerCase() : null
+    req.params.id = req.params.id ? req.params.id.toLowerCase() : null
+    if (
+      req.params.type !== '_next' &&
+      req.params.type !== 'robots.txt' &&
+      req.params.type !== 'service-worker.js' &&
+      req.params.type !== 'favicon.ico' &&
+      req.params.type !== 'static'
+    ) {
+      let type = null
+      if (req.params.type) {
+        type = `${req.params.type}Pages`
+        if (translationObj[req.params.type]) {
+          if (translationObj[req.params.type].type) {
+            type = translationObj[req.params.type].type
+          }
+        } else {
+          return renderAndCache(req, res, '/page', {
+            id: req.params.id,
+            type: `${req.params.type}Pages`
+          })
+        }
+      }
+      let id = null
+      if (req.params.id) {
+        if (translationObj[req.params.type].id) {
+          if (req.params.id) {
+            id = req.params.id
+          } else if (translationObj[req.params.type].id[req.params.id]) {
+            id = translationObj[req.params.type].id[req.params.id]
+          }
+        } else {
+          id = req.params.id
+        }
+      } else {
+        if (translationObj[req.params.type].id) {
+          if (translationObj[req.params.type].id.default) {
+            id = translationObj[req.params.type].id.default
+          }
+        }
+      }
+      let page = '/page'
+      if (translationObj[req.params.type]) {
+        if (translationObj[req.params.type].page) {
+          page = translationObj[req.params.type].page
+        }
+      }
+      let options = {}
+      if (id) {
+        options.id = id
+      }
+      if (type) {
+        options.type = type
+      }
+      console.log('type:', type)
+      console.log('id:', id)
+      console.log('page:', page)
+      console.log('options:', options)
+      return renderAndCache(req, res, page, options)
+    }
+    return handle(req, res)
+  })
   server.get('*', (req, res) => {
     return handle(req, res)
   })
