@@ -14,11 +14,32 @@ const translationObj = {
   faculty: { page: '/faculty', type: 'faculty' },
   contact: { page: '/directory' },
   news: { page: '/news' },
+  search: { page: '/search' },
   major: { page: '/major' },
   minor: { page: '/minor' },
   department: { page: '/department' },
   economics: { page: '/major', type: 'majors', id: { default: 'economics' } },
   accounting: { page: '/major', type: 'majors', id: { default: 'accounting' } },
+  politicalscience: {
+    page: '/major',
+    type: 'majors',
+    id: { default: 'politicalscience' }
+  },
+  'political-science': {
+    page: '/major',
+    type: 'majors',
+    id: { default: 'politicalscience' }
+  },
+  sacredmusic: {
+    page: '/major',
+    type: 'majors',
+    id: { default: 'sacred-music' }
+  },
+  'sacred-music': {
+    page: '/major',
+    type: 'majors',
+    id: { default: 'sacred-music' }
+  },
   'comm-arts': {
     page: '/minor',
     id: { 'film-studies': 'film-studies-minor' }
