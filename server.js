@@ -4,10 +4,7 @@ const LRUCache = require('lru-cache')
 
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
-const app = next({
-  dir: '.',
-  dev
-})
+const app = next({ dir: '.', dev })
 const handle = app.getRequestHandler()
 
 const translationObj = {
@@ -85,133 +82,33 @@ app.prepare().then(() => {
   // Use the `renderAndCache` utility defined below to serve pages
   server.get('/', (req, res) => renderAndCache(req, res, '/'))
 
-  // universal Route
-  server.get('/:type/:id?', (req, res, next) => {
-    req.params.type = req.params.type ? req.params.type.toLowerCase() : null
-    req.params.id = req.params.id ? req.params.id.toLowerCase() : null
+  server.get('/:first/:second?/:third?', (req, res, next) => {
+    // Prevent routes that should not be handled by this logic and send them to the next route in line
     if (
-      req.params.type !== '_next' &&
-      req.params.type !== 'robots.txt' &&
-      req.params.type !== 'service-worker.js' &&
-      req.params.type !== 'favicon.ico'
+      req.params.first !== '_next' &&
+      req.params.first !== 'robots.txt' &&
+      req.params.first !== 'service-worker.js' &&
+      req.params.first !== 'favicon.ico' &&
+      req.params.first !== 'static' &&
+      req.params.first !== 'json'
     ) {
-      let type = null
-      if (req.params.type) {
-        type = `${req.params.type}Pages`
-        if (translationObj[req.params.type]) {
-          if (translationObj[req.params.type].type) {
-            type = translationObj[req.params.type].type
-          }
-        } else {
-          return renderAndCache(req, res, '/page', {
-            id: req.params.id,
-            type: `${req.params.type}Pages`
-          })
-        }
-      }
-      let id = null
-      if (req.params.id) {
-        if (translationObj[req.params.type].id) {
-          if (req.params.id) {
-            id = req.params.id
-          } else if (translationObj[req.params.type].id[req.params.id]) {
-            id = translationObj[req.params.type].id[req.params.id]
-          }
-        } else {
-          id = req.params.id
-        }
-      } else {
-        if (translationObj[req.params.type].id) {
-          if (translationObj[req.params.type].id.default) {
-            id = translationObj[req.params.type].id.default
-          }
-        }
-      }
-      let page = '/page'
-      if (translationObj[req.params.type]) {
-        if (translationObj[req.params.type].page) {
-          page = translationObj[req.params.type].page
-        }
-      }
+      let page = '/'
       let options = {}
-      if (id) {
-        options.id = id
+      if (Object.values(req.params).filter(Boolean).length === 1) {
+        // Logic for routes with 1 parameter
+        console.log('one parameter')
+      } else if (Object.values(req.params).filter(Boolean).length === 2) {
+        // Logic for routes with 2 parameters
+        console.log('two parameters')
+      } else if (Object.values(req.params).filter(Boolean).length === 3) {
+        // Logic for routes with 3 parameters
+        console.log('three parameters')
       }
-      if (type) {
-        options.type = type
-      }
-      console.log('type:', type)
-      console.log('id:', id)
-      console.log('page:', page)
-      console.log('options:', options)
       return renderAndCache(req, res, page, options)
     }
-    return handle(req, res)
+    return next()
   })
 
-  server.get('/:type/:subtype/:id?', (req, res, next) => {
-    req.params.type = req.params.type ? req.params.type.toLowerCase() : null
-    req.params.id = req.params.id ? req.params.id.toLowerCase() : null
-    if (
-      req.params.type !== '_next' &&
-      req.params.type !== 'robots.txt' &&
-      req.params.type !== 'service-worker.js' &&
-      req.params.type !== 'favicon.ico' &&
-      req.params.type !== 'static'
-    ) {
-      let type = null
-      if (req.params.type) {
-        type = `${req.params.type}Pages`
-        if (translationObj[req.params.type]) {
-          if (translationObj[req.params.type].type) {
-            type = translationObj[req.params.type].type
-          }
-        } else {
-          return renderAndCache(req, res, '/page', {
-            id: req.params.id,
-            type: `${req.params.type}Pages`
-          })
-        }
-      }
-      let id = null
-      if (req.params.id) {
-        if (translationObj[req.params.type].id) {
-          if (req.params.id) {
-            id = req.params.id
-          } else if (translationObj[req.params.type].id[req.params.id]) {
-            id = translationObj[req.params.type].id[req.params.id]
-          }
-        } else {
-          id = req.params.id
-        }
-      } else {
-        if (translationObj[req.params.type].id) {
-          if (translationObj[req.params.type].id.default) {
-            id = translationObj[req.params.type].id.default
-          }
-        }
-      }
-      let page = '/page'
-      if (translationObj[req.params.type]) {
-        if (translationObj[req.params.type].page) {
-          page = translationObj[req.params.type].page
-        }
-      }
-      let options = {}
-      if (id) {
-        options.id = id
-      }
-      if (type) {
-        options.type = type
-      }
-      console.log('type:', type)
-      console.log('id:', id)
-      console.log('page:', page)
-      console.log('options:', options)
-      return renderAndCache(req, res, page, options)
-    }
-    return handle(req, res)
-  })
   server.get('*', (req, res) => {
     return handle(req, res)
   })
