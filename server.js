@@ -83,28 +83,55 @@ app.prepare().then(() => {
   server.get('/', (req, res) => renderAndCache(req, res, '/'))
 
   server.get('/:first/:second?/:third?', (req, res, next) => {
+    const firstParam = req.params.first ? req.params.first.toLowerCase() : null
+    const secondParam = req.params.second
+      ? req.params.second.toLowerCase()
+      : null
+    const thirdParam = req.params.third ? req.params.third.toLowerCase() : null
     // Prevent routes that should not be handled by this logic and send them to the next route in line
     if (
-      req.params.first !== '_next' &&
-      req.params.first !== 'robots.txt' &&
-      req.params.first !== 'service-worker.js' &&
-      req.params.first !== 'favicon.ico' &&
-      req.params.first !== 'static' &&
-      req.params.first !== 'json'
+      firstParam !== '_next' &&
+      firstParam !== 'robots.txt' &&
+      firstParam !== 'service-worker.js' &&
+      firstParam !== 'favicon.ico' &&
+      firstParam !== 'static' &&
+      firstParam !== 'json'
     ) {
-      let page = '/'
-      let options = {}
+      let page = '/page'
+      let type = `${firstParam}Pages`
+      let subtype = null
+      let id = null
       if (Object.values(req.params).filter(Boolean).length === 1) {
         // Logic for routes with 1 parameter
         console.log('one parameter')
       } else if (Object.values(req.params).filter(Boolean).length === 2) {
         // Logic for routes with 2 parameters
         console.log('two parameters')
+        // Set up default values for routes with 2 parameters
+        page = '/page'
+        type = firstParam
+        id = secondParam
+
+        if (translationObj[firstParam]) {
+          // find page
+          if (translationObj[firstParam].page) {
+            page = translationObj[firstParam].page
+          }
+          // find type
+          if (translationObj[firstParam].type) {
+            type = translationObj[firstParam].type
+          }
+          // find id
+          if (translationObj[firstParam].id) {
+            id = translationObj[firstParam].id[secondParam]
+          }
+        }
       } else if (Object.values(req.params).filter(Boolean).length === 3) {
         // Logic for routes with 3 parameters
         console.log('three parameters')
       }
-      return renderAndCache(req, res, page, options)
+
+      return renderAndCache(req, res, page, { id, type })
     }
     return next()
   })
