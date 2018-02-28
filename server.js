@@ -105,6 +105,25 @@ app.prepare().then(() => {
       if (Object.values(req.params).filter(Boolean).length === 1) {
         // Logic for routes with 1 parameter
         console.log('one parameter')
+        // Set up default values for routes with 1 parameter
+        page = '/page'
+        type = `${firstParam}Pages`
+        if (translationObj[firstParam]) {
+          // find page
+          if (translationObj[firstParam].page) {
+            page = translationObj[firstParam].page
+          }
+          // find type
+          if (translationObj[firstParam].type) {
+            type = translationObj[firstParam].type
+          }
+          // find id
+          if (translationObj[firstParam].id) {
+            if (translationObj[firstParam].id.default) {
+              id = translationObj[firstParam].id.default
+            }
+          }
+        }
       } else if (Object.values(req.params).filter(Boolean).length === 2) {
         // Logic for routes with 2 parameters
         console.log('two parameters')
