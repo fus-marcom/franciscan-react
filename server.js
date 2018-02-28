@@ -97,6 +97,7 @@ app.prepare().then(() => {
       firstParam !== 'static' &&
       firstParam !== 'json'
     ) {
+      // initialize variables
       let page = '/page'
       let type = `${firstParam}Pages`
       let subtype = null
@@ -109,9 +110,8 @@ app.prepare().then(() => {
         console.log('two parameters')
         // Set up default values for routes with 2 parameters
         page = '/page'
-        type = firstParam
+        type = `${firstParam}Pages`
         id = secondParam
-
         if (translationObj[firstParam]) {
           // find page
           if (translationObj[firstParam].page) {
@@ -129,9 +129,17 @@ app.prepare().then(() => {
       } else if (Object.values(req.params).filter(Boolean).length === 3) {
         // Logic for routes with 3 parameters
         console.log('three parameters')
+        // Set up default values for routes with 3 parameters
+        page = '/page'
+        type = `${firstParam}Pages`
+        subtype = secondParam
+        id = thirdParam
+        // find page
+        // find type
+        // find subtype
+        // find id
       }
-
-      return renderAndCache(req, res, page, { id, type })
+      return renderAndCache(req, res, page, { id, type, subtype })
     }
     return next()
   })
