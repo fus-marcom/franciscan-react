@@ -67,7 +67,8 @@ const translationObj = {
   },
   hr: { page: '/page', type: 'humanResources' },
   'campus-security': { page: '/page', type: 'campusSecurity' },
-  studentprofiles: { page: '/faculty', type: 'studentProfilePages' }
+  studentprofiles: { page: '/faculty', type: 'studentProfilePages' },
+  hats: { page: { standard: '/hat', default: '/hatList' } }
 }
 
 // This is where we cache our rendered HTML pages
@@ -111,7 +112,11 @@ app.prepare().then(() => {
         if (translationObj[firstParam]) {
           // find page
           if (translationObj[firstParam].page) {
-            page = translationObj[firstParam].page
+            if (typeof translationObj[firstParam].page === 'object') {
+              page = translationObj[firstParam].page.default
+            } else {
+              page = translationObj[firstParam].page
+            }
           }
           // find type
           if (translationObj[firstParam].type) {
@@ -134,7 +139,11 @@ app.prepare().then(() => {
         if (translationObj[firstParam]) {
           // find page
           if (translationObj[firstParam].page) {
-            page = translationObj[firstParam].page
+            if (typeof translationObj[firstParam].page === 'object') {
+              page = translationObj[firstParam].page.standard
+            } else {
+              page = translationObj[firstParam].page
+            }
           }
           // find type
           if (translationObj[firstParam].type) {
