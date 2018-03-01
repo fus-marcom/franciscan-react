@@ -1,10 +1,19 @@
 import React, { Component } from 'react'
+import { withStyles } from 'material-ui/styles'
 import { Query, compose } from 'react-apollo'
 import { PageQuery } from '../lib/queries/page'
 import withData from '../lib/withData'
 import Layout from '../components/Layout'
 import Head from 'next/head'
 import withRoot from '../components/withRoot'
+
+const styles = {
+  root: {
+    '& br': {
+      display: 'unset'
+    }
+  }
+}
 
 class Major extends Component {
   static async getInitialProps ({ query: { id, type } }) {
@@ -39,6 +48,7 @@ class Major extends Component {
 
             return (
               <div
+                className={this.props.classes.root}
                 data-testid="content"
                 dangerouslySetInnerHTML={{
                   __html: content
@@ -52,4 +62,4 @@ class Major extends Component {
   }
 }
 
-export default compose(withRoot, withData)(Major)
+export default compose(withRoot, withData)(withStyles(styles)(Major))
