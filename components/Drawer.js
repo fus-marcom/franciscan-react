@@ -29,7 +29,8 @@ const styles = theme => ({
     margin: theme.spacing.unit
   },
   drawerImg: {
-    margin: '0 auto'
+    margin: '0 auto',
+    cursor: 'pointer'
   },
   externalLink: {
     textDecoration: 'none',
