@@ -40,19 +40,22 @@ class DrawerItem extends React.Component {
         <Collapse component="li" in={isOpen} timeout="auto" unmountOnExit>
           <List disablePadding onClick={toggleDrawer} onKeyDown={toggleDrawer}>
             {submenuItems.map(item => (
-              <ListItem button className={classes.nested} key={item.text}>
-                <ListItemText
-                  inset
-                  style={{ paddingLeft: '16px' }}
-                  primary={
-                    <Link prefetch href={item.asUrl} as={item.linkUrl}>
-                      <a onClick={toggleDrawer} className={classes.subLink}>
-                        {item.text}
-                      </a>
-                    </Link>
-                  }
-                />
-              </ListItem>
+              <Link
+                prefetch
+                href={item.asUrl}
+                as={item.linkUrl}
+                key={item.text}
+              >
+                <a onClick={toggleDrawer} className={classes.subLink}>
+                  <ListItem button className={classes.nested}>
+                    <ListItemText
+                      inset
+                      style={{ paddingLeft: '16px' }}
+                      primary={item.text}
+                    />
+                  </ListItem>
+                </a>
+              </Link>
             ))}
           </List>
         </Collapse>
