@@ -11,7 +11,9 @@ const styles = theme => ({
     paddingLeft: theme.spacing.unit * 4
   },
   subLink: {
-    textDecoration: 'none',
+    textDecoration: 'none'
+  },
+  linkText: {
     color: 'rgba(0,0,0,0.54)'
   }
 })
@@ -52,6 +54,7 @@ class DrawerItem extends React.Component {
                       inset
                       style={{ paddingLeft: '16px' }}
                       primary={item.text}
+                      classes={{ primary: classes.linkText }}
                     />
                   </ListItem>
                 </a>
