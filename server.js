@@ -17,7 +17,11 @@ const translationObj = {
   search: { page: '/search' },
   major: { page: '/major' },
   minor: { page: '/minor' },
-  department: { page: '/department' },
+  departments: {
+    page: '/page',
+    type: 'academicsPages',
+    id: { default: 'departments' }
+  },
   economics: { page: '/major', type: 'majors', id: { default: 'economics' } },
   accounting: { page: '/major', type: 'majors', id: { default: 'accounting' } },
   politicalscience: {
