@@ -40,15 +40,18 @@ const styles = theme => ({
 
 class Page extends Component {
   state = {
-    data: []
+    data: [],
+    searchTerm: ''
   }
   /**
    * Make api call based on searchTerm
    * Render cards from api data
    */
-  fetchSearchTerm = searchTerm => {
+  fetchSearchTerm = () => {
     const apiUrl = 'http://104.236.41.59/wp-json/wp/v2/'
-    const params = `multiple-post-type?per_page=100&search=${searchTerm}&type[]=post&type[]=page&type[]=admissions-page&type[]=chapel-page`
+    const params = `multiple-post-type?per_page=100&search=${
+      this.state.searchTerm
+    }&type[]=news&type[]=admissions-page&type[]=chapel-page&type[]=faculty&type[]=major&type[]=department&type[]=academics-page`
     getJSON(apiUrl + params).then(data => this.setState({ data }))
     console.log(this.state.data)
   }
@@ -74,6 +77,7 @@ class Page extends Component {
    */
   getSearchResults = e => {
     var { value } = e.target
+    this.setState({ searchTerm: value })
     if (value.length < 3) return
     this.debouncedSearch(value)
   }
@@ -119,6 +123,7 @@ class Page extends Component {
 
   render () {
     const { classes } = this.props
+    const { searchTerm } = this.state
     return (
       <Layout>
         <Head>
@@ -136,6 +141,7 @@ class Page extends Component {
               onChange={this.getSearchResults}
               type="search"
               style={{ width: '100%', paddingLeft: '4px' }}
+              value={searchTerm}
             />
             <label htmlFor="search">Search</label>
             <svg fill="#fff" height="24" viewBox="0 0 24 24" width="24">
