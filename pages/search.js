@@ -5,6 +5,14 @@ import Head from 'next/head'
 import withRoot from '../components/withRoot'
 import { getJSON } from '../utils/fetch'
 import debounce from 'lodash.debounce'
+import {
+  FormLabel,
+  FormControl,
+  FormGroup,
+  FormControlLabel,
+  FormHelperText
+} from 'material-ui/Form'
+import Checkbox from 'material-ui/Checkbox'
 
 const styles = theme => ({
   root: {
@@ -41,7 +49,13 @@ const styles = theme => ({
 class Page extends Component {
   state = {
     data: [],
-    searchTerm: ''
+    searchTerm: '',
+    searchType: '',
+    checkboxes: [
+      { news: '&type[]=news' },
+      { majors: '&type[]=major' },
+      { faculty: '&type[]=faculty' }
+    ]
   }
   /**
    * Make api call based on searchTerm
@@ -49,9 +63,8 @@ class Page extends Component {
    */
   fetchSearchTerm = () => {
     const apiUrl = 'http://104.236.41.59/wp-json/wp/v2/'
-    const params = `multiple-post-type?per_page=100&search=${
-      this.state.searchTerm
-    }&type[]=news&type[]=admissions-page&type[]=chapel-page&type[]=faculty&type[]=major&type[]=department&type[]=academics-page`
+    const params = `multiple-post-type?per_page=100&search=${this.state
+      .searchTerm + this.state.searchType}`
     getJSON(apiUrl + params).then(data => this.setState({ data }))
     console.log(this.state.data)
   }
@@ -121,6 +134,10 @@ class Page extends Component {
     this.setState({ category: parseInt(catNum) })
   }
 
+  handleChange = name => (event, checked) => {
+    this.setState({ [name]: checked })
+  }
+
   render () {
     const { classes } = this.props
     const { searchTerm } = this.state
@@ -149,6 +166,42 @@ class Page extends Component {
               <path d="M0 0h24v24H0z" fill="none" />
             </svg>
           </form>
+          <FormControl component="fieldset">
+            <FormLabel component="legend">Assign responsibility</FormLabel>
+            <FormGroup>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={this.state.gilad}
+                    onChange={this.handleChange('gilad')}
+                    value="gilad"
+                  />
+                }
+                label="Gilad Gray"
+              />
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={this.state.jason}
+                    onChange={this.handleChange('jason')}
+                    value="jason"
+                  />
+                }
+                label="Jason Killian"
+              />
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={this.state.antoine}
+                    onChange={this.handleChange('antoine')}
+                    value="antoine"
+                  />
+                }
+                label="Antoine Llorca"
+              />
+            </FormGroup>
+            <FormHelperText>Be careful</FormHelperText>
+          </FormControl>
           {this.state.data
             ? this.state.data.map(item => (
               <div key={item.id} className={classes.searchResult}>
