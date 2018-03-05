@@ -19,7 +19,7 @@ const translationObj = {
   minor: { page: '/minor' },
   departments: {
     page: '/page',
-    type: 'academicsPages',
+    type: 'departments',
     id: { default: 'departments' }
   },
   economics: { page: '/major', type: 'majors', id: { default: 'economics' } },
