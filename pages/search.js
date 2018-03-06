@@ -9,8 +9,7 @@ import {
   FormLabel,
   FormControl,
   FormGroup,
-  FormControlLabel,
-  FormHelperText
+  FormControlLabel
 } from 'material-ui/Form'
 import Checkbox from 'material-ui/Checkbox'
 
@@ -51,11 +50,11 @@ class Page extends Component {
     data: [],
     searchTerm: '',
     searchType: '',
-    checkboxes: [
-      { news: '&type[]=news' },
-      { majors: '&type[]=major' },
-      { faculty: '&type[]=faculty' }
-    ]
+    checkboxes: {
+      department: false,
+      major: false,
+      faculty: false
+    }
   }
   /**
    * Make api call based on searchTerm
@@ -135,7 +134,20 @@ class Page extends Component {
   }
 
   handleChange = name => (event, checked) => {
-    this.setState({ [name]: checked })
+    let checkboxes = this.state.checkboxes
+    checkboxes[name] = checked
+    this.setState({ checkboxes })
+    this.createSearchTypes()
+  }
+
+  createSearchTypes = () => {
+    let searchString = ''
+    Object.entries(this.state.checkboxes).map(([key, value]) => {
+      if (value) {
+        searchString = searchString + `&type[]=${key}`
+      }
+    })
+    this.setState({ searchType: searchString })
   }
 
   render () {
@@ -167,40 +179,39 @@ class Page extends Component {
             </svg>
           </form>
           <FormControl component="fieldset">
-            <FormLabel component="legend">Assign responsibility</FormLabel>
+            <FormLabel component="legend">Filter Results</FormLabel>
             <FormGroup>
               <FormControlLabel
                 control={
                   <Checkbox
-                    checked={this.state.gilad}
-                    onChange={this.handleChange('gilad')}
-                    value="gilad"
+                    checked={this.state.faculty}
+                    onChange={this.handleChange('faculty')}
+                    value="faculty"
                   />
                 }
-                label="Gilad Gray"
+                label="Faculty"
               />
               <FormControlLabel
                 control={
                   <Checkbox
-                    checked={this.state.jason}
-                    onChange={this.handleChange('jason')}
-                    value="jason"
+                    checked={this.state.department}
+                    onChange={this.handleChange('department')}
+                    value="department"
                   />
                 }
-                label="Jason Killian"
+                label="Department"
               />
               <FormControlLabel
                 control={
                   <Checkbox
-                    checked={this.state.antoine}
-                    onChange={this.handleChange('antoine')}
-                    value="antoine"
+                    checked={this.state.major}
+                    onChange={this.handleChange('major')}
+                    value="major"
                   />
                 }
-                label="Antoine Llorca"
+                label="Major"
               />
             </FormGroup>
-            <FormHelperText>Be careful</FormHelperText>
           </FormControl>
           {this.state.data
             ? this.state.data.map(item => (

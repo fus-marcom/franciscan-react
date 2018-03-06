@@ -10,6 +10,7 @@ const app = next({
 })
 const handle = app.getRequestHandler()
 
+// TODO: split this object up into three: one for for routes with 1 param, 2params, and 3 params. Then change routing function to use the correct obj depending on the num of params
 const translationObj = {
   faculty: { page: '/faculty', type: 'faculty' },
   contact: { page: '/directory' },
@@ -24,6 +25,7 @@ const translationObj = {
   },
   economics: { page: '/major', type: 'majors', id: { default: 'economics' } },
   accounting: { page: '/major', type: 'majors', id: { default: 'accounting' } },
+  theology: { page: '/major', type: 'majors', id: { default: 'theology' } },
   politicalscience: {
     page: '/major',
     type: 'majors',
