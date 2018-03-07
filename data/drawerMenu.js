@@ -60,7 +60,7 @@ export const academicsMenu = [
   {
     text: 'Undergraduate',
     linkUrl: '/academics/ug/majors',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    asUrl: '/page?type=academicsPages&id=majors'
   },
   {
     text: 'Graduate',
@@ -96,7 +96,7 @@ export const academicsMenu = [
   {
     text: 'Academic Departments',
     linkUrl: '/departments',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    asUrl: '/page?type=academicsPages&id=departments'
   },
   {
     text: 'Academic Affairs',

@@ -11,6 +11,9 @@ const styles = theme => ({
     justifyContent: 'center',
     minHeight: '80vh',
     backgroundAttachment: 'fixed',
+    [theme.breakpoints.down('md')]: {
+      backgroundAttachment: 'scroll'
+    },
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     flexDirection: 'column',
