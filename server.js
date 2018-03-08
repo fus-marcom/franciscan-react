@@ -175,12 +175,12 @@ app.prepare().then(() => {
           if (translationObj[firstParam].id) {
             if (typeof translationObj[firstParam].id === 'object') {
               if (translationObj[firstParam].id.standard) {
-                type = translationObj[firstParam].id.standard
+                id = translationObj[firstParam].id.standard
               } else {
-                type = secondParam
+                id = secondParam
               }
             } else {
-              type = translationObj[firstParam].id
+              id = translationObj[firstParam].id
             }
           }
         }
