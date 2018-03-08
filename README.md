@@ -35,8 +35,9 @@ project directory, open your terminal, and use:
 
 ```bash
 > npm install
-> npm start
+> npm dev
 ```
+
 Now Fork the project from [here](https://github.com/fus-marcom/franciscan-react), make your changes and open a [Pull](https://github.com/fus-marcom/franciscan-react/pulls) Request.
 
 ### Learning Git
