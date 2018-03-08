@@ -22,7 +22,11 @@ const translationObj = {
   },
   economics: { page: '/major', type: 'majors', id: { default: 'economics' } },
   accounting: { page: '/major', type: 'majors', id: { default: 'accounting' } },
-  theology: { page: '/major', type: 'majors', id: { default: 'theology' } },
+  theology: {
+    page: '/major',
+    type: { default: 'majors', standard: 'theologyPages' },
+    id: { default: 'theology' }
+  },
   politicalscience: {
     page: '/major',
     type: 'majors',
@@ -74,7 +78,11 @@ const translationObj = {
   hr: { page: '/page', type: 'humanResources' },
   'campus-security': { page: '/page', type: 'campusSecurity' },
   studentprofiles: { page: '/faculty', type: 'studentProfilePages' },
-  hats: { page: { standard: '/hat', default: '/hatList' } }
+  admissions: {
+    page: '/page',
+    type: 'admissionsPages',
+    id: { default: 'admissions' }
+  }
 }
 
 // This is where we cache our rendered HTML pages
@@ -126,7 +134,11 @@ app.prepare().then(() => {
           }
           // find type
           if (translationObj[firstParam].type) {
-            type = translationObj[firstParam].type
+            if (typeof translationObj[firstParam].type === 'object') {
+              type = translationObj[firstParam].type.default
+            } else {
+              type = translationObj[firstParam].type
+            }
           }
           // find id
           if (translationObj[firstParam].id) {
@@ -153,11 +165,23 @@ app.prepare().then(() => {
           }
           // find type
           if (translationObj[firstParam].type) {
-            type = translationObj[firstParam].type
+            if (typeof translationObj[firstParam].type === 'object') {
+              type = translationObj[firstParam].type.standard
+            } else {
+              type = translationObj[firstParam].type
+            }
           }
           // find id
           if (translationObj[firstParam].id) {
-            id = translationObj[firstParam].id[secondParam]
+            if (typeof translationObj[firstParam].id === 'object') {
+              if (translationObj[firstParam].id.standard) {
+                type = translationObj[firstParam].id.standard
+              } else {
+                type = secondParam
+              }
+            } else {
+              type = translationObj[firstParam].id
+            }
           }
         }
       } else if (Object.values(req.params).filter(Boolean).length === 3) {
@@ -168,10 +192,28 @@ app.prepare().then(() => {
         type = `${firstParam}Pages`
         subtype = secondParam
         id = thirdParam
-        // find page
-        // find type
-        // find subtype
-        // find id
+        if (translationObj[firstParam]) {
+          // find page
+          if (translationObj[firstParam].page) {
+            if (typeof translationObj[firstParam].page === 'object') {
+              page = translationObj[firstParam].page.thirdly
+            } else {
+              page = translationObj[firstParam].page
+            }
+          }
+          // find type
+          if (translationObj[firstParam].type) {
+            if (typeof translationObj[firstParam].type === 'object') {
+              type = translationObj[firstParam].type.thirdly
+            } else {
+              type = translationObj[firstParam].type
+            }
+          }
+          // find id
+          if (translationObj[firstParam].id) {
+            id = translationObj[firstParam].id[thirdParam]
+          }
+        }
       }
       return renderAndCache(req, res, page, { id, type, subtype })
     }

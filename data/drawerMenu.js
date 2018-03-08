@@ -65,7 +65,7 @@ export const academicsMenu = [
   {
     text: 'Graduate',
     linkUrl: '/academics/graduate-programs',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    asUrl: '/page?type=academicsPages&id=graduate-programs'
   },
   {
     text: 'Online',
