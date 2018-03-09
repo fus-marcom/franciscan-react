@@ -1,60 +1,60 @@
-// export const aboutMenu = [
-//   {
-//     text: 'Academically Excellent',
-//     linkUrl: '/about/academically-excellent',
-//     asUrl: '/page?type=aboutPages&id=academically-excellent'
-//   },
-//   {
-//     text: 'Passionately Catholic',
-//     linkUrl: '/about/passionately-catholic',
-//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
-//   },
-//   {
-//     text: 'At A Glance',
-//     linkUrl: '/about/at-a-glance',
-//     asUrl: '/page?type=aboutPages&id=at-a-glance'
-//   },
-//   {
-//     text: 'Employment & HR',
-//     linkUrl: '/hr',
-//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
-//   },
-//   {
-//     text: 'Consumer Information',
-//     linkUrl: '/consumer-information',
-//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
-//   },
-//   {
-//     text: 'The Inn at Franciscan Square',
-//     linkUrl: 'https://franciscansquare.com/hotel',
-//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
-//   },
-//   {
-//     text: 'Our Vision & Charisms',
-//     linkUrl: '/about/vision-charisms',
-//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
-//   },
-//   {
-//     text: 'Our Mission Statement',
-//     linkUrl: '/about/mission-statement',
-//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
-//   },
-//   {
-//     text: 'Franciscans TOR',
-//     linkUrl: '/chapel/franciscans-tor',
-//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
-//   },
-//   {
-//     text: 'Our History',
-//     linkUrl: '/about/history',
-//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
-//   },
-//   {
-//     text: 'Fact Book',
-//     linkUrl: '/fact-book',
-//     asUrl: '/page?type=aboutPages&id=passionately-catholic'
-//   }
-// ]
+export const aboutMenu = [
+  {
+    text: 'Academically Excellent',
+    linkUrl: '/about/academically-excellent',
+    asUrl: '/page?type=aboutPages&id=academically-excellent'
+  },
+  {
+    text: 'Passionately Catholic',
+    linkUrl: '/about/passionately-catholic',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+  },
+  {
+    text: 'At A Glance',
+    linkUrl: '/about/at-a-glance',
+    asUrl: '/page?type=aboutPages&id=at-a-glance'
+  },
+  {
+    text: 'Employment & HR',
+    linkUrl: '/hr',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+  },
+  {
+    text: 'Consumer Information',
+    linkUrl: '/consumer-information',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+  },
+  {
+    text: 'The Inn at Franciscan Square',
+    linkUrl: 'https://franciscansquare.com/hotel',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+  },
+  {
+    text: 'Our Vision & Charisms',
+    linkUrl: '/about/vision-charisms',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+  },
+  {
+    text: 'Our Mission Statement',
+    linkUrl: '/about/mission-statement',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+  },
+  {
+    text: 'Franciscans TOR',
+    linkUrl: '/chapel/franciscans-tor',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+  },
+  {
+    text: 'Our History',
+    linkUrl: '/about/history',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+  },
+  {
+    text: 'Fact Book',
+    linkUrl: '/fact-book',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+  }
+]
 
 export const academicsMenu = [
   {

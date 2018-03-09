@@ -13,6 +13,7 @@ import { FormControl } from 'material-ui/Form'
 import DrawerItem from './DrawerItem'
 import {
   studentMenu,
+  aboutMenu,
   academicsMenu,
   admissionsMenu,
   faithMenu
@@ -106,7 +107,14 @@ class TemporaryDrawer extends React.Component {
                   />
                 </FormControl>
               </ListItem>
-
+              <DrawerItem
+                toggleDrawer={toggleDrawer}
+                primaryText="About"
+                submenuItems={aboutMenu}
+                isOpen={this.props.drawerItems.about}
+                expandItem={this.props.expandItem}
+                itemId="about"
+              />
               <DrawerItem
                 toggleDrawer={toggleDrawer}
                 primaryText="Academics"
