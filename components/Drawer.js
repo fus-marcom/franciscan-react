@@ -48,6 +48,10 @@ const styles = theme => ({
 })
 
 class TemporaryDrawer extends React.Component {
+  static defaultProps = {
+    open: PropTypes.bool.isRequired,
+    toggleDrawer: PropTypes.func.isRequired
+  }
   state = {
     openItems: true,
     search: ''
@@ -219,11 +223,6 @@ class TemporaryDrawer extends React.Component {
       </Drawer>
     )
   }
-}
-
-TemporaryDrawer.propTypes = {
-  open: PropTypes.bool.isRequired,
-  toggleDrawer: PropTypes.func.isRequired
 }
 
 export default withStyles(styles)(TemporaryDrawer)

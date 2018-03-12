@@ -119,6 +119,9 @@ const styles = theme => ({
 })
 
 class ButtonAppBar extends Component {
+  static defaultProps = {
+    classes: PropTypes.object.isRequired
+  }
   state = {
     isSearchOpen: false,
     searchText: ''
@@ -234,10 +237,6 @@ class ButtonAppBar extends Component {
       </div>
     )
   }
-}
-
-ButtonAppBar.propTypes = {
-  classes: PropTypes.object.isRequired
 }
 
 export default withStyles(styles)(ButtonAppBar)
