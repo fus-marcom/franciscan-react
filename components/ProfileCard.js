@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Component, Fragment } from 'react'
 import { withStyles } from 'material-ui/styles'
 import Card, { CardMedia, CardActions, CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
@@ -31,7 +31,7 @@ const styles = theme => ({
   }
 })
 
-class ProfileCard extends React.Component {
+class ProfileCard extends Component {
   render () {
     const {
       classes,

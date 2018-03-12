@@ -14,6 +14,7 @@ class News extends Component {
   render () {
     const { data } = this.props
     const loading = data.loading
+    // @todo create HOC
     if (loading) {
       return (
         <Layout>

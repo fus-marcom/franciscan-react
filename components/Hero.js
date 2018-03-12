@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { withStyles } from 'material-ui/styles'
 import Typography from 'material-ui/Typography'
 import InvertedButton from './InvertedButton'
@@ -34,7 +34,7 @@ const styles = theme => ({
   }
 })
 
-class Hero extends React.Component {
+class Hero extends Component {
   render () {
     const {
       classes,
