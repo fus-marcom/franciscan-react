@@ -49,6 +49,7 @@ class Page extends Component {
   state = {
     data: [],
     searchTerm: '',
+    sortBy: '',
     searchType: '',
     checkboxes: {
       department: false,
@@ -61,9 +62,11 @@ class Page extends Component {
    * Render cards from api data
    */
   fetchSearchTerm = () => {
+    const searchType =
+      this.state.searchType || '&type[]=department&type[]=major&type[]=faculty'
     const apiUrl = 'http://104.236.41.59/wp-json/wp/v2/'
     const params = `multiple-post-type?per_page=100&search=${this.state
-      .searchTerm + this.state.searchType}`
+      .searchTerm + searchType}`
     getJSON(apiUrl + params).then(data => this.setState({ data }))
     console.log(this.state.data)
   }
@@ -88,32 +91,21 @@ class Page extends Component {
    * Called onChange event
    */
   getSearchResults = e => {
+    this.createSearchTypes()
     var { value } = e.target
     this.setState({ searchTerm: value })
     if (value.length < 3) return
-    this.debouncedSearch(value)
+    this.debouncedSearch()
   }
 
-  pricePicker = e => {
-    const freeVal = document.getElementById('free').checked
-    const paidVal = document.getElementById('paid').checked
-
-    if ((freeVal && paidVal) || (!freeVal && !paidVal)) {
-      this.setState({ price: 'all' })
-    } else if (freeVal) {
-      this.setState({ price: 'free' })
+  sortBy = type => {
+    if (this.state.data.length === 100 || this.state.data.length === 0) {
+      this.setState({ sortBy: type })
+      this.debouncedSearch()
     } else {
-      this.setState({ price: 'paid' })
-    }
-  }
+      const sortedData = this.state.data.sort()
 
-  priceFilter = post => {
-    if (this.state.price === 'all') {
-      return true
-    } else if (post.acf.price === this.state.price) {
-      return true
-    } else {
-      return false
+      this.setState({ data: sortedData })
     }
   }
 
@@ -138,6 +130,7 @@ class Page extends Component {
     checkboxes[name] = checked
     this.setState({ checkboxes })
     this.createSearchTypes()
+    this.debouncedSearch()
   }
 
   createSearchTypes = () => {
@@ -213,7 +206,7 @@ class Page extends Component {
               />
             </FormGroup>
           </FormControl>
-          {this.state.data
+          {this.state.data.length > 0
             ? this.state.data.map(item => (
               <div key={item.id} className={classes.searchResult}>
                 <span className={classes.type}>{item.type}</span>
