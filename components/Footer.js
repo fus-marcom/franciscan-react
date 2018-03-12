@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { withStyles } from 'material-ui/styles'
 import Grid from 'material-ui/Grid'
 import Typography from 'material-ui/Typography'
@@ -30,7 +30,7 @@ const styles = theme => ({
   }
 })
 
-class Footer extends React.Component {
+class Footer extends Component {
   render () {
     const { classes } = this.props
     const currentYear = new Date().getFullYear()

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { withStyles } from 'material-ui/styles'
 import List, { ListItem, ListItemText } from 'material-ui/List'
 import Collapse from 'material-ui/transitions/Collapse'
@@ -18,7 +18,7 @@ const styles = theme => ({
   }
 })
 
-class DrawerItem extends React.Component {
+class DrawerItem extends Component {
   render () {
     const {
       classes,

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { withStyles } from 'material-ui/styles'
 import Card, { CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
@@ -22,7 +22,7 @@ const styles = theme => ({
   }
 })
 
-class ListCard extends React.Component {
+class ListCard extends Component {
   render () {
     const { classes, itemsArray, listTitle } = this.props
     return (

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
 import Link from 'next/link'
@@ -47,7 +47,11 @@ const styles = theme => ({
   }
 })
 
-class TemporaryDrawer extends React.Component {
+class TemporaryDrawer extends Component {
+  static defaultProps = {
+    open: PropTypes.bool.isRequired,
+    toggleDrawer: PropTypes.func.isRequired
+  }
   state = {
     openItems: true,
     search: ''
@@ -219,11 +223,6 @@ class TemporaryDrawer extends React.Component {
       </Drawer>
     )
   }
-}
-
-TemporaryDrawer.propTypes = {
-  open: PropTypes.bool.isRequired,
-  toggleDrawer: PropTypes.func.isRequired
 }
 
 export default withStyles(styles)(TemporaryDrawer)

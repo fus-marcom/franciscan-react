@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { withStyles } from 'material-ui/styles'
 import Typography from 'material-ui/Typography'
 
@@ -16,7 +16,7 @@ const styles = theme => ({
   }
 })
 
-class AppBarMenuItem extends React.Component {
+class AppBarMenuItem extends Component {
   render () {
     const { classes, toggleDrawer, linkId, content } = this.props
     return (
