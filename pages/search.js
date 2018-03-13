@@ -126,11 +126,20 @@ class Page extends Component {
   }
 
   handleChange = name => (event, checked) => {
-    let checkboxes = this.state.checkboxes
-    checkboxes[name] = checked
-    this.setState({ checkboxes })
-    this.createSearchTypes()
-    this.debouncedSearch()
+    this.setState(
+      prevState => {
+        return {
+          checkboxes: {
+            ...prevState.checkboxes,
+            [name]: checked
+          }
+        }
+      },
+      () => {
+        this.createSearchTypes()
+        this.debouncedSearch()
+      }
+    )
   }
 
   createSearchTypes = () => {
