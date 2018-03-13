@@ -69,6 +69,7 @@ class Page extends Component {
       .searchTerm + searchType}`
     getJSON(apiUrl + params).then(data => this.setState({ data }))
     console.log(this.state.data)
+    this.sortBy('dateOldest')
   }
 
   // Get a new function that is debounced when called
@@ -99,12 +100,24 @@ class Page extends Component {
   }
 
   sortBy = type => {
+    // this.setState({ sortBy: type })
     if (this.state.data.length === 100 || this.state.data.length === 0) {
-      this.setState({ sortBy: type })
       this.debouncedSearch()
     } else {
-      const sortedData = this.state.data.sort()
-
+      const sortedData = this.state.data
+      sortedData.sort((a, b) => {
+        switch (type) {
+          case 'alphaAsc':
+            return a.title.rendered - b.title.rendered
+          case 'dateOldest':
+            return Date.parse(a.date) - Date.parse(b.date)
+          case 'dateNewest':
+            return Date.parse(b.date) - Date.parse(a.date)
+          default:
+            return b.title.rendered - a.title.rendered
+        }
+      })
+      console.log(sortedData)
       this.setState({ data: sortedData })
     }
   }
@@ -219,6 +232,7 @@ class Page extends Component {
             ? this.state.data.map(item => (
               <div key={item.id} className={classes.searchResult}>
                 <span className={classes.type}>{item.type}</span>
+                <span>{item.date}</span>
                 <span
                   className={classes.title}
                   dangerouslySetInnerHTML={{ __html: item.title.rendered }}
