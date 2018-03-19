@@ -49,7 +49,7 @@ class Page extends Component {
   state = {
     data: [],
     searchTerm: '',
-    sortBy: '',
+    sortBy: 'alphaAsc',
     searchType: '',
     checkboxes: {
       department: false,
@@ -68,8 +68,9 @@ class Page extends Component {
     const params = `multiple-post-type?per_page=100&search=${this.state
       .searchTerm + searchType}`
     getJSON(apiUrl + params).then(data => this.setState({ data }))
-    console.log(this.state.data)
-    this.sortBy('dateOldest')
+    // console.log('Initial: ')
+    // console.log(this.state.data)
+    // this.sortBy('dateOldest')
   }
 
   // Get a new function that is debounced when called
@@ -99,28 +100,32 @@ class Page extends Component {
     this.debouncedSearch()
   }
 
-  sortBy = type => {
-    // this.setState({ sortBy: type })
-    if (this.state.data.length === 100 || this.state.data.length === 0) {
-      this.debouncedSearch()
-    } else {
-      const sortedData = this.state.data
-      sortedData.sort((a, b) => {
-        switch (type) {
-          case 'alphaAsc':
-            return a.title.rendered - b.title.rendered
-          case 'dateOldest':
-            return Date.parse(a.date) - Date.parse(b.date)
-          case 'dateNewest':
-            return Date.parse(b.date) - Date.parse(a.date)
-          default:
-            return b.title.rendered - a.title.rendered
-        }
-      })
-      console.log(sortedData)
-      this.setState({ data: sortedData })
-    }
-  }
+  // sortBy = type => {
+  //   // this.setState({ sortBy: type })
+  //   if (this.state.data.length === 100 || this.state.data.length === 0) {
+  //     this.debouncedSearch()
+  //   } else {
+  //     let sortedData = this.state.data
+  //     sortedData.sort((a, b) => {
+  //       switch (type) {
+  //         case 'alphaAsc':
+  //           console.log(type)
+  //           return a.title.rendered - b.title.rendered
+  //         case 'dateOldest':
+  //           console.log(type)
+  //           return Date.parse(a.date) - Date.parse(b.date)
+  //         case 'dateNewest':
+  //           console.log(type)
+  //           return Date.parse(b.date) - Date.parse(a.date)
+  //         default:
+  //           console.log(type)
+  //           return b.title.rendered - a.title.rendered
+  //       }
+  //     })
+  //     console.log(sortedData)
+  //     this.setState({ data: sortedData })
+  //   }
+  // }
 
   filterByCategory = post => {
     if (this.state.category === 0) {
@@ -229,16 +234,29 @@ class Page extends Component {
             </FormGroup>
           </FormControl>
           {this.state.data.length > 0
-            ? this.state.data.map(item => (
-              <div key={item.id} className={classes.searchResult}>
-                <span className={classes.type}>{item.type}</span>
-                <span>{item.date}</span>
-                <span
-                  className={classes.title}
-                  dangerouslySetInnerHTML={{ __html: item.title.rendered }}
-                />
-              </div>
-            ))
+            ? this.state.data
+              .sort((a, b) => {
+                switch (this.state.sortBy) {
+                  case 'alphaAsc':
+                    return a.title.rendered > b.title.rendered
+                  case 'dateOldest':
+                    return Date.parse(a.date) - Date.parse(b.date)
+                  case 'dateNewest':
+                    return Date.parse(b.date) - Date.parse(a.date)
+                  default:
+                    return b.title.rendered > a.title.rendered
+                }
+              })
+              .map(item => (
+                <div key={item.id} className={classes.searchResult}>
+                  <span className={classes.type}>{item.type}</span>
+                  <span>{item.date}</span>
+                  <span
+                    className={classes.title}
+                    dangerouslySetInnerHTML={{ __html: item.title.rendered }}
+                  />
+                </div>
+              ))
             : null}
         </div>
       </Layout>
