@@ -9,9 +9,12 @@ import {
   FormLabel,
   FormControl,
   FormGroup,
-  FormControlLabel
+  FormControlLabel,
+  FormHelperText
 } from 'material-ui/Form'
 import Checkbox from 'material-ui/Checkbox'
+import { MenuItem } from 'material-ui/Menu'
+import Select from 'material-ui/Select'
 
 const styles = theme => ({
   root: {
@@ -170,6 +173,10 @@ class Page extends Component {
     this.setState({ searchType: searchString })
   }
 
+  handleSort = event => {
+    this.setState({ [event.target.name]: event.target.value })
+  }
+
   render () {
     const { classes } = this.props
     const { searchTerm } = this.state
@@ -233,18 +240,37 @@ class Page extends Component {
               />
             </FormGroup>
           </FormControl>
+          <FormControl className={classes.formControl}>
+            <Select
+              value={this.state.sortBy}
+              onChange={this.handleSort}
+              name="sortBy"
+            >
+              <MenuItem value={'alphaAsc'}>a-z</MenuItem>
+              <MenuItem value={'alphaDesc'}>z-a</MenuItem>
+              <MenuItem value={'dateOldest'}>old-new</MenuItem>
+              <MenuItem value={'dateNewest'}>new-old</MenuItem>
+            </Select>
+            <FormHelperText>Sort By</FormHelperText>
+          </FormControl>
           {this.state.data.length > 0
             ? this.state.data
               .sort((a, b) => {
                 switch (this.state.sortBy) {
                   case 'alphaAsc':
-                    return a.title.rendered > b.title.rendered
+                    return a.title.rendered.toLowerCase() <
+                        b.title.rendered.toLowerCase()
+                      ? -1
+                      : 1
                   case 'dateOldest':
                     return Date.parse(a.date) - Date.parse(b.date)
                   case 'dateNewest':
                     return Date.parse(b.date) - Date.parse(a.date)
                   default:
-                    return b.title.rendered > a.title.rendered
+                    return b.title.rendered.toLowerCase() <
+                        a.title.rendered.toLowerCase()
+                      ? -1
+                      : 1
                 }
               })
               .map(item => (
