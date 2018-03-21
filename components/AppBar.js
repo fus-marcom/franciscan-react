@@ -156,7 +156,7 @@ class ButtonAppBar extends Component {
                 <MenuIcon />
               </IconButton>
               <Typography
-                type="title"
+                variant="title"
                 component="span"
                 className={classes.flex}
               >

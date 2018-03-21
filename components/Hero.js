@@ -50,7 +50,7 @@ class Hero extends Component {
     } = this.props
 
     const Title = (
-      <Typography type="display2" className={classes.white} gutterBottom>
+      <Typography variant="display2" className={classes.white} gutterBottom>
         {titleText}
       </Typography>
     )
@@ -58,7 +58,7 @@ class Hero extends Component {
     const Subtitle = (
       <Typography
         className={classes.white}
-        type="subheading"
+        variant="subheading"
         style={{ fontWeight: 500, fontSize: '22px' }}
         gutterBottom
       >

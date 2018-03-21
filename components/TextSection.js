@@ -75,13 +75,17 @@ class TextSection extends Component {
         }}
       >
         <div className={classes.innerContainer}>
-          <Typography type="display2" gutterBottom style={{ color: textColor }}>
+          <Typography
+            variant="display2"
+            gutterBottom
+            style={{ color: textColor }}
+          >
             {sectionTitle}
           </Typography>
 
           <Typography
             className={classes.sectionText}
-            type="body1"
+            variant="body1"
             gutterBottom
             style={{ color: textColor }}
           >

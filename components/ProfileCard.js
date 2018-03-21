@@ -52,10 +52,10 @@ class ProfileCard extends Component {
           style={{ backgroundPositionY: bgPosY }}
         />
         <CardContent>
-          <Typography type="caption" className={classes.category}>
+          <Typography variant="caption" className={classes.category}>
             {profileType}
           </Typography>
-          <Typography type="headline" component="h2">
+          <Typography variant="headline" component="h2">
             {profileName}
           </Typography>
           <Typography component="p" className={classes.quote}>

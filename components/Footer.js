@@ -62,7 +62,7 @@ class Footer extends Component {
           <Grid className={classes.subFooter} item xs={12}>
             <Typography
               className={classes.white}
-              type="subheading"
+              variant="subheading"
               component={'span'}
             >
               © {currentYear} Franciscan University of Steubenville

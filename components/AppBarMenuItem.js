@@ -23,7 +23,7 @@ class AppBarMenuItem extends Component {
       <li className={classes.listLi}>
         <Typography
           component={'a'}
-          type={'headline'}
+          variant={'headline'}
           id={linkId}
           title={content}
           className={classes.ulLink}

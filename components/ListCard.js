@@ -28,7 +28,7 @@ class ListCard extends Component {
     return (
       <Card className={classes.card}>
         <CardContent className={classes.listCardContent}>
-          <Typography type="headline" component="h2">
+          <Typography variant="headline" component="h2">
             {listTitle}
           </Typography>
           <List>

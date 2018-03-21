@@ -95,7 +95,7 @@ class TemporaryDrawer extends Component {
                   </InputLabel>
                   <Input
                     id="search"
-                    type="text"
+                    variant="text"
                     classes={{
                       inkbar: classes.inputInkbar
                     }}

@@ -32,7 +32,7 @@ class News extends Component {
           />
         </Head>
         <Typography
-          type="headline"
+          variant="headline"
           component="h2"
           dangerouslySetInnerHTML={{
             __html: data.news.edges[0].node.title
