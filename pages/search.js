@@ -211,6 +211,7 @@ class Page extends Component {
               <FormControlLabel
                 control={
                   <Checkbox
+                    color="primary"
                     checked={this.state.faculty}
                     onChange={this.handleChange('faculty')}
                     value="faculty"
@@ -221,6 +222,7 @@ class Page extends Component {
               <FormControlLabel
                 control={
                   <Checkbox
+                    color="primary"
                     checked={this.state.department}
                     onChange={this.handleChange('department')}
                     value="department"
@@ -231,6 +233,7 @@ class Page extends Component {
               <FormControlLabel
                 control={
                   <Checkbox
+                    color="primary"
                     checked={this.state.major}
                     onChange={this.handleChange('major')}
                     value="major"
