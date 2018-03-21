@@ -17,12 +17,12 @@ export const aboutMenu = [
   {
     text: 'Employment & HR',
     linkUrl: '/hr',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    asUrl: '/page?type=humanResources&id=employment-and-human-resources'
   },
   {
     text: 'Consumer Information',
     linkUrl: '/consumer-information',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    asUrl: '/page?type=aboutPages&id=consumer-information'
   },
   {
     text: 'The Inn at Franciscan Square',
@@ -32,27 +32,27 @@ export const aboutMenu = [
   {
     text: 'Our Vision & Charisms',
     linkUrl: '/about/vision-charisms',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    asUrl: '/page?type=aboutPages&id=vision-charisms'
   },
   {
     text: 'Our Mission Statement',
     linkUrl: '/about/mission-statement',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    asUrl: '/page?type=aboutPages&id=mission-statement'
   },
   {
     text: 'Franciscans TOR',
     linkUrl: '/chapel/franciscans-tor',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    asUrl: '/page?type=chapelPages&id=franciscans-tor'
   },
   {
     text: 'Our History',
     linkUrl: '/about/history',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    asUrl: '/page?type=aboutPages&id=history'
   },
   {
     text: 'Fact Book',
     linkUrl: '/fact-book',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    asUrl: '/page?type=aboutPages&id=fact-book'
   }
 ]
 

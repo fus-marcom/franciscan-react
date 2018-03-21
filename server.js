@@ -75,7 +75,26 @@ const translationObj = {
   academics: {
     page: '/page'
   },
-  hr: { page: '/page', type: 'humanResources' },
+  hr: {
+    page: '/page',
+    type: 'humanResources',
+    id: { default: 'employment-and-human-resources' }
+  },
+  'consumer-information': {
+    page: '/page',
+    type: 'aboutPages',
+    id: { default: 'consumer-information' }
+  },
+  ferpa: {
+    page: '/page',
+    type: 'aboutPages',
+    id: { default: 'ferpa' }
+  },
+  'fact-book': {
+    page: '/page',
+    type: 'aboutPages',
+    id: { default: 'fact-book' }
+  },
   'campus-security': { page: '/page', type: 'campusSecurity' },
   studentprofiles: { page: '/faculty', type: 'studentProfilePages' },
   admissions: {
