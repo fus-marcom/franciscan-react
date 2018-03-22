@@ -15,6 +15,8 @@ import {
 import Checkbox from 'material-ui/Checkbox'
 import { MenuItem } from 'material-ui/Menu'
 import Select from 'material-ui/Select'
+import TextField from 'material-ui/TextField'
+import Grid from 'material-ui/Grid'
 
 const styles = theme => ({
   root: {
@@ -32,6 +34,16 @@ const styles = theme => ({
     [theme.breakpoints.down('sm')]: {
       maxWidth: '95%'
     }
+  },
+  container: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(12, 1fr)',
+    gridGap: `${theme.spacing.unit * 3}px`
+  },
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 200
   },
   searchResult: {
     margin: '16px 0'
@@ -130,6 +142,7 @@ class Page extends Component {
   //   }
   // }
 
+  // TODO: Only search if the search input value is not empty
   filterByCategory = post => {
     if (this.state.category === 0) {
       return true
@@ -190,103 +203,113 @@ class Page extends Component {
           />
         </Head>
         <div className={classes.contentContainer}>
-          <form onSubmit={this.formGetResults}>
-            <input
-              id="search"
-              name="search"
-              onChange={this.getSearchResults}
-              type="search"
-              style={{ width: '100%', paddingLeft: '4px' }}
-              value={searchTerm}
-            />
-            <label htmlFor="search">Search</label>
-            <svg fill="#fff" height="24" viewBox="0 0 24 24" width="24">
-              <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
-              <path d="M0 0h24v24H0z" fill="none" />
-            </svg>
-          </form>
-          <FormControl component="fieldset">
-            <FormLabel component="legend">Filter Results</FormLabel>
-            <FormGroup>
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    color="primary"
-                    checked={this.state.faculty}
-                    onChange={this.handleChange('faculty')}
-                    value="faculty"
+          <Grid container spacing={24}>
+            <Grid item xs={9}>
+              <FormControl className={classes.formControl}>
+                <TextField
+                  id="search"
+                  label="Search field"
+                  type="search"
+                  className={classes.textField}
+                  margin="normal"
+                  value={searchTerm}
+                  onChange={this.getSearchResults}
+                />
+              </FormControl>
+            </Grid>
+            {/* TODO: Align these more precisely */}
+            <Grid item xs={3} style={{ alignSelf: 'center' }}>
+              <FormControl className={classes.formControl}>
+                <FormHelperText>Sort By</FormHelperText>
+                <Select
+                  value={this.state.sortBy}
+                  onChange={this.handleSort}
+                  name="sortBy"
+                >
+                  <MenuItem value={'alphaAsc'}>a-z</MenuItem>
+                  <MenuItem value={'alphaDesc'}>z-a</MenuItem>
+                  <MenuItem value={'dateOldest'}>old-new</MenuItem>
+                  <MenuItem value={'dateNewest'}>new-old</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+
+            <Grid item xs={9}>
+              {this.state.data.length > 0
+                ? this.state.data
+                  .sort((a, b) => {
+                    switch (this.state.sortBy) {
+                      case 'alphaAsc':
+                        return a.title.rendered.toLowerCase() <
+                            b.title.rendered.toLowerCase()
+                          ? -1
+                          : 1
+                      case 'dateOldest':
+                        return Date.parse(a.date) - Date.parse(b.date)
+                      case 'dateNewest':
+                        return Date.parse(b.date) - Date.parse(a.date)
+                      default:
+                        return b.title.rendered.toLowerCase() <
+                            a.title.rendered.toLowerCase()
+                          ? -1
+                          : 1
+                    }
+                  })
+                  .map(item => (
+                    <div key={item.id} className={classes.searchResult}>
+                      <span className={classes.type}>{item.type}</span>
+                      <span>{item.date}</span>
+                      <span
+                        className={classes.title}
+                        dangerouslySetInnerHTML={{
+                          __html: item.title.rendered
+                        }}
+                      />
+                    </div>
+                  ))
+                : null}
+            </Grid>
+            <Grid item xs={3}>
+              <FormControl component="fieldset">
+                <FormLabel component="legend">Filter Results</FormLabel>
+                <FormGroup>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        color="primary"
+                        checked={this.state.faculty}
+                        onChange={this.handleChange('faculty')}
+                        value="faculty"
+                      />
+                    }
+                    label="Faculty"
                   />
-                }
-                label="Faculty"
-              />
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    color="primary"
-                    checked={this.state.department}
-                    onChange={this.handleChange('department')}
-                    value="department"
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        color="primary"
+                        checked={this.state.department}
+                        onChange={this.handleChange('department')}
+                        value="department"
+                      />
+                    }
+                    label="Department"
                   />
-                }
-                label="Department"
-              />
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    color="primary"
-                    checked={this.state.major}
-                    onChange={this.handleChange('major')}
-                    value="major"
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        color="primary"
+                        checked={this.state.major}
+                        onChange={this.handleChange('major')}
+                        value="major"
+                      />
+                    }
+                    label="Major"
                   />
-                }
-                label="Major"
-              />
-            </FormGroup>
-          </FormControl>
-          <FormControl className={classes.formControl}>
-            <Select
-              value={this.state.sortBy}
-              onChange={this.handleSort}
-              name="sortBy"
-            >
-              <MenuItem value={'alphaAsc'}>a-z</MenuItem>
-              <MenuItem value={'alphaDesc'}>z-a</MenuItem>
-              <MenuItem value={'dateOldest'}>old-new</MenuItem>
-              <MenuItem value={'dateNewest'}>new-old</MenuItem>
-            </Select>
-            <FormHelperText>Sort By</FormHelperText>
-          </FormControl>
-          {this.state.data.length > 0
-            ? this.state.data
-              .sort((a, b) => {
-                switch (this.state.sortBy) {
-                  case 'alphaAsc':
-                    return a.title.rendered.toLowerCase() <
-                        b.title.rendered.toLowerCase()
-                      ? -1
-                      : 1
-                  case 'dateOldest':
-                    return Date.parse(a.date) - Date.parse(b.date)
-                  case 'dateNewest':
-                    return Date.parse(b.date) - Date.parse(a.date)
-                  default:
-                    return b.title.rendered.toLowerCase() <
-                        a.title.rendered.toLowerCase()
-                      ? -1
-                      : 1
-                }
-              })
-              .map(item => (
-                <div key={item.id} className={classes.searchResult}>
-                  <span className={classes.type}>{item.type}</span>
-                  <span>{item.date}</span>
-                  <span
-                    className={classes.title}
-                    dangerouslySetInnerHTML={{ __html: item.title.rendered }}
-                  />
-                </div>
-              ))
-            : null}
+                </FormGroup>
+              </FormControl>
+            </Grid>
+          </Grid>
         </div>
       </Layout>
     )
