@@ -51,12 +51,15 @@ const styles = theme => ({
   title: {
     fontSize: '24px',
     fontWeight: 400,
-    display: 'block'
+    display: 'block',
+    textDecoration: 'none',
+    color: 'rgba(0, 0, 0, .87)'
   },
   type: {
     fontSize: '18px',
-    fontWeight: 300,
-    textTransform: 'uppercase'
+    fontWeight: 400,
+    textTransform: 'uppercase',
+    color: theme.palette.secondary.main
   }
 })
 
@@ -258,8 +261,8 @@ class Page extends Component {
                   .map(item => (
                     <div key={item.id} className={classes.searchResult}>
                       <span className={classes.type}>{item.type}</span>
-                      <span>{item.date}</span>
-                      <span
+                      <a
+                        href={`/${item.type}/${item.slug}`}
                         className={classes.title}
                         dangerouslySetInnerHTML={{
                           __html: item.title.rendered
