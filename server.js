@@ -21,6 +21,11 @@ const translationObj = {
     id: { default: 'departments' }
   },
   economics: { page: '/major', type: 'majors', id: { default: 'economics' } },
+  anthropology: {
+    page: '/major',
+    type: 'majors',
+    id: { default: 'anthropology', classes: 'anthropology-classes' }
+  },
   accounting: { page: '/major', type: 'majors', id: { default: 'accounting' } },
   theology: {
     page: '/major',
@@ -192,12 +197,21 @@ app.prepare().then(() => {
           }
           // find id
           if (translationObj[firstParam].id) {
+            // Check to see if the item has an id array
             if (typeof translationObj[firstParam].id === 'object') {
-              if (translationObj[firstParam].id.standard) {
+              // If secondParam exists as key in id array
+              if (translationObj[firstParam].id[secondParam]) {
+                // Use value of secondParam key as id
+                id = translationObj[firstParam].id[secondParam]
+              } else if (translationObj[firstParam].id.standard) {
+                // Check that standard exists as a key in id array
+                // Use standard value as id
                 id = translationObj[firstParam].id.standard
               } else {
+                // If no standard, then use second param as id
                 id = secondParam
               }
+              // If no id array exists, use the id string as the id
             } else {
               id = translationObj[firstParam].id
             }
