@@ -7,4 +7,5 @@ cache:
 script:
   - npm test
   - npm run build
+  - npm deploy
 after_success: coveralls < ./coverage/lcov.info
