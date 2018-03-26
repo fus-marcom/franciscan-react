@@ -11,7 +11,7 @@ const handle = app.getRequestHandler()
 const translationObj = {
   faculty: { page: '/faculty', type: 'faculty' },
   contact: { page: '/directory' },
-  news: { page: '/news' },
+  news: { page: '/news', type: 'news' },
   search: { page: '/search' },
   major: { page: '/major' },
   minor: { page: '/minor' },

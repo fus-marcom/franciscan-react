@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { graphql, compose } from 'react-apollo'
-import { NewsQuery } from '../lib/queries/news'
+import { Query, compose } from 'react-apollo'
+import { PageQuery } from '../lib/queries/page'
 import withData from '../lib/withData'
 import Layout from '../components/Layout'
 import Head from 'next/head'
@@ -8,20 +8,10 @@ import withRoot from '../components/withRoot'
 import Typography from 'material-ui/Typography'
 
 class News extends Component {
-  static async getInitialProps ({ query: { id } }) {
-    return { id }
+  static async getInitialProps ({ query: { id, type } }) {
+    return { id, type }
   }
   render () {
-    const { data } = this.props
-    const loading = data.loading
-    // @todo create HOC
-    if (loading) {
-      return (
-        <Layout>
-          <h1>Loading</h1>
-        </Layout>
-      )
-    }
     return (
       <Layout>
         <Head>
@@ -31,29 +21,45 @@ class News extends Component {
             type="text/css"
           />
         </Head>
-        <Typography
-          variant="headline"
-          component="h2"
-          dangerouslySetInnerHTML={{
-            __html: data.news.edges[0].node.title
-          }}
-        />
+        <Query
+          query={PageQuery(this.props.type)}
+          variables={{ name: this.props.id }}
+        >
+          {result => {
+            if (result.loading) {
+              return <h1>Loading</h1>
+            }
+            if (result.error) return <h3>{result.error}</h3>
 
-        <div
-          data-testid="content"
-          dangerouslySetInnerHTML={{
-            __html: data.news.edges[0].node.content
+            const { data } = result
+            const { title } = data[this.props.type].edges[0].node.title
+            const { content } = data[this.props.type].edges[0].node.content
+              .replace(/<Title>/g, '<h2 class="title">')
+              .replace(/<\/Title>/g, '</h2>')
+              .replace(/src="\//g, 'src="https://www.franciscan.edu/')
+
+            return (
+              <div>
+                <Typography
+                  variant="headline"
+                  component="h2"
+                  dangerouslySetInnerHTML={{
+                    __html: title
+                  }}
+                />
+                <div
+                  data-testid="content"
+                  dangerouslySetInnerHTML={{
+                    __html: content
+                  }}
+                />
+              </div>
+            )
           }}
-        />
+        </Query>
       </Layout>
     )
   }
 }
 
-export default compose(
-  withRoot,
-  withData,
-  graphql(NewsQuery, {
-    options: ({ id }) => ({ variables: { name: id } })
-  })
-)(News)
+export default compose(withRoot, withData)(News)

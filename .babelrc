@@ -17,18 +17,5 @@
         "next/babel"
       ]
     }
-  },
-  "plugins": [
-    [
-      "module-resolver",
-      {
-        "root": [
-          "./src"
-        ],
-        "alias": {
-          "^react-apollo$": "react-apollo/index"
-        }
-      }
-    ]
-  ]
+  }
 }

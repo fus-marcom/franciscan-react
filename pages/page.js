@@ -36,7 +36,6 @@ class Page extends Component {
               .replace(/<Title>/g, '<h2 class="title">')
               .replace(/<\/Title>/g, '</h2>')
               .replace(/src="\//g, 'src="https://www.franciscan.edu/')
-            global.x = content
 
             return (
               <div
