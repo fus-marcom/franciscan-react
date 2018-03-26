@@ -5,5 +5,5 @@ cache:
   directories:
   - node_modules
 script:
-  - npm deploy
+  - npm run deploy
 after_success: coveralls < ./coverage/lcov.info
