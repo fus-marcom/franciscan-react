@@ -1,6 +1,7 @@
 # franciscan-react
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Travis CI](https://travis-ci.org/fus-marcom/franciscan-react.svg?branch=master)](https://travis-ci.org)
 
 New version of
 [Franciscan University of Steubenville](https://www.franciscan.edu/) site built
