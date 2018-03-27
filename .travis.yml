@@ -1,10 +1,14 @@
 language: node_js
 node_js:
   - "stable"
+addons:
+  - chrome: stable
 cache:
   directories:
   - node_modules
 before_script:
+  - # start your web application and listen on `localhost`
+  - google-chrome-stable --headless --disable-gpu 
   - npm run ci
 script:
   - npm run test
