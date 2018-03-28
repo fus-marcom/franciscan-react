@@ -20,6 +20,16 @@ const translationObj = {
     type: 'departments',
     id: { default: 'departments' }
   },
+  'study-abroad': {
+    page: '/page',
+    type: 'austriaPages',
+    id: { default: 'study-abroad' }
+  },
+  austria: {
+    page: '/page',
+    type: 'austriaPages',
+    id: { default: 'austria', excursions: 'excursions' }
+  },
   economics: { page: '/major', type: 'majors', id: { default: 'economics' } },
   anthropology: {
     page: '/major',
@@ -27,6 +37,25 @@ const translationObj = {
     id: { default: 'anthropology', classes: 'anthropology-classes' }
   },
   accounting: { page: '/major', type: 'majors', id: { default: 'accounting' } },
+  biology: {
+    page: '/major',
+    type: 'majors',
+    id: {
+      default: 'biology',
+      classes: 'biology-classes',
+      mission: 'biology-mission'
+    }
+  },
+  english: {
+    page: '/major',
+    type: 'majors',
+    id: {
+      default: 'english',
+      classes: 'english-classes',
+      'senior-thesis': 'senior-thesis',
+      'senior-portfolio': 'senior-portfolio'
+    }
+  },
   theology: {
     page: '/major',
     type: { default: 'majors', standard: 'theologyPages' },
