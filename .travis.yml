@@ -1,9 +1,15 @@
 language: node_js
 node_js:
   - "stable"
+addons:
+  - chrome: stable
 cache:
   directories:
   - node_modules
+before_script:
+  # - start your web application and listen on `localhost`
+  # -  google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  - npm run ci
 script:
-  - npm run deploy
+  - npm run unit
 after_success: coveralls < ./coverage/lcov.info
