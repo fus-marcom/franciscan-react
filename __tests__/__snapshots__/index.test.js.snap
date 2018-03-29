@@ -81,7 +81,6 @@ exports[`<Index /> should render 1`] = `
           <a
             class="MuiButtonBase-root-98 MuiButton-root-232 MuiButton-flatSecondary-235 Hero-invertedBtn-140"
             href="https://franciscanuniversity.force.com/portal"
-            keyboardfocusedclassname="MuiButton-keyboardFocused-238"
             role="button"
             style="width:192px"
             tabindex="0"
@@ -104,7 +103,6 @@ exports[`<Index /> should render 1`] = `
           <a
             class="MuiButtonBase-root-98 MuiButton-root-232 MuiButton-flatSecondary-235 Hero-invertedBtn-140"
             href="https://franciscan.secure.force.com/form?formid=217772"
-            keyboardfocusedclassname="MuiButton-keyboardFocused-238"
             role="button"
             tabindex="0"
             title="Inquire"
@@ -126,7 +124,6 @@ exports[`<Index /> should render 1`] = `
           <a
             class="MuiButtonBase-root-98 MuiButton-root-232 MuiButton-flatSecondary-235 Hero-invertedBtn-140"
             href="https://franciscan.secure.force.com/events"
-            keyboardfocusedclassname="MuiButton-keyboardFocused-238"
             role="button"
             tabindex="0"
             title="Visit"
@@ -166,7 +163,6 @@ exports[`<Index /> should render 1`] = `
           <a
             class="MuiButtonBase-root-98 MuiButton-root-232 MuiButton-flatSecondary-235 TextSection-invertedBtn-251"
             href="/about/our-mission"
-            keyboardfocusedclassname="MuiButton-keyboardFocused-238"
             role="button"
             style="width:192px"
             tabindex="0"
