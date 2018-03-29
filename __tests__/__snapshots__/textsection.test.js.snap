@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextSection should render 1`] = `
+<TextSection
+  classes={
+    Object {
+      "heroBtn": "TextSection-heroBtn-4",
+      "innerContainer": "TextSection-innerContainer-2",
+      "invertedBtn": "TextSection-invertedBtn-5",
+      "section": "TextSection-section-1",
+      "sectionText": "TextSection-sectionText-3",
+      "white": "TextSection-white-6",
+    }
+  }
+/>
+`;
+
+exports[`TextSection should render text when passed in 1`] = `
+<TextSection
+  classes={
+    Object {
+      "heroBtn": "TextSection-heroBtn-4",
+      "innerContainer": "TextSection-innerContainer-2",
+      "invertedBtn": "TextSection-invertedBtn-5",
+      "section": "TextSection-section-1",
+      "sectionText": "TextSection-sectionText-3",
+      "white": "TextSection-white-6",
+    }
+  }
+  text="Test text"
+/>
+`;
