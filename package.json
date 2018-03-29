@@ -1,6 +1,7 @@
 {
   "name": "franciscan-university-react",
-  "description": "The main website for Franciscan University of Steubenville. Built with React, NextJS, and MaterialUI.",
+  "description":
+    "The main website for Franciscan University of Steubenville. Built with React, NextJS, and MaterialUI.",
   "version": "1.0.0",
   "author": "Jesse Weigel <jesseweigel@gmail.com>",
   "dependencies": {
@@ -8,7 +9,6 @@
     "apollo-client": "^2.2.8",
     "apollo-link-http": "^1.5.3",
     "classnames": "^2.2.5",
-    "enzyme-to-json": "^3.3.3",
     "express": "^4.16.3",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.8.0",
@@ -23,9 +23,7 @@
     "react-dom": "^16.2.0",
     "react-masonry-component": "^6.0.2"
   },
-  "keywords": [
-    "next"
-  ],
+  "keywords": ["next"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -34,10 +32,11 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "deploy": "now -e NODE_ENV=production",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "format":
+      "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "cm": "git-cz",
     "precommit": "lint-staged && npm run test",
-    "unit": "jest test.js",
+    "unit": "jest .test.js --config=jest.config.json",
     "e2e": "mocha --timeout 30000 ./e2e/runner.js ./e2e/tests/*.spec.js",
     "test": "npm run unit && npm run e2e"
   },
@@ -48,6 +47,7 @@
     "cz-conventional-changelog": "^2.1.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.3",
     "eslint": "^4.14.0",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-plugin-import": "^2.8.0",
@@ -69,11 +69,6 @@
       "prettier --write --single-quote --no-semi",
       "eslint --fix",
       "git add"
-    ]
-  },
-  "jest": {
-    "setupFiles": [
-      "<rootDir>/shim.js"
     ]
   },
   "config": {
