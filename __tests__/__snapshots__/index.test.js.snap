@@ -1,290 +1,586 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Index /> should render 1`] = `
-<MuiThemeProvider
-  sheetsManager={Map {}}
-  theme={
-    Object {
-      "breakpoints": Object {
-        "between": [Function],
-        "down": [Function],
-        "keys": Array [
-          "xs",
-          "sm",
-          "md",
-          "lg",
-          "xl",
-        ],
-        "only": [Function],
-        "up": [Function],
-        "values": Object {
-          "lg": 1280,
-          "md": 960,
-          "sm": 600,
-          "xl": 1920,
-          "xs": 0,
-        },
-        "width": [Function],
-      },
-      "direction": "ltr",
-      "mixins": Object {
-        "gutters": [Function],
-        "toolbar": Object {
-          "@media (min-width:0px) and (orientation: landscape)": Object {
-            "minHeight": 48,
-          },
-          "@media (min-width:600px)": Object {
-            "minHeight": 64,
-          },
-          "minHeight": 56,
-        },
-      },
-      "overrides": Object {},
-      "palette": Object {
-        "action": Object {
-          "active": "rgba(0, 0, 0, 0.54)",
-          "disabled": "rgba(0, 0, 0, 0.26)",
-          "disabledBackground": "rgba(0, 0, 0, 0.12)",
-          "hover": "rgba(0, 0, 0, 0.08)",
-          "selected": "rgba(0, 0, 0, 0.14)",
-        },
-        "background": Object {
-          "default": "#fafafa",
-          "paper": "#fff",
-        },
-        "common": Object {
-          "black": "#000",
-          "white": "#fff",
-        },
-        "contrastThreshold": 3,
-        "divider": "rgba(0, 0, 0, 0.12)",
-        "error": Object {
-          "contrastText": "#fff",
-          "dark": "#d32f2f",
-          "light": "#e57373",
-          "main": "#f44336",
-        },
-        "getContrastText": [Function],
-        "grey": Object {
-          "100": "#f5f5f5",
-          "200": "#eeeeee",
-          "300": "#e0e0e0",
-          "400": "#bdbdbd",
-          "50": "#fafafa",
-          "500": "#9e9e9e",
-          "600": "#757575",
-          "700": "#616161",
-          "800": "#424242",
-          "900": "#212121",
-          "A100": "#d5d5d5",
-          "A200": "#aaaaaa",
-          "A400": "#303030",
-          "A700": "#616161",
-        },
-        "primary": Object {
-          "100": "#bcc6bf",
-          "200": "#90a095",
-          "300": "#647a6a",
-          "400": "#425e4a",
-          "50": "#e4e8e5",
-          "500": "#21412a",
-          "600": "#1d3b25",
-          "700": "#18321f",
-          "800": "#142a19",
-          "900": "#0b1c0f",
-          "A100": "#5dff78",
-          "A200": "#2aff4e",
-          "A400": "#00f629",
-          "A700": "#00dd25",
-          "contrastDefaultColor": "dark",
-          "contrastText": "#fff",
-          "dark": "#18321f",
-          "light": "#647a6a",
-          "main": "#21412a",
-        },
-        "secondary": Object {
-          "100": "#ebebeb",
-          "200": "#dedede",
-          "300": "#d1d1d1",
-          "400": "#c7c7c7",
-          "50": "#f7f7f7",
-          "500": "#bdbdbd",
-          "600": "#b7b7b7",
-          "700": "#aeaeae",
-          "800": "#a6a6a6",
-          "900": "#989898",
-          "A100": "#ffffff",
-          "A200": "#ffd4d4",
-          "A400": "#998643",
-          "A700": "#ffbbbb",
-          "contrastDefaultColor": "dark",
-          "contrastText": "#fff",
-          "dark": "#ffbbbb",
-          "light": "#ffd4d4",
-          "main": "#998643",
-        },
-        "text": Object {
-          "disabled": "rgba(0, 0, 0, 0.38)",
-          "hint": "rgba(0, 0, 0, 0.38)",
-          "primary": "rgba(0, 0, 0, 0.87)",
-          "secondary": "rgba(0, 0, 0, 0.54)",
-        },
-        "tonalOffset": 0.2,
-        "type": "light",
-      },
-      "props": Object {},
-      "shadows": Array [
-        "none",
-        "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-        "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-        "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-        "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-        "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-        "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-        "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-        "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-        "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-        "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-        "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-        "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-        "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-        "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-        "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-        "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-        "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-        "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-        "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-        "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-        "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-        "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-        "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-        "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
-      ],
-      "spacing": Object {
-        "unit": 8,
-      },
-      "transitions": Object {
-        "create": [Function],
-        "duration": Object {
-          "complex": 375,
-          "enteringScreen": 225,
-          "leavingScreen": 195,
-          "short": 250,
-          "shorter": 200,
-          "shortest": 150,
-          "standard": 300,
-        },
-        "easing": Object {
-          "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
-          "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
-          "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
-          "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
-        },
-        "getAutoHeightDuration": [Function],
-      },
-      "typography": Object {
-        "body1": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "0.875rem",
-          "fontWeight": 400,
-          "lineHeight": "1.46429em",
-        },
-        "body2": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "0.875rem",
-          "fontWeight": 500,
-          "lineHeight": "1.71429em",
-        },
-        "button": Object {
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "0.875rem",
-          "fontWeight": 500,
-          "textTransform": "uppercase",
-        },
-        "caption": Object {
-          "color": "rgba(0, 0, 0, 0.54)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "0.75rem",
-          "fontWeight": 400,
-          "lineHeight": "1.375em",
-        },
-        "display1": Object {
-          "color": "rgba(0, 0, 0, 0.54)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "2.125rem",
-          "fontWeight": 400,
-          "lineHeight": "1.20588em",
-        },
-        "display2": Object {
-          "color": "rgba(0, 0, 0, 0.54)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "2.8125rem",
-          "fontWeight": 400,
-          "lineHeight": "1.06667em",
-          "marginLeft": "-.02em",
-        },
-        "display3": Object {
-          "color": "rgba(0, 0, 0, 0.54)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "3.5rem",
-          "fontWeight": 400,
-          "letterSpacing": "-.02em",
-          "lineHeight": "1.30357em",
-          "marginLeft": "-.02em",
-        },
-        "display4": Object {
-          "color": "rgba(0, 0, 0, 0.54)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "7rem",
-          "fontWeight": 300,
-          "letterSpacing": "-.04em",
-          "lineHeight": "1.14286em",
-          "marginLeft": "-.04em",
-        },
-        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-        "fontSize": 14,
-        "fontWeightLight": 300,
-        "fontWeightMedium": 500,
-        "fontWeightRegular": 400,
-        "headline": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "1.5rem",
-          "fontWeight": 400,
-          "lineHeight": "1.35417em",
-        },
-        "pxToRem": [Function],
-        "round": [Function],
-        "subheading": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "1rem",
-          "fontWeight": 400,
-          "lineHeight": "1.5em",
-        },
-        "title": Object {
-          "color": "rgba(0, 0, 0, 0.87)",
-          "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-          "fontSize": "1.3125rem",
-          "fontWeight": 500,
-          "lineHeight": "1.16667em",
-        },
-      },
-      "zIndex": Object {
-        "appBar": 1100,
-        "drawer": 1200,
-        "mobileStepper": 1000,
-        "modal": 1300,
-        "snackbar": 1400,
-        "tooltip": 1500,
-      },
-    }
-  }
+<div
+  class="Layout-layout-12"
 >
-  <WithStyles(AppWrapper)>
-    <WithStyles(IndexPage) />
-  </WithStyles(AppWrapper)>
-</MuiThemeProvider>
+  <div
+    class="ButtonAppBar-root-34"
+  >
+    <header
+      class="MuiPaper-root-63 MuiPaper-elevation4-69 MuiAppBar-root-55 MuiAppBar-positionStatic-59 MuiAppBar-colorPrimary-61 ButtonAppBar-appBar-36"
+    >
+      <div
+        class="MuiToolbar-root-90 MuiToolbar-gutters-91"
+      >
+        <div
+          class="ButtonAppBar-col1-47"
+        >
+          <button
+            aria-label="Menu"
+            class="MuiButtonBase-root-98 MuiIconButton-root-92 ButtonAppBar-menuButton-37"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label-97"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-101"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root-107"
+            />
+          </button>
+          <span
+            class="MuiTypography-root-114 MuiTypography-title-120 ButtonAppBar-flex-35"
+          >
+            <a
+              href="/"
+            />
+          </span>
+        </div>
+      </div>
+    </header>
+  </div>
+  <main
+    class="Layout-main-13"
+  >
+    <div
+      class="Hero-parallax-138"
+      style="background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../static/img/biology-students.jpg)"
+    >
+      <h1
+        class="MuiTypography-root-114 MuiTypography-display2-117 MuiTypography-gutterBottom-131 Hero-white-141"
+      >
+        Franciscan University of Steubenville
+      </h1>
+      <h3
+        class="MuiTypography-root-114 MuiTypography-subheading-121 MuiTypography-gutterBottom-131 Hero-white-141"
+        style="font-weight:500;font-size:22px"
+      >
+        <span>
+          Academically Excellent • Passionately Catholic
+        </span>
+      </h3>
+      <div
+        class="MuiGrid-typeContainer-142 MuiGrid-spacing-xs-16-164"
+        style="width:100%"
+      >
+        <div
+          class="MuiGrid-typeItem-143 MuiGrid-grid-xs-12-179 Hero-heroBtn-139"
+        >
+          <a
+            class="MuiButtonBase-root-98 MuiButton-root-232 MuiButton-flatSecondary-235 Hero-invertedBtn-140"
+            href="https://franciscanuniversity.force.com/portal"
+            role="button"
+            style="width:192px"
+            tabindex="0"
+            title="Apply"
+          >
+            <span
+              class="MuiButton-label-233"
+            >
+              Apply
+            </span>
+            <span
+              class="MuiTouchRipple-root-107"
+            />
+          </a>
+        </div>
+        <div
+          class="MuiGrid-typeItem-143 MuiGrid-grid-xs-6-173 Hero-heroBtn-139"
+          style="justify-content:flex-end"
+        >
+          <a
+            class="MuiButtonBase-root-98 MuiButton-root-232 MuiButton-flatSecondary-235 Hero-invertedBtn-140"
+            href="https://franciscan.secure.force.com/form?formid=217772"
+            role="button"
+            tabindex="0"
+            title="Inquire"
+          >
+            <span
+              class="MuiButton-label-233"
+            >
+              Inquire
+            </span>
+            <span
+              class="MuiTouchRipple-root-107"
+            />
+          </a>
+        </div>
+        <div
+          class="MuiGrid-typeItem-143 MuiGrid-grid-xs-6-173 Hero-heroBtn-139"
+          style="justify-content:flex-start"
+        >
+          <a
+            class="MuiButtonBase-root-98 MuiButton-root-232 MuiButton-flatSecondary-235 Hero-invertedBtn-140"
+            href="https://franciscan.secure.force.com/events"
+            role="button"
+            tabindex="0"
+            title="Visit"
+          >
+            <span
+              class="MuiButton-label-233"
+            >
+              Visit
+            </span>
+            <span
+              class="MuiTouchRipple-root-107"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="TextSection-section-247"
+      style="border-top:2px solid undefined;border-bottom:2px solid undefined"
+    >
+      <div
+        class="TextSection-innerContainer-248"
+      >
+        <h1
+          class="MuiTypography-root-114 MuiTypography-display2-117 MuiTypography-gutterBottom-131"
+        >
+          Our Vision
+        </h1>
+        <p
+          class="MuiTypography-root-114 MuiTypography-body1-123 MuiTypography-gutterBottom-131 TextSection-sectionText-249"
+        >
+           To educate, evangelize, and send forth joyful disciples to restore all things in Christ.
+        </p>
+        <div
+          class="MuiGrid-typeItem-143 MuiGrid-grid-xs-12-179 TextSection-heroBtn-250"
+        >
+          <a
+            class="MuiButtonBase-root-98 MuiButton-root-232 MuiButton-flatSecondary-235 TextSection-invertedBtn-251"
+            href="/about/our-mission"
+            role="button"
+            style="width:192px"
+            tabindex="0"
+            title="Learn More"
+          >
+            <span
+              class="MuiButton-label-233"
+            >
+              Learn More
+            </span>
+            <span
+              class="MuiTouchRipple-root-107"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="TextSection-section-247"
+      style="background-color:#21412a;border-top:2px solid #998643;border-bottom:2px solid #998643"
+    >
+      <div
+        class="TextSection-innerContainer-248"
+      >
+        <h1
+          class="MuiTypography-root-114 MuiTypography-display2-117 MuiTypography-gutterBottom-131"
+          style="color:#fff"
+        >
+          15 to 1 Student to Faculty Ratio
+        </h1>
+        <p
+          class="MuiTypography-root-114 MuiTypography-body1-123 MuiTypography-gutterBottom-131 TextSection-sectionText-249"
+          style="color:#fff"
+        />
+      </div>
+    </div>
+    <div
+      class="IndexPage-contentContainer-5"
+    >
+      <div
+        class=""
+      >
+        <div
+          class="MuiGrid-typeItem-143 MuiGrid-grid-xs-12-179 MuiGrid-grid-sm-6-186 MuiGrid-grid-md-6-199 MuiGrid-grid-lg-6-212 IndexPage-gridItemFix-4"
+        >
+          <div
+            class="MuiPaper-root-63 MuiPaper-elevation2-67 MuiPaper-rounded-64 IndexPage-card-2 IndexPage-videoIframeContainer-11"
+          >
+            <iframe
+              allow="encrypted-media"
+              allowfullscreen=""
+              class="IndexPage-videoIframe-10"
+              frameborder="0"
+              src="https://www.youtube.com/embed/HpzwoD2oVSQ?modestbranding=1&rel=0&color=white"
+            />
+          </div>
+        </div>
+        <div
+          class="MuiGrid-typeItem-143 MuiGrid-grid-xs-12-179 MuiGrid-grid-sm-6-186 MuiGrid-grid-md-6-199 MuiGrid-grid-lg-6-212 IndexPage-gridItemFix-4"
+        >
+          <div
+            class="MuiPaper-root-63 MuiPaper-elevation2-67 MuiPaper-rounded-64 ProfileCard-card-253"
+          >
+            <div
+              class="MuiCardMedia-root-257 ProfileCard-media-254"
+              style="background-image:url(https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Students/Noah_Fisher_landing_v2.jpg)"
+              title="Noah Fisher"
+            />
+            <div
+              class="MuiCardContent-root-259"
+            >
+              <span
+                class="MuiTypography-root-114 MuiTypography-caption-124 ProfileCard-category-255"
+              >
+                Student Profile
+              </span>
+              <h2
+                class="MuiTypography-root-114 MuiTypography-headline-119"
+              >
+                Noah Fisher
+              </h2>
+              <p
+                class="MuiTypography-root-114 MuiTypography-body1-123 ProfileCard-quote-256"
+              >
+                I first learned about Franciscan from some people at my parish
+ who studied here. They recommended I check it out, but I wasn’t
+ so sure. When I visited, though, I was blown away by the people
+ I met; they were so genuine and helpful. They were the biggest
+ reason I decided to come to Franciscan.
+              </p>
+            </div>
+            <div
+              class="MuiCardActions-root-260"
+            >
+              <button
+                class="MuiButtonBase-root-98 MuiButton-root-262 MuiButton-flatPrimary-264 MuiButton-sizeSmall-274"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label-263"
+                >
+                  Learn More
+                </span>
+                <span
+                  class="MuiTouchRipple-root-107"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-typeItem-143 MuiGrid-grid-xs-12-179 MuiGrid-grid-sm-6-186 MuiGrid-grid-lg-6-212 IndexPage-gridItemFix-4"
+        >
+          <div
+            class="MuiPaper-root-63 MuiPaper-elevation2-67 MuiPaper-rounded-64 ProfileCard-card-253"
+          >
+            <div
+              class="MuiCardMedia-root-257 ProfileCard-media-254"
+              style="background-image:url(https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Alumni_Profiles/IMG_1132.JPG)"
+              title="Maggie McDermott"
+            />
+            <div
+              class="MuiCardContent-root-259"
+            >
+              <span
+                class="MuiTypography-root-114 MuiTypography-caption-124 ProfileCard-category-255"
+              >
+                Alumni Profile
+              </span>
+              <h2
+                class="MuiTypography-root-114 MuiTypography-headline-119"
+              >
+                Maggie McDermott
+              </h2>
+              <p
+                class="MuiTypography-root-114 MuiTypography-body1-123 ProfileCard-quote-256"
+              >
+                My choice to say Yes to giving my all even in those trying moments can be attributed to the growth and education I received at Franciscan.
+              </p>
+            </div>
+            <div
+              class="MuiCardActions-root-260"
+            >
+              <button
+                class="MuiButtonBase-root-98 MuiButton-root-262 MuiButton-flatPrimary-264 MuiButton-sizeSmall-274"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label-263"
+                >
+                  Learn More
+                </span>
+                <span
+                  class="MuiTouchRipple-root-107"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-typeItem-143 MuiGrid-grid-xs-12-179 MuiGrid-grid-sm-6-186 IndexPage-gridItemFix-4"
+        >
+          <div
+            class="MuiPaper-root-63 MuiPaper-elevation2-67 MuiPaper-rounded-64 ListCard-card-277"
+          >
+            <div
+              class="MuiCardContent-root-259"
+            >
+              <h2
+                class="MuiTypography-root-114 MuiTypography-headline-119"
+              >
+                Events
+              </h2>
+              <ul
+                class="MuiList-root-280 MuiList-padding-281"
+              >
+                <div
+                  class="MuiButtonBase-root-98 MuiListItem-root-284 MuiListItem-dense-288 MuiListItem-gutters-291 MuiListItem-divider-290 MuiListItem-button-292 ListCard-listItem-278"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div
+                    class="MuiListItemText-root-294 MuiListItemText-dense-296"
+                  >
+                    <h3
+                      class="MuiTypography-root-114 MuiTypography-subheading-121 MuiListItemText-primary-297 MuiListItemText-textDense-299"
+                    >
+                      In Crisis: American Higher Education
+                    </h3>
+                    <p
+                      class="MuiTypography-root-114 MuiTypography-body1-123 MuiTypography-colorTextSecondary-136 MuiListItemText-secondary-298 MuiListItemText-textDense-299"
+                    >
+                      The Veritas Center for Ethics in Public Life at Franciscan University of Steubenville will host a two-day conference, “The State of American Higher Education, 2018,” to be held at Franciscan University April 6-7, 2018.
+                    </p>
+                  </div>
+                  <span
+                    class="MuiTouchRipple-root-107"
+                  />
+                </div>
+                <div
+                  class="MuiButtonBase-root-98 MuiListItem-root-284 MuiListItem-dense-288 MuiListItem-gutters-291 MuiListItem-divider-290 MuiListItem-button-292 ListCard-listItem-278"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div
+                    class="MuiListItemText-root-294 MuiListItemText-dense-296"
+                  >
+                    <h3
+                      class="MuiTypography-root-114 MuiTypography-subheading-121 MuiListItemText-primary-297 MuiListItemText-textDense-299"
+                    >
+                      Final Examinations Spring 2018
+                    </h3>
+                  </div>
+                  <div
+                    class="MuiAvatar-root-300 ListCard-avatar-279"
+                    title="Random Pic"
+                  >
+                    <img
+                      alt="Just an image from unsplash"
+                      class="MuiAvatar-img-302"
+                      src="../static/img/mission3-400w.jpg"
+                    />
+                  </div>
+                  <span
+                    class="MuiTouchRipple-root-107"
+                  />
+                </div>
+                <div
+                  class="MuiButtonBase-root-98 MuiListItem-root-284 MuiListItem-dense-288 MuiListItem-gutters-291 MuiListItem-divider-290 MuiListItem-button-292 ListCard-listItem-278"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div
+                    class="MuiListItemText-root-294 MuiListItemText-dense-296"
+                  >
+                    <h3
+                      class="MuiTypography-root-114 MuiTypography-subheading-121 MuiListItemText-primary-297 MuiListItemText-textDense-299"
+                    >
+                      Baccalaureate Mass
+                    </h3>
+                    <p
+                      class="MuiTypography-root-114 MuiTypography-body1-123 MuiTypography-colorTextSecondary-136 MuiListItemText-secondary-298 MuiListItemText-textDense-299"
+                    >
+                      Most Rev. Joseph Kurtz, archbishop of Louisville and former president of the US Conference of Catholic Bishops, will be the celebrant and homilist at the 2018 Baccalaureate Mass on Friday, May 11, 2018, in Finnegan Fieldhouse. Archbishop Kurtz will honored with an honorary doctorate before the Mass begins.
+                    </p>
+                  </div>
+                  <span
+                    class="MuiTouchRipple-root-107"
+                  />
+                </div>
+                <div
+                  class="MuiButtonBase-root-98 MuiListItem-root-284 MuiListItem-dense-288 MuiListItem-gutters-291 MuiListItem-divider-290 MuiListItem-button-292 ListCard-listItem-278"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div
+                    class="MuiListItemText-root-294 MuiListItemText-dense-296"
+                  >
+                    <h3
+                      class="MuiTypography-root-114 MuiTypography-subheading-121 MuiListItemText-primary-297 MuiListItemText-textDense-299"
+                    >
+                      Commencement Exercises 2018
+                    </h3>
+                  </div>
+                  <div
+                    class="MuiAvatar-root-300 ListCard-avatar-279"
+                    title="Random Pic"
+                  >
+                    <img
+                      alt="Just an image from unsplash"
+                      class="MuiAvatar-img-302"
+                      src="../static/img/adventure2-400w.jpg"
+                    />
+                  </div>
+                  <span
+                    class="MuiTouchRipple-root-107"
+                  />
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-typeItem-143 MuiGrid-grid-xs-12-179 MuiGrid-grid-sm-6-186 MuiGrid-grid-lg-6-212 IndexPage-gridItemFix-4"
+        >
+          <div
+            class="MuiPaper-root-63 MuiPaper-elevation2-67 MuiPaper-rounded-64 ProfileCard-card-253"
+          >
+            <div
+              class="MuiCardMedia-root-257 ProfileCard-media-254"
+              style="background-image:url(https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Faculty/Education/boury.jpg?n=1668);background-position-y:20%"
+              title="Dr. Tiffany Boury"
+            />
+            <div
+              class="MuiCardContent-root-259"
+            >
+              <span
+                class="MuiTypography-root-114 MuiTypography-caption-124 ProfileCard-category-255"
+              >
+                Faculty Profile
+              </span>
+              <h2
+                class="MuiTypography-root-114 MuiTypography-headline-119"
+              >
+                Dr. Tiffany Boury
+              </h2>
+              <p
+                class="MuiTypography-root-114 MuiTypography-body1-123 ProfileCard-quote-256"
+              >
+                Associate Professor of Education
+              </p>
+            </div>
+            <div
+              class="MuiCardActions-root-260"
+            >
+              <button
+                class="MuiButtonBase-root-98 MuiButton-root-262 MuiButton-flatPrimary-264 MuiButton-sizeSmall-274"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label-263"
+                >
+                  Learn More
+                </span>
+                <span
+                  class="MuiTouchRipple-root-107"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-typeItem-143 MuiGrid-grid-xs-12-179 MuiGrid-grid-sm-6-186 MuiGrid-grid-lg-6-212 IndexPage-gridItemFix-4"
+        >
+          <div
+            class="MuiPaper-root-63 MuiPaper-elevation2-67 MuiPaper-rounded-64 IndexPage-card-2"
+          >
+            <div
+              class="MuiCardMedia-root-257 IndexPage-media-3"
+              style="background-image:url(/static/img/adventure2-800w.jpg)"
+              title="Austria Campus"
+            />
+            <div
+              class="MuiCardContent-root-259"
+            >
+              <p
+                class="MuiTypography-root-114 MuiTypography-body1-123"
+                type="display1"
+              >
+                Austria
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-typeItem-143 MuiGrid-grid-xs-12-179 MuiGrid-grid-sm-6-186 MuiGrid-grid-md-6-199 MuiGrid-grid-lg-6-212 IndexPage-gridItemFix-4"
+        >
+          <div
+            class="MuiPaper-root-63 MuiPaper-elevation2-67 MuiPaper-rounded-64 IndexPage-card-2 IndexPage-videoIframeContainer-11"
+          >
+            <iframe
+              allow="encrypted-media"
+              allowfullscreen=""
+              class="IndexPage-videoIframe-10"
+              frameborder="0"
+              src="https://www.youtube.com/embed/HzfPBp3lHTU?modestbranding=1&rel=0&color=white"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div
+    class="Footer-root-303"
+  >
+    <div
+      class="MuiGrid-typeContainer-142"
+    >
+      <div
+        class="MuiGrid-typeItem-143 MuiGrid-grid-xs-12-179 MuiGrid-grid-sm-4-184"
+      >
+        <p
+          class="MuiTypography-root-114 MuiTypography-body1-123 Footer-footerText-306 Footer-footerSections-304"
+        >
+          Lorem ipsum dolor amet rump leberkas doner, andouille tenderloin beef ribs ham shankle kielbasa drumstick tail brisket.
+        </p>
+      </div>
+      <div
+        class="MuiGrid-typeItem-143 MuiGrid-grid-xs-12-179 MuiGrid-grid-sm-4-184"
+      >
+        <p
+          class="MuiTypography-root-114 MuiTypography-body1-123 Footer-footerText-306 Footer-footerSections-304"
+        >
+          Bacon ipsum dolor amet rump leberkas doner, andouille tenderloin
+        </p>
+      </div>
+      <div
+        class="MuiGrid-typeItem-143 MuiGrid-grid-xs-12-179 MuiGrid-grid-sm-4-184"
+      >
+        <p
+          class="MuiTypography-root-114 MuiTypography-body1-123 Footer-footerText-306 Footer-footerSections-304"
+        >
+          Bacon ipsum dolor amet rump leberkas doner, andouille tenderloin
+        </p>
+      </div>
+      <div
+        class="MuiGrid-typeItem-143 MuiGrid-grid-xs-12-179 Footer-subFooter-305"
+      >
+        <span
+          class="MuiTypography-root-114 MuiTypography-subheading-121 Footer-white-307"
+        >
+          © 2018 Franciscan University of Steubenville
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
 `;

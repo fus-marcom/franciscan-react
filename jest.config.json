@@ -1,0 +1,4 @@
+{
+  "setupFiles": ["raf/polyfill", "<rootDir>/shim.js"],
+  "snapshotSerializers": ["enzyme-to-json/serializer"]
+}

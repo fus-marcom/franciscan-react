@@ -1,7 +1,6 @@
 /* eslint-env jest */
 import React from 'react'
-import { shallow } from 'enzyme'
-import { shallowToJson } from 'enzyme-to-json'
+import { render } from 'enzyme'
 
 import Index from '../pages/index'
 
@@ -10,7 +9,7 @@ describe('<Index />', () => {
     expect(Index).toBeDefined()
   })
   it('should render', () => {
-    const wrapper = shallow(<Index />)
-    expect(shallowToJson(wrapper)).toMatchSnapshot()
+    const wrapper = render(<Index />)
+    expect(wrapper).toMatchSnapshot()
   })
 })
