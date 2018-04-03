@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DrawerItem should render 1`] = `
+<WithStyles(DrawerItem)>
+  <DrawerItem
+    classes={
+      Object {
+        "linkText": "DrawerItem-linkText-3",
+        "nested": "DrawerItem-nested-1",
+        "subLink": "DrawerItem-subLink-2",
+      }
+    }
+  >
+    <div>
+      <WithStyles(ListItem)
+        button={true}
+        onClick={[Function]}
+      >
+        <ListItem
+          ContainerComponent="li"
+          button={true}
+          classes={
+            Object {
+              "button": "MuiListItem-button-12",
+              "container": "MuiListItem-container-5",
+              "default": "MuiListItem-default-7",
+              "dense": "MuiListItem-dense-8",
+              "disabled": "MuiListItem-disabled-9",
+              "divider": "MuiListItem-divider-10",
+              "gutters": "MuiListItem-gutters-11",
+              "keyboardFocused": "MuiListItem-keyboardFocused-6",
+              "root": "MuiListItem-root-4",
+              "secondaryAction": "MuiListItem-secondaryAction-13",
+            }
+          }
+          dense={false}
+          disableGutters={false}
+          disabled={false}
+          divider={false}
+          onClick={[Function]}
+        >
+          <WithStyles(ButtonBase)
+            className="MuiListItem-root-4 MuiListItem-default-7 MuiListItem-gutters-11 MuiListItem-button-12"
+            classes={
+              Object {
+                "keyboardFocused": "MuiListItem-keyboardFocused-6",
+              }
+            }
+            component="div"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <ButtonBase
+              centerRipple={false}
+              className="MuiListItem-root-4 MuiListItem-default-7 MuiListItem-gutters-11 MuiListItem-button-12"
+              classes={
+                Object {
+                  "disabled": "MuiButtonBase-disabled-15",
+                  "keyboardFocused": "MuiButtonBase-keyboardFocused-16 MuiListItem-keyboardFocused-6",
+                  "root": "MuiButtonBase-root-14",
+                }
+              }
+              component="div"
+              disableRipple={false}
+              disabled={false}
+              focusRipple={false}
+              onClick={[Function]}
+              tabIndex="0"
+              type="button"
+            >
+              <div
+                className="MuiButtonBase-root-14 MuiListItem-root-4 MuiListItem-default-7 MuiListItem-gutters-11 MuiListItem-button-12"
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                <WithStyles(ListItemText)
+                  inset={true}
+                  key=".0"
+                  style={
+                    Object {
+                      "paddingLeft": "16px",
+                    }
+                  }
+                >
+                  <ListItemText
+                    classes={
+                      Object {
+                        "dense": "MuiListItemText-dense-19",
+                        "inset": "MuiListItemText-inset-18",
+                        "primary": "MuiListItemText-primary-20",
+                        "root": "MuiListItemText-root-17",
+                        "secondary": "MuiListItemText-secondary-21",
+                        "textDense": "MuiListItemText-textDense-22",
+                      }
+                    }
+                    disableTypography={false}
+                    inset={true}
+                    style={
+                      Object {
+                        "paddingLeft": "16px",
+                      }
+                    }
+                  >
+                    <div
+                      className="MuiListItemText-root-17 MuiListItemText-inset-18"
+                      style={
+                        Object {
+                          "paddingLeft": "16px",
+                        }
+                      }
+                    />
+                  </ListItemText>
+                </WithStyles(ListItemText)>
+                <pure(ExpandMore)
+                  key=".1"
+                >
+                  <ExpandMore>
+                    <WithStyles(SvgIcon)>
+                      <SvgIcon
+                        classes={
+                          Object {
+                            "colorAction": "MuiSvgIcon-colorAction-26",
+                            "colorDisabled": "MuiSvgIcon-colorDisabled-27",
+                            "colorError": "MuiSvgIcon-colorError-28",
+                            "colorPrimary": "MuiSvgIcon-colorPrimary-24",
+                            "colorSecondary": "MuiSvgIcon-colorSecondary-25",
+                            "root": "MuiSvgIcon-root-23",
+                          }
+                        }
+                        color="inherit"
+                        viewBox="0 0 24 24"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          className="MuiSvgIcon-root-23"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                          />
+                        </svg>
+                      </SvgIcon>
+                    </WithStyles(SvgIcon)>
+                  </ExpandMore>
+                </pure(ExpandMore)>
+                <WithStyles(TouchRipple)
+                  center={false}
+                  innerRef={[Function]}
+                >
+                  <TouchRipple
+                    center={false}
+                    classes={
+                      Object {
+                        "child": "MuiTouchRipple-child-33",
+                        "childLeaving": "MuiTouchRipple-childLeaving-34",
+                        "childPulsate": "MuiTouchRipple-childPulsate-35",
+                        "ripple": "MuiTouchRipple-ripple-30",
+                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-32",
+                        "rippleVisible": "MuiTouchRipple-rippleVisible-31",
+                        "root": "MuiTouchRipple-root-29",
+                      }
+                    }
+                  >
+                    <TransitionGroup
+                      childFactory={[Function]}
+                      className="MuiTouchRipple-root-29"
+                      component="span"
+                      enter={true}
+                      exit={true}
+                    >
+                      <span
+                        className="MuiTouchRipple-root-29"
+                      />
+                    </TransitionGroup>
+                  </TouchRipple>
+                </WithStyles(TouchRipple)>
+              </div>
+            </ButtonBase>
+          </WithStyles(ButtonBase)>
+        </ListItem>
+      </WithStyles(ListItem)>
+    </div>
+  </DrawerItem>
+</WithStyles(DrawerItem)>
+`;

@@ -16,4 +16,12 @@ describe('TextSection', () => {
     const wrapper = mount(<TextSection text="Test text" />)
     expect(wrapper).toMatchSnapshot()
   })
+  it('should render a title when passed in', () => {
+    const wrapper = mount(<TextSection sectionTitle="Test Title" />)
+    expect(wrapper).toMatchSnapshot()
+  })
+  it('should render a title when passed in', () => {
+    const wrapper = mount(<TextSection textColor="#000" />)
+    expect(wrapper).toMatchSnapshot()
+  })
 })

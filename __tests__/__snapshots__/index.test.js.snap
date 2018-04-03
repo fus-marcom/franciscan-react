@@ -247,11 +247,7 @@ exports[`<Index /> should render 1`] = `
               <p
                 class="MuiTypography-root-114 MuiTypography-body1-123 ProfileCard-quote-256"
               >
-                I first learned about Franciscan from some people at my parish
- who studied here. They recommended I check it out, but I wasn’t
- so sure. When I visited, though, I was blown away by the people
- I met; they were so genuine and helpful. They were the biggest
- reason I decided to come to Franciscan.
+                I first learned about Franciscan from some people at my parish who studied here. They recommended I check it out, but I wasn’t so sure. When I visited, though, I was blown away by the people I met; they were so genuine and helpful. They were the biggest reason I decided to come to Franciscan.
               </p>
             </div>
             <div

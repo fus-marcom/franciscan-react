@@ -134,11 +134,7 @@ const IndexPage = ({ classes }) => (
             profileImgTitle="Noah Fisher"
             profileType="Student Profile"
             profileName="Noah Fisher"
-            content="I first learned about Franciscan from some people at my parish
-                who studied here. They recommended I check it out, but I wasn’t
-                so sure. When I visited, though, I was blown away by the people
-                I met; they were so genuine and helpful. They were the biggest
-                reason I decided to come to Franciscan."
+            content="I first learned about Franciscan from some people at my parish who studied here. They recommended I check it out, but I wasn’t so sure. When I visited, though, I was blown away by the people I met; they were so genuine and helpful. They were the biggest reason I decided to come to Franciscan."
             profileLink="/studentprofiles/noah-fisher"
           />
         </Grid>

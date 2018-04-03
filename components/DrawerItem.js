@@ -39,29 +39,35 @@ class DrawerItem extends Component {
           />
           {isOpen ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
-        <Collapse component="li" in={isOpen} timeout="auto" unmountOnExit>
-          <List disablePadding onClick={toggleDrawer} onKeyDown={toggleDrawer}>
-            {submenuItems.map(item => (
-              <Link
-                prefetch
-                href={item.asUrl}
-                as={item.linkUrl}
-                key={item.text}
-              >
-                <a onClick={toggleDrawer} className={classes.subLink}>
-                  <ListItem button className={classes.nested}>
-                    <ListItemText
-                      inset
-                      style={{ paddingLeft: '16px' }}
-                      primary={item.text}
-                      classes={{ primary: classes.linkText }}
-                    />
-                  </ListItem>
-                </a>
-              </Link>
-            ))}
-          </List>
-        </Collapse>
+        {submenuItems && (
+          <Collapse component="li" in={isOpen} timeout="auto" unmountOnExit>
+            <List
+              disablePadding
+              onClick={toggleDrawer}
+              onKeyDown={toggleDrawer}
+            >
+              {submenuItems.map(item => (
+                <Link
+                  prefetch
+                  href={item.asUrl}
+                  as={item.linkUrl}
+                  key={item.text}
+                >
+                  <a onClick={toggleDrawer} className={classes.subLink}>
+                    <ListItem button className={classes.nested}>
+                      <ListItemText
+                        inset
+                        style={{ paddingLeft: '16px' }}
+                        primary={item.text}
+                        classes={{ primary: classes.linkText }}
+                      />
+                    </ListItem>
+                  </a>
+                </Link>
+              ))}
+            </List>
+          </Collapse>
+        )}
       </div>
     )
   }
