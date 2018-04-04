@@ -71,6 +71,16 @@ const translationObj = {
     type: 'majors',
     id: { default: 'politicalscience' }
   },
+  business: {
+    page: '/major',
+    type: 'majors',
+    id: { default: 'business' }
+  },
+  internationalbusiness: {
+    page: '/major',
+    type: 'majors',
+    id: { default: 'internationalbusiness' }
+  },
   sacredmusic: {
     page: '/major',
     type: 'majors',
@@ -80,6 +90,21 @@ const translationObj = {
     page: '/major',
     type: 'majors',
     id: { default: 'sacred-music' }
+  },
+  catechetics: {
+    page: '/major',
+    type: 'majors',
+    id: { default: 'catechetics', 'why-catechetics': 'why-catechetics' }
+  },
+  chemistry: {
+    page: '/major',
+    type: 'majors',
+    id: { default: 'chemistry' }
+  },
+  classics: {
+    page: '/major',
+    type: 'majors',
+    id: { default: 'classics', classes: 'classics-classes' }
   },
   'comm-arts': {
     page: '/minor',
