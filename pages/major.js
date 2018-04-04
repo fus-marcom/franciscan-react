@@ -6,6 +6,7 @@ import withData from '../lib/withData'
 import Layout from '../components/Layout'
 import Head from 'next/head'
 import withRoot from '../components/withRoot'
+import Link from 'next/link'
 
 const styles = {
   root: {
@@ -25,7 +26,7 @@ class Major extends Component {
         <Head>
           <link
             rel="stylesheet"
-            href="/static/styles/news.css"
+            href="/static/styles/major.css"
             type="text/css"
           />
         </Head>
@@ -57,6 +58,14 @@ class Major extends Component {
             )
           }}
         </Query>
+        <Link
+          prefetch
+          as={`/${this.props.id}/classes`}
+          href={`/major?type=majors&id=${this.props.id}-classes`}
+        >
+          {' '}
+          Course Descriptions
+        </Link>
       </Layout>
     )
   }

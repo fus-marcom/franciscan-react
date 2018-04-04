@@ -1,0 +1,75 @@
+main {
+  font-family: Roboto, sans-serif;
+}
+
+p, ul {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+div[data-testid='content'] {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+  div[data-testid='content'] {
+    max-width: 70%;
+  }
+}
+
+root {
+  display: none;
+}
+
+centercolumndetails {
+  margin-top: 24px;
+  margin-bottom: -8px;
+}
+
+rightcolumndetails {
+  margin-top: 24px;
+}
+
+heading {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+li h6 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 24px;
+  margin-bottom: -12px;
+}
+
+listviewimage, detailstype, rightcolumnblogs, br {
+  display: none;
+}
+
+name, phone, email, cvlink, videoembed, centercolumndetails, rightcolumndetails {
+  display: block;
+}
+
+h2.title {
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+lefttitle, righttitle {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(0,0,0, 0.87);
+}
+
+left h2.title, right h2.title {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(0,0,0, 0.54);
+}
+
+br, viewall {
+  display: none !important;
+}
