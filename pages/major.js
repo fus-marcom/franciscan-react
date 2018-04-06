@@ -63,7 +63,6 @@ class Major extends Component {
           as={`/${this.props.id}/classes`}
           href={`/major?type=majors&id=${this.props.id}-classes`}
         >
-          {' '}
           Course Descriptions
         </Link>
       </Layout>

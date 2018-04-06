@@ -8,14 +8,23 @@ p, ul {
   line-height: 1.5;
 }
 
-div[data-testid='content'] {
+main {
   max-width: 90%;
   margin: 0 auto;
 }
 
+main img {
+  max-width: 100%;
+  margin: 8px 0 !important;
+}
+
 @media screen and (min-width: 600px) {
-  div[data-testid='content'] {
+  main {
     max-width: 70%;
+  }
+
+  main img {
+  margin: 0 8px 8px 0 !important;
   }
 }
 
