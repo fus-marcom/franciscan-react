@@ -106,6 +106,11 @@ const translationObj = {
     type: 'majors',
     id: { default: 'classics', classes: 'classics-classes' }
   },
+  sabl: {
+    page: '/major',
+    type: 'majors',
+    id: { default: 'sabl', classes: 'classics-classes' }
+  },
   'comm-arts': {
     page: '/minor',
     id: { 'film-studies': 'film-studies-minor' }
