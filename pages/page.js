@@ -20,6 +20,11 @@ class Page extends Component {
             href="/static/styles/page.css"
             type="text/css"
           />
+          <link
+            rel="stylesheet"
+            href="/static/styles/department.css"
+            type="text/css"
+          />
         </Head>
         <Query
           query={PageQuery(this.props.type)}

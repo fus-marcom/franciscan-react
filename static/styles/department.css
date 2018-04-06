@@ -2,11 +2,6 @@ main {
   font-family: Roboto, sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: hsla(47, 39%, 34%, 1);
-}
-
 p, ul {
   font-size: 18px;
   font-weight: 300;
@@ -84,4 +79,37 @@ br {
 
 name, phone, email, cvlink, videoembed, centercolumndetails, rightcolumndetails {
   display: block;
+}
+
+h2.title {
+  margin-bottom: 8px;
+  font-weight: 400;
+  color: rgba(0,0,0,0.87);
+}
+
+heading, cta_text, cta_link, linktext {
+  display: none;
+}
+
+item, menuitem {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: hsla(47, 39%, 34%, 1);
+}
+
+item a, menuitem a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: hsla(47, 39%, 34%, 1);
+}
+
+mobiletitle {
+      display: block;
+    font-size: 24px;
+    font-weight: 400;
 }

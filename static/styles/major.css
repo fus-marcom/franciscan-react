@@ -2,6 +2,11 @@ main {
   font-family: Roboto, sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: hsla(47, 39%, 34%, 1);
+}
+
 p, ul {
   font-size: 18px;
   font-weight: 300;
