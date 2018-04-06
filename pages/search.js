@@ -221,7 +221,7 @@ class Page extends Component {
               </FormControl>
             </Grid>
             {/* TODO: Align these more precisely */}
-            <Grid item xs={3} style={{ alignSelf: 'center' }}>
+            <Grid item xs={3} style={{ alignSelf: 'center', marginTop: 4 }}>
               <FormControl className={classes.formControl}>
                 <FormHelperText>Sort By</FormHelperText>
                 <Select
