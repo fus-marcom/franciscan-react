@@ -165,6 +165,16 @@ const translationObj = {
     page: '/page',
     type: 'admissionsPages',
     id: { default: 'admissions' }
+  },
+  swop: {
+    page: '/page',
+    type: 'sfsPages',
+    id: { default: 'swop' }
+  },
+  sfs: {
+    page: '/page',
+    type: 'sfsPages',
+    id: { default: 'main' }
   }
 }
 
