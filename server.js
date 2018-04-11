@@ -13,6 +13,7 @@ const translationObj = {
   contact: { page: '/directory' },
   news: { page: '/news', type: 'news' },
   search: { page: '/search' },
+  'missionary-outreach': { page: '/missions' },
   major: { page: '/major' },
   minor: { page: '/minor' },
   departments: {
@@ -170,7 +171,22 @@ const translationObj = {
     page: '/page',
     type: 'admissionsPages',
     id: { default: 'admissions' }
+  },
+  swop: {
+    page: '/page',
+    type: 'sfsPages',
+    id: { default: 'swop' }
+  },
+  sfs: {
+    page: '/page',
+    type: 'sfsPages',
+    id: { default: 'main' }
   }
+  // 'missionary-outreach': {
+  //   page: '/page',
+  //   type: 'missionsPages',
+  //   id: { default: 'missionary-outreach' }
+  // }
 }
 
 // This is where we cache our rendered HTML pages

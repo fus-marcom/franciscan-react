@@ -2,7 +2,8 @@ export const aboutMenu = [
   {
     text: 'Academically Excellent',
     linkUrl: '/about/academically-excellent',
-    asUrl: '/page?type=aboutPages&id=academically-excellent'
+    asUrl: '/page?type=aboutPages&id=academically-excellent',
+    subMenu: true
   },
   {
     text: 'Passionately Catholic',

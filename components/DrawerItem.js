@@ -5,6 +5,7 @@ import Collapse from 'material-ui/transitions/Collapse'
 import ExpandLess from 'material-ui-icons/ExpandLess'
 import ExpandMore from 'material-ui-icons/ExpandMore'
 import Link from 'next/link'
+import Grid from 'material-ui/Grid'
 
 const styles = theme => ({
   nested: {
@@ -46,25 +47,53 @@ class DrawerItem extends Component {
               onClick={toggleDrawer}
               onKeyDown={toggleDrawer}
             >
-              {submenuItems.map(item => (
-                <Link
-                  prefetch
-                  href={item.asUrl}
-                  as={item.linkUrl}
-                  key={item.text}
-                >
-                  <a onClick={toggleDrawer} className={classes.subLink}>
-                    <ListItem button className={classes.nested}>
-                      <ListItemText
-                        inset
-                        style={{ paddingLeft: '16px' }}
-                        primary={item.text}
-                        classes={{ primary: classes.linkText }}
-                      />
-                    </ListItem>
-                  </a>
-                </Link>
-              ))}
+              {submenuItems.map(
+                item =>
+                  item.subMenu ? (
+                    <Grid container spacing={24}>
+                      <Grid item xs={9}>
+                        <Link
+                          prefetch
+                          href={item.asUrl}
+                          as={item.linkUrl}
+                          key={item.text}
+                        >
+                          <a onClick={toggleDrawer} className={classes.subLink}>
+                            <ListItem button className={classes.nested}>
+                              <ListItemText
+                                inset
+                                style={{ paddingLeft: '16px' }}
+                                primary={item.text}
+                                classes={{ primary: classes.linkText }}
+                              />
+                            </ListItem>
+                          </a>
+                        </Link>
+                      </Grid>
+                      <Grid item xs={3}>
+                        <p>Submenu</p>
+                      </Grid>
+                    </Grid>
+                  ) : (
+                    <Link
+                      prefetch
+                      href={item.asUrl}
+                      as={item.linkUrl}
+                      key={item.text}
+                    >
+                      <a onClick={toggleDrawer} className={classes.subLink}>
+                        <ListItem button className={classes.nested}>
+                          <ListItemText
+                            inset
+                            style={{ paddingLeft: '16px' }}
+                            primary={item.text}
+                            classes={{ primary: classes.linkText }}
+                          />
+                        </ListItem>
+                      </a>
+                    </Link>
+                  )
+              )}
             </List>
           </Collapse>
         )}
