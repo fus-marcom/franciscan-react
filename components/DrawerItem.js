@@ -11,11 +11,28 @@ const styles = theme => ({
   nested: {
     paddingLeft: theme.spacing.unit * 4
   },
+  nestedMore: {
+    paddingLeft: theme.spacing.unit * 6
+  },
   subLink: {
     textDecoration: 'none'
   },
   linkText: {
     color: 'rgba(0,0,0,0.54)'
+  },
+  subLinkText: {
+    color: 'rgba(0,0,0,0.54)',
+    fontWeight: 300
+  },
+  subItemIconContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    borderLeft: '1px solid rgba(0,0,0,0.08)',
+    cursor: 'pointer',
+    '&:hover': {
+      backgroundColor: 'rgba(0, 0, 0, 0.08)',
+      borderLeft: 'none'
+    }
   }
 })
 
@@ -60,12 +77,12 @@ class DrawerItem extends Component {
               {submenuItems.map(
                 item =>
                   item.subMenu ? (
-                    <Grid container spacing={24} key={item.text}>
+                    <Grid container spacing={0} key={item.text}>
                       <Grid
                         onClick={toggleDrawer}
                         onKeyDown={toggleDrawer}
                         item
-                        xs={9}
+                        xs={10}
                       >
                         <Link prefetch href={item.asUrl} as={item.linkUrl}>
                           <a className={classes.subLink}>
@@ -82,13 +99,24 @@ class DrawerItem extends Component {
                       </Grid>
                       <Grid
                         item
-                        xs={3}
+                        xs={2}
                         onClick={() => this.expandSubItem(item.text)}
+                        className={classes.subItemIconContainer}
                       >
                         {drawerItems[item.text] ? (
-                          <ExpandLess />
+                          <ExpandLess
+                            style={{
+                              alignSelf: 'center',
+                              color: 'rgba(0,0,0,0.54'
+                            }}
+                          />
                         ) : (
-                          <ExpandMore />
+                          <ExpandMore
+                            style={{
+                              alignSelf: 'center',
+                              color: 'rgba(0,0,0,0.54'
+                            }}
+                          />
                         )}
                       </Grid>
                       <Collapse
@@ -110,12 +138,15 @@ class DrawerItem extends Component {
                                 as={subItem.linkUrl}
                               >
                                 <a className={classes.subLink}>
-                                  <ListItem button className={classes.nested}>
+                                  <ListItem
+                                    button
+                                    className={classes.nestedMore}
+                                  >
                                     <ListItemText
                                       inset
                                       style={{ paddingLeft: '16px' }}
                                       primary={subItem.text}
-                                      classes={{ primary: classes.linkText }}
+                                      classes={{ primary: classes.subLinkText }}
                                     />
                                   </ListItem>
                                 </a>

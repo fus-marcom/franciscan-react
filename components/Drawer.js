@@ -21,7 +21,10 @@ import {
 
 const styles = theme => ({
   list: {
-    width: 265
+    width: 300,
+    [theme.breakpoints.down('xs')]: {
+      width: 265
+    }
   },
   listFull: {
     width: 'auto'
