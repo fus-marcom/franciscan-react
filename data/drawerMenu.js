@@ -2,8 +2,7 @@ export const aboutMenu = [
   {
     text: 'Academically Excellent',
     linkUrl: '/about/academically-excellent',
-    asUrl: '/page?type=aboutPages&id=academically-excellent',
-    subMenu: true
+    asUrl: '/page?type=aboutPages&id=academically-excellent'
   },
   {
     text: 'Passionately Catholic',
@@ -61,7 +60,24 @@ export const academicsMenu = [
   {
     text: 'Undergraduate',
     linkUrl: '/academics/ug/majors',
-    asUrl: '/page?type=academicsPages&id=majors'
+    asUrl: '/page?type=academicsPages&id=majors',
+    subMenu: [
+      {
+        text: 'Accelerated Learning',
+        linkUrl: '/academics/accelerated-learning',
+        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+      },
+      {
+        text: 'Exploring Majors',
+        linkUrl: '/about/at-a-glance',
+        asUrl: '/page?type=aboutPages&id=at-a-glance'
+      },
+      {
+        text: 'Associate Degree Programs',
+        linkUrl: '/hr',
+        asUrl: '/page?type=humanResources&id=employment-and-human-resources'
+      }
+    ]
   },
   {
     text: 'Graduate',
