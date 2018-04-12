@@ -5,6 +5,7 @@ import Head from 'next/head'
 import withRoot from '../components/withRoot'
 import { getJSON } from '../utils/fetch'
 import debounce from 'lodash.debounce'
+import throttle from 'lodash.throttle'
 import {
   FormLabel,
   FormControl,
@@ -73,7 +74,9 @@ class Page extends Component {
       department: false,
       major: false,
       faculty: false
-    }
+    },
+    scrollY: 0,
+    windowHeight: 0
   }
   /**
    * Make api call based on searchTerm
@@ -192,6 +195,28 @@ class Page extends Component {
   handleSort = event => {
     this.setState({ [event.target.name]: event.target.value })
   }
+
+  componentDidMount () {
+    window.addEventListener('scroll', this.throttleScroll)
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.throttleScroll)
+  }
+
+  handleScroll = () => {
+    this.setState(
+      { scrollY: window.scrollY, windowHeight: window.innerHeight },
+      () => {
+        if (this.state.scrollY > this.state.windowHeight - 500) {
+          // TODO: if scroll is close to bottom then search
+          console.log('scroll')
+        }
+      }
+    )
+  }
+
+  throttleScroll = throttle(this.handleScroll, 200)
 
   render () {
     const { classes } = this.props
