@@ -118,6 +118,7 @@ class TemporaryDrawer extends Component {
                 toggleDrawer={toggleDrawer}
                 primaryText="About"
                 submenuItems={aboutMenu}
+                isSubOpen={this.props.drawerSubItems}
                 isOpen={this.props.drawerItems.about}
                 expandItem={this.props.expandItem}
                 itemId="about"
@@ -126,32 +127,40 @@ class TemporaryDrawer extends Component {
                 toggleDrawer={toggleDrawer}
                 primaryText="Academics"
                 submenuItems={academicsMenu}
+                isSubOpen={this.props.drawerSubItems}
                 isOpen={this.props.drawerItems.academics}
+                expandSubItem={this.props.expandSubItem}
                 expandItem={this.props.expandItem}
                 itemId="academics"
               />
               <DrawerItem
                 toggleDrawer={toggleDrawer}
+                expandSubItem={this.props.expandSubItem}
                 expandItem={this.props.expandItem}
                 itemId="admissions"
                 primaryText="Admissions"
                 submenuItems={admissionsMenu}
+                isSubOpen={this.props.drawerSubItems}
                 isOpen={this.props.drawerItems.admissions}
               />
               <DrawerItem
                 toggleDrawer={toggleDrawer}
+                expandSubItem={this.props.expandSubItem}
                 expandItem={this.props.expandItem}
                 itemId="evangelization"
                 primaryText="Evangelization"
                 submenuItems={faithMenu}
+                isSubOpen={this.props.drawerSubItems}
                 isOpen={this.props.drawerItems.evangelization}
               />
               <DrawerItem
                 toggleDrawer={toggleDrawer}
+                expandSubItem={this.props.expandSubItem}
                 expandItem={this.props.expandItem}
                 itemId="faith-and-life"
                 primaryText="Student Life"
                 submenuItems={studentMenu}
+                isSubOpen={this.props.drawerSubItems}
                 isOpen={this.props.drawerItems['faith-and-life']}
               />
               <Divider />

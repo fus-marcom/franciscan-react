@@ -82,7 +82,19 @@ export const academicsMenu = [
   {
     text: 'Graduate',
     linkUrl: '/academics/graduate-programs',
-    asUrl: '/page?type=academicsPages&id=graduate-programs'
+    asUrl: '/page?type=academicsPages&id=graduate-programs',
+    subMenu: [
+      {
+        text: 'Grad Accelerated Learning',
+        linkUrl: '/academics/accelerated-learning',
+        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+      },
+      {
+        text: 'Exploring Programs',
+        linkUrl: '/about/at-a-glance',
+        asUrl: '/page?type=aboutPages&id=at-a-glance'
+      }
+    ]
   },
   {
     text: 'Online',

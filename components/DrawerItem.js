@@ -37,21 +37,7 @@ const styles = theme => ({
 })
 
 class DrawerItem extends Component {
-  state = {
-    drawerItems: {}
-  }
-
-  expandSubItem = itemId => {
-    this.setState(prevState => ({
-      drawerItems: {
-        ...prevState.drawerItems,
-        [itemId]: !prevState.drawerItems[itemId]
-      }
-    }))
-    console.log(this.state.drawerItems)
-  }
   render () {
-    const { drawerItems } = this.state
     const {
       classes,
       toggleDrawer,
@@ -59,7 +45,9 @@ class DrawerItem extends Component {
       submenuItems,
       isOpen,
       expandItem,
-      itemId
+      itemId,
+      isSubOpen,
+      expandSubItem
     } = this.props
     return (
       <div>
@@ -100,10 +88,10 @@ class DrawerItem extends Component {
                       <Grid
                         item
                         xs={2}
-                        onClick={() => this.expandSubItem(item.text)}
+                        onClick={() => expandSubItem(item.text)}
                         className={classes.subItemIconContainer}
                       >
-                        {drawerItems[item.text] ? (
+                        {isSubOpen[item.text] ? (
                           <ExpandLess
                             style={{
                               alignSelf: 'center',
@@ -121,7 +109,7 @@ class DrawerItem extends Component {
                       </Grid>
                       <Collapse
                         component="li"
-                        in={drawerItems[item.text]}
+                        in={isSubOpen[item.text]}
                         timeout="auto"
                         unmountOnExit
                       >
