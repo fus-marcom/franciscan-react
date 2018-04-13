@@ -120,6 +120,7 @@ class TemporaryDrawer extends Component {
                 submenuItems={aboutMenu}
                 isSubOpen={this.props.drawerSubItems}
                 isOpen={this.props.drawerItems.about}
+                expandSubItem={this.props.expandSubItem}
                 expandItem={this.props.expandItem}
                 itemId="about"
               />
@@ -201,6 +202,19 @@ class TemporaryDrawer extends Component {
                     <OpenInNewIcon />
                   </ListItemIcon>
                   <ListItemText inset primary={'Athletics'} />
+                </ListItem>
+              </a>
+              <a
+                className={classes.externalLink}
+                href="http://bookstore.franciscan.edu/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ListItem button>
+                  <ListItemIcon>
+                    <OpenInNewIcon />
+                  </ListItemIcon>
+                  <ListItemText inset primary={'Bookstore'} />
                 </ListItem>
               </a>
               <a

@@ -25,10 +25,23 @@ export const aboutMenu = [
     asUrl: '/page?type=aboutPages&id=consumer-information'
   },
   {
-    text: 'The Inn at Franciscan Square',
-    linkUrl: 'https://franciscansquare.com/hotel',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    text: 'Directions and Attractions',
+    linkUrl: '/about/directions-and-attractions',
+    asUrl: '/page?type=aboutPages&id=directions-and-attractions',
+    subMenu: [
+      {
+        text: 'Accommodations',
+        linkUrl: '/accommodations',
+        asUrl: '/page?type=aboutPages&id=accommodations'
+      },
+      {
+        text: 'The Inn at Franciscan Square',
+        linkUrl: 'https://franciscansquare.com/hotel',
+        asUrl: '/page?type=aboutPages&id=passionately-catholic'
+      }
+    ]
   },
+
   {
     text: 'Our Vision & Charisms',
     linkUrl: '/about/vision-charisms',
@@ -38,6 +51,11 @@ export const aboutMenu = [
     text: 'Our Mission Statement',
     linkUrl: '/about/mission-statement',
     asUrl: '/page?type=aboutPages&id=mission-statement'
+  },
+  {
+    text: 'Strategic Planning',
+    linkUrl: '/strategic-planning',
+    asUrl: '/page?type=aboutPages&id=strategic-planning'
   },
   {
     text: 'Franciscans TOR',
