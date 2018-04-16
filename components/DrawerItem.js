@@ -49,6 +49,29 @@ class DrawerItem extends Component {
       isSubOpen,
       expandSubItem
     } = this.props
+
+    const MenuLink = (item, subSub = false) => (
+      <Link
+        prefetch={item.asUrl && true}
+        href={item.asUrl ? item.asUrl : item.linkUrl}
+        as={item.asUrl && item.linkUrl}
+      >
+        <a className={classes.subLink}>
+          <ListItem
+            button
+            className={subSub ? classes.nestedMore : classes.nested}
+          >
+            <ListItemText
+              inset
+              style={{ paddingLeft: '16px' }}
+              primary={item.text}
+              classes={{ primary: classes.linkText }}
+            />
+          </ListItem>
+        </a>
+      </Link>
+    )
+
     return (
       <div>
         <ListItem button onClick={() => expandItem(itemId)}>
@@ -72,18 +95,7 @@ class DrawerItem extends Component {
                         item
                         xs={10}
                       >
-                        <Link prefetch href={item.asUrl} as={item.linkUrl}>
-                          <a className={classes.subLink}>
-                            <ListItem button className={classes.nested}>
-                              <ListItemText
-                                inset
-                                style={{ paddingLeft: '16px' }}
-                                primary={item.text}
-                                classes={{ primary: classes.linkText }}
-                              />
-                            </ListItem>
-                          </a>
-                        </Link>
+                        {MenuLink(item)}
                       </Grid>
                       <Grid
                         item
@@ -120,25 +132,7 @@ class DrawerItem extends Component {
                               onKeyDown={toggleDrawer}
                               key={subItem.text}
                             >
-                              <Link
-                                prefetch
-                                href={subItem.asUrl}
-                                as={subItem.linkUrl}
-                              >
-                                <a className={classes.subLink}>
-                                  <ListItem
-                                    button
-                                    className={classes.nestedMore}
-                                  >
-                                    <ListItemText
-                                      inset
-                                      style={{ paddingLeft: '16px' }}
-                                      primary={subItem.text}
-                                      classes={{ primary: classes.subLinkText }}
-                                    />
-                                  </ListItem>
-                                </a>
-                              </Link>
+                              {MenuLink(subItem, true)}
                             </div>
                           ))}
                         </List>
@@ -150,18 +144,7 @@ class DrawerItem extends Component {
                       onKeyDown={toggleDrawer}
                       key={item.text}
                     >
-                      <Link prefetch href={item.asUrl} as={item.linkUrl}>
-                        <a className={classes.subLink}>
-                          <ListItem button className={classes.nested}>
-                            <ListItemText
-                              inset
-                              style={{ paddingLeft: '16px' }}
-                              primary={item.text}
-                              classes={{ primary: classes.linkText }}
-                            />
-                          </ListItem>
-                        </a>
-                      </Link>
+                      {MenuLink(item)}
                     </div>
                   )
               )}

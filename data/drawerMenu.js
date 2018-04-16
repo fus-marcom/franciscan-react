@@ -36,8 +36,12 @@ export const aboutMenu = [
       },
       {
         text: 'The Inn at Franciscan Square',
-        linkUrl: 'https://franciscansquare.com/hotel',
-        asUrl: '/page?type=aboutPages&id=passionately-catholic'
+        linkUrl: 'https://franciscansquare.com/hotel'
+      },
+      {
+        text: 'Map',
+        linkUrl:
+          'https://www.google.com/maps/d/viewer?mid=1VcE-IIqOQ8VTZPoYjt39avuUGKE'
       }
     ]
   },
