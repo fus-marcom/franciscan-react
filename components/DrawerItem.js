@@ -65,7 +65,11 @@ class DrawerItem extends Component {
               inset
               style={{ paddingLeft: '16px' }}
               primary={item.text}
-              classes={{ primary: classes.linkText }}
+              classes={
+                subSub
+                  ? { primary: classes.subLinkText }
+                  : { primary: classes.linkText }
+              }
             />
           </ListItem>
         </a>
