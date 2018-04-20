@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 const { expect } = require('chai')
 const { test } = require('../browser')
-const fetch = require('isomorphic-unfetch')
+// const fetch = require('isomorphic-unfetch')
 
 describe('Faculty', () => {
   it(
@@ -20,62 +20,63 @@ describe('Faculty', () => {
       expect(innerText).not.to.contain('404')
     })
   )
-  it(
-    'Can displays the correct data',
-    test(async (browser, opts) => {
-      const query = `{
-        faculty(where: {name: "haenni-eric"}) {
-          edges {
-            node {
-              id
-              title
-              slug
-              content
-              facultyDepartments {
-                edges {
-                  node {
-                    id
-                    name
-                    count
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      `
-      const data = await fetch(`http://fcc-wp.nxtshare.co.in/graphql`, {
-        method: 'POST',
-        body: JSON.stringify({
-          query
-        })
-      })
-      const jsonData = await data.json()
-      const content = jsonData.data.faculty.edges[0].node.content
-        .replace(/<Details>/g, '<div class="details">')
-        .replace(/<\/Details>/g, '</div>')
-        .replace(/src="/g, 'src="https://www.franciscan.edu')
-      const page = await browser.newPage()
-      await page.goto(`${opts.appUrl}/faculty/haenni-eric`)
-      const CONTENT_SELECTOR = 'div[data-testid*="content"]'
-      await page.waitFor(CONTENT_SELECTOR)
+  //  TODO: Refactor this to follow latest way to do this with apollo
+  // it(
+  //   'Can displays the correct data',
+  //   test(async (browser, opts) => {
+  //     const query = `{
+  //       faculty(where: {name: "haenni-eric"}) {
+  //         edges {
+  //           node {
+  //             id
+  //             title
+  //             slug
+  //             content
+  //             facultyDepartments {
+  //               edges {
+  //                 node {
+  //                   id
+  //                   name
+  //                   count
+  //                 }
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //     `
+  //     const data = await fetch(`https://wp.franciscan.university/graphql`, {
+  //       method: 'POST',
+  //       body: JSON.stringify({
+  //         query
+  //       })
+  //     })
+  //     const jsonData = await data.json()
+  //     const content = jsonData.data.faculty.edges[0].node.content
+  //       .replace(/<Details>/g, '<div class="details">')
+  //       .replace(/<\/Details>/g, '</div>')
+  //       .replace(/src="/g, 'src="https://www.franciscan.edu')
+  //     const page = await browser.newPage()
+  //     await page.goto(`${opts.appUrl}/faculty/haenni-eric`)
+  //     const CONTENT_SELECTOR = 'div[data-testid*="content"]'
+  //     await page.waitFor(CONTENT_SELECTOR)
 
-      const innerHTML = await page.evaluate(sel => {
-        return document.querySelector(sel).innerHTML
-      }, CONTENT_SELECTOR)
+  //     const innerHTML = await page.evaluate(sel => {
+  //       return document.querySelector(sel).innerHTML
+  //     }, CONTENT_SELECTOR)
 
-      const page2 = await browser.newPage()
-      page2.setContent(`<div id="ren">${content}</div>`)
+  //     const page2 = await browser.newPage()
+  //     page2.setContent(`<div id="ren">${content}</div>`)
 
-      const RENDER_SEL = '#ren'
-      await page2.waitFor(RENDER_SEL)
+  //     const RENDER_SEL = '#ren'
+  //     await page2.waitFor(RENDER_SEL)
 
-      const innerRenHTML = await page2.evaluate(sel => {
-        return document.querySelector(sel).innerHTML
-      }, RENDER_SEL)
+  //     const innerRenHTML = await page2.evaluate(sel => {
+  //       return document.querySelector(sel).innerHTML
+  //     }, RENDER_SEL)
 
-      expect(innerHTML).to.be.equal(innerRenHTML)
-    })
-  )
+  //     expect(innerHTML).to.be.equal(innerRenHTML)
+  //   })
+  // )
 })

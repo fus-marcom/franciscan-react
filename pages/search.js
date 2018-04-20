@@ -76,7 +76,9 @@ class Page extends Component {
       faculty: false
     },
     scrollY: 0,
-    windowHeight: 0
+    windowHeight: 0,
+    scrollSearch: false,
+    resultCount: 0
   }
   /**
    * Make api call based on searchTerm
@@ -85,7 +87,7 @@ class Page extends Component {
   fetchSearchTerm = () => {
     const searchType =
       this.state.searchType || '&type[]=department&type[]=major&type[]=faculty'
-    const apiUrl = 'http://104.236.41.59/wp-json/wp/v2/'
+    const apiUrl = 'https://wp.franciscan.university/wp-json/wp/v2/'
     const params = `multiple-post-type?per_page=100&search=${this.state
       .searchTerm + searchType}`
     getJSON(apiUrl + params).then(data => this.setState({ data }))

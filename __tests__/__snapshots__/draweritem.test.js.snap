@@ -1,200 +1,315 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DrawerItem should render 1`] = `
-<WithStyles(DrawerItem)>
-  <DrawerItem
-    classes={
+initialize {
+  "0": Object {
+    "attribs": Object {},
+    "children": Array [
       Object {
-        "linkText": "DrawerItem-linkText-4",
-        "nested": "DrawerItem-nested-1",
-        "nestedMore": "DrawerItem-nestedMore-2",
-        "subItemIconContainer": "DrawerItem-subItemIconContainer-6",
-        "subLink": "DrawerItem-subLink-3",
-        "subLinkText": "DrawerItem-subLinkText-5",
-      }
-    }
-  >
-    <div>
-      <WithStyles(ListItem)
-        button={true}
-        onClick={[Function]}
-      >
-        <ListItem
-          ContainerComponent="li"
-          button={true}
-          classes={
-            Object {
-              "button": "MuiListItem-button-15",
-              "container": "MuiListItem-container-8",
-              "default": "MuiListItem-default-10",
-              "dense": "MuiListItem-dense-11",
-              "disabled": "MuiListItem-disabled-12",
-              "divider": "MuiListItem-divider-13",
-              "gutters": "MuiListItem-gutters-14",
-              "keyboardFocused": "MuiListItem-keyboardFocused-9",
-              "root": "MuiListItem-root-7",
-              "secondaryAction": "MuiListItem-secondaryAction-16",
-            }
-          }
-          dense={false}
-          disableGutters={false}
-          disabled={false}
-          divider={false}
-          onClick={[Function]}
-        >
-          <WithStyles(ButtonBase)
-            className="MuiListItem-root-7 MuiListItem-default-10 MuiListItem-gutters-14 MuiListItem-button-15"
-            classes={
-              Object {
-                "keyboardFocused": "MuiListItem-keyboardFocused-9",
-              }
-            }
-            component="div"
-            disabled={false}
-            onClick={[Function]}
-          >
-            <ButtonBase
-              centerRipple={false}
-              className="MuiListItem-root-7 MuiListItem-default-10 MuiListItem-gutters-14 MuiListItem-button-15"
-              classes={
+        "attribs": Object {
+          "class": "MuiButtonBase-root-17 MuiListItem-root-7 MuiListItem-default-10 MuiListItem-gutters-14 MuiListItem-button-15",
+          "role": "button",
+          "tabindex": "0",
+        },
+        "children": Array [
+          Object {
+            "attribs": Object {
+              "class": "MuiListItemText-root-20 MuiListItemText-inset-21",
+              "style": "padding-left:16px",
+            },
+            "children": Array [],
+            "name": "div",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": Object {
+              "attribs": Object {
+                "aria-hidden": "true",
+                "class": "MuiSvgIcon-root-26",
+                "focusable": "false",
+                "viewBox": "0 0 24 24",
+              },
+              "children": Array [
                 Object {
-                  "disabled": "MuiButtonBase-disabled-18",
-                  "keyboardFocused": "MuiButtonBase-keyboardFocused-19 MuiListItem-keyboardFocused-9",
-                  "root": "MuiButtonBase-root-17",
-                }
-              }
-              component="div"
-              disableRipple={false}
-              disabled={false}
-              focusRipple={false}
-              onClick={[Function]}
-              tabIndex="0"
-              type="button"
-            >
-              <div
-                className="MuiButtonBase-root-17 MuiListItem-root-7 MuiListItem-default-10 MuiListItem-gutters-14 MuiListItem-button-15"
-                onBlur={[Function]}
-                onClick={[Function]}
-                onFocus={[Function]}
-                onKeyDown={[Function]}
-                onKeyUp={[Function]}
-                onMouseDown={[Function]}
-                onMouseLeave={[Function]}
-                onMouseUp={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                role="button"
-                tabIndex="0"
-              >
-                <WithStyles(ListItemText)
-                  inset={true}
-                  key=".0"
-                  style={
-                    Object {
-                      "paddingLeft": "16px",
-                    }
-                  }
-                >
-                  <ListItemText
-                    classes={
-                      Object {
-                        "dense": "MuiListItemText-dense-22",
-                        "inset": "MuiListItemText-inset-21",
-                        "primary": "MuiListItemText-primary-23",
-                        "root": "MuiListItemText-root-20",
-                        "secondary": "MuiListItemText-secondary-24",
-                        "textDense": "MuiListItemText-textDense-25",
-                      }
-                    }
-                    disableTypography={false}
-                    inset={true}
-                    style={
-                      Object {
-                        "paddingLeft": "16px",
-                      }
-                    }
-                  >
-                    <div
-                      className="MuiListItemText-root-20 MuiListItemText-inset-21"
-                      style={
-                        Object {
-                          "paddingLeft": "16px",
-                        }
-                      }
-                    />
-                  </ListItemText>
-                </WithStyles(ListItemText)>
-                <pure(ExpandMore)
-                  key=".1"
-                >
-                  <ExpandMore>
-                    <WithStyles(SvgIcon)>
-                      <SvgIcon
-                        classes={
-                          Object {
-                            "colorAction": "MuiSvgIcon-colorAction-29",
-                            "colorDisabled": "MuiSvgIcon-colorDisabled-30",
-                            "colorError": "MuiSvgIcon-colorError-31",
-                            "colorPrimary": "MuiSvgIcon-colorPrimary-27",
-                            "colorSecondary": "MuiSvgIcon-colorSecondary-28",
-                            "root": "MuiSvgIcon-root-26",
-                          }
-                        }
-                        color="inherit"
-                        viewBox="0 0 24 24"
-                      >
-                        <svg
-                          aria-hidden="true"
-                          className="MuiSvgIcon-root-26"
-                          focusable="false"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                          />
-                        </svg>
-                      </SvgIcon>
-                    </WithStyles(SvgIcon)>
-                  </ExpandMore>
-                </pure(ExpandMore)>
-                <WithStyles(TouchRipple)
-                  center={false}
-                  innerRef={[Function]}
-                >
-                  <TouchRipple
-                    center={false}
-                    classes={
-                      Object {
-                        "child": "MuiTouchRipple-child-36",
-                        "childLeaving": "MuiTouchRipple-childLeaving-37",
-                        "childPulsate": "MuiTouchRipple-childPulsate-38",
-                        "ripple": "MuiTouchRipple-ripple-33",
-                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-35",
-                        "rippleVisible": "MuiTouchRipple-rippleVisible-34",
-                        "root": "MuiTouchRipple-root-32",
-                      }
-                    }
-                  >
-                    <TransitionGroup
-                      childFactory={[Function]}
-                      className="MuiTouchRipple-root-32"
-                      component="span"
-                      enter={true}
-                      exit={true}
-                    >
-                      <span
-                        className="MuiTouchRipple-root-32"
-                      />
-                    </TransitionGroup>
-                  </TouchRipple>
-                </WithStyles(TouchRipple)>
-              </div>
-            </ButtonBase>
-          </WithStyles(ButtonBase)>
-        </ListItem>
-      </WithStyles(ListItem)>
-    </div>
-  </DrawerItem>
-</WithStyles(DrawerItem)>
+                  "attribs": Object {
+                    "d": "M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z",
+                  },
+                  "children": Array [],
+                  "name": "path",
+                  "namespace": "http://www.w3.org/2000/svg",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "d": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "d": undefined,
+                  },
+                },
+              ],
+              "name": "svg",
+              "namespace": "http://www.w3.org/2000/svg",
+              "next": Object {
+                "attribs": Object {
+                  "class": "MuiTouchRipple-root-32",
+                },
+                "children": Array [],
+                "name": "span",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": null,
+                "parent": [Circular],
+                "prev": [Circular],
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "class": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "class": undefined,
+                },
+              },
+              "parent": [Circular],
+              "prev": [Circular],
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "aria-hidden": undefined,
+                "class": undefined,
+                "focusable": undefined,
+                "viewBox": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "aria-hidden": undefined,
+                "class": undefined,
+                "focusable": undefined,
+                "viewBox": undefined,
+              },
+            },
+            "parent": [Circular],
+            "prev": null,
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
+              "style": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "class": undefined,
+              "style": undefined,
+            },
+          },
+          Object {
+            "attribs": Object {
+              "aria-hidden": "true",
+              "class": "MuiSvgIcon-root-26",
+              "focusable": "false",
+              "viewBox": "0 0 24 24",
+            },
+            "children": Array [
+              Object {
+                "attribs": Object {
+                  "d": "M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z",
+                },
+                "children": Array [],
+                "name": "path",
+                "namespace": "http://www.w3.org/2000/svg",
+                "next": null,
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "d": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "d": undefined,
+                },
+              },
+            ],
+            "name": "svg",
+            "namespace": "http://www.w3.org/2000/svg",
+            "next": Object {
+              "attribs": Object {
+                "class": "MuiTouchRipple-root-32",
+              },
+              "children": Array [],
+              "name": "span",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": null,
+              "parent": [Circular],
+              "prev": [Circular],
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "class": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "class": undefined,
+              },
+            },
+            "parent": [Circular],
+            "prev": Object {
+              "attribs": Object {
+                "class": "MuiListItemText-root-20 MuiListItemText-inset-21",
+                "style": "padding-left:16px",
+              },
+              "children": Array [],
+              "name": "div",
+              "namespace": "http://www.w3.org/1999/xhtml",
+              "next": [Circular],
+              "parent": [Circular],
+              "prev": null,
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "class": undefined,
+                "style": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "class": undefined,
+                "style": undefined,
+              },
+            },
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "aria-hidden": undefined,
+              "class": undefined,
+              "focusable": undefined,
+              "viewBox": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "aria-hidden": undefined,
+              "class": undefined,
+              "focusable": undefined,
+              "viewBox": undefined,
+            },
+          },
+          Object {
+            "attribs": Object {
+              "class": "MuiTouchRipple-root-32",
+            },
+            "children": Array [],
+            "name": "span",
+            "namespace": "http://www.w3.org/1999/xhtml",
+            "next": null,
+            "parent": [Circular],
+            "prev": Object {
+              "attribs": Object {
+                "aria-hidden": "true",
+                "class": "MuiSvgIcon-root-26",
+                "focusable": "false",
+                "viewBox": "0 0 24 24",
+              },
+              "children": Array [
+                Object {
+                  "attribs": Object {
+                    "d": "M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z",
+                  },
+                  "children": Array [],
+                  "name": "path",
+                  "namespace": "http://www.w3.org/2000/svg",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "d": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "d": undefined,
+                  },
+                },
+              ],
+              "name": "svg",
+              "namespace": "http://www.w3.org/2000/svg",
+              "next": [Circular],
+              "parent": [Circular],
+              "prev": Object {
+                "attribs": Object {
+                  "class": "MuiListItemText-root-20 MuiListItemText-inset-21",
+                  "style": "padding-left:16px",
+                },
+                "children": Array [],
+                "name": "div",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": [Circular],
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "class": undefined,
+                  "style": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "class": undefined,
+                  "style": undefined,
+                },
+              },
+              "type": "tag",
+              "x-attribsNamespace": Object {
+                "aria-hidden": undefined,
+                "class": undefined,
+                "focusable": undefined,
+                "viewBox": undefined,
+              },
+              "x-attribsPrefix": Object {
+                "aria-hidden": undefined,
+                "class": undefined,
+                "focusable": undefined,
+                "viewBox": undefined,
+              },
+            },
+            "type": "tag",
+            "x-attribsNamespace": Object {
+              "class": undefined,
+            },
+            "x-attribsPrefix": Object {
+              "class": undefined,
+            },
+          },
+        ],
+        "name": "div",
+        "namespace": "http://www.w3.org/1999/xhtml",
+        "next": null,
+        "parent": [Circular],
+        "prev": null,
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "class": undefined,
+          "role": undefined,
+          "tabindex": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "class": undefined,
+          "role": undefined,
+          "tabindex": undefined,
+        },
+      },
+    ],
+    "name": "div",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {},
+    "x-attribsPrefix": Object {},
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xml": false,
+  },
+}
 `;
