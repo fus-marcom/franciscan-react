@@ -147,6 +147,7 @@ const IndexPage = ({ classes }) => (
             profileName="Maggie McDermott"
             content="My choice to say Yes to giving my all even in those trying moments can be attributed to the growth and education I received at Franciscan."
             profileLink="/alumni-outcomes/mcdermott-maggie"
+            bgContain
           />
         </Grid>
         <Grid item className={classes.gridItemFix} xs={12} sm={6}>

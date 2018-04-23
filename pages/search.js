@@ -5,6 +5,7 @@ import Head from 'next/head'
 import withRoot from '../components/withRoot'
 import { getJSON } from '../utils/fetch'
 import debounce from 'lodash.debounce'
+import throttle from 'lodash.throttle'
 import {
   FormLabel,
   FormControl,
@@ -73,7 +74,11 @@ class Page extends Component {
       department: false,
       major: false,
       faculty: false
-    }
+    },
+    scrollY: 0,
+    windowHeight: 0,
+    scrollSearch: false,
+    resultCount: 0
   }
   /**
    * Make api call based on searchTerm
@@ -82,7 +87,7 @@ class Page extends Component {
   fetchSearchTerm = () => {
     const searchType =
       this.state.searchType || '&type[]=department&type[]=major&type[]=faculty'
-    const apiUrl = 'http://104.236.41.59/wp-json/wp/v2/'
+    const apiUrl = 'https://wp.franciscan.university/wp-json/wp/v2/'
     const params = `multiple-post-type?per_page=100&search=${this.state
       .searchTerm + searchType}`
     getJSON(apiUrl + params).then(data => this.setState({ data }))
@@ -193,6 +198,28 @@ class Page extends Component {
     this.setState({ [event.target.name]: event.target.value })
   }
 
+  componentDidMount () {
+    window.addEventListener('scroll', this.throttleScroll)
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.throttleScroll)
+  }
+
+  handleScroll = () => {
+    this.setState(
+      { scrollY: window.scrollY, windowHeight: window.innerHeight },
+      () => {
+        if (this.state.scrollY > this.state.windowHeight - 500) {
+          // TODO: if scroll is close to bottom then search
+          console.log('scroll')
+        }
+      }
+    )
+  }
+
+  throttleScroll = throttle(this.handleScroll, 200)
+
   render () {
     const { classes } = this.props
     const { searchTerm } = this.state
@@ -221,7 +248,7 @@ class Page extends Component {
               </FormControl>
             </Grid>
             {/* TODO: Align these more precisely */}
-            <Grid item xs={3} style={{ alignSelf: 'center' }}>
+            <Grid item xs={3} style={{ alignSelf: 'center', marginTop: 4 }}>
               <FormControl className={classes.formControl}>
                 <FormHelperText>Sort By</FormHelperText>
                 <Select

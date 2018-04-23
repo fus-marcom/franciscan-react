@@ -23,7 +23,8 @@ class Layout extends Component {
       academics: false,
       admissions: false,
       'faith-and-life': false
-    }
+    },
+    drawerSubItems: {}
   }
 
   toggleDrawer = itemId => {
@@ -40,6 +41,15 @@ class Layout extends Component {
     }))
   }
 
+  expandSubItem = itemId => {
+    this.setState(prevState => ({
+      drawerSubItems: {
+        ...prevState.drawerSubItems,
+        [itemId]: !prevState.drawerSubItems[itemId]
+      }
+    }))
+  }
+
   render () {
     const { classes } = this.props
     return (
@@ -49,6 +59,8 @@ class Layout extends Component {
           toggleDrawer={this.toggleDrawer}
           drawerItems={this.state.drawerItems}
           expandItem={this.expandItem}
+          drawerSubItems={this.state.drawerSubItems}
+          expandSubItem={this.expandSubItem}
         />
         <AppBar toggleDrawer={this.toggleDrawer} />
         <main className={classes.main}>{this.props.children}</main>

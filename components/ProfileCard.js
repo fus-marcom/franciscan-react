@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { withStyles } from 'material-ui/styles'
-import Card, { CardMedia, CardActions, CardContent } from 'material-ui/Card'
+import Card, { CardActions, CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import Button from 'material-ui/Button'
 
@@ -40,16 +40,23 @@ class ProfileCard extends Component {
       profileType,
       profileName,
       content,
-      profileLink,
-      bgPosY
+      profileLink
     } = this.props
     return (
       <Card className={classes.card}>
-        <CardMedia
+        {/* <CardMedia
           className={classes.media}
           image={profileImg}
           title={profileImgTitle}
-          style={{ backgroundPositionY: bgPosY }}
+          style={{
+            backgroundPositionY: bgPosY,
+            backgroundSize: `${bgContain ? 'contain' : 'cover'}`
+          }}
+        /> */}
+        <img
+          src={profileImg}
+          title={profileImgTitle}
+          style={{ width: '100%' }}
         />
         <CardContent>
           <Typography variant="caption" className={classes.category}>
@@ -62,15 +69,17 @@ class ProfileCard extends Component {
             {content}
           </Typography>
         </CardContent>
-        <CardActions>
-          <Fragment>
-            <Link prefetch href={profileLink}>
-              <Button size="small" color="primary">
-                Learn More
-              </Button>
-            </Link>
-          </Fragment>
-        </CardActions>
+        {profileLink && (
+          <CardActions>
+            <Fragment>
+              <Link prefetch href={profileLink}>
+                <Button size="small" color="primary">
+                  Learn More
+                </Button>
+              </Link>
+            </Fragment>
+          </CardActions>
+        )}
       </Card>
     )
   }

@@ -21,6 +21,11 @@ const translationObj = {
     type: 'departments',
     id: { default: 'departments' }
   },
+  'exploring-majors': {
+    page: '/page',
+    type: 'academicsPages',
+    id: { default: 'exploring-majors' }
+  },
   'study-abroad': {
     page: '/page',
     type: 'austriaPages',
@@ -108,7 +113,7 @@ const translationObj = {
     id: { default: 'classics', classes: 'classics-classes' }
   },
   sabl: {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: { default: 'sabl', classes: 'classics-classes' }
   },
