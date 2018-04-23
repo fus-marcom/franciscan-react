@@ -113,24 +113,23 @@ class Missions extends Component {
         </Head>
         {/* Put content under here */}
         <Hero
-          backgroundImg="../static/img/biology-students.jpg"
-          titleText="Missions"
+          backgroundImg="../static/img/Fr-Shawn-with-Missionaries-Blue.png"
+          titleText="Missions of Peace"
           // subtitleText={<span>Missions</span>}
-          primaryBtnText="Donate"
-          primaryBtnLink="https://franciscanuniversity.force.com/portal"
         />
         <TextSection
-          sectionTitle="Our Vision"
-          text=" To educate, evangelize, and send forth joyful disciples to restore all things in Christ."
+          sectionTitle="Serve - Inspire - Evangelize"
+          text="Blessed are the peacemakers, for they shall be called children of God."
           btnLink="/about/our-mission"
           btnText="Learn More"
         />
         <TextSection
-          sectionTitle="15 to 1 Student to Faculty Ratio"
+          sectionTitle="Mission trips across the U.S. and throughout the Western Hemisphere"
           bgColor="#21412a"
           textColor="#fff"
           borderColor="#998643"
         />
+
         <div className={classes.contentContainer}>
           <Masonry>
             <Grid
@@ -146,7 +145,7 @@ class Missions extends Component {
               >
                 <iframe
                   className={classes.videoIframe}
-                  src="https://www.youtube.com/embed/HpzwoD2oVSQ?modestbranding=1&rel=0&color=white"
+                  src="https://www.youtube.com/embed/bHSbib2wt90"
                   frameBorder="0"
                   allow="encrypted-media"
                   allowFullScreen
@@ -163,35 +162,89 @@ class Missions extends Component {
               lg={6}
             >
               <ProfileCard
-                profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Students/Noah_Fisher_landing_v2.jpg"
-                profileImgTitle="Noah Fisher"
-                profileType="Student Profile"
-                profileName="Noah Fisher"
-                content="I first learned about Franciscan from some people at my parish who studied here. They recommended I check it out, but I wasn’t so sure. When I visited, though, I was blown away by the people I met; they were so genuine and helpful. They were the biggest reason I decided to come to Franciscan."
-                profileLink="/studentprofiles/noah-fisher"
+                profileImg="../static/img/SaintJunipero.jpg"
+                profileImgTitle="Saint Junipero Serra"
+                profileName="Saint Junipero Serra"
+                content="Image by Amber Pitts -SENT Missionary & FUS Alumni"
+                profileLink="#"
+              />
+            </Grid>
+
+            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+              <Typography type="display1">
+                Through those activities, but also through their personal
+                witness of the love of Christ, students seek to be instruments
+                of the Lord in promoting the culture of life. These missionary
+                efforts are one way the university lives out the mandate of Ex
+                Corde Ecclesiae that Catholic universities serve as “a living
+                institutional witness to Christ and his message.
+              </Typography>
+            </Grid>
+
+            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+              <Typography type="display1">
+                Through those activities, but also through their personal
+                witness of the love of Christ, students seek to be instruments
+                of the Lord in promoting the culture of life. These missionary
+                efforts are one way the university lives out the mandate of Ex
+                Corde Ecclesiae that Catholic universities serve as “a living
+                institutional witness to Christ and his message.”
+              </Typography>
+            </Grid>
+
+            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+              <Typography type="display1">
+                The trips are organized, planned, and funded by the students
+                themselves, but they must be approved by the director of
+                Missionary Outreach in order to advertise, fund raise, or
+                operate on campus.
+              </Typography>
+            </Grid>
+          </Masonry>
+        </div>
+
+        <div className="missionHead">Spring Mission Trips:</div>
+
+        <div className={classes.contentContainer}>
+          <Masonry>
+            <Grid
+              item
+              className={classes.gridItemFix}
+              xs={12}
+              sm={6}
+              md={6}
+              lg={6}
+            >
+              <ProfileCard
+                profileImg="../static/img/SonlifeSpringMission.jpg"
+                profileImgTitle="Son Life (Panama City, Florida) Mission"
+                profileType="Spring Mission"
+                profileName="Son Life (Panama City, Florida) Mission"
+                content="This is a Spring Break evangelization trip to the beaches of Panama City, Florida bringing Christ's love to other college students, the marginalized, and non-believers."
+                profileLink="#"
               />
             </Grid>
 
             <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
               <ProfileCard
-                profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Alumni_Profiles/IMG_1132.JPG"
-                profileImgTitle="Maggie McDermott"
-                profileType="Alumni Profile"
-                profileName="Maggie McDermott"
-                content="My choice to say Yes to giving my all even in those trying moments can be attributed to the growth and education I received at Franciscan."
-                profileLink="/alumni-outcomes/mcdermott-maggie"
+                profileImg="../static/img/SpringEcuadorMission.jpeg"
+                profileImgTitle="Ecuador Spring Mission"
+                profileType="Spring Mission"
+                profileName="Ecuador Spring Mission"
+                content="This mission focuses on caring for the whole person by bringing the sacraments and basic medical care to rural Ecuadorian communities.This mission focuses on caring for the whole person by bringing the sacraments and basic medical care to rural Ecuadorian communities."
+                profileLink="#"
               />
             </Grid>
 
             <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
               <ProfileCard
-                profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Faculty/Education/boury.jpg?n=1668"
+                profileImg="../static/img/Springsandiegomission.jpg"
                 bgPosY="20%"
-                profileImgTitle="Dr. Tiffany Boury"
-                profileType="Faculty Profile"
-                profileName="Dr. Tiffany Boury"
-                content="Associate Professor of Education"
-                profileLink="/faculty/boury-tiffany"
+                profileImgTitle="San Diego Mission"
+                profileType="Spring Mission"
+                profileName="San Diego Mission"
+                content="This mission focuses on uniting all to Christ through retreat ministry sharing the awesome truth of St. Pope John Paul II’s Theology of the Body to junior high and high school students at local parish youth groups and high schools."
+                profileLink="#"
               />
             </Grid>
             <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
