@@ -10,6 +10,9 @@ import TextSection from '../components/TextSection'
 import Grid from 'material-ui/Grid'
 import Card, { CardMedia, CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
+// import throttle from 'lodash/throttle'
+// import { sliceHeaders } from '../utils/getTopCoord'
+// import each from 'lodash/each'
 
 const styles = theme => ({
   root: {
@@ -95,6 +98,58 @@ class Missions extends Component {
   // static async getInitialProps ({ query: { id, type } }) {
   //   return { id, type }
   // }
+
+  // constructor (props) {
+  //   super(props)
+  //   this.state = {
+  //     headerPositions: [],
+  //     scrollY: 0,
+  //     activeSection: 0
+  //   }
+  //   this.handleScroll = throttle(this.handleScroll, 200)
+  // }
+
+  // componentDidMount () {
+  //   window.addEventListener('scroll', this.handleScroll)
+  //   this.setHeaders(sliceHeaders(this.refs))
+  // }
+
+  // componentWillUnmount () {
+  //   window.removeEventListener('scroll', this.handleScroll)
+  // }
+
+  // setHeaders = headerPositions => {
+  //   this.setState({ headerPositions: headerPositions })
+  // }
+
+  // handleScroll = () => {
+  //   this.setState({ scrollY: window.scrollY }, () => {
+  //     forEach(this.state.headerPositions, (position, key) => {
+  //       if (this.state.scrollY > position - 1) {
+  //         this.setState({ activeSection: key })
+  //       }
+  //     })
+  //   })
+  // }
+
+  // handleNext = () => {
+  //   const { stepIndex } = this.state
+  //   if (stepIndex < 2) {
+  //     this.setState({ stepIndex: stepIndex + 1 })
+  //   }
+  // }
+
+  // handlePrev = () => {
+  //   const { stepIndex } = this.state
+  //   if (stepIndex > 0) {
+  //     this.setState({ stepIndex: stepIndex - 1 })
+  //   }
+  // }
+
+  // scrollToItem = header => {
+  //   this.refs[header].scrollIntoView()
+  // }
+
   render () {
     const { classes } = this.props
     return (
@@ -203,7 +258,24 @@ class Missions extends Component {
           </Masonry>
         </div>
 
-        <div className="missionHead">Spring Mission Trips:</div>
+        {/* <ul className="scroll-spy-nav">
+          <li
+            className={this.state.activeSection === 'spring' && 'active'}
+            onClick={() => this.scrollToItem('spring')}
+          >
+            Spring Missions
+          </li>
+          <li
+            className={this.state.activeSection === 'summer' && 'active'}
+            onClick={() => this.scrollToItem('summer')}
+          >
+            Summer Missions
+          </li>
+        </ul> */}
+
+        {/* <div className="missionHead" ref="spring" id="spring">
+          Spring Mission Trips:
+        </div> */}
 
         <div className={classes.contentContainer}>
           <Masonry>
@@ -282,6 +354,9 @@ class Missions extends Component {
             </Grid>
           </Masonry>
         </div>
+        {/* <div className="missionHead" ref="summer" id="summer">
+          Summer Mission Trips:
+        </div> */}
       </Layout>
     )
   }
