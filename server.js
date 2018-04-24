@@ -13,7 +13,14 @@ const translationObj = {
   contact: { page: '/directory' },
   news: { page: '/news', type: 'news' },
   search: { page: '/search' },
+  'single-mission': { page: '/single-mission' },
   'missionary-outreach': { page: '/missions' },
+  // TODO: use the commented route below when the singleMission page is ready
+  // 'missionary-outreach': {
+  //   page: { default: '/missions', standard: '/single-mission' },
+  //   type: 'missionsPages',
+  //   id: { default: 'missionary-outreach' }
+  // },
   major: { page: '/major' },
   minor: { page: '/minor' },
   departments: {
