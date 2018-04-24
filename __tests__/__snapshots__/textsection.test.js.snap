@@ -1,597 +1,738 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextSection should render 1`] = `
-initialize {
-  "0": Object {
-    "attribs": Object {
-      "class": "TextSection-section-1",
-      "style": "border-top:2px solid undefined;border-bottom:2px solid undefined",
-    },
-    "children": Array [
+<WithStyles(TextSection)>
+  <TextSection
+    classes={
       Object {
-        "attribs": Object {
-          "class": "TextSection-innerContainer-2",
-        },
-        "children": Array [
-          Object {
-            "attribs": Object {
-              "class": "MuiTypography-root-7 MuiTypography-display2-10 MuiTypography-gutterBottom-24",
-            },
-            "children": Array [],
-            "name": "h1",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": Object {
-              "attribs": Object {
-                "class": "MuiTypography-root-7 MuiTypography-body1-16 MuiTypography-gutterBottom-24 TextSection-sectionText-3",
-              },
-              "children": Array [],
-              "name": "p",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": null,
-              "parent": [Circular],
-              "prev": [Circular],
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "class": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "class": undefined,
-              },
-            },
-            "parent": [Circular],
-            "prev": null,
-            "type": "tag",
-            "x-attribsNamespace": Object {
-              "class": undefined,
-            },
-            "x-attribsPrefix": Object {
-              "class": undefined,
-            },
-          },
-          Object {
-            "attribs": Object {
-              "class": "MuiTypography-root-7 MuiTypography-body1-16 MuiTypography-gutterBottom-24 TextSection-sectionText-3",
-            },
-            "children": Array [],
-            "name": "p",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": null,
-            "parent": [Circular],
-            "prev": Object {
-              "attribs": Object {
-                "class": "MuiTypography-root-7 MuiTypography-display2-10 MuiTypography-gutterBottom-24",
-              },
-              "children": Array [],
-              "name": "h1",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": [Circular],
-              "parent": [Circular],
-              "prev": null,
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "class": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "class": undefined,
-              },
-            },
-            "type": "tag",
-            "x-attribsNamespace": Object {
-              "class": undefined,
-            },
-            "x-attribsPrefix": Object {
-              "class": undefined,
-            },
-          },
-        ],
-        "name": "div",
-        "namespace": "http://www.w3.org/1999/xhtml",
-        "next": null,
-        "parent": [Circular],
-        "prev": null,
-        "type": "tag",
-        "x-attribsNamespace": Object {
-          "class": undefined,
-        },
-        "x-attribsPrefix": Object {
-          "class": undefined,
-        },
-      },
-    ],
-    "name": "div",
-    "namespace": "http://www.w3.org/1999/xhtml",
-    "next": null,
-    "parent": null,
-    "prev": null,
-    "root": Object {
-      "attribs": Object {},
-      "children": Array [
-        [Circular],
-      ],
-      "name": "root",
-      "namespace": "http://www.w3.org/1999/xhtml",
-      "next": null,
-      "parent": null,
-      "prev": null,
-      "type": "root",
-      "x-attribsNamespace": Object {},
-      "x-attribsPrefix": Object {},
-    },
-    "type": "tag",
-    "x-attribsNamespace": Object {
-      "class": undefined,
-      "style": undefined,
-    },
-    "x-attribsPrefix": Object {
-      "class": undefined,
-      "style": undefined,
-    },
-  },
-  "_root": [Circular],
-  "length": 1,
-  "options": Object {
-    "decodeEntities": true,
-    "normalizeWhitespace": false,
-    "withDomLvl1": true,
-    "xml": false,
-  },
-}
+        "heroBtn": "TextSection-heroBtn-4",
+        "innerContainer": "TextSection-innerContainer-2",
+        "invertedBtn": "TextSection-invertedBtn-5",
+        "section": "TextSection-section-1",
+        "sectionText": "TextSection-sectionText-3",
+        "white": "TextSection-white-6",
+      }
+    }
+  >
+    <div
+      className="TextSection-section-1"
+      style={
+        Object {
+          "backgroundColor": undefined,
+          "borderBottom": "2px solid undefined",
+          "borderTop": "2px solid undefined",
+        }
+      }
+    >
+      <div
+        className="TextSection-innerContainer-2"
+      >
+        <WithStyles(Typography)
+          gutterBottom={true}
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          variant="display2"
+        >
+          <Typography
+            align="inherit"
+            classes={
+              Object {
+                "alignCenter": "MuiTypography-alignCenter-20",
+                "alignJustify": "MuiTypography-alignJustify-22",
+                "alignLeft": "MuiTypography-alignLeft-19",
+                "alignRight": "MuiTypography-alignRight-21",
+                "body1": "MuiTypography-body1-16",
+                "body2": "MuiTypography-body2-15",
+                "button": "MuiTypography-button-18",
+                "caption": "MuiTypography-caption-17",
+                "colorError": "MuiTypography-colorError-30",
+                "colorInherit": "MuiTypography-colorInherit-26",
+                "colorPrimary": "MuiTypography-colorPrimary-27",
+                "colorSecondary": "MuiTypography-colorSecondary-28",
+                "colorTextSecondary": "MuiTypography-colorTextSecondary-29",
+                "display1": "MuiTypography-display1-11",
+                "display2": "MuiTypography-display2-10",
+                "display3": "MuiTypography-display3-9",
+                "display4": "MuiTypography-display4-8",
+                "gutterBottom": "MuiTypography-gutterBottom-24",
+                "headline": "MuiTypography-headline-12",
+                "noWrap": "MuiTypography-noWrap-23",
+                "paragraph": "MuiTypography-paragraph-25",
+                "root": "MuiTypography-root-7",
+                "subheading": "MuiTypography-subheading-14",
+                "title": "MuiTypography-title-13",
+              }
+            }
+            color="default"
+            gutterBottom={true}
+            headlineMapping={
+              Object {
+                "body1": "p",
+                "body2": "aside",
+                "display1": "h1",
+                "display2": "h1",
+                "display3": "h1",
+                "display4": "h1",
+                "headline": "h1",
+                "subheading": "h3",
+                "title": "h2",
+              }
+            }
+            noWrap={false}
+            paragraph={false}
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            variant="display2"
+          >
+            <h1
+              className="MuiTypography-root-7 MuiTypography-display2-10 MuiTypography-gutterBottom-24"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+            />
+          </Typography>
+        </WithStyles(Typography)>
+        <WithStyles(Typography)
+          className="TextSection-sectionText-3"
+          gutterBottom={true}
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          variant="body1"
+        >
+          <Typography
+            align="inherit"
+            className="TextSection-sectionText-3"
+            classes={
+              Object {
+                "alignCenter": "MuiTypography-alignCenter-20",
+                "alignJustify": "MuiTypography-alignJustify-22",
+                "alignLeft": "MuiTypography-alignLeft-19",
+                "alignRight": "MuiTypography-alignRight-21",
+                "body1": "MuiTypography-body1-16",
+                "body2": "MuiTypography-body2-15",
+                "button": "MuiTypography-button-18",
+                "caption": "MuiTypography-caption-17",
+                "colorError": "MuiTypography-colorError-30",
+                "colorInherit": "MuiTypography-colorInherit-26",
+                "colorPrimary": "MuiTypography-colorPrimary-27",
+                "colorSecondary": "MuiTypography-colorSecondary-28",
+                "colorTextSecondary": "MuiTypography-colorTextSecondary-29",
+                "display1": "MuiTypography-display1-11",
+                "display2": "MuiTypography-display2-10",
+                "display3": "MuiTypography-display3-9",
+                "display4": "MuiTypography-display4-8",
+                "gutterBottom": "MuiTypography-gutterBottom-24",
+                "headline": "MuiTypography-headline-12",
+                "noWrap": "MuiTypography-noWrap-23",
+                "paragraph": "MuiTypography-paragraph-25",
+                "root": "MuiTypography-root-7",
+                "subheading": "MuiTypography-subheading-14",
+                "title": "MuiTypography-title-13",
+              }
+            }
+            color="default"
+            gutterBottom={true}
+            headlineMapping={
+              Object {
+                "body1": "p",
+                "body2": "aside",
+                "display1": "h1",
+                "display2": "h1",
+                "display3": "h1",
+                "display4": "h1",
+                "headline": "h1",
+                "subheading": "h3",
+                "title": "h2",
+              }
+            }
+            noWrap={false}
+            paragraph={false}
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            variant="body1"
+          >
+            <p
+              className="MuiTypography-root-7 MuiTypography-body1-16 MuiTypography-gutterBottom-24 TextSection-sectionText-3"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+            />
+          </Typography>
+        </WithStyles(Typography)>
+      </div>
+    </div>
+  </TextSection>
+</WithStyles(TextSection)>
 `;
 
 exports[`TextSection should render a title when passed in 1`] = `
-initialize {
-  "0": Object {
-    "attribs": Object {
-      "class": "TextSection-section-1",
-      "style": "border-top:2px solid undefined;border-bottom:2px solid undefined",
-    },
-    "children": Array [
+<WithStyles(TextSection)
+  sectionTitle="Test Title"
+>
+  <TextSection
+    classes={
       Object {
-        "attribs": Object {
-          "class": "TextSection-innerContainer-2",
-        },
-        "children": Array [
-          Object {
-            "attribs": Object {
-              "class": "MuiTypography-root-7 MuiTypography-display2-10 MuiTypography-gutterBottom-24",
-            },
-            "children": Array [
+        "heroBtn": "TextSection-heroBtn-4",
+        "innerContainer": "TextSection-innerContainer-2",
+        "invertedBtn": "TextSection-invertedBtn-5",
+        "section": "TextSection-section-1",
+        "sectionText": "TextSection-sectionText-3",
+        "white": "TextSection-white-6",
+      }
+    }
+    sectionTitle="Test Title"
+  >
+    <div
+      className="TextSection-section-1"
+      style={
+        Object {
+          "backgroundColor": undefined,
+          "borderBottom": "2px solid undefined",
+          "borderTop": "2px solid undefined",
+        }
+      }
+    >
+      <div
+        className="TextSection-innerContainer-2"
+      >
+        <WithStyles(Typography)
+          gutterBottom={true}
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          variant="display2"
+        >
+          <Typography
+            align="inherit"
+            classes={
               Object {
-                "data": "Test Title",
-                "next": null,
-                "parent": [Circular],
-                "prev": null,
-                "type": "text",
-              },
-            ],
-            "name": "h1",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": Object {
-              "attribs": Object {
-                "class": "MuiTypography-root-7 MuiTypography-body1-16 MuiTypography-gutterBottom-24 TextSection-sectionText-3",
-              },
-              "children": Array [],
-              "name": "p",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": null,
-              "parent": [Circular],
-              "prev": [Circular],
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "class": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "class": undefined,
-              },
-            },
-            "parent": [Circular],
-            "prev": null,
-            "type": "tag",
-            "x-attribsNamespace": Object {
-              "class": undefined,
-            },
-            "x-attribsPrefix": Object {
-              "class": undefined,
-            },
-          },
-          Object {
-            "attribs": Object {
-              "class": "MuiTypography-root-7 MuiTypography-body1-16 MuiTypography-gutterBottom-24 TextSection-sectionText-3",
-            },
-            "children": Array [],
-            "name": "p",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": null,
-            "parent": [Circular],
-            "prev": Object {
-              "attribs": Object {
-                "class": "MuiTypography-root-7 MuiTypography-display2-10 MuiTypography-gutterBottom-24",
-              },
-              "children": Array [
+                "alignCenter": "MuiTypography-alignCenter-20",
+                "alignJustify": "MuiTypography-alignJustify-22",
+                "alignLeft": "MuiTypography-alignLeft-19",
+                "alignRight": "MuiTypography-alignRight-21",
+                "body1": "MuiTypography-body1-16",
+                "body2": "MuiTypography-body2-15",
+                "button": "MuiTypography-button-18",
+                "caption": "MuiTypography-caption-17",
+                "colorError": "MuiTypography-colorError-30",
+                "colorInherit": "MuiTypography-colorInherit-26",
+                "colorPrimary": "MuiTypography-colorPrimary-27",
+                "colorSecondary": "MuiTypography-colorSecondary-28",
+                "colorTextSecondary": "MuiTypography-colorTextSecondary-29",
+                "display1": "MuiTypography-display1-11",
+                "display2": "MuiTypography-display2-10",
+                "display3": "MuiTypography-display3-9",
+                "display4": "MuiTypography-display4-8",
+                "gutterBottom": "MuiTypography-gutterBottom-24",
+                "headline": "MuiTypography-headline-12",
+                "noWrap": "MuiTypography-noWrap-23",
+                "paragraph": "MuiTypography-paragraph-25",
+                "root": "MuiTypography-root-7",
+                "subheading": "MuiTypography-subheading-14",
+                "title": "MuiTypography-title-13",
+              }
+            }
+            color="default"
+            gutterBottom={true}
+            headlineMapping={
+              Object {
+                "body1": "p",
+                "body2": "aside",
+                "display1": "h1",
+                "display2": "h1",
+                "display3": "h1",
+                "display4": "h1",
+                "headline": "h1",
+                "subheading": "h3",
+                "title": "h2",
+              }
+            }
+            noWrap={false}
+            paragraph={false}
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            variant="display2"
+          >
+            <h1
+              className="MuiTypography-root-7 MuiTypography-display2-10 MuiTypography-gutterBottom-24"
+              style={
                 Object {
-                  "data": "Test Title",
-                  "next": null,
-                  "parent": [Circular],
-                  "prev": null,
-                  "type": "text",
-                },
-              ],
-              "name": "h1",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": [Circular],
-              "parent": [Circular],
-              "prev": null,
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "class": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "class": undefined,
-              },
-            },
-            "type": "tag",
-            "x-attribsNamespace": Object {
-              "class": undefined,
-            },
-            "x-attribsPrefix": Object {
-              "class": undefined,
-            },
-          },
-        ],
-        "name": "div",
-        "namespace": "http://www.w3.org/1999/xhtml",
-        "next": null,
-        "parent": [Circular],
-        "prev": null,
-        "type": "tag",
-        "x-attribsNamespace": Object {
-          "class": undefined,
-        },
-        "x-attribsPrefix": Object {
-          "class": undefined,
-        },
-      },
-    ],
-    "name": "div",
-    "namespace": "http://www.w3.org/1999/xhtml",
-    "next": null,
-    "parent": null,
-    "prev": null,
-    "root": Object {
-      "attribs": Object {},
-      "children": Array [
-        [Circular],
-      ],
-      "name": "root",
-      "namespace": "http://www.w3.org/1999/xhtml",
-      "next": null,
-      "parent": null,
-      "prev": null,
-      "type": "root",
-      "x-attribsNamespace": Object {},
-      "x-attribsPrefix": Object {},
-    },
-    "type": "tag",
-    "x-attribsNamespace": Object {
-      "class": undefined,
-      "style": undefined,
-    },
-    "x-attribsPrefix": Object {
-      "class": undefined,
-      "style": undefined,
-    },
-  },
-  "_root": [Circular],
-  "length": 1,
-  "options": Object {
-    "decodeEntities": true,
-    "normalizeWhitespace": false,
-    "withDomLvl1": true,
-    "xml": false,
-  },
-}
+                  "color": undefined,
+                }
+              }
+            >
+              Test Title
+            </h1>
+          </Typography>
+        </WithStyles(Typography)>
+        <WithStyles(Typography)
+          className="TextSection-sectionText-3"
+          gutterBottom={true}
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          variant="body1"
+        >
+          <Typography
+            align="inherit"
+            className="TextSection-sectionText-3"
+            classes={
+              Object {
+                "alignCenter": "MuiTypography-alignCenter-20",
+                "alignJustify": "MuiTypography-alignJustify-22",
+                "alignLeft": "MuiTypography-alignLeft-19",
+                "alignRight": "MuiTypography-alignRight-21",
+                "body1": "MuiTypography-body1-16",
+                "body2": "MuiTypography-body2-15",
+                "button": "MuiTypography-button-18",
+                "caption": "MuiTypography-caption-17",
+                "colorError": "MuiTypography-colorError-30",
+                "colorInherit": "MuiTypography-colorInherit-26",
+                "colorPrimary": "MuiTypography-colorPrimary-27",
+                "colorSecondary": "MuiTypography-colorSecondary-28",
+                "colorTextSecondary": "MuiTypography-colorTextSecondary-29",
+                "display1": "MuiTypography-display1-11",
+                "display2": "MuiTypography-display2-10",
+                "display3": "MuiTypography-display3-9",
+                "display4": "MuiTypography-display4-8",
+                "gutterBottom": "MuiTypography-gutterBottom-24",
+                "headline": "MuiTypography-headline-12",
+                "noWrap": "MuiTypography-noWrap-23",
+                "paragraph": "MuiTypography-paragraph-25",
+                "root": "MuiTypography-root-7",
+                "subheading": "MuiTypography-subheading-14",
+                "title": "MuiTypography-title-13",
+              }
+            }
+            color="default"
+            gutterBottom={true}
+            headlineMapping={
+              Object {
+                "body1": "p",
+                "body2": "aside",
+                "display1": "h1",
+                "display2": "h1",
+                "display3": "h1",
+                "display4": "h1",
+                "headline": "h1",
+                "subheading": "h3",
+                "title": "h2",
+              }
+            }
+            noWrap={false}
+            paragraph={false}
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            variant="body1"
+          >
+            <p
+              className="MuiTypography-root-7 MuiTypography-body1-16 MuiTypography-gutterBottom-24 TextSection-sectionText-3"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+            />
+          </Typography>
+        </WithStyles(Typography)>
+      </div>
+    </div>
+  </TextSection>
+</WithStyles(TextSection)>
 `;
 
 exports[`TextSection should render a title when passed in 2`] = `
-initialize {
-  "0": Object {
-    "attribs": Object {
-      "class": "TextSection-section-1",
-      "style": "border-top:2px solid undefined;border-bottom:2px solid undefined",
-    },
-    "children": Array [
+<WithStyles(TextSection)
+  textColor="#000"
+>
+  <TextSection
+    classes={
       Object {
-        "attribs": Object {
-          "class": "TextSection-innerContainer-2",
-        },
-        "children": Array [
-          Object {
-            "attribs": Object {
-              "class": "MuiTypography-root-7 MuiTypography-display2-10 MuiTypography-gutterBottom-24",
-              "style": "color:#000",
-            },
-            "children": Array [],
-            "name": "h1",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": Object {
-              "attribs": Object {
-                "class": "MuiTypography-root-7 MuiTypography-body1-16 MuiTypography-gutterBottom-24 TextSection-sectionText-3",
-                "style": "color:#000",
-              },
-              "children": Array [],
-              "name": "p",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": null,
-              "parent": [Circular],
-              "prev": [Circular],
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "class": undefined,
-                "style": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "class": undefined,
-                "style": undefined,
-              },
-            },
-            "parent": [Circular],
-            "prev": null,
-            "type": "tag",
-            "x-attribsNamespace": Object {
-              "class": undefined,
-              "style": undefined,
-            },
-            "x-attribsPrefix": Object {
-              "class": undefined,
-              "style": undefined,
-            },
-          },
-          Object {
-            "attribs": Object {
-              "class": "MuiTypography-root-7 MuiTypography-body1-16 MuiTypography-gutterBottom-24 TextSection-sectionText-3",
-              "style": "color:#000",
-            },
-            "children": Array [],
-            "name": "p",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": null,
-            "parent": [Circular],
-            "prev": Object {
-              "attribs": Object {
-                "class": "MuiTypography-root-7 MuiTypography-display2-10 MuiTypography-gutterBottom-24",
-                "style": "color:#000",
-              },
-              "children": Array [],
-              "name": "h1",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": [Circular],
-              "parent": [Circular],
-              "prev": null,
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "class": undefined,
-                "style": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "class": undefined,
-                "style": undefined,
-              },
-            },
-            "type": "tag",
-            "x-attribsNamespace": Object {
-              "class": undefined,
-              "style": undefined,
-            },
-            "x-attribsPrefix": Object {
-              "class": undefined,
-              "style": undefined,
-            },
-          },
-        ],
-        "name": "div",
-        "namespace": "http://www.w3.org/1999/xhtml",
-        "next": null,
-        "parent": [Circular],
-        "prev": null,
-        "type": "tag",
-        "x-attribsNamespace": Object {
-          "class": undefined,
-        },
-        "x-attribsPrefix": Object {
-          "class": undefined,
-        },
-      },
-    ],
-    "name": "div",
-    "namespace": "http://www.w3.org/1999/xhtml",
-    "next": null,
-    "parent": null,
-    "prev": null,
-    "root": Object {
-      "attribs": Object {},
-      "children": Array [
-        [Circular],
-      ],
-      "name": "root",
-      "namespace": "http://www.w3.org/1999/xhtml",
-      "next": null,
-      "parent": null,
-      "prev": null,
-      "type": "root",
-      "x-attribsNamespace": Object {},
-      "x-attribsPrefix": Object {},
-    },
-    "type": "tag",
-    "x-attribsNamespace": Object {
-      "class": undefined,
-      "style": undefined,
-    },
-    "x-attribsPrefix": Object {
-      "class": undefined,
-      "style": undefined,
-    },
-  },
-  "_root": [Circular],
-  "length": 1,
-  "options": Object {
-    "decodeEntities": true,
-    "normalizeWhitespace": false,
-    "withDomLvl1": true,
-    "xml": false,
-  },
-}
+        "heroBtn": "TextSection-heroBtn-4",
+        "innerContainer": "TextSection-innerContainer-2",
+        "invertedBtn": "TextSection-invertedBtn-5",
+        "section": "TextSection-section-1",
+        "sectionText": "TextSection-sectionText-3",
+        "white": "TextSection-white-6",
+      }
+    }
+    textColor="#000"
+  >
+    <div
+      className="TextSection-section-1"
+      style={
+        Object {
+          "backgroundColor": undefined,
+          "borderBottom": "2px solid undefined",
+          "borderTop": "2px solid undefined",
+        }
+      }
+    >
+      <div
+        className="TextSection-innerContainer-2"
+      >
+        <WithStyles(Typography)
+          gutterBottom={true}
+          style={
+            Object {
+              "color": "#000",
+            }
+          }
+          variant="display2"
+        >
+          <Typography
+            align="inherit"
+            classes={
+              Object {
+                "alignCenter": "MuiTypography-alignCenter-20",
+                "alignJustify": "MuiTypography-alignJustify-22",
+                "alignLeft": "MuiTypography-alignLeft-19",
+                "alignRight": "MuiTypography-alignRight-21",
+                "body1": "MuiTypography-body1-16",
+                "body2": "MuiTypography-body2-15",
+                "button": "MuiTypography-button-18",
+                "caption": "MuiTypography-caption-17",
+                "colorError": "MuiTypography-colorError-30",
+                "colorInherit": "MuiTypography-colorInherit-26",
+                "colorPrimary": "MuiTypography-colorPrimary-27",
+                "colorSecondary": "MuiTypography-colorSecondary-28",
+                "colorTextSecondary": "MuiTypography-colorTextSecondary-29",
+                "display1": "MuiTypography-display1-11",
+                "display2": "MuiTypography-display2-10",
+                "display3": "MuiTypography-display3-9",
+                "display4": "MuiTypography-display4-8",
+                "gutterBottom": "MuiTypography-gutterBottom-24",
+                "headline": "MuiTypography-headline-12",
+                "noWrap": "MuiTypography-noWrap-23",
+                "paragraph": "MuiTypography-paragraph-25",
+                "root": "MuiTypography-root-7",
+                "subheading": "MuiTypography-subheading-14",
+                "title": "MuiTypography-title-13",
+              }
+            }
+            color="default"
+            gutterBottom={true}
+            headlineMapping={
+              Object {
+                "body1": "p",
+                "body2": "aside",
+                "display1": "h1",
+                "display2": "h1",
+                "display3": "h1",
+                "display4": "h1",
+                "headline": "h1",
+                "subheading": "h3",
+                "title": "h2",
+              }
+            }
+            noWrap={false}
+            paragraph={false}
+            style={
+              Object {
+                "color": "#000",
+              }
+            }
+            variant="display2"
+          >
+            <h1
+              className="MuiTypography-root-7 MuiTypography-display2-10 MuiTypography-gutterBottom-24"
+              style={
+                Object {
+                  "color": "#000",
+                }
+              }
+            />
+          </Typography>
+        </WithStyles(Typography)>
+        <WithStyles(Typography)
+          className="TextSection-sectionText-3"
+          gutterBottom={true}
+          style={
+            Object {
+              "color": "#000",
+            }
+          }
+          variant="body1"
+        >
+          <Typography
+            align="inherit"
+            className="TextSection-sectionText-3"
+            classes={
+              Object {
+                "alignCenter": "MuiTypography-alignCenter-20",
+                "alignJustify": "MuiTypography-alignJustify-22",
+                "alignLeft": "MuiTypography-alignLeft-19",
+                "alignRight": "MuiTypography-alignRight-21",
+                "body1": "MuiTypography-body1-16",
+                "body2": "MuiTypography-body2-15",
+                "button": "MuiTypography-button-18",
+                "caption": "MuiTypography-caption-17",
+                "colorError": "MuiTypography-colorError-30",
+                "colorInherit": "MuiTypography-colorInherit-26",
+                "colorPrimary": "MuiTypography-colorPrimary-27",
+                "colorSecondary": "MuiTypography-colorSecondary-28",
+                "colorTextSecondary": "MuiTypography-colorTextSecondary-29",
+                "display1": "MuiTypography-display1-11",
+                "display2": "MuiTypography-display2-10",
+                "display3": "MuiTypography-display3-9",
+                "display4": "MuiTypography-display4-8",
+                "gutterBottom": "MuiTypography-gutterBottom-24",
+                "headline": "MuiTypography-headline-12",
+                "noWrap": "MuiTypography-noWrap-23",
+                "paragraph": "MuiTypography-paragraph-25",
+                "root": "MuiTypography-root-7",
+                "subheading": "MuiTypography-subheading-14",
+                "title": "MuiTypography-title-13",
+              }
+            }
+            color="default"
+            gutterBottom={true}
+            headlineMapping={
+              Object {
+                "body1": "p",
+                "body2": "aside",
+                "display1": "h1",
+                "display2": "h1",
+                "display3": "h1",
+                "display4": "h1",
+                "headline": "h1",
+                "subheading": "h3",
+                "title": "h2",
+              }
+            }
+            noWrap={false}
+            paragraph={false}
+            style={
+              Object {
+                "color": "#000",
+              }
+            }
+            variant="body1"
+          >
+            <p
+              className="MuiTypography-root-7 MuiTypography-body1-16 MuiTypography-gutterBottom-24 TextSection-sectionText-3"
+              style={
+                Object {
+                  "color": "#000",
+                }
+              }
+            />
+          </Typography>
+        </WithStyles(Typography)>
+      </div>
+    </div>
+  </TextSection>
+</WithStyles(TextSection)>
 `;
 
 exports[`TextSection should render text when passed in 1`] = `
-initialize {
-  "0": Object {
-    "attribs": Object {
-      "class": "TextSection-section-1",
-      "style": "border-top:2px solid undefined;border-bottom:2px solid undefined",
-    },
-    "children": Array [
+<WithStyles(TextSection)
+  text="Test text"
+>
+  <TextSection
+    classes={
       Object {
-        "attribs": Object {
-          "class": "TextSection-innerContainer-2",
-        },
-        "children": Array [
-          Object {
-            "attribs": Object {
-              "class": "MuiTypography-root-7 MuiTypography-display2-10 MuiTypography-gutterBottom-24",
-            },
-            "children": Array [],
-            "name": "h1",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": Object {
-              "attribs": Object {
-                "class": "MuiTypography-root-7 MuiTypography-body1-16 MuiTypography-gutterBottom-24 TextSection-sectionText-3",
-              },
-              "children": Array [
-                Object {
-                  "data": "Test text",
-                  "next": null,
-                  "parent": [Circular],
-                  "prev": null,
-                  "type": "text",
-                },
-              ],
-              "name": "p",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": null,
-              "parent": [Circular],
-              "prev": [Circular],
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "class": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "class": undefined,
-              },
-            },
-            "parent": [Circular],
-            "prev": null,
-            "type": "tag",
-            "x-attribsNamespace": Object {
-              "class": undefined,
-            },
-            "x-attribsPrefix": Object {
-              "class": undefined,
-            },
-          },
-          Object {
-            "attribs": Object {
-              "class": "MuiTypography-root-7 MuiTypography-body1-16 MuiTypography-gutterBottom-24 TextSection-sectionText-3",
-            },
-            "children": Array [
+        "heroBtn": "TextSection-heroBtn-4",
+        "innerContainer": "TextSection-innerContainer-2",
+        "invertedBtn": "TextSection-invertedBtn-5",
+        "section": "TextSection-section-1",
+        "sectionText": "TextSection-sectionText-3",
+        "white": "TextSection-white-6",
+      }
+    }
+    text="Test text"
+  >
+    <div
+      className="TextSection-section-1"
+      style={
+        Object {
+          "backgroundColor": undefined,
+          "borderBottom": "2px solid undefined",
+          "borderTop": "2px solid undefined",
+        }
+      }
+    >
+      <div
+        className="TextSection-innerContainer-2"
+      >
+        <WithStyles(Typography)
+          gutterBottom={true}
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          variant="display2"
+        >
+          <Typography
+            align="inherit"
+            classes={
               Object {
-                "data": "Test text",
-                "next": null,
-                "parent": [Circular],
-                "prev": null,
-                "type": "text",
-              },
-            ],
-            "name": "p",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": null,
-            "parent": [Circular],
-            "prev": Object {
-              "attribs": Object {
-                "class": "MuiTypography-root-7 MuiTypography-display2-10 MuiTypography-gutterBottom-24",
-              },
-              "children": Array [],
-              "name": "h1",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": [Circular],
-              "parent": [Circular],
-              "prev": null,
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "class": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "class": undefined,
-              },
-            },
-            "type": "tag",
-            "x-attribsNamespace": Object {
-              "class": undefined,
-            },
-            "x-attribsPrefix": Object {
-              "class": undefined,
-            },
-          },
-        ],
-        "name": "div",
-        "namespace": "http://www.w3.org/1999/xhtml",
-        "next": null,
-        "parent": [Circular],
-        "prev": null,
-        "type": "tag",
-        "x-attribsNamespace": Object {
-          "class": undefined,
-        },
-        "x-attribsPrefix": Object {
-          "class": undefined,
-        },
-      },
-    ],
-    "name": "div",
-    "namespace": "http://www.w3.org/1999/xhtml",
-    "next": null,
-    "parent": null,
-    "prev": null,
-    "root": Object {
-      "attribs": Object {},
-      "children": Array [
-        [Circular],
-      ],
-      "name": "root",
-      "namespace": "http://www.w3.org/1999/xhtml",
-      "next": null,
-      "parent": null,
-      "prev": null,
-      "type": "root",
-      "x-attribsNamespace": Object {},
-      "x-attribsPrefix": Object {},
-    },
-    "type": "tag",
-    "x-attribsNamespace": Object {
-      "class": undefined,
-      "style": undefined,
-    },
-    "x-attribsPrefix": Object {
-      "class": undefined,
-      "style": undefined,
-    },
-  },
-  "_root": [Circular],
-  "length": 1,
-  "options": Object {
-    "decodeEntities": true,
-    "normalizeWhitespace": false,
-    "withDomLvl1": true,
-    "xml": false,
-  },
-}
+                "alignCenter": "MuiTypography-alignCenter-20",
+                "alignJustify": "MuiTypography-alignJustify-22",
+                "alignLeft": "MuiTypography-alignLeft-19",
+                "alignRight": "MuiTypography-alignRight-21",
+                "body1": "MuiTypography-body1-16",
+                "body2": "MuiTypography-body2-15",
+                "button": "MuiTypography-button-18",
+                "caption": "MuiTypography-caption-17",
+                "colorError": "MuiTypography-colorError-30",
+                "colorInherit": "MuiTypography-colorInherit-26",
+                "colorPrimary": "MuiTypography-colorPrimary-27",
+                "colorSecondary": "MuiTypography-colorSecondary-28",
+                "colorTextSecondary": "MuiTypography-colorTextSecondary-29",
+                "display1": "MuiTypography-display1-11",
+                "display2": "MuiTypography-display2-10",
+                "display3": "MuiTypography-display3-9",
+                "display4": "MuiTypography-display4-8",
+                "gutterBottom": "MuiTypography-gutterBottom-24",
+                "headline": "MuiTypography-headline-12",
+                "noWrap": "MuiTypography-noWrap-23",
+                "paragraph": "MuiTypography-paragraph-25",
+                "root": "MuiTypography-root-7",
+                "subheading": "MuiTypography-subheading-14",
+                "title": "MuiTypography-title-13",
+              }
+            }
+            color="default"
+            gutterBottom={true}
+            headlineMapping={
+              Object {
+                "body1": "p",
+                "body2": "aside",
+                "display1": "h1",
+                "display2": "h1",
+                "display3": "h1",
+                "display4": "h1",
+                "headline": "h1",
+                "subheading": "h3",
+                "title": "h2",
+              }
+            }
+            noWrap={false}
+            paragraph={false}
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            variant="display2"
+          >
+            <h1
+              className="MuiTypography-root-7 MuiTypography-display2-10 MuiTypography-gutterBottom-24"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+            />
+          </Typography>
+        </WithStyles(Typography)>
+        <WithStyles(Typography)
+          className="TextSection-sectionText-3"
+          gutterBottom={true}
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          variant="body1"
+        >
+          <Typography
+            align="inherit"
+            className="TextSection-sectionText-3"
+            classes={
+              Object {
+                "alignCenter": "MuiTypography-alignCenter-20",
+                "alignJustify": "MuiTypography-alignJustify-22",
+                "alignLeft": "MuiTypography-alignLeft-19",
+                "alignRight": "MuiTypography-alignRight-21",
+                "body1": "MuiTypography-body1-16",
+                "body2": "MuiTypography-body2-15",
+                "button": "MuiTypography-button-18",
+                "caption": "MuiTypography-caption-17",
+                "colorError": "MuiTypography-colorError-30",
+                "colorInherit": "MuiTypography-colorInherit-26",
+                "colorPrimary": "MuiTypography-colorPrimary-27",
+                "colorSecondary": "MuiTypography-colorSecondary-28",
+                "colorTextSecondary": "MuiTypography-colorTextSecondary-29",
+                "display1": "MuiTypography-display1-11",
+                "display2": "MuiTypography-display2-10",
+                "display3": "MuiTypography-display3-9",
+                "display4": "MuiTypography-display4-8",
+                "gutterBottom": "MuiTypography-gutterBottom-24",
+                "headline": "MuiTypography-headline-12",
+                "noWrap": "MuiTypography-noWrap-23",
+                "paragraph": "MuiTypography-paragraph-25",
+                "root": "MuiTypography-root-7",
+                "subheading": "MuiTypography-subheading-14",
+                "title": "MuiTypography-title-13",
+              }
+            }
+            color="default"
+            gutterBottom={true}
+            headlineMapping={
+              Object {
+                "body1": "p",
+                "body2": "aside",
+                "display1": "h1",
+                "display2": "h1",
+                "display3": "h1",
+                "display4": "h1",
+                "headline": "h1",
+                "subheading": "h3",
+                "title": "h2",
+              }
+            }
+            noWrap={false}
+            paragraph={false}
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            variant="body1"
+          >
+            <p
+              className="MuiTypography-root-7 MuiTypography-body1-16 MuiTypography-gutterBottom-24 TextSection-sectionText-3"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+            >
+              Test text
+            </p>
+          </Typography>
+        </WithStyles(Typography)>
+      </div>
+    </div>
+  </TextSection>
+</WithStyles(TextSection)>
 `;

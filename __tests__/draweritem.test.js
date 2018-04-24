@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react'
 // import sinon from 'sinon'
-import { render } from 'enzyme'
+import { mount } from 'enzyme'
 
 import DrawerItem from '../components/DrawerItem'
 
@@ -10,7 +10,7 @@ describe('DrawerItem', () => {
     expect(DrawerItem).toBeDefined()
   })
   it('should render', () => {
-    const wrapper = render(<DrawerItem />)
+    const wrapper = mount(<DrawerItem />)
     expect(wrapper).toMatchSnapshot()
   })
   // it('simulates click events', () => {
