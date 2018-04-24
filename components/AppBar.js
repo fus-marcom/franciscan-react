@@ -221,7 +221,7 @@ class ButtonAppBar extends Component {
                         isSearchOpen ? classes.searchOpen : classes.searchClosed
                       }
                       placeholder="Search"
-                      classes={{ inkbar: classes.searchInput }}
+                      classes={{ underline: classes.searchInput }}
                       inputRef={inp => {
                         this.searchInput = inp
                       }}

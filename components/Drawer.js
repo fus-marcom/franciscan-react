@@ -100,7 +100,7 @@ class TemporaryDrawer extends Component {
                     id="search"
                     variant="text"
                     classes={{
-                      inkbar: classes.inputInkbar
+                      underline: classes.inputInkbar
                     }}
                     value={this.state.search}
                     onChange={this.handleSearchChange}
