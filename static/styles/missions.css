@@ -662,3 +662,26 @@ nav missionNav ul li:hover{
   font-weight: bold;
 
 }
+
+
+/* Scroll Spy Side Nav Styles */
+.scroll-spy-container {
+  position: sticky;
+  top: 50px;
+  float: right;
+  margin-right: 16px;
+}
+ul.scroll-spy-nav {
+	list-style: none;
+}
+
+ul.scroll-spy-nav li {
+	margin-bottom: 8px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+ul.scroll-spy-nav a.active li {
+	font-weight: 500;
+  border-left: 2px solid #ffb41f;
+}

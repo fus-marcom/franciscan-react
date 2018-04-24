@@ -10,9 +10,13 @@ import TextSection from '../components/TextSection'
 import Grid from 'material-ui/Grid'
 import Card, { CardMedia, CardContent } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
-// import throttle from 'lodash/throttle'
-// import { sliceHeaders } from '../utils/getTopCoord'
-// import each from 'lodash/each'
+import {
+  Link,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller
+} from 'react-scroll'
 
 const styles = theme => ({
   root: {
@@ -98,58 +102,54 @@ class Missions extends Component {
   // static async getInitialProps ({ query: { id, type } }) {
   //   return { id, type }
   // }
+  componentDidMount () {
+    Events.scrollEvent.register('begin', function () {
+      console.log('begin', arguments)
+    })
 
-  // constructor (props) {
-  //   super(props)
-  //   this.state = {
-  //     headerPositions: [],
-  //     scrollY: 0,
-  //     activeSection: 0
-  //   }
-  //   this.handleScroll = throttle(this.handleScroll, 200)
-  // }
+    Events.scrollEvent.register('end', function () {
+      console.log('end', arguments)
+    })
 
-  // componentDidMount () {
-  //   window.addEventListener('scroll', this.handleScroll)
-  //   this.setHeaders(sliceHeaders(this.refs))
-  // }
+    scrollSpy.update()
+  }
+  scrollToTop () {
+    scroll.scrollToTop()
+  }
+  scrollTo () {
+    scroller.scrollTo('scroll-to-element', {
+      duration: 800,
+      delay: 0,
+      smooth: 'easeInOutQuart'
+    })
+  }
+  scrollToWithContainer () {
+    let goToContainer = new Promise((resolve, reject) => {
+      Events.scrollEvent.register('end', () => {
+        resolve()
+        Events.scrollEvent.remove('end')
+      })
 
-  // componentWillUnmount () {
-  //   window.removeEventListener('scroll', this.handleScroll)
-  // }
+      scroller.scrollTo('scroll-container', {
+        duration: 800,
+        delay: 0,
+        smooth: 'easeInOutQuart'
+      })
+    })
 
-  // setHeaders = headerPositions => {
-  //   this.setState({ headerPositions: headerPositions })
-  // }
-
-  // handleScroll = () => {
-  //   this.setState({ scrollY: window.scrollY }, () => {
-  //     forEach(this.state.headerPositions, (position, key) => {
-  //       if (this.state.scrollY > position - 1) {
-  //         this.setState({ activeSection: key })
-  //       }
-  //     })
-  //   })
-  // }
-
-  // handleNext = () => {
-  //   const { stepIndex } = this.state
-  //   if (stepIndex < 2) {
-  //     this.setState({ stepIndex: stepIndex + 1 })
-  //   }
-  // }
-
-  // handlePrev = () => {
-  //   const { stepIndex } = this.state
-  //   if (stepIndex > 0) {
-  //     this.setState({ stepIndex: stepIndex - 1 })
-  //   }
-  // }
-
-  // scrollToItem = header => {
-  //   this.refs[header].scrollIntoView()
-  // }
-
+    goToContainer.then(() =>
+      scroller.scrollTo('scroll-container-second-element', {
+        duration: 800,
+        delay: 0,
+        smooth: 'easeInOutQuart',
+        containerId: 'scroll-container'
+      })
+    )
+  }
+  componentWillUnmount () {
+    Events.scrollEvent.remove('begin')
+    Events.scrollEvent.remove('end')
+  }
   render () {
     const { classes } = this.props
     return (
@@ -184,7 +184,31 @@ class Missions extends Component {
           textColor="#fff"
           borderColor="#998643"
         />
+        <div className="scroll-spy-container">
+          <ul className="scroll-spy-nav">
+            <Link
+              activeClass="active"
+              to="spring"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={500}
+            >
+              <li>Spring</li>
+            </Link>
 
+            <Link
+              activeClass="active"
+              to="summer"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={500}
+            >
+              <li>Summer</li>
+            </Link>
+          </ul>
+        </div>
         <div className={classes.contentContainer}>
           <Masonry>
             <Grid
@@ -258,26 +282,9 @@ class Missions extends Component {
           </Masonry>
         </div>
 
-        {/* <ul className="scroll-spy-nav">
-          <li
-            className={this.state.activeSection === 'spring' && 'active'}
-            onClick={() => this.scrollToItem('spring')}
-          >
-            Spring Missions
-          </li>
-          <li
-            className={this.state.activeSection === 'summer' && 'active'}
-            onClick={() => this.scrollToItem('summer')}
-          >
-            Summer Missions
-          </li>
-        </ul> */}
+        <div className="missionHead">Spring Mission Trips:</div>
 
-        {/* <div className="missionHead" ref="spring" id="spring">
-          Spring Mission Trips:
-        </div> */}
-
-        <div className={classes.contentContainer}>
+        <div id="spring" className={classes.contentContainer}>
           <Masonry>
             <Grid
               item
@@ -354,9 +361,8 @@ class Missions extends Component {
             </Grid>
           </Masonry>
         </div>
-        {/* <div className="missionHead" ref="summer" id="summer">
-          Summer Mission Trips:
-        </div> */}
+        <div className="missionHead">Summer Mission Trips:</div>
+        <div id="summer">Summer</div>
       </Layout>
     )
   }
