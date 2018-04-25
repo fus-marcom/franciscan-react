@@ -139,7 +139,7 @@ export const styles = theme => ({
   }
 })
 
-function InvertedButton (props) {
+function InvertedButton(props) {
   const {
     children: childrenProp,
     classes,
