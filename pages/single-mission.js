@@ -113,7 +113,6 @@ class SingleMission extends Component {
         </Head>
         {/* Put content under here */}
         <Hero
-          backgroundImg="../static/img/Fr-Shawn-with-Missionaries-Blue.png"
           titleText="Missions of Peace"
           // subtitleText={<span>Missions</span>}
         />
