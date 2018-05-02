@@ -162,6 +162,16 @@ const translationObj = {
     type: 'aboutPages',
     id: { default: 'consumer-information' }
   },
+  accommodations: {
+    page: '/page',
+    type: 'aboutPages',
+    id: { default: 'accommodations' }
+  },
+  'strategic-planning': {
+    page: '/page',
+    type: 'aboutPages',
+    id: { default: 'strategic-planning' }
+  },
   ferpa: {
     page: '/page',
     type: 'aboutPages',
@@ -188,7 +198,28 @@ const translationObj = {
     page: '/page',
     type: 'sfsPages',
     id: { default: 'main' }
+  },
+  sass: {
+    page: '/page',
+    type: 'sassPages',
+    id: { default: 'main' }
+  },
+  'core-curriculum': {
+    page: '/page',
+    type: 'academicsPages',
+    id: { default: 'core-curriculum' }
+  },
+  'writing-center': {
+    page: '/page',
+    type: 'academicsPages',
+    id: { default: 'writing-center' }
+  },
+  'the-catholic-core': {
+    page: '/page',
+    type: 'academicsPages',
+    id: { default: 'core-curriculum' }
   }
+
   // 'missionary-outreach': {
   //   page: '/page',
   //   type: 'missionsPages',

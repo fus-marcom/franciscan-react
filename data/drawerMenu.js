@@ -140,48 +140,48 @@ export const academicsMenu = [
       },
       {
         text: 'Exploring Majors',
-        linkUrl: '/about/at-a-glance',
-        asUrl: '/page?type=aboutPages&id=at-a-glance'
+        linkUrl: '/academics/exploring-majors',
+        asUrl: '/page?type=academicsPages&id=exploring-majors'
       },
       {
         text: 'Associate Degree Programs',
-        linkUrl: '/hr',
-        asUrl: '/page?type=humanResources&id=employment-and-human-resources'
+        linkUrl: '/academics/ug/associate',
+        asUrl: '/page?type=academicsPages&id=associate'
       },
       {
         text: 'Minor Programs',
-        linkUrl: '/hr',
-        asUrl: '/page?type=humanResources&id=employment-and-human-resources'
+        linkUrl: '/academics/ug/minors',
+        asUrl: '/page?type=academicsPages&id=minors'
       },
       {
         text: 'Academic Advising',
         linkUrl: '/hr',
-        asUrl: '/page?type=humanResources&id=employment-and-human-resources'
+        asUrl: '/page?type=academicsPages&id=employment-and-human-resources'
       },
       {
         text: 'Student Academic Support Services',
-        linkUrl: '/hr',
-        asUrl: '/page?type=humanResources&id=employment-and-human-resources'
+        linkUrl: '/sass',
+        asUrl: '/page?type=sassPages&id=main'
       },
       {
         text: 'Writing Center',
-        linkUrl: '/hr',
-        asUrl: '/page?type=humanResources&id=employment-and-human-resources'
+        linkUrl: '/writing-center',
+        asUrl: '/page?type=academicsPages&id=writing-center'
       },
       {
         text: 'Priestly Discernment Program',
         linkUrl: '/hr',
-        asUrl: '/page?type=humanResources&id=employment-and-human-resources'
+        asUrl: '/page?type=academicsPages&id=employment-and-human-resources'
       },
       {
         text: 'ROTC Program',
         linkUrl: '/hr',
-        asUrl: '/page?type=humanResources&id=employment-and-human-resources'
+        asUrl: '/page?type=academicsPages&id=employment-and-human-resources'
       },
       {
         text: 'Student Handbook',
         linkUrl: '/hr',
-        asUrl: '/page?type=humanResources&id=employment-and-human-resources'
+        asUrl: '/page?type=academicsPages&id=employment-and-human-resources'
       }
     ]
   },
@@ -231,7 +231,7 @@ export const academicsMenu = [
   {
     text: 'Our Core Curriculum',
     linkUrl: '/core-curriculum',
-    asUrl: 'http://franciscan.smartcatalogiq.com/current/Graduate-Catalog'
+    asUrl: '/page?type=academicsPages&id=core-curriculum'
   },
   {
     text: 'Institutes & Centers',
