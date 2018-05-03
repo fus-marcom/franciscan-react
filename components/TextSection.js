@@ -33,6 +33,12 @@ const styles = theme => ({
     border: '2px #21412a solid',
     boxShadow: 'none'
   },
+  invertedBtnDark: {
+    color: '#fff',
+    backgroundColor: 'transparent',
+    border: '2px #fff solid',
+    boxShadow: 'none'
+  },
   white: {
     color: '#fff'
   }
@@ -48,7 +54,8 @@ class TextSection extends Component {
       btnText,
       textColor,
       bgColor,
-      borderColor
+      borderColor,
+      darkBg
     } = this.props
 
     const Button = (
@@ -56,7 +63,7 @@ class TextSection extends Component {
         <InvertedButton
           href={btnLink}
           title={btnText}
-          className={classes.invertedBtn}
+          className={darkBg ? classes.invertedBtnDark : classes.invertedBtn}
           color="secondary"
           style={{ width: '192px' }}
         >

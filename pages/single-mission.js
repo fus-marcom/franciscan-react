@@ -9,7 +9,6 @@ import Masonry from 'react-masonry-component'
 import TextSection from '../components/TextSection'
 import Grid from 'material-ui/Grid'
 import Card from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import ListCard from '../components/ListCard'
 import { testimonyData } from '../data/listData'
 
@@ -116,65 +115,66 @@ class SingleMission extends Component {
         {/* Put content under here */}
         <TextSection
           sectionTitle="MISSION TITLE HERE"
-          text="Mission of Peace"
           btnLink="#"
           btnText="Apply Now"
           bgColor="#21412a"
           textColor="#fff"
+          darkBg
         />
 
         <div className={classes.contentContainer}>
+          <div>
+            <p>
+              Through those activities, but also through their personal witness
+              of the love of Christ, students seek to be instruments of the Lord
+              in promoting the culture of life. These missionary efforts are one
+              way the university lives out the mandate of Ex Corde Ecclesiae
+              that Catholic universities serve as “a living institutional
+              witness to Christ and his message.
+            </p>
+            <p>
+              Through those activities, but also through their personal witness
+              of the love of Christ, students seek to be instruments of the Lord
+              in promoting the culture of life. These missionary efforts are one
+              way the university lives out the mandate of Ex Corde Ecclesiae
+              that Catholic universities serve as “a living institutional
+              witness to Christ and his message.”
+            </p>
+            <p>
+              The trips are organized, planned, and funded by the students
+              themselves, but they must be approved by the director of
+              Missionary Outreach in order to advertise, fund raise, or operate
+              on campus.
+            </p>
+          </div>
           <Masonry>
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <Typography type="display1">
-                Through those activities, but also through their personal
-                witness of the love of Christ, students seek to be instruments
-                of the Lord in promoting the culture of life. These missionary
-                efforts are one way the university lives out the mandate of Ex
-                Corde Ecclesiae that Catholic universities serve as “a living
-                institutional witness to Christ and his message.
-              </Typography>
-            </Grid>
-
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <Typography type="display1">
-                Through those activities, but also through their personal
-                witness of the love of Christ, students seek to be instruments
-                of the Lord in promoting the culture of life. These missionary
-                efforts are one way the university lives out the mandate of Ex
-                Corde Ecclesiae that Catholic universities serve as “a living
-                institutional witness to Christ and his message.”
-              </Typography>
-            </Grid>
-
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <Typography type="display1">
-                The trips are organized, planned, and funded by the students
-                themselves, but they must be approved by the director of
-                Missionary Outreach in order to advertise, fund raise, or
-                operate on campus.
-              </Typography>
-            </Grid>
-
             <Grid item className={classes.gridItemFix} xs={12} sm={6}>
               <ListCard
                 listTitle="Personal Testimonies"
                 itemsArray={testimonyData}
               />
             </Grid>
+            <Grid
+              item
+              className={classes.gridItemFix}
+              xs={12}
+              sm={6}
+              md={6}
+              lg={6}
+            >
+              <div className="slider">
+                <img src="../static/img/adventure2-800w.jpg" alt="Slide 1" />
 
-            <div className="slider">
-              <img src="../static/img/adventure2-800w.jpg" alt="Slide 1" />
+                <img src="../static/img/biology-students.jpg" alt="Slide 2" />
 
-              <img src="../static/img/biology-students.jpg" alt="Slide 2" />
+                <img src="../static/img/nicaragua-mission.jpg" alt="Slide 3" />
 
-              <img src="../static/img/nicaragua-mission.jpg" alt="Slide 3" />
-
-              <img
-                src="../static/img/Fr-Shawn-with-Missionaries-Blue.png"
-                alt="Slide 4"
-              />
-            </div>
+                <img
+                  src="../static/img/Fr-Shawn-with-Missionaries-Blue.png"
+                  alt="Slide 4"
+                />
+              </div>
+            </Grid>
 
             <Grid
               item

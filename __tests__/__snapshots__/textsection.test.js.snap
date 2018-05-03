@@ -8,9 +8,10 @@ exports[`TextSection should render 1`] = `
         "heroBtn": "TextSection-heroBtn-4",
         "innerContainer": "TextSection-innerContainer-2",
         "invertedBtn": "TextSection-invertedBtn-5",
+        "invertedBtnDark": "TextSection-invertedBtnDark-6",
         "section": "TextSection-section-1",
         "sectionText": "TextSection-sectionText-3",
-        "white": "TextSection-white-6",
+        "white": "TextSection-white-7",
       }
     }
   >
@@ -40,30 +41,30 @@ exports[`TextSection should render 1`] = `
             align="inherit"
             classes={
               Object {
-                "alignCenter": "MuiTypography-alignCenter-20",
-                "alignJustify": "MuiTypography-alignJustify-22",
-                "alignLeft": "MuiTypography-alignLeft-19",
-                "alignRight": "MuiTypography-alignRight-21",
-                "body1": "MuiTypography-body1-16",
-                "body2": "MuiTypography-body2-15",
-                "button": "MuiTypography-button-18",
-                "caption": "MuiTypography-caption-17",
-                "colorError": "MuiTypography-colorError-30",
-                "colorInherit": "MuiTypography-colorInherit-26",
-                "colorPrimary": "MuiTypography-colorPrimary-27",
-                "colorSecondary": "MuiTypography-colorSecondary-28",
-                "colorTextSecondary": "MuiTypography-colorTextSecondary-29",
-                "display1": "MuiTypography-display1-11",
-                "display2": "MuiTypography-display2-10",
-                "display3": "MuiTypography-display3-9",
-                "display4": "MuiTypography-display4-8",
-                "gutterBottom": "MuiTypography-gutterBottom-24",
-                "headline": "MuiTypography-headline-12",
-                "noWrap": "MuiTypography-noWrap-23",
-                "paragraph": "MuiTypography-paragraph-25",
-                "root": "MuiTypography-root-7",
-                "subheading": "MuiTypography-subheading-14",
-                "title": "MuiTypography-title-13",
+                "alignCenter": "MuiTypography-alignCenter-21",
+                "alignJustify": "MuiTypography-alignJustify-23",
+                "alignLeft": "MuiTypography-alignLeft-20",
+                "alignRight": "MuiTypography-alignRight-22",
+                "body1": "MuiTypography-body1-17",
+                "body2": "MuiTypography-body2-16",
+                "button": "MuiTypography-button-19",
+                "caption": "MuiTypography-caption-18",
+                "colorError": "MuiTypography-colorError-31",
+                "colorInherit": "MuiTypography-colorInherit-27",
+                "colorPrimary": "MuiTypography-colorPrimary-28",
+                "colorSecondary": "MuiTypography-colorSecondary-29",
+                "colorTextSecondary": "MuiTypography-colorTextSecondary-30",
+                "display1": "MuiTypography-display1-12",
+                "display2": "MuiTypography-display2-11",
+                "display3": "MuiTypography-display3-10",
+                "display4": "MuiTypography-display4-9",
+                "gutterBottom": "MuiTypography-gutterBottom-25",
+                "headline": "MuiTypography-headline-13",
+                "noWrap": "MuiTypography-noWrap-24",
+                "paragraph": "MuiTypography-paragraph-26",
+                "root": "MuiTypography-root-8",
+                "subheading": "MuiTypography-subheading-15",
+                "title": "MuiTypography-title-14",
               }
             }
             color="default"
@@ -91,7 +92,7 @@ exports[`TextSection should render 1`] = `
             variant="display2"
           >
             <h1
-              className="MuiTypography-root-7 MuiTypography-display2-10 MuiTypography-gutterBottom-24"
+              className="MuiTypography-root-8 MuiTypography-display2-11 MuiTypography-gutterBottom-25"
               style={
                 Object {
                   "color": undefined,
@@ -115,30 +116,30 @@ exports[`TextSection should render 1`] = `
             className="TextSection-sectionText-3"
             classes={
               Object {
-                "alignCenter": "MuiTypography-alignCenter-20",
-                "alignJustify": "MuiTypography-alignJustify-22",
-                "alignLeft": "MuiTypography-alignLeft-19",
-                "alignRight": "MuiTypography-alignRight-21",
-                "body1": "MuiTypography-body1-16",
-                "body2": "MuiTypography-body2-15",
-                "button": "MuiTypography-button-18",
-                "caption": "MuiTypography-caption-17",
-                "colorError": "MuiTypography-colorError-30",
-                "colorInherit": "MuiTypography-colorInherit-26",
-                "colorPrimary": "MuiTypography-colorPrimary-27",
-                "colorSecondary": "MuiTypography-colorSecondary-28",
-                "colorTextSecondary": "MuiTypography-colorTextSecondary-29",
-                "display1": "MuiTypography-display1-11",
-                "display2": "MuiTypography-display2-10",
-                "display3": "MuiTypography-display3-9",
-                "display4": "MuiTypography-display4-8",
-                "gutterBottom": "MuiTypography-gutterBottom-24",
-                "headline": "MuiTypography-headline-12",
-                "noWrap": "MuiTypography-noWrap-23",
-                "paragraph": "MuiTypography-paragraph-25",
-                "root": "MuiTypography-root-7",
-                "subheading": "MuiTypography-subheading-14",
-                "title": "MuiTypography-title-13",
+                "alignCenter": "MuiTypography-alignCenter-21",
+                "alignJustify": "MuiTypography-alignJustify-23",
+                "alignLeft": "MuiTypography-alignLeft-20",
+                "alignRight": "MuiTypography-alignRight-22",
+                "body1": "MuiTypography-body1-17",
+                "body2": "MuiTypography-body2-16",
+                "button": "MuiTypography-button-19",
+                "caption": "MuiTypography-caption-18",
+                "colorError": "MuiTypography-colorError-31",
+                "colorInherit": "MuiTypography-colorInherit-27",
+                "colorPrimary": "MuiTypography-colorPrimary-28",
+                "colorSecondary": "MuiTypography-colorSecondary-29",
+                "colorTextSecondary": "MuiTypography-colorTextSecondary-30",
+                "display1": "MuiTypography-display1-12",
+                "display2": "MuiTypography-display2-11",
+                "display3": "MuiTypography-display3-10",
+                "display4": "MuiTypography-display4-9",
+                "gutterBottom": "MuiTypography-gutterBottom-25",
+                "headline": "MuiTypography-headline-13",
+                "noWrap": "MuiTypography-noWrap-24",
+                "paragraph": "MuiTypography-paragraph-26",
+                "root": "MuiTypography-root-8",
+                "subheading": "MuiTypography-subheading-15",
+                "title": "MuiTypography-title-14",
               }
             }
             color="default"
@@ -166,7 +167,7 @@ exports[`TextSection should render 1`] = `
             variant="body1"
           >
             <p
-              className="MuiTypography-root-7 MuiTypography-body1-16 MuiTypography-gutterBottom-24 TextSection-sectionText-3"
+              className="MuiTypography-root-8 MuiTypography-body1-17 MuiTypography-gutterBottom-25 TextSection-sectionText-3"
               style={
                 Object {
                   "color": undefined,
@@ -191,9 +192,10 @@ exports[`TextSection should render a title when passed in 1`] = `
         "heroBtn": "TextSection-heroBtn-4",
         "innerContainer": "TextSection-innerContainer-2",
         "invertedBtn": "TextSection-invertedBtn-5",
+        "invertedBtnDark": "TextSection-invertedBtnDark-6",
         "section": "TextSection-section-1",
         "sectionText": "TextSection-sectionText-3",
-        "white": "TextSection-white-6",
+        "white": "TextSection-white-7",
       }
     }
     sectionTitle="Test Title"
@@ -224,30 +226,30 @@ exports[`TextSection should render a title when passed in 1`] = `
             align="inherit"
             classes={
               Object {
-                "alignCenter": "MuiTypography-alignCenter-20",
-                "alignJustify": "MuiTypography-alignJustify-22",
-                "alignLeft": "MuiTypography-alignLeft-19",
-                "alignRight": "MuiTypography-alignRight-21",
-                "body1": "MuiTypography-body1-16",
-                "body2": "MuiTypography-body2-15",
-                "button": "MuiTypography-button-18",
-                "caption": "MuiTypography-caption-17",
-                "colorError": "MuiTypography-colorError-30",
-                "colorInherit": "MuiTypography-colorInherit-26",
-                "colorPrimary": "MuiTypography-colorPrimary-27",
-                "colorSecondary": "MuiTypography-colorSecondary-28",
-                "colorTextSecondary": "MuiTypography-colorTextSecondary-29",
-                "display1": "MuiTypography-display1-11",
-                "display2": "MuiTypography-display2-10",
-                "display3": "MuiTypography-display3-9",
-                "display4": "MuiTypography-display4-8",
-                "gutterBottom": "MuiTypography-gutterBottom-24",
-                "headline": "MuiTypography-headline-12",
-                "noWrap": "MuiTypography-noWrap-23",
-                "paragraph": "MuiTypography-paragraph-25",
-                "root": "MuiTypography-root-7",
-                "subheading": "MuiTypography-subheading-14",
-                "title": "MuiTypography-title-13",
+                "alignCenter": "MuiTypography-alignCenter-21",
+                "alignJustify": "MuiTypography-alignJustify-23",
+                "alignLeft": "MuiTypography-alignLeft-20",
+                "alignRight": "MuiTypography-alignRight-22",
+                "body1": "MuiTypography-body1-17",
+                "body2": "MuiTypography-body2-16",
+                "button": "MuiTypography-button-19",
+                "caption": "MuiTypography-caption-18",
+                "colorError": "MuiTypography-colorError-31",
+                "colorInherit": "MuiTypography-colorInherit-27",
+                "colorPrimary": "MuiTypography-colorPrimary-28",
+                "colorSecondary": "MuiTypography-colorSecondary-29",
+                "colorTextSecondary": "MuiTypography-colorTextSecondary-30",
+                "display1": "MuiTypography-display1-12",
+                "display2": "MuiTypography-display2-11",
+                "display3": "MuiTypography-display3-10",
+                "display4": "MuiTypography-display4-9",
+                "gutterBottom": "MuiTypography-gutterBottom-25",
+                "headline": "MuiTypography-headline-13",
+                "noWrap": "MuiTypography-noWrap-24",
+                "paragraph": "MuiTypography-paragraph-26",
+                "root": "MuiTypography-root-8",
+                "subheading": "MuiTypography-subheading-15",
+                "title": "MuiTypography-title-14",
               }
             }
             color="default"
@@ -275,7 +277,7 @@ exports[`TextSection should render a title when passed in 1`] = `
             variant="display2"
           >
             <h1
-              className="MuiTypography-root-7 MuiTypography-display2-10 MuiTypography-gutterBottom-24"
+              className="MuiTypography-root-8 MuiTypography-display2-11 MuiTypography-gutterBottom-25"
               style={
                 Object {
                   "color": undefined,
@@ -301,30 +303,30 @@ exports[`TextSection should render a title when passed in 1`] = `
             className="TextSection-sectionText-3"
             classes={
               Object {
-                "alignCenter": "MuiTypography-alignCenter-20",
-                "alignJustify": "MuiTypography-alignJustify-22",
-                "alignLeft": "MuiTypography-alignLeft-19",
-                "alignRight": "MuiTypography-alignRight-21",
-                "body1": "MuiTypography-body1-16",
-                "body2": "MuiTypography-body2-15",
-                "button": "MuiTypography-button-18",
-                "caption": "MuiTypography-caption-17",
-                "colorError": "MuiTypography-colorError-30",
-                "colorInherit": "MuiTypography-colorInherit-26",
-                "colorPrimary": "MuiTypography-colorPrimary-27",
-                "colorSecondary": "MuiTypography-colorSecondary-28",
-                "colorTextSecondary": "MuiTypography-colorTextSecondary-29",
-                "display1": "MuiTypography-display1-11",
-                "display2": "MuiTypography-display2-10",
-                "display3": "MuiTypography-display3-9",
-                "display4": "MuiTypography-display4-8",
-                "gutterBottom": "MuiTypography-gutterBottom-24",
-                "headline": "MuiTypography-headline-12",
-                "noWrap": "MuiTypography-noWrap-23",
-                "paragraph": "MuiTypography-paragraph-25",
-                "root": "MuiTypography-root-7",
-                "subheading": "MuiTypography-subheading-14",
-                "title": "MuiTypography-title-13",
+                "alignCenter": "MuiTypography-alignCenter-21",
+                "alignJustify": "MuiTypography-alignJustify-23",
+                "alignLeft": "MuiTypography-alignLeft-20",
+                "alignRight": "MuiTypography-alignRight-22",
+                "body1": "MuiTypography-body1-17",
+                "body2": "MuiTypography-body2-16",
+                "button": "MuiTypography-button-19",
+                "caption": "MuiTypography-caption-18",
+                "colorError": "MuiTypography-colorError-31",
+                "colorInherit": "MuiTypography-colorInherit-27",
+                "colorPrimary": "MuiTypography-colorPrimary-28",
+                "colorSecondary": "MuiTypography-colorSecondary-29",
+                "colorTextSecondary": "MuiTypography-colorTextSecondary-30",
+                "display1": "MuiTypography-display1-12",
+                "display2": "MuiTypography-display2-11",
+                "display3": "MuiTypography-display3-10",
+                "display4": "MuiTypography-display4-9",
+                "gutterBottom": "MuiTypography-gutterBottom-25",
+                "headline": "MuiTypography-headline-13",
+                "noWrap": "MuiTypography-noWrap-24",
+                "paragraph": "MuiTypography-paragraph-26",
+                "root": "MuiTypography-root-8",
+                "subheading": "MuiTypography-subheading-15",
+                "title": "MuiTypography-title-14",
               }
             }
             color="default"
@@ -352,7 +354,7 @@ exports[`TextSection should render a title when passed in 1`] = `
             variant="body1"
           >
             <p
-              className="MuiTypography-root-7 MuiTypography-body1-16 MuiTypography-gutterBottom-24 TextSection-sectionText-3"
+              className="MuiTypography-root-8 MuiTypography-body1-17 MuiTypography-gutterBottom-25 TextSection-sectionText-3"
               style={
                 Object {
                   "color": undefined,
@@ -377,9 +379,10 @@ exports[`TextSection should render a title when passed in 2`] = `
         "heroBtn": "TextSection-heroBtn-4",
         "innerContainer": "TextSection-innerContainer-2",
         "invertedBtn": "TextSection-invertedBtn-5",
+        "invertedBtnDark": "TextSection-invertedBtnDark-6",
         "section": "TextSection-section-1",
         "sectionText": "TextSection-sectionText-3",
-        "white": "TextSection-white-6",
+        "white": "TextSection-white-7",
       }
     }
     textColor="#000"
@@ -410,30 +413,30 @@ exports[`TextSection should render a title when passed in 2`] = `
             align="inherit"
             classes={
               Object {
-                "alignCenter": "MuiTypography-alignCenter-20",
-                "alignJustify": "MuiTypography-alignJustify-22",
-                "alignLeft": "MuiTypography-alignLeft-19",
-                "alignRight": "MuiTypography-alignRight-21",
-                "body1": "MuiTypography-body1-16",
-                "body2": "MuiTypography-body2-15",
-                "button": "MuiTypography-button-18",
-                "caption": "MuiTypography-caption-17",
-                "colorError": "MuiTypography-colorError-30",
-                "colorInherit": "MuiTypography-colorInherit-26",
-                "colorPrimary": "MuiTypography-colorPrimary-27",
-                "colorSecondary": "MuiTypography-colorSecondary-28",
-                "colorTextSecondary": "MuiTypography-colorTextSecondary-29",
-                "display1": "MuiTypography-display1-11",
-                "display2": "MuiTypography-display2-10",
-                "display3": "MuiTypography-display3-9",
-                "display4": "MuiTypography-display4-8",
-                "gutterBottom": "MuiTypography-gutterBottom-24",
-                "headline": "MuiTypography-headline-12",
-                "noWrap": "MuiTypography-noWrap-23",
-                "paragraph": "MuiTypography-paragraph-25",
-                "root": "MuiTypography-root-7",
-                "subheading": "MuiTypography-subheading-14",
-                "title": "MuiTypography-title-13",
+                "alignCenter": "MuiTypography-alignCenter-21",
+                "alignJustify": "MuiTypography-alignJustify-23",
+                "alignLeft": "MuiTypography-alignLeft-20",
+                "alignRight": "MuiTypography-alignRight-22",
+                "body1": "MuiTypography-body1-17",
+                "body2": "MuiTypography-body2-16",
+                "button": "MuiTypography-button-19",
+                "caption": "MuiTypography-caption-18",
+                "colorError": "MuiTypography-colorError-31",
+                "colorInherit": "MuiTypography-colorInherit-27",
+                "colorPrimary": "MuiTypography-colorPrimary-28",
+                "colorSecondary": "MuiTypography-colorSecondary-29",
+                "colorTextSecondary": "MuiTypography-colorTextSecondary-30",
+                "display1": "MuiTypography-display1-12",
+                "display2": "MuiTypography-display2-11",
+                "display3": "MuiTypography-display3-10",
+                "display4": "MuiTypography-display4-9",
+                "gutterBottom": "MuiTypography-gutterBottom-25",
+                "headline": "MuiTypography-headline-13",
+                "noWrap": "MuiTypography-noWrap-24",
+                "paragraph": "MuiTypography-paragraph-26",
+                "root": "MuiTypography-root-8",
+                "subheading": "MuiTypography-subheading-15",
+                "title": "MuiTypography-title-14",
               }
             }
             color="default"
@@ -461,7 +464,7 @@ exports[`TextSection should render a title when passed in 2`] = `
             variant="display2"
           >
             <h1
-              className="MuiTypography-root-7 MuiTypography-display2-10 MuiTypography-gutterBottom-24"
+              className="MuiTypography-root-8 MuiTypography-display2-11 MuiTypography-gutterBottom-25"
               style={
                 Object {
                   "color": "#000",
@@ -485,30 +488,30 @@ exports[`TextSection should render a title when passed in 2`] = `
             className="TextSection-sectionText-3"
             classes={
               Object {
-                "alignCenter": "MuiTypography-alignCenter-20",
-                "alignJustify": "MuiTypography-alignJustify-22",
-                "alignLeft": "MuiTypography-alignLeft-19",
-                "alignRight": "MuiTypography-alignRight-21",
-                "body1": "MuiTypography-body1-16",
-                "body2": "MuiTypography-body2-15",
-                "button": "MuiTypography-button-18",
-                "caption": "MuiTypography-caption-17",
-                "colorError": "MuiTypography-colorError-30",
-                "colorInherit": "MuiTypography-colorInherit-26",
-                "colorPrimary": "MuiTypography-colorPrimary-27",
-                "colorSecondary": "MuiTypography-colorSecondary-28",
-                "colorTextSecondary": "MuiTypography-colorTextSecondary-29",
-                "display1": "MuiTypography-display1-11",
-                "display2": "MuiTypography-display2-10",
-                "display3": "MuiTypography-display3-9",
-                "display4": "MuiTypography-display4-8",
-                "gutterBottom": "MuiTypography-gutterBottom-24",
-                "headline": "MuiTypography-headline-12",
-                "noWrap": "MuiTypography-noWrap-23",
-                "paragraph": "MuiTypography-paragraph-25",
-                "root": "MuiTypography-root-7",
-                "subheading": "MuiTypography-subheading-14",
-                "title": "MuiTypography-title-13",
+                "alignCenter": "MuiTypography-alignCenter-21",
+                "alignJustify": "MuiTypography-alignJustify-23",
+                "alignLeft": "MuiTypography-alignLeft-20",
+                "alignRight": "MuiTypography-alignRight-22",
+                "body1": "MuiTypography-body1-17",
+                "body2": "MuiTypography-body2-16",
+                "button": "MuiTypography-button-19",
+                "caption": "MuiTypography-caption-18",
+                "colorError": "MuiTypography-colorError-31",
+                "colorInherit": "MuiTypography-colorInherit-27",
+                "colorPrimary": "MuiTypography-colorPrimary-28",
+                "colorSecondary": "MuiTypography-colorSecondary-29",
+                "colorTextSecondary": "MuiTypography-colorTextSecondary-30",
+                "display1": "MuiTypography-display1-12",
+                "display2": "MuiTypography-display2-11",
+                "display3": "MuiTypography-display3-10",
+                "display4": "MuiTypography-display4-9",
+                "gutterBottom": "MuiTypography-gutterBottom-25",
+                "headline": "MuiTypography-headline-13",
+                "noWrap": "MuiTypography-noWrap-24",
+                "paragraph": "MuiTypography-paragraph-26",
+                "root": "MuiTypography-root-8",
+                "subheading": "MuiTypography-subheading-15",
+                "title": "MuiTypography-title-14",
               }
             }
             color="default"
@@ -536,7 +539,7 @@ exports[`TextSection should render a title when passed in 2`] = `
             variant="body1"
           >
             <p
-              className="MuiTypography-root-7 MuiTypography-body1-16 MuiTypography-gutterBottom-24 TextSection-sectionText-3"
+              className="MuiTypography-root-8 MuiTypography-body1-17 MuiTypography-gutterBottom-25 TextSection-sectionText-3"
               style={
                 Object {
                   "color": "#000",
@@ -561,9 +564,10 @@ exports[`TextSection should render text when passed in 1`] = `
         "heroBtn": "TextSection-heroBtn-4",
         "innerContainer": "TextSection-innerContainer-2",
         "invertedBtn": "TextSection-invertedBtn-5",
+        "invertedBtnDark": "TextSection-invertedBtnDark-6",
         "section": "TextSection-section-1",
         "sectionText": "TextSection-sectionText-3",
-        "white": "TextSection-white-6",
+        "white": "TextSection-white-7",
       }
     }
     text="Test text"
@@ -594,30 +598,30 @@ exports[`TextSection should render text when passed in 1`] = `
             align="inherit"
             classes={
               Object {
-                "alignCenter": "MuiTypography-alignCenter-20",
-                "alignJustify": "MuiTypography-alignJustify-22",
-                "alignLeft": "MuiTypography-alignLeft-19",
-                "alignRight": "MuiTypography-alignRight-21",
-                "body1": "MuiTypography-body1-16",
-                "body2": "MuiTypography-body2-15",
-                "button": "MuiTypography-button-18",
-                "caption": "MuiTypography-caption-17",
-                "colorError": "MuiTypography-colorError-30",
-                "colorInherit": "MuiTypography-colorInherit-26",
-                "colorPrimary": "MuiTypography-colorPrimary-27",
-                "colorSecondary": "MuiTypography-colorSecondary-28",
-                "colorTextSecondary": "MuiTypography-colorTextSecondary-29",
-                "display1": "MuiTypography-display1-11",
-                "display2": "MuiTypography-display2-10",
-                "display3": "MuiTypography-display3-9",
-                "display4": "MuiTypography-display4-8",
-                "gutterBottom": "MuiTypography-gutterBottom-24",
-                "headline": "MuiTypography-headline-12",
-                "noWrap": "MuiTypography-noWrap-23",
-                "paragraph": "MuiTypography-paragraph-25",
-                "root": "MuiTypography-root-7",
-                "subheading": "MuiTypography-subheading-14",
-                "title": "MuiTypography-title-13",
+                "alignCenter": "MuiTypography-alignCenter-21",
+                "alignJustify": "MuiTypography-alignJustify-23",
+                "alignLeft": "MuiTypography-alignLeft-20",
+                "alignRight": "MuiTypography-alignRight-22",
+                "body1": "MuiTypography-body1-17",
+                "body2": "MuiTypography-body2-16",
+                "button": "MuiTypography-button-19",
+                "caption": "MuiTypography-caption-18",
+                "colorError": "MuiTypography-colorError-31",
+                "colorInherit": "MuiTypography-colorInherit-27",
+                "colorPrimary": "MuiTypography-colorPrimary-28",
+                "colorSecondary": "MuiTypography-colorSecondary-29",
+                "colorTextSecondary": "MuiTypography-colorTextSecondary-30",
+                "display1": "MuiTypography-display1-12",
+                "display2": "MuiTypography-display2-11",
+                "display3": "MuiTypography-display3-10",
+                "display4": "MuiTypography-display4-9",
+                "gutterBottom": "MuiTypography-gutterBottom-25",
+                "headline": "MuiTypography-headline-13",
+                "noWrap": "MuiTypography-noWrap-24",
+                "paragraph": "MuiTypography-paragraph-26",
+                "root": "MuiTypography-root-8",
+                "subheading": "MuiTypography-subheading-15",
+                "title": "MuiTypography-title-14",
               }
             }
             color="default"
@@ -645,7 +649,7 @@ exports[`TextSection should render text when passed in 1`] = `
             variant="display2"
           >
             <h1
-              className="MuiTypography-root-7 MuiTypography-display2-10 MuiTypography-gutterBottom-24"
+              className="MuiTypography-root-8 MuiTypography-display2-11 MuiTypography-gutterBottom-25"
               style={
                 Object {
                   "color": undefined,
@@ -669,30 +673,30 @@ exports[`TextSection should render text when passed in 1`] = `
             className="TextSection-sectionText-3"
             classes={
               Object {
-                "alignCenter": "MuiTypography-alignCenter-20",
-                "alignJustify": "MuiTypography-alignJustify-22",
-                "alignLeft": "MuiTypography-alignLeft-19",
-                "alignRight": "MuiTypography-alignRight-21",
-                "body1": "MuiTypography-body1-16",
-                "body2": "MuiTypography-body2-15",
-                "button": "MuiTypography-button-18",
-                "caption": "MuiTypography-caption-17",
-                "colorError": "MuiTypography-colorError-30",
-                "colorInherit": "MuiTypography-colorInherit-26",
-                "colorPrimary": "MuiTypography-colorPrimary-27",
-                "colorSecondary": "MuiTypography-colorSecondary-28",
-                "colorTextSecondary": "MuiTypography-colorTextSecondary-29",
-                "display1": "MuiTypography-display1-11",
-                "display2": "MuiTypography-display2-10",
-                "display3": "MuiTypography-display3-9",
-                "display4": "MuiTypography-display4-8",
-                "gutterBottom": "MuiTypography-gutterBottom-24",
-                "headline": "MuiTypography-headline-12",
-                "noWrap": "MuiTypography-noWrap-23",
-                "paragraph": "MuiTypography-paragraph-25",
-                "root": "MuiTypography-root-7",
-                "subheading": "MuiTypography-subheading-14",
-                "title": "MuiTypography-title-13",
+                "alignCenter": "MuiTypography-alignCenter-21",
+                "alignJustify": "MuiTypography-alignJustify-23",
+                "alignLeft": "MuiTypography-alignLeft-20",
+                "alignRight": "MuiTypography-alignRight-22",
+                "body1": "MuiTypography-body1-17",
+                "body2": "MuiTypography-body2-16",
+                "button": "MuiTypography-button-19",
+                "caption": "MuiTypography-caption-18",
+                "colorError": "MuiTypography-colorError-31",
+                "colorInherit": "MuiTypography-colorInherit-27",
+                "colorPrimary": "MuiTypography-colorPrimary-28",
+                "colorSecondary": "MuiTypography-colorSecondary-29",
+                "colorTextSecondary": "MuiTypography-colorTextSecondary-30",
+                "display1": "MuiTypography-display1-12",
+                "display2": "MuiTypography-display2-11",
+                "display3": "MuiTypography-display3-10",
+                "display4": "MuiTypography-display4-9",
+                "gutterBottom": "MuiTypography-gutterBottom-25",
+                "headline": "MuiTypography-headline-13",
+                "noWrap": "MuiTypography-noWrap-24",
+                "paragraph": "MuiTypography-paragraph-26",
+                "root": "MuiTypography-root-8",
+                "subheading": "MuiTypography-subheading-15",
+                "title": "MuiTypography-title-14",
               }
             }
             color="default"
@@ -720,7 +724,7 @@ exports[`TextSection should render text when passed in 1`] = `
             variant="body1"
           >
             <p
-              className="MuiTypography-root-7 MuiTypography-body1-16 MuiTypography-gutterBottom-24 TextSection-sectionText-3"
+              className="MuiTypography-root-8 MuiTypography-body1-17 MuiTypography-gutterBottom-25 TextSection-sectionText-3"
               style={
                 Object {
                   "color": undefined,
