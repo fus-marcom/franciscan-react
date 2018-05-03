@@ -26,3 +26,30 @@ export const eventsData = [
     imgAlt: 'Just an image from unsplash'
   }
 ]
+
+export const testimonyData = [
+  {
+    primaryText: 'John Smith -Accounting 19',
+    secondaryText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non purus et ipsum iaculis tristique. Cras tristique turpis ut felis tincidunt, ac eleifend sapien imperdiet. Morbi sit amet fermentum mauris. Praesent auctor, neque nec hendrerit porta, turpis nisl laoreet orci, a rutrum mauris nisi at ipsum. Morbi vitae diam lorem. Aenean nec diam a leo fringilla rhoncus a dapibus magna. Fusce fermentum ligula velit, ac aliquet justo cursus a. Morbi vel tellus eget turpis varius fermentum quis at quam. Cras condimentum elit tincidunt mollis mollis.`,
+    link: '#',
+    image: '../static/img/SaintJunipero.jpg',
+    imgTitle: 'Random Pic',
+    imgAlt: 'Just an image from unsplash'
+  },
+  {
+    primaryText: 'Jane Doe -Nursing 20',
+    secondaryText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non purus et ipsum iaculis tristique. Cras tristique turpis ut felis tincidunt, ac eleifend sapien imperdiet. Morbi sit amet fermentum mauris. Praesent auctor, neque nec hendrerit porta, turpis nisl laoreet orci, a rutrum mauris nisi at ipsum.`,
+    link: '#',
+    image: '../static/img/new-mexico-mission-team.jpg',
+    imgTitle: 'Random Pic',
+    imgAlt: 'Just an image from unsplash'
+  },
+  {
+    primaryText: 'Alex Lastname -Computer Science 18',
+    secondaryText: `Morbi vitae diam lorem. Aenean nec diam a leo fringilla rhoncus a dapibus magna. Fusce fermentum ligula velit, ac aliquet justo cursus a. Morbi vel tellus eget turpis varius fermentum quis at quam. Cras condimentum elit tincidunt mollis mollis.`,
+    link: '#',
+    image: '../static/img/nicaragua-mission.jpg',
+    imgTitle: 'Random Pic',
+    imgAlt: 'Just an image from unsplash'
+  }
+]

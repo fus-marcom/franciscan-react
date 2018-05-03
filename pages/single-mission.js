@@ -3,13 +3,15 @@ import { withStyles } from 'material-ui/styles'
 import Layout from '../components/Layout'
 import Head from 'next/head'
 import withRoot from '../components/withRoot'
-import Hero from '../components/Hero'
+
 import Masonry from 'react-masonry-component'
-import ProfileCard from '../components/ProfileCard'
+
 import TextSection from '../components/TextSection'
 import Grid from 'material-ui/Grid'
-import Card, { CardMedia, CardContent } from 'material-ui/Card'
+import Card from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
+import ListCard from '../components/ListCard'
+import { testimonyData } from '../data/listData'
 
 const styles = theme => ({
   root: {
@@ -112,64 +114,18 @@ class SingleMission extends Component {
           />
         </Head>
         {/* Put content under here */}
-        <Hero
-          backgroundImg="../static/img/Fr-Shawn-with-Missionaries-Blue.png"
-          titleText="Missions of Peace"
-          // subtitleText={<span>Missions</span>}
-        />
+
         <TextSection
-          sectionTitle="Serve - Inspire - Evangelize"
-          text="Blessed are the peacemakers, for they shall be called children of God."
-          btnLink="/about/our-mission"
-          btnText="Learn More"
-        />
-        <TextSection
-          sectionTitle="Mission trips across the U.S. and throughout the Western Hemisphere"
+          sectionTitle="MISSION TITLE HERE"
+          text="Mission of Peace"
+          btnLink="#"
+          btnText="Apply Now"
           bgColor="#21412a"
           textColor="#fff"
-          borderColor="#998643"
         />
 
         <div className={classes.contentContainer}>
           <Masonry>
-            <Grid
-              item
-              className={classes.gridItemFix}
-              xs={12}
-              sm={6}
-              md={6}
-              lg={6}
-            >
-              <Card
-                className={`${classes.card} ${classes.videoIframeContainer}`}
-              >
-                <iframe
-                  className={classes.videoIframe}
-                  src="https://www.youtube.com/embed/bHSbib2wt90"
-                  frameBorder="0"
-                  allow="encrypted-media"
-                  allowFullScreen
-                />
-              </Card>
-            </Grid>
-
-            <Grid
-              item
-              className={classes.gridItemFix}
-              xs={12}
-              sm={6}
-              md={6}
-              lg={6}
-            >
-              <ProfileCard
-                profileImg="../static/img/SaintJunipero.jpg"
-                profileImgTitle="Saint Junipero Serra"
-                profileName="Saint Junipero Serra"
-                content="Image by Amber Pitts -SENT Missionary & FUS Alumni"
-                profileLink="#"
-              />
-            </Grid>
-
             <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
               <Typography type="display1">
                 Through those activities, but also through their personal
@@ -200,65 +156,26 @@ class SingleMission extends Component {
                 operate on campus.
               </Typography>
             </Grid>
-          </Masonry>
-        </div>
 
-        <div className="missionHead">Spring Mission Trips:</div>
-
-        <div className={classes.contentContainer}>
-          <Masonry>
-            <Grid
-              item
-              className={classes.gridItemFix}
-              xs={12}
-              sm={6}
-              md={6}
-              lg={6}
-            >
-              <ProfileCard
-                profileImg="../static/img/SonlifeSpringMission.jpg"
-                profileImgTitle="Son Life (Panama City, Florida) Mission"
-                profileType="Spring Mission"
-                profileName="Son Life (Panama City, Florida) Mission"
-                content="This is a Spring Break evangelization trip to the beaches of Panama City, Florida bringing Christ's love to other college students, the marginalized, and non-believers."
-                profileLink="#"
+            <Grid item className={classes.gridItemFix} xs={12} sm={6}>
+              <ListCard
+                listTitle="Personal Testimonies"
+                itemsArray={testimonyData}
               />
             </Grid>
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/SpringEcuadorMission.jpeg"
-                profileImgTitle="Ecuador Spring Mission"
-                profileType="Spring Mission"
-                profileName="Ecuador Spring Mission"
-                content="This mission focuses on caring for the whole person by bringing the sacraments and basic medical care to rural Ecuadorian communities.This mission focuses on caring for the whole person by bringing the sacraments and basic medical care to rural Ecuadorian communities."
-                profileLink="#"
-              />
-            </Grid>
+            <div className="slider">
+              <img src="../static/img/adventure2-800w.jpg" alt="Slide 1" />
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/Springsandiegomission.jpg"
-                bgPosY="20%"
-                profileImgTitle="San Diego Mission"
-                profileType="Spring Mission"
-                profileName="San Diego Mission"
-                content="This mission focuses on uniting all to Christ through retreat ministry sharing the awesome truth of St. Pope John Paul II’s Theology of the Body to junior high and high school students at local parish youth groups and high schools."
-                profileLink="#"
+              <img src="../static/img/biology-students.jpg" alt="Slide 2" />
+
+              <img src="../static/img/nicaragua-mission.jpg" alt="Slide 3" />
+
+              <img
+                src="../static/img/Fr-Shawn-with-Missionaries-Blue.png"
+                alt="Slide 4"
               />
-            </Grid>
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <Card className={classes.card}>
-                <CardMedia
-                  className={classes.media}
-                  image="/static/img/adventure2-800w.jpg"
-                  title="Austria Campus"
-                />
-                <CardContent>
-                  <Typography type="display1">Austria</Typography>
-                </CardContent>
-              </Card>
-            </Grid>
+            </div>
 
             <Grid
               item
@@ -273,7 +190,7 @@ class SingleMission extends Component {
               >
                 <iframe
                   className={classes.videoIframe}
-                  src="https://www.youtube.com/embed/HzfPBp3lHTU?modestbranding=1&rel=0&color=white"
+                  src="https://www.youtube.com/embed/bHSbib2wt90"
                   frameBorder="0"
                   allow="encrypted-media"
                   allowFullScreen

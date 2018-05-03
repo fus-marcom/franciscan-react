@@ -12,508 +12,52 @@ html, body {
     padding-bottom: 30px;
 }
 
-.intro2{
-	height: 100px;
-	width: 100%;
-	margin:auto;
-	display: table;
-	top: 0;
-	background-size: cover;
 
-}
 
-.header{
-	height: 5%;
-	width: 100%;
-}
 
-.headerspace{
-	height: 12%;
-	width: 100%;
-}
 
-.intro{
-	height: 100%;
-	width: 100%;
-	margin:auto;
-	display: table;
-	top: 0;
-	background-size: cover;
-	padding-bottom: 100px;
 
-}
 
-.intro .inner{
-	display: table-cell;
-	vertical-align: middle;
-	width: 100%;
-	max-width: 500px;
-	margin: 0 auto;
-	text-align: center;
-	color: rgb(255,255,255);
-	font-family: 'Raleway', sans-serif;
-	font-size:20px;
 
-
-
-}
-.Container{
-	display: table-cell;
-	top: 0;
-	vertical-align: middle;
-	background-color: rgba(0,0,0,.3);
-	
-	border-style: inset;
-	border-right: transparent;
-	border-bottom: transparent;
-
-
-	
-}
-
-.content {
-	max-width: 700px;
-	margin: 0 auto;
-	text-align: center;
-	color: rgb(255,255,255);
-	font-family: 'Raleway', sans-serif;
-	background-color: rgba(0,0,0, .4);
-	vertical-align: middle;
-
-}
-.content h1{
-	font-family: 'Raleway', sans-serif;
-	color: rgb(255,255,255);
-	text-shadow:0px 0px 300px #000;
-	font-size: 400%;
-	
-	border-bottom: solid;
-
-	border-color: rgb(166, 146, 58);
-	text-shadow: 3px 2px rgb(0,0,0);
-	text-align: center;
-}
-
-.btn{
-	border-radius: 2px;
-	font-family: 'Oswald', sans-serif;
-	color: rgb(255,255,255);
-	font-size: 135%;
-	padding: 10px 20px;
-	border: solid rgb(33, 65, 42) 3px;
-	text-transform: uppercase;
-	text-decoration: none;
-	background:rgb(166, 146, 58);
-
-}
-.btn:hover{
-	color:rgb(166, 146, 58);
-	border: solid rgb(33, 65, 42) 3px;
-	border-radius: 2px;
-	background: rgb(255,255,255);
-	
-}
-
-
-.introUpload{
-	height: 100%;
-	width: 100%;
-	margin:auto;
-	display: table;
-	top: 0;
-	background-size: cover;
-
-
-}
-
-
-
-
-
-nav{
-	position: fixed;
-	width: 100%;
-	height: 60px;
-	background: rgb(255,255,255);
-	margin: 0;
-	text-align: center;
-	text-decoration-color: rgb(42, 72, 50);
-	font-size: large;
-	font-family: 'Roboto', sans-serif;
-	border-bottom: solid rgb(166, 146, 58);
-	box-shadow: 0px 4px 16px 1px rgba(0,0,0,0.2);
-}
-
-nav ul{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	color: rgb(42, 72, 50);
-}
-
-nav ul li:hover{
-	background: rgba(42, 72, 50);
-	transition: .4s;
-	color: rgb(255,255,255);
-}
-
-nav ul li{
-	display: inline-block;
-	padding: 20px;
-	cursor: pointer;
-	text-align: center;
-
-
-}
-nav ul li a{
-	text-decoration: none;
-	color: rgb(166, 146, 58);
-	display:inline-block;
-}
-
-
-
-
-nav ul ul li:hover{
-	background: rgba(255, 255, 255);
-	color: rgb(255,255,255);
-	display: block;
-	transition-timing-function: ease-out;
-}
-
-
-
-
-nav ul ul{
-	position: absolute;
-	width: 200px;
-	background: rgba(42, 72, 50);
-
-	margin-top: 20px;
-	margin-left: -5px;
-	text-align: center;
-	display: none;
-	text-decoration-color: #000;
-    box-shadow: 0px 4px 16px 1px rgba(0,0,0,0.9);
-}
-
-nav ul ul li{
-	display:block;
-	float:center;
-}
-
-nav ul li:hover > ul{
-	display: block;
-	text-decoration-color: rgb(255,255,255);
-}
-
-#logo {
-	float: left;
-	text-align: left;
-}
-#logo:hover{
-	
-}
-
-.introHead {
-	font-family: 'Raleway', sans-serif;
-	color: rgb(255,255,255);
-	text-shadow:0px 0px 300px #000;
-	font-size: 300%;
-	border-color: rgb(255,255,255);
-	text-shadow: 3px 2px rgb(0,0,0);
-	text-align: center;
-	text-decoration: underline rgb(166, 146, 58);
-}
-
-.card {
-    /* Add shadows to create the "card" effect */
-    box-sizing: height:300px; width: 200px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-
-
-}
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
-}
-
-
-
-
-.cardtainer {
-	display: block;
-	box-sizing: height:250px; width: 200px;
-	font-family: 'Raleway', sans-serif;
-	background-color: rgb(33, 65, 42);
-	color: rgb(255,255,255);
-
-
-}
-.Cardtext {
-	font-family: 'Raleway', sans-serif;
-	color: rgb(255,255,255);
-}
-
-.Cardplace {
-	position: center;
-	margin:auto;
-	display: inline-block;
-	background-color: #063;
-	height: 100%;
-	width: 85%;
-	;
-
-	
-}
-
-
-.floating-box {
-    display: inline-block;
-    width: 400px;
-    height:inherit;
-    margin: 10px;
-    box-shadow: 2px 8px 16px 1px rgba(0,0,0,0.6);
-    background-size: 100%;
-    transition: 0.3s; 
-}
-
-/* On mouse-over, add a deeper shadow */
-.floating-box:hover {
-    box-shadow: 2px 8px 16px 1px rgba(0,0,0,0.9);
-}
-
-
-.contemp {
-	align-content: center;
-	background-color:rgb(33, 65, 42);
-	margin:auto;
-	height: 100%;
-	width: 85%;
-	padding-top:90px;
-	border: solid rgb(166, 146, 58) 10px;
-}
-
-.contentHead {
-	font-family: 'Raleway', sans-serif;
-	color: rgb(255,255,255);
-	text-shadow:0px 0px 300px #000;
-	font-size: 260%;
-	border-color: rgb(255,255,255);
-	text-shadow: 3px 2px rgb(24,60,17);
-	text-align: center;
-
-
-}
-
-.titleHead {
-	font-family: 'Raleway', sans-serif;
-	color: rgb(255,255,255);
-	text-shadow:0px 0px 300px #000;
-	font-size: 300%;
-	border-color: rgb(255,255,255);
-	text-shadow: 3px 2px rgb(0,0,0);
-	text-align: center;
-	text-decoration: underline rgb(166, 146, 58);
-
-
-}
-
+/* Missions of Peace Section Headers */
 .missionHead {
-	
-	font-family: "Roboto", sans-serif;
-	color: rgb(255,255,255);
-	font-size: 150%;
-	text-align: left; 
-	padding-left: 20px;
-	background-color: rgba(153, 134, 67, 1);
-	padding-bottom: 15px;
-	padding-top: 15px;
-	width:50%;
+		
+			font-size: 1.6125rem;
+		    font-weight: 400;
+		    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+		    line-height: 1.06667em;
+		    margin-left: -.02em;
+			color: rgb(255,255,255);
+			text-align: left; 
+			padding-left: 40px;
+			background-color: #998643;
+			padding-bottom: 15px;
+			padding-top: 15px;
+			width:40%;
 
-
-}
-.formFont {
-	font-family: 'Raleway', sans-serif;
-	text-shadow:0px 0px 300px #000;
-	font-size: 20px;
-	font-style: bold;
-	color: rgb(255,255,255);
-	padding-left: 10px;
-
-}
-.textBox{
-	box-sizing: 40%;
-}
-
-input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 3px rgb(166, 146, 58);
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-}
-
-input[type=numeric] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 3px rgb(166, 146, 58);
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-}
-
-input[type=text]:focus {
-    border: 3px solid rgb(166, 146, 58);
-}
-
-input[type=numeric]:focus {
-    border: 3px solid rgb(166, 146, 58);
-}
-
-input[type=textarea]:focus {
-    border: 3px solid rgb(166, 146, 58);
-}
-
-textarea {
-    width: 50%;
-    height: 75px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 5px solid rgb(166, 146, 58);
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    border-color: rgb(24,60,17);
-    resize: none;
+			
 }
 
 
+.missionHead2 {
+			
 
-/*Registration Form Tags.. */
-
-input[type=text], select, textarea{
-    width: 100%;
-    padding: 12px;
-    border: 1px solid rgb(166, 146, 58);
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize: none;
-}
-
-input[type=numeric], select{
-    width: 40%;
-    padding: 12px;
-    border: 1px solid rgb(166, 146, 58);
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize: vertical;
-}
-
-
-
-label {
-    padding-left: 100px;
-    display: inline-block;
-   
-}
-
-
-input[type=submit] {
-    background-color: rgb(166, 146, 58);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-}
-
-input[type=submit]:hover {
-    background-color: rgb(95, 95, 95);
-}
-
-
-.col-25 {
-    float: left;
-    width: 25%;
-    padding-top: 15px;
-    font-family: 'Raleway', sans-serif;
-	text-shadow:0px 0px 300px #000;
-	font-size: 25px;
-	font-style: bold;
-	color: rgb(255,255,255);
-
+			font-size: 2.8125rem;
+		    font-weight: 400;
+		    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+		    line-height: 1.06667em;
+		    margin-left: -.02em;
+			color: rgb(255,255,255);
+			text-align: center; 
+			background-color: #21412a;
+			padding-bottom: 15px;
+			padding-top: 15px;
+			width:100%;
+			border-top: 2px solid #998643;
+			border-bottom: 2px solid #998643;
 
 }
 
-.col-75 {
-    float: left;
-    width: 45%;
-    margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media (max-width: 400px) {
-    .col-25, .col-75, input[type=submit] {
-        width: 50%;
-        margin-top: 0;
-    }
-}
-
-
-
-.footer{
-	padding: 100px;
-    background: rgb(25, 49, 31);
-    color: #FFF;
-    width: 100%;
-    padding: 10px 0;
-    padding-left: 10px;
-    border-top: solid rgb(255,255,255);
-}
-
-.centerTextFooter {
-	text-align: center;
-	text-decoration-color: rgb(255,255,255);
-	font-weight:bold;
-	font-family: 'Raleway', sans-serif;
-
-}
-
-
-a footer:link {
-    color: rgb(255,255,255);
-    background-color: transparent;
-    text-decoration: underline;
-}
-
-a footer:visited {
-    color: rgb(166, 146, 58);
-    background-color: transparent;
-    text-decoration: underline;
-}
-
-.selectorFont {
-	text-align: center;
-	color: rgb(166, 146, 58);
-	font-weight:bold;
-	font-family: 'Raleway', sans-serif;
-
-}
 
 .missionCard {
 	display: inline-block;
@@ -537,19 +81,7 @@ a footer:visited {
 }
 
 
-
-
-/*                                  */
-
-
-
-/* Three columns side by side */
-.columnContact {
-    display: inline-block;
-    width: 33.3%;
-    margin-bottom: 16px;
-    padding: 0 8px;
-}
+     
 
 /* Display the columns below each other instead of side by side on small screens */
 @media (max-width: 650px) {
@@ -582,60 +114,47 @@ a footer:visited {
     color: rgb(255,255,255);
 }
 
-.buttonContact {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: rgb(33, 65, 42);
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
+
+
+
+/*  Missions Slider  */
+
+.slider {
+    width:425px; 
+    height:300px; 
+    position:relative;
+    overflow:hidden;  
+    padding-left: 22px;
+}
+.slider img{ position:absolute; 
+    animation:change-slide 20s infinite; 
+    width: 100%; 
+    height: auto;
+    opacity:0; 
 }
 
-.buttonContact:hover {
-    background-color: rgb(255,255,255);
-    text-decoration-style: color rgb(33, 65, 42);
-    color: rgb(33, 65, 42);
+@keyframes change-slide {
+    25%{opacity:1;} 
+    40%{opacity:0;}
+} 
 
-    box-shadow: 0px 8px 16px 1px rgba(0,0,0,0.6);
-    transition: .4s;
+.slider img:nth-child(4){
+    animation-delay:0s;
+}
+
+.slider img:nth-child(3){
+    animation-delay:5s;
+}
+
+.slider img:nth-child(2){
+    animation-delay:10s;
+}
+
+.slider img:nth-child(1){
+    animation-delay:15s;
 }
 
 
-
-
-
-
-nav missionNav{
-	display: block;
-	position: fixed;
-	float: right;
-	background: transparent;
-	padding-right: 20px;
-	text-align: right;
-	text-decoration-color: rgb(255,255,255);
-	font-weight:bold;
-	font-size:larger;
-	font-family: 'Raleway', sans-serif;
-	
-}
-
-nav missionNav ul{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	text-decoration-color: rgb(255,255,255);
-	font-weight:bold;
-	float: right;
-}
-
-nav missionNav ul li:hover{
-	text-decoration-color: rgb(255,255,255);
-	background: rgb(255,255,255);
-	transition: .5s;
-}
 
 
 
@@ -683,5 +202,5 @@ ul.scroll-spy-nav li {
 
 ul.scroll-spy-nav a.active li {
 	font-weight: 500;
-  border-left: 2px solid #ffb41f;
+  border-left: 2px solid #998643;
 }
