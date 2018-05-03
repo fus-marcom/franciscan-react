@@ -258,346 +258,349 @@ class Missions extends Component {
           textColor="#fff"
           borderColor="#998643"
         />
-        <div className="scroll-spy-container">
-          <ul className="scroll-spy-nav">
-            <Link
-              activeClass="active"
-              to="spring"
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={500}
-            >
-              <li>Spring</li>
-            </Link>
 
-            <Link
-              activeClass="active"
-              to="summer"
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={500}
-            >
-              <li>Summer</li>
-            </Link>
+        <div>
+          <div className="scroll-spy-container">
+            <ul className="scroll-spy-nav">
+              <Link
+                activeClass="active"
+                to="spring"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+              >
+                <li>Spring</li>
+              </Link>
 
-            <Link
-              activeClass="active"
-              to="christmas"
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={500}
-            >
-              <li>Christmas</li>
-            </Link>
+              <Link
+                activeClass="active"
+                to="summer"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+              >
+                <li>Summer</li>
+              </Link>
 
-            <Link
-              activeClass="active"
-              to="austria"
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={500}
-            >
-              <li>Austria</li>
-            </Link>
+              <Link
+                activeClass="active"
+                to="christmas"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+              >
+                <li>Christmas</li>
+              </Link>
 
-            <Link
-              activeClass="active"
-              to="donate"
-              spy={true}
-              smooth={true}
-              offset={-50}
-              duration={500}
-            >
-              <li>Donate</li>
-            </Link>
-          </ul>
-        </div>
+              <Link
+                activeClass="active"
+                to="austria"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+              >
+                <li>Austria</li>
+              </Link>
 
-        <div className="missionHead">Spring Mission Trips:</div>
+              <Link
+                activeClass="active"
+                to="donate"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+              >
+                <li>Donate</li>
+              </Link>
+            </ul>
+          </div>
 
-        <div id="spring" className={classes.contentContainer}>
-          <Masonry>
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/arizona-mission-team.jpg"
-                profileImgTitle="Arizona"
-                profileType="Spring Mission"
-                profileName="Arizona Mission"
-                content="This mission focuses on working in a Catholic school just inside the US border with Hispanic students who cross the border each day to attend the school. We collaborate with the Carmelite Sisters of the Most Sacred Heart of Los Angeles."
-                profileLink="#"
-              />
-            </Grid>
+          <div className="missionHead">Spring Mission Trips:</div>
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/belize-mission.jpg"
-                profileImgTitle="Belize"
-                profileType="Spring Mission"
-                profileName="Belize Mission"
-                content="This mission focuses on bringing Christ to students in middle and high schools of villages and cities. The ministry includes using Theology of the Body to teach the students how to live out their faith, how to practice chastity and how to build each other up as the body of Christ while collaborating with SOLT (Society of Our Lady of the Most Holy Trinity) priests at Mt. Carmel High School in Benque."
-                profileLink="#"
-              />
-            </Grid>
+          <div id="spring" className={classes.contentContainer}>
+            <Masonry>
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/arizona-mission-team.jpg"
+                  profileImgTitle="Arizona"
+                  profileType="Spring Mission"
+                  profileName="Arizona Mission"
+                  content="This mission focuses on working in a Catholic school just inside the US border with Hispanic students who cross the border each day to attend the school. We collaborate with the Carmelite Sisters of the Most Sacred Heart of Los Angeles."
+                  profileLink="#"
+                />
+              </Grid>
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/new-york-bronx-mission.jpg"
-                profileImgTitle="New York City"
-                profileType="Spring Mission"
-                profileName="New York City (Bronx) Mission"
-                content="This mission focuses on ministry in the inner city. This includes work in soup kitchens, homeless shelters, and working with Our Lady of Mt. Carmel Grade School on Mulberry Street by sharing the Joy of the Gospel with K-8th graders."
-                profileLink="#"
-              />
-            </Grid>
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/belize-mission.jpg"
+                  profileImgTitle="Belize"
+                  profileType="Spring Mission"
+                  profileName="Belize Mission"
+                  content="This mission focuses on bringing Christ to students in middle and high schools of villages and cities. The ministry includes using Theology of the Body to teach the students how to live out their faith, how to practice chastity and how to build each other up as the body of Christ while collaborating with SOLT (Society of Our Lady of the Most Holy Trinity) priests at Mt. Carmel High School in Benque."
+                  profileLink="#"
+                />
+              </Grid>
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/chicago-mission-team.jpg"
-                profileImgTitle="Chicago"
-                profileType="Spring Mission"
-                profileName="Chicago Mission"
-                content="This mission focuses on working with homeless men in the inner city who struggle with male street prostitution, generational poverty, homelessness, drug addiction and HIV/AIDS. Our students serve along side Emmaus Ministries in the inner city."
-                profileLink="#"
-              />
-            </Grid>
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/new-york-bronx-mission.jpg"
+                  profileImgTitle="New York City"
+                  profileType="Spring Mission"
+                  profileName="New York City (Bronx) Mission"
+                  content="This mission focuses on ministry in the inner city. This includes work in soup kitchens, homeless shelters, and working with Our Lady of Mt. Carmel Grade School on Mulberry Street by sharing the Joy of the Gospel with K-8th graders."
+                  profileLink="#"
+                />
+              </Grid>
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/SonlifeSpringMission.jpg"
-                profileImgTitle="Son Life (Panama City, Florida) Mission"
-                profileType="Spring Mission"
-                profileName="Son Life (Panama City, Florida) Mission"
-                content="This is a Spring Break evangelization trip to the beaches of Panama City, Florida bringing Christ's love to other college students, the marginalized, and non-believers."
-                profileLink="#"
-              />
-            </Grid>
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/chicago-mission-team.jpg"
+                  profileImgTitle="Chicago"
+                  profileType="Spring Mission"
+                  profileName="Chicago Mission"
+                  content="This mission focuses on working with homeless men in the inner city who struggle with male street prostitution, generational poverty, homelessness, drug addiction and HIV/AIDS. Our students serve along side Emmaus Ministries in the inner city."
+                  profileLink="#"
+                />
+              </Grid>
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/SpringEcuadorMission.jpeg"
-                profileImgTitle="Ecuador Spring Mission"
-                profileType="Spring Mission"
-                profileName="Ecuador Spring Mission"
-                content="This mission focuses on caring for the whole person by bringing the sacraments and basic medical care to rural Ecuadorian communities.This mission focuses on caring for the whole person by bringing the sacraments and basic medical care to rural Ecuadorian communities."
-                profileLink="#"
-              />
-            </Grid>
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/SonlifeSpringMission.jpg"
+                  profileImgTitle="Son Life (Panama City, Florida) Mission"
+                  profileType="Spring Mission"
+                  profileName="Son Life (Panama City, Florida) Mission"
+                  content="This is a Spring Break evangelization trip to the beaches of Panama City, Florida bringing Christ's love to other college students, the marginalized, and non-believers."
+                  profileLink="#"
+                />
+              </Grid>
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/honduras-mission-littleones.jpg"
-                profileImgTitle="Honduras"
-                profileType="Spring Mission"
-                profileName="Honduras Mission"
-                content="This mission focuses on bringing Christ to the poorest of the poor in Honduras through the sacraments, prayer, music, and ministering to children and families."
-                profileLink="#"
-              />
-            </Grid>
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/SpringEcuadorMission.jpeg"
+                  profileImgTitle="Ecuador Spring Mission"
+                  profileType="Spring Mission"
+                  profileName="Ecuador Spring Mission"
+                  content="This mission focuses on caring for the whole person by bringing the sacraments and basic medical care to rural Ecuadorian communities.This mission focuses on caring for the whole person by bringing the sacraments and basic medical care to rural Ecuadorian communities."
+                  profileLink="#"
+                />
+              </Grid>
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/new-mexico-mission-team.jpg"
-                profileImgTitle="New Mexico"
-                profileType="Spring Mission"
-                profileName="New Mexico Mission"
-                content="This mission focuses on ministering to the Navajo and other people in the area. Work is done at St. Francis of Assisi Parish Grade School, High School youth group and St. Michael's Special Education school in collaboration with the Missionaries of Charity and Little Sisters of the Poor."
-                profileLink="#"
-              />
-            </Grid>
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/honduras-mission-littleones.jpg"
+                  profileImgTitle="Honduras"
+                  profileType="Spring Mission"
+                  profileName="Honduras Mission"
+                  content="This mission focuses on bringing Christ to the poorest of the poor in Honduras through the sacraments, prayer, music, and ministering to children and families."
+                  profileLink="#"
+                />
+              </Grid>
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/nicaragua-mission.jpg"
-                profileImgTitle="Nicaragua"
-                profileType="Spring Mission"
-                profileName="Nicaragua Mission"
-                content="This mission focuses on providing personal testimonies and retreats focused on the teachings of St. Pope John Paul II’s Theology of the Body and working with orphans and the poorest of the poor in collaboration with the Lincoln Academy, Missionaries of Charity and the Abandoned Children’s Center."
-                profileLink="#"
-              />
-            </Grid>
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/new-mexico-mission-team.jpg"
+                  profileImgTitle="New Mexico"
+                  profileType="Spring Mission"
+                  profileName="New Mexico Mission"
+                  content="This mission focuses on ministering to the Navajo and other people in the area. Work is done at St. Francis of Assisi Parish Grade School, High School youth group and St. Michael's Special Education school in collaboration with the Missionaries of Charity and Little Sisters of the Poor."
+                  profileLink="#"
+                />
+              </Grid>
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/north-dakota-mission-team.jpg"
-                profileImgTitle="North Dakota"
-                profileType="Spring Mission"
-                profileName="North Dakota Mission"
-                content="This mission focuses on ministering to the Chippewa Indians on Turtle Mountain Indian Reservation. The ministry includes retreats, work in the schools, door-to-door ministry collaborating with SOLT (Society of Our Lady of the Most Holy Trinity) priests and sisters."
-                profileLink="#"
-              />
-            </Grid>
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/nicaragua-mission.jpg"
+                  profileImgTitle="Nicaragua"
+                  profileType="Spring Mission"
+                  profileName="Nicaragua Mission"
+                  content="This mission focuses on providing personal testimonies and retreats focused on the teachings of St. Pope John Paul II’s Theology of the Body and working with orphans and the poorest of the poor in collaboration with the Lincoln Academy, Missionaries of Charity and the Abandoned Children’s Center."
+                  profileLink="#"
+                />
+              </Grid>
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/los-angeles-mission.jpg"
-                profileImgTitle="Los Angeles"
-                profileType="Spring Mission"
-                profileName="Los Angeles Mission"
-                content="This is a NEW mission focused on bringing Christ to the people of Los Angeles alongside the Carmelite Sisters of the Most Sacred Heart of Los Angeles. It includes work in youth ministry, grade school catechetics, as well as nursing home and homeless ministry."
-                profileLink="#"
-              />
-            </Grid>
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/north-dakota-mission-team.jpg"
+                  profileImgTitle="North Dakota"
+                  profileType="Spring Mission"
+                  profileName="North Dakota Mission"
+                  content="This mission focuses on ministering to the Chippewa Indians on Turtle Mountain Indian Reservation. The ministry includes retreats, work in the schools, door-to-door ministry collaborating with SOLT (Society of Our Lady of the Most Holy Trinity) priests and sisters."
+                  profileLink="#"
+                />
+              </Grid>
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/Springsandiegomission.jpg"
-                bgPosY="20%"
-                profileImgTitle="San Diego Mission"
-                profileType="Spring Mission"
-                profileName="San Diego Mission"
-                content="This mission focuses on uniting all to Christ through retreat ministry sharing the awesome truth of St. Pope John Paul II’s Theology of the Body to junior high and high school students at local parish youth groups and high schools."
-                profileLink="#"
-              />
-            </Grid>
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/spring-steubenville-mission-team.jpg"
-                bgPosY="20%"
-                profileImgTitle="Steubenville Mission"
-                profileType="Spring Mission"
-                profileName="Steubenville Mission"
-                content="This mission focuses on bringing the Light of Christ into the downtown areas of Steubenville through: door-to-door evangelization, street ministry, soup kitchen, homeless ministry and various service projects."
-                profileLink="#"
-              />
-            </Grid>
-          </Masonry>
-        </div>
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/los-angeles-mission.jpg"
+                  profileImgTitle="Los Angeles"
+                  profileType="Spring Mission"
+                  profileName="Los Angeles Mission"
+                  content="This is a NEW mission focused on bringing Christ to the people of Los Angeles alongside the Carmelite Sisters of the Most Sacred Heart of Los Angeles. It includes work in youth ministry, grade school catechetics, as well as nursing home and homeless ministry."
+                  profileLink="#"
+                />
+              </Grid>
 
-        <div className="missionHead">Summer Mission Trips:</div>
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/Springsandiegomission.jpg"
+                  bgPosY="20%"
+                  profileImgTitle="San Diego Mission"
+                  profileType="Spring Mission"
+                  profileName="San Diego Mission"
+                  content="This mission focuses on uniting all to Christ through retreat ministry sharing the awesome truth of St. Pope John Paul II’s Theology of the Body to junior high and high school students at local parish youth groups and high schools."
+                  profileLink="#"
+                />
+              </Grid>
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/spring-steubenville-mission-team.jpg"
+                  bgPosY="20%"
+                  profileImgTitle="Steubenville Mission"
+                  profileType="Spring Mission"
+                  profileName="Steubenville Mission"
+                  content="This mission focuses on bringing the Light of Christ into the downtown areas of Steubenville through: door-to-door evangelization, street ministry, soup kitchen, homeless ministry and various service projects."
+                  profileLink="#"
+                />
+              </Grid>
+            </Masonry>
+          </div>
 
-        <div id="summer" className={classes.contentContainer}>
-          <Masonry>
-            <Grid
-              item
-              className={classes.gridItemFix}
-              xs={12}
-              sm={6}
-              md={6}
-              lg={6}
-            >
-              <ProfileCard
-                profileImg="../static/img/summer-steubenville-mission-team.png"
-                profileImgTitle="Steubenville"
-                profileType="Summer Mission"
-                profileName="Steubenville Mission"
-                content="This mission focuses on bringing the Light of Christ into the downtown areas of Steubenville through: door-to-door evangelization, street ministry, soup kitchen, homeless ministry and various service projects."
-                profileLink="#"
-              />
-            </Grid>
+          <div className="missionHead">Summer Mission Trips:</div>
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/ecuador-summer-mission.jpg"
-                profileImgTitle="Ecuador Summer Mission"
-                profileType="Summer Mission"
-                profileName="Ecuador Summer Mission"
-                content="This mission focuses on caring for the whole person by bringing the sacraments and basic medical care to rural Ecuadorian communities.This mission focuses on caring for the whole person by bringing the sacraments and basic medical care to rural Ecuadorian communities."
-                profileLink="#"
-              />
-            </Grid>
+          <div id="summer" className={classes.contentContainer}>
+            <Masonry>
+              <Grid
+                item
+                className={classes.gridItemFix}
+                xs={12}
+                sm={6}
+                md={6}
+                lg={6}
+              >
+                <ProfileCard
+                  profileImg="../static/img/summer-steubenville-mission-team.png"
+                  profileImgTitle="Steubenville"
+                  profileType="Summer Mission"
+                  profileName="Steubenville Mission"
+                  content="This mission focuses on bringing the Light of Christ into the downtown areas of Steubenville through: door-to-door evangelization, street ministry, soup kitchen, homeless ministry and various service projects."
+                  profileLink="#"
+                />
+              </Grid>
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/Springsandiegomission.jpg"
-                bgPosY="20%"
-                profileImgTitle="San Diego Mission"
-                profileType="SUmmer Mission"
-                profileName="San Diego Mission"
-                content="The goal of the summer mission is to share the love of Christ with those we will be serving.  Student missionaries will be serving in either a hospital, special needs school or parish sharing their faith. Located in Quito, Ecuador we will be staying at Portiuncula Foundation Retreat Center operated by FUS alumni for a three week mission. You do not need to speak Spanish to serve on this mission but it is strongly encourage that you have taken Spanish 101 and 102 prior to serving on this mission."
-                profileLink="#"
-              />
-            </Grid>
-          </Masonry>
-        </div>
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/ecuador-summer-mission.jpg"
+                  profileImgTitle="Ecuador Summer Mission"
+                  profileType="Summer Mission"
+                  profileName="Ecuador Summer Mission"
+                  content="This mission focuses on caring for the whole person by bringing the sacraments and basic medical care to rural Ecuadorian communities.This mission focuses on caring for the whole person by bringing the sacraments and basic medical care to rural Ecuadorian communities."
+                  profileLink="#"
+                />
+              </Grid>
 
-        <div className="missionHead">Christmas Mission Trip:</div>
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/Springsandiegomission.jpg"
+                  bgPosY="20%"
+                  profileImgTitle="San Diego Mission"
+                  profileType="SUmmer Mission"
+                  profileName="San Diego Mission"
+                  content="The goal of the summer mission is to share the love of Christ with those we will be serving.  Student missionaries will be serving in either a hospital, special needs school or parish sharing their faith. Located in Quito, Ecuador we will be staying at Portiuncula Foundation Retreat Center operated by FUS alumni for a three week mission. You do not need to speak Spanish to serve on this mission but it is strongly encourage that you have taken Spanish 101 and 102 prior to serving on this mission."
+                  profileLink="#"
+                />
+              </Grid>
+            </Masonry>
+          </div>
 
-        <div id="christmas" className={classes.contentContainer}>
-          <Masonry>
-            <Grid
-              item
-              className={classes.gridItemFix}
-              xs={12}
-              sm={6}
-              md={6}
-              lg={6}
-            >
-              <ProfileCard
-                profileImg="../static/img/jamaica-christmas-mission.jpg"
-                profileImgTitle="Jamaica"
-                profileType="Christmas Mission"
-                profileName="Jamaica Mission"
-                content="This mission focuses on ministering to people of all ages through various types of evangelization. The team is of service to the Bishop and local priests serving him by providing sacramental preparation to the people of the Montego Bay Diocese."
-                profileLink="#"
-              />
-            </Grid>
+          <div className="missionHead">Christmas Mission Trip:</div>
 
-            <Grid
-              item
-              className={classes.gridItemFix}
-              xs={12}
-              sm={6}
-              md={6}
-              lg={6}
-            >
-              <ProfileCard
-                profileImg="../static/img/PrayerOfRenewal.png"
-                profileImgTitle="Prayer of On-Going Conversion"
-                profileName="Prayer of On-Going Conversion"
-                content="Image by Amber Pitts -SENT Missionary & FUS Alumni"
-              />
-            </Grid>
-          </Masonry>
-        </div>
-        <div className="missionHead">Austria Program-Mission Trips:</div>
+          <div id="christmas" className={classes.contentContainer}>
+            <Masonry>
+              <Grid
+                item
+                className={classes.gridItemFix}
+                xs={12}
+                sm={6}
+                md={6}
+                lg={6}
+              >
+                <ProfileCard
+                  profileImg="../static/img/jamaica-christmas-mission.jpg"
+                  profileImgTitle="Jamaica"
+                  profileType="Christmas Mission"
+                  profileName="Jamaica Mission"
+                  content="This mission focuses on ministering to people of all ages through various types of evangelization. The team is of service to the Bishop and local priests serving him by providing sacramental preparation to the people of the Montego Bay Diocese."
+                  profileLink="#"
+                />
+              </Grid>
 
-        <div id="austria" className={classes.contentContainer}>
-          <Masonry>
-            <Grid
-              item
-              className={classes.gridItemFix}
-              xs={12}
-              sm={6}
-              md={6}
-              lg={6}
-            >
-              <ProfileCard
-                profileImg="../static/img/summer-steubenville-mission-team.png"
-                profileImgTitle="Hungary"
-                profileType="Austria-Program Mission"
-                profileName="Hungary Mission"
-                content="Students serve in orphanages, schools and teach Chastity through the wisdom of St. Pope John-Paul II’s Theology of the Body in Hungary, Romania, and Slovakia."
-                profileLink="#"
-              />
-            </Grid>
+              <Grid
+                item
+                className={classes.gridItemFix}
+                xs={12}
+                sm={6}
+                md={6}
+                lg={6}
+              >
+                <ProfileCard
+                  profileImg="../static/img/PrayerOfRenewal.png"
+                  profileImgTitle="Prayer of On-Going Conversion"
+                  profileName="Prayer of On-Going Conversion"
+                  content="Image by Amber Pitts -SENT Missionary & FUS Alumni"
+                />
+              </Grid>
+            </Masonry>
+          </div>
+          <div className="missionHead">Austria Program-Mission Trips:</div>
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/ecuador-summer-mission.jpg"
-                profileImgTitle="Romania Mission"
-                profileType="Austria-Program Mission"
-                profileName="Romania Mission"
-                content="Students serve in orphanages, schools and teach Chastity through the wisdom of St. Pope John-Paul II’s Theology of the Body in Hungary, Romania, and Slovakia."
-                profileLink="#"
-              />
-            </Grid>
+          <div id="austria" className={classes.contentContainer}>
+            <Masonry>
+              <Grid
+                item
+                className={classes.gridItemFix}
+                xs={12}
+                sm={6}
+                md={6}
+                lg={6}
+              >
+                <ProfileCard
+                  profileImg="../static/img/summer-steubenville-mission-team.png"
+                  profileImgTitle="Hungary"
+                  profileType="Austria-Program Mission"
+                  profileName="Hungary Mission"
+                  content="Students serve in orphanages, schools and teach Chastity through the wisdom of St. Pope John-Paul II’s Theology of the Body in Hungary, Romania, and Slovakia."
+                  profileLink="#"
+                />
+              </Grid>
 
-            <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-              <ProfileCard
-                profileImg="../static/img/Springsandiegomission.jpg"
-                bgPosY="20%"
-                profileImgTitle="Slovakia Mission"
-                profileType="Austria-Program Mission"
-                profileName="Slovakia Mission"
-                content="Students serve in orphanages, schools and teach Chastity through the wisdom of St. Pope John-Paul II’s Theology of the Body in Hungary, Romania, and Slovakia."
-                profileLink="#"
-              />
-            </Grid>
-          </Masonry>
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/ecuador-summer-mission.jpg"
+                  profileImgTitle="Romania Mission"
+                  profileType="Austria-Program Mission"
+                  profileName="Romania Mission"
+                  content="Students serve in orphanages, schools and teach Chastity through the wisdom of St. Pope John-Paul II’s Theology of the Body in Hungary, Romania, and Slovakia."
+                  profileLink="#"
+                />
+              </Grid>
+
+              <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
+                <ProfileCard
+                  profileImg="../static/img/Springsandiegomission.jpg"
+                  bgPosY="20%"
+                  profileImgTitle="Slovakia Mission"
+                  profileType="Austria-Program Mission"
+                  profileName="Slovakia Mission"
+                  content="Students serve in orphanages, schools and teach Chastity through the wisdom of St. Pope John-Paul II’s Theology of the Body in Hungary, Romania, and Slovakia."
+                  profileLink="#"
+                />
+              </Grid>
+            </Masonry>
+          </div>
         </div>
 
         <TextSection
