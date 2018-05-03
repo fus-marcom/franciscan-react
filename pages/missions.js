@@ -453,7 +453,6 @@ class Missions extends Component {
                 profileLink="#"
               />
             </Grid>
-
             <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
               <ProfileCard
                 profileImg="../static/img/spring-steubenville-mission-team.jpg"

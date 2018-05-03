@@ -1,164 +1,144 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 
-html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
-	
-	
-	background-color: rgb(255,255,255);
-	background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 30px;
+  background-color: rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 30px;
 }
-
-
-
-
-
-
-
 
 /* Missions of Peace Section Headers */
 .missionHead {
-		
-			font-size: 1.6125rem;
-		    font-weight: 400;
-		    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-		    line-height: 1.06667em;
-		    margin-left: -.02em;
-			color: rgb(255,255,255);
-			text-align: left; 
-			padding-left: 40px;
-			background-color: #998643;
-			padding-bottom: 15px;
-			padding-top: 15px;
-			width:40%;
-
-			
+  font-size: 1.6125rem;
+  font-weight: 400;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1.06667em;
+  margin-left: -0.02em;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  padding-left: 40px;
+  background-color: #998643;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  width: 40%;
 }
-
 
 .missionHead2 {
-			
-
-			font-size: 2.8125rem;
-		    font-weight: 400;
-		    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-		    line-height: 1.06667em;
-		    margin-left: -.02em;
-			color: rgb(255,255,255);
-			text-align: center; 
-			background-color: #21412a;
-			padding-bottom: 15px;
-			padding-top: 15px;
-			width:100%;
-			border-top: 2px solid #998643;
-			border-bottom: 2px solid #998643;
-
+  font-size: 2.8125rem;
+  font-weight: 400;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1.06667em;
+  margin-left: -0.02em;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: #21412a;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  width: 100%;
+  border-top: 2px solid #998643;
+  border-bottom: 2px solid #998643;
 }
 
-
 .missionCard {
-	display: inline-block;
-	font-family: 'Roboto', sans-serif;
-	font-size: 20px;
-    display: inline-block;
-    width: 50%;
-    height:initial;
-    margin: 10px;
-    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0,);
-    background-size: 100%;
-    transition: 0.3s; 
-    padding-left: 20px;
-    padding-right: 20px;
-    color: rgba(0, 0, 0, 0.54);
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  display: inline-block;
+  width: 50%;
+  height: initial;
+  margin: 10px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0);
+  background-size: 100%;
+  transition: 0.3s;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: rgba(0, 0, 0, 0.54);
 }
 
 /* On mouse-over, add a deeper shadow */
 .missionCard:hover {
-    box-shadow: 1px 1px 1px 1px rgba(153, 134, 67,0.9);
+  box-shadow: 1px 1px 1px 1px rgba(153, 134, 67, 0.9);
 }
-
-
-     
 
 /* Display the columns below each other instead of side by side on small screens */
 @media (max-width: 650px) {
-    .columnContact {
-        width: 100%;
-        display: block;
-    }
+  .columnContact {
+    width: 100%;
+    display: block;
+  }
 }
 
 /* Add some shadows to create a card effect */
 .cardContact {
-    box-shadow: 1px 5px 8px 1px rgba(0, 0, 0, 0.4);
-    background-color: rgb(166, 146, 58);
-    overflow: hidden;
+  box-shadow: 1px 5px 8px 1px rgba(0, 0, 0, 0.4);
+  background-color: rgb(166, 146, 58);
+  overflow: hidden;
 }
 
 /* Some left and right padding inside the container */
 .containerContact {
-    padding: 0 16px;
+  padding: 0 16px;
 }
 
 /* Clear floats */
-.containerContact::after, .rowContact::after {
-    content: "";
-    clear: both;
-    display: table;
+.containerContact::after,
+.rowContact::after {
+  content: '';
+  clear: both;
+  display: table;
 }
 
 .titleContact {
-    color: rgb(255,255,255);
+  color: rgb(255, 255, 255);
 }
-
-
-
 
 /*  Missions Slider  */
 
 .slider {
-    width:425px; 
-    height:300px; 
-    position:relative;
-    overflow:hidden;  
-    padding-left: 22px;
+  width: 425px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  padding-left: 22px;
 }
-.slider img{ position:absolute; 
-    animation:change-slide 20s infinite; 
-    width: 100%; 
-    height: auto;
-    opacity:0; 
+.slider img {
+  position: absolute;
+  animation: change-slide 20s infinite;
+  width: 100%;
+  height: auto;
+  opacity: 0;
 }
 
 @keyframes change-slide {
-    25%{opacity:1;} 
-    40%{opacity:0;}
-} 
-
-.slider img:nth-child(4){
-    animation-delay:0s;
+  25% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
 }
 
-.slider img:nth-child(3){
-    animation-delay:5s;
+.slider img:nth-child(4) {
+  animation-delay: 0s;
 }
 
-.slider img:nth-child(2){
-    animation-delay:10s;
+.slider img:nth-child(3) {
+  animation-delay: 5s;
 }
 
-.slider img:nth-child(1){
-    animation-delay:15s;
+.slider img:nth-child(2) {
+  animation-delay: 10s;
 }
 
+.slider img:nth-child(1) {
+  animation-delay: 15s;
+}
 
-
-
-
-.anchor{
+.anchor {
   display: block;
   height: 115px; /*same height as header*/
   margin-top: -115px; /*same height as header*/
@@ -166,22 +146,17 @@ html, body {
   float: right;
 }
 
-
-
-
 .rightContainer {
   display: inline-block;
   float: right;
   position: fixed;
   font-size: 30px;
-  text-decoration-color: rgb(255,255,255);
+  text-decoration-color: rgb(255, 255, 255);
   float: right;
   text-align: right;
   list-style-type: none;
   font-weight: bold;
-
 }
-
 
 /* Scroll Spy Side Nav Styles */
 .scroll-spy-container {
@@ -191,16 +166,16 @@ html, body {
   margin-right: 16px;
 }
 ul.scroll-spy-nav {
-	list-style: none;
+  list-style: none;
 }
 
 ul.scroll-spy-nav li {
-	margin-bottom: 8px;
+  margin-bottom: 8px;
   padding: 8px;
   cursor: pointer;
 }
 
 ul.scroll-spy-nav a.active li {
-	font-weight: 500;
+  font-weight: 500;
   border-left: 2px solid #998643;
 }

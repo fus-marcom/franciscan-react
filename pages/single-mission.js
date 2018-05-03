@@ -114,7 +114,6 @@ class SingleMission extends Component {
           />
         </Head>
         {/* Put content under here */}
-
         <TextSection
           sectionTitle="MISSION TITLE HERE"
           text="Mission of Peace"
