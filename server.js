@@ -14,7 +14,12 @@ const translationObj = {
   news: { page: '/news', type: 'news' },
   search: { page: '/search' },
   'single-mission': { page: '/single-mission' },
-  'missionary-outreach': { page: '/missions' },
+  'missionary-outreach': {
+    page: '/page',
+    type: 'missionsPages',
+    id: { default: 'missionary-outreach' }
+  },
+  'missions-of-peace': { page: '/missions' },
   // TODO: use the commented route below when the singleMission page is ready
   // 'missionary-outreach': {
   //   page: { default: '/missions', standard: '/single-mission' },
