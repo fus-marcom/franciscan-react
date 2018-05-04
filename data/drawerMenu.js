@@ -170,18 +170,18 @@ export const academicsMenu = [
       },
       {
         text: 'Priestly Discernment Program',
-        linkUrl: '/hr',
-        asUrl: '/page?type=academicsPages&id=employment-and-human-resources'
+        linkUrl: '/pdp',
+        asUrl: '/page?type=pdpPages&id=priestly-discernment-program'
       },
       {
         text: 'ROTC Program',
-        linkUrl: '/hr',
-        asUrl: '/page?type=academicsPages&id=employment-and-human-resources'
+        linkUrl: '/rotc',
+        asUrl: '/page?type=academicsPages&id=rotc'
       },
       {
         text: 'Student Handbook',
-        linkUrl: '/hr',
-        asUrl: '/page?type=academicsPages&id=employment-and-human-resources'
+        linkUrl:
+          'http://franciscan.smartcatalogiq.com/en/2016-2017/Student-Handbook'
       }
     ]
   },
@@ -193,27 +193,22 @@ export const academicsMenu = [
   {
     text: 'Online',
     linkUrl: '/admissions/online',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic',
+    asUrl: '/page?type=admissionsPages&id=online',
     subMenu: [
       {
-        text: 'Online Graduate Programs',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
-      },
-      {
         text: 'Online Enrollment Requirements',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/admissions/online/requirements',
+        asUrl: '/page?type=admissionsPages&id=online-program-application-info'
       },
       {
         text: 'Costs and Financial Aid Information',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/admissions/online/costs-financial-aid',
+        asUrl: '/page?type=admissionsPages&id=costs-financial-aid'
       },
       {
         text: 'The Franciscan Difference',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/admissions/online/the-franciscan-difference',
+        asUrl: '/page?type=admissionsPages&id=the-franciscan-difference'
       }
     ]
   },
@@ -236,7 +231,7 @@ export const academicsMenu = [
   {
     text: 'Institutes & Centers',
     linkUrl: '/institutes-centers',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    asUrl: '/page?type=institutes&id=institutes-centers'
   },
   {
     text: 'Academic Departments',
@@ -414,22 +409,22 @@ export const admissionsMenu = [
   {
     text: 'Online',
     linkUrl: '/admissions/online',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic',
+    asUrl: '/page?type=admissionsPages&id=online',
     subMenu: [
       {
         text: 'Online Enrollment Requirements',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/admissions/online/requirements',
+        asUrl: '/page?type=admissionsPages&id=online-program-application-info'
       },
       {
         text: 'Costs and Financial Aid Information',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/admissions/online/costs-financial-aid',
+        asUrl: '/page?type=admissionsPages&id=costs-financial-aid'
       },
       {
         text: 'The Franciscan Difference',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/admissions/online/the-franciscan-difference',
+        asUrl: '/page?type=admissionsPages&id=the-franciscan-difference'
       }
     ]
   },

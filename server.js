@@ -33,6 +33,46 @@ const translationObj = {
     type: 'departments',
     id: { default: 'departments' }
   },
+  'institutes-centers': {
+    page: '/page',
+    type: 'institutes',
+    id: { default: 'institutes-centers' }
+  },
+  elder: {
+    page: '/page',
+    type: 'institutes',
+    id: { default: 'elder' }
+  },
+  'center-for-bioethics': {
+    page: '/page',
+    type: 'bioethicsPages',
+    id: { default: 'center-for-bioethics' }
+  },
+  'center-for-leadership': {
+    page: '/page',
+    type: 'institutes',
+    id: { default: 'center-for-leadership' }
+  },
+  fish: {
+    page: '/page',
+    type: 'fishPages',
+    id: { default: 'fish' }
+  },
+  fiwh: {
+    page: '/page',
+    type: 'fiwhPages',
+    id: { default: 'fiwh' }
+  },
+  sabl: {
+    page: '/page',
+    type: 'majors',
+    id: { default: 'sabl', classes: 'classics-classes' }
+  },
+  veritas: {
+    page: '/page',
+    type: 'veritasPages',
+    id: { default: 'veritas' }
+  },
   'exploring-majors': {
     page: '/page',
     type: 'academicsPages',
@@ -124,11 +164,7 @@ const translationObj = {
     type: 'majors',
     id: { default: 'classics', classes: 'classics-classes' }
   },
-  sabl: {
-    page: '/page',
-    type: 'majors',
-    id: { default: 'sabl', classes: 'classics-classes' }
-  },
+
   'comm-arts': {
     page: '/minor',
     id: { 'film-studies': 'film-studies-minor' }
@@ -192,7 +228,17 @@ const translationObj = {
   admissions: {
     page: '/page',
     type: 'admissionsPages',
-    id: { default: 'admissions' }
+    id: {
+      default: 'admissions',
+      requirements: 'online-program-application-info',
+      'costs-financial-aid': 'costs-financial-aid',
+      'the-franciscan-difference': 'the-franciscan-difference'
+    }
+  },
+  fasttrack: {
+    page: '/page',
+    type: 'admissionsPages',
+    id: { default: 'fasttrack', oncampus: 'fasttrack-on-campus' }
   },
   swop: {
     page: '/page',
@@ -223,6 +269,21 @@ const translationObj = {
     page: '/page',
     type: 'academicsPages',
     id: { default: 'core-curriculum' }
+  },
+  rotc: {
+    page: '/page',
+    type: 'academicsPages',
+    id: { default: 'rotc' }
+  },
+  pdp: {
+    page: '/page',
+    type: 'pdpPages',
+    id: { default: 'priestly-discernment-program' }
+  },
+  'military-benefits': {
+    page: '/page',
+    type: 'sfsPages',
+    id: { default: 'military-benefits' }
   }
 
   // 'missionary-outreach': {
