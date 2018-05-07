@@ -116,9 +116,9 @@ const translationObj = {
     }
   },
   theology: {
-    page: '/major',
-    type: { default: 'majors', standard: 'theologyPages' },
-    id: { default: 'theology' }
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', standard: 'theologyPages', faculty: 'faculty' },
+    id: { default: 'theology', faculty: 'theology' }
   },
   politicalscience: {
     page: '/major',
@@ -161,9 +161,26 @@ const translationObj = {
     id: { default: 'chemistry' }
   },
   classics: {
-    page: '/major',
-    type: 'majors',
-    id: { default: 'classics', classes: 'classics-classes' }
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'classics',
+      classes: 'classics-classes',
+      faculty: 'classics'
+    }
+  },
+  'fine-arts': {
+    page: { default: '', faculty: '/faculty-list' },
+    type: { default: '', faculty: 'faculty' },
+    id: { default: 'fine-arts', 'fine-arts': 'finearts' }
+  },
+  'psych-soc-swork': {
+    page: { faculty: '/faculty-list' },
+    type: { faculty: 'faculty' },
+    id: {
+      default: 'psych-soc-swork',
+      'psych-soc-swork': 'psychology-sociology-and-social-work'
+    }
   },
 
   'comm-arts': {

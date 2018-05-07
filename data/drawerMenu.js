@@ -236,7 +236,7 @@ export const academicsMenu = [
   {
     text: 'Academic Departments',
     linkUrl: '/departments',
-    asUrl: '/page?type=academicsPages&id=departments'
+    asUrl: '/page?type=departments&id=departments'
   },
   {
     text: 'Academic Affairs',
