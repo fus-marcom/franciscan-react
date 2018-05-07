@@ -105,13 +105,14 @@ const translationObj = {
     }
   },
   english: {
-    page: '/major',
-    type: 'majors',
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'english',
       classes: 'english-classes',
       'senior-thesis': 'senior-thesis',
-      'senior-portfolio': 'senior-portfolio'
+      'senior-portfolio': 'senior-portfolio',
+      faculty: 'english'
     }
   },
   theology: {
@@ -366,7 +367,13 @@ app.prepare().then(() => {
           // find page
           if (translationObj[firstParam].page) {
             if (typeof translationObj[firstParam].page === 'object') {
-              page = translationObj[firstParam].page.standard
+              if (translationObj[firstParam].page[id]) {
+                page = translationObj[firstParam].page[id]
+              } else if (translationObj[firstParam].page.standard) {
+                page = translationObj[firstParam].page.standard
+              } else {
+                page = translationObj[firstParam].page.default
+              }
             } else {
               page = translationObj[firstParam].page
             }
@@ -374,7 +381,13 @@ app.prepare().then(() => {
           // find type
           if (translationObj[firstParam].type) {
             if (typeof translationObj[firstParam].type === 'object') {
-              type = translationObj[firstParam].type.standard
+              if (translationObj[firstParam].type[id]) {
+                type = translationObj[firstParam].type[id]
+              } else if (translationObj[firstParam].type.standard) {
+                type = translationObj[firstParam].type.standard
+              } else {
+                type = translationObj[firstParam].type.default
+              }
             } else {
               type = translationObj[firstParam].type
             }
