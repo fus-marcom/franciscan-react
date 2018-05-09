@@ -172,14 +172,14 @@ const translationObj = {
   'fine-arts': {
     page: { default: '', faculty: '/faculty-list' },
     type: { default: '', faculty: 'faculty' },
-    id: { default: 'fine-arts', 'fine-arts': 'finearts' }
+    id: { default: 'fine-arts', faculty: 'fine-arts' }
   },
   'psych-soc-swork': {
-    page: { faculty: '/faculty-list' },
-    type: { faculty: 'faculty' },
+    page: { default: '', faculty: '/faculty-list' },
+    type: { default: '', faculty: 'faculty' },
     id: {
       default: 'psych-soc-swork',
-      'psych-soc-swork': 'psychology-sociology-and-social-work'
+      faculty: 'psychology-sociology-and-social-work'
     }
   },
 

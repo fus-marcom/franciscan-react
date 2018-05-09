@@ -37,7 +37,12 @@ class FacultyList extends Component {
             return (
               <div>
                 {facultyData.map(faculty => (
-                  <h3 key={faculty.node.slug}>{faculty.node.title}</h3>
+                  <h3
+                    key={faculty.node.slug}
+                    dangerouslySetInnerHTML={{
+                      __html: faculty.node.title
+                    }}
+                  />
                 ))}
               </div>
             )
