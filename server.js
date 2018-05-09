@@ -123,12 +123,12 @@ const translationObj = {
   politicalscience: {
     page: '/major',
     type: 'majors',
-    id: { default: 'politicalscience' }
+    id: { default: 'political-science' }
   },
   'political-science': {
     page: '/major',
     type: 'majors',
-    id: { default: 'politicalscience' }
+    id: { default: 'political-science' }
   },
   business: {
     page: '/major',
