@@ -143,12 +143,12 @@ const translationObj = {
   sacredmusic: {
     page: '/major',
     type: 'majors',
-    id: { default: 'sacred-music' }
+    id: { default: 'sacred-music', classes: 'sacred-music-classes' }
   },
   'sacred-music': {
     page: '/major',
     type: 'majors',
-    id: { default: 'sacred-music' }
+    id: { default: 'sacred-music', classes: 'sacred-music-classes' }
   },
   catechetics: {
     page: '/major',
@@ -170,6 +170,11 @@ const translationObj = {
     }
   },
   'fine-arts': {
+    page: { default: '', faculty: '/faculty-list' },
+    type: { default: '', faculty: 'faculty' },
+    id: { default: 'fine-arts', faculty: 'fine-arts' }
+  },
+  finearts: {
     page: { default: '', faculty: '/faculty-list' },
     type: { default: '', faculty: 'faculty' },
     id: { default: 'fine-arts', faculty: 'fine-arts' }
