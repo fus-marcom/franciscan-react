@@ -55,7 +55,8 @@ class TextSection extends Component {
       textColor,
       bgColor,
       borderColor,
-      darkBg
+      darkBg,
+      padding
     } = this.props
 
     const Button = (
@@ -78,7 +79,8 @@ class TextSection extends Component {
         style={{
           backgroundColor: bgColor,
           borderTop: `2px solid ${borderColor}`,
-          borderBottom: `2px solid ${borderColor}`
+          borderBottom: `2px solid ${borderColor}`,
+          padding: padding
         }}
       >
         <div className={classes.innerContainer}>

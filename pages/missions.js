@@ -608,6 +608,7 @@ class Missions extends Component {
           bgColor="#21412a"
           textColor="#fff"
           borderColor="#998643"
+          padding="24px 0 9px 0"
         />
 
         <div id="donate" className={classes.contentContainer}>

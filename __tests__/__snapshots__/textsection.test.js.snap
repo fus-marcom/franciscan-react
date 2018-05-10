@@ -22,6 +22,7 @@ exports[`TextSection should render 1`] = `
           "backgroundColor": undefined,
           "borderBottom": "2px solid undefined",
           "borderTop": "2px solid undefined",
+          "padding": undefined,
         }
       }
     >
@@ -207,6 +208,7 @@ exports[`TextSection should render a title when passed in 1`] = `
           "backgroundColor": undefined,
           "borderBottom": "2px solid undefined",
           "borderTop": "2px solid undefined",
+          "padding": undefined,
         }
       }
     >
@@ -394,6 +396,7 @@ exports[`TextSection should render a title when passed in 2`] = `
           "backgroundColor": undefined,
           "borderBottom": "2px solid undefined",
           "borderTop": "2px solid undefined",
+          "padding": undefined,
         }
       }
     >
@@ -579,6 +582,7 @@ exports[`TextSection should render text when passed in 1`] = `
           "backgroundColor": undefined,
           "borderBottom": "2px solid undefined",
           "borderTop": "2px solid undefined",
+          "padding": undefined,
         }
       }
     >
