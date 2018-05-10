@@ -35,7 +35,6 @@ class Faculty extends Component {
               .replace(/<Details>/g, '<div class="details">')
               .replace(/<\/Details>/g, '</div>')
               .replace(/src="\//g, 'src="https://www.franciscan.edu/')
-            global.x = content
 
             return (
               <div

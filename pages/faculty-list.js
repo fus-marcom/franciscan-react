@@ -76,6 +76,7 @@ class FacultyList extends Component {
                       <FacultyListItem
                         profileName={faculty.node.title}
                         profileLink={`/faculty/${faculty.node.slug}`}
+                        content={faculty.node.content}
                       />
                     </Grid>
                   ))}
@@ -89,4 +90,4 @@ class FacultyList extends Component {
   }
 }
 
-export default compose(withRoot, withData)(withStyles(styles))(FacultyList)
+export default compose(withRoot, withData)(withStyles(styles)(FacultyList))

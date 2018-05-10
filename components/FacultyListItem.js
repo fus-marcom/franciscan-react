@@ -28,14 +28,16 @@ const styles = theme => ({
 
 class FacultyListItem extends Component {
   render () {
-    const {
-      classes,
-      profileImg,
-      profileImgTitle,
-      profileName,
-      content,
-      profileLink
-    } = this.props
+    const { classes, profileName, content, profileLink } = this.props
+    const image = content
+      .replace(/src="\//g, 'src="https://www.franciscan.edu/')
+      .match(/<DetailViewImage>(.*)<\/DetailViewImage>/)
+
+    const title = content
+      .replace(/<Title>/g, '<div class="title">')
+      .replace(/<\/Title>/g, '</div>')
+      .match(/<div class="title">(.*)<\/div>/)
+
     return (
       <Card className={classes.card}>
         {/* <CardMedia
@@ -47,18 +49,23 @@ class FacultyListItem extends Component {
             backgroundSize: `${bgContain ? 'contain' : 'cover'}`
           }}
         /> */}
-        <img
-          src={profileImg}
-          title={profileImgTitle}
-          style={{ width: '100%' }}
+        <div
+          dangerouslySetInnerHTML={{
+            __html: image[0]
+          }}
         />
+
         <CardContent>
           <Typography variant="headline" component="h2">
             {profileName}
           </Typography>
-          <Typography component="p" className={classes.quote}>
-            {content}
-          </Typography>
+          <Typography
+            component="p"
+            className={classes.quote}
+            dangerouslySetInnerHTML={{
+              __html: title[0]
+            }}
+          />
         </CardContent>
         {profileLink && (
           <CardActions>
