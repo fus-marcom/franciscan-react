@@ -1,14 +1,13 @@
+import Grid from 'material-ui/Grid'
+import { withStyles } from 'material-ui/styles'
+import Head from 'next/head'
 import React, { Component } from 'react'
 import { Query, compose } from 'react-apollo'
-import withData from '../lib/withData'
-import { withStyles } from 'material-ui/styles'
-import Layout from '../components/Layout'
 import FacultyListItem from '../components/FacultyListItem'
+import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
-import Head from 'next/head'
 import { FacultyListQuery } from '../lib/queries/facultyList'
-import Masonry from 'react-masonry-component'
-import Grid from 'material-ui/Grid'
+import withData from '../lib/withData'
 
 const styles = theme => ({
   gridItemFix: {
@@ -45,6 +44,11 @@ class FacultyList extends Component {
             href="/static/styles/faculty.css"
             type="text/css"
           />
+          <link
+            rel="stylesheet"
+            href="/static/styles/faculty-list.css"
+            type="text/css"
+          />
         </Head>
         <Query
           query={FacultyListQuery(this.props.type)}
@@ -62,25 +66,20 @@ class FacultyList extends Component {
 
             return (
               <div className={classes.contentContainer}>
-                <Masonry>
-                  {facultyData.map(faculty => (
-                    <Grid
-                      key={faculty.node.slug}
-                      item
-                      className={classes.gridItemFix}
-                      xs={12}
-                      sm={6}
-                      md={6}
-                      lg={6}
-                    >
-                      <FacultyListItem
-                        profileName={faculty.node.title}
-                        profileLink={`/faculty/${faculty.node.slug}`}
-                        content={faculty.node.content}
-                      />
-                    </Grid>
-                  ))}
-                </Masonry>
+                {facultyData.map(faculty => (
+                  <Grid
+                    key={faculty.node.slug}
+                    item
+                    className={classes.gridItemFix}
+                    xs={12}
+                  >
+                    <FacultyListItem
+                      profileName={faculty.node.title}
+                      profileLink={`/faculty/${faculty.node.slug}`}
+                      content={faculty.node.content}
+                    />
+                  </Grid>
+                ))}
               </div>
             )
           }}

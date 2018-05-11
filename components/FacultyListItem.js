@@ -1,14 +1,15 @@
-import React, { Component, Fragment } from 'react'
-import { withStyles } from 'material-ui/styles'
-import Card, { CardActions, CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
 import Button from 'material-ui/Button'
-
+import { CardActions, CardContent } from 'material-ui/Card'
+import Typography from 'material-ui/Typography'
+import { withStyles } from 'material-ui/styles'
 import Link from 'next/link'
+import React, { Component, Fragment } from 'react'
 
 const styles = theme => ({
   card: {
-    width: '100%'
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'space-between'
   },
   media: {
     minHeight: '280px',
@@ -39,46 +40,38 @@ class FacultyListItem extends Component {
       .match(/<div class="title">(.*)<\/div>/)
 
     return (
-      <Card className={classes.card}>
-        {/* <CardMedia
-          className={classes.media}
-          image={profileImg}
-          title={profileImgTitle}
-          style={{
-            backgroundPositionY: bgPosY,
-            backgroundSize: `${bgContain ? 'contain' : 'cover'}`
-          }}
-        /> */}
+      <div className={classes.card}>
+        <div className={classes.textContent}>
+          <CardContent>
+            <Typography variant="headline" component="h2">
+              {profileName}
+            </Typography>
+            <Typography
+              component="p"
+              className={classes.quote}
+              dangerouslySetInnerHTML={{
+                __html: title[0]
+              }}
+            />
+          </CardContent>
+          {profileLink && (
+            <CardActions>
+              <Fragment>
+                <Link prefetch href={profileLink}>
+                  <Button size="small" color="primary">
+                    Learn More
+                  </Button>
+                </Link>
+              </Fragment>
+            </CardActions>
+          )}
+        </div>
         <div
           dangerouslySetInnerHTML={{
             __html: image[0]
           }}
         />
-
-        <CardContent>
-          <Typography variant="headline" component="h2">
-            {profileName}
-          </Typography>
-          <Typography
-            component="p"
-            className={classes.quote}
-            dangerouslySetInnerHTML={{
-              __html: title[0]
-            }}
-          />
-        </CardContent>
-        {profileLink && (
-          <CardActions>
-            <Fragment>
-              <Link prefetch href={profileLink}>
-                <Button size="small" color="primary">
-                  Learn More
-                </Button>
-              </Link>
-            </Fragment>
-          </CardActions>
-        )}
-      </Card>
+      </div>
     )
   }
 }
