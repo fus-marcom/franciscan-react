@@ -23,7 +23,7 @@
     "lru-cache": "^4.1.2",
     "material-ui": "^1.0.0-beta.38",
     "material-ui-icons": "^1.0.0-beta.36",
-    "next": "6.0.1",
+    "next": "6.0.2",
     "react": "^16.2.0",
     "react-apollo": "^2.1.0",
     "react-dom": "^16.2.0",
