@@ -115,6 +115,204 @@ const translationObj = {
       faculty: 'english'
     }
   },
+  'cs-cis': {
+    page: { default: '/major' },
+    type: { default: 'majors' },
+    id: {
+      default: 'cs-cis',
+      classes: 'cs-cis-classes'
+    }
+  },
+  communicationarts: {
+    page: {
+      default: '/major',
+      faculty: '/faculty-list',
+      'film-studies': 'minors'
+    },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'comm-arts',
+      classes: 'comm-arts-classes',
+      'senior-thesis': 'comm-arts-senior-thesis',
+      alumni: 'comm-arts-alumni',
+      faculty: 'comm-arts',
+      'film-studies': 'film-studies-minor'
+    }
+  },
+  'comm-arts': {
+    page: {
+      default: '/major',
+      faculty: '/faculty-list',
+      'film-studies': '/minor'
+    },
+    type: { default: 'majors', faculty: 'faculty', 'film-studies': 'minors' },
+    id: {
+      default: 'comm-arts',
+      classes: 'comm-arts-classes',
+      'senior-thesis': 'comm-arts-senior-thesis',
+      alumni: 'comm-arts-alumni',
+      faculty: 'comm-arts',
+      'film-studies': 'film-studies-minor'
+    }
+  },
+  education: {
+    page: {
+      default: '/major',
+      faculty: '/faculty-list'
+    },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'education',
+      classes: 'education-classes',
+      'senior-thesis': 'education-senior-thesis',
+      alumni: 'education-alumni',
+      faculty: 'education'
+    }
+  },
+  engineering: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'engineering',
+      classes: 'engineering-classes',
+      faculty: 'engineering'
+    }
+  },
+  finance: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'finance',
+      classes: 'finance-classes',
+      faculty: 'finance'
+    }
+  },
+  modernlanguages: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'modernlanguages',
+      classes: 'modernlanguages-classes',
+      faculty: 'modernlanguages'
+    }
+  },
+  history: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'history',
+      classes: 'history-classes',
+      faculty: 'history'
+    }
+  },
+  humanitiesandcatholicculture: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'humanitiesandcatholicculture',
+      classes: 'humanitiesandcatholicculture-classes',
+      faculty: 'humanitiesandcatholicculture'
+    }
+  },
+  law: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'law',
+      classes: 'law-classes',
+      faculty: 'law'
+    }
+  },
+  management: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'management',
+      classes: 'management-classes',
+      faculty: 'management'
+    }
+  },
+  marketing: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'marketing',
+      classes: 'marketing-classes',
+      faculty: 'marketing'
+    }
+  },
+  mathemeticalscience: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'mathemeticalscience',
+      classes: 'mathemeticalscience-classes',
+      faculty: 'mathemeticalscience'
+    }
+  },
+  nursing: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'nursing',
+      classes: 'nursing-classes',
+      faculty: 'nursing'
+    }
+  },
+  pharmacy: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'pharmacy',
+      classes: 'pharmacy-classes',
+      faculty: 'pharmacy'
+    }
+  },
+  philosophy: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'philosophy',
+      classes: 'philosophy-classes',
+      faculty: 'philosophy'
+    }
+  },
+  psychology: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'psychology',
+      classes: 'psychology-classes',
+      faculty: 'psychology'
+    }
+  },
+  socialwork: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'socialwork',
+      classes: 'socialwork-classes',
+      faculty: 'socialwork'
+    }
+  },
+  sociology: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'sociology',
+      classes: 'sociology-classes',
+      faculty: 'sociology'
+    }
+  },
+  theatre: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'theatre',
+      classes: 'theatre-classes',
+      faculty: 'theatre'
+    }
+  },
   theology: {
     page: { default: '/major', faculty: '/faculty-list' },
     type: { default: 'majors', standard: 'theologyPages', faculty: 'faculty' },
@@ -186,11 +384,6 @@ const translationObj = {
       default: 'psych-soc-swork',
       faculty: 'psychology-sociology-and-social-work'
     }
-  },
-
-  'comm-arts': {
-    page: '/minor',
-    id: { 'film-studies': 'film-studies-minor' }
   },
   associate: { page: '/associate', id: { default: 'main' } },
   studentlife: {
