@@ -88,13 +88,21 @@ const translationObj = {
     type: 'austriaPages',
     id: { default: 'austria', excursions: 'excursions' }
   },
-  economics: { page: '/major', type: 'majors', id: { default: 'economics' } },
+  economics: {
+    page: '/major',
+    type: 'majors',
+    id: { default: 'economics', classes: 'economics-classes' }
+  },
   anthropology: {
     page: '/major',
     type: 'majors',
     id: { default: 'anthropology', classes: 'anthropology-classes' }
   },
-  accounting: { page: '/major', type: 'majors', id: { default: 'accounting' } },
+  accounting: {
+    page: '/major',
+    type: 'majors',
+    id: { default: 'accounting', classes: 'accounting-classes' }
+  },
   biology: {
     page: '/major',
     type: 'majors',
@@ -331,12 +339,15 @@ const translationObj = {
   business: {
     page: '/major',
     type: 'majors',
-    id: { default: 'business' }
+    id: { default: 'business', classes: 'business-classes' }
   },
   internationalbusiness: {
     page: '/major',
     type: 'majors',
-    id: { default: 'internationalbusiness' }
+    id: {
+      default: 'internationalbusiness',
+      classes: 'internationalbusiness-classes'
+    }
   },
   sacredmusic: {
     page: '/major',
