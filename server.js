@@ -249,6 +249,14 @@ const translationObj = {
       faculty: 'marketing'
     }
   },
+  'acc-bus-ec': {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'marketing',
+      faculty: 'business'
+    }
+  },
   mathemeticalscience: {
     page: { default: '/major', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
@@ -339,7 +347,11 @@ const translationObj = {
   business: {
     page: '/major',
     type: 'majors',
-    id: { default: 'business', classes: 'business-classes' }
+    id: {
+      default: 'business',
+      classes: 'business-classes',
+      'mba-4plus1': 'mba-4plus1'
+    }
   },
   internationalbusiness: {
     page: '/major',
@@ -362,7 +374,11 @@ const translationObj = {
   catechetics: {
     page: '/major',
     type: 'majors',
-    id: { default: 'catechetics', 'why-catechetics': 'why-catechetics' }
+    id: {
+      default: 'catechetics',
+      'why-catechetics': 'why-catechetics',
+      classes: 'catechetics-classes'
+    }
   },
   chemistry: {
     page: '/major',
