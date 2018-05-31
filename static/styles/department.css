@@ -2,7 +2,8 @@ main {
   font-family: Roboto, sans-serif;
 }
 
-p, ul {
+p,
+ul {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.5;
@@ -59,12 +60,13 @@ tabs {
   display: block;
 }
 
-tabs>h2 {
+tabs > h2 {
   font-size: 24px;
   font-weight: 400;
 }
 
-left>h2.title, right>h2.title {
+left > h2.title,
+right > h2.title {
   font-size: 18px;
   font-weight: 300;
 }
@@ -77,21 +79,31 @@ br {
   display: none;
 } */
 
-name, phone, email, cvlink, videoembed, centercolumndetails, rightcolumndetails {
+name,
+phone,
+email,
+cvlink,
+videoembed,
+centercolumndetails,
+rightcolumndetails {
   display: block;
 }
 
 h2.title {
   margin-bottom: 8px;
   font-weight: 400;
-  color: rgba(0,0,0,0.87);
+  color: rgba(0, 0, 0, 0.87);
 }
 
-heading, cta_text, cta_link, linktext {
+heading,
+cta_text,
+cta_link,
+linktext {
   display: none;
 }
 
-item, menuitem {
+item,
+menuitem {
   display: block;
 }
 
@@ -100,7 +112,8 @@ a {
   color: hsla(47, 39%, 34%, 1);
 }
 
-item a, menuitem a {
+item a,
+menuitem a {
   text-decoration: none;
   font-size: 18px;
   font-weight: 400;
@@ -112,4 +125,13 @@ mobiletitle {
   display: block;
   font-size: 24px;
   font-weight: 400;
+}
+
+@media screen and (max-width: 500px) {
+  h1 img,
+  h2 img {
+    float: none !important;
+    margin: 8px 0 !important;
+    display: block !important;
+  }
 }

@@ -10,6 +10,10 @@ class Faculty extends Component {
   static async getInitialProps ({ query: { id, type } }) {
     return { id, type }
   }
+
+  componentDidMount () {
+    document.querySelector('cvlink a').innerText = 'View CV'
+  }
   render () {
     return (
       <Layout>

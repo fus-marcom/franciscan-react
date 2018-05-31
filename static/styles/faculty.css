@@ -2,7 +2,8 @@ main {
   font-family: Roboto, sans-serif;
 }
 
-p, ul {
+p,
+ul {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.5;
@@ -58,10 +59,24 @@ li h6 {
   margin-bottom: -12px;
 }
 
-listviewimage, detailstype, rightcolumnblogs, br {
+listviewimage,
+detailstype,
+rightcolumnblogs,
+br {
   display: none;
 }
 
-name, phone, email, cvlink, videoembed, centercolumndetails, rightcolumndetails {
+name,
+phone,
+email,
+cvlink,
+videoembed,
+centercolumndetails,
+rightcolumndetails {
   display: block;
+}
+
+cvlink a {
+  text-decoration: none;
+  color: hsla(47, 39%, 34%, 1);
 }
