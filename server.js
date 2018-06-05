@@ -183,7 +183,9 @@ const translationObj = {
     id: {
       default: 'engineering',
       classes: 'engineering-classes',
-      faculty: 'engineering'
+      faculty: 'engineering',
+      'dual-degree': 'engineering-dual-degree',
+      'franciscan-way-2013': 'engineering-franciscan-way-2013'
     }
   },
   finance: {
