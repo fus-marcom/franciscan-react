@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import { withStyles } from 'material-ui/styles'
-import List, { ListItem, ListItemText } from 'material-ui/List'
-import Collapse from 'material-ui/transitions/Collapse'
 import ExpandLess from 'material-ui-icons/ExpandLess'
 import ExpandMore from 'material-ui-icons/ExpandMore'
-import Link from 'next/link'
 import Grid from 'material-ui/Grid'
+import List, { ListItem, ListItemText } from 'material-ui/List'
+import { withStyles } from 'material-ui/styles'
+import Collapse from 'material-ui/transitions/Collapse'
+import Link from 'next/link'
+import React, { Component } from 'react'
 
 const styles = theme => ({
   nested: {
@@ -15,7 +15,8 @@ const styles = theme => ({
     paddingLeft: theme.spacing.unit * 6
   },
   subLink: {
-    textDecoration: 'none'
+    textDecoration: 'none',
+    color: 'inherit'
   },
   linkText: {
     color: 'rgba(0,0,0,0.54)'
