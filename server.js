@@ -203,7 +203,18 @@ const translationObj = {
     id: {
       default: 'modernlanguages',
       classes: 'modernlanguages-classes',
-      faculty: 'modernlanguages'
+      faculty: 'modernlanguages',
+      'mission-aims-info': 'modernlanguages-mission'
+    }
+  },
+  'mod-lang-lit': {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'modernlanguages',
+      classes: 'modernlanguages-classes',
+      faculty: 'modernlanguages',
+      'mission-aims-info': 'modernlanguages-mission'
     }
   },
   history: {
