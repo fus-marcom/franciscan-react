@@ -12,7 +12,7 @@ class Faculty extends Component {
   }
 
   componentDidMount () {
-    document.querySelector('cvlink a').innerText = 'View CV'
+    // document.querySelector('cvlink a').innerText = 'View CV'
   }
   render () {
     return (
@@ -34,11 +34,18 @@ class Faculty extends Component {
             }
             if (result.error) return <h3>{result.error}</h3>
 
+            const cvRegex = /(<cvlink>)(<a.href=")(.+)(">)(.+)(<\/a>)(<.cvlink>)/gi
+
             const { data } = result
             const content = data[this.props.type].edges[0].node.content
               .replace(/<Details>/g, '<div class="details">')
               .replace(/<\/Details>/g, '</div>')
               .replace(/src="\//g, 'src="https://www.franciscan.edu/')
+              .replace(cvRegex,'<CVLink><a href="$3" title="View CV">View CV</CVLink>')
+
+           // console.log(content.match(cvRegex), content);
+          
+              
 
             return (
               <div
