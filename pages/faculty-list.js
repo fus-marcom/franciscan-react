@@ -1,5 +1,5 @@
-import Grid from 'material-ui/Grid'
-import { withStyles } from 'material-ui/styles'
+import Grid from '@material-ui/core/Grid'
+import { withStyles } from '@material-ui/core/styles'
 import Head from 'next/head'
 import React, { Component } from 'react'
 import { Query, compose } from 'react-apollo'

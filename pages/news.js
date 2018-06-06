@@ -5,7 +5,7 @@ import withData from '../lib/withData'
 import Layout from '../components/Layout'
 import Head from 'next/head'
 import withRoot from '../components/withRoot'
-import Typography from 'material-ui/Typography'
+import Typography from '@material-ui/core/Typography'
 
 class News extends Component {
   static async getInitialProps ({ query: { id, type } }) {

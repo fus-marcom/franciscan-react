@@ -1,10 +1,11 @@
-import React, { Component, Fragment } from 'react'
-import { withStyles } from 'material-ui/styles'
-import Card, { CardActions, CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
-import Button from 'material-ui/Button'
-
+import Button from '@material-ui/core/Button'
+import Card from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import Typography from '@material-ui/core/Typography'
+import { withStyles } from '@material-ui/core/styles'
 import Link from 'next/link'
+import React, { Component, Fragment } from 'react'
 
 const styles = theme => ({
   card: {

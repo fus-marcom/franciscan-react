@@ -1,19 +1,16 @@
+import Head from 'next/head'
 import React, { Component } from 'react'
 import { Query, compose } from 'react-apollo'
-import withData from '../lib/withData'
 import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
-import Head from 'next/head'
 import { ProfileQuery } from '../lib/queries/profile'
+import withData from '../lib/withData'
 
 class Faculty extends Component {
   static async getInitialProps ({ query: { id, type } }) {
     return { id, type }
   }
 
-  componentDidMount () {
-    // document.querySelector('cvlink a').innerText = 'View CV'
-  }
   render () {
     return (
       <Layout>
@@ -41,11 +38,10 @@ class Faculty extends Component {
               .replace(/<Details>/g, '<div class="details">')
               .replace(/<\/Details>/g, '</div>')
               .replace(/src="\//g, 'src="https://www.franciscan.edu/')
-              .replace(cvRegex,'<CVLink><a href="$3" title="View CV">View CV</CVLink>')
-
-           // console.log(content.match(cvRegex), content);
-          
-              
+              .replace(
+                cvRegex,
+                '<CVLink><a href="$3" title="View CV">View CV</a></CVLink>'
+              )
 
             return (
               <div

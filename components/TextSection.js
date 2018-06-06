@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { withStyles } from 'material-ui/styles'
-import Typography from 'material-ui/Typography'
+import { withStyles } from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography'
 import InvertedButton from './InvertedButton'
-import Grid from 'material-ui/Grid'
+import Grid from '@material-ui/core/Grid'
 
 const styles = theme => ({
   section: {

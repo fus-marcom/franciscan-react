@@ -2,11 +2,11 @@
 
 import React from 'react'
 import classNames from 'classnames'
-import withStyles from 'material-ui/styles/withStyles'
-import { fade } from 'material-ui/styles/colorManipulator'
-import ButtonBase from 'material-ui/ButtonBase'
-import { capitalize } from 'material-ui/utils/helpers'
-import { isMuiElement } from 'material-ui/utils/reactHelpers'
+import withStyles from '@material-ui/core/styles/withStyles'
+import { fade } from '@material-ui/core/styles/colorManipulator'
+import ButtonBase from '@material-ui/core/ButtonBase'
+import { capitalize } from '@material-ui/core/utils/helpers'
+import { isMuiElement } from '@material-ui/core/utils/reactHelpers'
 
 export const styles = theme => ({
   root: {

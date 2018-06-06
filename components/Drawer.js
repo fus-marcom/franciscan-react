@@ -1,23 +1,28 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { withStyles } from 'material-ui/styles'
+import Divider from '@material-ui/core/Divider'
+import FormControl from '@material-ui/core/FormControl'
+import IconButton from '@material-ui/core/IconButton'
+import Input from '@material-ui/core/Input'
+import InputAdornment from '@material-ui/core/InputAdornment'
+import InputLabel from '@material-ui/core/InputLabel'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+import ListItemText from '@material-ui/core/ListItemText'
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
+import { withStyles } from '@material-ui/core/styles'
+import OpenInNewIcon from '@material-ui/icons/OpenInNew'
+import SearchIcon from '@material-ui/icons/Search'
 import Link from 'next/link'
-import Drawer from 'material-ui/Drawer'
-import List, { ListItem, ListItemText, ListItemIcon } from 'material-ui/List'
-import SearchIcon from 'material-ui-icons/Search'
-import OpenInNewIcon from 'material-ui-icons/OpenInNew'
-import IconButton from 'material-ui/IconButton'
-import Divider from 'material-ui/Divider'
-import Input, { InputLabel, InputAdornment } from 'material-ui/Input'
-import { FormControl } from 'material-ui/Form'
-import DrawerItem from './DrawerItem'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 import {
-  studentMenu,
   aboutMenu,
   academicsMenu,
   admissionsMenu,
-  faithMenu
+  faithMenu,
+  studentMenu
 } from '../data/drawerMenu'
+import DrawerItem from './DrawerItem'
 
 const styles = theme => ({
   list: {
@@ -70,9 +75,16 @@ class TemporaryDrawer extends Component {
 
   render () {
     const { classes, toggleDrawer, open } = this.props
+    const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent)
 
     return (
-      <Drawer open={open} onClose={toggleDrawer}>
+      <SwipeableDrawer
+        open={open}
+        onClose={toggleDrawer}
+        disableBackdropTransition={!iOS}
+        disableDiscovery={iOS}
+        style={{ visibility: `${open ? 'visible' : 'hidden'}` }}
+      >
         <div tabIndex={0} role="button">
           <div className={classes.list}>
             <List>
@@ -88,14 +100,7 @@ class TemporaryDrawer extends Component {
               </ListItem>
               <ListItem>
                 <FormControl className={classes.formControl}>
-                  <InputLabel
-                    FormControlClasses={{
-                      focused: classes.inputLabelFocused
-                    }}
-                    htmlFor="search"
-                  >
-                    Search
-                  </InputLabel>
+                  <InputLabel htmlFor="search">Search</InputLabel>
                   <Input
                     id="search"
                     variant="text"
@@ -246,7 +251,7 @@ class TemporaryDrawer extends Component {
             </List>
           </div>
         </div>
-      </Drawer>
+      </SwipeableDrawer>
     )
   }
 }

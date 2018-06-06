@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withStyles } from 'material-ui/styles'
+import { withStyles } from '@material-ui/core/styles'
 import Layout from '../components/Layout'
 import Head from 'next/head'
 import withRoot from '../components/withRoot'
@@ -7,9 +7,9 @@ import Hero from '../components/Hero'
 import Masonry from 'react-masonry-component'
 import ProfileCard from '../components/ProfileCard'
 import TextSection from '../components/TextSection'
-import Grid from 'material-ui/Grid'
-import Card from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
+import Grid from '@material-ui/core/Grid'
+import Card from '@material-ui/core/Card'
+import Typography from '@material-ui/core/Typography'
 import {
   Link,
   Events,

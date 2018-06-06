@@ -1,7 +1,7 @@
-import Button from 'material-ui/Button'
-import { CardActions, CardContent } from 'material-ui/Card'
-import Typography from 'material-ui/Typography'
-import { withStyles } from 'material-ui/styles'
+import Button from '@material-ui/core/Button'
+import { CardActions, CardContent } from '@material-ui/core/Card'
+import Typography from '@material-ui/core/Typography'
+import { withStyles } from '@material-ui/core/styles'
 import Link from 'next/link'
 import React, { Component, Fragment } from 'react'
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withStyles } from 'material-ui/styles'
+import { withStyles } from '@material-ui/core/styles'
 import { Query, compose } from 'react-apollo'
 import { PageQuery } from '../lib/queries/page'
 import withData from '../lib/withData'

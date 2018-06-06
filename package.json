@@ -1,13 +1,15 @@
 {
   "name": "franciscan-university-react",
-  "description":
-    "The main website for Franciscan University of Steubenville. Built with React, NextJS, and MaterialUI.",
+  "description": "The main website for Franciscan University of Steubenville. Built with React, NextJS, and MaterialUI.",
   "version": "1.0.0",
   "author": "Jesse Weigel <jesseweigel@gmail.com>",
   "now": {
     "alias": "dev.franciscan.university"
   },
   "dependencies": {
+    "@material-ui/codemod": "^1.1.0",
+    "@material-ui/core": "^1.2.0",
+    "@material-ui/icons": "^1.1.0",
     "apollo-cache-inmemory": "^1.1.12",
     "apollo-client": "^2.2.8",
     "apollo-link-http": "^1.5.3",
@@ -21,8 +23,6 @@
     "lodash.mapvalues": "^4.6.0",
     "lodash.throttle": "^4.1.1",
     "lru-cache": "^4.1.2",
-    "material-ui": "^1.0.0-beta.38",
-    "material-ui-icons": "^1.0.0-beta.36",
     "next": "6.0.3",
     "react": "^16.2.0",
     "react-apollo": "^2.1.0",
@@ -30,7 +30,9 @@
     "react-masonry-component": "^6.0.2",
     "react-scroll": "^1.7.9"
   },
-  "keywords": ["next"],
+  "keywords": [
+    "next"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -39,8 +41,7 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "deploy": "now -e NODE_ENV=production",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "cm": "git-cz",
     "precommit": "lint-staged && npm run test",
     "unit": "jest .test.js --config=jest.config.json",
@@ -81,7 +82,9 @@
     ]
   },
   "jest": {
-    "setupFiles": ["<rootDir>/shim.js"]
+    "setupFiles": [
+      "<rootDir>/shim.js"
+    ]
   },
   "config": {
     "commitizen": {

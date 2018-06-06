@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withStyles, MuiThemeProvider } from 'material-ui/styles'
+import { withStyles, MuiThemeProvider } from '@material-ui/core/styles'
 import wrapDisplayName from 'recompose/wrapDisplayName'
 import getContext from '../styles/getContext'
 
@@ -12,7 +12,8 @@ const styles = theme => ({
       MozOsxFontSmoothing: 'grayscale' // Antialiasing.
     },
     body: {
-      margin: 0
+      margin: 0,
+      overflow: 'initial !important'
     }
   }
 })

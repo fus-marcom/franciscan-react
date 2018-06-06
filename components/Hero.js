@@ -1,8 +1,8 @@
+import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
+import { withStyles } from '@material-ui/core/styles'
 import React, { Component } from 'react'
-import { withStyles } from 'material-ui/styles'
-import Typography from 'material-ui/Typography'
 import InvertedButton from './InvertedButton'
-import Grid from 'material-ui/Grid'
 
 const styles = theme => ({
   parallax: {

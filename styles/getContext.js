@@ -1,6 +1,6 @@
 import { create, SheetsRegistry } from 'jss'
 import preset from 'jss-preset-default'
-import createGenerateClassName from 'material-ui/styles/createGenerateClassName'
+import createGenerateClassName from '@material-ui/core/styles/createGenerateClassName'
 import theme from '../lib/fusTheme'
 
 // Configure JSS

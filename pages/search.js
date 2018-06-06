@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withStyles } from 'material-ui/styles'
+import { withStyles } from '@material-ui/core/styles'
 import Layout from '../components/Layout'
 import Head from 'next/head'
 import withRoot from '../components/withRoot'
@@ -12,12 +12,12 @@ import {
   FormGroup,
   FormControlLabel,
   FormHelperText
-} from 'material-ui/Form'
-import Checkbox from 'material-ui/Checkbox'
-import { MenuItem } from 'material-ui/Menu'
-import Select from 'material-ui/Select'
-import TextField from 'material-ui/TextField'
-import Grid from 'material-ui/Grid'
+} from '@material-ui/core/Form'
+import Checkbox from '@material-ui/core/Checkbox'
+import { MenuItem } from '@material-ui/core/Menu'
+import Select from '@material-ui/core/Select'
+import TextField from '@material-ui/core/TextField'
+import Grid from '@material-ui/core/Grid'
 
 const styles = theme => ({
   root: {

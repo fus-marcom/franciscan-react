@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import withStyles from 'material-ui/styles/withStyles'
+import withStyles from '@material-ui/core/styles/withStyles'
 import AppBar from './AppBar'
 import Drawer from './Drawer'
 import Footer from './Footer'

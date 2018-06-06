@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withStyles } from 'material-ui/styles'
+import { withStyles } from '@material-ui/core/styles'
 import Layout from '../components/Layout'
 import Head from 'next/head'
 import withRoot from '../components/withRoot'
@@ -7,8 +7,8 @@ import withRoot from '../components/withRoot'
 import Masonry from 'react-masonry-component'
 
 import TextSection from '../components/TextSection'
-import Grid from 'material-ui/Grid'
-import Card from 'material-ui/Card'
+import Grid from '@material-ui/core/Grid'
+import Card from '@material-ui/core/Card'
 import ListCard from '../components/ListCard'
 import { testimonyData } from '../data/listData'
 

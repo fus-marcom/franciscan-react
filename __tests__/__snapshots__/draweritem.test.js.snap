@@ -30,8 +30,8 @@ exports[`DrawerItem should render 1`] = `
               "dense": "MuiListItem-dense-11",
               "disabled": "MuiListItem-disabled-12",
               "divider": "MuiListItem-divider-13",
+              "focusVisible": "MuiListItem-focusVisible-9",
               "gutters": "MuiListItem-gutters-14",
-              "keyboardFocused": "MuiListItem-keyboardFocused-9",
               "root": "MuiListItem-root-7",
               "secondaryAction": "MuiListItem-secondaryAction-16",
             }
@@ -44,13 +44,9 @@ exports[`DrawerItem should render 1`] = `
         >
           <WithStyles(ButtonBase)
             className="MuiListItem-root-7 MuiListItem-default-10 MuiListItem-gutters-14 MuiListItem-button-15"
-            classes={
-              Object {
-                "keyboardFocused": "MuiListItem-keyboardFocused-9",
-              }
-            }
             component="div"
             disabled={false}
+            focusVisibleClassName="MuiListItem-focusVisible-9"
             onClick={[Function]}
           >
             <ButtonBase
@@ -59,7 +55,7 @@ exports[`DrawerItem should render 1`] = `
               classes={
                 Object {
                   "disabled": "MuiButtonBase-disabled-18",
-                  "keyboardFocused": "MuiButtonBase-keyboardFocused-19 MuiListItem-keyboardFocused-9",
+                  "focusVisible": "MuiButtonBase-focusVisible-19",
                   "root": "MuiButtonBase-root-17",
                 }
               }
@@ -67,6 +63,7 @@ exports[`DrawerItem should render 1`] = `
               disableRipple={false}
               disabled={false}
               focusRipple={false}
+              focusVisibleClassName="MuiListItem-focusVisible-9"
               onClick={[Function]}
               tabIndex="0"
               type="button"
@@ -134,8 +131,8 @@ exports[`DrawerItem should render 1`] = `
                         classes={
                           Object {
                             "colorAction": "MuiSvgIcon-colorAction-29",
-                            "colorDisabled": "MuiSvgIcon-colorDisabled-30",
-                            "colorError": "MuiSvgIcon-colorError-31",
+                            "colorDisabled": "MuiSvgIcon-colorDisabled-31",
+                            "colorError": "MuiSvgIcon-colorError-30",
                             "colorPrimary": "MuiSvgIcon-colorPrimary-27",
                             "colorSecondary": "MuiSvgIcon-colorSecondary-28",
                             "root": "MuiSvgIcon-root-26",
@@ -150,9 +147,11 @@ exports[`DrawerItem should render 1`] = `
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
-                          <path
-                            d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                          />
+                          <g>
+                            <path
+                              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                            />
+                          </g>
                         </svg>
                       </SvgIcon>
                     </WithStyles(SvgIcon)>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { withStyles } from 'material-ui/styles'
-import Grid from 'material-ui/Grid'
-import Typography from 'material-ui/Typography'
+import { withStyles } from '@material-ui/core/styles'
+import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
 import classNames from 'classnames'
 
 const styles = theme => ({
