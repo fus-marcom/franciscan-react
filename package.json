@@ -50,7 +50,7 @@
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^8.2.3",
-    "babel-jest": "^22.4.3",
+    "babel-jest": "^23.0.1",
     "chai": "^4.1.2",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
