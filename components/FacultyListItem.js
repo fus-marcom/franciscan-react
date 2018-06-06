@@ -47,7 +47,7 @@ class FacultyListItem extends Component {
               {profileName}
             </Typography>
             <Typography
-              component="p"
+              component="span"
               className={classes.quote}
               dangerouslySetInnerHTML={{
                 __html: title[0]
