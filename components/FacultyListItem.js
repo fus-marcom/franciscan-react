@@ -1,5 +1,6 @@
 import Button from '@material-ui/core/Button'
-import { CardActions, CardContent } from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
 import Link from 'next/link'
