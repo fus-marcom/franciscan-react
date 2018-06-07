@@ -104,12 +104,13 @@ const translationObj = {
     id: { default: 'accounting', classes: 'accounting-classes' }
   },
   biology: {
-    page: '/major',
-    type: 'majors',
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'biology',
       classes: 'biology-classes',
-      mission: 'biology-mission'
+      mission: 'biology-mission',
+      faculty: 'biology'
     }
   },
   english: {
@@ -143,7 +144,7 @@ const translationObj = {
       classes: 'comm-arts-classes',
       'senior-thesis': 'comm-arts-senior-thesis',
       alumni: 'comm-arts-alumni',
-      faculty: 'comm-arts',
+      faculty: 'communication-arts',
       'film-studies': 'film-studies-minor'
     }
   },
@@ -159,7 +160,7 @@ const translationObj = {
       classes: 'comm-arts-classes',
       'senior-thesis': 'comm-arts-senior-thesis',
       alumni: 'comm-arts-alumni',
-      faculty: 'comm-arts',
+      faculty: 'communication-arts',
       'film-studies': 'film-studies-minor'
     }
   },
@@ -223,7 +224,16 @@ const translationObj = {
     id: {
       default: 'history',
       classes: 'history-classes',
-      faculty: 'history'
+      faculty: 'history-and-anthropology'
+    }
+  },
+  'hist-anthro': {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'history',
+      classes: 'history-classes',
+      faculty: 'history-and-anthropology'
     }
   },
   humanitiesandcatholicculture: {
@@ -268,6 +278,22 @@ const translationObj = {
     id: {
       default: 'marketing',
       faculty: 'business'
+    }
+  },
+  'chem-phys': {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'chem-phys',
+      faculty: 'chemistry-physics-and-engineering'
+    }
+  },
+  cmhc: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'cmhc',
+      faculty: 'clinical-mental-health-counseling'
     }
   },
   mathemeticalscience: {
