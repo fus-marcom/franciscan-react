@@ -33,14 +33,19 @@ class Faculty extends Component {
 
             const cvRegex = /(<cvlink>)(<a.href=")(.+)(">)(.+)(<\/a>)(<.cvlink>)/gi
 
+            const imgRegex = /(<img.src=")(.+)(")(.+)(\/>)/gi
+
             const { data } = result
             const content = data[this.props.type].edges[0].node.content
               .replace(/<Details>/g, '<div class="details">')
               .replace(/<\/Details>/g, '</div>')
-              .replace(/src="\//g, 'src="https://www.franciscan.edu/')
               .replace(
                 cvRegex,
                 '<CVLink><a href="$3" title="View CV">View CV</a></CVLink>'
+              )
+              .replace(
+                imgRegex,
+                '<img src="https://www.franciscan.edu/$2" $4 />'
               )
 
             return (
