@@ -192,7 +192,7 @@ function InvertedButton (props) {
       disabled={disabled}
       focusRipple={!disableFocusRipple}
       classes={{
-        keyboardFocused: classes.keyboardFocused
+        focusVisible: classes.keyboardFocused
       }}
       {...other}
     >

@@ -80,6 +80,7 @@ class TemporaryDrawer extends Component {
     return (
       <SwipeableDrawer
         open={open}
+        onOpen={toggleDrawer}
         onClose={toggleDrawer}
         disableBackdropTransition={!iOS}
         disableDiscovery={iOS}
