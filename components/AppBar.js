@@ -27,16 +27,13 @@ const styles = theme => ({
   },
   appBar: {
     background: '#ffffff',
-    borderBottom: `solid 3px #998643`,
-    paddingTop: '6px'
+    borderBottom: `solid 3px #998643`
   },
   menuButton: {
     color: `${theme.palette.primary[500]}`,
     marginLeft: -12,
     marginRight: 10,
-    [theme.breakpoints.up('lg')]: {
-      height: '70px'
-    }
+    alignSelf: 'center'
   },
   mobileHeaderImage: {
     maxHeight: '3rem'
