@@ -480,7 +480,12 @@ const translationObj = {
     page: '/page'
   },
   hr: {
-    page: '/page',
+    page: {
+      default: '/page',
+      'faculty-openings': '/job-list',
+      'staff-openings': '/job-list',
+      careers: '/job-list'
+    },
     type: 'humanResources',
     id: { default: 'employment-and-human-resources' }
   },
