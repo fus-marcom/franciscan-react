@@ -29,9 +29,13 @@ const translationObj = {
   major: { page: '/major' },
   minor: { page: '/minor' },
   departments: {
-    page: '/page',
-    type: 'departments',
-    id: { default: 'departments' }
+    page: { default: '/page', faculty: '/faculty-list' },
+    type: { default: 'departments', faculty: 'faculty' },
+    id: {
+      default: 'departments',
+      'hist-anthro': 'history-and-anthropology',
+      'math-cs': 'mathematical-and-computer-science'
+    }
   },
   'institutes-centers': {
     page: '/page',
@@ -707,7 +711,13 @@ app.prepare().then(() => {
           // find page
           if (translationObj[firstParam].page) {
             if (typeof translationObj[firstParam].page === 'object') {
-              page = translationObj[firstParam].page.thirdly
+              if (translationObj[firstParam].page[id]) {
+                page = translationObj[firstParam].page[id]
+              } else if (translationObj[firstParam].page.thirdly) {
+                page = translationObj[firstParam].page.thirdly
+              } else {
+                page = translationObj[firstParam].page.default
+              }
             } else {
               page = translationObj[firstParam].page
             }
@@ -715,14 +725,37 @@ app.prepare().then(() => {
           // find type
           if (translationObj[firstParam].type) {
             if (typeof translationObj[firstParam].type === 'object') {
-              type = translationObj[firstParam].type.thirdly
+              if (translationObj[firstParam].type[id]) {
+                type = translationObj[firstParam].type[id]
+              } else if (translationObj[firstParam].type.thirdly) {
+                type = translationObj[firstParam].type.thirdly
+              } else {
+                type = translationObj[firstParam].type.default
+              }
             } else {
               type = translationObj[firstParam].type
             }
           }
           // find id
           if (translationObj[firstParam].id) {
-            id = translationObj[firstParam].id[thirdParam]
+            // Check to see if the item has an id array
+            if (typeof translationObj[firstParam].id === 'object') {
+              // If secondParam exists as key in id array
+              if (translationObj[firstParam].id[secondParam]) {
+                // Use value of secondParam key as id
+                id = translationObj[firstParam].id[secondParam]
+              } else if (translationObj[firstParam].id.thirdly) {
+                // Check that thirdly exists as a key in id array
+                // Use thirdly value as id
+                id = translationObj[firstParam].id.thirdly
+              } else {
+                // If no thirdly, then use second param as id
+                id = secondParam
+              }
+              // If no id array exists, use the id string as the id
+            } else {
+              id = translationObj[firstParam].id
+            }
           }
         }
       }
