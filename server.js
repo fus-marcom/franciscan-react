@@ -34,7 +34,8 @@ const translationObj = {
     id: {
       default: 'departments',
       'hist-anthro': 'history-and-anthropology',
-      'math-cs': 'mathematical-and-computer-science'
+      'math-cs': 'mathematical-and-computer-science',
+      'mod-lang-lit': 'modern-languages-and-literatures'
     }
   },
   'institutes-centers': {
@@ -337,12 +338,19 @@ const translationObj = {
     }
   },
   psychology: {
-    page: { default: '/major', faculty: '/faculty-list' },
-    type: { default: 'majors', faculty: 'faculty' },
+    page: '/major',
+    type: 'majors',
     id: {
       default: 'psychology',
-      classes: 'psychology-classes',
-      faculty: 'psychology'
+      classes: 'psychology-classes'
+    }
+  },
+  'psych-soc-swork': {
+    page: { default: '/department', faculty: '/faculty-list' },
+    type: { default: 'departments', faculty: 'faculty' },
+    id: {
+      default: 'psych-soc-swork',
+      faculty: 'psychology-sociology-and-social-work'
     }
   },
   socialwork: {
@@ -446,14 +454,6 @@ const translationObj = {
     page: { default: '', faculty: '/faculty-list' },
     type: { default: '', faculty: 'faculty' },
     id: { default: 'fine-arts', faculty: 'fine-arts' }
-  },
-  'psych-soc-swork': {
-    page: { default: '', faculty: '/faculty-list' },
-    type: { default: '', faculty: 'faculty' },
-    id: {
-      default: 'psych-soc-swork',
-      faculty: 'psychology-sociology-and-social-work'
-    }
   },
   associate: { page: '/associate', id: { default: 'main' } },
   studentlife: {
