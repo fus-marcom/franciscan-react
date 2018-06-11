@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import { Query, compose } from 'react-apollo'
+import Head from 'next/head'
+import React, { Component } from 'react'
+import { compose, Query } from 'react-apollo'
+import Layout from '../components/Layout'
+import withRoot from '../components/withRoot'
 import { PageQuery } from '../lib/queries/page'
 import withData from '../lib/withData'
-import Layout from '../components/Layout'
-import Head from 'next/head'
-import withRoot from '../components/withRoot'
-import Link from 'next/link'
 
 const styles = {
   root: {
@@ -58,13 +57,13 @@ class Major extends Component {
             )
           }}
         </Query>
-        <Link
+        {/* <Link
           prefetch
           as={`/${this.props.id}/classes`}
           href={`/major?type=majors&id=${this.props.id}-classes`}
         >
           Course Descriptions
-        </Link>
+        </Link> */}
       </Layout>
     )
   }

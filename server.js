@@ -210,7 +210,8 @@ const translationObj = {
       default: 'modernlanguages',
       classes: 'modernlanguages-classes',
       faculty: 'modernlanguages',
-      'mission-aims-info': 'modernlanguages-mission'
+      'mission-aims-info': 'modernlanguages-mission',
+      placement: 'modernlanguages-placement'
     }
   },
   'mod-lang-lit': {
@@ -220,7 +221,17 @@ const translationObj = {
       default: 'modernlanguages',
       classes: 'modernlanguages-classes',
       faculty: 'modernlanguages',
-      'mission-aims-info': 'modernlanguages-mission'
+      'mission-aims-info': 'modernlanguages-mission',
+      placement: 'language-placement-exams'
+    }
+  },
+  'language-placement-exams': {
+    page: '/major',
+    type: 'majors',
+    id: {
+      default: 'language-placement-exams',
+      information: 'language-placement-exams-info',
+      spanish: 'language-placement-exams-spanish'
     }
   },
   history: {
@@ -316,7 +327,10 @@ const translationObj = {
     id: {
       default: 'nursing',
       classes: 'nursing-classes',
-      faculty: 'nursing'
+      faculty: 'nursing',
+      'aims-outcomes-information': 'nursing-aims-outcomes-information',
+      'admissions-criteria': 'nursing-admissions-criteria',
+      'drug-policy': 'nursing-drug-policy'
     }
   },
   pharmacy: {
