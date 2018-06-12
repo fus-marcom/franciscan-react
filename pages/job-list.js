@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 import { JobListQuery } from '../lib/queries/jobList'
 import withData from '../lib/withData'
+import Link from 'next/link'
 
 const styles = theme => ({
   gridItemFix: {
@@ -26,6 +27,10 @@ const styles = theme => ({
     [theme.breakpoints.down('sm')]: {
       maxWidth: '95%'
     }
+  },
+
+  link: {
+    cursor: 'pointer'
   }
 })
 
@@ -69,20 +74,66 @@ class JobList extends Component {
             return (
               <div className={classes.contentContainer}>
                 <h1>Career Opportunities</h1>
-                {jobsData.map(job => (
-                  <Grid
-                    key={job.node.slug}
-                    item
-                    className={classes.gridItemFix}
-                    xs={12}
-                  >
-                    <h2
-                      dangerouslySetInnerHTML={{
-                        __html: job.node.title
-                      }}
-                    />
-                  </Grid>
-                ))}
+                {jobsData.map(job => {
+                  const category =
+                    job.node.jobCategories.edges.length > 0
+                      ? job.node.jobCategories.edges[0].node.slug
+                      : false
+                  const facultyDepartment =
+                    job.node.facultyDepartments.edges.length > 0
+                      ? job.node.facultyDepartments.edges[0].node.slug
+                      : false
+                  const staffDepartment =
+                    job.node.staffDepartments.edges.length > 0
+                      ? job.node.staffDepartments.edges[0].node.slug
+                      : false
+
+                  return (
+                    <Grid
+                      key={job.node.slug}
+                      item
+                      className={classes.gridItemFix}
+                      xs={12}
+                    >
+                      {category && (
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html: category.toUpperCase()
+                          }}
+                        />
+                      )}
+                      {facultyDepartment && (
+                        <span>
+                          {' '}
+                          {'> '}
+                          <span
+                            dangerouslySetInnerHTML={{
+                              __html: facultyDepartment.toUpperCase()
+                            }}
+                          />
+                        </span>
+                      )}
+                      {staffDepartment && (
+                        <span>
+                          {'> '}
+                          <span
+                            dangerouslySetInnerHTML={{
+                              __html: staffDepartment.toUpperCase()
+                            }}
+                          />
+                        </span>
+                      )}
+                      <Link prefetch href={`/hr/careers/${job.node.slug}`}>
+                        <h2
+                          className={classes.link}
+                          dangerouslySetInnerHTML={{
+                            __html: job.node.title
+                          }}
+                        />
+                      </Link>
+                    </Grid>
+                  )
+                })}
               </div>
             )
           }}

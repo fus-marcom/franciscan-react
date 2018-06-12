@@ -253,12 +253,20 @@ const translationObj = {
     }
   },
   humanitiesandcatholicculture: {
-    page: { default: '/major', faculty: '/faculty-list' },
-    type: { default: 'majors', faculty: 'faculty' },
+    page: '/major',
+    type: 'majors',
     id: {
       default: 'humanitiesandcatholicculture',
-      classes: 'humanitiesandcatholicculture-classes',
-      faculty: 'humanitiesandcatholicculture'
+      classes: 'humanitiesandcatholicculture-classes'
+    }
+  },
+
+  hcc: {
+    page: '/major',
+    type: 'majors',
+    id: {
+      default: 'humanitiesandcatholicculture',
+      classes: 'humanitiesandcatholicculture-classes'
     }
   },
   law: {
@@ -498,7 +506,8 @@ const translationObj = {
       default: '/page',
       'faculty-openings': '/job-list',
       'staff-openings': '/job-list',
-      careers: '/job-list'
+      careers: '/job-list',
+      thirdly: '/job'
     },
     type: 'humanResources',
     id: { default: 'employment-and-human-resources' }
