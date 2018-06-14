@@ -12,6 +12,11 @@ const translationObj = {
   faculty: { page: '/faculty', type: 'faculty' },
   contact: { page: '/directory' },
   news: { page: '/news', type: 'news' },
+  'oath-of-fidelity': {
+    page: '/page',
+    type: 'academicsPages',
+    id: { default: 'oath-of-fidelity' }
+  },
   search: { page: '/search' },
   'single-mission': { page: '/single-mission' },
   'missionary-outreach': {
@@ -320,13 +325,13 @@ const translationObj = {
       faculty: 'clinical-mental-health-counseling'
     }
   },
-  mathemeticalscience: {
+  mathematicalscience: {
     page: { default: '/major', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
-      default: 'mathemeticalscience',
-      classes: 'mathemeticalscience-classes',
-      faculty: 'mathemeticalscience'
+      default: 'mathematicalscience',
+      classes: 'mathematicalscience-classes',
+      faculty: 'mathematicalscience'
     }
   },
   nursing: {
@@ -356,7 +361,8 @@ const translationObj = {
     id: {
       default: 'philosophy',
       classes: 'philosophy-classes',
-      faculty: 'philosophy'
+      faculty: 'philosophy',
+      'online-associates': 'philosophy-online-associates'
     }
   },
   psychology: {
@@ -368,11 +374,20 @@ const translationObj = {
     }
   },
   'psych-soc-swork': {
-    page: { default: '/department', faculty: '/faculty-list' },
-    type: { default: 'departments', faculty: 'faculty' },
+    page: {
+      default: '/department',
+      faculty: '/faculty-list',
+      'psych-classes': '/major'
+    },
+    type: {
+      default: 'departments',
+      faculty: 'faculty',
+      'psych-classes': 'majors'
+    },
     id: {
       default: 'psych-soc-swork',
-      faculty: 'psychology-sociology-and-social-work'
+      faculty: 'psychology-sociology-and-social-work',
+      'psych-classes': 'psychology-classes'
     }
   },
   socialwork: {
