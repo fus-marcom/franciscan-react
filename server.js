@@ -278,9 +278,7 @@ const translationObj = {
     page: { default: '/major', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
-      default: 'law',
-      classes: 'law-classes',
-      faculty: 'law'
+      default: 'law'
     }
   },
   management: {
@@ -394,7 +392,7 @@ const translationObj = {
     page: { default: '/major', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
-      default: 'socialwork',
+      default: 'social-work',
       classes: 'socialwork-classes',
       faculty: 'socialwork'
     }
