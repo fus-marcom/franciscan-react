@@ -414,14 +414,39 @@ const translationObj = {
     id: {
       default: 'theatre',
       classes: 'theatre-classes',
-      faculty: 'theatre'
+      faculty: 'theatre',
+      events: 'theatre-events'
+    }
+  },
+  drama: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'theatre',
+      classes: 'drama-classes',
+      faculty: 'theatre',
+      events: 'theatre-events'
     }
   },
   theology: {
     page: { default: '/major', faculty: '/faculty-list' },
     type: { default: 'majors', standard: 'theologyPages', faculty: 'faculty' },
-    id: { default: 'theology', faculty: 'theology' }
+    id: {
+      default: 'theology',
+      faculty: 'theology',
+      classes: 'theology-classes'
+    }
   },
+  'graduate-theology': {
+    page: { default: '/page', faculty: '/faculty-list' },
+    type: { default: 'graduatePrograms', faculty: 'faculty' },
+    id: {
+      default: 'theology',
+      faculty: 'theology',
+      classes: 'theology-classes'
+    }
+  },
+
   politicalscience: {
     page: '/major',
     type: 'majors',
@@ -465,7 +490,8 @@ const translationObj = {
     id: {
       default: 'catechetics',
       'why-catechetics': 'why-catechetics',
-      classes: 'catechetics-classes'
+      classes: 'catechetics-classes',
+      'application-information': 'catechetics-application-information'
     }
   },
   chemistry: {
@@ -479,7 +505,16 @@ const translationObj = {
     id: {
       default: 'classics',
       classes: 'classics-classes',
-      faculty: 'classics'
+      faculty: 'classics',
+      events: 'classics-events'
+    }
+  },
+  'honors-program': {
+    page: '/major',
+    type: 'majors',
+    id: {
+      default: 'honors-program',
+      requirements: 'honors-program-requirements'
     }
   },
   'fine-arts': {
