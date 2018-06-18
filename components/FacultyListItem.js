@@ -51,13 +51,15 @@ class FacultyListItem extends Component {
                 __html: profileName
               }}
             />
-            <Typography
-              component="span"
-              className={classes.quote}
-              dangerouslySetInnerHTML={{
-                __html: title[0]
-              }}
-            />
+            {title && (
+              <Typography
+                component="span"
+                className={classes.quote}
+                dangerouslySetInnerHTML={{
+                  __html: title[0]
+                }}
+              />
+            )}
           </CardContent>
           {profileLink && (
             <CardActions>
@@ -71,11 +73,13 @@ class FacultyListItem extends Component {
             </CardActions>
           )}
         </div>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: image[0]
-          }}
-        />
+        {image && (
+          <div
+            dangerouslySetInnerHTML={{
+              __html: image[0]
+            }}
+          />
+        )}
       </div>
     )
   }
