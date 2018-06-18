@@ -439,7 +439,35 @@ const translationObj = {
     page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
-      default: 'theology',
+      default: 'ma-theology',
+      faculty: 'theology',
+      classes: 'theology-classes'
+    }
+  },
+  'ma-theology': {
+    page: { default: '/page', faculty: '/faculty-list' },
+    type: { default: 'graduatePrograms', faculty: 'faculty' },
+    id: {
+      default: 'ma-theology',
+      faculty: 'theology',
+      classes: 'theology-classes'
+    }
+  },
+  'graduate-catechetics': {
+    page: { default: '/page', faculty: '/faculty-list' },
+    type: { default: 'graduatePrograms', faculty: 'faculty' },
+    id: {
+      default: 'graduate-catechetics',
+      faculty: 'theology',
+      classes: 'theology-classes',
+      requirements: 'requirements'
+    }
+  },
+  'cannon-law-track': {
+    page: { default: '/page', faculty: '/faculty-list' },
+    type: { default: 'graduatePrograms', faculty: 'faculty' },
+    id: {
+      default: 'cannon-law-track',
       faculty: 'theology',
       classes: 'theology-classes'
     }
@@ -816,17 +844,17 @@ app.prepare().then(() => {
           if (translationObj[firstParam].id) {
             // Check to see if the item has an id array
             if (typeof translationObj[firstParam].id === 'object') {
-              // If secondParam exists as key in id array
-              if (translationObj[firstParam].id[secondParam]) {
-                // Use value of secondParam key as id
-                id = translationObj[firstParam].id[secondParam]
+              // If thirdParam exists as key in id array
+              if (translationObj[firstParam].id[thirdParam]) {
+                // Use value of thirdParam key as id
+                id = translationObj[firstParam].id[thirdParam]
               } else if (translationObj[firstParam].id.thirdly) {
                 // Check that thirdly exists as a key in id array
                 // Use thirdly value as id
                 id = translationObj[firstParam].id.thirdly
               } else {
                 // If no thirdly, then use second param as id
-                id = secondParam
+                id = thirdParam
               }
               // If no id array exists, use the id string as the id
             } else {
