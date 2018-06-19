@@ -665,6 +665,11 @@ const translationObj = {
     type: 'academicsPages',
     id: { default: 'rotc' }
   },
+  'academic-orgs': {
+    page: '/page',
+    type: 'academicsPages',
+    id: { default: 'academic-orgs' }
+  },
   pdp: {
     page: '/page',
     type: 'pdpPages',
