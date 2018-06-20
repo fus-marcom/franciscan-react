@@ -10,7 +10,13 @@ const handle = app.getRequestHandler()
 // TODO: split this object up into three: one for for routes with 1 param, 2params, and 3 params. Then change routing function to use the correct obj depending on the num of params
 const translationObj = {
   faculty: { page: '/faculty', type: 'faculty' },
-  contact: { page: '/directory' },
+  contact: {
+    page: {
+      default: '/page'
+    },
+    type: { default: 'aboutPages', standard: 'directories' },
+    id: { default: 'contact' }
+  },
   news: { page: '/news', type: 'news' },
   'oath-of-fidelity': {
     page: '/page',
