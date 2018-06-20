@@ -585,7 +585,7 @@ const translationObj = {
       careers: '/job-list',
       thirdly: '/job'
     },
-    type: 'humanResources',
+    type: { default: 'humanResources', thirdly: 'jobs' },
     id: { default: 'employment-and-human-resources' }
   },
   'consumer-information': {

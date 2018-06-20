@@ -1,13 +1,13 @@
 import Grid from '@material-ui/core/Grid'
 import { withStyles } from '@material-ui/core/styles'
 import Head from 'next/head'
+import Link from 'next/link'
 import React, { Component } from 'react'
 import { compose, Query } from 'react-apollo'
 import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 import { JobListQuery } from '../lib/queries/jobList'
 import withData from '../lib/withData'
-import Link from 'next/link'
 
 const styles = theme => ({
   gridItemFix: {
@@ -81,11 +81,11 @@ class JobList extends Component {
                       : false
                   const facultyDepartment =
                     job.node.facultyDepartments.edges.length > 0
-                      ? job.node.facultyDepartments.edges[0].node.slug
+                      ? job.node.facultyDepartments.edges[0].node.name
                       : false
                   const staffDepartment =
                     job.node.staffDepartments.edges.length > 0
-                      ? job.node.staffDepartments.edges[0].node.slug
+                      ? job.node.staffDepartments.edges[0].node.name
                       : false
 
                   return (
