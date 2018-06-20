@@ -1,23 +1,21 @@
-import React, { Component } from 'react'
-import { withStyles } from '@material-ui/core/styles'
-import Layout from '../components/Layout'
-import Head from 'next/head'
-import withRoot from '../components/withRoot'
-import { getJSON } from '../utils/fetch'
-import debounce from 'lodash.debounce'
-import throttle from 'lodash.throttle'
-import {
-  FormLabel,
-  FormControl,
-  FormGroup,
-  FormControlLabel,
-  FormHelperText
-} from '@material-ui/core/Form'
 import Checkbox from '@material-ui/core/Checkbox'
+import FormControl from '@material-ui/core/FormControl'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import FormGroup from '@material-ui/core/FormGroup'
+import FormHelperText from '@material-ui/core/FormHelperText'
+import FormLabel from '@material-ui/core/FormLabel'
+import Grid from '@material-ui/core/Grid'
 import { MenuItem } from '@material-ui/core/Menu'
 import Select from '@material-ui/core/Select'
+import { withStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
-import Grid from '@material-ui/core/Grid'
+import debounce from 'lodash.debounce'
+import throttle from 'lodash.throttle'
+import Head from 'next/head'
+import React, { Component } from 'react'
+import Layout from '../components/Layout'
+import withRoot from '../components/withRoot'
+import { getJSON } from '../utils/fetch'
 
 const styles = theme => ({
   root: {
