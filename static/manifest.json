@@ -1,0 +1,20 @@
+{
+  "short_name": "FUS",
+  "name": "Franciscan University",
+  "icons": [
+    {
+      "src": "/static/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/desktop.jpg",
+      "sizes": "347x400",
+      "type": "image/jpg"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#21412a",
+  "background_color": "#fff"
+}
