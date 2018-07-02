@@ -5,7 +5,7 @@ import FormGroup from '@material-ui/core/FormGroup'
 import FormHelperText from '@material-ui/core/FormHelperText'
 import FormLabel from '@material-ui/core/FormLabel'
 import Grid from '@material-ui/core/Grid'
-import { MenuItem } from '@material-ui/core/Menu'
+import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
 import { withStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
@@ -76,7 +76,8 @@ class Page extends Component {
     scrollY: 0,
     windowHeight: 0,
     scrollSearch: false,
-    resultCount: 0
+    resultCount: 0,
+    open: false
   }
   /**
    * Make api call based on searchTerm
@@ -216,6 +217,14 @@ class Page extends Component {
     )
   }
 
+  handleClose = () => {
+    this.setState({ open: false })
+  }
+
+  handleOpen = () => {
+    this.setState({ open: true })
+  }
+
   throttleScroll = throttle(this.handleScroll, 200)
 
   render () {
@@ -252,7 +261,12 @@ class Page extends Component {
                 <Select
                   value={this.state.sortBy}
                   onChange={this.handleSort}
-                  name="sortBy"
+                  open={this.state.open}
+                  onClose={this.handleClose}
+                  onOpen={this.handleOpen}
+                  inputProps={{
+                    name: 'sortBy'
+                  }}
                 >
                   <MenuItem value={'alphaAsc'}>a-z</MenuItem>
                   <MenuItem value={'alphaDesc'}>z-a</MenuItem>
