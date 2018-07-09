@@ -81,14 +81,17 @@ class Major extends Component {
                   <div>
                     <Grid container spacing={24}>
                       <Grid item xs={12} sm={6}>
-                        <ul>
-                          <li>Class 1</li>
-                          <li>Class 1</li>
-                          <li>Class 1</li>
-                          <li>Class 1</li>
-                          <li>Class 1</li>
-                          <li>Class 1</li>
-                        </ul>
+                        <section>
+                          <ul>
+                            <h3>Header</h3>
+                            <li>Class 1</li>
+                            <li>Class 1</li>
+                            <li>Class 1</li>
+                            <li>Class 1</li>
+                            <li>Class 1</li>
+                            <li>Class 1</li>
+                          </ul>
+                        </section>
                       </Grid>
                       <Grid item xs={12} sm={6}>
                         <ul>
