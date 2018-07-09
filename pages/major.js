@@ -6,6 +6,9 @@ import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 import { PageQuery } from '../lib/queries/page'
 import withData from '../lib/withData'
+import Tabs from '@material-ui/core/Tabs'
+import Tab from '@material-ui/core/Tab'
+import Grid from '@material-ui/core/Grid'
 
 const styles = {
   root: {
@@ -19,7 +22,14 @@ class Major extends Component {
   static async getInitialProps ({ query: { id, type } }) {
     return { id, type }
   }
+  state = {
+    value: 0
+  }
+  handleChange = (event, value) => {
+    this.setState({ value })
+  }
   render () {
+    const { value } = this.state
     return (
       <Layout>
         <Head>
@@ -44,16 +54,59 @@ class Major extends Component {
               .replace(/<Title>/g, '<h2 class="title">')
               .replace(/<\/Title>/g, '</h2>')
               .replace(/src="\//g, 'src="https://www.franciscan.edu/')
-            global.x = content
 
             return (
-              <div
-                className={this.props.classes.root}
-                data-testid="content"
-                dangerouslySetInnerHTML={{
-                  __html: content
-                }}
-              />
+              <div>
+                <div
+                  className={this.props.classes.root}
+                  data-testid="content"
+                  dangerouslySetInnerHTML={{
+                    __html: content
+                  }}
+                />
+                <Tabs
+                  value={value}
+                  onChange={this.handleChange}
+                  indicatorColor="primary"
+                  textColor="primary"
+                  scrollable
+                  scrollButtons="auto"
+                >
+                  <Tab label="Year One" />
+                  <Tab label="Year Two" />
+                  <Tab label="Year Three" />
+                  <Tab label="Year Four" />
+                </Tabs>
+                {value === 0 && (
+                  <div>
+                    <Grid container spacing={24}>
+                      <Grid item xs={12} sm={6}>
+                        <ul>
+                          <li>Class 1</li>
+                          <li>Class 1</li>
+                          <li>Class 1</li>
+                          <li>Class 1</li>
+                          <li>Class 1</li>
+                          <li>Class 1</li>
+                        </ul>
+                      </Grid>
+                      <Grid item xs={12} sm={6}>
+                        <ul>
+                          <li>Class 1</li>
+                          <li>Class 1</li>
+                          <li>Class 1</li>
+                          <li>Class 1</li>
+                          <li>Class 1</li>
+                          <li>Class 1</li>
+                        </ul>
+                      </Grid>
+                    </Grid>
+                  </div>
+                )}
+                {value === 1 && <div>Item Two</div>}
+                {value === 2 && <div>Item Three</div>}
+                {value === 3 && <div>Item Four</div>}
+              </div>
             )
           }}
         </Query>
