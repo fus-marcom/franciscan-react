@@ -6,9 +6,7 @@ import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 import { PageQuery } from '../lib/queries/page'
 import withData from '../lib/withData'
-import Tabs from '@material-ui/core/Tabs'
-import Tab from '@material-ui/core/Tab'
-import Grid from '@material-ui/core/Grid'
+import SampleSchedule from '../components/SampleSchedule'
 
 const styles = {
   root: {
@@ -22,14 +20,8 @@ class Major extends Component {
   static async getInitialProps ({ query: { id, type } }) {
     return { id, type }
   }
-  state = {
-    value: 0
-  }
-  handleChange = (event, value) => {
-    this.setState({ value })
-  }
+
   render () {
-    const { value } = this.state
     return (
       <Layout>
         <Head>
@@ -64,62 +56,11 @@ class Major extends Component {
                     __html: content
                   }}
                 />
-                <Tabs
-                  value={value}
-                  onChange={this.handleChange}
-                  indicatorColor="primary"
-                  textColor="primary"
-                  scrollable
-                  scrollButtons="auto"
-                >
-                  <Tab label="Year One" />
-                  <Tab label="Year Two" />
-                  <Tab label="Year Three" />
-                  <Tab label="Year Four" />
-                </Tabs>
-                {value === 0 && (
-                  <div>
-                    <Grid container spacing={24}>
-                      <Grid item xs={12} sm={6}>
-                        <section>
-                          <ul>
-                            <h3>Header</h3>
-                            <li>Class 1</li>
-                            <li>Class 1</li>
-                            <li>Class 1</li>
-                            <li>Class 1</li>
-                            <li>Class 1</li>
-                            <li>Class 1</li>
-                          </ul>
-                        </section>
-                      </Grid>
-                      <Grid item xs={12} sm={6}>
-                        <ul>
-                          <li>Class 1</li>
-                          <li>Class 1</li>
-                          <li>Class 1</li>
-                          <li>Class 1</li>
-                          <li>Class 1</li>
-                          <li>Class 1</li>
-                        </ul>
-                      </Grid>
-                    </Grid>
-                  </div>
-                )}
-                {value === 1 && <div>Item Two</div>}
-                {value === 2 && <div>Item Three</div>}
-                {value === 3 && <div>Item Four</div>}
+                <SampleSchedule />
               </div>
             )
           }}
         </Query>
-        {/* <Link
-          prefetch
-          as={`/${this.props.id}/classes`}
-          href={`/major?type=majors&id=${this.props.id}-classes`}
-        >
-          Course Descriptions
-        </Link> */}
       </Layout>
     )
   }
