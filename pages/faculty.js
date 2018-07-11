@@ -31,30 +31,59 @@ class Faculty extends Component {
             }
             if (result.error) return <h3>{result.error}</h3>
 
-            const cvRegex = /(<cvlink>)(<a.href=")(.+)(">)(.+)(<\/a>)(<.cvlink>)/gi
-
             const imgRegex = /(<img.src=")(.+)(")(.+)(\/>)/gi
 
             const { data } = result
+            const faculty = data[this.props.type].edges[0].node
             const content = data[this.props.type].edges[0].node.content
-              .replace(/<Details>/g, '<div class="details">')
-              .replace(/<\/Details>/g, '</div>')
-              .replace(
-                cvRegex,
-                '<CVLink><a href="$3" title="View CV">View CV</a></CVLink>'
-              )
+              .replace(/<Details>/gi, '<div class="details">')
+              .replace(/<\/Details>/gi, '</div>')
               .replace(
                 imgRegex,
                 '<img src="https://www.franciscan.edu/$2" $4 />'
               )
 
+            const thumbnail = faculty.featuredImage.mediaDetails.sizes.find(
+              image => image.name === 'thumbnail'
+            ).sourceUrl
+            const medium = faculty.featuredImage.mediaDetails.sizes.find(
+              image => image.name === 'medium'
+            ).sourceUrl
+
+            const thumbnailW = faculty.featuredImage.mediaDetails.sizes.find(
+              image => image.name === 'thumbnail'
+            ).width
+            const mediumW = faculty.featuredImage.mediaDetails.sizes.find(
+              image => image.name === 'medium'
+            ).width
+            const imageW = faculty.featuredImage.mediaDetails.width
+
             return (
-              <div
-                data-testid="content"
-                dangerouslySetInnerHTML={{
-                  __html: content
-                }}
-              />
+              <div>
+                <h1>{faculty.displayNameField.value}</h1>
+                <img
+                  srcSet={`${thumbnail}  ${thumbnailW}w,
+                        ${medium}  ${mediumW}w,
+                        ${faculty.featuredImage.sourceUrl} ${imageW}w`}
+                  sizes={`(max-width: 320px) 280px,
+                        (max-width: 480px) 440px,
+                        800px`}
+                  src={faculty.featuredImage.sourceUrl}
+                  alt="Elva dressed as a fairy"
+                />
+                <span>
+                  {faculty.jobTitleField && faculty.jobTitleField.value}
+                </span>
+                <span>{faculty.emailField && faculty.emailField.value}</span>
+                <span>{faculty.phoneField && faculty.phoneField.value}</span>
+                <div
+                  data-testid="content"
+                  dangerouslySetInnerHTML={{
+                    __html: content
+                  }}
+                />
+                {faculty.cvField && <a href={faculty.cvField.value}>View CV</a>}
+              </div>
             )
           }}
         </Query>
