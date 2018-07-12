@@ -30,15 +30,7 @@ const styles = theme => ({
 
 class FacultyListItem extends Component {
   render () {
-    const { classes, profileName, content, profileLink } = this.props
-    const image = content
-      .replace(/src="\//g, 'src="https://www.franciscan.edu/')
-      .match(/<DetailViewImage>(.*)<\/DetailViewImage>/)
-
-    const title = content
-      .replace(/<Title>/g, '<div class="title">')
-      .replace(/<\/Title>/g, '</div>')
-      .match(/<div class="title">(.*)<\/div>/)
+    const { classes, profileName, profileLink, jobTitle, imageObj } = this.props
 
     return (
       <div className={classes.card}>
@@ -51,12 +43,12 @@ class FacultyListItem extends Component {
                 __html: profileName
               }}
             />
-            {title && (
+            {jobTitle && (
               <Typography
                 component="span"
                 className={classes.quote}
                 dangerouslySetInnerHTML={{
-                  __html: title[0]
+                  __html: jobTitle
                 }}
               />
             )}
@@ -73,13 +65,7 @@ class FacultyListItem extends Component {
             </CardActions>
           )}
         </div>
-        {image && (
-          <div
-            dangerouslySetInnerHTML={{
-              __html: image[0]
-            }}
-          />
-        )}
+        {imageObj && <img src={imageObj.sourceUrl} alt={imageObj.altText} />}
       </div>
     )
   }

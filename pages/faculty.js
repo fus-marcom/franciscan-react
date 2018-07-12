@@ -38,45 +38,53 @@ class Faculty extends Component {
 
             const { data } = result
             const faculty = data[this.props.type].edges[0].node
-            const content = data[this.props.type].edges[0].node.content
-              .replace(/<Details>/gi, '<div class="details">')
-              .replace(/<\/Details>/gi, '</div>')
-              .replace(
-                imgRegex,
-                '<img src="https://www.franciscan.edu/$2" $4 />'
-              )
+            const content = data[this.props.type].edges[0].node.content.replace(
+              imgRegex,
+              '<img src="https://www.franciscan.edu/$2" $4 />'
+            )
 
-            const thumbnail = faculty.featuredImage.mediaDetails.sizes.find(
-              image => image.name === 'thumbnail'
-            ).sourceUrl
-            const medium = faculty.featuredImage.mediaDetails.sizes.find(
-              image => image.name === 'medium'
-            ).sourceUrl
+            // const thumbnail =
+            //   faculty.featuredImage &&
+            //   faculty.featuredImage.mediaDetails.sizes.find(
+            //     image => image.name === 'thumbnail'
+            //   ).sourceUrl
+            // const medium =
+            //   faculty.featuredImage &&
+            //   faculty.featuredImage.mediaDetails.sizes.find(
+            //     image => image.name === 'medium'
+            //   ).sourceUrl
 
-            const thumbnailW = faculty.featuredImage.mediaDetails.sizes.find(
-              image => image.name === 'thumbnail'
-            ).width
-            const mediumW = faculty.featuredImage.mediaDetails.sizes.find(
-              image => image.name === 'medium'
-            ).width
-            const imageW = faculty.featuredImage.mediaDetails.width
+            // const thumbnailW =
+            //   faculty.featuredImage &&
+            //   faculty.featuredImage.mediaDetails.sizes.find(
+            //     image => image.name === 'thumbnail'
+            //   ).width
+            // const mediumW =
+            //   faculty.featuredImage &&
+            //   faculty.featuredImage.mediaDetails.sizes.find(
+            //     image => image.name === 'medium'
+            //   ).width
+            // const imageW =
+            // faculty.featuredImage && faculty.featuredImage.mediaDetails.width
 
             return (
               <div className={classes.container}>
                 <h1>{faculty.displayNameField.value}</h1>
                 <Grid style={styles.listGridContainer} container spacing={24}>
-                  <Grid style={styles.listGridItem} item xs={12} sm={6}>
-                    <img
-                      srcSet={`${thumbnail}  ${thumbnailW}w,
-                        ${medium}  ${mediumW}w,
-                        ${faculty.featuredImage.sourceUrl} ${imageW}w`}
-                      sizes={`(max-width: 320px) 280px,
-                        (max-width: 480px) 440px,
-                        800px`}
-                      src={faculty.featuredImage.sourceUrl}
-                      alt="Elva dressed as a fairy"
-                    />
-                  </Grid>
+                  {faculty.featuredImage && (
+                    <Grid style={styles.listGridItem} item xs={12} sm={6}>
+                      <img
+                        // srcSet={`${thumbnail}  ${thumbnailW}w,
+                        // ${medium}  ${mediumW}w,
+                        // ${faculty.featuredImage.sourceUrl} ${imageW}w`}
+                        // sizes={`(max-width: 320px) 280px,
+                        // (max-width: 480px) 440px,
+                        // 800px`}
+                        src={faculty.featuredImage.sourceUrl}
+                        alt={faculty.featuredImage.altText}
+                      />
+                    </Grid>
+                  )}
                   <Grid style={styles.listGridItem} item xs={12} sm={6}>
                     {faculty.jobTitleField.value && (
                       <span className={classes.infoRow}>

@@ -74,9 +74,10 @@ class FacultyList extends Component {
                     xs={12}
                   >
                     <FacultyListItem
-                      profileName={faculty.node.title}
+                      profileName={faculty.node.displayNameField.value}
                       profileLink={`/faculty/${faculty.node.slug}`}
-                      content={faculty.node.content}
+                      jobTitle={faculty.node.jobTitleField.value}
+                      imageObj={faculty.node.featuredImage}
                     />
                   </Grid>
                 ))}
