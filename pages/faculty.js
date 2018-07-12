@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import React, { Component } from 'react'
+import { withStyles } from '@material-ui/core/styles'
 import { Query, compose } from 'react-apollo'
 import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 import { ProfileQuery } from '../lib/queries/profile'
 import withData from '../lib/withData'
+import Grid from '@material-ui/core/Grid'
 
 class Faculty extends Component {
   static async getInitialProps ({ query: { id, type } }) {
@@ -12,6 +14,7 @@ class Faculty extends Component {
   }
 
   render () {
+    const { classes } = this.props
     return (
       <Layout>
         <Head>
@@ -59,25 +62,41 @@ class Faculty extends Component {
             const imageW = faculty.featuredImage.mediaDetails.width
 
             return (
-              <div>
+              <div className={classes.container}>
                 <h1>{faculty.displayNameField.value}</h1>
-                <img
-                  srcSet={`${thumbnail}  ${thumbnailW}w,
+                <Grid style={styles.listGridContainer} container spacing={24}>
+                  <Grid style={styles.listGridItem} item xs={12} sm={6}>
+                    <img
+                      srcSet={`${thumbnail}  ${thumbnailW}w,
                         ${medium}  ${mediumW}w,
                         ${faculty.featuredImage.sourceUrl} ${imageW}w`}
-                  sizes={`(max-width: 320px) 280px,
+                      sizes={`(max-width: 320px) 280px,
                         (max-width: 480px) 440px,
                         800px`}
-                  src={faculty.featuredImage.sourceUrl}
-                  alt="Elva dressed as a fairy"
-                />
-                <span>
-                  {faculty.jobTitleField && faculty.jobTitleField.value}
-                </span>
-                <span>{faculty.emailField && faculty.emailField.value}</span>
-                <span>{faculty.phoneField && faculty.phoneField.value}</span>
+                      src={faculty.featuredImage.sourceUrl}
+                      alt="Elva dressed as a fairy"
+                    />
+                  </Grid>
+                  <Grid style={styles.listGridItem} item xs={12} sm={6}>
+                    {faculty.jobTitleField.value && (
+                      <span className={classes.infoRow}>
+                        {faculty.jobTitleField.value}
+                      </span>
+                    )}
+
+                    {faculty.emailField.value && (
+                      <span className={classes.infoRow}>
+                        {faculty.emailField.value}
+                      </span>
+                    )}
+                    {faculty.phoneField.value && (
+                      <span className={classes.infoRow}>
+                        {faculty.phoneField.value}
+                      </span>
+                    )}
+                  </Grid>
+                </Grid>
                 <div
-                  data-testid="content"
                   dangerouslySetInnerHTML={{
                     __html: content
                   }}
@@ -91,5 +110,19 @@ class Faculty extends Component {
     )
   }
 }
+const styles = theme => ({
+  container: {
+    maxWidth: '90%',
+    margin: '0 auto',
+    [theme.breakpoints.up('sm')]: {
+      maxWidth: '70%'
+    }
+  },
+  infoRow: {
+    display: 'block',
+    fontSize: '20px',
+    marginBottom: '8px'
+  }
+})
 
-export default compose(withRoot, withData)(Faculty)
+export default compose(withRoot, withData)(withStyles(styles)(Faculty))

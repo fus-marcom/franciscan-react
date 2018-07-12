@@ -11,6 +11,14 @@ h6 {
   font-weight: 400;
 }
 
+h3 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
 p,
 ul {
   font-size: 18px;
@@ -23,13 +31,7 @@ img {
   height: auto !important;
 }
 
-div[data-testid='content'] {
-  max-width: 90%;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 600px) {
-  div[data-testid='content'] {
-    max-width: 70%;
-  }
+a {
+  text-decoration: none;
+  color: hsla(47, 39%, 34%, 1);
 }
