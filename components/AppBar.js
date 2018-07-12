@@ -60,7 +60,7 @@ const styles = theme => ({
   searchSVG: {
     cursor: 'pointer',
     fill: `${theme.palette.primary[500]}`,
-    paddingBottom: '8px'
+    paddingBottom: '6px'
   },
   invertedBtn: {
     color: '#21412a',
@@ -102,11 +102,13 @@ const styles = theme => ({
   },
   searchOpen: {
     transition: 'all .5s',
-    width: '128px'
+    width: '128px',
+    marginBottom: '6px'
   },
   searchClosed: {
     transition: 'all .5s',
-    width: '0px'
+    width: '0px',
+    marginBottom: '6px'
   },
   searchInput: {
     '&:after': {
