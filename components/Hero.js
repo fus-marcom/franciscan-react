@@ -59,7 +59,7 @@ class Hero extends Component {
       <Typography
         className={classes.white}
         variant="subheading"
-        style={{ fontWeight: 500, fontSize: '22px' }}
+        style={{ fontWeight: 500, fontSize: '22px', marginBottom: '1.35em' }}
         gutterBottom
       >
         {subtitleText}
