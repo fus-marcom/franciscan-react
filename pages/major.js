@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 import { PageQuery } from '../lib/queries/page'
 import withData from '../lib/withData'
+import SampleSchedule from '../components/SampleSchedule'
 
 const styles = {
   root: {
@@ -19,6 +20,7 @@ class Major extends Component {
   static async getInitialProps ({ query: { id, type } }) {
     return { id, type }
   }
+
   render () {
     return (
       <Layout>
@@ -44,26 +46,21 @@ class Major extends Component {
               .replace(/<Title>/g, '<h2 class="title">')
               .replace(/<\/Title>/g, '</h2>')
               .replace(/src="\//g, 'src="https://www.franciscan.edu/')
-            global.x = content
 
             return (
-              <div
-                className={this.props.classes.root}
-                data-testid="content"
-                dangerouslySetInnerHTML={{
-                  __html: content
-                }}
-              />
+              <div>
+                <div
+                  className={this.props.classes.root}
+                  data-testid="content"
+                  dangerouslySetInnerHTML={{
+                    __html: content
+                  }}
+                />
+                <SampleSchedule />
+              </div>
             )
           }}
         </Query>
-        {/* <Link
-          prefetch
-          as={`/${this.props.id}/classes`}
-          href={`/major?type=majors&id=${this.props.id}-classes`}
-        >
-          Course Descriptions
-        </Link> */}
       </Layout>
     )
   }

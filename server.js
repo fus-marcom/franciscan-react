@@ -685,6 +685,11 @@ const translationObj = {
     page: '/page',
     type: 'sfsPages',
     id: { default: 'military-benefits' }
+  },
+  'information-technology': {
+    page: '/page',
+    type: 'itsPages',
+    id: { default: 'information-technology' }
   }
 
   // 'missionary-outreach': {

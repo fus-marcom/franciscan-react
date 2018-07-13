@@ -2,6 +2,23 @@ main {
   font-family: Roboto, sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
 p,
 ul {
   font-size: 18px;
@@ -12,71 +29,10 @@ ul {
 img {
   max-width: 100%;
   height: auto !important;
+  max-height: 300px;
 }
 
-detailviewimage {
-  display: block;
-}
-
-div[data-testid='content'] {
-  max-width: 90%;
-  margin: 0 auto;
-}
-
-@media screen and (min-width: 600px) {
-  div[data-testid='content'] {
-    max-width: 70%;
-  }
-}
-
-name {
-  font-size: 30px;
-  margin-bottom: 8px;
-}
-
-phone {
-  margin-top: 8px;
-}
-
-centercolumndetails {
-  margin-top: 24px;
-  margin-bottom: -8px;
-}
-
-rightcolumndetails {
-  margin-top: 24px;
-}
-
-heading {
-  font-size: 22px;
-  font-weight: 400;
-}
-
-li h6 {
-  font-size: 20px;
-  font-weight: 400;
-  margin-top: 24px;
-  margin-bottom: -12px;
-}
-
-listviewimage,
-detailstype,
-rightcolumnblogs,
-br {
-  display: none;
-}
-
-name,
-phone,
-email,
-cvlink,
-videoembed,
-centercolumndetails,
-rightcolumndetails {
-  display: block;
-}
-
-cvlink a {
+a {
   text-decoration: none;
   color: hsla(47, 39%, 34%, 1);
 }
