@@ -1,12 +1,12 @@
+import Grid from '@material-ui/core/Grid'
+import { withStyles } from '@material-ui/core/styles'
 import Head from 'next/head'
 import React, { Component } from 'react'
-import { withStyles } from '@material-ui/core/styles'
-import { Query, compose } from 'react-apollo'
+import { compose, Query } from 'react-apollo'
 import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 import { ProfileQuery } from '../lib/queries/profile'
 import withData from '../lib/withData'
-import Grid from '@material-ui/core/Grid'
 
 class Faculty extends Component {
   static async getInitialProps ({ query: { id, type } }) {
@@ -32,7 +32,7 @@ class Faculty extends Component {
             if (result.loading) {
               return <h1>Loading</h1>
             }
-            if (result.error) return <h3>{result.error}</h3>
+            if (result.error) return <h3>{JSON.stringify(result.error)}</h3>
 
             const imgRegex = /(<img.src=")(.+)(")(.+)(\/>)/gi
 
