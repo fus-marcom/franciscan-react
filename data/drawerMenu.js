@@ -241,83 +241,77 @@ export const academicsMenu = [
   {
     text: 'Academic Affairs',
     linkUrl: '/academic-affairs/leadership',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic',
+    asUrl: '/faculty-list?id=academic-leadership',
     subMenu: [
       {
         text: 'The Oath of Fidelity',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/oath-of-fidelity',
+        asUrl: '/page?type=academicsPages&id=oath-of-fidelity'
       },
       {
         text: 'Student Complaint Resolution',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/student-complaint-resolution',
+        asUrl: '/page?type=academicsPages&id=student-complaint-resolution'
       }
     ]
   },
   {
     text: 'Austrian Semester',
     linkUrl: '/austria',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic',
+    asUrl: '/page?type=austriaPages&id=austria',
     subMenu: [
       {
         text: 'Travel',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/austria/travel',
+        asUrl: '/page?type=austriaPages&id=travel'
       },
       {
         text: 'Academics',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/austria/academics',
+        asUrl: '/page?type=austriaPages&id=academics'
       },
       {
         text: 'Student Life',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/austria/student-life',
+        asUrl: '/page?type=austriaPages&id=student-life'
       },
       {
         text: 'Excursions',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/austria/excursions',
+        asUrl: '/page?type=austriaPages&id=excursions'
       }
     ]
   },
   {
     text: 'Registration',
-    linkUrl: '/austria',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic',
+    linkUrl: '/registrar/registration ',
+    asUrl: '/page?type=sfsPages&id=registration',
     subMenu: [
       {
         text: 'Registrar',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/registrar',
+        asUrl: '/page?type=sfsPages&id=registrar'
       },
       {
         text: 'Transcript Request',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/registrar/transcript',
+        asUrl: '/page?type=sfsPages&id=transcript'
       },
       {
         text: 'Commencement Information',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/commencement-information',
+        asUrl: '/page?type=academicsPages&id=commencement-information'
       }
     ]
   },
   {
     text: 'Library',
-    linkUrl: '/austria',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    linkUrl:
+      'http://libguides.franciscan.edu/friendly.php?action=82&s=Welcome_to_the_JPII_Library'
   },
   {
     text: 'Blackboard',
-    linkUrl: '/austria',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'Academic Events',
-    linkUrl: '/austria',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    linkUrl: 'https://franciscan.blackboard.com/webapps/portal/frameset.jsp'
   }
 ]
 
@@ -329,48 +323,48 @@ export const admissionsMenu = [
     subMenu: [
       {
         text: 'Baron Day',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/baronday',
+        asUrl: '/page?type=admissionsPages&id=baronday'
       },
       {
         text: 'The Franciscan Difference',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/admissions/franciscandifference',
+        asUrl: '/page?type=admissionsPages&id=franciscandifference'
       },
       {
         text: 'Franciscan By the Numbers',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/admissions/by-the-numbers',
+        asUrl: '/page?type=admissionsPages&id=by-the-numbers'
       },
       {
         text: 'Student Success Booklet',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/studentsuccess',
+        asUrl: '/page?type=admissionsPages&id=studentsuccess'
       },
       {
         text: 'General Requirements for Admission',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/admissions/undergraduate/requirements/',
+        asUrl: '/page?type=admissionsPages&id=requirements'
       },
       {
         text: 'Steps to Apply',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/admissions/undergraduate/steps-to-apply/',
+        asUrl: '/page?type=admissionsPages&id=steps-to-apply'
       },
       {
         text: 'Financial Aid & Services',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/admissions/accelerated-learning',
+        asUrl: '/page?type=admissionsPages&id=accelerated-learning'
       },
       {
         text: 'Video Gallery',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/admissions/accelerated-learning',
+        asUrl: '/page?type=admissionsPages&id=accelerated-learning'
       },
       {
         text: 'Admissions Staff',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/admissions/accelerated-learning',
+        asUrl: '/page?type=admissionsPages&id=accelerated-learning'
       }
     ]
   },

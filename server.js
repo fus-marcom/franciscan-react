@@ -23,6 +23,11 @@ const translationObj = {
     type: 'academicsPages',
     id: { default: 'oath-of-fidelity' }
   },
+  'student-complaint-resolution': {
+    page: '/page',
+    type: 'academicsPages',
+    id: { default: 'student-complaint-resolution' }
+  },
   search: { page: '/search' },
   'single-mission': { page: '/single-mission' },
   'missionary-outreach': {
@@ -103,6 +108,31 @@ const translationObj = {
     page: '/page',
     type: 'austriaPages',
     id: { default: 'austria', excursions: 'excursions' }
+  },
+  registrar: {
+    page: '/page',
+    type: 'sfsPages',
+    id: { default: 'registrar' }
+  },
+  'commencement-information': {
+    page: '/page',
+    type: 'academicsPages',
+    id: { default: 'commencement-information' }
+  },
+  'graduation-events': {
+    page: '/page',
+    type: 'academicsPages',
+    id: { default: 'graduation-events' }
+  },
+  'directions-and-attractions': {
+    page: '/page',
+    type: 'aboutPages',
+    id: { default: 'directions-and-attractions' }
+  },
+  accommodations: {
+    page: '/page',
+    type: 'aboutPages',
+    id: { default: 'accommodations' }
   },
   economics: {
     page: '/major',
@@ -580,6 +610,11 @@ const translationObj = {
     type: 'admissionsPages',
     id: { default: 'baron-day' }
   },
+  studentsuccess: {
+    page: '/page',
+    type: 'admissionsPages',
+    id: { default: 'studentsuccess' }
+  },
   academics: {
     page: '/page'
   },
@@ -598,11 +633,6 @@ const translationObj = {
     page: '/page',
     type: 'aboutPages',
     id: { default: 'consumer-information' }
-  },
-  accommodations: {
-    page: '/page',
-    type: 'aboutPages',
-    id: { default: 'accommodations' }
   },
   'strategic-planning': {
     page: '/page',
