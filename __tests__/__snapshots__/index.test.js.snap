@@ -71,7 +71,7 @@ exports[`<Index /> should render 1`] = `
       </h1>
       <h3
         class="MuiTypography-root-119 MuiTypography-subheading-126 MuiTypography-gutterBottom-136 Hero-white-146"
-        style="font-weight:500;font-size:22px"
+        style="font-weight:500;font-size:22px;margin-bottom:1.35em"
       >
         <span>
           Academically Excellent • Passionately Catholic
