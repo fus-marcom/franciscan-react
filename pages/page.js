@@ -40,7 +40,10 @@ class Page extends Component {
             const content = data[this.props.type].edges[0].node.content
               .replace(/<Title>/g, '<h2 class="title">')
               .replace(/<\/Title>/g, '</h2>')
-              .replace(/src="\//g, 'src="https://www.franciscan.edu/')
+              .replace(
+                /src="\//g,
+                'src="https://storage.googleapis.com/fus-wp-storage/'
+              )
 
             return (
               <div

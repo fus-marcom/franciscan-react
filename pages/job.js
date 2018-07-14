@@ -45,7 +45,7 @@ class Job extends Component {
               )
               .replace(
                 imgRegex,
-                '<img src="https://www.franciscan.edu/$2" $4 />'
+                '<img src="https://storage.googleapis.com/fus-wp-storage/$2" $4 />'
               )
 
             return (
