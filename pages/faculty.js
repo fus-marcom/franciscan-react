@@ -69,7 +69,7 @@ class Faculty extends Component {
                 .map(image => `${image.src} ${image.width}w`)
                 .join(',')
 
-            return faculty.map(({ node: facultyMember }, index) => (
+            return faculty.map(({ node: facultyMember }) => (
               <div className={classes.container} key={facultyMember.id}>
                 <h1>{facultyMember.displayNameField.value}</h1>
                 <Grid style={styles.listGridContainer} container spacing={24}>
