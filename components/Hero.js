@@ -46,7 +46,8 @@ class Hero extends Component {
       secondaryBtnText,
       secondaryBtnLink,
       tertiaryBtnText,
-      tertiaryBtnLink
+      tertiaryBtnLink,
+      minimumHeight
     } = this.props
 
     const Title = (
@@ -119,7 +120,8 @@ class Hero extends Component {
       <div
         className={classes.parallax}
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(${backgroundImg})`
+          backgroundImage: `linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(${backgroundImg})`,
+          minHeight: minimumHeight
         }}
       >
         {titleText && Title}
