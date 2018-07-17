@@ -353,10 +353,42 @@ const translationObj = {
   },
   cmhc: {
     page: { default: '/major', faculty: '/faculty-list' },
-    type: { default: 'majors', faculty: 'faculty' },
+    type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'cmhc',
       faculty: 'clinical-mental-health-counseling'
+    }
+  },
+  graduatephilosophy: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'graduatePrograms', faculty: 'faculty' },
+    id: {
+      default: 'graduate-philosophy',
+      faculty: 'graduate-philosophy'
+    }
+  },
+  'graduate-philosophy': {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'graduatePrograms', faculty: 'faculty' },
+    id: {
+      default: 'graduate-philosophy',
+      faculty: 'graduate-philosophy'
+    }
+  },
+  'graduate-education': {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'graduatePrograms', faculty: 'faculty' },
+    id: {
+      default: 'graduate-education',
+      faculty: 'graduate-education'
+    }
+  },
+  mba: {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'graduatePrograms', faculty: 'faculty' },
+    id: {
+      default: 'mba',
+      faculty: 'mba'
     }
   },
   mathematicalscience: {
