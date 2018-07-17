@@ -353,50 +353,50 @@ export const admissionsMenu = [
       },
       {
         text: 'Financial Aid & Services',
-        linkUrl: '/admissions/accelerated-learning',
-        asUrl: '/page?type=admissionsPages&id=accelerated-learning'
+        linkUrl: '/sfs/new/',
+        asUrl: '/page?type=sfsPages&id=new'
       },
       {
         text: 'Video Gallery',
-        linkUrl: '/admissions/accelerated-learning',
-        asUrl: '/page?type=admissionsPages&id=accelerated-learning'
+        linkUrl: '/admissions/videogallery',
+        asUrl: '/page?type=admissionsPages&id=videogallery'
       },
       {
         text: 'Admissions Staff',
-        linkUrl: '/admissions/accelerated-learning',
-        asUrl: '/page?type=admissionsPages&id=accelerated-learning'
+        linkUrl: '/admissions/admissions-staff',
+        asUrl: '/admissionsStaffList'
       }
     ]
   },
   {
     text: 'Graduate',
     linkUrl: '/admissions/graduate/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic',
+    asUrl: '/page?type=admissionsPages&id=graduate',
     subMenu: [
       {
         text: 'Clinical and Mental Health Counseling Program',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/cmhc',
+        asUrl: '/major?type=graduatePrograms&id=cmhc'
       },
       {
         text: 'MA Philosophy Program',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/graduatephilosophy',
+        asUrl: '/major?type=graduatePrograms&id=graduatephilosophy'
       },
       {
         text: 'MA Theology Program',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/ma-theology',
+        asUrl: '/major?type=graduatePrograms&id=ma-theology'
       },
       {
         text: 'MBA Program',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/mba',
+        asUrl: '/major?type=graduatePrograms&id=mba'
       },
       {
         text: 'MS Education & Educational Administration',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        linkUrl: '/graduate-education',
+        asUrl: '/major?type=graduatePrograms&id=graduate-education'
       }
     ]
   },
