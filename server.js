@@ -652,7 +652,7 @@ const translationObj = {
   'campus-security': { page: '/page', type: 'campusSecurity' },
   studentprofiles: { page: '/faculty', type: 'studentProfilePages' },
   admissions: {
-    page: { default: '/admissions', standard: '/page' },
+    page: { default: '/admissions', standard: '/page', thirdly: '/page' },
     type: 'admissionsPages',
     id: {
       default: 'admissions',
