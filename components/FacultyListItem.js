@@ -5,10 +5,16 @@ import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Link from 'next/link'
 import React, { Component, Fragment } from 'react'
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper'
 
 const styles = theme => ({
   card: {
-    width: '100%',
+    [theme.breakpoints.down('xl')]: {
+      maxWidth: '600px'
+    }
+  },
+  cardContent: {
     display: 'flex',
     justifyContent: 'space-between'
   },
@@ -33,8 +39,8 @@ class FacultyListItem extends Component {
     const { classes, profileName, profileLink, jobTitle, imageObj } = this.props
 
     return (
-      <div className={classes.card}>
-        <div className={classes.textContent}>
+      <Grid item xs={12} sm={9} md={6} lg={4} xl={3} className={classes.card}>
+        <Paper className={classes.cardContent}>
           <CardContent>
             <Typography
               variant="headline"
@@ -52,21 +58,21 @@ class FacultyListItem extends Component {
                 }}
               />
             )}
+            {profileLink && (
+              <CardActions>
+                <Fragment>
+                  <Link prefetch href={profileLink}>
+                    <Button size="small" color="primary">
+                      Learn More
+                    </Button>
+                  </Link>
+                </Fragment>
+              </CardActions>
+            )}
           </CardContent>
-          {profileLink && (
-            <CardActions>
-              <Fragment>
-                <Link prefetch href={profileLink}>
-                  <Button size="small" color="primary">
-                    Learn More
-                  </Button>
-                </Link>
-              </Fragment>
-            </CardActions>
-          )}
-        </div>
-        {imageObj && <img src={imageObj.sourceUrl} alt={imageObj.altText} />}
-      </div>
+          {imageObj && <img src={imageObj.sourceUrl} alt={imageObj.altText} />}
+        </Paper>
+      </Grid>
     )
   }
 }
