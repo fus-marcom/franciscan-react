@@ -687,11 +687,13 @@ const translationObj = {
     page: { default: '/admissions', standard: '/page', thirdly: '/page' },
     type: 'admissionsPages',
     id: {
-      default: 'admissions',
-      requirements: 'online-program-application-info',
-      'costs-financial-aid': 'costs-financial-aid',
-      'the-franciscan-difference': 'the-franciscan-difference'
+      default: 'admissions'
     }
+  },
+  'savings-for-local-graduates': {
+    page: '/page',
+    type: 'admissionsPages',
+    id: { default: 'savings-for-local-graduates' }
   },
   fasttrack: {
     page: '/page',
@@ -706,12 +708,12 @@ const translationObj = {
   sfs: {
     page: '/page',
     type: 'sfsPages',
-    id: { default: 'main' }
+    id: { default: 'sfs' }
   },
   sass: {
     page: '/page',
     type: 'sassPages',
-    id: { default: 'main' }
+    id: { default: 'sass' }
   },
   'core-curriculum': {
     page: '/page',
@@ -737,6 +739,11 @@ const translationObj = {
     page: '/page',
     type: 'academicsPages',
     id: { default: 'academic-orgs' }
+  },
+  fupress: {
+    page: '/page',
+    type: 'pressPages',
+    id: { default: 'fupress' }
   },
   pdp: {
     page: '/page',
@@ -931,7 +938,7 @@ app.prepare().then(() => {
                 // Use thirdly value as id
                 id = translationObj[firstParam].id.thirdly
               } else {
-                // If no thirdly, then use second param as id
+                // If no thirdly, then use third param as id
                 id = thirdParam
               }
               // If no id array exists, use the id string as the id

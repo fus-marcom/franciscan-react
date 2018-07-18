@@ -1,129 +1,53 @@
 export const aboutMenu = [
   {
-    text: 'Academically Excellent',
-    linkUrl: '/about/academically-excellent',
-    asUrl: '/page?type=aboutPages&id=academically-excellent'
-  },
-  {
-    text: 'Passionately Catholic',
-    linkUrl: '/about/passionately-catholic',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'At A Glance',
-    linkUrl: '/about/at-a-glance',
-    asUrl: '/page?type=aboutPages&id=at-a-glance'
-  },
-  {
-    text: 'Employment & HR',
-    linkUrl: '/hr',
-    asUrl: '/page?type=humanResources&id=employment-and-human-resources',
-    subMenu: [
-      {
-        text: 'Faculty Openings',
-        linkUrl: '/hr/faculty-openings',
-        asUrl: '/page?type=humanResources&id=faculty-openings'
-      },
-      {
-        text: 'Staff Openings',
-        linkUrl: '/hr/staff-openings',
-        asUrl: '/page?type=humanResources&id=staff-openings'
-      },
-      {
-        text: 'A Community Like No Other',
-        linkUrl: '/hr/community',
-        asUrl: '/page?type=humanResources&id=community'
-      },
-      {
-        text: 'Why I Chose Franciscan',
-        linkUrl: '/hr/profiles',
-        asUrl: '/page?type=humanResources&id=profiles'
-      },
-      {
-        text: 'A Strategic Approach',
-        linkUrl: '/hr/strategic-approach',
-        asUrl: '/page?type=humanResources&id=strategic-approach'
-      },
-      {
-        text: 'Benefits At A Glance',
-        linkUrl:
-          'https://www.franciscan.edu/WorkArea/DownloadAsset.aspx?id=5228'
-      },
-      {
-        text: 'Equal Employment Opportunity',
-        linkUrl: '/hr/eeo',
-        asUrl: '/page?type=humanResources&id=eeo'
-      },
-      {
-        text: 'Policy on Discrimination, Harassment and Sexual Misconduct',
-        linkUrl:
-          '/campus-security/policy-against-harassment-assault-violence-stalking/',
-        asUrl:
-          '/page?type=campusSecurity&id=policy-against-harassment-assault-violence-stalking'
-      },
-      {
-        text: 'Policies and Forms',
-        linkUrl: '/hr/policies-forms',
-        asUrl: '/page?type=humanResources&id=policies-forms'
-      }
-    ]
-  },
-  {
-    text: 'Consumer Information',
-    linkUrl: '/consumer-information',
-    asUrl: '/page?type=aboutPages&id=consumer-information'
-  },
-  {
-    text: 'Directions and Attractions',
-    linkUrl: '/about/directions-and-attractions',
-    asUrl: '/page?type=aboutPages&id=directions-and-attractions',
-    subMenu: [
-      {
-        text: 'Accommodations',
-        linkUrl: '/accommodations',
-        asUrl: '/page?type=aboutPages&id=accommodations'
-      },
-      {
-        text: 'The Inn at Franciscan Square',
-        linkUrl: 'https://franciscansquare.com/hotel'
-      },
-      {
-        text: 'Map',
-        linkUrl:
-          'https://www.google.com/maps/d/viewer?mid=1VcE-IIqOQ8VTZPoYjt39avuUGKE'
-      }
-    ]
-  },
-
-  {
-    text: 'Our Vision & Charisms',
-    linkUrl: '/about/vision-charisms',
-    asUrl: '/page?type=aboutPages&id=vision-charisms'
-  },
-  {
-    text: 'Our Mission Statement',
+    text: 'Mission Statement',
     linkUrl: '/about/mission-statement',
-    asUrl: '/page?type=aboutPages&id=mission-statement'
-  },
-  {
-    text: 'Strategic Planning',
-    linkUrl: '/strategic-planning',
-    asUrl: '/page?type=aboutPages&id=strategic-planning'
-  },
-  {
-    text: 'Franciscans TOR',
-    linkUrl: '/chapel/franciscans-tor',
-    asUrl: '/page?type=chapelPages&id=franciscans-tor'
+    asUrl: '/page?type=aboutPages&id=mission-statement',
+    subMenu: [
+      {
+        text: 'Vision & Charisms',
+        linkUrl: '/about/vision-charisms',
+        asUrl: '/page?type=aboutPages&id=vision-charisms'
+      },
+      {
+        text: 'Strategic Planning',
+        linkUrl: '/strategic-planning',
+        asUrl: '/page?type=aboutPages&id=strategic-planning'
+      }
+    ]
   },
   {
     text: 'Our History',
     linkUrl: '/about/history',
-    asUrl: '/page?type=aboutPages&id=history'
+    asUrl: '/page?type=aboutPages&id=history',
+    subMenu: [
+      {
+        text: 'Franciscans TOR',
+        linkUrl: '/chapel/franciscans-tor',
+        asUrl: '/page?type=chapelPages&id=franciscans-tor'
+      }
+    ]
   },
   {
-    text: 'Fact Book',
-    linkUrl: '/fact-book',
-    asUrl: '/page?type=aboutPages&id=fact-book'
+    text: 'Employment & HR',
+    linkUrl: '/hr',
+    asUrl: '/page?type=humanResources&id=employment-and-human-resources'
+  },
+  {
+    text: 'Consumer Information',
+    linkUrl: '/consumer-information',
+    asUrl: '/page?type=aboutPages&id=consumer-information',
+    subMenu: [
+      {
+        text: 'Fact Book',
+        linkUrl: '/fact-book',
+        asUrl: '/page?type=aboutPages&id=fact-book'
+      }
+    ]
+  },
+  {
+    text: 'Support Franciscan',
+    linkUrl: 'http://giving.franciscan.edu/'
   }
 ]
 
@@ -134,61 +58,46 @@ export const academicsMenu = [
     asUrl: '/page?type=academicsPages&id=majors',
     subMenu: [
       {
-        text: 'Accelerated Learning',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
+        text: 'Majors & Programs',
+        linkUrl: '/academics/ug/majors',
+        asUrl: '/page?type=academicsPages&id=majors'
       },
       {
-        text: 'Exploring Majors',
-        linkUrl: '/academics/exploring-majors',
-        asUrl: '/page?type=academicsPages&id=exploring-majors'
+        text: 'Core Curriculum',
+        linkUrl: '/core-curriculum',
+        asUrl: '/page?type=academicsPages&id=core-curriculum'
       },
       {
-        text: 'Associate Degree Programs',
-        linkUrl: '/academics/ug/associate',
-        asUrl: '/page?type=academicsPages&id=associate'
-      },
-      {
-        text: 'Minor Programs',
-        linkUrl: '/academics/ug/minors',
-        asUrl: '/page?type=academicsPages&id=minors'
-      },
-      {
-        text: 'Academic Advising',
-        linkUrl: '/hr',
-        asUrl: '/page?type=academicsPages&id=employment-and-human-resources'
-      },
-      {
-        text: 'Student Academic Support Services',
-        linkUrl: '/sass',
-        asUrl: '/page?type=sassPages&id=main'
-      },
-      {
-        text: 'Writing Center',
-        linkUrl: '/writing-center',
-        asUrl: '/page?type=academicsPages&id=writing-center'
-      },
-      {
-        text: 'Priestly Discernment Program',
-        linkUrl: '/pdp',
-        asUrl: '/page?type=pdpPages&id=priestly-discernment-program'
-      },
-      {
-        text: 'ROTC Program',
-        linkUrl: '/rotc',
-        asUrl: '/page?type=academicsPages&id=rotc'
-      },
-      {
-        text: 'Student Handbook',
+        text: 'Academic Clubs',
         linkUrl:
-          'http://franciscan.smartcatalogiq.com/en/2016-2017/Student-Handbook'
+          'http://franciscan.smartcatalogiq.com/en/2016-2017/Undergraduate-Catalog/Academic-Organizations'
+      },
+      {
+        text: 'Undergraduate Catalog',
+        linkUrl:
+          'http://franciscan.smartcatalogiq.com/current/Undergraduate-Catalog',
+        asUrl:
+          'http://franciscan.smartcatalogiq.com/current/Undergraduate-Catalog'
       }
     ]
   },
   {
     text: 'Graduate',
     linkUrl: '/academics/graduate-programs',
-    asUrl: '/page?type=academicsPages&id=graduate-programs'
+    asUrl: '/page?type=academicsPages&id=graduate-programs',
+    subMenu: [
+      {
+        text: 'Programs',
+        linkUrl: '/academics/graduate-programs',
+        asUrl: '/page?type=academicsPages&id=graduate-programs'
+      },
+      {
+        text: 'Graduate Catalog',
+        linkUrl:
+          'http://franciscan.smartcatalogiq.com/current/Graduate-Catalog',
+        asUrl: 'http://franciscan.smartcatalogiq.com/current/Graduate-Catalog'
+      }
+    ]
   },
   {
     text: 'Online',
@@ -196,47 +105,15 @@ export const academicsMenu = [
     asUrl: '/page?type=admissionsPages&id=online',
     subMenu: [
       {
-        text: 'Online Enrollment Requirements',
-        linkUrl: '/admissions/online/requirements',
-        asUrl: '/page?type=admissionsPages&id=online-program-application-info'
+        text: 'Programs',
+        linkUrl: '/admissions/online',
+        asUrl: '/page?type=admissionsPages&id=online'
       },
       {
-        text: 'Costs and Financial Aid Information',
-        linkUrl: '/admissions/online/costs-financial-aid',
-        asUrl: '/page?type=admissionsPages&id=costs-financial-aid'
-      },
-      {
-        text: 'The Franciscan Difference',
-        linkUrl: '/admissions/online/the-franciscan-difference',
-        asUrl: '/page?type=admissionsPages&id=the-franciscan-difference'
+        text: 'Catalogs',
+        linkUrl: 'http://franciscan.smartcatalogiq.com/'
       }
     ]
-  },
-  {
-    text: 'Undergraduate Catalog',
-    linkUrl:
-      'http://franciscan.smartcatalogiq.com/current/Undergraduate-Catalog',
-    asUrl: 'http://franciscan.smartcatalogiq.com/current/Undergraduate-Catalog'
-  },
-  {
-    text: 'Graduate Catalog',
-    linkUrl: 'http://franciscan.smartcatalogiq.com/current/Graduate-Catalog',
-    asUrl: 'http://franciscan.smartcatalogiq.com/current/Graduate-Catalog'
-  },
-  {
-    text: 'Our Core Curriculum',
-    linkUrl: '/core-curriculum',
-    asUrl: '/page?type=academicsPages&id=core-curriculum'
-  },
-  {
-    text: 'Institutes & Centers',
-    linkUrl: '/institutes-centers',
-    asUrl: '/page?type=institutes&id=institutes-centers'
-  },
-  {
-    text: 'Academic Departments',
-    linkUrl: '/departments',
-    asUrl: '/page?type=departments&id=departments'
   },
   {
     text: 'Academic Affairs',
@@ -244,74 +121,48 @@ export const academicsMenu = [
     asUrl: '/faculty-list?id=academic-leadership',
     subMenu: [
       {
-        text: 'The Oath of Fidelity',
-        linkUrl: '/oath-of-fidelity',
-        asUrl: '/page?type=academicsPages&id=oath-of-fidelity'
+        text: 'Academic Support',
+        linkUrl: '/sass',
+        asUrl: '/page?type=sassPages&id=sass'
       },
       {
-        text: 'Student Complaint Resolution',
-        linkUrl: '/student-complaint-resolution',
-        asUrl: '/page?type=academicsPages&id=student-complaint-resolution'
-      }
-    ]
-  },
-  {
-    text: 'Austrian Semester',
-    linkUrl: '/austria',
-    asUrl: '/page?type=austriaPages&id=austria',
-    subMenu: [
-      {
-        text: 'Travel',
-        linkUrl: '/austria/travel',
-        asUrl: '/page?type=austriaPages&id=travel'
+        text: 'Advising',
+        linkUrl: '/academic-advising',
+        asUrl: '/page?type=academicsPages&id=academic-advising'
       },
-      {
-        text: 'Academics',
-        linkUrl: '/austria/academics',
-        asUrl: '/page?type=austriaPages&id=academics'
-      },
-      {
-        text: 'Student Life',
-        linkUrl: '/austria/student-life',
-        asUrl: '/page?type=austriaPages&id=student-life'
-      },
-      {
-        text: 'Excursions',
-        linkUrl: '/austria/excursions',
-        asUrl: '/page?type=austriaPages&id=excursions'
-      }
-    ]
-  },
-  {
-    text: 'Registration',
-    linkUrl: '/registrar/registration ',
-    asUrl: '/page?type=sfsPages&id=registration',
-    subMenu: [
       {
         text: 'Registrar',
         linkUrl: '/registrar',
         asUrl: '/page?type=sfsPages&id=registrar'
       },
       {
-        text: 'Transcript Request',
-        linkUrl: '/registrar/transcript',
-        asUrl: '/page?type=sfsPages&id=transcript'
-      },
-      {
-        text: 'Commencement Information',
-        linkUrl: '/commencement-information',
-        asUrl: '/page?type=academicsPages&id=commencement-information'
+        text: 'St. John Paul II Library',
+        linkUrl:
+          'http://libguides.franciscan.edu/friendly.php?action=82&s=Welcome_to_the_JPII_Library'
       }
     ]
   },
   {
-    text: 'Library',
-    linkUrl:
-      'http://libguides.franciscan.edu/friendly.php?action=82&s=Welcome_to_the_JPII_Library'
+    text: 'Departments',
+    linkUrl: '/departments',
+    asUrl: '/page?type=departments&id=departments',
+    subMenu: [
+      {
+        text: 'Institutes & Centers',
+        linkUrl: '/institutes-centers',
+        asUrl: '/page?type=institutes&id=institutes-centers'
+      },
+      {
+        text: 'Franciscan University Press',
+        linkUrl: '/fupress',
+        asUrl: '/page?type=pressPages&id=fupress'
+      }
+    ]
   },
   {
-    text: 'Blackboard',
-    linkUrl: 'https://franciscan.blackboard.com/webapps/portal/frameset.jsp'
+    text: 'Austrian Semester',
+    linkUrl: '/austria',
+    asUrl: '/page?type=austriaPages&id=austria'
   }
 ]
 
@@ -322,49 +173,39 @@ export const admissionsMenu = [
     asUrl: '/page?type=admissionsPages&id=undergraduate',
     subMenu: [
       {
-        text: 'Baron Day',
-        linkUrl: '/baronday',
-        asUrl: '/page?type=admissionsPages&id=baronday'
-      },
-      {
-        text: 'The Franciscan Difference',
-        linkUrl: '/admissions/franciscandifference',
-        asUrl: '/page?type=admissionsPages&id=franciscandifference'
-      },
-      {
-        text: 'Franciscan By the Numbers',
-        linkUrl: '/admissions/by-the-numbers',
-        asUrl: '/page?type=admissionsPages&id=by-the-numbers'
-      },
-      {
-        text: 'Student Success Booklet',
-        linkUrl: '/studentsuccess',
-        asUrl: '/page?type=admissionsPages&id=studentsuccess'
-      },
-      {
-        text: 'General Requirements for Admission',
+        text: 'General Requirements',
         linkUrl: '/admissions/undergraduate/requirements/',
         asUrl: '/page?type=admissionsPages&id=requirements'
       },
       {
-        text: 'Steps to Apply',
-        linkUrl: '/admissions/undergraduate/steps-to-apply/',
-        asUrl: '/page?type=admissionsPages&id=steps-to-apply'
+        text: 'Transfer Students',
+        linkUrl: '/admissions/undergraduate/transfer-requirements/',
+        asUrl: '/page?type=admissionsPages&id=transfer-requirements'
       },
       {
-        text: 'Financial Aid & Services',
+        text: 'Local High School',
+        linkUrl: '/savings-for-local-graduates',
+        asUrl: '/page?type=admissionsPages&id=savings-for-local-graduates'
+      },
+      {
+        text: 'Homeschool',
+        linkUrl: '/admissions/undergraduate/requirements/',
+        asUrl: '/page?type=admissionsPages&id=requirements'
+      },
+      {
+        text: 'International',
+        linkUrl: '/admissions/undergraduate/international-requirements/',
+        asUrl: '/page?type=admissionsPages&id=international-requirements'
+      },
+      {
+        text: 'Costs and Fees',
+        linkUrl: '/sfs/new/costs-and-fees',
+        asUrl: '/page?type=sfsPages&id=costs-and-fees'
+      },
+      {
+        text: 'Financial Aid',
         linkUrl: '/sfs/new/',
         asUrl: '/page?type=sfsPages&id=new'
-      },
-      {
-        text: 'Video Gallery',
-        linkUrl: '/admissions/videogallery',
-        asUrl: '/page?type=admissionsPages&id=videogallery'
-      },
-      {
-        text: 'Admissions Staff',
-        linkUrl: '/admissions/admissions-staff',
-        asUrl: '/admissionsStaffList'
       }
     ]
   },
@@ -374,168 +215,52 @@ export const admissionsMenu = [
     asUrl: '/page?type=admissionsPages&id=graduate',
     subMenu: [
       {
-        text: 'Clinical and Mental Health Counseling Program',
+        text: 'Meet the Staff',
         linkUrl: '/cmhc',
         asUrl: '/major?type=graduatePrograms&id=cmhc'
       },
       {
-        text: 'MA Philosophy Program',
+        text: 'Requirements',
         linkUrl: '/graduatephilosophy',
         asUrl: '/major?type=graduatePrograms&id=graduatephilosophy'
       },
       {
-        text: 'MA Theology Program',
+        text: 'Costs',
         linkUrl: '/ma-theology',
         asUrl: '/major?type=graduatePrograms&id=ma-theology'
-      },
-      {
-        text: 'MBA Program',
-        linkUrl: '/mba',
-        asUrl: '/major?type=graduatePrograms&id=mba'
-      },
-      {
-        text: 'MS Education & Educational Administration',
-        linkUrl: '/graduate-education',
-        asUrl: '/major?type=graduatePrograms&id=graduate-education'
       }
     ]
   },
   {
-    text: 'Online',
-    linkUrl: '/admissions/online',
-    asUrl: '/page?type=admissionsPages&id=online',
-    subMenu: [
-      {
-        text: 'Online Enrollment Requirements',
-        linkUrl: '/admissions/online/requirements',
-        asUrl: '/page?type=admissionsPages&id=online-program-application-info'
-      },
-      {
-        text: 'Costs and Financial Aid Information',
-        linkUrl: '/admissions/online/costs-financial-aid',
-        asUrl: '/page?type=admissionsPages&id=costs-financial-aid'
-      },
-      {
-        text: 'The Franciscan Difference',
-        linkUrl: '/admissions/online/the-franciscan-difference',
-        asUrl: '/page?type=admissionsPages&id=the-franciscan-difference'
-      }
-    ]
+    text: 'Military Benefits',
+    linkUrl: '/sfs/accelerated-learning',
+    asUrl: '/page?type=sfsPages&id=accelerated-learning'
   },
   {
-    text: 'Local High School Students',
-    linkUrl: '/savings-for-local-graduates',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    text: 'Apply Today',
+    linkUrl: 'https://franciscanuniversity.force.com/portal'
   },
   {
-    text: 'Transfer Students',
-    linkUrl: '/admissions/undergraduate/requirements/transfer/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    text: 'Request Information',
+    linkUrl: 'https://franciscan.secure.force.com/form?formid=217772'
   },
   {
-    text: 'International Students',
-    linkUrl: '/admissions/undergraduate/requirements/international/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'Homeschool',
-    linkUrl: '/admissions/undergraduate/requirements/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'General Requirements',
-    linkUrl: '/admissions/undergraduate/requirements/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'New Student Financial Aid',
-    linkUrl: '/sfs/new/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic',
-    subMenu: [
-      {
-        text: 'How to Apply for Aid',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
-      },
-      {
-        text: 'Costs and Fees',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
-      },
-      {
-        text: 'Scholarships',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
-      },
-      {
-        text: 'Grants',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
-      },
-      {
-        text: 'Loans',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
-      },
-      {
-        text: 'Military Benefits Information',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
-      },
-      {
-        text: 'Other Aid',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
-      },
-      {
-        text: 'Payment Options',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
-      },
-      {
-        text: 'Verification',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
-      },
-      {
-        text: 'SWOP',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
-      },
-      {
-        text: 'Financial Aid Policies and Procedures',
-        linkUrl: '/academics/accelerated-learning',
-        asUrl: '/page?type=academicsPages&id=accelerated-learning'
-      }
-    ]
-  },
-  {
-    text: 'Military Benefits Information',
-    linkUrl: '/military-benefits/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'Apply',
-    linkUrl: '/military-benefits/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'Request Info',
-    linkUrl: '/military-benefits/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'Visit',
-    linkUrl: '/military-benefits/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    text: 'Visit Campus',
+    linkUrl: 'https://franciscan.secure.force.com/events'
   }
 ]
 
 export const faithMenu = [
   {
-    text: 'Pilgrimages',
-    linkUrl: '/pilgrimages/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    text: 'Christ the King Chapel',
+    linkUrl: '/chapel',
+    asUrl: '/page?type=chapelPages&id=chapel'
+  },
+  {
+    text: 'Campus Evangelization',
+    linkUrl: '/chapel/evangelization',
+    asUrl: '/page?type=chapelPages&id=evangelization',
+    subMenu: []
   },
   {
     text: 'Missionary Outreach',
@@ -657,38 +382,6 @@ export const faithMenu = [
       },
       {
         text: 'MA Philosophy Program in Bioethics',
-        linkUrl: '/chapel/staff',
-        asUrl: '/page?type=chapelPages&id=staff'
-      }
-    ]
-  },
-  {
-    text: 'Franciscan University Press',
-    linkUrl: '/fupress',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic',
-    subMenu: [
-      {
-        text: 'Press Structure',
-        linkUrl: '/chapel/schedule',
-        asUrl: '/page?type=chapelPages&id=schedule'
-      },
-      {
-        text: 'Publications',
-        linkUrl: '/chapel/policy-external-clerics',
-        asUrl: '/page?type=chapelPages&id=policy-external-clerics'
-      },
-      {
-        text: 'Regular Series',
-        linkUrl: '/chapel/sacraments',
-        asUrl: '/page?type=chapelPages&id=sacraments'
-      },
-      {
-        text: 'Poetry Book Prize',
-        linkUrl: '/chapel/staff',
-        asUrl: '/page?type=chapelPages&id=staff'
-      },
-      {
-        text: 'Information for Authors and Reviewers',
         linkUrl: '/chapel/staff',
         asUrl: '/page?type=chapelPages&id=staff'
       }
