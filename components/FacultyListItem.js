@@ -4,7 +4,7 @@ import CardContent from '@material-ui/core/CardContent'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Link from 'next/link'
-import React, { Component, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 
@@ -56,56 +56,54 @@ const styles = theme => ({
   }
 })
 
-class FacultyListItem extends Component {
-  render () {
-    const { classes, profileName, profileLink, jobTitle, imageObj } = this.props
-    const decodeHTML = str =>
-      str.replace(/&#(\d+);/g, (_, p1) => String.fromCharCode(p1))
+const FacultyListItem = props => {
+  const { classes, profileName, profileLink, jobTitle, imageObj } = props
+  const decodeHTML = str =>
+    str.replace(/&#(\d+);/g, (_, p1) => String.fromCharCode(p1))
 
-    return (
-      <Grid item xs={12} sm={9} md={6} lg={4} xl={3} className={classes.card}>
-        <Paper className={classes.cardContent}>
-          <CardContent
-            className={classes.textContent}
-            style={{ width: imageObj ? 'calc(50% - 24px)' : 'auto' }}
+  return (
+    <Grid item xs={12} sm={9} md={6} lg={4} xl={3} className={classes.card}>
+      <Paper className={classes.cardContent}>
+        <CardContent
+          className={classes.textContent}
+          style={{ width: imageObj ? 'calc(50% - 24px)' : 'auto' }}
+        >
+          <Typography
+            variant="headline"
+            component="h2"
+            className={classes.name}
           >
-            <Typography
-              variant="headline"
-              component="h2"
-              className={classes.name}
-            >
-              {decodeHTML(profileName)}
+            {decodeHTML(profileName)}
+          </Typography>
+          {jobTitle && (
+            <Typography component="span" className={classes.quote}>
+              {decodeHTML(jobTitle)}
             </Typography>
-            {jobTitle && (
-              <Typography component="span" className={classes.quote}>
-                {decodeHTML(jobTitle)}
-              </Typography>
-            )}
-            {profileLink && (
-              <CardActions className={classes.actions}>
-                <Fragment>
-                  <Link prefetch href={profileLink}>
-                    <Button size="small" color="primary">
-                      Learn More
-                    </Button>
-                  </Link>
-                </Fragment>
-              </CardActions>
-            )}
-          </CardContent>
-          {imageObj && (
-            <div className={classes.portraitWrapper}>
-              <img
-                src={imageObj.sourceUrl}
-                alt={imageObj.altText}
-                className={classes.portrait}
-              />
-            </div>
           )}
-        </Paper>
-      </Grid>
-    )
-  }
+          {profileLink && (
+            <CardActions className={classes.actions}>
+              <Fragment>
+                <Link prefetch href={profileLink}>
+                  <Button size="small" color="primary">
+                    Learn More
+                  </Button>
+                </Link>
+              </Fragment>
+            </CardActions>
+          )}
+        </CardContent>
+        {imageObj && (
+          <div className={classes.portraitWrapper}>
+            <img
+              src={imageObj.sourceUrl}
+              alt={imageObj.altText}
+              className={classes.portrait}
+            />
+          </div>
+        )}
+      </Paper>
+    </Grid>
+  )
 }
 
 export default withStyles(styles)(FacultyListItem)
