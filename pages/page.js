@@ -17,11 +17,6 @@ class Page extends Component {
         <Head>
           <link
             rel="stylesheet"
-            href="/static/styles/page.css"
-            type="text/css"
-          />
-          <link
-            rel="stylesheet"
             href="/static/styles/department.css"
             type="text/css"
           />
