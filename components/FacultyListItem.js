@@ -35,7 +35,9 @@ const styles = theme => ({
   portraitWrapper: {
     height: '100%',
     width: '50%',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    borderTopRightRadius: '4px',
+    borderBottomRightRadius: '4px'
   },
   portrait: {
     objectFit: 'cover',
