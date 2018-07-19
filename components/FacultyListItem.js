@@ -42,7 +42,7 @@ const styles = theme => ({
   },
   portrait: {
     objectFit: 'cover',
-    objectPosition: 'top',
+    objectPosition: '0px 22%',
     width: '100%',
     height: '100% !important'
   }
