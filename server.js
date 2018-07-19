@@ -650,6 +650,11 @@ const translationObj = {
   academics: {
     page: '/page'
   },
+  evangelization: {
+    page: '/page',
+    type: 'studentLifePages',
+    id: { default: 'evangelization' }
+  },
   hr: {
     page: {
       default: '/page',

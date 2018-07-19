@@ -258,132 +258,58 @@ export const faithMenu = [
   },
   {
     text: 'Campus Evangelization',
-    linkUrl: '/chapel/evangelization',
-    asUrl: '/page?type=chapelPages&id=evangelization',
-    subMenu: []
-  },
-  {
-    text: 'Missionary Outreach',
-    linkUrl: '/missionary-outreach/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic',
+    linkUrl: '/evangelization',
+    asUrl: '/page?type=studentLifePages&id=evangelization',
     subMenu: [
       {
-        text: 'Missions of Peace',
-        linkUrl: '/chapel/schedule',
-        asUrl: '/page?type=chapelPages&id=schedule'
-      },
-      {
-        text: 'SENT Ministries',
-        linkUrl: '/chapel/policy-external-clerics',
-        asUrl: '/page?type=chapelPages&id=policy-external-clerics'
+        text: 'Festivals of Praise',
+        linkUrl: 'http://photos.pass.us/fop/'
       }
     ]
   },
   {
-    text: 'Veritas Center',
-    linkUrl: '/veritas',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic',
+    text: 'Summer Conferences',
+    linkUrl: 'https://steubenvilleconferences.com/',
     subMenu: [
       {
-        text: 'Vision and Work',
-        linkUrl: '/chapel/schedule',
-        asUrl: '/page?type=chapelPages&id=schedule'
+        text: 'Youth Conferences',
+        linkUrl: 'https://steubenvilleconferences.com/youth/'
       },
       {
-        text: 'Leadership',
-        linkUrl: '/chapel/policy-external-clerics',
-        asUrl: '/page?type=chapelPages&id=policy-external-clerics'
-      },
-      {
-        text: 'Events',
-        linkUrl: '/chapel/sacraments',
-        asUrl: '/page?type=chapelPages&id=sacraments'
+        text: 'Adult Conferences',
+        linkUrl: 'https://steubenvilleconferences.com/adult/'
       }
     ]
   },
   {
-    text: 'Institute of Science and Health',
-    linkUrl: '/fish',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic',
-    subMenu: [
-      {
-        text: 'Summer Internship',
-        linkUrl: '/chapel/schedule',
-        asUrl: '/page?type=chapelPages&id=schedule'
-      },
-      {
-        text: 'Internship Application',
-        linkUrl: '/chapel/policy-external-clerics',
-        asUrl: '/page?type=chapelPages&id=policy-external-clerics'
-      },
-      {
-        text: 'Biology',
-        linkUrl: '/chapel/sacraments',
-        asUrl: '/page?type=chapelPages&id=sacraments'
-      },
-      {
-        text: 'Chemistry',
-        linkUrl: '/chapel/staff',
-        asUrl: '/page?type=chapelPages&id=staff'
-      },
-      {
-        text: 'Regenerative Medicine',
-        linkUrl: '/chapel/campus-faith-life',
-        asUrl: '/page?type=chapelPages&id=campus-faith-life'
-      },
-      {
-        text: 'Psychology',
-        linkUrl: '/chapel/portiuncula',
-        asUrl: '/page?type=chapelPages&id=portiuncula'
-      }
-    ]
+    text: 'Faith & Reason',
+    linkUrl: 'https://www.faithandreason.com/'
   },
   {
-    text: 'Institute for World Health',
-    linkUrl: '/fiwh',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic',
+    text: 'Off-Campus Evangelization',
+    linkUrl: '/evangelization/',
+    asUrl: '/page?type=studentLifePages&id=evangelization',
     subMenu: [
       {
-        text: 'FIWH Students',
-        linkUrl: '/chapel/schedule',
-        asUrl: '/page?type=chapelPages&id=schedule'
+        text: 'Missionary Outreach',
+        linkUrl: '/missionary-outreach/',
+        asUrl: '/page?type=missionsPages&id=missionary-outreach'
       },
       {
-        text: 'Summer Internship',
-        linkUrl: '/chapel/policy-external-clerics',
-        asUrl: '/page?type=chapelPages&id=policy-external-clerics'
+        text: 'Pilgrimages',
+        linkUrl: '/pilgrimages/',
+        asUrl: '/page?type=pilgrimagesPages&id=pilgrimages'
       },
       {
-        text: 'Internship Application',
-        linkUrl: '/chapel/sacraments',
-        asUrl: '/page?type=chapelPages&id=sacraments'
-      }
-    ]
-  },
-  {
-    text: 'Center for Bioethics',
-    linkUrl: '/center-for-bioethics/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic',
-    subMenu: [
-      {
-        text: 'About Dr. Patrick Lee',
-        linkUrl: '/chapel/schedule',
-        asUrl: '/page?type=chapelPages&id=schedule'
+        text: 'Franciscan Magazine',
+        linkUrl: '/franciscanmagazine/',
+        asUrl: '/page?type=aboutPages&id=passionately-catholic'
       },
       {
-        text: 'Past Bioethics Events',
-        linkUrl: '/chapel/policy-external-clerics',
-        asUrl: '/page?type=chapelPages&id=policy-external-clerics'
-      },
-      {
-        text: 'Bioethics Videos',
-        linkUrl: '/chapel/sacraments',
-        asUrl: '/page?type=chapelPages&id=sacraments'
-      },
-      {
-        text: 'MA Philosophy Program in Bioethics',
-        linkUrl: '/chapel/staff',
-        asUrl: '/page?type=chapelPages&id=staff'
+        text: 'Franciscan University Presents',
+        linkUrl:
+          'http://www.faithandreason.com/franciscan-university-presents/',
+        asUrl: '/page?type=aboutPages&id=passionately-catholic'
       }
     ]
   }
@@ -391,143 +317,93 @@ export const faithMenu = [
 
 export const studentMenu = [
   {
-    text: 'Student Life Home',
+    text: 'Households',
+    linkUrl: '/households/',
+    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+  },
+  {
+    text: 'Baron Athletics',
     linkUrl: '/studentlife',
     asUrl: '/page?type=studentLifePages&id=student-life'
   },
   {
-    text: 'Chapel Ministries',
-    linkUrl: '/chapel',
-    asUrl: '/page?type=chapelPages&id=chapel-ministries',
+    text: 'Austrian Semester',
+    linkUrl: '/austria',
+    asUrl: '/page?type=austriaPages&id=austria'
+  },
+  {
+    text: 'Campus Activities',
     subMenu: [
       {
-        text: 'Mass and Confession Schedule',
-        linkUrl: '/chapel/schedule',
-        asUrl: '/page?type=chapelPages&id=schedule'
+        text: 'Excite',
+        linkUrl: '/austria',
+        asUrl: '/page?type=austriaPages&id=austria'
       },
       {
-        text: 'Policy for External Clerics Seeking to Serve',
-        linkUrl: '/chapel/policy-external-clerics',
-        asUrl: '/page?type=chapelPages&id=policy-external-clerics'
+        text: 'Franciscan Homecoming',
+        linkUrl: '/austria',
+        asUrl: '/page?type=austriaPages&id=austria'
       },
       {
-        text: 'Sacraments and RCIA',
-        linkUrl: '/chapel/sacraments',
-        asUrl: '/page?type=chapelPages&id=sacraments'
+        text: 'Orientation',
+        linkUrl: '/austria',
+        asUrl: '/page?type=austriaPages&id=austria'
       },
       {
-        text: 'Chapel Ministries Staff',
-        linkUrl: '/chapel/staff',
-        asUrl: '/page?type=chapelPages&id=staff'
-      },
-      {
-        text: 'Campus Faith Life',
-        linkUrl: '/chapel/campus-faith-life',
-        asUrl: '/page?type=chapelPages&id=campus-faith-life'
-      },
-      {
-        text: 'Places to Pray',
-        linkUrl: '/chapel/places-to-pray',
-        asUrl: '/page?type=chapelPages&id=places-to-pray'
-      },
-      {
-        text: 'The Portiuncula',
-        linkUrl: '/chapel/portiuncula',
-        asUrl: '/page?type=chapelPages&id=portiuncula'
-      },
-      {
-        text: 'Franciscans TOR',
-        linkUrl: '/chapel/franciscans-tor',
-        asUrl: '/page?type=chapelPages&id=franciscans-tor'
-      },
-      {
-        text: 'Campus Evangelization',
-        linkUrl: '/chapel/evangelization',
-        asUrl: '/page?type=chapelPages&id=evangelization'
+        text: 'Student Clubs',
+        linkUrl: '/austria',
+        asUrl: '/page?type=austriaPages&id=austria'
       }
     ]
   },
   {
-    text: 'Households',
-    linkUrl: '/households/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic',
+    text: 'Campus Services',
     subMenu: [
       {
-        text: 'Household Awards',
-        linkUrl: '/chapel/schedule',
-        asUrl: '/page?type=chapelPages&id=schedule'
+        text: 'Dining Services',
+        linkUrl: '/austria',
+        asUrl: '/page?type=austriaPages&id=austria'
       },
       {
-        text: "Men's Households List",
-        linkUrl: '/chapel/policy-external-clerics',
-        asUrl: '/page?type=chapelPages&id=policy-external-clerics'
+        text: 'Wellness Center',
+        linkUrl: '/austria',
+        asUrl: '/page?type=austriaPages&id=austria'
       },
       {
-        text: "Women's Households List",
-        linkUrl: '/chapel/sacraments',
-        asUrl: '/page?type=chapelPages&id=sacraments'
+        text: 'ITS',
+        linkUrl: '/austria',
+        asUrl: '/page?type=austriaPages&id=austria'
+      },
+      {
+        text: 'SWOP',
+        linkUrl: '/austria',
+        asUrl: '/page?type=austriaPages&id=austria'
+      },
+      {
+        text: 'Career Services',
+        linkUrl: '/austria',
+        asUrl: '/page?type=austriaPages&id=austria'
+      },
+      {
+        text: 'Disability Services',
+        linkUrl: '/austria',
+        asUrl: '/page?type=austriaPages&id=austria'
+      },
+      {
+        text: 'Campus Security',
+        linkUrl: '/austria',
+        asUrl: '/page?type=austriaPages&id=austria'
       }
     ]
   },
   {
-    text: 'Franciscan University Presents',
-    linkUrl: 'http://www.faithandreason.com/franciscan-university-presents/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    text: 'Student Handbook',
+    linkUrl: '/austria',
+    asUrl: '/page?type=austriaPages&id=austria'
   },
   {
-    text: 'Franciscan Magazine',
-    linkUrl: '/franciscanmagazine/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
-  },
-  {
-    text: 'Priestly Discernment Program',
-    linkUrl: '/pdp',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic',
-    subMenu: [
-      {
-        text: 'Laying a Foundation for the Priesthood',
-        linkUrl: '/chapel/schedule',
-        asUrl: '/page?type=chapelPages&id=schedule'
-      },
-      {
-        text: 'PDP Households',
-        linkUrl: '/chapel/policy-external-clerics',
-        asUrl: '/page?type=chapelPages&id=policy-external-clerics'
-      },
-      {
-        text: 'PDP Leadership',
-        linkUrl: '/chapel/sacraments',
-        asUrl: '/page?type=chapelPages&id=sacraments'
-      },
-      {
-        text: 'Support the PDP',
-        linkUrl: 'https://giving.franciscan.edu/give'
-      },
-      {
-        text: 'Campus Faith Life',
-        linkUrl: '/chapel/campus-faith-life',
-        asUrl: '/page?type=chapelPages&id=campus-faith-life'
-      },
-      {
-        text: 'Places to Pray',
-        linkUrl: '/chapel/places-to-pray',
-        asUrl: '/page?type=chapelPages&id=places-to-pray'
-      },
-      {
-        text: 'The Portiuncula',
-        linkUrl: '/chapel/portiuncula',
-        asUrl: '/page?type=chapelPages&id=portiuncula'
-      },
-      {
-        text: 'Franciscans TOR',
-        linkUrl: '/chapel/franciscans-tor',
-        asUrl: '/page?type=chapelPages&id=franciscans-tor'
-      },
-      {
-        text: 'Campus Evangelization',
-        linkUrl: '/chapel/evangelization',
-        asUrl: '/page?type=chapelPages&id=evangelization'
-      }
-    ]
+    text: 'FranciscanU App',
+    linkUrl: '/austria',
+    asUrl: '/page?type=austriaPages&id=austria'
   }
 ]
