@@ -11,9 +11,7 @@ import Paper from '@material-ui/core/Paper'
 const styles = theme => ({
   card: {
     height: '250px',
-    [theme.breakpoints.down('xl')]: {
-      maxWidth: '600px'
-    }
+    maxWidth: '600px'
   },
   cardContent: {
     display: 'flex',
@@ -30,10 +28,18 @@ const styles = theme => ({
   //     minHeight: 500
   //   }
   // },
+  name: {
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '20px'
+    }
+  },
   quote: {
     fontSize: '16px',
     paddingLeft: '8px',
-    borderLeft: '4px solid rgba(0, 0, 0, 0.24)'
+    borderLeft: '4px solid rgba(0, 0, 0, 0.24)',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '14px'
+    }
   },
   portraitWrapper: {
     height: '100%',
@@ -45,6 +51,15 @@ const styles = theme => ({
     objectPosition: '0px 22%',
     width: '100%',
     height: '100% !important'
+  },
+  textContent: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between'
+  },
+  actions: {
+    marginTop: 'auto',
+    paddingLeft: '0'
   }
 })
 
@@ -56,9 +71,14 @@ class FacultyListItem extends Component {
       <Grid item xs={12} sm={9} md={6} lg={4} xl={3} className={classes.card}>
         <Paper className={classes.cardContent}>
           <CardContent
-            style={{ width: imageObj ? 'calc(50% - 48px)' : 'auto' }}
+            className={classes.textContent}
+            style={{ width: imageObj ? 'calc(50% - 24px)' : 'auto' }}
           >
-            <Typography variant="headline" component="h2">
+            <Typography
+              variant="headline"
+              component="h2"
+              className={classes.name}
+            >
               {profileName}
             </Typography>
             {jobTitle && (
@@ -67,7 +87,7 @@ class FacultyListItem extends Component {
               </Typography>
             )}
             {profileLink && (
-              <CardActions>
+              <CardActions className={classes.actions}>
                 <Fragment>
                   <Link prefetch href={profileLink}>
                     <Button size="small" color="primary">
