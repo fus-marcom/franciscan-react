@@ -12,6 +12,7 @@ import withData from '../lib/withData'
 const styles = theme => ({
   gridItemFix: {
     width: '100%',
+    margin: '0',
     padding: '16px',
     [theme.breakpoints.down('sm')]: {
       padding: '8px'
