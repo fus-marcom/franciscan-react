@@ -59,6 +59,8 @@ const styles = theme => ({
 class FacultyListItem extends Component {
   render () {
     const { classes, profileName, profileLink, jobTitle, imageObj } = this.props
+    const decodeHTML = str =>
+      str.replace(/&#(\d+);/g, (_, p1) => String.fromCharCode(p1))
 
     return (
       <Grid item xs={12} sm={9} md={6} lg={4} xl={3} className={classes.card}>
@@ -72,11 +74,11 @@ class FacultyListItem extends Component {
               component="h2"
               className={classes.name}
             >
-              {profileName}
+              {decodeHTML(profileName)}
             </Typography>
             {jobTitle && (
               <Typography component="span" className={classes.quote}>
-                {jobTitle}
+                {decodeHTML(jobTitle)}
               </Typography>
             )}
             {profileLink && (
