@@ -19,15 +19,6 @@ const styles = theme => ({
     height: '100%',
     width: '100%'
   },
-  // media: {
-  //   minHeight: '280px',
-  //   [theme.breakpoints.up('xl')]: {
-  //     minHeight: '1366px'
-  //   },
-  //   [theme.breakpoints.up('lg')]: {
-  //     minHeight: 500
-  //   }
-  // },
   name: {
     [theme.breakpoints.down('xs')]: {
       fontSize: '20px'
