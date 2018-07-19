@@ -42,21 +42,13 @@ class FacultyListItem extends Component {
       <Grid item xs={12} sm={9} md={6} lg={4} xl={3} className={classes.card}>
         <Paper className={classes.cardContent}>
           <CardContent>
-            <Typography
-              variant="headline"
-              component="h2"
-              dangerouslySetInnerHTML={{
-                __html: profileName
-              }}
-            />
+            <Typography variant="headline" component="h2">
+              {profileName}
+            </Typography>
             {jobTitle && (
-              <Typography
-                component="span"
-                className={classes.quote}
-                dangerouslySetInnerHTML={{
-                  __html: jobTitle
-                }}
-              />
+              <Typography component="span" className={classes.quote}>
+                {jobTitle}
+              </Typography>
             )}
             {profileLink && (
               <CardActions>
