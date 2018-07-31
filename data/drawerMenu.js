@@ -213,6 +213,7 @@ export const admissionsMenu = [
     text: 'Graduate',
     linkUrl: '/admissions/graduate/',
     asUrl: '/page?type=admissionsPages&id=graduate',
+    // These submenu items have the wrong urls
     subMenu: [
       {
         text: 'Meet the Staff',
@@ -233,8 +234,8 @@ export const admissionsMenu = [
   },
   {
     text: 'Military Benefits',
-    linkUrl: '/sfs/accelerated-learning',
-    asUrl: '/page?type=sfsPages&id=accelerated-learning'
+    linkUrl: '/military-benefits/',
+    asUrl: '/page?type=sfsPages&id=military-benefits'
   },
   {
     text: 'Apply Today',
