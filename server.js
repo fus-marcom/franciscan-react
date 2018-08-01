@@ -657,6 +657,26 @@ const translationObj = {
     type: 'studentLifePages',
     id: { default: 'homecoming' }
   },
+  orientation: {
+    page: '/page',
+    type: 'studentLifePages',
+    id: { default: 'orientation' }
+  },
+  'student-clubs': {
+    page: '/page',
+    type: 'studentLifePages',
+    id: { default: 'student-clubs' }
+  },
+  'wellness-center-staff': {
+    page: '/page',
+    type: 'studentLifePages',
+    id: { default: 'wellness-center-staff' }
+  },
+  'career-services': {
+    page: '/page',
+    type: 'studentLifePages',
+    id: { default: 'career-services' }
+  },
   baronday: {
     page: '/page',
     type: 'admissionsPages',
@@ -706,7 +726,11 @@ const translationObj = {
     type: 'aboutPages',
     id: { default: 'fact-book' }
   },
-  'campus-security': { page: '/page', type: 'campusSecurity' },
+  'campus-security': {
+    page: '/page',
+    type: 'campusSecurity',
+    id: { default: 'campus-security' }
+  },
   studentprofiles: { page: '/faculty', type: 'studentProfilePages' },
   admissions: {
     page: { default: '/admissions', standard: '/page', thirdly: '/page' },

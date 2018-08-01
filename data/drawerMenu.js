@@ -217,18 +217,18 @@ export const admissionsMenu = [
     subMenu: [
       {
         text: 'Meet the Staff',
-        linkUrl: '/cmhc',
-        asUrl: '/major?type=graduatePrograms&id=cmhc'
+        linkUrl: '/admissions/graduate-admissions-staff',
+        asUrl: '/page?type=admissionsPagess&id=graduate-admissions-staff'
       },
       {
         text: 'Requirements',
-        linkUrl: '/graduatephilosophy',
-        asUrl: '/major?type=graduatePrograms&id=graduatephilosophy'
+        linkUrl: '/admissions/graduate-requirements',
+        asUrl: '/page?type=admissionsPagess&id=graduate-requirements'
       },
       {
         text: 'Costs',
-        linkUrl: '/ma-theology',
-        asUrl: '/major?type=graduatePrograms&id=ma-theology'
+        linkUrl: '/admissions/graduate-costs',
+        asUrl: '/page?type=admissionsPagess&id=graduate-costs'
       }
     ]
   },
@@ -356,13 +356,13 @@ export const studentMenu = [
       },
       {
         text: 'Orientation',
-        linkUrl: '/austria',
-        asUrl: '/page?type=austriaPages&id=austria'
+        linkUrl: '/orientation',
+        asUrl: '/page?type=studentLifePages&id=orientation'
       },
       {
         text: 'Student Clubs',
-        linkUrl: '/austria',
-        asUrl: '/page?type=austriaPages&id=austria'
+        linkUrl: '/student-clubs',
+        asUrl: '/page?type=studentLifePages&id=student-clubs'
       }
     ]
   },
@@ -371,49 +371,57 @@ export const studentMenu = [
     subMenu: [
       {
         text: 'Dining Services',
-        linkUrl: '/austria',
-        asUrl: '/page?type=austriaPages&id=austria'
+        linkUrl: 'https://franciscan.catertrax.com/'
       },
       {
         text: 'Wellness Center',
-        linkUrl: '/austria',
-        asUrl: '/page?type=austriaPages&id=austria'
+        linkUrl: '/wellness-center-staff',
+        asUrl: '/page?type=studentLifePages&id=wellness-center-staff'
       },
       {
         text: 'ITS',
-        linkUrl: '/austria',
-        asUrl: '/page?type=austriaPages&id=austria'
+        linkUrl: '/information-technology',
+        asUrl: '/page?type=itsPages&id=information-technology'
       },
       {
         text: 'SWOP',
-        linkUrl: '/austria',
-        asUrl: '/page?type=austriaPages&id=austria'
+        linkUrl: '/swop',
+        asUrl: '/page?type=sfsPages&id=swop'
       },
       {
         text: 'Career Services',
-        linkUrl: '/austria',
-        asUrl: '/page?type=austriaPages&id=austria'
+        linkUrl: '/career-services',
+        asUrl: '/page?type=studentLifePages&id=career-services'
       },
       {
         text: 'Disability Services',
-        linkUrl: '/austria',
-        asUrl: '/page?type=austriaPages&id=austria'
+        linkUrl: '/sass/disability',
+        asUrl: '/page?type=sassPages&id=disability'
       },
       {
         text: 'Campus Security',
-        linkUrl: '/austria',
-        asUrl: '/page?type=austriaPages&id=austria'
+        linkUrl: '/campus-security',
+        asUrl: '/page?type=campusSecurity&id=campus-security'
       }
     ]
   },
   {
     text: 'Student Handbook',
-    linkUrl: '/austria',
-    asUrl: '/page?type=austriaPages&id=austria'
+    linkUrl: 'https://en.calameo.com/read/0000568540ebff6129cec'
   },
   {
     text: 'FranciscanU App',
-    linkUrl: '/austria',
-    asUrl: '/page?type=austriaPages&id=austria'
+    subMenu: [
+      {
+        text: 'Android',
+        linkUrl:
+          'https://play.google.com/store/apps/details?id=edu.franciscan.student&hl=en_US'
+      },
+      {
+        text: 'iOS',
+        linkUrl:
+          'https://itunes.apple.com/us/app/the-franciscanu-app/id1326217652?mt=8'
+      }
+    ]
   }
 ]
