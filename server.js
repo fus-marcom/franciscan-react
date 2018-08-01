@@ -124,6 +124,11 @@ const translationObj = {
     type: 'sfsPages',
     id: { default: 'registrar' }
   },
+  'residence-life': {
+    page: '/page',
+    type: 'studentLifePages',
+    id: { default: 'residence-life' }
+  },
   'commencement-information': {
     page: '/page',
     type: 'academicsPages',
@@ -646,6 +651,11 @@ const translationObj = {
     page: '/page',
     type: 'studentLifePages',
     id: { default: 'excite' }
+  },
+  homecoming: {
+    page: '/page',
+    type: 'studentLifePages',
+    id: { default: 'homecoming' }
   },
   baronday: {
     page: '/page',

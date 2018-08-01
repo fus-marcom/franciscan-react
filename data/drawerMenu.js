@@ -317,13 +317,13 @@ export const faithMenu = [
 export const studentMenu = [
   {
     text: 'Residence Life',
-    linkUrl: '/residencelife/',
-    asUrl: '/page?type=householdsPages&id=residencelife',
+    linkUrl: '/residence-life/',
+    asUrl: '/page?type=studentLifePages&id=residence-life',
     subMenu: [
       {
         text: 'Residence Halls',
-        linkUrl: '/residencelife/halls',
-        asUrl: '/page?type=householdsPages&id=halls'
+        linkUrl: '/residence-life/halls',
+        asUrl: '/page?type=studentLifePages&id=halls'
       }
     ]
   },
@@ -346,13 +346,13 @@ export const studentMenu = [
     subMenu: [
       {
         text: 'Excite',
-        linkUrl: '/austria',
-        asUrl: '/page?type=austriaPages&id=austria'
+        linkUrl: '/excite',
+        asUrl: '/page?type=studentLifePages&id=excite'
       },
       {
         text: 'Franciscan Homecoming',
-        linkUrl: '/austria',
-        asUrl: '/page?type=austriaPages&id=austria'
+        linkUrl: '/homecoming',
+        asUrl: '/page?type=studentLifePages&id=homecoming'
       },
       {
         text: 'Orientation',
