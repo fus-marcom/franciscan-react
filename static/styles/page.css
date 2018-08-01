@@ -104,6 +104,6 @@ h6 {
   margin-bottom: 0;
 }
 
-img {
+img, iframe {
   max-width: 100%;
 }
