@@ -8,8 +8,8 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 import { withStyles } from '@material-ui/core/styles'
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 import OpenInNewIcon from '@material-ui/icons/OpenInNew'
 import SearchIcon from '@material-ui/icons/Search'
 import Link from 'next/link'
@@ -164,11 +164,11 @@ class TemporaryDrawer extends Component {
                 toggleDrawer={toggleDrawer}
                 expandSubItem={this.props.expandSubItem}
                 expandItem={this.props.expandItem}
-                itemId="faith-and-life"
+                itemId="student-life"
                 primaryText="Student Life"
                 submenuItems={studentMenu}
                 isSubOpen={this.props.drawerSubItems}
-                isOpen={this.props.drawerItems['faith-and-life']}
+                isOpen={this.props.drawerItems['student-life']}
               />
               <Divider />
               <a

@@ -1,17 +1,17 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
+import Grid from '@material-ui/core/Grid'
+import Hidden from '@material-ui/core/Hidden'
+import IconButton from '@material-ui/core/IconButton'
+import Input from '@material-ui/core/Input'
+import { withStyles } from '@material-ui/core/styles'
+import SvgIcon from '@material-ui/core/SvgIcon'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
-import Grid from '@material-ui/core/Grid'
-import SvgIcon from '@material-ui/core/SvgIcon'
 import Link from 'next/link'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 import AppBarMenuItem from './AppBarMenuItem'
-import Input from '@material-ui/core/Input'
-import Hidden from '@material-ui/core/Hidden'
 
 const styles = theme => ({
   root: {
@@ -195,12 +195,12 @@ class ButtonAppBar extends Component {
                     />
                     <AppBarMenuItem
                       toggleDrawer={toggleDrawer}
-                      linkId="faith-and-life"
+                      linkId="evangelization"
                       content="Evangelization"
                     />
                     <AppBarMenuItem
                       toggleDrawer={toggleDrawer}
-                      linkId="about"
+                      linkId="student-life"
                       content="Student Life"
                     />
                     <SvgIcon
