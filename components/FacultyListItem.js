@@ -4,57 +4,84 @@ import CardContent from '@material-ui/core/CardContent'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Link from 'next/link'
-import React, { Component, Fragment } from 'react'
+import React, { Fragment } from 'react'
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper'
 
 const styles = theme => ({
   card: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-between'
+    height: '250px',
+    maxWidth: '600px'
   },
-  media: {
-    minHeight: '280px',
-    [theme.breakpoints.up('xl')]: {
-      minHeight: '1366px'
-    },
-    [theme.breakpoints.up('lg')]: {
-      minHeight: 500
+  cardContent: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    height: '100%',
+    width: '100%'
+  },
+  name: {
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '20px'
     }
   },
   quote: {
     fontSize: '16px',
     paddingLeft: '8px',
-    borderLeft: '4px solid rgba(0, 0, 0, 0.24)'
+    borderLeft: '4px solid rgba(0, 0, 0, 0.24)',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '14px'
+    }
+  },
+  portraitWrapper: {
+    height: '100%',
+    width: '50%',
+    overflow: 'hidden',
+    borderTopRightRadius: '4px',
+    borderBottomRightRadius: '4px'
+  },
+  portrait: {
+    objectFit: 'cover',
+    objectPosition: '0px 22%',
+    width: '100%',
+    height: '100% !important'
+  },
+  textContent: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between'
+  },
+  actions: {
+    marginTop: 'auto',
+    paddingLeft: '0'
   }
 })
 
-class FacultyListItem extends Component {
-  render () {
-    const { classes, profileName, profileLink, jobTitle, imageObj } = this.props
+const FacultyListItem = props => {
+  const { classes, profileName, profileLink, jobTitle, imageObj } = props
+  const decodeHTML = str =>
+    str.replace(/&#(\d+);/g, (_, p1) => String.fromCharCode(p1))
 
-    return (
-      <div className={classes.card}>
-        <div className={classes.textContent}>
-          <CardContent>
-            <Typography
-              variant="headline"
-              component="h2"
-              dangerouslySetInnerHTML={{
-                __html: profileName
-              }}
-            />
-            {jobTitle && (
-              <Typography
-                component="span"
-                className={classes.quote}
-                dangerouslySetInnerHTML={{
-                  __html: jobTitle
-                }}
-              />
-            )}
-          </CardContent>
+  return (
+    <Grid item xs={12} sm={9} md={6} lg={4} xl={3} className={classes.card}>
+      <Paper className={classes.cardContent}>
+        <CardContent
+          className={classes.textContent}
+          style={{ width: imageObj ? 'calc(50% - 24px)' : 'auto' }}
+        >
+          <Typography
+            variant="headline"
+            component="h2"
+            className={classes.name}
+          >
+            {decodeHTML(profileName)}
+          </Typography>
+          {jobTitle && (
+            <Typography component="span" className={classes.quote}>
+              {decodeHTML(jobTitle)}
+            </Typography>
+          )}
           {profileLink && (
-            <CardActions>
+            <CardActions className={classes.actions}>
               <Fragment>
                 <Link prefetch href={profileLink}>
                   <Button size="small" color="primary">
@@ -64,11 +91,19 @@ class FacultyListItem extends Component {
               </Fragment>
             </CardActions>
           )}
-        </div>
-        {imageObj && <img src={imageObj.sourceUrl} alt={imageObj.altText} />}
-      </div>
-    )
-  }
+        </CardContent>
+        {imageObj && (
+          <div className={classes.portraitWrapper}>
+            <img
+              src={imageObj.sourceUrl}
+              alt={imageObj.altText}
+              className={classes.portrait}
+            />
+          </div>
+        )}
+      </Paper>
+    </Grid>
+  )
 }
 
 export default withStyles(styles)(FacultyListItem)

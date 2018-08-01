@@ -12,6 +12,7 @@ import withData from '../lib/withData'
 const styles = theme => ({
   gridItemFix: {
     width: '100%',
+    margin: '0',
     padding: '16px',
     [theme.breakpoints.down('sm')]: {
       padding: '8px'
@@ -65,23 +66,22 @@ class FacultyList extends Component {
               data['facultyDepartments'].edges[0].node.faculty.edges
 
             return (
-              <div className={classes.contentContainer}>
+              <Grid
+                container
+                className={classes.gridItemFix}
+                justify="center"
+                spacing={16}
+              >
                 {facultyData.map(faculty => (
-                  <Grid
+                  <FacultyListItem
                     key={faculty.node.slug}
-                    item
-                    className={classes.gridItemFix}
-                    xs={12}
-                  >
-                    <FacultyListItem
-                      profileName={faculty.node.displayNameField.value}
-                      profileLink={`/faculty/${faculty.node.slug}`}
-                      jobTitle={faculty.node.jobTitleField.value}
-                      imageObj={faculty.node.featuredImage}
-                    />
-                  </Grid>
+                    profileName={faculty.node.displayNameField.value}
+                    profileLink={`/faculty/${faculty.node.slug}`}
+                    jobTitle={faculty.node.jobTitleField.value}
+                    imageObj={faculty.node.featuredImage}
+                  />
                 ))}
-              </div>
+              </Grid>
             )
           }}
         </Query>
@@ -90,4 +90,7 @@ class FacultyList extends Component {
   }
 }
 
-export default compose(withRoot, withData)(withStyles(styles)(FacultyList))
+export default compose(
+  withRoot,
+  withData
+)(withStyles(styles)(FacultyList))
