@@ -61,6 +61,7 @@ exports[`DrawerItem should render 1`] = `
               }
               component="div"
               disableRipple={false}
+              disableTouchRipple={false}
               disabled={false}
               focusRipple={false}
               focusVisibleClassName="MuiListItem-focusVisible-9"
@@ -135,10 +136,13 @@ exports[`DrawerItem should render 1`] = `
                             "colorError": "MuiSvgIcon-colorError-30",
                             "colorPrimary": "MuiSvgIcon-colorPrimary-27",
                             "colorSecondary": "MuiSvgIcon-colorSecondary-28",
+                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-32",
                             "root": "MuiSvgIcon-root-26",
                           }
                         }
                         color="inherit"
+                        component="svg"
+                        fontSize="default"
                         viewBox="0 0 24 24"
                       >
                         <svg
@@ -147,11 +151,13 @@ exports[`DrawerItem should render 1`] = `
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
-                          <g>
-                            <path
-                              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
-                            />
-                          </g>
+                          <path
+                            d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                          />
+                          <path
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          />
                         </svg>
                       </SvgIcon>
                     </WithStyles(SvgIcon)>
@@ -165,25 +171,25 @@ exports[`DrawerItem should render 1`] = `
                     center={false}
                     classes={
                       Object {
-                        "child": "MuiTouchRipple-child-36",
-                        "childLeaving": "MuiTouchRipple-childLeaving-37",
-                        "childPulsate": "MuiTouchRipple-childPulsate-38",
-                        "ripple": "MuiTouchRipple-ripple-33",
-                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-35",
-                        "rippleVisible": "MuiTouchRipple-rippleVisible-34",
-                        "root": "MuiTouchRipple-root-32",
+                        "child": "MuiTouchRipple-child-37",
+                        "childLeaving": "MuiTouchRipple-childLeaving-38",
+                        "childPulsate": "MuiTouchRipple-childPulsate-39",
+                        "ripple": "MuiTouchRipple-ripple-34",
+                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-36",
+                        "rippleVisible": "MuiTouchRipple-rippleVisible-35",
+                        "root": "MuiTouchRipple-root-33",
                       }
                     }
                   >
                     <TransitionGroup
                       childFactory={[Function]}
-                      className="MuiTouchRipple-root-32"
+                      className="MuiTouchRipple-root-33"
                       component="span"
                       enter={true}
                       exit={true}
                     >
                       <span
-                        className="MuiTouchRipple-root-32"
+                        className="MuiTouchRipple-root-33"
                       />
                     </TransitionGroup>
                   </TouchRipple>
