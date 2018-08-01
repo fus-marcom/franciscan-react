@@ -94,6 +94,16 @@ const translationObj = {
     type: 'veritasPages',
     id: { default: 'veritas' }
   },
+  chapel: {
+    page: '/page',
+    type: 'chapelPages',
+    id: { default: 'chapel' }
+  },
+  franciscanmagazine: {
+    page: '/page',
+    type: 'pressPages',
+    id: { default: 'franciscanmagazine' }
+  },
   'exploring-majors': {
     page: '/page',
     type: 'academicsPages',
@@ -630,7 +640,7 @@ const translationObj = {
   households: {
     page: '/page',
     type: 'householdsPages',
-    id: { default: 'main' }
+    id: { default: 'households' }
   },
   excite: {
     page: '/page',

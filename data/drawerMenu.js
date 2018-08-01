@@ -304,13 +304,11 @@ export const faithMenu = [
       {
         text: 'Franciscan Magazine',
         linkUrl: '/franciscanmagazine/',
-        asUrl: '/page?type=aboutPages&id=passionately-catholic'
+        asUrl: '/page?type=pressPages&id=franciscanmagazine'
       },
       {
         text: 'Franciscan University Presents',
-        linkUrl:
-          'http://www.faithandreason.com/franciscan-university-presents/',
-        asUrl: '/page?type=aboutPages&id=passionately-catholic'
+        linkUrl: 'http://www.faithandreason.com/franciscan-university-presents/'
       }
     ]
   }
@@ -318,14 +316,25 @@ export const faithMenu = [
 
 export const studentMenu = [
   {
+    text: 'Residence Life',
+    linkUrl: '/residencelife/',
+    asUrl: '/page?type=householdsPages&id=residencelife',
+    subMenu: [
+      {
+        text: 'Residence Halls',
+        linkUrl: '/residencelife/halls',
+        asUrl: '/page?type=householdsPages&id=halls'
+      }
+    ]
+  },
+  {
     text: 'Households',
     linkUrl: '/households/',
-    asUrl: '/page?type=aboutPages&id=passionately-catholic'
+    asUrl: '/page?type=householdsPages&id=households'
   },
   {
     text: 'Baron Athletics',
-    linkUrl: '/studentlife',
-    asUrl: '/page?type=studentLifePages&id=student-life'
+    linkUrl: 'http://www.franciscanathletics.com/'
   },
   {
     text: 'Austrian Semester',
