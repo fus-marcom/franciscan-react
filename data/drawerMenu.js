@@ -118,7 +118,7 @@ export const academicsMenu = [
   {
     text: 'Academic Affairs',
     linkUrl: '/academic-affairs/leadership',
-    asUrl: '/faculty-list?id=academic-leadership',
+    asUrl: '/faculty-list?type=academicsPages&id=leadership',
     subMenu: [
       {
         text: 'Academic Support',
@@ -218,7 +218,7 @@ export const admissionsMenu = [
       {
         text: 'Meet the Staff',
         linkUrl: '/admissions/graduate-admissions-staff',
-        asUrl: '/page?type=admissionsPagess&id=graduate-admissions-staff'
+        asUrl: '/page?type=admissionsPages&id=graduate-admissions-staff'
       },
       {
         text: 'Requirements',

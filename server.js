@@ -688,7 +688,14 @@ const translationObj = {
     id: { default: 'studentsuccess' }
   },
   academics: {
-    page: '/page'
+    page: '/page',
+    type: 'academicsPages',
+    id: { default: 'academics' }
+  },
+  'academic-affairs': {
+    page: '/page',
+    type: 'academicsPages',
+    id: { default: 'academic-affairs' }
   },
   evangelization: {
     page: '/page',
