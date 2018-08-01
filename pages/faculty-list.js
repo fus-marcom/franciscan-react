@@ -68,7 +68,7 @@ class FacultyList extends Component {
             return (
               <Grid
                 container
-                className={classes.gridItemFix}
+                className={classes.contentContainer}
                 justify="center"
                 spacing={16}
               >
@@ -90,7 +90,4 @@ class FacultyList extends Component {
   }
 }
 
-export default compose(
-  withRoot,
-  withData
-)(withStyles(styles)(FacultyList))
+export default compose(withRoot, withData)(withStyles(styles)(FacultyList))

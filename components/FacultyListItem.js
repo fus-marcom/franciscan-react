@@ -1,12 +1,12 @@
 import Button from '@material-ui/core/Button'
 import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Link from 'next/link'
 import React, { Fragment } from 'react'
-import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
 
 const styles = theme => ({
   card: {
@@ -36,8 +36,8 @@ const styles = theme => ({
     height: '100%',
     width: '50%',
     overflow: 'hidden',
-    borderTopRightRadius: '4px',
-    borderBottomRightRadius: '4px'
+    borderTopRightRadius: '2px',
+    borderBottomRightRadius: '2px'
   },
   portrait: {
     objectFit: 'cover',
@@ -62,7 +62,7 @@ const FacultyListItem = props => {
     str.replace(/&#(\d+);/g, (_, p1) => String.fromCharCode(p1))
 
   return (
-    <Grid item xs={12} sm={9} md={6} lg={4} xl={3} className={classes.card}>
+    <Grid item xs={12} sm={9} md={6} lg={6} xl={4} className={classes.card}>
       <Paper className={classes.cardContent}>
         <CardContent
           className={classes.textContent}
