@@ -24,6 +24,7 @@ exports[`<Index /> should render 1`] = `
             aria-label="Menu"
             class="MuiButtonBase-root-103 MuiIconButton-root-97 ButtonAppBar-menuButton-42"
             tabindex="0"
+            title="Menu"
             type="button"
           >
             <span
