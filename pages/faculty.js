@@ -37,87 +37,81 @@ class Faculty extends Component {
             const imgRegex = /(<img.src=")(.+)(")(.+)(\/>)/gi
 
             const { data } = result
-            const faculty = data[this.props.type].edges
+            const faculty = data[this.props.type].edges[0].node
+            const content = data[this.props.type].edges[0].node.content.replace(
+              imgRegex,
+              '<img src="https://storage.googleapis.com/fus-wp-storage/$2" $4 />'
+            )
 
-            const getImageData = (facultyMember, size) => {
-              const {
-                sourceUrl,
-                width
-              } = facultyMember.featuredImage.mediaDetails.sizes.find(
-                ({ name }) => name === size
-              )
-              return {
-                // remove end of url and append filename of image
-                src:
-                  facultyMember.featuredImage.sourceUrl.replace(
-                    /(.*\/)[^/]+$/,
-                    '$1'
-                  ) + sourceUrl,
-                width
-              }
-            }
-            const getAllImageData = facultyMember =>
-              ['thumbnail', 'medium']
-                .map(s => getImageData(facultyMember, s))
-                .concat({
-                  src: facultyMember.featuredImage.sourceUrl,
-                  width: facultyMember.featuredImage.mediaDetails.width
-                })
+            // const thumbnail =
+            //   faculty.featuredImage &&
+            //   faculty.featuredImage.mediaDetails.sizes.find(
+            //     image => image.name === 'thumbnail'
+            //   ).sourceUrl
+            // const medium =
+            //   faculty.featuredImage &&
+            //   faculty.featuredImage.mediaDetails.sizes.find(
+            //     image => image.name === 'medium'
+            //   ).sourceUrl
 
-            const getSrcSet = facultyMember =>
-              getAllImageData(facultyMember)
-                .map(image => `${image.src} ${image.width}w`)
-                .join(',')
+            // const thumbnailW =
+            //   faculty.featuredImage &&
+            //   faculty.featuredImage.mediaDetails.sizes.find(
+            //     image => image.name === 'thumbnail'
+            //   ).width
+            // const mediumW =
+            //   faculty.featuredImage &&
+            //   faculty.featuredImage.mediaDetails.sizes.find(
+            //     image => image.name === 'medium'
+            //   ).width
+            // const imageW =
+            // faculty.featuredImage && faculty.featuredImage.mediaDetails.width
 
-            return faculty.map(({ node: facultyMember }) => (
-              <div className={classes.container} key={facultyMember.id}>
-                <h1>{facultyMember.displayNameField.value}</h1>
+            return (
+              <div className={classes.container}>
+                <h1>{faculty.displayNameField.value}</h1>
                 <Grid style={styles.listGridContainer} container spacing={24}>
-                  {facultyMember.featuredImage && (
+                  {faculty.featuredImage && (
                     <Grid style={styles.listGridItem} item xs={12} sm={6}>
                       <img
-                        srcSet={getSrcSet(facultyMember)}
-                        sizes={`
-                            (max-width: 320px) 280px,
-                            (max-width: 480px) 440px,
-                            800px
-                          `}
-                        alt={facultyMember.featuredImage.altText}
+                        // srcSet={`${thumbnail}  ${thumbnailW}w,
+                        // ${medium}  ${mediumW}w,
+                        // ${faculty.featuredImage.sourceUrl} ${imageW}w`}
+                        // sizes={`(max-width: 320px) 280px,
+                        // (max-width: 480px) 440px,
+                        // 800px`}
+                        src={faculty.featuredImage.sourceUrl}
+                        alt={faculty.featuredImage.altText}
                       />
                     </Grid>
                   )}
                   <Grid style={styles.listGridItem} item xs={12} sm={6}>
-                    {facultyMember.jobTitleField.value && (
+                    {faculty.jobTitleField.value && (
                       <span className={classes.infoRow}>
-                        {facultyMember.jobTitleField.value}
+                        {faculty.jobTitleField.value}
                       </span>
                     )}
 
-                    {facultyMember.emailField.value && (
+                    {faculty.emailField.value && (
                       <span className={classes.infoRow}>
-                        {facultyMember.emailField.value}
+                        {faculty.emailField.value}
                       </span>
                     )}
-                    {facultyMember.phoneField.value && (
+                    {faculty.phoneField.value && (
                       <span className={classes.infoRow}>
-                        {facultyMember.phoneField.value}
+                        {faculty.phoneField.value}
                       </span>
                     )}
                   </Grid>
                 </Grid>
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: facultyMember.content.replace(
-                      imgRegex,
-                      '<img src="https://storage.googleapis.com/fus-wp-storage/$2" $4 />'
-                    )
+                    __html: content
                   }}
                 />
-                {facultyMember.cvField && (
-                  <a href={facultyMember.cvField.value}>View CV</a>
-                )}
+                {faculty.cvField && <a href={faculty.cvField.value}>View CV</a>}
               </div>
-            ))
+            )
           }}
         </Query>
       </Layout>
@@ -127,12 +121,9 @@ class Faculty extends Component {
 const styles = theme => ({
   container: {
     maxWidth: '90%',
-    margin: '0 auto 4rem',
+    margin: '0 auto',
     [theme.breakpoints.up('sm')]: {
       maxWidth: '70%'
-    },
-    '&:last-child': {
-      marginBottom: '1rem'
     }
   },
   infoRow: {
@@ -142,7 +133,4 @@ const styles = theme => ({
   }
 })
 
-export default compose(
-  withRoot,
-  withData
-)(withStyles(styles)(Faculty))
+export default compose(withRoot, withData)(withStyles(styles)(Faculty))
