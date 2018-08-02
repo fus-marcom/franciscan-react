@@ -2,8 +2,8 @@ import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
 import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
-import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography'
 import Link from 'next/link'
 import React, { Component, Fragment } from 'react'
 
@@ -21,7 +21,7 @@ const styles = theme => ({
     }
   },
   category: {
-    color: '#ffb41f',
+    color: 'rgb(153, 134, 67)',
     textTransform: 'uppercase',
     fontSize: '14px'
   },
