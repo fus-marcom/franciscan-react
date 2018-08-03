@@ -510,8 +510,8 @@ const translationObj = {
     }
   },
   theology: {
-    page: { default: '/major', faculty: '/faculty-list' },
-    type: { default: 'majors', standard: 'theologyPages', faculty: 'faculty' },
+    page: { default: '/major', standard: '/page', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'theology',
       faculty: 'theology',
