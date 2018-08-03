@@ -17,51 +17,6 @@ import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 import { getJSON } from '../utils/fetch'
 
-const styles = theme => ({
-  root: {
-    '& br': {
-      display: 'unset'
-    }
-  },
-  contentContainer: {
-    width: '100%',
-    maxWidth: '70%',
-    margin: '0 auto',
-    [theme.breakpoints.down('md')]: {
-      maxWidth: '85%'
-    },
-    [theme.breakpoints.down('sm')]: {
-      maxWidth: '95%'
-    }
-  },
-  container: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(12, 1fr)',
-    gridGap: `${theme.spacing.unit * 3}px`
-  },
-  textField: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
-    width: 200
-  },
-  searchResult: {
-    margin: '16px 0'
-  },
-  title: {
-    fontSize: '24px',
-    fontWeight: 400,
-    display: 'block',
-    textDecoration: 'none',
-    color: 'rgba(0, 0, 0, .87)'
-  },
-  type: {
-    fontSize: '18px',
-    fontWeight: 400,
-    textTransform: 'uppercase',
-    color: theme.palette.secondary.main
-  }
-})
-
 class Page extends Component {
   state = {
     data: [],
@@ -77,15 +32,23 @@ class Page extends Component {
     windowHeight: 0,
     scrollSearch: false,
     resultCount: 0,
-    open: false
+    open: false,
+    baseSearchString: ''
+  }
+
+  createBaseSearch = () => {
+    let searchString = ''
+    postTypes.map(type => {
+      searchString = searchString + `&type[]=${type}`
+    })
+    this.setState({ baseSearchString: searchString })
   }
   /**
    * Make api call based on searchTerm
    * Render cards from api data
    */
   fetchSearchTerm = () => {
-    const searchType =
-      this.state.searchType || '&type[]=department&type[]=major&type[]=faculty'
+    const searchType = this.state.searchType || this.state.baseSearchString
     const apiUrl = 'https://wp.franciscan.university/wp-json/wp/v2/'
     const params = `multiple-post-type?per_page=100&search=${this.state
       .searchTerm + searchType}`
@@ -199,6 +162,7 @@ class Page extends Component {
 
   componentDidMount () {
     window.addEventListener('scroll', this.throttleScroll)
+    this.createBaseSearch()
   }
 
   componentWillUnmount () {
@@ -297,11 +261,12 @@ class Page extends Component {
                           : 1
                     }
                   })
+                  .filter(item => item.acf.search_url !== null)
                   .map(item => (
                     <div key={item.id} className={classes.searchResult}>
                       <span className={classes.type}>{item.type}</span>
                       <a
-                        href={`/${item.type}/${item.slug}`}
+                        href={item.acf.search_url}
                         className={classes.title}
                         dangerouslySetInnerHTML={{
                           __html: item.title.rendered
@@ -357,5 +322,88 @@ class Page extends Component {
     )
   }
 }
+const styles = theme => ({
+  root: {
+    '& br': {
+      display: 'unset'
+    }
+  },
+  contentContainer: {
+    width: '100%',
+    maxWidth: '70%',
+    margin: '0 auto',
+    [theme.breakpoints.down('md')]: {
+      maxWidth: '85%'
+    },
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '95%'
+    }
+  },
+  container: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(12, 1fr)',
+    gridGap: `${theme.spacing.unit * 3}px`
+  },
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 200
+  },
+  searchResult: {
+    margin: '16px 0'
+  },
+  title: {
+    fontSize: '24px',
+    fontWeight: 400,
+    display: 'block',
+    textDecoration: 'none',
+    color: 'rgba(0, 0, 0, .87)'
+  },
+  type: {
+    fontSize: '18px',
+    fontWeight: 400,
+    textTransform: 'uppercase',
+    color: theme.palette.secondary.main
+  }
+})
+
+const postTypes = [
+  'department',
+  'major',
+  'faculty',
+  'directory',
+  'news',
+  'human-resource',
+  'campus-security',
+  'associate-program',
+  'minor',
+  'institute',
+  'staff',
+  'event',
+  'about-page',
+  'fms-page',
+  'chapel-page',
+  'academics-page',
+  'admissions-page',
+  'sfs-page',
+  'austria-page',
+  'student-life-page',
+  'its-page',
+  'fish-page',
+  'fiwh-page',
+  'pdp-page',
+  'press-page',
+  'veritas-page',
+  'bioethics-page',
+  'pilgrimages-page',
+  'households-page',
+  'student-profile-page',
+  'missions-page',
+  'job',
+  'alumni-outcome',
+  'theatre-page',
+  'graduate-program',
+  'sass-page'
+]
 
 export default withRoot(withStyles(styles)(Page))
