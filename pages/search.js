@@ -26,7 +26,9 @@ class Page extends Component {
     checkboxes: {
       department: false,
       major: false,
-      faculty: false
+      faculty: false,
+      news: false,
+      event: false
     },
     scrollY: 0,
     windowHeight: 0,
