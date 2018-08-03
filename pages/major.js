@@ -3,10 +3,10 @@ import Head from 'next/head'
 import React, { Component } from 'react'
 import { compose, Query } from 'react-apollo'
 import Layout from '../components/Layout'
+import SampleSchedule from '../components/SampleSchedule'
 import withRoot from '../components/withRoot'
 import { PageQuery } from '../lib/queries/page'
 import withData from '../lib/withData'
-import SampleSchedule from '../components/SampleSchedule'
 
 const styles = {
   root: {
@@ -39,7 +39,7 @@ class Major extends Component {
             if (result.loading) {
               return <h1>Loading</h1>
             }
-            if (result.error) return <h3>{result.error}</h3>
+            if (result.error) return <h3>{JSON.stringify(result.error)}</h3>
 
             const { data } = result
             const content = data[this.props.type].edges[0].node.content

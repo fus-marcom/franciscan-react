@@ -1,11 +1,11 @@
+import Typography from '@material-ui/core/Typography'
+import Head from 'next/head'
 import React, { Component } from 'react'
-import { Query, compose } from 'react-apollo'
+import { compose, Query } from 'react-apollo'
+import Layout from '../components/Layout'
+import withRoot from '../components/withRoot'
 import { PageQuery } from '../lib/queries/page'
 import withData from '../lib/withData'
-import Layout from '../components/Layout'
-import Head from 'next/head'
-import withRoot from '../components/withRoot'
-import Typography from '@material-ui/core/Typography'
 
 class News extends Component {
   static async getInitialProps ({ query: { id, type } }) {
@@ -29,7 +29,7 @@ class News extends Component {
             if (result.loading) {
               return <h1>Loading</h1>
             }
-            if (result.error) return <h3>{result.error}</h3>
+            if (result.error) return <h3>{JSON.stringify(result.error)}</h3>
 
             const { data } = result
             const { title } = data[this.props.type].edges[0].node.title

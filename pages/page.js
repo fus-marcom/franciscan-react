@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
-import { PageQuery } from '../lib/queries/page'
-import { Query, compose } from 'react-apollo'
-
-import withData from '../lib/withData'
-import Layout from '../components/Layout'
 import Head from 'next/head'
+import React, { Component } from 'react'
+import { compose, Query } from 'react-apollo'
+import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
+import { PageQuery } from '../lib/queries/page'
+import withData from '../lib/withData'
 
 class Page extends Component {
   static async getInitialProps ({ query: { id, type } }) {
@@ -29,7 +28,7 @@ class Page extends Component {
             if (result.loading) {
               return <h1>Loading</h1>
             }
-            if (result.error) return <h3>{result.error}</h3>
+            if (result.error) return <h3>{JSON.stringify(result.error)}</h3>
 
             const { data } = result
             const content = data[this.props.type].edges[0].node.content

@@ -66,7 +66,7 @@ class JobList extends Component {
             if (result.loading) {
               return <h1>Loading</h1>
             }
-            if (result.error) return <h3>{result.error}</h3>
+            if (result.error) return <h3>{JSON.stringify(result.error)}</h3>
 
             const { data } = result
             const jobsData = data.jobs.edges
