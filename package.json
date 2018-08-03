@@ -11,7 +11,7 @@
     },
     "scale": {
       "sfo1": {
-        "min": 1,
+        "min": 2,
         "max": "auto"
       }
     }
