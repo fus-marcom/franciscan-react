@@ -16,6 +16,7 @@ import React, { Component } from 'react'
 import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 import { getJSON } from '../utils/fetch'
+import LinearProgress from '@material-ui/core/LinearProgress'
 
 class Page extends Component {
   state = {
@@ -35,7 +36,8 @@ class Page extends Component {
     scrollSearch: false,
     resultCount: 0,
     open: false,
-    baseSearchString: ''
+    baseSearchString: '',
+    loading: false
   }
 
   createBaseSearch = () => {
@@ -50,18 +52,18 @@ class Page extends Component {
    * Render cards from api data
    */
   fetchSearchTerm = () => {
+    this.setState({ loading: true })
     const searchType = this.state.searchType || this.state.baseSearchString
     const apiUrl = 'https://wp.franciscan.university/wp-json/wp/v2/'
     const params = `multiple-post-type?per_page=100&search=${this.state
       .searchTerm + searchType}`
-    getJSON(apiUrl + params).then(data => this.setState({ data }))
-    // console.log('Initial: ')
-    // console.log(this.state.data)
-    // this.sortBy('dateOldest')
+    getJSON(apiUrl + params).then(data =>
+      this.setState({ data: data, loading: false })
+    )
   }
 
   // Get a new function that is debounced when called
-  debouncedSearch = debounce(this.fetchSearchTerm, 700)
+  debouncedSearch = debounce(this.fetchSearchTerm, 300)
 
   /**
    * Called onSubmit event
@@ -243,6 +245,7 @@ class Page extends Component {
             </Grid>
 
             <Grid item xs={9}>
+              {this.state.loading && <LinearProgress />}
               {this.state.data.length > 0
                 ? this.state.data
                   .sort((a, b) => {
@@ -282,39 +285,21 @@ class Page extends Component {
               <FormControl component="fieldset">
                 <FormLabel component="legend">Filter Results</FormLabel>
                 <FormGroup>
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        color="primary"
-                        checked={this.state.faculty}
-                        onChange={this.handleChange('faculty')}
-                        value="faculty"
-                      />
-                    }
-                    label="Faculty"
-                  />
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        color="primary"
-                        checked={this.state.department}
-                        onChange={this.handleChange('department')}
-                        value="department"
-                      />
-                    }
-                    label="Department"
-                  />
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        color="primary"
-                        checked={this.state.major}
-                        onChange={this.handleChange('major')}
-                        value="major"
-                      />
-                    }
-                    label="Major"
-                  />
+                  {Object.entries(this.state.checkboxes).map(([key, value]) => (
+                    <FormControlLabel
+                      key={key}
+                      style={{ textTransform: 'capitalize' }}
+                      control={
+                        <Checkbox
+                          color="primary"
+                          checked={this.state[key]}
+                          onChange={this.handleChange(key)}
+                          value={key}
+                        />
+                      }
+                      label={key}
+                    />
+                  ))}
                 </FormGroup>
               </FormControl>
             </Grid>
