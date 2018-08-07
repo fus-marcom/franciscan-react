@@ -1,12 +1,12 @@
 import Grid from '@material-ui/core/Grid'
 import withStyles from '@material-ui/core/styles/withStyles'
+import Link from 'next/link'
 import React from 'react'
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import ProfileCard from '../components/ProfileCard'
 import TextSection from '../components/TextSection'
 import withRoot from '../components/withRoot'
-import HeaderList from '../components/HeaderList'
 
 const Admissions = ({ classes }) => (
   <Layout>
@@ -26,13 +26,14 @@ const Admissions = ({ classes }) => (
     />
 
     <Grid container className={classes.contentContainer}>
-      <Grid item className={classes.gridItemFix} xs={12} sm={4} md={4} lg={4}>
+      <Grid item className={classes.gridItemFix} xs={12} sm={4} lg={4}>
         <ProfileCard
-          profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Students/Noah_Fisher_landing_v2.jpg"
-          profileImgTitle="Noah Fisher"
-          profileType="Student Profile"
-          profileName="Noah Fisher"
-          content="I first learned about Franciscan from some people at my parish who studied here. They recommended I check it out, but I wasn’t so sure. When I visited, though, I was blown away by the people I met; they were so genuine and helpful. They were the biggest reason I decided to come to Franciscan."
+          profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Alumni_Profiles/IMG_1132.JPG"
+          profileImgTitle="Maggie McDermott"
+          profileType="Alumni Profile"
+          profileName="Maggie McDermott"
+          content="My choice to say Yes to giving my all even in those trying moments can be attributed to the growth and education I received at Franciscan."
+          bgContain
         />
       </Grid>
 
@@ -57,8 +58,73 @@ const Admissions = ({ classes }) => (
         />
       </Grid>
     </Grid>
-
+    <TextSection
+      sectionTitle="Our mission as a Franciscan and Catholic university that embraces the call to dynamic orthodoxy is to educate, to evangelize, and to send forth joyful disciples."
+      bgColor="#21412a"
+      textColor="#fff"
+      borderColor="#998643"
+    />
     <Grid container className={classes.contentContainer}>
+      <Grid item className={classes.listGridItem} xs={12} sm={4} md={4} lg={4}>
+        <section>
+          <ul className={classes.list}>
+            <h3 className={classes.listHeader}>To Educate</h3>
+
+            <li className={classes.headerListItem}>
+              <Link prefetch="" href="" as="">
+                40 Majors
+              </Link>
+            </li>
+            <li className={classes.headerListItem}>
+              <Link prefetch="" href="" as="">
+                Institutes and Centers
+              </Link>
+            </li>
+          </ul>
+        </section>
+      </Grid>
+      <Grid item className={classes.listGridItem} xs={12} sm={4} md={4} lg={4}>
+        <section>
+          <ul className={classes.list}>
+            <h3 className={classes.listHeader}>To Evangelize</h3>
+
+            <li className={classes.headerListItem}>
+              <Link prefetch="" href="" as="">
+                Chapel Ministries
+              </Link>
+            </li>
+            <li className={classes.headerListItem}>
+              <Link prefetch="" href="" as="">
+                Student Life
+              </Link>
+            </li>
+            <li className={classes.headerListItem}>
+              <Link prefetch="" href="" as="">
+                Missionary Outreach
+              </Link>
+            </li>
+          </ul>
+        </section>
+      </Grid>
+      <Grid item className={classes.listGridItem} xs={12} sm={4} md={4} lg={4}>
+        <section>
+          <ul className={classes.list}>
+            <h3 className={classes.listHeader}>To Send Forth</h3>
+
+            <li className={classes.headerListItem}>
+              95% of graduates are in grad school, a position in their field, or
+              religious life within 6 months of graduating
+            </li>
+            <li className={classes.headerListItem}>
+              <Link prefetch="" href="" as="">
+                Alumni Profiles
+              </Link>
+            </li>
+          </ul>
+        </section>
+      </Grid>
+    </Grid>
+    {/* <Grid container className={classes.contentContainer}>
       {majors.map((list, i) => {
         if (i < 3) {
           return (
@@ -96,24 +162,7 @@ const Admissions = ({ classes }) => (
         }
       })}
       <Grid item xs={0} sm={2} md={2} lg={2} />
-    </Grid>
-    <TextSection
-      sectionTitle="15 to 1 Student to Faculty Ratio"
-      bgColor="#21412a"
-      textColor="#fff"
-      borderColor="#998643"
-    />
-    <Grid container className={classes.contentContainer}>
-      <Grid item className={classes.listGridItem} xs={12} sm={4} md={4} lg={4}>
-        <h3>Application</h3>
-      </Grid>
-      <Grid item className={classes.listGridItem} xs={12} sm={4} md={4} lg={4}>
-        <h3>Transcripts</h3>
-      </Grid>
-      <Grid item className={classes.listGridItem} xs={12} sm={4} md={4} lg={4}>
-        <h3>Letters of Recommendation</h3>
-      </Grid>
-    </Grid>
+    </Grid> */}
   </Layout>
 )
 
@@ -192,30 +241,46 @@ const styles = theme => ({
   },
   listGridItem: {
     paddingBottom: 0
+  },
+  headerListItem: {
+    listStyleType: 'none',
+    fontSize: '20px'
+  },
+  listGridContainer: {
+    paddingTop: '8px'
+  },
+  list: {
+    padding: 0,
+    margin: 0
+  },
+  listHeader: {
+    margin: '4px 0',
+    fontWeight: 400,
+    fontSize: '24px'
   }
 })
 
-const majors = [
-  {
-    header: 'Business',
-    items: ['Accounting', 'Economics']
-  },
-  {
-    header: 'Business2',
-    items: ['Accounting2', 'Economics2']
-  },
-  {
-    header: 'Business3',
-    items: ['Accounting3', 'Economics3']
-  },
-  {
-    header: 'Business4',
-    items: ['Accounting4', 'Economics4']
-  },
-  {
-    header: 'Business5',
-    items: ['Accounting5', 'Economics5']
-  }
-]
+// const majors = [
+//   {
+//     header: 'Business',
+//     items: ['Accounting', 'Economics']
+//   },
+//   {
+//     header: 'Business2',
+//     items: ['Accounting2', 'Economics2']
+//   },
+//   {
+//     header: 'Business3',
+//     items: ['Accounting3', 'Economics3']
+//   },
+//   {
+//     header: 'Business4',
+//     items: ['Accounting4', 'Economics4']
+//   },
+//   {
+//     header: 'Business5',
+//     items: ['Accounting5', 'Economics5']
+//   }
+// ]
 
 export default withRoot(withStyles(styles)(Admissions))
