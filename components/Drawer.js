@@ -13,6 +13,7 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 import OpenInNewIcon from '@material-ui/icons/OpenInNew'
 import SearchIcon from '@material-ui/icons/Search'
 import Link from 'next/link'
+import Router from 'next/router'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import {
@@ -73,6 +74,15 @@ class TemporaryDrawer extends Component {
     this.setState({ search: e.target.value })
   }
 
+  handleSearch = () => {
+    if (this.state.search !== '') {
+      Router.push({
+        pathname: '/search',
+        query: { search: this.state.search }
+      })
+    }
+  }
+
   render () {
     const { classes, toggleDrawer, open } = this.props
     const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent)
@@ -112,7 +122,7 @@ class TemporaryDrawer extends Component {
                     onChange={this.handleSearchChange}
                     endAdornment={
                       <InputAdornment position="end">
-                        <IconButton>
+                        <IconButton onClick={this.handleSearch}>
                           <SearchIcon />
                         </IconButton>
                       </InputAdornment>

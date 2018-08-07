@@ -5,6 +5,7 @@ import FormGroup from '@material-ui/core/FormGroup'
 import FormHelperText from '@material-ui/core/FormHelperText'
 import FormLabel from '@material-ui/core/FormLabel'
 import Grid from '@material-ui/core/Grid'
+import LinearProgress from '@material-ui/core/LinearProgress'
 import MenuItem from '@material-ui/core/MenuItem'
 import Select from '@material-ui/core/Select'
 import { withStyles } from '@material-ui/core/styles'
@@ -16,9 +17,8 @@ import React, { Component } from 'react'
 import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 import { getJSON } from '../utils/fetch'
-import LinearProgress from '@material-ui/core/LinearProgress'
 
-class Page extends Component {
+class Search extends Component {
   state = {
     data: [],
     searchTerm: '',
@@ -213,7 +213,7 @@ class Page extends Component {
               <FormControl className={classes.formControl}>
                 <TextField
                   id="search"
-                  label="Search field"
+                  label="Search"
                   type="search"
                   className={classes.textField}
                   margin="normal"
@@ -393,4 +393,4 @@ const postTypes = [
   'sass-page'
 ]
 
-export default withRoot(withStyles(styles)(Page))
+export default withRoot(withStyles(styles)(Search))
