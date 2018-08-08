@@ -269,7 +269,9 @@ class Search extends Component {
                   .filter(item => item.acf.search_url !== null)
                   .map(item => (
                     <div key={item.id} className={classes.searchResult}>
-                      <span className={classes.type}>{item.type}</span>
+                      <span className={classes.type}>
+                        {item.type.replace(/-|page/gi, ' ').trim()}
+                      </span>
                       <a
                         href={item.acf.search_url}
                         className={classes.title}
