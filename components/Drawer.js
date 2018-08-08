@@ -120,6 +120,9 @@ class TemporaryDrawer extends Component {
                     }}
                     value={this.state.search}
                     onChange={this.handleSearchChange}
+                    onKeyPress={e =>
+                      e.key === 'Enter' ? this.handleSearch() : null
+                    }
                     endAdornment={
                       <InputAdornment position="end">
                         <IconButton onClick={this.handleSearch}>

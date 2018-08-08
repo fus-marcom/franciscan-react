@@ -40,6 +40,17 @@ class Search extends Component {
     loading: false
   }
 
+  componentDidMount () {
+    window.addEventListener('scroll', this.throttleScroll)
+    this.createBaseSearch()
+    this.setState({ searchTerm: window.location.search.split('=')[1] })
+    this.debouncedSearch()
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.throttleScroll)
+  }
+
   createBaseSearch = () => {
     let searchString = ''
     postTypes.map(type => {
@@ -52,6 +63,7 @@ class Search extends Component {
    * Render cards from api data
    */
   fetchSearchTerm = () => {
+    console.log(this.state.searchTerm)
     this.setState({ loading: true })
     const searchType = this.state.searchType || this.state.baseSearchString
     const apiUrl = 'https://wp.franciscan.university/wp-json/wp/v2/'
@@ -83,7 +95,7 @@ class Search extends Component {
    */
   getSearchResults = e => {
     this.createSearchTypes()
-    var { value } = e.target
+    const { value } = e.target
     this.setState({ searchTerm: value })
     if (value.length < 3) return
     this.debouncedSearch()
@@ -162,15 +174,6 @@ class Search extends Component {
 
   handleSort = event => {
     this.setState({ [event.target.name]: event.target.value })
-  }
-
-  componentDidMount () {
-    window.addEventListener('scroll', this.throttleScroll)
-    this.createBaseSearch()
-  }
-
-  componentWillUnmount () {
-    window.removeEventListener('scroll', this.throttleScroll)
   }
 
   handleScroll = () => {
