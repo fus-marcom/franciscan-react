@@ -81,13 +81,35 @@ exports[`<Index /> should render 1`] = `
         style="width:100%"
       >
         <div
-          class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 Hero-heroBtn-143"
+          class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 Hero-heroBtnContainer-143"
         >
           <a
-            class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-flatSecondary-246 Hero-invertedBtn-144"
+            class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-contained-252 MuiButton-raised-255 Hero-heroBtn-144"
+            href="https://franciscan.secure.force.com/form?formid=217772"
+            role="button"
+            style="width:200px"
+            tabindex="0"
+            title="Request Info"
+          >
+            <span
+              class="MuiButton-label-244"
+            >
+              Request Info
+            </span>
+            <span
+              class="MuiTouchRipple-root-110"
+            />
+          </a>
+        </div>
+        <div
+          class="MuiGrid-item-147 MuiGrid-grid-xs-6-180 Hero-heroBtnContainer-143"
+          style="justify-content:flex-end"
+        >
+          <a
+            class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-contained-252 MuiButton-raised-255 Hero-heroBtn-144"
             href="https://franciscanuniversity.force.com/portal"
             role="button"
-            style="width:192px"
+            style="width:92px"
             tabindex="0"
             title="Apply"
           >
@@ -102,34 +124,14 @@ exports[`<Index /> should render 1`] = `
           </a>
         </div>
         <div
-          class="MuiGrid-item-147 MuiGrid-grid-xs-6-180 Hero-heroBtn-143"
-          style="justify-content:flex-end"
-        >
-          <a
-            class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-flatSecondary-246 Hero-invertedBtn-144"
-            href="https://franciscan.secure.force.com/form?formid=217772"
-            role="button"
-            tabindex="0"
-            title="Inquire"
-          >
-            <span
-              class="MuiButton-label-244"
-            >
-              Inquire
-            </span>
-            <span
-              class="MuiTouchRipple-root-110"
-            />
-          </a>
-        </div>
-        <div
-          class="MuiGrid-item-147 MuiGrid-grid-xs-6-180 Hero-heroBtn-143"
+          class="MuiGrid-item-147 MuiGrid-grid-xs-6-180 Hero-heroBtnContainer-143"
           style="justify-content:flex-start"
         >
           <a
-            class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-flatSecondary-246 Hero-invertedBtn-144"
+            class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-contained-252 MuiButton-raised-255 Hero-heroBtn-144"
             href="https://franciscan.secure.force.com/events"
             role="button"
+            style="width:92px"
             tabindex="0"
             title="Visit"
           >
@@ -146,11 +148,11 @@ exports[`<Index /> should render 1`] = `
       </div>
     </div>
     <div
-      class="TextSection-section-258"
+      class="TextSection-section-267"
       style="border-top:2px solid undefined;border-bottom:2px solid undefined"
     >
       <div
-        class="TextSection-innerContainer-259"
+        class="TextSection-innerContainer-268"
       >
         <h1
           class="MuiTypography-root-117 MuiTypography-display2-120 MuiTypography-gutterBottom-134"
@@ -158,15 +160,15 @@ exports[`<Index /> should render 1`] = `
           Our Vision
         </h1>
         <p
-          class="MuiTypography-root-117 MuiTypography-body1-126 MuiTypography-gutterBottom-134 TextSection-sectionText-260"
+          class="MuiTypography-root-117 MuiTypography-body1-126 MuiTypography-gutterBottom-134 TextSection-sectionText-269"
         >
            To educate, evangelize, and send forth joyful disciples to restore all things in Christ.
         </p>
         <div
-          class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 TextSection-heroBtn-261"
+          class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 TextSection-heroBtn-270"
         >
           <a
-            class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-flatSecondary-246 TextSection-invertedBtn-262"
+            class="MuiButtonBase-root-100 MuiButton-root-274 MuiButton-flatSecondary-277 TextSection-invertedBtn-271"
             href="/about/our-mission"
             role="button"
             style="width:192px"
@@ -174,7 +176,7 @@ exports[`<Index /> should render 1`] = `
             title="Learn More"
           >
             <span
-              class="MuiButton-label-244"
+              class="MuiButton-label-275"
             >
               Learn More
             </span>
@@ -186,11 +188,11 @@ exports[`<Index /> should render 1`] = `
       </div>
     </div>
     <div
-      class="TextSection-section-258"
+      class="TextSection-section-267"
       style="background-color:#21412a;border-top:2px solid #998643;border-bottom:2px solid #998643"
     >
       <div
-        class="TextSection-innerContainer-259"
+        class="TextSection-innerContainer-268"
       >
         <h1
           class="MuiTypography-root-117 MuiTypography-display2-120 MuiTypography-gutterBottom-134"
@@ -199,7 +201,7 @@ exports[`<Index /> should render 1`] = `
           15 to 1 Student to Faculty Ratio
         </h1>
         <p
-          class="MuiTypography-root-117 MuiTypography-body1-126 MuiTypography-gutterBottom-134 TextSection-sectionText-260"
+          class="MuiTypography-root-117 MuiTypography-body1-126 MuiTypography-gutterBottom-134 TextSection-sectionText-269"
           style="color:#fff"
         />
       </div>
@@ -214,7 +216,7 @@ exports[`<Index /> should render 1`] = `
           class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194 MuiGrid-grid-md-6-208 MuiGrid-grid-lg-6-222 IndexPage-gridItemFix-4"
         >
           <div
-            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-265 IndexPage-card-2 IndexPage-videoIframeContainer-11"
+            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-289 IndexPage-card-2 IndexPage-videoIframeContainer-11"
           >
             <iframe
               allow="encrypted-media"
@@ -229,7 +231,7 @@ exports[`<Index /> should render 1`] = `
           class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194 MuiGrid-grid-md-6-208 MuiGrid-grid-lg-6-222 IndexPage-gridItemFix-4"
         >
           <div
-            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-265 ProfileCard-card-266"
+            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-289 ProfileCard-card-290"
           >
             <img
               src="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Students/Noah_Fisher_landing_v2.jpg"
@@ -237,10 +239,10 @@ exports[`<Index /> should render 1`] = `
               title="Noah Fisher"
             />
             <div
-              class="MuiCardContent-root-270"
+              class="MuiCardContent-root-294"
             >
               <span
-                class="MuiTypography-root-117 MuiTypography-caption-127 ProfileCard-category-268"
+                class="MuiTypography-root-117 MuiTypography-caption-127 ProfileCard-category-292"
               >
                 Student Profile
               </span>
@@ -250,21 +252,21 @@ exports[`<Index /> should render 1`] = `
                 Noah Fisher
               </h2>
               <p
-                class="MuiTypography-root-117 MuiTypography-body1-126 ProfileCard-quote-269"
+                class="MuiTypography-root-117 MuiTypography-body1-126 ProfileCard-quote-293"
               >
                 I first learned about Franciscan from some people at my parish who studied here. They recommended I check it out, but I wasn’t so sure. When I visited, though, I was blown away by the people I met; they were so genuine and helpful. They were the biggest reason I decided to come to Franciscan.
               </p>
             </div>
             <div
-              class="MuiCardActions-root-271"
+              class="MuiCardActions-root-295"
             >
               <button
-                class="MuiButtonBase-root-100 MuiButton-root-273 MuiButton-text-275 MuiButton-textPrimary-276 MuiButton-flat-278 MuiButton-flatPrimary-279 MuiButton-sizeSmall-294"
+                class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-text-245 MuiButton-textPrimary-246 MuiButton-flat-248 MuiButton-flatPrimary-249 MuiButton-sizeSmall-264"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiButton-label-274"
+                  class="MuiButton-label-244"
                 >
                   Learn More
                 </span>
@@ -279,7 +281,7 @@ exports[`<Index /> should render 1`] = `
           class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194 MuiGrid-grid-lg-6-222 IndexPage-gridItemFix-4"
         >
           <div
-            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-265 ProfileCard-card-266"
+            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-289 ProfileCard-card-290"
           >
             <img
               src="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Alumni_Profiles/IMG_1132.JPG"
@@ -287,10 +289,10 @@ exports[`<Index /> should render 1`] = `
               title="Maggie McDermott"
             />
             <div
-              class="MuiCardContent-root-270"
+              class="MuiCardContent-root-294"
             >
               <span
-                class="MuiTypography-root-117 MuiTypography-caption-127 ProfileCard-category-268"
+                class="MuiTypography-root-117 MuiTypography-caption-127 ProfileCard-category-292"
               >
                 Alumni Profile
               </span>
@@ -300,21 +302,21 @@ exports[`<Index /> should render 1`] = `
                 Maggie McDermott
               </h2>
               <p
-                class="MuiTypography-root-117 MuiTypography-body1-126 ProfileCard-quote-269"
+                class="MuiTypography-root-117 MuiTypography-body1-126 ProfileCard-quote-293"
               >
                 My choice to say Yes to giving my all even in those trying moments can be attributed to the growth and education I received at Franciscan.
               </p>
             </div>
             <div
-              class="MuiCardActions-root-271"
+              class="MuiCardActions-root-295"
             >
               <button
-                class="MuiButtonBase-root-100 MuiButton-root-273 MuiButton-text-275 MuiButton-textPrimary-276 MuiButton-flat-278 MuiButton-flatPrimary-279 MuiButton-sizeSmall-294"
+                class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-text-245 MuiButton-textPrimary-246 MuiButton-flat-248 MuiButton-flatPrimary-249 MuiButton-sizeSmall-264"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiButton-label-274"
+                  class="MuiButton-label-244"
                 >
                   Learn More
                 </span>
@@ -329,10 +331,10 @@ exports[`<Index /> should render 1`] = `
           class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194 IndexPage-gridItemFix-4"
         >
           <div
-            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-265 ListCard-card-297"
+            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-289 ListCard-card-297"
           >
             <div
-              class="MuiCardContent-root-270"
+              class="MuiCardContent-root-294"
             >
               <h2
                 class="MuiTypography-root-117 MuiTypography-headline-122"
@@ -466,7 +468,7 @@ exports[`<Index /> should render 1`] = `
           class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194 MuiGrid-grid-lg-6-222 IndexPage-gridItemFix-4"
         >
           <div
-            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-265 ProfileCard-card-266"
+            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-289 ProfileCard-card-290"
           >
             <img
               src="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Faculty/Education/boury.jpg?n=1668"
@@ -474,10 +476,10 @@ exports[`<Index /> should render 1`] = `
               title="Dr. Tiffany Boury"
             />
             <div
-              class="MuiCardContent-root-270"
+              class="MuiCardContent-root-294"
             >
               <span
-                class="MuiTypography-root-117 MuiTypography-caption-127 ProfileCard-category-268"
+                class="MuiTypography-root-117 MuiTypography-caption-127 ProfileCard-category-292"
               >
                 Faculty Profile
               </span>
@@ -487,21 +489,21 @@ exports[`<Index /> should render 1`] = `
                 Dr. Tiffany Boury
               </h2>
               <p
-                class="MuiTypography-root-117 MuiTypography-body1-126 ProfileCard-quote-269"
+                class="MuiTypography-root-117 MuiTypography-body1-126 ProfileCard-quote-293"
               >
                 Associate Professor of Education
               </p>
             </div>
             <div
-              class="MuiCardActions-root-271"
+              class="MuiCardActions-root-295"
             >
               <button
-                class="MuiButtonBase-root-100 MuiButton-root-273 MuiButton-text-275 MuiButton-textPrimary-276 MuiButton-flat-278 MuiButton-flatPrimary-279 MuiButton-sizeSmall-294"
+                class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-text-245 MuiButton-textPrimary-246 MuiButton-flat-248 MuiButton-flatPrimary-249 MuiButton-sizeSmall-264"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiButton-label-274"
+                  class="MuiButton-label-244"
                 >
                   Learn More
                 </span>
@@ -516,7 +518,7 @@ exports[`<Index /> should render 1`] = `
           class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194 MuiGrid-grid-lg-6-222 IndexPage-gridItemFix-4"
         >
           <div
-            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-265 IndexPage-card-2"
+            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-289 IndexPage-card-2"
           >
             <div
               class="MuiCardMedia-root-323 IndexPage-media-3"
@@ -524,7 +526,7 @@ exports[`<Index /> should render 1`] = `
               title="Austria Campus"
             />
             <div
-              class="MuiCardContent-root-270"
+              class="MuiCardContent-root-294"
             >
               <p
                 class="MuiTypography-root-117 MuiTypography-body1-126"
@@ -539,7 +541,7 @@ exports[`<Index /> should render 1`] = `
           class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194 MuiGrid-grid-md-6-208 MuiGrid-grid-lg-6-222 IndexPage-gridItemFix-4"
         >
           <div
-            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-265 IndexPage-card-2 IndexPage-videoIframeContainer-11"
+            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-289 IndexPage-card-2 IndexPage-videoIframeContainer-11"
           >
             <iframe
               allow="encrypted-media"

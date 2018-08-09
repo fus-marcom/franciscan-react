@@ -2,7 +2,7 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
 import React, { Component } from 'react'
-import InvertedButton from './InvertedButton'
+import Button from '@material-ui/core/Button'
 
 const styles = theme => ({
   parallax: {
@@ -19,15 +19,14 @@ const styles = theme => ({
     flexDirection: 'column',
     textAlign: 'center'
   },
-  heroBtn: {
+  heroBtnContainer: {
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    fontSize: '20px'
   },
-  invertedBtn: {
-    color: '#fff',
-    backgroundColor: 'transparent',
-    border: '2px #fff solid',
-    boxShadow: 'none'
+  heroBtn: {
+    fontSize: '20px',
+    color: '#21412a'
   },
   white: {
     color: '#fff'
@@ -68,52 +67,57 @@ class Hero extends Component {
     )
 
     const PrimaryBtn = (
-      <Grid item className={classes.heroBtn} xs={12}>
-        <InvertedButton
+      <Grid item className={classes.heroBtnContainer} xs={12}>
+        <Button
+          className={classes.heroBtn}
+          variant="contained"
           href={primaryBtnLink}
           title={primaryBtnText}
-          className={classes.invertedBtn}
-          color="secondary"
-          style={{ width: '192px' }}
+          color="#fff"
+          style={{ width: '200px' }}
         >
           {primaryBtnText}
-        </InvertedButton>
+        </Button>
       </Grid>
     )
 
     const SecondaryBtn = (
       <Grid
         item
-        className={classes.heroBtn}
+        className={classes.heroBtnContainer}
         xs={6}
         style={{ justifyContent: 'flex-end' }}
       >
-        <InvertedButton
+        <Button
+          className={classes.heroBtn}
+          variant="contained"
           href={secondaryBtnLink}
           title={secondaryBtnText}
-          className={classes.invertedBtn}
-          color="secondary"
+          color="#fff"
+          style={{ width: '92px' }}
         >
           {secondaryBtnText}
-        </InvertedButton>
+        </Button>
       </Grid>
     )
 
     const TertiaryBtn = (
       <Grid
         item
-        className={classes.heroBtn}
+        className={classes.heroBtnContainer}
         xs={6}
         style={{ justifyContent: 'flex-start' }}
       >
-        <InvertedButton
+        <Button
+          className={classes.heroBtn}
+          variant="contained"
           href={tertiaryBtnLink}
           title={tertiaryBtnText}
-          className={classes.invertedBtn}
-          color="secondary"
+          color="#fff"
+          style={{ width: '92px' }}
         >
           {tertiaryBtnText}
-        </InvertedButton>
+        </Button>
       </Grid>
     )
     return (

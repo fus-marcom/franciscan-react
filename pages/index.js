@@ -97,10 +97,10 @@ const IndexPage = ({ classes }) => (
       subtitleText={
         <span>Academically Excellent &#8226; Passionately Catholic</span>
       }
-      primaryBtnText="Apply"
-      primaryBtnLink="https://franciscanuniversity.force.com/portal"
-      secondaryBtnText="Inquire"
-      secondaryBtnLink="https://franciscan.secure.force.com/form?formid=217772"
+      primaryBtnText="Request Info"
+      primaryBtnLink="https://franciscan.secure.force.com/form?formid=217772"
+      secondaryBtnText="Apply"
+      secondaryBtnLink="https://franciscanuniversity.force.com/portal"
       tertiaryBtnText="Visit"
       tertiaryBtnLink="https://franciscan.secure.force.com/events"
     />
