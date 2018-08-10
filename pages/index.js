@@ -2,8 +2,8 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography'
 import withStyles from '@material-ui/core/styles/withStyles'
+import Typography from '@material-ui/core/Typography'
 import React from 'react'
 import Masonry from 'react-masonry-component'
 import Hero from '../components/Hero'
@@ -105,9 +105,9 @@ const IndexPage = ({ classes }) => (
       tertiaryBtnLink="https://franciscan.secure.force.com/events"
     />
     <TextSection
-      sectionTitle="Our Vision"
-      text=" To educate, evangelize, and send forth joyful disciples to restore all things in Christ."
-      btnLink="/about/our-mission"
+      sectionTitle="Degrees"
+      text=" We have lots of majors"
+      btnLink="/academics/ug/majors"
       btnText="Learn More"
     />
     <TextSection
@@ -115,6 +115,12 @@ const IndexPage = ({ classes }) => (
       bgColor="#21412a"
       textColor="#fff"
       borderColor="#998643"
+    />
+    <TextSection
+      sectionTitle="Cost and Financial Aid"
+      text=" To educate, evangelize, and send forth joyful disciples to restore all things in Christ."
+      btnLink="/about/our-mission"
+      btnText="Calculate Cost"
     />
     <div className={classes.contentContainer}>
       <Masonry>

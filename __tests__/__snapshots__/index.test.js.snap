@@ -157,19 +157,19 @@ exports[`<Index /> should render 1`] = `
         <h1
           class="MuiTypography-root-117 MuiTypography-display2-120 MuiTypography-gutterBottom-134"
         >
-          Our Vision
+          Degrees
         </h1>
         <p
           class="MuiTypography-root-117 MuiTypography-body1-126 MuiTypography-gutterBottom-134 TextSection-sectionText-269"
         >
-           To educate, evangelize, and send forth joyful disciples to restore all things in Christ.
+           We have lots of majors
         </p>
         <div
           class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 TextSection-heroBtn-270"
         >
           <a
             class="MuiButtonBase-root-100 MuiButton-root-274 MuiButton-flatSecondary-277 TextSection-invertedBtn-271"
-            href="/about/our-mission"
+            href="/academics/ug/majors"
             role="button"
             style="width:192px"
             tabindex="0"
@@ -204,6 +204,46 @@ exports[`<Index /> should render 1`] = `
           class="MuiTypography-root-117 MuiTypography-body1-126 MuiTypography-gutterBottom-134 TextSection-sectionText-269"
           style="color:#fff"
         />
+      </div>
+    </div>
+    <div
+      class="TextSection-section-267"
+      style="border-top:2px solid undefined;border-bottom:2px solid undefined"
+    >
+      <div
+        class="TextSection-innerContainer-268"
+      >
+        <h1
+          class="MuiTypography-root-117 MuiTypography-display2-120 MuiTypography-gutterBottom-134"
+        >
+          Cost and Financial Aid
+        </h1>
+        <p
+          class="MuiTypography-root-117 MuiTypography-body1-126 MuiTypography-gutterBottom-134 TextSection-sectionText-269"
+        >
+           To educate, evangelize, and send forth joyful disciples to restore all things in Christ.
+        </p>
+        <div
+          class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 TextSection-heroBtn-270"
+        >
+          <a
+            class="MuiButtonBase-root-100 MuiButton-root-274 MuiButton-flatSecondary-277 TextSection-invertedBtn-271"
+            href="/about/our-mission"
+            role="button"
+            style="width:192px"
+            tabindex="0"
+            title="Calculate Cost"
+          >
+            <span
+              class="MuiButton-label-275"
+            >
+              Calculate Cost
+            </span>
+            <span
+              class="MuiTouchRipple-root-110"
+            />
+          </a>
+        </div>
       </div>
     </div>
     <div
