@@ -185,9 +185,9 @@ class ButtonAppBar extends Component {
                 <Grid item xs={12} style={{ paddingTop: 0 }}>
                   <ul className={classes.menuList}>
                     <AppBarMenuItem
-                      toggleDrawer={toggleDrawer}
-                      linkId="academics"
-                      content="Academics"
+                      linkUrl="/academics/ug/majors"
+                      content="Degrees"
+                      asUrl="/page?type=academicsPages&id=majors"
                     />
                     <AppBarMenuItem
                       toggleDrawer={toggleDrawer}
@@ -195,14 +195,14 @@ class ButtonAppBar extends Component {
                       content="Admissions"
                     />
                     <AppBarMenuItem
-                      toggleDrawer={toggleDrawer}
-                      linkId="evangelization"
-                      content="Evangelization"
+                      content="Cost and Aid"
+                      linkUrl="/sfs/new/costs-and-fees"
+                      asUrl="/page?type=sfsPages&id=costs-and-fees"
                     />
                     <AppBarMenuItem
                       toggleDrawer={toggleDrawer}
-                      linkId="student-life"
-                      content="Student Life"
+                      linkId="about"
+                      content="About"
                     />
                     <SvgIcon
                       viewBox="0 0 24 24"

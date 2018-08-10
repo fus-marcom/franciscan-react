@@ -84,7 +84,7 @@ exports[`<Index /> should render 1`] = `
           class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 Hero-heroBtnContainer-143"
         >
           <a
-            class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-contained-252 MuiButton-raised-255 Hero-heroBtn-144"
+            class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-contained-252 MuiButton-raised-255 MuiButton-colorInherit-262 Hero-heroBtn-144"
             href="https://franciscan.secure.force.com/form?formid=217772"
             role="button"
             style="width:200px"
@@ -106,7 +106,7 @@ exports[`<Index /> should render 1`] = `
           style="justify-content:flex-end"
         >
           <a
-            class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-contained-252 MuiButton-raised-255 Hero-heroBtn-144"
+            class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-contained-252 MuiButton-raised-255 MuiButton-colorInherit-262 Hero-heroBtn-144"
             href="https://franciscanuniversity.force.com/portal"
             role="button"
             style="width:92px"
@@ -128,7 +128,7 @@ exports[`<Index /> should render 1`] = `
           style="justify-content:flex-start"
         >
           <a
-            class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-contained-252 MuiButton-raised-255 Hero-heroBtn-144"
+            class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-contained-252 MuiButton-raised-255 MuiButton-colorInherit-262 Hero-heroBtn-144"
             href="https://franciscan.secure.force.com/events"
             role="button"
             style="width:92px"

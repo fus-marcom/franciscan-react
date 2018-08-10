@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
+import Link from 'next/link'
+import React, { Component } from 'react'
 
 const styles = theme => ({
   listLi: {
@@ -18,18 +19,34 @@ const styles = theme => ({
 
 class AppBarMenuItem extends Component {
   render () {
-    const { classes, toggleDrawer, linkId, content } = this.props
+    const {
+      classes,
+      toggleDrawer,
+      linkId,
+      content,
+      asUrl,
+      linkUrl
+    } = this.props
     return (
       <li className={classes.listLi}>
         <Typography
-          component={'a'}
           variant={'headline'}
           id={linkId}
           title={content}
           className={classes.ulLink}
-          onClick={() => toggleDrawer(linkId)}
+          onClick={() => toggleDrawer && toggleDrawer(linkId)}
         >
-          {content}
+          {linkId ? (
+            content
+          ) : (
+            <Link
+              prefetch={asUrl && true}
+              href={asUrl || linkUrl}
+              as={asUrl && linkUrl}
+            >
+              <a style={{ color: 'rgba(0,0,0,0.87)' }}>{content}</a>
+            </Link>
+          )}
         </Typography>
       </li>
     )
