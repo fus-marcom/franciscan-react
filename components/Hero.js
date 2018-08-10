@@ -1,8 +1,8 @@
-import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography'
-import { withStyles } from '@material-ui/core/styles'
-import React, { Component } from 'react'
 import Button from '@material-ui/core/Button'
+import Grid from '@material-ui/core/Grid'
+import { withStyles } from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography'
+import React, { Component } from 'react'
 
 const styles = theme => ({
   parallax: {
@@ -26,7 +26,8 @@ const styles = theme => ({
   },
   heroBtn: {
     fontSize: '20px',
-    color: '#21412a'
+    color: '#21412a',
+    backgroundColor: '#fff'
   },
   white: {
     color: '#fff'
@@ -73,7 +74,7 @@ class Hero extends Component {
           variant="contained"
           href={primaryBtnLink}
           title={primaryBtnText}
-          color="#fff"
+          color="inherit"
           style={{ width: '200px' }}
         >
           {primaryBtnText}
@@ -93,7 +94,7 @@ class Hero extends Component {
           variant="contained"
           href={secondaryBtnLink}
           title={secondaryBtnText}
-          color="#fff"
+          color="inherit"
           style={{ width: '92px' }}
         >
           {secondaryBtnText}
@@ -113,7 +114,7 @@ class Hero extends Component {
           variant="contained"
           href={tertiaryBtnLink}
           title={tertiaryBtnText}
-          color="#fff"
+          color="inherit"
           style={{ width: '92px' }}
         >
           {tertiaryBtnText}
