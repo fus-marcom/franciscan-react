@@ -25,37 +25,6 @@ import {
 } from '../data/drawerMenu'
 import DrawerItem from './DrawerItem'
 
-const styles = theme => ({
-  list: {
-    width: 300,
-    [theme.breakpoints.down('xs')]: {
-      width: 265
-    }
-  },
-  listFull: {
-    width: 'auto'
-  },
-  formControl: {
-    margin: theme.spacing.unit
-  },
-  drawerImg: {
-    margin: '0 auto',
-    cursor: 'pointer'
-  },
-  externalLink: {
-    textDecoration: 'none',
-    color: 'inherit'
-  },
-  inputLabelFocused: {
-    color: '#998643'
-  },
-  inputInkbar: {
-    '&:after': {
-      backgroundColor: '#998643'
-    }
-  }
-})
-
 class TemporaryDrawer extends Component {
   static defaultProps = {
     open: PropTypes.bool.isRequired,
@@ -120,9 +89,7 @@ class TemporaryDrawer extends Component {
                     }}
                     value={this.state.search}
                     onChange={this.handleSearchChange}
-                    onKeyPress={e =>
-                      e.key === 'Enter' ? this.handleSearch() : null
-                    }
+                    onKeyPress={e => e.key === 'Enter' && this.handleSearch()}
                     endAdornment={
                       <InputAdornment position="end">
                         <IconButton onClick={this.handleSearch}>
@@ -270,4 +237,34 @@ class TemporaryDrawer extends Component {
   }
 }
 
+const styles = theme => ({
+  list: {
+    width: 300,
+    [theme.breakpoints.down('xs')]: {
+      width: 265
+    }
+  },
+  listFull: {
+    width: 'auto'
+  },
+  formControl: {
+    margin: theme.spacing.unit
+  },
+  drawerImg: {
+    margin: '0 auto',
+    cursor: 'pointer'
+  },
+  externalLink: {
+    textDecoration: 'none',
+    color: 'inherit'
+  },
+  inputLabelFocused: {
+    color: '#998643'
+  },
+  inputInkbar: {
+    '&:after': {
+      backgroundColor: '#998643'
+    }
+  }
+})
 export default withStyles(styles)(TemporaryDrawer)

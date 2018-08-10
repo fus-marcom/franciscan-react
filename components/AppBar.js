@@ -3,15 +3,159 @@ import Grid from '@material-ui/core/Grid'
 import Hidden from '@material-ui/core/Hidden'
 import IconButton from '@material-ui/core/IconButton'
 import Input from '@material-ui/core/Input'
+import InputAdornment from '@material-ui/core/InputAdornment'
 import { withStyles } from '@material-ui/core/styles'
 import SvgIcon from '@material-ui/core/SvgIcon'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
+import Close from '@material-ui/icons/Close'
 import MenuIcon from '@material-ui/icons/Menu'
 import Link from 'next/link'
+import Router from 'next/router'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import AppBarMenuItem from './AppBarMenuItem'
+
+class ButtonAppBar extends Component {
+  static defaultProps = {
+    classes: PropTypes.object.isRequired
+  }
+  state = {
+    isSearchOpen: false,
+    searchText: ''
+  }
+  onSearchClick = () => {
+    this.state.isSearchOpen
+      ? this.handleSearch()
+      : this.setState({ isSearchOpen: true })
+  }
+
+  closeInput = () => {
+    this.setState({ isSearchOpen: false })
+  }
+
+  handleSearch = () => {
+    if (this.state.search !== '') {
+      Router.push({
+        pathname: '/search',
+        query: { search: this.state.search }
+      })
+    }
+  }
+
+  onSeachChange = e => this.setState({ searchText: e.target.value })
+
+  render () {
+    const { classes, toggleDrawer } = this.props
+    const { isSearchOpen, searchText } = this.state
+    return (
+      <div className={classes.root}>
+        <AppBar className={classes.appBar} position="static">
+          <Toolbar>
+            <div className={classes.col1}>
+              <IconButton
+                className={classes.menuButton}
+                aria-label="Menu"
+                title="Menu"
+                onClick={toggleDrawer}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Typography
+                variant="title"
+                component="span"
+                className={classes.flex}
+              >
+                <Link href="/">
+                  <a>
+                    <Hidden mdUp>
+                      <img
+                        className={classes.mobileHeaderImage}
+                        src="/static/img/fus-logo.svg"
+                        alt="Logo of Franciscan University of Steubenville"
+                      />
+                    </Hidden>
+                    <Hidden smDown>
+                      <img
+                        className={classes.headerImage}
+                        src="/static/img/franciscan-logo.svg"
+                        alt="Logo of Franciscan University of Steubenville"
+                      />
+                    </Hidden>
+                  </a>
+                </Link>
+              </Typography>
+            </div>
+            <Hidden smDown>
+              <Grid container className={classes.col2}>
+                <Grid item xs={12} style={{ paddingTop: 0 }}>
+                  <ul className={classes.menuList}>
+                    <AppBarMenuItem
+                      linkUrl="/academics/ug/majors"
+                      content="Degrees"
+                      asUrl="/page?type=academicsPages&id=majors"
+                    />
+                    <AppBarMenuItem
+                      toggleDrawer={toggleDrawer}
+                      linkId="admissions"
+                      content="Admissions"
+                    />
+                    <AppBarMenuItem
+                      content="Cost and Aid"
+                      linkUrl="/sfs/new/costs-and-fees"
+                      asUrl="/page?type=sfsPages&id=costs-and-fees"
+                    />
+                    <AppBarMenuItem
+                      toggleDrawer={toggleDrawer}
+                      linkId="about"
+                      content="About"
+                    />
+                    <SvgIcon
+                      viewBox="0 0 24 24"
+                      className={classes.searchSVG}
+                      onClick={this.onSearchClick}
+                    >
+                      <title>Search Franciscan</title>
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                      />
+                      <path d="M0 0h24v24H0z" fill="none" />
+                    </SvgIcon>
+
+                    <Input
+                      className={
+                        isSearchOpen ? classes.searchOpen : classes.searchClosed
+                      }
+                      placeholder="Search"
+                      classes={{ underline: classes.searchInput }}
+                      inputRef={inp => {
+                        this.searchInput = inp
+                      }}
+                      value={searchText}
+                      onChange={this.onSeachChange}
+                      onKeyPress={e => e.key === 'Enter' && this.handleSearch()}
+                      endAdornment={
+                        <InputAdornment position="end">
+                          <IconButton
+                            aria-label="Close search input"
+                            onClick={this.closeInput}
+                          >
+                            <Close />
+                          </IconButton>
+                        </InputAdornment>
+                      }
+                    />
+                  </ul>
+                </Grid>
+              </Grid>
+            </Hidden>
+          </Toolbar>
+        </AppBar>
+      </div>
+    )
+  }
+}
 
 const styles = theme => ({
   root: {
@@ -116,128 +260,5 @@ const styles = theme => ({
     }
   }
 })
-
-class ButtonAppBar extends Component {
-  static defaultProps = {
-    classes: PropTypes.object.isRequired
-  }
-  state = {
-    isSearchOpen: false,
-    searchText: ''
-  }
-  onSearchClick = () => {
-    this.setState(
-      prevState => {
-        return { isSearchOpen: !prevState.isSearchOpen }
-      },
-      () => {
-        if (this.state.isSearchOpen) {
-          this.searchInput && this.searchInput.focus()
-        }
-      }
-    )
-  }
-  onSeachChange = e => this.setState({ searchText: e.target.value })
-
-  render () {
-    const { classes, toggleDrawer } = this.props
-    const { isSearchOpen, searchText } = this.state
-    return (
-      <div className={classes.root}>
-        <AppBar className={classes.appBar} position="static">
-          <Toolbar>
-            <div className={classes.col1}>
-              <IconButton
-                className={classes.menuButton}
-                aria-label="Menu"
-                title="Menu"
-                onClick={toggleDrawer}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Typography
-                variant="title"
-                component="span"
-                className={classes.flex}
-              >
-                <Link href="/">
-                  <a>
-                    <Hidden mdUp>
-                      <img
-                        className={classes.mobileHeaderImage}
-                        src="/static/img/fus-logo.svg"
-                        alt="Logo of Franciscan University of Steubenville"
-                      />
-                    </Hidden>
-                    <Hidden smDown>
-                      <img
-                        className={classes.headerImage}
-                        src="/static/img/franciscan-logo.svg"
-                        alt="Logo of Franciscan University of Steubenville"
-                      />
-                    </Hidden>
-                  </a>
-                </Link>
-              </Typography>
-            </div>
-            <Hidden smDown>
-              <Grid container className={classes.col2}>
-                <Grid item xs={12} style={{ paddingTop: 0 }}>
-                  <ul className={classes.menuList}>
-                    <AppBarMenuItem
-                      linkUrl="/academics/ug/majors"
-                      content="Degrees"
-                      asUrl="/page?type=academicsPages&id=majors"
-                    />
-                    <AppBarMenuItem
-                      toggleDrawer={toggleDrawer}
-                      linkId="admissions"
-                      content="Admissions"
-                    />
-                    <AppBarMenuItem
-                      content="Cost and Aid"
-                      linkUrl="/sfs/new/costs-and-fees"
-                      asUrl="/page?type=sfsPages&id=costs-and-fees"
-                    />
-                    <AppBarMenuItem
-                      toggleDrawer={toggleDrawer}
-                      linkId="about"
-                      content="About"
-                    />
-                    <SvgIcon
-                      viewBox="0 0 24 24"
-                      className={classes.searchSVG}
-                      onClick={this.onSearchClick}
-                    >
-                      <title>Search Franciscan</title>
-                      <path
-                        xmlns="http://www.w3.org/2000/svg"
-                        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-                      />
-                      <path d="M0 0h24v24H0z" fill="none" />
-                    </SvgIcon>
-
-                    <Input
-                      className={
-                        isSearchOpen ? classes.searchOpen : classes.searchClosed
-                      }
-                      placeholder="Search"
-                      classes={{ underline: classes.searchInput }}
-                      inputRef={inp => {
-                        this.searchInput = inp
-                      }}
-                      value={searchText}
-                      onChange={this.onSeachChange}
-                    />
-                  </ul>
-                </Grid>
-              </Grid>
-            </Hidden>
-          </Toolbar>
-        </AppBar>
-      </div>
-    )
-  }
-}
 
 export default withStyles(styles)(ButtonAppBar)
