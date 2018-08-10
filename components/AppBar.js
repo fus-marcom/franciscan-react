@@ -88,6 +88,18 @@ class ButtonAppBar extends Component {
             </div>
             <Hidden smDown>
               <Grid container className={classes.col2}>
+                <Grid
+                  item
+                  xs={12}
+                  style={{ textAlign: 'right', marginBottom: '8px' }}
+                >
+                  <a
+                    href="tel:18007836220"
+                    style={{ padding: '8px', margin: '8px', fontSize: '18px' }}
+                  >
+                    1.800.783.6220
+                  </a>
+                </Grid>
                 <Grid item xs={12} style={{ paddingTop: 0 }}>
                   <ul className={classes.menuList}>
                     <AppBarMenuItem

@@ -1,4 +1,4 @@
-main {
+body {
   font-family: Roboto, sans-serif;
 }
 
@@ -104,6 +104,7 @@ h6 {
   margin-bottom: 0;
 }
 
-img, iframe {
+img,
+iframe {
   max-width: 100%;
 }
