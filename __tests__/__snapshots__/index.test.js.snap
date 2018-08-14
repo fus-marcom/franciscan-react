@@ -8,27 +8,27 @@ exports[`<Index /> should render 1`] = `
     class="ButtonAppBar-root-34"
   >
     <header
-      class="MuiPaper-root-63 MuiPaper-elevation4-69 MuiAppBar-root-55 MuiAppBar-positionStatic-59 MuiAppBar-colorPrimary-61 ButtonAppBar-appBar-36"
+      class="MuiPaper-root-64 MuiPaper-elevation4-70 MuiAppBar-root-56 MuiAppBar-positionStatic-60 MuiAppBar-colorPrimary-62 ButtonAppBar-appBar-36"
     >
       <div
-        class="MuiToolbar-root-90 MuiToolbar-regular-92 MuiToolbar-gutters-91"
+        class="MuiToolbar-root-91 MuiToolbar-regular-93 MuiToolbar-gutters-92 ButtonAppBar-toolbar-37"
       >
         <div
-          class="ButtonAppBar-col1-47"
+          class="ButtonAppBar-col1-48"
         >
           <button
             aria-label="Menu"
-            class="MuiButtonBase-root-100 MuiIconButton-root-94 ButtonAppBar-menuButton-37"
+            class="MuiButtonBase-root-101 MuiIconButton-root-95 ButtonAppBar-menuButton-38"
             tabindex="0"
             title="Menu"
             type="button"
           >
             <span
-              class="MuiIconButton-label-99"
+              class="MuiIconButton-label-100"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root-103"
+                class="MuiSvgIcon-root-104"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -42,16 +42,30 @@ exports[`<Index /> should render 1`] = `
               </svg>
             </span>
             <span
-              class="MuiTouchRipple-root-110"
+              class="MuiTouchRipple-root-111"
             />
           </button>
           <span
-            class="MuiTypography-root-117 MuiTypography-title-123 ButtonAppBar-flex-35"
+            class="MuiTypography-root-118 MuiTypography-title-124 ButtonAppBar-flex-35"
           >
             <a
               href="/"
             />
           </span>
+        </div>
+        <div
+          class="MuiGrid-container-143 ButtonAppBar-col2-49 ButtonAppBar-mobileGridContainer-41"
+        >
+          <div
+            class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 ButtonAppBar-telContainer-42"
+          >
+            <a
+              class="ButtonAppBar-telLink-43"
+              href="tel:18007836220"
+            >
+              1.800.783.6220
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -60,16 +74,16 @@ exports[`<Index /> should render 1`] = `
     class="Layout-main-13"
   >
     <div
-      class="Hero-parallax-142"
+      class="Hero-parallax-240"
       style="background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../static/img/biology-students.jpg)"
     >
       <h1
-        class="MuiTypography-root-117 MuiTypography-display2-120 MuiTypography-gutterBottom-134 Hero-white-145"
+        class="MuiTypography-root-118 MuiTypography-display2-121 MuiTypography-gutterBottom-135 Hero-white-243"
       >
         Franciscan University of Steubenville
       </h1>
       <h3
-        class="MuiTypography-root-117 MuiTypography-subheading-124 MuiTypography-gutterBottom-134 Hero-white-145"
+        class="MuiTypography-root-118 MuiTypography-subheading-125 MuiTypography-gutterBottom-135 Hero-white-243"
         style="font-weight:500;font-size:22px;margin-bottom:1.35em"
       >
         <span>
@@ -77,14 +91,14 @@ exports[`<Index /> should render 1`] = `
         </span>
       </h3>
       <div
-        class="MuiGrid-container-146 MuiGrid-spacing-xs-16-169"
+        class="MuiGrid-container-143 MuiGrid-spacing-xs-16-166"
         style="width:100%"
       >
         <div
-          class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 Hero-heroBtnContainer-143"
+          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 Hero-heroBtnContainer-241"
         >
           <a
-            class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-contained-252 MuiButton-raised-255 MuiButton-colorInherit-262 Hero-heroBtn-144"
+            class="MuiButtonBase-root-101 MuiButton-root-244 MuiButton-contained-253 MuiButton-raised-256 MuiButton-colorInherit-263 Hero-heroBtn-242"
             href="https://franciscan.secure.force.com/form?formid=217772"
             role="button"
             style="width:200px"
@@ -92,21 +106,21 @@ exports[`<Index /> should render 1`] = `
             title="Request Info"
           >
             <span
-              class="MuiButton-label-244"
+              class="MuiButton-label-245"
             >
               Request Info
             </span>
             <span
-              class="MuiTouchRipple-root-110"
+              class="MuiTouchRipple-root-111"
             />
           </a>
         </div>
         <div
-          class="MuiGrid-item-147 MuiGrid-grid-xs-6-180 Hero-heroBtnContainer-143"
+          class="MuiGrid-item-144 MuiGrid-grid-xs-6-177 Hero-heroBtnContainer-241"
           style="justify-content:flex-end"
         >
           <a
-            class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-contained-252 MuiButton-raised-255 MuiButton-colorInherit-262 Hero-heroBtn-144"
+            class="MuiButtonBase-root-101 MuiButton-root-244 MuiButton-contained-253 MuiButton-raised-256 MuiButton-colorInherit-263 Hero-heroBtn-242"
             href="https://franciscanuniversity.force.com/portal"
             role="button"
             style="width:92px"
@@ -114,21 +128,21 @@ exports[`<Index /> should render 1`] = `
             title="Apply"
           >
             <span
-              class="MuiButton-label-244"
+              class="MuiButton-label-245"
             >
               Apply
             </span>
             <span
-              class="MuiTouchRipple-root-110"
+              class="MuiTouchRipple-root-111"
             />
           </a>
         </div>
         <div
-          class="MuiGrid-item-147 MuiGrid-grid-xs-6-180 Hero-heroBtnContainer-143"
+          class="MuiGrid-item-144 MuiGrid-grid-xs-6-177 Hero-heroBtnContainer-241"
           style="justify-content:flex-start"
         >
           <a
-            class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-contained-252 MuiButton-raised-255 MuiButton-colorInherit-262 Hero-heroBtn-144"
+            class="MuiButtonBase-root-101 MuiButton-root-244 MuiButton-contained-253 MuiButton-raised-256 MuiButton-colorInherit-263 Hero-heroBtn-242"
             href="https://franciscan.secure.force.com/events"
             role="button"
             style="width:92px"
@@ -136,30 +150,30 @@ exports[`<Index /> should render 1`] = `
             title="Visit"
           >
             <span
-              class="MuiButton-label-244"
+              class="MuiButton-label-245"
             >
               Visit
             </span>
             <span
-              class="MuiTouchRipple-root-110"
+              class="MuiTouchRipple-root-111"
             />
           </a>
         </div>
       </div>
     </div>
     <div
-      class="MuiGrid-container-146 IndexPage-contentContainer-5"
+      class="MuiGrid-container-143 IndexPage-contentContainer-5"
     >
       <div
-        class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194 IndexPage-gridItemFix-4"
+        class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 IndexPage-gridItemFix-4"
       >
         <h3
-          class="MuiTypography-root-117 MuiTypography-display2-120 MuiTypography-gutterBottom-134"
+          class="MuiTypography-root-118 MuiTypography-display2-121 MuiTypography-gutterBottom-135"
         >
           Degrees
         </h3>
         <p
-          class="MuiTypography-root-117 MuiTypography-body1-126"
+          class="MuiTypography-root-118 MuiTypography-body1-127"
         >
           Over 40 majors!
         </p>
@@ -170,15 +184,15 @@ exports[`<Index /> should render 1`] = `
         </a>
       </div>
       <div
-        class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194 IndexPage-gridItemFix-4"
+        class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 IndexPage-gridItemFix-4"
       >
         <h3
-          class="MuiTypography-root-117 MuiTypography-display2-120 MuiTypography-gutterBottom-134"
+          class="MuiTypography-root-118 MuiTypography-display2-121 MuiTypography-gutterBottom-135"
         >
           Tuition
         </h3>
         <p
-          class="MuiTypography-root-117 MuiTypography-body1-126"
+          class="MuiTypography-root-118 MuiTypography-body1-127"
         >
           Buy now at the low low price of only $24k!
         </p>
@@ -190,27 +204,27 @@ exports[`<Index /> should render 1`] = `
       </div>
     </div>
     <div
-      class="TextSection-section-267"
+      class="TextSection-section-268"
       style="border-top:2px solid undefined;border-bottom:2px solid undefined"
     >
       <div
-        class="TextSection-innerContainer-268"
+        class="TextSection-innerContainer-269"
       >
         <h1
-          class="MuiTypography-root-117 MuiTypography-display2-120 MuiTypography-gutterBottom-134"
+          class="MuiTypography-root-118 MuiTypography-display2-121 MuiTypography-gutterBottom-135"
         >
           Degrees
         </h1>
         <p
-          class="MuiTypography-root-117 MuiTypography-body1-126 MuiTypography-gutterBottom-134 TextSection-sectionText-269"
+          class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-gutterBottom-135 TextSection-sectionText-270"
         >
            We have lots of majors
         </p>
         <div
-          class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 TextSection-heroBtn-270"
+          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 TextSection-heroBtn-271"
         >
           <a
-            class="MuiButtonBase-root-100 MuiButton-root-274 MuiButton-flatSecondary-277 TextSection-invertedBtn-271"
+            class="MuiButtonBase-root-101 MuiButton-root-275 MuiButton-flatSecondary-278 TextSection-invertedBtn-272"
             href="/academics/ug/majors"
             role="button"
             style="width:192px"
@@ -218,58 +232,58 @@ exports[`<Index /> should render 1`] = `
             title="Learn More"
           >
             <span
-              class="MuiButton-label-275"
+              class="MuiButton-label-276"
             >
               Learn More
             </span>
             <span
-              class="MuiTouchRipple-root-110"
+              class="MuiTouchRipple-root-111"
             />
           </a>
         </div>
       </div>
     </div>
     <div
-      class="TextSection-section-267"
+      class="TextSection-section-268"
       style="background-color:#21412a;border-top:2px solid #998643;border-bottom:2px solid #998643"
     >
       <div
-        class="TextSection-innerContainer-268"
+        class="TextSection-innerContainer-269"
       >
         <h1
-          class="MuiTypography-root-117 MuiTypography-display2-120 MuiTypography-gutterBottom-134"
+          class="MuiTypography-root-118 MuiTypography-display2-121 MuiTypography-gutterBottom-135"
           style="color:#fff"
         >
           15 to 1 Student to Faculty Ratio
         </h1>
         <p
-          class="MuiTypography-root-117 MuiTypography-body1-126 MuiTypography-gutterBottom-134 TextSection-sectionText-269"
+          class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-gutterBottom-135 TextSection-sectionText-270"
           style="color:#fff"
         />
       </div>
     </div>
     <div
-      class="TextSection-section-267"
+      class="TextSection-section-268"
       style="border-top:2px solid undefined;border-bottom:2px solid undefined"
     >
       <div
-        class="TextSection-innerContainer-268"
+        class="TextSection-innerContainer-269"
       >
         <h1
-          class="MuiTypography-root-117 MuiTypography-display2-120 MuiTypography-gutterBottom-134"
+          class="MuiTypography-root-118 MuiTypography-display2-121 MuiTypography-gutterBottom-135"
         >
           Cost and Financial Aid
         </h1>
         <p
-          class="MuiTypography-root-117 MuiTypography-body1-126 MuiTypography-gutterBottom-134 TextSection-sectionText-269"
+          class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-gutterBottom-135 TextSection-sectionText-270"
         >
            To educate, evangelize, and send forth joyful disciples to restore all things in Christ.
         </p>
         <div
-          class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 TextSection-heroBtn-270"
+          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 TextSection-heroBtn-271"
         >
           <a
-            class="MuiButtonBase-root-100 MuiButton-root-274 MuiButton-flatSecondary-277 TextSection-invertedBtn-271"
+            class="MuiButtonBase-root-101 MuiButton-root-275 MuiButton-flatSecondary-278 TextSection-invertedBtn-272"
             href="/about/our-mission"
             role="button"
             style="width:192px"
@@ -277,12 +291,12 @@ exports[`<Index /> should render 1`] = `
             title="Calculate Cost"
           >
             <span
-              class="MuiButton-label-275"
+              class="MuiButton-label-276"
             >
               Calculate Cost
             </span>
             <span
-              class="MuiTouchRipple-root-110"
+              class="MuiTouchRipple-root-111"
             />
           </a>
         </div>
@@ -295,10 +309,10 @@ exports[`<Index /> should render 1`] = `
         class=""
       >
         <div
-          class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194 MuiGrid-grid-md-6-208 MuiGrid-grid-lg-6-222 IndexPage-gridItemFix-4"
+          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 MuiGrid-grid-md-6-205 MuiGrid-grid-lg-6-219 IndexPage-gridItemFix-4"
         >
           <div
-            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-289 IndexPage-card-2 IndexPage-videoIframeContainer-11"
+            class="MuiPaper-root-64 MuiPaper-elevation1-67 MuiPaper-rounded-65 MuiCard-root-290 IndexPage-card-2 IndexPage-videoIframeContainer-11"
           >
             <iframe
               allow="encrypted-media"
@@ -310,10 +324,10 @@ exports[`<Index /> should render 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194 MuiGrid-grid-md-6-208 MuiGrid-grid-lg-6-222 IndexPage-gridItemFix-4"
+          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 MuiGrid-grid-md-6-205 MuiGrid-grid-lg-6-219 IndexPage-gridItemFix-4"
         >
           <div
-            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-289 ProfileCard-card-290"
+            class="MuiPaper-root-64 MuiPaper-elevation1-67 MuiPaper-rounded-65 MuiCard-root-290 ProfileCard-card-291"
           >
             <img
               src="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Students/Noah_Fisher_landing_v2.jpg"
@@ -321,49 +335,49 @@ exports[`<Index /> should render 1`] = `
               title="Noah Fisher"
             />
             <div
-              class="MuiCardContent-root-294"
+              class="MuiCardContent-root-295"
             >
               <span
-                class="MuiTypography-root-117 MuiTypography-caption-127 ProfileCard-category-292"
+                class="MuiTypography-root-118 MuiTypography-caption-128 ProfileCard-category-293"
               >
                 Student Profile
               </span>
               <h2
-                class="MuiTypography-root-117 MuiTypography-headline-122"
+                class="MuiTypography-root-118 MuiTypography-headline-123"
               >
                 Noah Fisher
               </h2>
               <p
-                class="MuiTypography-root-117 MuiTypography-body1-126 ProfileCard-quote-293"
+                class="MuiTypography-root-118 MuiTypography-body1-127 ProfileCard-quote-294"
               >
                 I first learned about Franciscan from some people at my parish who studied here. They recommended I check it out, but I wasn’t so sure. When I visited, though, I was blown away by the people I met; they were so genuine and helpful. They were the biggest reason I decided to come to Franciscan.
               </p>
             </div>
             <div
-              class="MuiCardActions-root-295"
+              class="MuiCardActions-root-296"
             >
               <button
-                class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-text-245 MuiButton-textPrimary-246 MuiButton-flat-248 MuiButton-flatPrimary-249 MuiButton-sizeSmall-264"
+                class="MuiButtonBase-root-101 MuiButton-root-244 MuiButton-text-246 MuiButton-textPrimary-247 MuiButton-flat-249 MuiButton-flatPrimary-250 MuiButton-sizeSmall-265"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiButton-label-244"
+                  class="MuiButton-label-245"
                 >
                   Learn More
                 </span>
                 <span
-                  class="MuiTouchRipple-root-110"
+                  class="MuiTouchRipple-root-111"
                 />
               </button>
             </div>
           </div>
         </div>
         <div
-          class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194 MuiGrid-grid-lg-6-222 IndexPage-gridItemFix-4"
+          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 MuiGrid-grid-lg-6-219 IndexPage-gridItemFix-4"
         >
           <div
-            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-289 ProfileCard-card-290"
+            class="MuiPaper-root-64 MuiPaper-elevation1-67 MuiPaper-rounded-65 MuiCard-root-290 ProfileCard-card-291"
           >
             <img
               src="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Alumni_Profiles/IMG_1132.JPG"
@@ -371,174 +385,174 @@ exports[`<Index /> should render 1`] = `
               title="Maggie McDermott"
             />
             <div
-              class="MuiCardContent-root-294"
+              class="MuiCardContent-root-295"
             >
               <span
-                class="MuiTypography-root-117 MuiTypography-caption-127 ProfileCard-category-292"
+                class="MuiTypography-root-118 MuiTypography-caption-128 ProfileCard-category-293"
               >
                 Alumni Profile
               </span>
               <h2
-                class="MuiTypography-root-117 MuiTypography-headline-122"
+                class="MuiTypography-root-118 MuiTypography-headline-123"
               >
                 Maggie McDermott
               </h2>
               <p
-                class="MuiTypography-root-117 MuiTypography-body1-126 ProfileCard-quote-293"
+                class="MuiTypography-root-118 MuiTypography-body1-127 ProfileCard-quote-294"
               >
                 My choice to say Yes to giving my all even in those trying moments can be attributed to the growth and education I received at Franciscan.
               </p>
             </div>
             <div
-              class="MuiCardActions-root-295"
+              class="MuiCardActions-root-296"
             >
               <button
-                class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-text-245 MuiButton-textPrimary-246 MuiButton-flat-248 MuiButton-flatPrimary-249 MuiButton-sizeSmall-264"
+                class="MuiButtonBase-root-101 MuiButton-root-244 MuiButton-text-246 MuiButton-textPrimary-247 MuiButton-flat-249 MuiButton-flatPrimary-250 MuiButton-sizeSmall-265"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiButton-label-244"
+                  class="MuiButton-label-245"
                 >
                   Learn More
                 </span>
                 <span
-                  class="MuiTouchRipple-root-110"
+                  class="MuiTouchRipple-root-111"
                 />
               </button>
             </div>
           </div>
         </div>
         <div
-          class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194 IndexPage-gridItemFix-4"
+          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 IndexPage-gridItemFix-4"
         >
           <div
-            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-289 ListCard-card-297"
+            class="MuiPaper-root-64 MuiPaper-elevation1-67 MuiPaper-rounded-65 MuiCard-root-290 ListCard-card-298"
           >
             <div
-              class="MuiCardContent-root-294"
+              class="MuiCardContent-root-295"
             >
               <h2
-                class="MuiTypography-root-117 MuiTypography-headline-122"
+                class="MuiTypography-root-118 MuiTypography-headline-123"
               >
                 Events
               </h2>
               <ul
-                class="MuiList-root-298 MuiList-padding-299"
+                class="MuiList-root-299 MuiList-padding-300"
               >
                 <div>
                   <div
-                    class="MuiButtonBase-root-100 MuiListItem-root-304 MuiListItem-default-307 MuiListItem-dense-308 MuiListItem-gutters-311 MuiListItem-divider-310 MuiListItem-button-312 ListCard-listItem-302"
+                    class="MuiButtonBase-root-101 MuiListItem-root-305 MuiListItem-default-308 MuiListItem-dense-309 MuiListItem-gutters-312 MuiListItem-divider-311 MuiListItem-button-313 ListCard-listItem-303"
                     role="button"
                     tabindex="0"
                   >
                     <div
-                      class="MuiListItemText-root-314 MuiListItemText-dense-316"
+                      class="MuiListItemText-root-315 MuiListItemText-dense-317"
                     >
                       <span
-                        class="MuiTypography-root-117 MuiTypography-subheading-124 MuiListItemText-primary-317 MuiListItemText-textDense-319"
+                        class="MuiTypography-root-118 MuiTypography-subheading-125 MuiListItemText-primary-318 MuiListItemText-textDense-320"
                       >
                         In Crisis: American Higher Education
                       </span>
                       <p
-                        class="MuiTypography-root-117 MuiTypography-body1-126 MuiTypography-colorTextSecondary-140 MuiListItemText-secondary-318 MuiListItemText-textDense-319"
+                        class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-colorTextSecondary-141 MuiListItemText-secondary-319 MuiListItemText-textDense-320"
                       >
                         The Veritas Center for Ethics in Public Life at Franciscan University of Steubenville will host a two-day conference, “The State of American Higher Education, 2018,” to be held at Franciscan University April 6-7, 2018.
                       </p>
                     </div>
                     <span
-                      class="MuiTouchRipple-root-110"
+                      class="MuiTouchRipple-root-111"
                     />
                   </div>
                 </div>
                 <div>
                   <div
-                    class="MuiButtonBase-root-100 MuiListItem-root-304 MuiListItem-default-307 MuiListItem-dense-308 MuiListItem-gutters-311 MuiListItem-divider-310 MuiListItem-button-312 ListCard-listItem-302"
+                    class="MuiButtonBase-root-101 MuiListItem-root-305 MuiListItem-default-308 MuiListItem-dense-309 MuiListItem-gutters-312 MuiListItem-divider-311 MuiListItem-button-313 ListCard-listItem-303"
                     role="button"
                     tabindex="0"
                   >
                     <div
-                      class="MuiListItemText-root-314 MuiListItemText-dense-316"
+                      class="MuiListItemText-root-315 MuiListItemText-dense-317"
                     >
                       <span
-                        class="MuiTypography-root-117 MuiTypography-subheading-124 MuiListItemText-primary-317 MuiListItemText-textDense-319"
+                        class="MuiTypography-root-118 MuiTypography-subheading-125 MuiListItemText-primary-318 MuiListItemText-textDense-320"
                       >
                         Final Examinations Spring 2018
                       </span>
                       <p
-                        class="MuiTypography-root-117 MuiTypography-body1-126 MuiTypography-colorTextSecondary-140 MuiListItemText-secondary-318 MuiListItemText-textDense-319"
+                        class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-colorTextSecondary-141 MuiListItemText-secondary-319 MuiListItemText-textDense-320"
                       />
                     </div>
                     <div
-                      class="MuiAvatar-root-320 ListCard-avatar-303"
+                      class="MuiAvatar-root-321 ListCard-avatar-304"
                       title="Random Pic"
                     >
                       <img
                         alt="Just an image from unsplash"
-                        class="MuiAvatar-img-322"
+                        class="MuiAvatar-img-323"
                         src="../static/img/mission3-400w.jpg"
                       />
                     </div>
                     <span
-                      class="MuiTouchRipple-root-110"
+                      class="MuiTouchRipple-root-111"
                     />
                   </div>
                 </div>
                 <div>
                   <div
-                    class="MuiButtonBase-root-100 MuiListItem-root-304 MuiListItem-default-307 MuiListItem-dense-308 MuiListItem-gutters-311 MuiListItem-divider-310 MuiListItem-button-312 ListCard-listItem-302"
+                    class="MuiButtonBase-root-101 MuiListItem-root-305 MuiListItem-default-308 MuiListItem-dense-309 MuiListItem-gutters-312 MuiListItem-divider-311 MuiListItem-button-313 ListCard-listItem-303"
                     role="button"
                     tabindex="0"
                   >
                     <div
-                      class="MuiListItemText-root-314 MuiListItemText-dense-316"
+                      class="MuiListItemText-root-315 MuiListItemText-dense-317"
                     >
                       <span
-                        class="MuiTypography-root-117 MuiTypography-subheading-124 MuiListItemText-primary-317 MuiListItemText-textDense-319"
+                        class="MuiTypography-root-118 MuiTypography-subheading-125 MuiListItemText-primary-318 MuiListItemText-textDense-320"
                       >
                         Baccalaureate Mass
                       </span>
                       <p
-                        class="MuiTypography-root-117 MuiTypography-body1-126 MuiTypography-colorTextSecondary-140 MuiListItemText-secondary-318 MuiListItemText-textDense-319"
+                        class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-colorTextSecondary-141 MuiListItemText-secondary-319 MuiListItemText-textDense-320"
                       >
                         Most Rev. Joseph Kurtz, archbishop of Louisville and former president of the US Conference of Catholic Bishops, will be the celebrant and homilist at the 2018 Baccalaureate Mass on Friday, May 11, 2018, in Finnegan Fieldhouse. Archbishop Kurtz will honored with an honorary doctorate before the Mass begins.
                       </p>
                     </div>
                     <span
-                      class="MuiTouchRipple-root-110"
+                      class="MuiTouchRipple-root-111"
                     />
                   </div>
                 </div>
                 <div>
                   <div
-                    class="MuiButtonBase-root-100 MuiListItem-root-304 MuiListItem-default-307 MuiListItem-dense-308 MuiListItem-gutters-311 MuiListItem-divider-310 MuiListItem-button-312 ListCard-listItem-302"
+                    class="MuiButtonBase-root-101 MuiListItem-root-305 MuiListItem-default-308 MuiListItem-dense-309 MuiListItem-gutters-312 MuiListItem-divider-311 MuiListItem-button-313 ListCard-listItem-303"
                     role="button"
                     tabindex="0"
                   >
                     <div
-                      class="MuiListItemText-root-314 MuiListItemText-dense-316"
+                      class="MuiListItemText-root-315 MuiListItemText-dense-317"
                     >
                       <span
-                        class="MuiTypography-root-117 MuiTypography-subheading-124 MuiListItemText-primary-317 MuiListItemText-textDense-319"
+                        class="MuiTypography-root-118 MuiTypography-subheading-125 MuiListItemText-primary-318 MuiListItemText-textDense-320"
                       >
                         Commencement Exercises 2018
                       </span>
                       <p
-                        class="MuiTypography-root-117 MuiTypography-body1-126 MuiTypography-colorTextSecondary-140 MuiListItemText-secondary-318 MuiListItemText-textDense-319"
+                        class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-colorTextSecondary-141 MuiListItemText-secondary-319 MuiListItemText-textDense-320"
                       />
                     </div>
                     <div
-                      class="MuiAvatar-root-320 ListCard-avatar-303"
+                      class="MuiAvatar-root-321 ListCard-avatar-304"
                       title="Random Pic"
                     >
                       <img
                         alt="Just an image from unsplash"
-                        class="MuiAvatar-img-322"
+                        class="MuiAvatar-img-323"
                         src="../static/img/adventure2-400w.jpg"
                       />
                     </div>
                     <span
-                      class="MuiTouchRipple-root-110"
+                      class="MuiTouchRipple-root-111"
                     />
                   </div>
                 </div>
@@ -547,10 +561,10 @@ exports[`<Index /> should render 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194 MuiGrid-grid-lg-6-222 IndexPage-gridItemFix-4"
+          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 MuiGrid-grid-lg-6-219 IndexPage-gridItemFix-4"
         >
           <div
-            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-289 ProfileCard-card-290"
+            class="MuiPaper-root-64 MuiPaper-elevation1-67 MuiPaper-rounded-65 MuiCard-root-290 ProfileCard-card-291"
           >
             <img
               src="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Faculty/Education/boury.jpg?n=1668"
@@ -558,60 +572,60 @@ exports[`<Index /> should render 1`] = `
               title="Dr. Tiffany Boury"
             />
             <div
-              class="MuiCardContent-root-294"
+              class="MuiCardContent-root-295"
             >
               <span
-                class="MuiTypography-root-117 MuiTypography-caption-127 ProfileCard-category-292"
+                class="MuiTypography-root-118 MuiTypography-caption-128 ProfileCard-category-293"
               >
                 Faculty Profile
               </span>
               <h2
-                class="MuiTypography-root-117 MuiTypography-headline-122"
+                class="MuiTypography-root-118 MuiTypography-headline-123"
               >
                 Dr. Tiffany Boury
               </h2>
               <p
-                class="MuiTypography-root-117 MuiTypography-body1-126 ProfileCard-quote-293"
+                class="MuiTypography-root-118 MuiTypography-body1-127 ProfileCard-quote-294"
               >
                 Associate Professor of Education
               </p>
             </div>
             <div
-              class="MuiCardActions-root-295"
+              class="MuiCardActions-root-296"
             >
               <button
-                class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-text-245 MuiButton-textPrimary-246 MuiButton-flat-248 MuiButton-flatPrimary-249 MuiButton-sizeSmall-264"
+                class="MuiButtonBase-root-101 MuiButton-root-244 MuiButton-text-246 MuiButton-textPrimary-247 MuiButton-flat-249 MuiButton-flatPrimary-250 MuiButton-sizeSmall-265"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiButton-label-244"
+                  class="MuiButton-label-245"
                 >
                   Learn More
                 </span>
                 <span
-                  class="MuiTouchRipple-root-110"
+                  class="MuiTouchRipple-root-111"
                 />
               </button>
             </div>
           </div>
         </div>
         <div
-          class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194 MuiGrid-grid-lg-6-222 IndexPage-gridItemFix-4"
+          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 MuiGrid-grid-lg-6-219 IndexPage-gridItemFix-4"
         >
           <div
-            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-289 IndexPage-card-2"
+            class="MuiPaper-root-64 MuiPaper-elevation1-67 MuiPaper-rounded-65 MuiCard-root-290 IndexPage-card-2"
           >
             <div
-              class="MuiCardMedia-root-323 IndexPage-media-3"
+              class="MuiCardMedia-root-324 IndexPage-media-3"
               style="background-image:url(\\"/static/img/adventure2-800w.jpg\\")"
               title="Austria Campus"
             />
             <div
-              class="MuiCardContent-root-294"
+              class="MuiCardContent-root-295"
             >
               <p
-                class="MuiTypography-root-117 MuiTypography-body1-126"
+                class="MuiTypography-root-118 MuiTypography-body1-127"
                 type="display1"
               >
                 Austria
@@ -620,10 +634,10 @@ exports[`<Index /> should render 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194 MuiGrid-grid-md-6-208 MuiGrid-grid-lg-6-222 IndexPage-gridItemFix-4"
+          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 MuiGrid-grid-md-6-205 MuiGrid-grid-lg-6-219 IndexPage-gridItemFix-4"
         >
           <div
-            class="MuiPaper-root-63 MuiPaper-elevation1-66 MuiPaper-rounded-64 MuiCard-root-289 IndexPage-card-2 IndexPage-videoIframeContainer-11"
+            class="MuiPaper-root-64 MuiPaper-elevation1-67 MuiPaper-rounded-65 MuiCard-root-290 IndexPage-card-2 IndexPage-videoIframeContainer-11"
           >
             <iframe
               allow="encrypted-media"
@@ -638,43 +652,43 @@ exports[`<Index /> should render 1`] = `
     </div>
   </main>
   <div
-    class="Footer-root-325"
+    class="Footer-root-326"
   >
     <div
-      class="MuiGrid-container-146"
+      class="MuiGrid-container-143"
     >
       <div
-        class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-4-192"
+        class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-4-189"
       >
         <p
-          class="MuiTypography-root-117 MuiTypography-body1-126 Footer-footerText-328 Footer-footerSections-326"
+          class="MuiTypography-root-118 MuiTypography-body1-127 Footer-footerText-329 Footer-footerSections-327"
         >
           Lorem ipsum dolor amet rump leberkas doner, andouille tenderloin beef ribs ham shankle kielbasa drumstick tail brisket.
         </p>
       </div>
       <div
-        class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-4-192"
+        class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-4-189"
       >
         <p
-          class="MuiTypography-root-117 MuiTypography-body1-126 Footer-footerText-328 Footer-footerSections-326"
+          class="MuiTypography-root-118 MuiTypography-body1-127 Footer-footerText-329 Footer-footerSections-327"
         >
           Bacon ipsum dolor amet rump leberkas doner, andouille tenderloin
         </p>
       </div>
       <div
-        class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-4-192"
+        class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-4-189"
       >
         <p
-          class="MuiTypography-root-117 MuiTypography-body1-126 Footer-footerText-328 Footer-footerSections-326"
+          class="MuiTypography-root-118 MuiTypography-body1-127 Footer-footerText-329 Footer-footerSections-327"
         >
           Bacon ipsum dolor amet rump leberkas doner, andouille tenderloin
         </p>
       </div>
       <div
-        class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 Footer-subFooter-327"
+        class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 Footer-subFooter-328"
       >
         <span
-          class="MuiTypography-root-117 MuiTypography-subheading-124 Footer-white-329"
+          class="MuiTypography-root-118 MuiTypography-subheading-125 Footer-white-330"
         >
           © 2018 Franciscan University of Steubenville
         </span>
