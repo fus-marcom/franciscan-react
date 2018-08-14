@@ -11,84 +11,10 @@ import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import ListCard from '../components/ListCard'
 import ProfileCard from '../components/ProfileCard'
+import TabbedSection from '../components/TabbedSection'
 import TextSection from '../components/TextSection'
 import withRoot from '../components/withRoot'
 import { eventsData } from '../data/listData'
-
-const styles = theme => ({
-  white: {
-    color: '#fff'
-  },
-  card: {
-    width: '100%'
-  },
-  media: {
-    minHeight: 280,
-    [theme.breakpoints.up('xl')]: {
-      minHeight: 1366
-    },
-    [theme.breakpoints.up('lg')]: {
-      minHeight: '400px'
-    }
-  },
-  gridItemFix: {
-    width: '100%',
-    padding: '16px',
-    [theme.breakpoints.down('sm')]: {
-      padding: '8px'
-    }
-  },
-  contentContainer: {
-    width: '100%',
-    maxWidth: '70%',
-    margin: '0 auto',
-    [theme.breakpoints.down('md')]: {
-      maxWidth: '85%'
-    },
-    [theme.breakpoints.down('sm')]: {
-      maxWidth: '95%'
-    }
-  },
-  listItem: {
-    paddingLeft: 0,
-    paddingRight: 0,
-    alignItems: 'start'
-  },
-  avatar: {
-    width: '80px',
-    height: '80px',
-    borderRadius: 0
-  },
-  avatarBig: {
-    width: '200px',
-    height: '200px',
-    [theme.breakpoints.down('sm')]: {
-      width: '100px',
-      height: '100px'
-    }
-  },
-  listItemTextBig: {
-    fontSize: '34px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '24px'
-    }
-  },
-  videoIframe: {
-    width: '100%',
-    height: '100%',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    border: 'none'
-  },
-  videoIframeContainer: {
-    width: '100%',
-    height: 0,
-    overflow: 'hidden',
-    position: 'relative',
-    paddingBottom: '56.25%'
-  }
-})
 
 const IndexPage = ({ classes }) => (
   <Layout>
@@ -124,14 +50,7 @@ const IndexPage = ({ classes }) => (
         <Typography variant="display2" component="h3" gutterBottom>
           Tuition
         </Typography>
-        <Typography>Buy now at the low low price of only $24k!</Typography>
-        <Link
-          prefetch
-          href="/page?type=academicsPages&id=majors"
-          as="/academics/ug/majors"
-        >
-          <a>Learn More</a>
-        </Link>
+        <TabbedSection />
       </Grid>
     </Grid>
     <TextSection
@@ -230,5 +149,80 @@ const IndexPage = ({ classes }) => (
     </div>
   </Layout>
 )
+
+const styles = theme => ({
+  white: {
+    color: '#fff'
+  },
+  card: {
+    width: '100%'
+  },
+  media: {
+    minHeight: 280,
+    [theme.breakpoints.up('xl')]: {
+      minHeight: 1366
+    },
+    [theme.breakpoints.up('lg')]: {
+      minHeight: '400px'
+    }
+  },
+  gridItemFix: {
+    width: '100%',
+    padding: '16px',
+    [theme.breakpoints.down('sm')]: {
+      padding: '8px'
+    }
+  },
+  contentContainer: {
+    width: '100%',
+    maxWidth: '70%',
+    margin: '0 auto',
+    [theme.breakpoints.down('md')]: {
+      maxWidth: '85%'
+    },
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '95%'
+    }
+  },
+  listItem: {
+    paddingLeft: 0,
+    paddingRight: 0,
+    alignItems: 'start'
+  },
+  avatar: {
+    width: '80px',
+    height: '80px',
+    borderRadius: 0
+  },
+  avatarBig: {
+    width: '200px',
+    height: '200px',
+    [theme.breakpoints.down('sm')]: {
+      width: '100px',
+      height: '100px'
+    }
+  },
+  listItemTextBig: {
+    fontSize: '34px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '24px'
+    }
+  },
+  videoIframe: {
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    border: 'none'
+  },
+  videoIframeContainer: {
+    width: '100%',
+    height: 0,
+    overflow: 'hidden',
+    position: 'relative',
+    paddingBottom: '56.25%'
+  }
+})
 
 export default withRoot(withStyles(styles)(IndexPage))
