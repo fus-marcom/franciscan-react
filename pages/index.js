@@ -4,7 +4,6 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Grid from '@material-ui/core/Grid'
 import withStyles from '@material-ui/core/styles/withStyles'
 import Typography from '@material-ui/core/Typography'
-import Link from 'next/link'
 import React from 'react'
 import Masonry from 'react-masonry-component'
 import Hero from '../components/Hero'
@@ -31,26 +30,29 @@ const IndexPage = ({ classes }) => (
       tertiaryBtnText="Visit"
       tertiaryBtnLink="https://franciscan.secure.force.com/events"
     />
-    <Grid container className={classes.contentContainer}>
-      <Grid item className={classes.gridItemFix} xs={12} sm={6}>
-        <Typography variant="display2" component="h3" gutterBottom>
-          Degrees
-        </Typography>
-        <Typography>Over 40 majors!</Typography>
-
-        <Link
-          prefetch
-          href="/page?type=academicsPages&id=majors"
-          as="/academics/ug/majors"
-        >
-          <a>Learn More</a>
-        </Link>
-      </Grid>
-      <Grid item className={classes.gridItemFix} xs={12} sm={6}>
+    <Grid
+      container
+      className={classes.contentContainer}
+      styles={{ textAlign: 'center' }}
+    >
+      <Grid item className={classes.gridItemFix} xs={12}>
         <Typography variant="display2" component="h3" gutterBottom>
           Tuition
         </Typography>
-        <TabbedSection />
+      </Grid>
+      <Grid item className={classes.gridItemFix} xs={12} sm={4}>
+        <Typography>$24k</Typography>
+        <Typography>Undergraduate</Typography>
+      </Grid>
+
+      <Grid item className={classes.gridItemFix} xs={12} sm={4}>
+        <Typography>$18k</Typography>
+        <Typography>Graduate</Typography>
+      </Grid>
+
+      <Grid item className={classes.gridItemFix} xs={12} sm={4}>
+        <Typography>$3.50</Typography>
+        <Typography>Online</Typography>
       </Grid>
     </Grid>
     <TextSection
@@ -59,6 +61,7 @@ const IndexPage = ({ classes }) => (
       btnLink="/academics/ug/majors"
       btnText="Learn More"
     />
+    <TabbedSection />
     <TextSection
       sectionTitle="15 to 1 Student to Faculty Ratio"
       bgColor="#21412a"

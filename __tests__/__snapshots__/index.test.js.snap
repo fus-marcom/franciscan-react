@@ -163,155 +163,66 @@ exports[`<Index /> should render 1`] = `
     </div>
     <div
       class="MuiGrid-container-143 IndexPage-contentContainer-5"
+      styles="[object Object]"
     >
       <div
-        class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 IndexPage-gridItemFix-4"
-      >
-        <h3
-          class="MuiTypography-root-118 MuiTypography-display2-121 MuiTypography-gutterBottom-135"
-        >
-          Degrees
-        </h3>
-        <p
-          class="MuiTypography-root-118 MuiTypography-body1-127"
-        >
-          Over 40 majors!
-        </p>
-        <a
-          href="/academics/ug/majors"
-        >
-          Learn More
-        </a>
-      </div>
-      <div
-        class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 IndexPage-gridItemFix-4"
+        class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 IndexPage-gridItemFix-4"
       >
         <h3
           class="MuiTypography-root-118 MuiTypography-display2-121 MuiTypography-gutterBottom-135"
         >
           Tuition
         </h3>
-        <div
-          class="TabbedSection-root-268"
+      </div>
+      <div
+        class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-4-189 IndexPage-gridItemFix-4"
+      >
+        <p
+          class="MuiTypography-root-118 MuiTypography-body1-127"
         >
-          <div
-            class="MuiTabs-root-269"
-          >
-            <div
-              class="MuiTabs-flexContainer-270"
-            >
-              <div
-                class="MuiTabs-scroller-272 MuiTabs-fixed-273"
-                role="tablist"
-                style="margin-bottom:0"
-              >
-                <div
-                  class="MuiTabs-flexContainer-270"
-                >
-                  <button
-                    aria-selected="true"
-                    class="MuiButtonBase-root-101 MuiTab-root-278 MuiTab-textColorPrimary-281 MuiTab-selected-283 MuiTab-fullWidth-285"
-                    role="tab"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <span
-                      class="MuiTab-wrapper-286"
-                    >
-                      <span
-                        class="MuiTab-labelContainer-287"
-                      >
-                        <span
-                          class="MuiTab-label-288"
-                        >
-                          Undergraduate
-                        </span>
-                      </span>
-                    </span>
-                    <span
-                      class="TabIndicator-root-290 TabIndicator-colorPrimary-291 MuiTabs-indicator-277"
-                    />
-                    <span
-                      class="MuiTouchRipple-root-111"
-                    />
-                  </button>
-                  <button
-                    aria-selected="false"
-                    class="MuiButtonBase-root-101 MuiTab-root-278 MuiTab-textColorPrimary-281 MuiTab-fullWidth-285"
-                    role="tab"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <span
-                      class="MuiTab-wrapper-286"
-                    >
-                      <span
-                        class="MuiTab-labelContainer-287"
-                      >
-                        <span
-                          class="MuiTab-label-288"
-                        >
-                          Graduate
-                        </span>
-                      </span>
-                    </span>
-                    <span
-                      class="MuiTouchRipple-root-111"
-                    />
-                  </button>
-                  <button
-                    aria-selected="false"
-                    class="MuiButtonBase-root-101 MuiTab-root-278 MuiTab-textColorPrimary-281 MuiTab-fullWidth-285"
-                    role="tab"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <span
-                      class="MuiTab-wrapper-286"
-                    >
-                      <span
-                        class="MuiTab-labelContainer-287"
-                      >
-                        <span
-                          class="MuiTab-label-288"
-                        >
-                          Online
-                        </span>
-                      </span>
-                    </span>
-                    <span
-                      class="MuiTouchRipple-root-111"
-                    />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiTypography-root-118 MuiTypography-body1-127"
-            style="padding:24px"
-          >
-             
-            <p
-              class="MuiTypography-root-118 MuiTypography-body1-127"
-            >
-              Buy now at the low low price of only $24k!
-            </p>
-            <a
-              href="/academics/ug/majors"
-            >
-              Learn More
-            </a>
-          </div>
-        </div>
+          $24k
+        </p>
+        <p
+          class="MuiTypography-root-118 MuiTypography-body1-127"
+        >
+          Undergraduate
+        </p>
+      </div>
+      <div
+        class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-4-189 IndexPage-gridItemFix-4"
+      >
+        <p
+          class="MuiTypography-root-118 MuiTypography-body1-127"
+        >
+          $18k
+        </p>
+        <p
+          class="MuiTypography-root-118 MuiTypography-body1-127"
+        >
+          Graduate
+        </p>
+      </div>
+      <div
+        class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-4-189 IndexPage-gridItemFix-4"
+      >
+        <p
+          class="MuiTypography-root-118 MuiTypography-body1-127"
+        >
+          $3.50
+        </p>
+        <p
+          class="MuiTypography-root-118 MuiTypography-body1-127"
+        >
+          Online
+        </p>
       </div>
     </div>
     <div
-      class="TextSection-section-293"
+      class="TextSection-section-268"
       style="border-top:2px solid undefined;border-bottom:2px solid undefined"
     >
       <div
-        class="TextSection-innerContainer-294"
+        class="TextSection-innerContainer-269"
       >
         <h1
           class="MuiTypography-root-118 MuiTypography-display2-121 MuiTypography-gutterBottom-135"
@@ -319,15 +230,15 @@ exports[`<Index /> should render 1`] = `
           Degrees
         </h1>
         <p
-          class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-gutterBottom-135 TextSection-sectionText-295"
+          class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-gutterBottom-135 TextSection-sectionText-270"
         >
            We have lots of majors
         </p>
         <div
-          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 TextSection-heroBtn-296"
+          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 TextSection-heroBtn-271"
         >
           <a
-            class="MuiButtonBase-root-101 MuiButton-root-300 MuiButton-flatSecondary-303 TextSection-invertedBtn-297"
+            class="MuiButtonBase-root-101 MuiButton-root-275 MuiButton-flatSecondary-278 TextSection-invertedBtn-272"
             href="/academics/ug/majors"
             role="button"
             style="width:192px"
@@ -335,7 +246,7 @@ exports[`<Index /> should render 1`] = `
             title="Learn More"
           >
             <span
-              class="MuiButton-label-301"
+              class="MuiButton-label-276"
             >
               Learn More
             </span>
@@ -347,11 +258,124 @@ exports[`<Index /> should render 1`] = `
       </div>
     </div>
     <div
-      class="TextSection-section-293"
+      class="TabbedSection-root-290"
+    >
+      <div
+        class="MuiTabs-root-291"
+      >
+        <div
+          class="MuiTabs-flexContainer-292"
+        >
+          <div
+            class="MuiTabs-scroller-294 MuiTabs-fixed-295"
+            role="tablist"
+            style="margin-bottom:0"
+          >
+            <div
+              class="MuiTabs-flexContainer-292"
+            >
+              <button
+                aria-selected="true"
+                class="MuiButtonBase-root-101 MuiTab-root-300 MuiTab-textColorPrimary-303 MuiTab-selected-305 MuiTab-fullWidth-307"
+                role="tab"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiTab-wrapper-308"
+                >
+                  <span
+                    class="MuiTab-labelContainer-309"
+                  >
+                    <span
+                      class="MuiTab-label-310"
+                    >
+                      Undergraduate
+                    </span>
+                  </span>
+                </span>
+                <span
+                  class="TabIndicator-root-312 TabIndicator-colorPrimary-313 MuiTabs-indicator-299"
+                />
+                <span
+                  class="MuiTouchRipple-root-111"
+                />
+              </button>
+              <button
+                aria-selected="false"
+                class="MuiButtonBase-root-101 MuiTab-root-300 MuiTab-textColorPrimary-303 MuiTab-fullWidth-307"
+                role="tab"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiTab-wrapper-308"
+                >
+                  <span
+                    class="MuiTab-labelContainer-309"
+                  >
+                    <span
+                      class="MuiTab-label-310"
+                    >
+                      Graduate
+                    </span>
+                  </span>
+                </span>
+                <span
+                  class="MuiTouchRipple-root-111"
+                />
+              </button>
+              <button
+                aria-selected="false"
+                class="MuiButtonBase-root-101 MuiTab-root-300 MuiTab-textColorPrimary-303 MuiTab-fullWidth-307"
+                role="tab"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiTab-wrapper-308"
+                >
+                  <span
+                    class="MuiTab-labelContainer-309"
+                  >
+                    <span
+                      class="MuiTab-label-310"
+                    >
+                      Online
+                    </span>
+                  </span>
+                </span>
+                <span
+                  class="MuiTouchRipple-root-111"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiTypography-root-118 MuiTypography-body1-127"
+        style="padding:24px"
+      >
+         
+        <p
+          class="MuiTypography-root-118 MuiTypography-body1-127"
+        >
+          Buy now at the low low price of only $24k!
+        </p>
+        <a
+          href="/academics/ug/majors"
+        >
+          Learn More
+        </a>
+      </div>
+    </div>
+    <div
+      class="TextSection-section-268"
       style="background-color:#21412a;border-top:2px solid #998643;border-bottom:2px solid #998643"
     >
       <div
-        class="TextSection-innerContainer-294"
+        class="TextSection-innerContainer-269"
       >
         <h1
           class="MuiTypography-root-118 MuiTypography-display2-121 MuiTypography-gutterBottom-135"
@@ -360,17 +384,17 @@ exports[`<Index /> should render 1`] = `
           15 to 1 Student to Faculty Ratio
         </h1>
         <p
-          class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-gutterBottom-135 TextSection-sectionText-295"
+          class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-gutterBottom-135 TextSection-sectionText-270"
           style="color:#fff"
         />
       </div>
     </div>
     <div
-      class="TextSection-section-293"
+      class="TextSection-section-268"
       style="border-top:2px solid undefined;border-bottom:2px solid undefined"
     >
       <div
-        class="TextSection-innerContainer-294"
+        class="TextSection-innerContainer-269"
       >
         <h1
           class="MuiTypography-root-118 MuiTypography-display2-121 MuiTypography-gutterBottom-135"
@@ -378,15 +402,15 @@ exports[`<Index /> should render 1`] = `
           Cost and Financial Aid
         </h1>
         <p
-          class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-gutterBottom-135 TextSection-sectionText-295"
+          class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-gutterBottom-135 TextSection-sectionText-270"
         >
            To educate, evangelize, and send forth joyful disciples to restore all things in Christ.
         </p>
         <div
-          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 TextSection-heroBtn-296"
+          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 TextSection-heroBtn-271"
         >
           <a
-            class="MuiButtonBase-root-101 MuiButton-root-300 MuiButton-flatSecondary-303 TextSection-invertedBtn-297"
+            class="MuiButtonBase-root-101 MuiButton-root-275 MuiButton-flatSecondary-278 TextSection-invertedBtn-272"
             href="/about/our-mission"
             role="button"
             style="width:192px"
@@ -394,7 +418,7 @@ exports[`<Index /> should render 1`] = `
             title="Calculate Cost"
           >
             <span
-              class="MuiButton-label-301"
+              class="MuiButton-label-276"
             >
               Calculate Cost
             </span>
