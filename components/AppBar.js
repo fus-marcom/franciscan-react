@@ -91,7 +91,11 @@ class ButtonAppBar extends Component {
                 <Grid
                   item
                   xs={12}
-                  style={{ textAlign: 'right', marginBottom: '8px' }}
+                  style={{
+                    textAlign: 'right',
+                    marginBottom: '8px',
+                    marginTop: '8px'
+                  }}
                 >
                   <a
                     href="tel:18007836220"
@@ -113,7 +117,7 @@ class ButtonAppBar extends Component {
                       content="Admissions"
                     />
                     <AppBarMenuItem
-                      content="Cost and Aid"
+                      content="Tuition & Aid"
                       linkUrl="/sfs/new/costs-and-fees"
                       asUrl="/page?type=sfsPages&id=costs-and-fees"
                     />
