@@ -31,22 +31,22 @@ conn.login(username, password, function (err, userInfo) {
   // ...
 
   // Multiple records creation
-  conn
-    .sobject('Account')
-    .create([{ Name: 'My Account #1' }, { Name: 'My Account #2' }], function (
-      err,
-      rets
-    ) {
-      if (err) {
-        return console.error(err)
-      }
-      for (var i = 0; i < rets.length; i++) {
-        if (rets[i].success) {
-          console.log('Created record id : ' + rets[i].id)
-        }
-      }
-      // ...
-    })
+  // conn
+  //   .sobject('Account')
+  //   .create([{ Name: 'My Account #1' }, { Name: 'My Account #2' }], function (
+  //     err,
+  //     rets
+  //   ) {
+  //     if (err) {
+  //       return console.error(err)
+  //     }
+  //     for (var i = 0; i < rets.length; i++) {
+  //       if (rets[i].success) {
+  //         console.log('Created record id : ' + rets[i].id)
+  //       }
+  //     }
+  //     // ...
+  //   })
 })
 
 // TODO: split this object up into three: one for for routes with 1 param, 2params, and 3 params. Then change routing function to use the correct obj depending on the num of params
