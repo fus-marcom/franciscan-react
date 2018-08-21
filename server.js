@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const next = require('next')
 const LRUCache = require('lru-cache')
@@ -6,48 +7,277 @@ const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dir: '.', dev })
 const handle = app.getRequestHandler()
-
-const username = process.env.USERNAME
-const password = process.env.PASSWORD
-
-console.log(username)
-
 const jsforce = require('jsforce')
-const conn = new jsforce.Connection({
-  // you can change loginUrl to connect to sandbox or prerelease env.
-  loginUrl: 'https://fus.my.salesforce.com/'
-})
-conn.login(username, password, function (err, userInfo) {
-  if (err) {
-    return console.error(err)
-  }
-  // Now you can get the access token and instance URL information.
-  // Save them to establish connection next time.
-  console.log(conn.accessToken)
-  console.log(conn.instanceUrl)
-  // logged in user property
-  console.log('User ID: ' + userInfo.id)
-  console.log('Org ID: ' + userInfo.organizationId)
-  // ...
 
-  // Multiple records creation
-  // conn
-  //   .sobject('Account')
-  //   .create([{ Name: 'My Account #1' }, { Name: 'My Account #2' }], function (
-  //     err,
-  //     rets
-  //   ) {
-  //     if (err) {
-  //       return console.error(err)
-  //     }
-  //     for (var i = 0; i < rets.length; i++) {
-  //       if (rets[i].success) {
-  //         console.log('Created record id : ' + rets[i].id)
-  //       }
-  //     }
-  //     // ...
-  //   })
+// This is where we cache our rendered HTML pages
+const ssrCache = new LRUCache({
+  max: 100,
+  maxAge: dev ? 5 : 1000 * 60 * 60 // 1hour
 })
+
+app.prepare().then(() => {
+  const server = express()
+
+  // Handle Inquiry form submissions
+  server.post('/inquiry-submit', function (req, res) {
+    const username = process.env.SALESFORCE_USERNAME
+    const password = process.env.SALESFORCE_PASSWORD
+
+    const conn = new jsforce.Connection({
+      // you can change loginUrl to connect to sandbox or prerelease env.
+      loginUrl: 'https://fus.my.salesforce.com/'
+    })
+    conn.login(username, password, function (err, userInfo) {
+      if (err) {
+        return console.error(err)
+      }
+      // Now you can get the access token and instance URL information.
+      // Save them to establish connection next time.
+      console.log(conn.accessToken)
+      console.log(conn.instanceUrl)
+      // logged in user property
+      console.log('User ID: ' + userInfo.id)
+      console.log('Org ID: ' + userInfo.organizationId)
+      // ...
+
+      // Multiple records creation
+      // conn
+      //   .sobject('Account')
+      //   .create([{ Name: 'My Account #1' }, { Name: 'My Account #2' }], function (
+      //     err,
+      //     rets
+      //   ) {
+      //     if (err) {
+      //       return console.error(err)
+      //     }
+      //     for (var i = 0; i < rets.length; i++) {
+      //       if (rets[i].success) {
+      //         console.log('Created record id : ' + rets[i].id)
+      //       }
+      //     }
+      //     // ...
+      //   })
+    })
+  })
+
+  // Use the `renderAndCache` utility defined below to serve pages
+  server.get('/', (req, res) => renderAndCache(req, res, '/'))
+
+  server.get('/:first/:second?/:third?', (req, res, next) => {
+    const firstParam = req.params.first ? req.params.first.toLowerCase() : null
+    const secondParam = req.params.second
+      ? req.params.second.toLowerCase()
+      : null
+    const thirdParam = req.params.third ? req.params.third.toLowerCase() : null
+    // Prevent routes that should not be handled by this logic and send them to the next route in line
+    if (
+      firstParam !== '_next' &&
+      firstParam !== 'robots.txt' &&
+      firstParam !== 'service-worker.js' &&
+      firstParam !== 'favicon.ico' &&
+      firstParam !== 'static' &&
+      firstParam !== 'json'
+    ) {
+      // initialize variables
+      let page = '/page'
+      let type = `${firstParam}Pages`
+      let subtype = null
+      let id = null
+      if (Object.values(req.params).filter(Boolean).length === 1) {
+        // Logic for routes with 1 parameter
+        console.log('one parameter')
+        // Set up default values for routes with 1 parameter
+        page = '/page'
+        type = `${firstParam}Pages`
+        if (translationObj[firstParam]) {
+          // find page
+          if (translationObj[firstParam].page) {
+            if (typeof translationObj[firstParam].page === 'object') {
+              page = translationObj[firstParam].page.default
+            } else {
+              page = translationObj[firstParam].page
+            }
+          }
+          // find type
+          if (translationObj[firstParam].type) {
+            if (typeof translationObj[firstParam].type === 'object') {
+              type = translationObj[firstParam].type.default
+            } else {
+              type = translationObj[firstParam].type
+            }
+          }
+          // find id
+          if (translationObj[firstParam].id) {
+            if (translationObj[firstParam].id.default) {
+              id = translationObj[firstParam].id.default
+            }
+          }
+        }
+      } else if (Object.values(req.params).filter(Boolean).length === 2) {
+        // Logic for routes with 2 parameters
+        console.log('two parameters')
+        // Set up default values for routes with 2 parameters
+        page = '/page'
+        type = `${firstParam}Pages`
+        id = secondParam
+        if (translationObj[firstParam]) {
+          // find page
+          if (translationObj[firstParam].page) {
+            if (typeof translationObj[firstParam].page === 'object') {
+              if (translationObj[firstParam].page[id]) {
+                page = translationObj[firstParam].page[id]
+              } else if (translationObj[firstParam].page.standard) {
+                page = translationObj[firstParam].page.standard
+              } else {
+                page = translationObj[firstParam].page.default
+              }
+            } else {
+              page = translationObj[firstParam].page
+            }
+          }
+          // find type
+          if (translationObj[firstParam].type) {
+            if (typeof translationObj[firstParam].type === 'object') {
+              if (translationObj[firstParam].type[id]) {
+                type = translationObj[firstParam].type[id]
+              } else if (translationObj[firstParam].type.standard) {
+                type = translationObj[firstParam].type.standard
+              } else {
+                type = translationObj[firstParam].type.default
+              }
+            } else {
+              type = translationObj[firstParam].type
+            }
+          }
+          // find id
+          if (translationObj[firstParam].id) {
+            // Check to see if the item has an id array
+            if (typeof translationObj[firstParam].id === 'object') {
+              // If secondParam exists as key in id array
+              if (translationObj[firstParam].id[secondParam]) {
+                // Use value of secondParam key as id
+                id = translationObj[firstParam].id[secondParam]
+              } else if (translationObj[firstParam].id.standard) {
+                // Check that standard exists as a key in id array
+                // Use standard value as id
+                id = translationObj[firstParam].id.standard
+              } else {
+                // If no standard, then use second param as id
+                id = secondParam
+              }
+              // If no id array exists, use the id string as the id
+            } else {
+              id = translationObj[firstParam].id
+            }
+          }
+        }
+      } else if (Object.values(req.params).filter(Boolean).length === 3) {
+        // Logic for routes with 3 parameters
+        console.log('three parameters')
+        // Set up default values for routes with 3 parameters
+        page = '/page'
+        type = `${firstParam}Pages`
+        subtype = secondParam
+        id = thirdParam
+        if (translationObj[firstParam]) {
+          // find page
+          if (translationObj[firstParam].page) {
+            if (typeof translationObj[firstParam].page === 'object') {
+              if (translationObj[firstParam].page[id]) {
+                page = translationObj[firstParam].page[id]
+              } else if (translationObj[firstParam].page.thirdly) {
+                page = translationObj[firstParam].page.thirdly
+              } else {
+                page = translationObj[firstParam].page.default
+              }
+            } else {
+              page = translationObj[firstParam].page
+            }
+          }
+          // find type
+          if (translationObj[firstParam].type) {
+            if (typeof translationObj[firstParam].type === 'object') {
+              if (translationObj[firstParam].type[id]) {
+                type = translationObj[firstParam].type[id]
+              } else if (translationObj[firstParam].type.thirdly) {
+                type = translationObj[firstParam].type.thirdly
+              } else {
+                type = translationObj[firstParam].type.default
+              }
+            } else {
+              type = translationObj[firstParam].type
+            }
+          }
+          // find id
+          if (translationObj[firstParam].id) {
+            // Check to see if the item has an id array
+            if (typeof translationObj[firstParam].id === 'object') {
+              // If thirdParam exists as key in id array
+              if (translationObj[firstParam].id[thirdParam]) {
+                // Use value of thirdParam key as id
+                id = translationObj[firstParam].id[thirdParam]
+              } else if (translationObj[firstParam].id.thirdly) {
+                // Check that thirdly exists as a key in id array
+                // Use thirdly value as id
+                id = translationObj[firstParam].id.thirdly
+              } else {
+                // If no thirdly, then use third param as id
+                id = thirdParam
+              }
+              // If no id array exists, use the id string as the id
+            } else {
+              id = translationObj[firstParam].id
+            }
+          }
+        }
+      }
+      return renderAndCache(req, res, page, { id, type, subtype })
+    }
+    return next()
+  })
+
+  server.get('*', (req, res) => {
+    return handle(req, res)
+  })
+
+  server.listen(port, err => {
+    if (err) throw err
+    console.log(`> Ready on http://localhost:${port}`)
+  })
+})
+
+/*
+ * NB: make sure to modify this to take into account anything that should trigger
+ * an immediate page change (e.g a locale stored in req.session)
+ */
+function getCacheKey (req) {
+  return `${req.url}`
+}
+
+function renderAndCache (req, res, pagePath, queryParams) {
+  const key = getCacheKey(req)
+
+  // If we have a page in the cache, let's serve it
+  if (ssrCache.has(key)) {
+    console.log(`CACHE HIT: ${key}`)
+    res.send(ssrCache.get(key))
+    return
+  }
+
+  // If not let's render the page into HTML
+  app
+    .renderToHTML(req, res, pagePath, queryParams)
+    .then(html => {
+      // Let's cache this page
+      console.log(`CACHE MISS: ${key}`)
+      ssrCache.set(key, html)
+
+      res.send(html)
+    })
+    .catch(err => {
+      app.renderError(err, req, res, pagePath, queryParams)
+    })
+}
 
 // TODO: split this object up into three: one for for routes with 1 param, 2params, and 3 params. Then change routing function to use the correct obj depending on the num of params
 const translationObj = {
@@ -864,232 +1094,4 @@ const translationObj = {
   //   type: 'missionsPages',
   //   id: { default: 'missionary-outreach' }
   // }
-}
-
-// This is where we cache our rendered HTML pages
-const ssrCache = new LRUCache({
-  max: 100,
-  maxAge: dev ? 5 : 1000 * 60 * 60 // 1hour
-})
-
-app.prepare().then(() => {
-  const server = express()
-
-  // Use the `renderAndCache` utility defined below to serve pages
-  server.get('/', (req, res) => renderAndCache(req, res, '/'))
-
-  server.get('/:first/:second?/:third?', (req, res, next) => {
-    const firstParam = req.params.first ? req.params.first.toLowerCase() : null
-    const secondParam = req.params.second
-      ? req.params.second.toLowerCase()
-      : null
-    const thirdParam = req.params.third ? req.params.third.toLowerCase() : null
-    // Prevent routes that should not be handled by this logic and send them to the next route in line
-    if (
-      firstParam !== '_next' &&
-      firstParam !== 'robots.txt' &&
-      firstParam !== 'service-worker.js' &&
-      firstParam !== 'favicon.ico' &&
-      firstParam !== 'static' &&
-      firstParam !== 'json'
-    ) {
-      // initialize variables
-      let page = '/page'
-      let type = `${firstParam}Pages`
-      let subtype = null
-      let id = null
-      if (Object.values(req.params).filter(Boolean).length === 1) {
-        // Logic for routes with 1 parameter
-        console.log('one parameter')
-        // Set up default values for routes with 1 parameter
-        page = '/page'
-        type = `${firstParam}Pages`
-        if (translationObj[firstParam]) {
-          // find page
-          if (translationObj[firstParam].page) {
-            if (typeof translationObj[firstParam].page === 'object') {
-              page = translationObj[firstParam].page.default
-            } else {
-              page = translationObj[firstParam].page
-            }
-          }
-          // find type
-          if (translationObj[firstParam].type) {
-            if (typeof translationObj[firstParam].type === 'object') {
-              type = translationObj[firstParam].type.default
-            } else {
-              type = translationObj[firstParam].type
-            }
-          }
-          // find id
-          if (translationObj[firstParam].id) {
-            if (translationObj[firstParam].id.default) {
-              id = translationObj[firstParam].id.default
-            }
-          }
-        }
-      } else if (Object.values(req.params).filter(Boolean).length === 2) {
-        // Logic for routes with 2 parameters
-        console.log('two parameters')
-        // Set up default values for routes with 2 parameters
-        page = '/page'
-        type = `${firstParam}Pages`
-        id = secondParam
-        if (translationObj[firstParam]) {
-          // find page
-          if (translationObj[firstParam].page) {
-            if (typeof translationObj[firstParam].page === 'object') {
-              if (translationObj[firstParam].page[id]) {
-                page = translationObj[firstParam].page[id]
-              } else if (translationObj[firstParam].page.standard) {
-                page = translationObj[firstParam].page.standard
-              } else {
-                page = translationObj[firstParam].page.default
-              }
-            } else {
-              page = translationObj[firstParam].page
-            }
-          }
-          // find type
-          if (translationObj[firstParam].type) {
-            if (typeof translationObj[firstParam].type === 'object') {
-              if (translationObj[firstParam].type[id]) {
-                type = translationObj[firstParam].type[id]
-              } else if (translationObj[firstParam].type.standard) {
-                type = translationObj[firstParam].type.standard
-              } else {
-                type = translationObj[firstParam].type.default
-              }
-            } else {
-              type = translationObj[firstParam].type
-            }
-          }
-          // find id
-          if (translationObj[firstParam].id) {
-            // Check to see if the item has an id array
-            if (typeof translationObj[firstParam].id === 'object') {
-              // If secondParam exists as key in id array
-              if (translationObj[firstParam].id[secondParam]) {
-                // Use value of secondParam key as id
-                id = translationObj[firstParam].id[secondParam]
-              } else if (translationObj[firstParam].id.standard) {
-                // Check that standard exists as a key in id array
-                // Use standard value as id
-                id = translationObj[firstParam].id.standard
-              } else {
-                // If no standard, then use second param as id
-                id = secondParam
-              }
-              // If no id array exists, use the id string as the id
-            } else {
-              id = translationObj[firstParam].id
-            }
-          }
-        }
-      } else if (Object.values(req.params).filter(Boolean).length === 3) {
-        // Logic for routes with 3 parameters
-        console.log('three parameters')
-        // Set up default values for routes with 3 parameters
-        page = '/page'
-        type = `${firstParam}Pages`
-        subtype = secondParam
-        id = thirdParam
-        if (translationObj[firstParam]) {
-          // find page
-          if (translationObj[firstParam].page) {
-            if (typeof translationObj[firstParam].page === 'object') {
-              if (translationObj[firstParam].page[id]) {
-                page = translationObj[firstParam].page[id]
-              } else if (translationObj[firstParam].page.thirdly) {
-                page = translationObj[firstParam].page.thirdly
-              } else {
-                page = translationObj[firstParam].page.default
-              }
-            } else {
-              page = translationObj[firstParam].page
-            }
-          }
-          // find type
-          if (translationObj[firstParam].type) {
-            if (typeof translationObj[firstParam].type === 'object') {
-              if (translationObj[firstParam].type[id]) {
-                type = translationObj[firstParam].type[id]
-              } else if (translationObj[firstParam].type.thirdly) {
-                type = translationObj[firstParam].type.thirdly
-              } else {
-                type = translationObj[firstParam].type.default
-              }
-            } else {
-              type = translationObj[firstParam].type
-            }
-          }
-          // find id
-          if (translationObj[firstParam].id) {
-            // Check to see if the item has an id array
-            if (typeof translationObj[firstParam].id === 'object') {
-              // If thirdParam exists as key in id array
-              if (translationObj[firstParam].id[thirdParam]) {
-                // Use value of thirdParam key as id
-                id = translationObj[firstParam].id[thirdParam]
-              } else if (translationObj[firstParam].id.thirdly) {
-                // Check that thirdly exists as a key in id array
-                // Use thirdly value as id
-                id = translationObj[firstParam].id.thirdly
-              } else {
-                // If no thirdly, then use third param as id
-                id = thirdParam
-              }
-              // If no id array exists, use the id string as the id
-            } else {
-              id = translationObj[firstParam].id
-            }
-          }
-        }
-      }
-      return renderAndCache(req, res, page, { id, type, subtype })
-    }
-    return next()
-  })
-
-  server.get('*', (req, res) => {
-    return handle(req, res)
-  })
-
-  server.listen(port, err => {
-    if (err) throw err
-    console.log(`> Ready on http://localhost:${port}`)
-  })
-})
-
-/*
- * NB: make sure to modify this to take into account anything that should trigger
- * an immediate page change (e.g a locale stored in req.session)
- */
-function getCacheKey (req) {
-  return `${req.url}`
-}
-
-function renderAndCache (req, res, pagePath, queryParams) {
-  const key = getCacheKey(req)
-
-  // If we have a page in the cache, let's serve it
-  if (ssrCache.has(key)) {
-    console.log(`CACHE HIT: ${key}`)
-    res.send(ssrCache.get(key))
-    return
-  }
-
-  // If not let's render the page into HTML
-  app
-    .renderToHTML(req, res, pagePath, queryParams)
-    .then(html => {
-      // Let's cache this page
-      console.log(`CACHE MISS: ${key}`)
-      ssrCache.set(key, html)
-
-      res.send(html)
-    })
-    .catch(err => {
-      app.renderError(err, req, res, pagePath, queryParams)
-    })
 }
