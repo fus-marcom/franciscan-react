@@ -77,7 +77,7 @@ class Inquiry extends Component {
   render () {
     const { classes } = this.props
     return (
-      <Grid container>
+      <Grid container className={classes.container}>
         <Grid item xs={12} sm={6}>
           <TextField
             id="first-name"
@@ -132,19 +132,22 @@ class Inquiry extends Component {
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <Button
-            variant="outlined"
-            onClick={this.handleFormData}
-            label="Submit"
-            type="submit"
-            id="submit-button"
-            // buttonStyle={{
-            //   cursor: this.state.canSubmit ? 'pointer' : 'not-allowed'
-            // }}
-            primary
-            // disabled={!this.state.canSubmit}
-          />
+        <Grid item xs={12}>
+          <div style={{ display: 'flex', justifyContent: 'end' }}>
+            <Button
+              variant="outlined"
+              onClick={this.handleFormData}
+              label="Submit"
+              type="submit"
+              id="submit-button"
+              // buttonStyle={{
+              //   cursor: this.state.canSubmit ? 'pointer' : 'not-allowed'
+              // }}
+              // disabled={!this.state.canSubmit}
+            >
+              Submit
+            </Button>
+          </div>
         </Grid>
         <Dialog title="Loading..." modal open={this.state.loadingDialogOpen}>
           Sending...
@@ -172,18 +175,9 @@ class Inquiry extends Component {
 }
 
 const styles = theme => ({
-  heroBtnContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    fontSize: '20px'
-  },
-  heroBtn: {
-    fontSize: '20px',
-    color: '#21412a',
-    backgroundColor: '#fff'
-  },
-  white: {
-    color: '#fff'
+  container: {
+    maxWidth: '600px',
+    justifyContent: 'center'
   },
   textField: {
     marginLeft: theme.spacing.unit,
