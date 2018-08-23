@@ -12,6 +12,7 @@ import Layout from '../components/Layout'
 import ListCard from '../components/ListCard'
 import ProfileCard from '../components/ProfileCard'
 import TextSection from '../components/TextSection'
+import Inquiry from '../components/Inquiry'
 import withRoot from '../components/withRoot'
 import { eventsData } from '../data/listData'
 
@@ -134,6 +135,7 @@ const IndexPage = ({ classes }) => (
         </Link>
       </Grid>
     </Grid>
+    <Inquiry />
     <TextSection
       sectionTitle="Degrees"
       text=" We have lots of majors"

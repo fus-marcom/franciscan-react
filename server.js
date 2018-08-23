@@ -9,6 +9,9 @@ const app = next({ dir: '.', dev })
 const handle = app.getRequestHandler()
 const jsforce = require('jsforce')
 
+const username = process.env.SALESFORCE_USERNAME
+const password = process.env.SALESFORCE_PASSWORD
+
 // This is where we cache our rendered HTML pages
 const ssrCache = new LRUCache({
   max: 100,
@@ -20,9 +23,6 @@ app.prepare().then(() => {
 
   // Handle Inquiry form submissions
   server.post('/inquiry-submit', function (req, res) {
-    const username = process.env.SALESFORCE_USERNAME
-    const password = process.env.SALESFORCE_PASSWORD
-
     const conn = new jsforce.Connection({
       // you can change loginUrl to connect to sandbox or prerelease env.
       loginUrl: 'https://fus.my.salesforce.com/'
@@ -40,23 +40,18 @@ app.prepare().then(() => {
       console.log('Org ID: ' + userInfo.organizationId)
       // ...
 
-      // Multiple records creation
-      // conn
-      //   .sobject('Account')
-      //   .create([{ Name: 'My Account #1' }, { Name: 'My Account #2' }], function (
-      //     err,
-      //     rets
-      //   ) {
-      //     if (err) {
-      //       return console.error(err)
-      //     }
-      //     for (var i = 0; i < rets.length; i++) {
-      //       if (rets[i].success) {
-      //         console.log('Created record id : ' + rets[i].id)
-      //       }
-      //     }
-      //     // ...
-      //   })
+      // Single record creation
+      conn
+        .sobject('Contact')
+        .create(
+          { 'First Name': 'Jane', 'Last Name': 'Doe', Email: 'test@test.com' },
+          function (err, ret) {
+            if (err || !ret.success) {
+              return console.error(err, ret)
+            }
+            console.log('Created record id : ' + ret.id)
+          }
+        )
     })
   })
 
