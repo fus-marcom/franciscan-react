@@ -23,36 +23,39 @@ app.prepare().then(() => {
 
   // Handle Inquiry form submissions
   server.post('/inquiry-submit', function (req, res) {
-    const conn = new jsforce.Connection({
-      // you can change loginUrl to connect to sandbox or prerelease env.
-      loginUrl: 'https://fus.my.salesforce.com/'
-    })
-    conn.login(username, password, function (err, userInfo) {
-      if (err) {
-        return console.error(err)
-      }
-      // Now you can get the access token and instance URL information.
-      // Save them to establish connection next time.
-      console.log(conn.accessToken)
-      console.log(conn.instanceUrl)
-      // logged in user property
-      console.log('User ID: ' + userInfo.id)
-      console.log('Org ID: ' + userInfo.organizationId)
-      // ...
+  const conn = new jsforce.Connection({
+    // you can change loginUrl to connect to sandbox or prerelease env.
+    loginUrl: 'https://fus.my.salesforce.com/'
+  })
+  conn.login(username, password, function (err, userInfo) {
+    if (err) {
+      return console.error(err)
+    }
+    // Now you can get the access token and instance URL information.
+    // Save them to establish connection next time.
+    console.log(conn.accessToken)
+    console.log(conn.instanceUrl)
+    // logged in user property
+    console.log('User ID: ' + userInfo.id)
+    console.log('Org ID: ' + userInfo.organizationId)
+    // ...
 
-      // Single record creation
-      conn
-        .sobject('Contact')
-        .create(
-          { 'First Name': 'Jane', 'Last Name': 'Doe', Email: 'test@test.com' },
-          function (err, ret) {
-            if (err || !ret.success) {
-              return console.error(err, ret)
-            }
-            console.log('Created record id : ' + ret.id)
-          }
-        )
-    })
+    // Single record creation
+    conn.sobject('Contact').create(
+      {
+        FirstName: 'Janie',
+        LastName: 'Doer',
+        Email: 'tester1235@test.com',
+        // "UG/GRStudentStage": 'inquiry'
+      },
+      function (err, ret) {
+        if (err || !ret.success) {
+          return console.error(err, ret)
+        }
+        console.log('Created record id : ' + ret.id)
+      }
+    )
+  })
   })
 
   // Use the `renderAndCache` utility defined below to serve pages
