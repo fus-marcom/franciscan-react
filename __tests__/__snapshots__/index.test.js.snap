@@ -199,7 +199,7 @@ exports[`<Index /> should render 1`] = `
           class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194"
         >
           <div
-            class="MuiFormControl-root-270 MuiFormControl-marginNormal-271 Inquiry-textField-268"
+            class="MuiFormControl-root-270 MuiFormControl-marginNormal-271 MuiFormControl-fullWidth-273"
           >
             <label
               class="MuiFormLabel-root-279 MuiInputLabel-root-274 MuiInputLabel-formControl-275 MuiInputLabel-animated-278"
@@ -209,7 +209,7 @@ exports[`<Index /> should render 1`] = `
               First Name
             </label>
             <div
-              class="MuiInput-root-284 MuiInput-formControl-285 MuiInput-underline-288"
+              class="MuiInput-root-284 MuiInput-fullWidth-291 MuiInput-formControl-285 MuiInput-underline-288"
             >
               <input
                 aria-invalid="false"
@@ -226,7 +226,7 @@ exports[`<Index /> should render 1`] = `
           class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194"
         >
           <div
-            class="MuiFormControl-root-270 MuiFormControl-marginNormal-271 Inquiry-textField-268"
+            class="MuiFormControl-root-270 MuiFormControl-marginNormal-271 MuiFormControl-fullWidth-273"
           >
             <label
               class="MuiFormLabel-root-279 MuiInputLabel-root-274 MuiInputLabel-formControl-275 MuiInputLabel-animated-278"
@@ -236,7 +236,7 @@ exports[`<Index /> should render 1`] = `
               Last Name
             </label>
             <div
-              class="MuiInput-root-284 MuiInput-formControl-285 MuiInput-underline-288"
+              class="MuiInput-root-284 MuiInput-fullWidth-291 MuiInput-formControl-285 MuiInput-underline-288"
             >
               <input
                 aria-invalid="false"
@@ -253,7 +253,7 @@ exports[`<Index /> should render 1`] = `
           class="MuiGrid-item-147 MuiGrid-grid-xs-12-186 MuiGrid-grid-sm-6-194"
         >
           <div
-            class="MuiFormControl-root-270 MuiFormControl-marginNormal-271 Inquiry-textField-268"
+            class="MuiFormControl-root-270 MuiFormControl-marginNormal-271 MuiFormControl-fullWidth-273"
           >
             <label
               class="MuiFormLabel-root-279 MuiInputLabel-root-274 MuiInputLabel-formControl-275 MuiInputLabel-animated-278"
@@ -263,7 +263,7 @@ exports[`<Index /> should render 1`] = `
               Email
             </label>
             <div
-              class="MuiInput-root-284 MuiInput-formControl-285 MuiInput-underline-288"
+              class="MuiInput-root-284 MuiInput-fullWidth-291 MuiInput-formControl-285 MuiInput-underline-288"
             >
               <input
                 aria-invalid="false"
@@ -280,7 +280,7 @@ exports[`<Index /> should render 1`] = `
         >
            
           <div
-            class="MuiFormControl-root-270 Inquiry-formControl-269"
+            class="MuiFormControl-root-270 Inquiry-formControl-268"
           >
             <label
               class="MuiFormLabel-root-279 MuiInputLabel-root-274 MuiInputLabel-formControl-275 MuiInputLabel-animated-278"
@@ -333,7 +333,7 @@ exports[`<Index /> should render 1`] = `
             style="display:flex;justify-content:end"
           >
             <button
-              class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-text-245 MuiButton-outlined-251"
+              class="MuiButtonBase-root-100 MuiButton-root-243 MuiButton-text-245 MuiButton-outlined-251 Inquiry-submitBtn-269"
               id="submit-button"
               label="Submit"
               tabindex="0"

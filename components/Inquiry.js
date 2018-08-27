@@ -63,6 +63,7 @@ class Inquiry extends Component {
       <Grid container className={classes.container}>
         <Grid item xs={12} sm={6}>
           <TextField
+            fullWidth={true}
             id="first-name"
             label="First Name"
             className={classes.textField}
@@ -74,6 +75,7 @@ class Inquiry extends Component {
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
+            fullWidth={true}
             id="last-name"
             label="Last Name"
             className={classes.textField}
@@ -85,6 +87,7 @@ class Inquiry extends Component {
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
+            fullWidth={true}
             id="email"
             label="Email"
             className={classes.textField}
@@ -123,6 +126,7 @@ class Inquiry extends Component {
               label="Submit"
               type="submit"
               id="submit-button"
+              className={classes.submitBtn}
               // buttonStyle={{
               //   cursor: this.state.canSubmit ? 'pointer' : 'not-allowed'
               // }}
@@ -142,14 +146,11 @@ const styles = theme => ({
     maxWidth: '600px',
     justifyContent: 'center'
   },
-  textField: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit,
-    width: 200
-  },
   formControl: {
-    margin: theme.spacing.unit,
-    minWidth: 120
+    minWidth: '100%'
+  },
+  submitBtn: {
+    margin: '8px 0'
   }
 })
 
