@@ -10,7 +10,6 @@ import Select from '@material-ui/core/Select'
 import InputLabel from '@material-ui/core/InputLabel'
 import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl'
-import Dialog from '@material-ui/core/Dialog'
 
 class Inquiry extends Component {
   state = {
@@ -20,10 +19,6 @@ class Inquiry extends Component {
       email: '',
       studentType: ''
     },
-    loadingDialogOpen: false,
-    resultDialogOpen: false,
-    resultDialogText: null,
-    resultDialogSuccess: true,
     canSubmit: false
   }
 
@@ -51,29 +46,17 @@ class Inquiry extends Component {
       }).then(res => res.json())
 
       if (!response.success) throw response.status
-
-      this.setState({
-        resultDialogOpen: true,
-        resultDialogSuccess: true,
-        resultDialogText: 'Your service request was sent successfully.'
-      })
     } catch (err) {
       const msg =
         typeof err === 'string'
           ? err
           : 'An error occurred while sending the request.'
-      this.setState({
-        resultDialogOpen: true,
-        resultDialogSuccess: false,
-        resultDialogText: msg
-      })
+      console.log(msg)
     }
 
     this.setState({ loadingDialogOpen: false })
   }
-  handleDialogClose = () => {
-    this.setState({ resultDialogOpen: false })
-  }
+
   render () {
     const { classes } = this.props
     return (
@@ -149,26 +132,6 @@ class Inquiry extends Component {
             </Button>
           </div>
         </Grid>
-        <Dialog title="Loading..." modal open={this.state.loadingDialogOpen}>
-          Sending...
-        </Dialog>
-        <Dialog
-          title={this.state.resultDialogSuccess ? 'Done' : 'Error'}
-          modal={false}
-          open={this.state.resultDialogOpen}
-          onRequestClose={this.handleDialogClose}
-          actions={[
-            <Button
-              key="1"
-              label="Ok"
-              onTouchTap={this.handleDialogClose}
-              variant="flat"
-              keyboardFocused
-            />
-          ]}
-        >
-          {this.state.resultDialogText}
-        </Dialog>
       </Grid>
     )
   }

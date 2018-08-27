@@ -4,6 +4,20 @@
     "The main website for Franciscan University of Steubenville. Built with React, NextJS, and MaterialUI.",
   "version": "1.0.0",
   "author": "Jesse Weigel <jesseweigel@gmail.com>",
+  "scripts": {
+    "dev": "./node_modules/.bin/nodemon --watch server.js server.js",
+    "ci": "node server.js & ",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "deploy": "now && now alias",
+    "format":
+      "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "cm": "git-cz",
+    "precommit": "lint-staged && npm run test",
+    "unit": "jest .test.js --config=jest.config.json",
+    "e2e": "mocha --timeout 30000 ./e2e/runner.js ./e2e/tests/*.spec.js",
+    "test": "npm run unit && npm run e2e"
+  },
   "now": {
     "alias": "dev.franciscan.university",
     "env": {
@@ -46,20 +60,6 @@
   "keywords": ["next"],
   "license": "MIT",
   "main": "n/a",
-  "scripts": {
-    "dev": "./node_modules/.bin/nodemon --watch server.js server.js",
-    "ci": "node server.js & ",
-    "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "deploy": "now && now alias",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "cm": "git-cz",
-    "precommit": "lint-staged && npm run test",
-    "unit": "jest .test.js --config=jest.config.json",
-    "e2e": "mocha --timeout 30000 ./e2e/runner.js ./e2e/tests/*.spec.js",
-    "test": "npm run unit && npm run e2e"
-  },
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^8.2.3",
