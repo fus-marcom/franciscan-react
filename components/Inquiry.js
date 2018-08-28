@@ -63,7 +63,7 @@ class Inquiry extends Component {
     return (
       <Grid container className={classes.container}>
         <Grid item xs={12}>
-          <Typography variant="display2" component="h3">
+          <Typography variant="display1" component="h3">
             Get More Info
           </Typography>
         </Grid>
