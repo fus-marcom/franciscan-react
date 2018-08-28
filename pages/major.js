@@ -3,7 +3,6 @@ import Head from 'next/head'
 import React, { Component } from 'react'
 import { compose, Query } from 'react-apollo'
 import Layout from '../components/Layout'
-import SampleSchedule from '../components/SampleSchedule'
 import withRoot from '../components/withRoot'
 import { PageQuery } from '../lib/queries/page'
 import withData from '../lib/withData'
@@ -51,16 +50,13 @@ class Major extends Component {
               )
 
             return (
-              <div>
-                <div
-                  className={this.props.classes.root}
-                  data-testid="content"
-                  dangerouslySetInnerHTML={{
-                    __html: content
-                  }}
-                />
-                <SampleSchedule />
-              </div>
+              <div
+                className={this.props.classes.root}
+                data-testid="content"
+                dangerouslySetInnerHTML={{
+                  __html: content
+                }}
+              />
             )
           }}
         </Query>
