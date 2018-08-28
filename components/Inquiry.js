@@ -10,6 +10,7 @@ import Select from '@material-ui/core/Select'
 import InputLabel from '@material-ui/core/InputLabel'
 import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl'
+import Typography from '@material-ui/core/Typography'
 
 class Inquiry extends Component {
   state = {
@@ -61,6 +62,11 @@ class Inquiry extends Component {
     const { classes } = this.props
     return (
       <Grid container className={classes.container}>
+        <Grid item xs={12}>
+          <Typography variant="display2" component="h3">
+            Get More Info
+          </Typography>
+        </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
             fullWidth={true}
@@ -70,7 +76,7 @@ class Inquiry extends Component {
             value={this.state.form.firstName}
             name="firstName"
             onChange={this.handleChange}
-            margin="normal"
+            margin="none"
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -82,7 +88,7 @@ class Inquiry extends Component {
             value={this.state.form.lastName}
             name="lastName"
             onChange={this.handleChange}
-            margin="normal"
+            margin="none"
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -94,7 +100,7 @@ class Inquiry extends Component {
             value={this.state.form.Email}
             name="email"
             onChange={this.handleChange}
-            margin="normal"
+            margin="none"
           />
         </Grid>
         <Grid item xs={12} sm={6}>
