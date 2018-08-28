@@ -34,6 +34,7 @@ exports[`DrawerItem should render 1`] = `
               "gutters": "MuiListItem-gutters-14",
               "root": "MuiListItem-root-7",
               "secondaryAction": "MuiListItem-secondaryAction-16",
+              "selected": "MuiListItem-selected-17",
             }
           }
           dense={false}
@@ -41,6 +42,7 @@ exports[`DrawerItem should render 1`] = `
           disabled={false}
           divider={false}
           onClick={[Function]}
+          selected={false}
         >
           <WithStyles(ButtonBase)
             className="MuiListItem-root-7 MuiListItem-default-10 MuiListItem-gutters-14 MuiListItem-button-15"
@@ -54,9 +56,9 @@ exports[`DrawerItem should render 1`] = `
               className="MuiListItem-root-7 MuiListItem-default-10 MuiListItem-gutters-14 MuiListItem-button-15"
               classes={
                 Object {
-                  "disabled": "MuiButtonBase-disabled-18",
-                  "focusVisible": "MuiButtonBase-focusVisible-19",
-                  "root": "MuiButtonBase-root-17",
+                  "disabled": "MuiButtonBase-disabled-19",
+                  "focusVisible": "MuiButtonBase-focusVisible-20",
+                  "root": "MuiButtonBase-root-18",
                 }
               }
               component="div"
@@ -70,7 +72,7 @@ exports[`DrawerItem should render 1`] = `
               type="button"
             >
               <div
-                className="MuiButtonBase-root-17 MuiListItem-root-7 MuiListItem-default-10 MuiListItem-gutters-14 MuiListItem-button-15"
+                className="MuiButtonBase-root-18 MuiListItem-root-7 MuiListItem-default-10 MuiListItem-gutters-14 MuiListItem-button-15"
                 onBlur={[Function]}
                 onClick={[Function]}
                 onFocus={[Function]}
@@ -97,12 +99,12 @@ exports[`DrawerItem should render 1`] = `
                   <ListItemText
                     classes={
                       Object {
-                        "dense": "MuiListItemText-dense-22",
-                        "inset": "MuiListItemText-inset-21",
-                        "primary": "MuiListItemText-primary-23",
-                        "root": "MuiListItemText-root-20",
-                        "secondary": "MuiListItemText-secondary-24",
-                        "textDense": "MuiListItemText-textDense-25",
+                        "dense": "MuiListItemText-dense-23",
+                        "inset": "MuiListItemText-inset-22",
+                        "primary": "MuiListItemText-primary-24",
+                        "root": "MuiListItemText-root-21",
+                        "secondary": "MuiListItemText-secondary-25",
+                        "textDense": "MuiListItemText-textDense-26",
                       }
                     }
                     disableTypography={false}
@@ -114,7 +116,7 @@ exports[`DrawerItem should render 1`] = `
                     }
                   >
                     <div
-                      className="MuiListItemText-root-20 MuiListItemText-inset-21"
+                      className="MuiListItemText-root-21 MuiListItemText-inset-22"
                       style={
                         Object {
                           "paddingLeft": "16px",
@@ -123,21 +125,21 @@ exports[`DrawerItem should render 1`] = `
                     />
                   </ListItemText>
                 </WithStyles(ListItemText)>
-                <pure(ExpandMore)
+                <pure(ExpandMoreIcon)
                   key=".1"
                 >
-                  <ExpandMore>
+                  <ExpandMoreIcon>
                     <WithStyles(SvgIcon)>
                       <SvgIcon
                         classes={
                           Object {
-                            "colorAction": "MuiSvgIcon-colorAction-29",
-                            "colorDisabled": "MuiSvgIcon-colorDisabled-31",
-                            "colorError": "MuiSvgIcon-colorError-30",
-                            "colorPrimary": "MuiSvgIcon-colorPrimary-27",
-                            "colorSecondary": "MuiSvgIcon-colorSecondary-28",
-                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-32",
-                            "root": "MuiSvgIcon-root-26",
+                            "colorAction": "MuiSvgIcon-colorAction-30",
+                            "colorDisabled": "MuiSvgIcon-colorDisabled-32",
+                            "colorError": "MuiSvgIcon-colorError-31",
+                            "colorPrimary": "MuiSvgIcon-colorPrimary-28",
+                            "colorSecondary": "MuiSvgIcon-colorSecondary-29",
+                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-33",
+                            "root": "MuiSvgIcon-root-27",
                           }
                         }
                         color="inherit"
@@ -147,7 +149,7 @@ exports[`DrawerItem should render 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          className="MuiSvgIcon-root-26"
+                          className="MuiSvgIcon-root-27"
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
@@ -161,8 +163,8 @@ exports[`DrawerItem should render 1`] = `
                         </svg>
                       </SvgIcon>
                     </WithStyles(SvgIcon)>
-                  </ExpandMore>
-                </pure(ExpandMore)>
+                  </ExpandMoreIcon>
+                </pure(ExpandMoreIcon)>
                 <WithStyles(TouchRipple)
                   center={false}
                   innerRef={[Function]}
@@ -171,25 +173,25 @@ exports[`DrawerItem should render 1`] = `
                     center={false}
                     classes={
                       Object {
-                        "child": "MuiTouchRipple-child-37",
-                        "childLeaving": "MuiTouchRipple-childLeaving-38",
-                        "childPulsate": "MuiTouchRipple-childPulsate-39",
-                        "ripple": "MuiTouchRipple-ripple-34",
-                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-36",
-                        "rippleVisible": "MuiTouchRipple-rippleVisible-35",
-                        "root": "MuiTouchRipple-root-33",
+                        "child": "MuiTouchRipple-child-38",
+                        "childLeaving": "MuiTouchRipple-childLeaving-39",
+                        "childPulsate": "MuiTouchRipple-childPulsate-40",
+                        "ripple": "MuiTouchRipple-ripple-35",
+                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-37",
+                        "rippleVisible": "MuiTouchRipple-rippleVisible-36",
+                        "root": "MuiTouchRipple-root-34",
                       }
                     }
                   >
                     <TransitionGroup
                       childFactory={[Function]}
-                      className="MuiTouchRipple-root-33"
+                      className="MuiTouchRipple-root-34"
                       component="span"
                       enter={true}
                       exit={true}
                     >
                       <span
-                        className="MuiTouchRipple-root-33"
+                        className="MuiTouchRipple-root-34"
                       />
                     </TransitionGroup>
                   </TouchRipple>

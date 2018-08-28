@@ -9,8 +9,7 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "deploy": "now && now alias",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "cm": "git-cz",
     "precommit": "lint-staged && npm run test",
     "unit": "jest .test.js --config=jest.config.json",
@@ -31,8 +30,8 @@
   },
   "dependencies": {
     "@material-ui/codemod": "^1.1.0",
-    "@material-ui/core": "^1.4.2",
-    "@material-ui/icons": "^2.0.0",
+    "@material-ui/core": "^3.0.0",
+    "@material-ui/icons": "^3.0.0",
     "apollo-cache-inmemory": "^1.1.12",
     "apollo-client": "^2.2.8",
     "apollo-link-http": "^1.5.3",
@@ -106,7 +105,10 @@
     }
   },
   "standard": {
-    "globals": ["fetch", "FormData"],
+    "globals": [
+      "fetch",
+      "FormData"
+    ],
     "parser": "babel-eslint"
   }
 }
