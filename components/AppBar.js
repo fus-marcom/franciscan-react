@@ -51,7 +51,7 @@ class ButtonAppBar extends Component {
     return (
       <div className={classes.root}>
         <AppBar className={classes.appBar} position="static">
-          <Toolbar>
+          <Toolbar className={classes.toolbar}>
             <div className={classes.col1}>
               <IconButton
                 className={classes.menuButton}
@@ -86,20 +86,17 @@ class ButtonAppBar extends Component {
                 </Link>
               </Typography>
             </div>
-            <Hidden smDown>
-              <Grid container className={classes.col2}>
-                <Grid
-                  item
-                  xs={12}
-                  style={{ textAlign: 'right', marginBottom: '8px' }}
-                >
-                  <a
-                    href="tel:18007836220"
-                    style={{ padding: '8px', margin: '8px', fontSize: '18px' }}
-                  >
-                    1.800.783.6220
-                  </a>
-                </Grid>
+
+            <Grid
+              container
+              className={`${classes.col2} ${classes.mobileGridContainer}`}
+            >
+              <Grid item xs={12} className={classes.telContainer}>
+                <a href="tel:18007836220" className={classes.telLink}>
+                  1.800.783.6220
+                </a>
+              </Grid>
+              <Hidden smDown>
                 <Grid item xs={12} style={{ paddingTop: 0 }}>
                   <ul className={classes.menuList}>
                     <AppBarMenuItem
@@ -113,7 +110,7 @@ class ButtonAppBar extends Component {
                       content="Admissions"
                     />
                     <AppBarMenuItem
-                      content="Cost and Aid"
+                      content="Tuition & Aid"
                       linkUrl="/sfs/new/costs-and-fees"
                       asUrl="/page?type=sfsPages&id=costs-and-fees"
                     />
@@ -160,8 +157,8 @@ class ButtonAppBar extends Component {
                     />
                   </ul>
                 </Grid>
-              </Grid>
-            </Hidden>
+              </Hidden>
+            </Grid>
           </Toolbar>
         </AppBar>
       </div>
@@ -185,6 +182,11 @@ const styles = theme => ({
     background: '#ffffff',
     borderBottom: `solid 3px #998643`
   },
+  toolbar: {
+    [theme.breakpoints.down('sm')]: {
+      minHeight: '80px'
+    }
+  },
   menuButton: {
     color: `${theme.palette.primary[500]}`,
     marginLeft: -12,
@@ -192,7 +194,10 @@ const styles = theme => ({
     alignSelf: 'center'
   },
   mobileHeaderImage: {
-    maxHeight: '3rem'
+    maxHeight: '3rem',
+    [theme.breakpoints.down('md')]: {
+      marginTop: '13px'
+    }
   },
   headerImage: {
     maxHeight: '3rem',
@@ -200,18 +205,27 @@ const styles = theme => ({
       maxHeight: '80px'
     }
   },
-  social: {
-    display: 'flex',
-    alignItems: 'center'
+  mobileGridContainer: {
+    [theme.breakpoints.down('md')]: {
+      alignSelf: 'flex-start',
+      position: 'absolute',
+      left: '50%',
+      transform: 'translate(-50%)'
+    }
   },
-  svgStyle: {
-    width: 'auto',
-    height: '28px',
-    fill: `${theme.palette.primary[500]}`,
-    paddingRight: '4px'
+  telContainer: {
+    textAlign: 'right',
+    marginBottom: '8px',
+    marginTop: '8px',
+    [theme.breakpoints.down('md')]: {
+      textAlign: 'center',
+      marginTop: '4px'
+    }
   },
-  socialIcon: {
-    display: 'inline-flex'
+  telLink: {
+    padding: '8px',
+    margin: '8px',
+    fontSize: '18px'
   },
   searchSVG: {
     cursor: 'pointer',

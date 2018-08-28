@@ -1,7 +1,6 @@
 {
   "name": "franciscan-university-react",
-  "description":
-    "The main website for Franciscan University of Steubenville. Built with React, NextJS, and MaterialUI.",
+  "description": "The main website for Franciscan University of Steubenville. Built with React, NextJS, and MaterialUI.",
   "version": "1.0.0",
   "author": "Jesse Weigel <jesseweigel@gmail.com>",
   "scripts": {
@@ -55,9 +54,12 @@
     "react-dom": "^16.4.1",
     "react-masonry-component": "^6.0.2",
     "react-scroll": "^1.7.9",
+    "react-swipeable-views": "^0.12.16",
     "uuid": "^3.3.2"
   },
-  "keywords": ["next"],
+  "keywords": [
+    "next"
+  ],
   "license": "MIT",
   "main": "n/a",
   "devDependencies": {
@@ -94,7 +96,9 @@
     ]
   },
   "jest": {
-    "setupFiles": ["<rootDir>/shim.js"]
+    "setupFiles": [
+      "<rootDir>/shim.js"
+    ]
   },
   "config": {
     "commitizen": {
