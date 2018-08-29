@@ -12,7 +12,6 @@ import ListCard from '../components/ListCard'
 import ProfileCard from '../components/ProfileCard'
 import TabbedSection from '../components/TabbedSection'
 import TextSection from '../components/TextSection'
-import Inquiry from '../components/Inquiry'
 import withRoot from '../components/withRoot'
 import { eventsData } from '../data/listData'
 
@@ -55,9 +54,6 @@ const IndexPage = ({ classes }) => (
         <Typography>$3.50</Typography>
         <Typography>Online</Typography>
       </Grid>
-    </Grid>
-    <Grid container className={classes.contentContainer}>
-      <Inquiry />
     </Grid>
 
     <TextSection
