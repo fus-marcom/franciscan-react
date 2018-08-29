@@ -8,7 +8,8 @@ export const eventsData = [
     primaryText: 'Final Examinations Spring 2018',
     secondaryText: ``,
     link: '/events/in-crisis-american-higher-education',
-    image: '../static/img/mission3-400w.jpg',
+    image:
+      'https://storage.googleapis.com/fus-wp-storage/img/mission3-400w.jpg',
     imgTitle: 'Random Pic',
     imgAlt: 'Just an image from unsplash'
   },
@@ -21,7 +22,8 @@ export const eventsData = [
     primaryText: 'Commencement Exercises 2018',
     secondaryText: ``,
     link: '/events/in-crisis-american-higher-education',
-    image: '../static/img/adventure2-400w.jpg',
+    image:
+      'https://storage.googleapis.com/fus-wp-storage/img/adventure2-400w.jpg',
     imgTitle: 'Random Pic',
     imgAlt: 'Just an image from unsplash'
   }
@@ -31,7 +33,8 @@ export const testimonyData = [
   {
     primaryText: 'John Smith -Accounting 19',
     secondaryText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non purus et ipsum iaculis tristique. Cras tristique turpis ut felis tincidunt, ac eleifend sapien imperdiet. Morbi sit amet fermentum mauris. Praesent auctor, neque nec hendrerit porta, turpis nisl laoreet orci, a rutrum mauris nisi at ipsum. Morbi vitae diam lorem. Aenean nec diam a leo fringilla rhoncus a dapibus magna. Fusce fermentum ligula velit, ac aliquet justo cursus a. Morbi vel tellus eget turpis varius fermentum quis at quam. Cras condimentum elit tincidunt mollis mollis.`,
-    image: '../static/img/SaintJunipero.jpg',
+    image:
+      'https://storage.googleapis.com/fus-wp-storage/img/SaintJunipero.jpg',
     imgTitle: 'Random Pic',
     imgAlt: 'Just an image from unsplash'
   },
@@ -39,7 +42,8 @@ export const testimonyData = [
     primaryText: 'Jane Doe -Nursing 20',
     secondaryText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non purus et ipsum iaculis tristique. Cras tristique turpis ut felis tincidunt, ac eleifend sapien imperdiet. Morbi sit amet fermentum mauris. Praesent auctor, neque nec hendrerit porta, turpis nisl laoreet orci, a rutrum mauris nisi at ipsum.`,
     link: '#',
-    image: '../static/img/new-mexico-mission-team.jpg',
+    image:
+      'https://storage.googleapis.com/fus-wp-storage/img/new-mexico-mission-team.jpg',
     imgTitle: 'Random Pic',
     imgAlt: 'Just an image from unsplash'
   },
@@ -47,7 +51,8 @@ export const testimonyData = [
     primaryText: 'Alex Lastname -Computer Science 18',
     secondaryText: `Morbi vitae diam lorem. Aenean nec diam a leo fringilla rhoncus a dapibus magna. Fusce fermentum ligula velit, ac aliquet justo cursus a. Morbi vel tellus eget turpis varius fermentum quis at quam. Cras condimentum elit tincidunt mollis mollis.`,
     link: '#',
-    image: '../static/img/nicaragua-mission.jpg',
+    image:
+      'https://storage.googleapis.com/fus-wp-storage/img/nicaragua-mission.jpg',
     imgTitle: 'Random Pic',
     imgAlt: 'Just an image from unsplash'
   }

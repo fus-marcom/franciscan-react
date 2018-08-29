@@ -1,22 +1,22 @@
-import React, { Component } from 'react'
+import Card from '@material-ui/core/Card'
+import Grid from '@material-ui/core/Grid'
 import { withStyles } from '@material-ui/core/styles'
-import Layout from '../components/Layout'
+import Typography from '@material-ui/core/Typography'
 import Head from 'next/head'
-import withRoot from '../components/withRoot'
-import Hero from '../components/Hero'
+import React, { Component } from 'react'
 import Masonry from 'react-masonry-component'
+import {
+  animateScroll as scroll,
+  Events,
+  Link,
+  scroller,
+  scrollSpy
+} from 'react-scroll'
+import Hero from '../components/Hero'
+import Layout from '../components/Layout'
 import ProfileCard from '../components/ProfileCard'
 import TextSection from '../components/TextSection'
-import Grid from '@material-ui/core/Grid'
-import Card from '@material-ui/core/Card'
-import Typography from '@material-ui/core/Typography'
-import {
-  Link,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller
-} from 'react-scroll'
+import withRoot from '../components/withRoot'
 
 const styles = theme => ({
   root: {
@@ -168,7 +168,7 @@ class Missions extends Component {
         </Head>
         {/* Put content under here */}
         <Hero
-          backgroundImg="../static/img/hero-missions-page.jpg"
+          backgroundImg="https://storage.googleapis.com/fus-wp-storage/img/hero-missions-page.jpg"
           titleText="Missions of Peace"
           subtitleText={
             'Blessed are the peacemakers, for they shall be called children of God.'
@@ -211,7 +211,7 @@ class Missions extends Component {
               lg={6}
             >
               <ProfileCard
-                profileImg="../static/img/SaintJunipero.jpg"
+                profileImg="https://storage.googleapis.com/fus-wp-storage/img/SaintJunipero.jpg"
                 profileImgTitle="Saint Junipero Serra"
                 profileName="Saint Junipero Serra"
                 content="Image by Amber Pitts -SENT Missionary & FUS Alumni"
@@ -325,7 +325,7 @@ class Missions extends Component {
             <Masonry>
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/arizona-mission-team.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/arizona-mission-team.jpg"
                   profileImgTitle="Arizona"
                   profileType="Spring Mission"
                   profileName="Arizona Mission"
@@ -336,7 +336,7 @@ class Missions extends Component {
 
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/belize-mission.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/belize-mission.jpg"
                   profileImgTitle="Belize"
                   profileType="Spring Mission"
                   profileName="Belize Mission"
@@ -347,7 +347,7 @@ class Missions extends Component {
 
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/new-york-bronx-mission.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/new-york-bronx-mission.jpg"
                   profileImgTitle="New York City"
                   profileType="Spring Mission"
                   profileName="New York City (Bronx) Mission"
@@ -358,7 +358,7 @@ class Missions extends Component {
 
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/chicago-mission-team.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/chicago-mission-team.jpg"
                   profileImgTitle="Chicago"
                   profileType="Spring Mission"
                   profileName="Chicago Mission"
@@ -369,7 +369,7 @@ class Missions extends Component {
 
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/SonlifeSpringMission.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/SonlifeSpringMission.jpg"
                   profileImgTitle="Son Life (Panama City, Florida) Mission"
                   profileType="Spring Mission"
                   profileName="Son Life (Panama City, Florida) Mission"
@@ -380,7 +380,7 @@ class Missions extends Component {
 
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/SpringEcuadorMission.jpeg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/SpringEcuadorMission.jpeg"
                   profileImgTitle="Ecuador Spring Mission"
                   profileType="Spring Mission"
                   profileName="Ecuador Spring Mission"
@@ -391,7 +391,7 @@ class Missions extends Component {
 
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/honduras-mission-littleones.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/honduras-mission-littleones.jpg"
                   profileImgTitle="Honduras"
                   profileType="Spring Mission"
                   profileName="Honduras Mission"
@@ -402,7 +402,7 @@ class Missions extends Component {
 
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/new-mexico-mission-team.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/new-mexico-mission-team.jpg"
                   profileImgTitle="New Mexico"
                   profileType="Spring Mission"
                   profileName="New Mexico Mission"
@@ -413,7 +413,7 @@ class Missions extends Component {
 
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/nicaragua-mission.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/nicaragua-mission.jpg"
                   profileImgTitle="Nicaragua"
                   profileType="Spring Mission"
                   profileName="Nicaragua Mission"
@@ -424,7 +424,7 @@ class Missions extends Component {
 
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/north-dakota-mission-team.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/north-dakota-mission-team.jpg"
                   profileImgTitle="North Dakota"
                   profileType="Spring Mission"
                   profileName="North Dakota Mission"
@@ -435,7 +435,7 @@ class Missions extends Component {
 
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/los-angeles-mission.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/los-angeles-mission.jpg"
                   profileImgTitle="Los Angeles"
                   profileType="Spring Mission"
                   profileName="Los Angeles Mission"
@@ -446,7 +446,7 @@ class Missions extends Component {
 
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/Springsandiegomission.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/Springsandiegomission.jpg"
                   bgPosY="20%"
                   profileImgTitle="San Diego Mission"
                   profileType="Spring Mission"
@@ -457,7 +457,7 @@ class Missions extends Component {
               </Grid>
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/spring-steubenville-mission-team.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/spring-steubenville-mission-team.jpg"
                   bgPosY="20%"
                   profileImgTitle="Steubenville Mission"
                   profileType="Spring Mission"
@@ -482,7 +482,7 @@ class Missions extends Component {
                 lg={6}
               >
                 <ProfileCard
-                  profileImg="../static/img/summer-steubenville-mission-team.png"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/summer-steubenville-mission-team.png"
                   profileImgTitle="Steubenville"
                   profileType="Summer Mission"
                   profileName="Steubenville Mission"
@@ -493,7 +493,7 @@ class Missions extends Component {
 
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/ecuador-summer-mission.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/ecuador-summer-mission.jpg"
                   profileImgTitle="Ecuador Summer Mission"
                   profileType="Summer Mission"
                   profileName="Ecuador Summer Mission"
@@ -504,7 +504,7 @@ class Missions extends Component {
 
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/Springsandiegomission.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/Springsandiegomission.jpg"
                   bgPosY="20%"
                   profileImgTitle="San Diego Mission"
                   profileType="SUmmer Mission"
@@ -529,7 +529,7 @@ class Missions extends Component {
                 lg={6}
               >
                 <ProfileCard
-                  profileImg="../static/img/jamaica-christmas-mission.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/jamaica-christmas-mission.jpg"
                   profileImgTitle="Jamaica"
                   profileType="Christmas Mission"
                   profileName="Jamaica Mission"
@@ -547,7 +547,7 @@ class Missions extends Component {
                 lg={6}
               >
                 <ProfileCard
-                  profileImg="../static/img/PrayerOfRenewal.png"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/PrayerOfRenewal.png"
                   profileImgTitle="Prayer of On-Going Conversion"
                   profileName="Prayer of On-Going Conversion"
                   content="Image by Amber Pitts -SENT Missionary & FUS Alumni"
@@ -568,7 +568,7 @@ class Missions extends Component {
                 lg={6}
               >
                 <ProfileCard
-                  profileImg="../static/img/summer-steubenville-mission-team.png"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/summer-steubenville-mission-team.png"
                   profileImgTitle="Hungary"
                   profileType="Austria-Program Mission"
                   profileName="Hungary Mission"
@@ -579,7 +579,7 @@ class Missions extends Component {
 
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/ecuador-summer-mission.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/ecuador-summer-mission.jpg"
                   profileImgTitle="Romania Mission"
                   profileType="Austria-Program Mission"
                   profileName="Romania Mission"
@@ -590,7 +590,7 @@ class Missions extends Component {
 
               <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
                 <ProfileCard
-                  profileImg="../static/img/Springsandiegomission.jpg"
+                  profileImg="https://storage.googleapis.com/fus-wp-storage/img/Springsandiegomission.jpg"
                   bgPosY="20%"
                   profileImgTitle="Slovakia Mission"
                   profileType="Austria-Program Mission"

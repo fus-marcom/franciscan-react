@@ -75,7 +75,7 @@ exports[`<Index /> should render 1`] = `
   >
     <div
       class="Hero-parallax-240"
-      style="background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(../static/img/biology-students.jpg)"
+      style="background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url(https://storage.googleapis.com/fus-wp-storage/img/biology-students.jpg)"
     >
       <h1
         class="MuiTypography-root-118 MuiTypography-display2-121 MuiTypography-gutterBottom-135 Hero-white-243"
@@ -617,7 +617,7 @@ exports[`<Index /> should render 1`] = `
                       <img
                         alt="Just an image from unsplash"
                         class="MuiAvatar-img-351"
-                        src="../static/img/mission3-400w.jpg"
+                        src="https://storage.googleapis.com/fus-wp-storage/img/mission3-400w.jpg"
                       />
                     </div>
                     <span
@@ -675,7 +675,7 @@ exports[`<Index /> should render 1`] = `
                       <img
                         alt="Just an image from unsplash"
                         class="MuiAvatar-img-351"
-                        src="../static/img/adventure2-400w.jpg"
+                        src="https://storage.googleapis.com/fus-wp-storage/img/adventure2-400w.jpg"
                       />
                     </div>
                     <span

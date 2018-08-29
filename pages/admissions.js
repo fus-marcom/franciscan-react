@@ -11,7 +11,7 @@ import withRoot from '../components/withRoot'
 const Admissions = ({ classes }) => (
   <Layout>
     <Hero
-      backgroundImg="../static/img/biology-students.jpg"
+      backgroundImg="https://storage.googleapis.com/fus-wp-storage/img/biology-students.jpg"
       titleText="Undergraduate Admissions"
       subtitleText={
         <span>Academically Excellent &#8226; Passionately Catholic</span>
