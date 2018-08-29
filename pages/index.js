@@ -1,19 +1,12 @@
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
-import CardMedia from '@material-ui/core/CardMedia'
 import Grid from '@material-ui/core/Grid'
 import withStyles from '@material-ui/core/styles/withStyles'
 import Typography from '@material-ui/core/Typography'
 import React from 'react'
-import Masonry from 'react-masonry-component'
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
-import ListCard from '../components/ListCard'
-import ProfileCard from '../components/ProfileCard'
 import TabbedSection from '../components/TabbedSection'
 import TextSection from '../components/TextSection'
 import withRoot from '../components/withRoot'
-import { eventsData } from '../data/listData'
 
 const IndexPage = ({ classes }) => (
   <Layout>
@@ -75,82 +68,6 @@ const IndexPage = ({ classes }) => (
       btnLink="/about/our-mission"
       btnText="Calculate Cost"
     />
-    <div className={classes.contentContainer}>
-      <Masonry>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} md={6} lg={6}>
-          <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
-            <iframe
-              className={classes.videoIframe}
-              src="https://www.youtube.com/embed/HpzwoD2oVSQ?modestbranding=1&rel=0&color=white"
-              frameBorder="0"
-              allow="encrypted-media"
-              allowFullScreen
-            />
-          </Card>
-        </Grid>
-
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} md={6} lg={6}>
-          <ProfileCard
-            profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Students/Noah_Fisher_landing_v2.jpg"
-            profileImgTitle="Noah Fisher"
-            profileType="Student Profile"
-            profileName="Noah Fisher"
-            content="I first learned about Franciscan from some people at my parish who studied here. They recommended I check it out, but I wasn’t so sure. When I visited, though, I was blown away by the people I met; they were so genuine and helpful. They were the biggest reason I decided to come to Franciscan."
-            profileLink="/studentprofiles/noah-fisher"
-          />
-        </Grid>
-
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-          <ProfileCard
-            profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Alumni_Profiles/IMG_1132.JPG"
-            profileImgTitle="Maggie McDermott"
-            profileType="Alumni Profile"
-            profileName="Maggie McDermott"
-            content="My choice to say Yes to giving my all even in those trying moments can be attributed to the growth and education I received at Franciscan."
-            profileLink="/alumni-outcomes/mcdermott-maggie"
-            bgContain
-          />
-        </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6}>
-          <ListCard listTitle="Events" itemsArray={eventsData} />
-        </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-          <ProfileCard
-            profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Faculty/Education/boury.jpg?n=1668"
-            bgPosY="20%"
-            profileImgTitle="Dr. Tiffany Boury"
-            profileType="Faculty Profile"
-            profileName="Dr. Tiffany Boury"
-            content="Associate Professor of Education"
-            profileLink="/faculty/boury-tiffany"
-          />
-        </Grid>
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} lg={6}>
-          <Card className={classes.card}>
-            <CardMedia
-              className={classes.media}
-              image="https://storage.googleapis.com/fus-wp-storage/img/adventure2-800w.jpg"
-              title="Austria Campus"
-            />
-            <CardContent>
-              <Typography type="display1">Austria</Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        <Grid item className={classes.gridItemFix} xs={12} sm={6} md={6} lg={6}>
-          <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
-            <iframe
-              className={classes.videoIframe}
-              src="https://www.youtube.com/embed/HzfPBp3lHTU?modestbranding=1&rel=0&color=white"
-              frameBorder="0"
-              allow="encrypted-media"
-              allowFullScreen
-            />
-          </Card>
-        </Grid>
-      </Masonry>
-    </div>
   </Layout>
 )
 

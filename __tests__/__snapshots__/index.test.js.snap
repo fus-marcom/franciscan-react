@@ -429,357 +429,9 @@ exports[`<Index /> should render 1`] = `
         </div>
       </div>
     </div>
-    <div
-      class="IndexPage-contentContainer-5"
-    >
-      <div
-        class=""
-      >
-        <div
-          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 MuiGrid-grid-md-6-205 MuiGrid-grid-lg-6-219 IndexPage-gridItemFix-4"
-        >
-          <div
-            class="MuiPaper-root-64 MuiPaper-elevation1-67 MuiPaper-rounded-65 MuiCard-root-317 IndexPage-card-2 IndexPage-videoIframeContainer-11"
-          >
-            <iframe
-              allow="encrypted-media"
-              allowfullscreen=""
-              class="IndexPage-videoIframe-10"
-              frameborder="0"
-              src="https://www.youtube.com/embed/HpzwoD2oVSQ?modestbranding=1&rel=0&color=white"
-            />
-          </div>
-        </div>
-        <div
-          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 MuiGrid-grid-md-6-205 MuiGrid-grid-lg-6-219 IndexPage-gridItemFix-4"
-        >
-          <div
-            class="MuiPaper-root-64 MuiPaper-elevation1-67 MuiPaper-rounded-65 MuiCard-root-317 ProfileCard-card-318"
-          >
-            <img
-              src="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Students/Noah_Fisher_landing_v2.jpg"
-              style="width:100%"
-              title="Noah Fisher"
-            />
-            <div
-              class="MuiCardContent-root-322"
-            >
-              <span
-                class="MuiTypography-root-118 MuiTypography-caption-128 ProfileCard-category-320"
-              >
-                Student Profile
-              </span>
-              <h2
-                class="MuiTypography-root-118 MuiTypography-headline-123"
-              >
-                Noah Fisher
-              </h2>
-              <p
-                class="MuiTypography-root-118 MuiTypography-body1-127 ProfileCard-quote-321"
-              >
-                I first learned about Franciscan from some people at my parish who studied here. They recommended I check it out, but I wasn’t so sure. When I visited, though, I was blown away by the people I met; they were so genuine and helpful. They were the biggest reason I decided to come to Franciscan.
-              </p>
-            </div>
-            <div
-              class="MuiCardActions-root-323"
-            >
-              <button
-                class="MuiButtonBase-root-101 MuiButton-root-244 MuiButton-text-246 MuiButton-textPrimary-247 MuiButton-flat-249 MuiButton-flatPrimary-250 MuiButton-sizeSmall-267"
-                tabindex="0"
-                type="button"
-              >
-                <span
-                  class="MuiButton-label-245"
-                >
-                  Learn More
-                </span>
-                <span
-                  class="MuiTouchRipple-root-111"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 MuiGrid-grid-lg-6-219 IndexPage-gridItemFix-4"
-        >
-          <div
-            class="MuiPaper-root-64 MuiPaper-elevation1-67 MuiPaper-rounded-65 MuiCard-root-317 ProfileCard-card-318"
-          >
-            <img
-              src="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Alumni_Profiles/IMG_1132.JPG"
-              style="width:100%"
-              title="Maggie McDermott"
-            />
-            <div
-              class="MuiCardContent-root-322"
-            >
-              <span
-                class="MuiTypography-root-118 MuiTypography-caption-128 ProfileCard-category-320"
-              >
-                Alumni Profile
-              </span>
-              <h2
-                class="MuiTypography-root-118 MuiTypography-headline-123"
-              >
-                Maggie McDermott
-              </h2>
-              <p
-                class="MuiTypography-root-118 MuiTypography-body1-127 ProfileCard-quote-321"
-              >
-                My choice to say Yes to giving my all even in those trying moments can be attributed to the growth and education I received at Franciscan.
-              </p>
-            </div>
-            <div
-              class="MuiCardActions-root-323"
-            >
-              <button
-                class="MuiButtonBase-root-101 MuiButton-root-244 MuiButton-text-246 MuiButton-textPrimary-247 MuiButton-flat-249 MuiButton-flatPrimary-250 MuiButton-sizeSmall-267"
-                tabindex="0"
-                type="button"
-              >
-                <span
-                  class="MuiButton-label-245"
-                >
-                  Learn More
-                </span>
-                <span
-                  class="MuiTouchRipple-root-111"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 IndexPage-gridItemFix-4"
-        >
-          <div
-            class="MuiPaper-root-64 MuiPaper-elevation1-67 MuiPaper-rounded-65 MuiCard-root-317 ListCard-card-325"
-          >
-            <div
-              class="MuiCardContent-root-322"
-            >
-              <h2
-                class="MuiTypography-root-118 MuiTypography-headline-123"
-              >
-                Events
-              </h2>
-              <ul
-                class="MuiList-root-326 MuiList-padding-327"
-              >
-                <div>
-                  <div
-                    class="MuiButtonBase-root-101 MuiListItem-root-332 MuiListItem-default-335 MuiListItem-dense-336 MuiListItem-gutters-339 MuiListItem-divider-338 MuiListItem-button-340 ListCard-listItem-330"
-                    role="button"
-                    tabindex="0"
-                  >
-                    <div
-                      class="MuiListItemText-root-343 MuiListItemText-dense-345"
-                    >
-                      <span
-                        class="MuiTypography-root-118 MuiTypography-subheading-125 MuiListItemText-primary-346 MuiListItemText-textDense-348"
-                      >
-                        In Crisis: American Higher Education
-                      </span>
-                      <p
-                        class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-colorTextSecondary-141 MuiListItemText-secondary-347 MuiListItemText-textDense-348"
-                      >
-                        The Veritas Center for Ethics in Public Life at Franciscan University of Steubenville will host a two-day conference, “The State of American Higher Education, 2018,” to be held at Franciscan University April 6-7, 2018.
-                      </p>
-                    </div>
-                    <span
-                      class="MuiTouchRipple-root-111"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div
-                    class="MuiButtonBase-root-101 MuiListItem-root-332 MuiListItem-default-335 MuiListItem-dense-336 MuiListItem-gutters-339 MuiListItem-divider-338 MuiListItem-button-340 ListCard-listItem-330"
-                    role="button"
-                    tabindex="0"
-                  >
-                    <div
-                      class="MuiListItemText-root-343 MuiListItemText-dense-345"
-                    >
-                      <span
-                        class="MuiTypography-root-118 MuiTypography-subheading-125 MuiListItemText-primary-346 MuiListItemText-textDense-348"
-                      >
-                        Final Examinations Spring 2018
-                      </span>
-                      <p
-                        class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-colorTextSecondary-141 MuiListItemText-secondary-347 MuiListItemText-textDense-348"
-                      />
-                    </div>
-                    <div
-                      class="MuiAvatar-root-349 ListCard-avatar-331"
-                      title="Random Pic"
-                    >
-                      <img
-                        alt="Just an image from unsplash"
-                        class="MuiAvatar-img-351"
-                        src="https://storage.googleapis.com/fus-wp-storage/img/mission3-400w.jpg"
-                      />
-                    </div>
-                    <span
-                      class="MuiTouchRipple-root-111"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div
-                    class="MuiButtonBase-root-101 MuiListItem-root-332 MuiListItem-default-335 MuiListItem-dense-336 MuiListItem-gutters-339 MuiListItem-divider-338 MuiListItem-button-340 ListCard-listItem-330"
-                    role="button"
-                    tabindex="0"
-                  >
-                    <div
-                      class="MuiListItemText-root-343 MuiListItemText-dense-345"
-                    >
-                      <span
-                        class="MuiTypography-root-118 MuiTypography-subheading-125 MuiListItemText-primary-346 MuiListItemText-textDense-348"
-                      >
-                        Baccalaureate Mass
-                      </span>
-                      <p
-                        class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-colorTextSecondary-141 MuiListItemText-secondary-347 MuiListItemText-textDense-348"
-                      >
-                        Most Rev. Joseph Kurtz, archbishop of Louisville and former president of the US Conference of Catholic Bishops, will be the celebrant and homilist at the 2018 Baccalaureate Mass on Friday, May 11, 2018, in Finnegan Fieldhouse. Archbishop Kurtz will honored with an honorary doctorate before the Mass begins.
-                      </p>
-                    </div>
-                    <span
-                      class="MuiTouchRipple-root-111"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div
-                    class="MuiButtonBase-root-101 MuiListItem-root-332 MuiListItem-default-335 MuiListItem-dense-336 MuiListItem-gutters-339 MuiListItem-divider-338 MuiListItem-button-340 ListCard-listItem-330"
-                    role="button"
-                    tabindex="0"
-                  >
-                    <div
-                      class="MuiListItemText-root-343 MuiListItemText-dense-345"
-                    >
-                      <span
-                        class="MuiTypography-root-118 MuiTypography-subheading-125 MuiListItemText-primary-346 MuiListItemText-textDense-348"
-                      >
-                        Commencement Exercises 2018
-                      </span>
-                      <p
-                        class="MuiTypography-root-118 MuiTypography-body1-127 MuiTypography-colorTextSecondary-141 MuiListItemText-secondary-347 MuiListItemText-textDense-348"
-                      />
-                    </div>
-                    <div
-                      class="MuiAvatar-root-349 ListCard-avatar-331"
-                      title="Random Pic"
-                    >
-                      <img
-                        alt="Just an image from unsplash"
-                        class="MuiAvatar-img-351"
-                        src="https://storage.googleapis.com/fus-wp-storage/img/adventure2-400w.jpg"
-                      />
-                    </div>
-                    <span
-                      class="MuiTouchRipple-root-111"
-                    />
-                  </div>
-                </div>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 MuiGrid-grid-lg-6-219 IndexPage-gridItemFix-4"
-        >
-          <div
-            class="MuiPaper-root-64 MuiPaper-elevation1-67 MuiPaper-rounded-65 MuiCard-root-317 ProfileCard-card-318"
-          >
-            <img
-              src="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Faculty/Education/boury.jpg?n=1668"
-              style="width:100%"
-              title="Dr. Tiffany Boury"
-            />
-            <div
-              class="MuiCardContent-root-322"
-            >
-              <span
-                class="MuiTypography-root-118 MuiTypography-caption-128 ProfileCard-category-320"
-              >
-                Faculty Profile
-              </span>
-              <h2
-                class="MuiTypography-root-118 MuiTypography-headline-123"
-              >
-                Dr. Tiffany Boury
-              </h2>
-              <p
-                class="MuiTypography-root-118 MuiTypography-body1-127 ProfileCard-quote-321"
-              >
-                Associate Professor of Education
-              </p>
-            </div>
-            <div
-              class="MuiCardActions-root-323"
-            >
-              <button
-                class="MuiButtonBase-root-101 MuiButton-root-244 MuiButton-text-246 MuiButton-textPrimary-247 MuiButton-flat-249 MuiButton-flatPrimary-250 MuiButton-sizeSmall-267"
-                tabindex="0"
-                type="button"
-              >
-                <span
-                  class="MuiButton-label-245"
-                >
-                  Learn More
-                </span>
-                <span
-                  class="MuiTouchRipple-root-111"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 MuiGrid-grid-lg-6-219 IndexPage-gridItemFix-4"
-        >
-          <div
-            class="MuiPaper-root-64 MuiPaper-elevation1-67 MuiPaper-rounded-65 MuiCard-root-317 IndexPage-card-2"
-          >
-            <div
-              class="MuiCardMedia-root-352 IndexPage-media-3"
-              style="background-image:url(\\"https://storage.googleapis.com/fus-wp-storage/img/adventure2-800w.jpg\\")"
-              title="Austria Campus"
-            />
-            <div
-              class="MuiCardContent-root-322"
-            >
-              <p
-                class="MuiTypography-root-118 MuiTypography-body1-127"
-                type="display1"
-              >
-                Austria
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-6-191 MuiGrid-grid-md-6-205 MuiGrid-grid-lg-6-219 IndexPage-gridItemFix-4"
-        >
-          <div
-            class="MuiPaper-root-64 MuiPaper-elevation1-67 MuiPaper-rounded-65 MuiCard-root-317 IndexPage-card-2 IndexPage-videoIframeContainer-11"
-          >
-            <iframe
-              allow="encrypted-media"
-              allowfullscreen=""
-              class="IndexPage-videoIframe-10"
-              frameborder="0"
-              src="https://www.youtube.com/embed/HzfPBp3lHTU?modestbranding=1&rel=0&color=white"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
   </main>
   <div
-    class="Footer-root-354"
+    class="Footer-root-317"
   >
     <div
       class="MuiGrid-container-143"
@@ -788,7 +440,7 @@ exports[`<Index /> should render 1`] = `
         class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-4-189"
       >
         <p
-          class="MuiTypography-root-118 MuiTypography-body1-127 Footer-footerText-357 Footer-footerSections-355"
+          class="MuiTypography-root-118 MuiTypography-body1-127 Footer-footerText-320 Footer-footerSections-318"
         >
           Lorem ipsum dolor amet rump leberkas doner, andouille tenderloin beef ribs ham shankle kielbasa drumstick tail brisket.
         </p>
@@ -797,7 +449,7 @@ exports[`<Index /> should render 1`] = `
         class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-4-189"
       >
         <p
-          class="MuiTypography-root-118 MuiTypography-body1-127 Footer-footerText-357 Footer-footerSections-355"
+          class="MuiTypography-root-118 MuiTypography-body1-127 Footer-footerText-320 Footer-footerSections-318"
         >
           Bacon ipsum dolor amet rump leberkas doner, andouille tenderloin
         </p>
@@ -806,16 +458,16 @@ exports[`<Index /> should render 1`] = `
         class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-4-189"
       >
         <p
-          class="MuiTypography-root-118 MuiTypography-body1-127 Footer-footerText-357 Footer-footerSections-355"
+          class="MuiTypography-root-118 MuiTypography-body1-127 Footer-footerText-320 Footer-footerSections-318"
         >
           Bacon ipsum dolor amet rump leberkas doner, andouille tenderloin
         </p>
       </div>
       <div
-        class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 Footer-subFooter-356"
+        class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 Footer-subFooter-319"
       >
         <span
-          class="MuiTypography-root-118 MuiTypography-subheading-125 Footer-white-358"
+          class="MuiTypography-root-118 MuiTypography-subheading-125 Footer-white-321"
         >
           © 2018 Franciscan University of Steubenville
         </span>
