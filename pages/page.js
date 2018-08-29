@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 import { PageQuery } from '../lib/queries/page'
 import withData from '../lib/withData'
+import { titleCase } from 'change-case'
 
 class Page extends Component {
   static async getInitialProps ({ query: { id, type } }) {
@@ -12,7 +13,7 @@ class Page extends Component {
   }
   render () {
     return (
-      <Layout>
+      <Layout title={titleCase(this.props.type.replace('Pages', ''))}>
         <Head>
           <link
             rel="stylesheet"

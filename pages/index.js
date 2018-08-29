@@ -9,7 +9,7 @@ import TextSection from '../components/TextSection'
 import withRoot from '../components/withRoot'
 
 const IndexPage = ({ classes }) => (
-  <Layout>
+  <Layout title="Home">
     <Hero
       backgroundImg="https://storage.googleapis.com/fus-wp-storage/img/biology-students.jpg"
       titleText="Franciscan University of Steubenville"

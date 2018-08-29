@@ -45,7 +45,7 @@ class ButtonAppBar extends Component {
 
   onSeachChange = e => this.setState({ searchText: e.target.value })
 
-  render () {
+  render() {
     const { classes, toggleDrawer } = this.props
     const { isSearchOpen, searchText } = this.state
     return (
@@ -145,7 +145,10 @@ class ButtonAppBar extends Component {
                       onChange={this.onSeachChange}
                       onKeyPress={e => e.key === 'Enter' && this.handleSearch()}
                       endAdornment={
-                        <InputAdornment position="end">
+                        <InputAdornment
+                          style={isSearchOpen ? {} : { display: 'none' }}
+                          position="end"
+                        >
                           <IconButton
                             aria-label="Close search input"
                             onClick={this.closeInput}

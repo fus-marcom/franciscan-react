@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
+import Head from 'next/head'
 import AppBar from './AppBar'
 import Drawer from './Drawer'
 import Footer from './Footer'
@@ -51,9 +52,14 @@ class Layout extends Component {
   }
 
   render () {
-    const { classes } = this.props
+    const { classes, title } = this.props
     return (
       <div className={classes.layout}>
+        <Head>
+          <title>{`${
+            title ? `${title} | ` : ''
+          }Franciscan University of Steubenville`}</title>
+        </Head>
         <Drawer
           open={this.state.drawer}
           toggleDrawer={this.toggleDrawer}
