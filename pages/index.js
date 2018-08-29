@@ -129,7 +129,7 @@ const IndexPage = ({ classes }) => (
           <Card className={classes.card}>
             <CardMedia
               className={classes.media}
-              image="/static/img/adventure2-800w.jpg"
+              image="https://storage.googleapis.com/fus-wp-storage/img/adventure2-800w.jpg"
               title="Austria Campus"
             />
             <CardContent>

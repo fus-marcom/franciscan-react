@@ -71,14 +71,14 @@ class ButtonAppBar extends Component {
                     <Hidden mdUp>
                       <img
                         className={classes.mobileHeaderImage}
-                        src="/static/img/fus-logo.svg"
+                        src="https://storage.googleapis.com/fus-wp-storage/img/fus-logo.svg"
                         alt="Logo of Franciscan University of Steubenville"
                       />
                     </Hidden>
                     <Hidden smDown>
                       <img
                         className={classes.headerImage}
-                        src="/static/img/franciscan-logo.svg"
+                        src="https://storage.googleapis.com/fus-wp-storage/img/franciscan-logo.svg"
                         alt="Logo of Franciscan University of Steubenville"
                       />
                     </Hidden>
