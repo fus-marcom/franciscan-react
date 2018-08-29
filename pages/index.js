@@ -18,7 +18,7 @@ import { eventsData } from '../data/listData'
 const IndexPage = ({ classes }) => (
   <Layout>
     <Hero
-      backgroundImg="../static/img/biology-students.jpg"
+      backgroundImg="https://storage.googleapis.com/fus-wp-storage/img/biology-students.jpg"
       titleText="Franciscan University of Steubenville"
       subtitleText={
         <span>Academically Excellent &#8226; Passionately Catholic</span>

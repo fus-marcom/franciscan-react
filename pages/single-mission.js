@@ -1,15 +1,13 @@
-import React, { Component } from 'react'
-import { withStyles } from '@material-ui/core/styles'
-import Layout from '../components/Layout'
-import Head from 'next/head'
-import withRoot from '../components/withRoot'
-
-import Masonry from 'react-masonry-component'
-
-import TextSection from '../components/TextSection'
-import Grid from '@material-ui/core/Grid'
 import Card from '@material-ui/core/Card'
+import Grid from '@material-ui/core/Grid'
+import { withStyles } from '@material-ui/core/styles'
+import Head from 'next/head'
+import React, { Component } from 'react'
+import Masonry from 'react-masonry-component'
+import Layout from '../components/Layout'
 import ListCard from '../components/ListCard'
+import TextSection from '../components/TextSection'
+import withRoot from '../components/withRoot'
 import { testimonyData } from '../data/listData'
 
 const styles = theme => ({
@@ -163,14 +161,23 @@ class SingleMission extends Component {
               lg={6}
             >
               <div className="slider">
-                <img src="../static/img/adventure2-800w.jpg" alt="Slide 1" />
-
-                <img src="../static/img/biology-students.jpg" alt="Slide 2" />
-
-                <img src="../static/img/nicaragua-mission.jpg" alt="Slide 3" />
+                <img
+                  src="https://storage.googleapis.com/fus-wp-storage/img/adventure2-800w.jpg"
+                  alt="Slide 1"
+                />
 
                 <img
-                  src="../static/img/Fr-Shawn-with-Missionaries-Blue.png"
+                  src="https://storage.googleapis.com/fus-wp-storage/img/biology-students.jpg"
+                  alt="Slide 2"
+                />
+
+                <img
+                  src="https://storage.googleapis.com/fus-wp-storage/img/nicaragua-mission.jpg"
+                  alt="Slide 3"
+                />
+
+                <img
+                  src="https://storage.googleapis.com/fus-wp-storage/img/Fr-Shawn-with-Missionaries-Blue.png"
                   alt="Slide 4"
                 />
               </div>
