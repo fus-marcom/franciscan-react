@@ -73,7 +73,7 @@ class TemporaryDrawer extends Component {
                   <img
                     className={classes.drawerImg}
                     width="200"
-                    src="/static/img/fus-logo.svg"
+                    src="https://storage.googleapis.com/fus-wp-storage/img/fus-logo.svg"
                     alt="logo"
                   />
                 </Link>

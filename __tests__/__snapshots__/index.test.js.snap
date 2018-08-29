@@ -745,7 +745,7 @@ exports[`<Index /> should render 1`] = `
           >
             <div
               class="MuiCardMedia-root-352 IndexPage-media-3"
-              style="background-image:url(\\"/static/img/adventure2-800w.jpg\\")"
+              style="background-image:url(\\"https://storage.googleapis.com/fus-wp-storage/img/adventure2-800w.jpg\\")"
               title="Austria Campus"
             />
             <div
