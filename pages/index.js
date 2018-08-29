@@ -16,7 +16,7 @@ import withRoot from '../components/withRoot'
 import { eventsData } from '../data/listData'
 
 const IndexPage = ({ classes }) => (
-  <Layout>
+  <Layout title="Home">
     <Hero
       backgroundImg="../static/img/biology-students.jpg"
       titleText="Franciscan University of Steubenville"
