@@ -441,9 +441,44 @@ exports[`<Index /> should render 1`] = `
       >
         <p
           class="MuiTypography-root-118 MuiTypography-body1-127 Footer-footerText-320 Footer-footerSections-318"
+        />
+        <div
+          typeof="Organization"
+          vocab="http://schema.org/"
         >
-          Lorem ipsum dolor amet rump leberkas doner, andouille tenderloin beef ribs ham shankle kielbasa drumstick tail brisket.
-        </p>
+          <span
+            property="name"
+          >
+            Franciscan University of Steubenville
+          </span>
+          <div
+            property="address"
+            typeof="PostalAddress"
+          >
+            <span
+              property="streetAddress"
+            >
+              1235 University Boulevard
+            </span>
+            <span
+              property="addressLocality"
+              style="display:block"
+            >
+              Steubenville, Ohio 
+            </span>
+            <span
+              property="postalCode"
+            >
+              43952
+            </span>
+          </div>
+          <span
+            property="telephone"
+          >
+            (740) 283-3771
+          </span>
+        </div>
+        <p />
       </div>
       <div
         class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-4-189"

@@ -41,8 +41,21 @@ class Footer extends Component {
             <Typography
               className={classNames(classes.footerText, classes.footerSections)}
             >
-              Lorem ipsum dolor amet rump leberkas doner, andouille tenderloin
-              beef ribs ham shankle kielbasa drumstick tail brisket.
+              <div vocab="http://schema.org/" typeof="Organization">
+                <span property="name">
+                  Franciscan University of Steubenville
+                </span>
+                <div property="address" typeof="PostalAddress">
+                  <span property="streetAddress">
+                    1235 University Boulevard
+                  </span>
+                  <span property="addressLocality" style={{ display: 'block' }}>
+                    Steubenville, Ohio{' '}
+                  </span>
+                  <span property="postalCode">43952</span>
+                </div>
+                <span property="telephone">(740) 283-3771</span>
+              </div>
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
