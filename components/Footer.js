@@ -3,6 +3,150 @@ import { withStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import classNames from 'classnames'
+import InvertedButton from './InvertedButton'
+import Link from 'next/link'
+
+class Footer extends Component {
+  render () {
+    const { classes } = this.props
+    const currentYear = new Date().getFullYear()
+    return (
+      <div className={classes.root}>
+        <Grid
+          container
+          spacing={0}
+          className={classNames(classes.footerText, classes.footerSections)}
+        >
+          <Grid item xs={12} sm={4}>
+            <div vocab="http://schema.org/" typeof="Organization">
+              <span property="name">Franciscan University of Steubenville</span>
+              <div property="address" typeof="PostalAddress">
+                <span property="streetAddress">1235 University Boulevard</span>
+                <span property="addressLocality" style={{ display: 'block' }}>
+                  Steubenville, Ohio{' '}
+                </span>
+                <span property="postalCode">43952</span>
+              </div>
+              <span property="telephone">(740) 283-3771</span>
+            </div>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Grid container>
+              <Grid
+                className={classes.flexContainer}
+                style={{ justifyContent: 'center' }}
+                item
+                xs={12}
+              >
+                <InvertedButton
+                  style={{ width: '200px' }}
+                  className={classes.invertedBtnDark}
+                  href=""
+                  title=""
+                >
+                  Request Info
+                </InvertedButton>
+              </Grid>
+              <Grid
+                className={classes.flexContainer}
+                style={{ justifyContent: 'flex-end' }}
+                item
+                xs={6}
+              >
+                <InvertedButton
+                  style={{ width: '92px' }}
+                  className={classes.invertedBtnDark}
+                  href=""
+                  title=""
+                >
+                  Apply
+                </InvertedButton>
+              </Grid>
+              <Grid className={classes.flexContainer} item xs={6}>
+                <InvertedButton
+                  style={{ width: '92px' }}
+                  className={classes.invertedBtnDark}
+                  href=""
+                  title=""
+                >
+                  Visit
+                </InvertedButton>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <ul style={{ listStyle: 'none', margin: 0 }}>
+              <li>
+                <Link
+                  prefetch={true}
+                  as="/contact"
+                  href="/page?type=aboutPages&id=contact"
+                >
+                  <a className={classes.white} style={{ fontWeight: 400 }}>
+                    Contact
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  prefetch={true}
+                  as="/contact"
+                  href="/page?type=aboutPages&id=contact"
+                >
+                  <a className={classes.white} style={{ fontWeight: 400 }}>
+                    Privacy Policy
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  prefetch={true}
+                  as="/contact"
+                  href="/page?type=aboutPages&id=contact"
+                >
+                  <a className={classes.white} style={{ fontWeight: 400 }}>
+                    Directions
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  prefetch={true}
+                  as="/contact"
+                  href="/page?type=aboutPages&id=contact"
+                >
+                  <a className={classes.white} style={{ fontWeight: 400 }}>
+                    Contact
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  prefetch={true}
+                  as="/contact"
+                  href="/page?type=aboutPages&id=contact"
+                >
+                  <a className={classes.white} style={{ fontWeight: 400 }}>
+                    Contact
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </Grid>
+        </Grid>
+        <Grid className={classes.subFooter} item xs={12}>
+          <Typography
+            className={classes.white}
+            variant="subheading"
+            component={'span'}
+          >
+            © {currentYear} Franciscan University of Steubenville
+          </Typography>
+        </Grid>
+      </div>
+    )
+  }
+}
 
 const styles = theme => ({
   root: {
@@ -25,66 +169,19 @@ const styles = theme => ({
     fontSize: '18px',
     lineHeight: 1.5
   },
+  invertedBtnDark: {
+    color: '#fff',
+    backgroundColor: 'transparent',
+    border: '2px #fff solid',
+    boxShadow: 'none',
+    margin: '8px'
+  },
   white: {
     color: '#ffffff'
+  },
+  flexContainer: {
+    display: 'flex'
   }
 })
-
-class Footer extends Component {
-  render () {
-    const { classes } = this.props
-    const currentYear = new Date().getFullYear()
-    return (
-      <div className={classes.root}>
-        <Grid container spacing={0}>
-          <Grid item xs={12} sm={4}>
-            <Typography
-              className={classNames(classes.footerText, classes.footerSections)}
-            >
-              <div vocab="http://schema.org/" typeof="Organization">
-                <span property="name">
-                  Franciscan University of Steubenville
-                </span>
-                <div property="address" typeof="PostalAddress">
-                  <span property="streetAddress">
-                    1235 University Boulevard
-                  </span>
-                  <span property="addressLocality" style={{ display: 'block' }}>
-                    Steubenville, Ohio{' '}
-                  </span>
-                  <span property="postalCode">43952</span>
-                </div>
-                <span property="telephone">(740) 283-3771</span>
-              </div>
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Typography
-              className={classNames(classes.footerText, classes.footerSections)}
-            >
-              Bacon ipsum dolor amet rump leberkas doner, andouille tenderloin
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Typography
-              className={classNames(classes.footerText, classes.footerSections)}
-            >
-              Bacon ipsum dolor amet rump leberkas doner, andouille tenderloin
-            </Typography>
-          </Grid>
-          <Grid className={classes.subFooter} item xs={12}>
-            <Typography
-              className={classes.white}
-              variant="subheading"
-              component={'span'}
-            >
-              © {currentYear} Franciscan University of Steubenville
-            </Typography>
-          </Grid>
-        </Grid>
-      </div>
-    )
-  }
-}
 
 export default withStyles(styles)(Footer)

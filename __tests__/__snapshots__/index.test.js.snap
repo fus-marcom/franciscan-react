@@ -434,14 +434,11 @@ exports[`<Index /> should render 1`] = `
     class="Footer-root-317"
   >
     <div
-      class="MuiGrid-container-143"
+      class="MuiGrid-container-143 Footer-footerText-320 Footer-footerSections-318"
     >
       <div
         class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-4-189"
       >
-        <p
-          class="MuiTypography-root-118 MuiTypography-body1-127 Footer-footerText-320 Footer-footerSections-318"
-        />
         <div
           typeof="Organization"
           vocab="http://schema.org/"
@@ -478,35 +475,142 @@ exports[`<Index /> should render 1`] = `
             (740) 283-3771
           </span>
         </div>
-        <p />
       </div>
       <div
         class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-4-189"
       >
-        <p
-          class="MuiTypography-root-118 MuiTypography-body1-127 Footer-footerText-320 Footer-footerSections-318"
+        <div
+          class="MuiGrid-container-143"
         >
-          Bacon ipsum dolor amet rump leberkas doner, andouille tenderloin
-        </p>
+          <div
+            class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 Footer-flexContainer-323"
+            style="justify-content:center"
+          >
+            <button
+              class="MuiButtonBase-root-101 MuiButton-root-277 Footer-invertedBtnDark-321"
+              href=""
+              style="width:200px"
+              tabindex="0"
+              title=""
+              type="button"
+            >
+              <span
+                class="MuiButton-label-278"
+              >
+                Request Info
+              </span>
+              <span
+                class="MuiTouchRipple-root-111"
+              />
+            </button>
+          </div>
+          <div
+            class="MuiGrid-item-144 MuiGrid-grid-xs-6-177 Footer-flexContainer-323"
+            style="justify-content:flex-end"
+          >
+            <button
+              class="MuiButtonBase-root-101 MuiButton-root-277 Footer-invertedBtnDark-321"
+              href=""
+              style="width:92px"
+              tabindex="0"
+              title=""
+              type="button"
+            >
+              <span
+                class="MuiButton-label-278"
+              >
+                Apply
+              </span>
+              <span
+                class="MuiTouchRipple-root-111"
+              />
+            </button>
+          </div>
+          <div
+            class="MuiGrid-item-144 MuiGrid-grid-xs-6-177 Footer-flexContainer-323"
+          >
+            <button
+              class="MuiButtonBase-root-101 MuiButton-root-277 Footer-invertedBtnDark-321"
+              href=""
+              style="width:92px"
+              tabindex="0"
+              title=""
+              type="button"
+            >
+              <span
+                class="MuiButton-label-278"
+              >
+                Visit
+              </span>
+              <span
+                class="MuiTouchRipple-root-111"
+              />
+            </button>
+          </div>
+        </div>
       </div>
       <div
         class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 MuiGrid-grid-sm-4-189"
       >
-        <p
-          class="MuiTypography-root-118 MuiTypography-body1-127 Footer-footerText-320 Footer-footerSections-318"
+        <ul
+          style="list-style:none;margin:0"
         >
-          Bacon ipsum dolor amet rump leberkas doner, andouille tenderloin
-        </p>
+          <li>
+            <a
+              class="Footer-white-322"
+              href="/contact"
+              style="font-weight:400"
+            >
+              Contact
+            </a>
+          </li>
+          <li>
+            <a
+              class="Footer-white-322"
+              href="/contact"
+              style="font-weight:400"
+            >
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a
+              class="Footer-white-322"
+              href="/contact"
+              style="font-weight:400"
+            >
+              Directions
+            </a>
+          </li>
+          <li>
+            <a
+              class="Footer-white-322"
+              href="/contact"
+              style="font-weight:400"
+            >
+              Contact
+            </a>
+          </li>
+          <li>
+            <a
+              class="Footer-white-322"
+              href="/contact"
+              style="font-weight:400"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
       </div>
-      <div
-        class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 Footer-subFooter-319"
+    </div>
+    <div
+      class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 Footer-subFooter-319"
+    >
+      <span
+        class="MuiTypography-root-118 MuiTypography-subheading-125 Footer-white-322"
       >
-        <span
-          class="MuiTypography-root-118 MuiTypography-subheading-125 Footer-white-321"
-        >
-          © 2018 Franciscan University of Steubenville
-        </span>
-      </div>
+        © 2018 Franciscan University of Steubenville
+      </span>
     </div>
   </div>
 </div>
