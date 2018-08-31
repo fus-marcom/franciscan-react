@@ -5,7 +5,6 @@ import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 import { PageQuery } from '../lib/queries/page'
 import withData from '../lib/withData'
-import { titleCase } from 'change-case'
 
 class Page extends Component {
   static async getInitialProps ({ query: { id, type } }) {
@@ -13,14 +12,7 @@ class Page extends Component {
   }
   render () {
     return (
-      <Layout title={titleCase(this.props.type.replace('Pages', ''))}>
-        <Head>
-          <link
-            rel="stylesheet"
-            href="/static/styles/department.css"
-            type="text/css"
-          />
-        </Head>
+      <Layout>
         <Query
           query={PageQuery(this.props.type)}
           variables={{ name: this.props.id }}
@@ -39,14 +31,26 @@ class Page extends Component {
                 /src="\//g,
                 'src="https://storage.googleapis.com/fus-wp-storage/'
               )
+            const title = data[this.props.type].edges[0].node.title
 
             return (
-              <div
-                data-testid="content"
-                dangerouslySetInnerHTML={{
-                  __html: content
-                }}
-              />
+              <>
+                <Head>
+                  <title
+                  >{`${title} | Franciscan University of Steubenville`}</title>
+                  <link
+                    rel="stylesheet"
+                    href="/static/styles/department.css"
+                    type="text/css"
+                  />
+                </Head>
+                <div
+                  data-testid="content"
+                  dangerouslySetInnerHTML={{
+                    __html: content
+                  }}
+                />
+              </>
             )
           }}
         </Query>
