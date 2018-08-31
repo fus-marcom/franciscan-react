@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import { withStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
+import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import classNames from 'classnames'
-import InvertedButton from './InvertedButton'
 import Link from 'next/link'
+import React, { Component } from 'react'
+import InvertedButton from './InvertedButton'
 
 class Footer extends Component {
   render () {
@@ -41,8 +41,8 @@ class Footer extends Component {
                 <InvertedButton
                   style={{ width: '200px' }}
                   className={classes.invertedBtnDark}
-                  href=""
-                  title=""
+                  href="https://franciscan.secure.force.com/form?formid=217772"
+                  title="Request Info"
                 >
                   Request Info
                 </InvertedButton>
@@ -56,8 +56,8 @@ class Footer extends Component {
                 <InvertedButton
                   style={{ width: '92px' }}
                   className={classes.invertedBtnDark}
-                  href=""
-                  title=""
+                  href="https://franciscanuniversity.force.com/portal"
+                  title="Apply"
                 >
                   Apply
                 </InvertedButton>
@@ -66,8 +66,8 @@ class Footer extends Component {
                 <InvertedButton
                   style={{ width: '92px' }}
                   className={classes.invertedBtnDark}
-                  href=""
-                  title=""
+                  href="https://franciscan.secure.force.com/events"
+                  title="Visit"
                 >
                   Visit
                 </InvertedButton>
@@ -90,8 +90,8 @@ class Footer extends Component {
               <li>
                 <Link
                   prefetch={true}
-                  as="/contact"
-                  href="/page?type=aboutPages&id=contact"
+                  as="/ferpa"
+                  href="/page?type=aboutPages&id=ferpa"
                 >
                   <a className={classes.white} style={{ fontWeight: 400 }}>
                     Privacy Policy
@@ -101,8 +101,8 @@ class Footer extends Component {
               <li>
                 <Link
                   prefetch={true}
-                  as="/contact"
-                  href="/page?type=aboutPages&id=contact"
+                  as="/directions-and-attractions"
+                  href="/page?type=aboutPages&id=directions-and-attractions"
                 >
                   <a className={classes.white} style={{ fontWeight: 400 }}>
                     Directions
@@ -112,22 +112,22 @@ class Footer extends Component {
               <li>
                 <Link
                   prefetch={true}
-                  as="/contact"
-                  href="/page?type=aboutPages&id=contact"
+                  as="/consumer-information/non-discrimination/"
+                  href="/page?type=aboutPages&id=non-discrimination"
                 >
                   <a className={classes.white} style={{ fontWeight: 400 }}>
-                    Contact
+                    Nondiscrimination Statement
                   </a>
                 </Link>
               </li>
               <li>
                 <Link
                   prefetch={true}
-                  as="/contact"
-                  href="/page?type=aboutPages&id=contact"
+                  as="/consumer-information"
+                  href="/page?type=aboutPages&id=consumer-information"
                 >
                   <a className={classes.white} style={{ fontWeight: 400 }}>
-                    Contact
+                    Consumer Information
                   </a>
                 </Link>
               </li>

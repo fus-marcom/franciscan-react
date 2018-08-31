@@ -486,13 +486,13 @@ exports[`<Index /> should render 1`] = `
             class="MuiGrid-item-144 MuiGrid-grid-xs-12-183 Footer-flexContainer-323"
             style="justify-content:center"
           >
-            <button
+            <a
               class="MuiButtonBase-root-101 MuiButton-root-277 Footer-invertedBtnDark-321"
-              href=""
+              href="https://franciscan.secure.force.com/form?formid=217772"
+              role="button"
               style="width:200px"
               tabindex="0"
-              title=""
-              type="button"
+              title="Request Info"
             >
               <span
                 class="MuiButton-label-278"
@@ -502,19 +502,19 @@ exports[`<Index /> should render 1`] = `
               <span
                 class="MuiTouchRipple-root-111"
               />
-            </button>
+            </a>
           </div>
           <div
             class="MuiGrid-item-144 MuiGrid-grid-xs-6-177 Footer-flexContainer-323"
             style="justify-content:flex-end"
           >
-            <button
+            <a
               class="MuiButtonBase-root-101 MuiButton-root-277 Footer-invertedBtnDark-321"
-              href=""
+              href="https://franciscanuniversity.force.com/portal"
+              role="button"
               style="width:92px"
               tabindex="0"
-              title=""
-              type="button"
+              title="Apply"
             >
               <span
                 class="MuiButton-label-278"
@@ -524,18 +524,18 @@ exports[`<Index /> should render 1`] = `
               <span
                 class="MuiTouchRipple-root-111"
               />
-            </button>
+            </a>
           </div>
           <div
             class="MuiGrid-item-144 MuiGrid-grid-xs-6-177 Footer-flexContainer-323"
           >
-            <button
+            <a
               class="MuiButtonBase-root-101 MuiButton-root-277 Footer-invertedBtnDark-321"
-              href=""
+              href="https://franciscan.secure.force.com/events"
+              role="button"
               style="width:92px"
               tabindex="0"
-              title=""
-              type="button"
+              title="Visit"
             >
               <span
                 class="MuiButton-label-278"
@@ -545,7 +545,7 @@ exports[`<Index /> should render 1`] = `
               <span
                 class="MuiTouchRipple-root-111"
               />
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -567,7 +567,7 @@ exports[`<Index /> should render 1`] = `
           <li>
             <a
               class="Footer-white-322"
-              href="/contact"
+              href="/ferpa"
               style="font-weight:400"
             >
               Privacy Policy
@@ -576,7 +576,7 @@ exports[`<Index /> should render 1`] = `
           <li>
             <a
               class="Footer-white-322"
-              href="/contact"
+              href="/directions-and-attractions"
               style="font-weight:400"
             >
               Directions
@@ -585,19 +585,19 @@ exports[`<Index /> should render 1`] = `
           <li>
             <a
               class="Footer-white-322"
-              href="/contact"
+              href="/consumer-information/non-discrimination/"
               style="font-weight:400"
             >
-              Contact
+              Nondiscrimination Statement
             </a>
           </li>
           <li>
             <a
               class="Footer-white-322"
-              href="/contact"
+              href="/consumer-information"
               style="font-weight:400"
             >
-              Contact
+              Consumer Information
             </a>
           </li>
         </ul>
