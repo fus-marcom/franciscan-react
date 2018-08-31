@@ -324,6 +324,11 @@ const translationObj = {
       'mod-lang-lit': 'modern-languages-and-literatures'
     }
   },
+  'distance-learning': {
+    page: '/page',
+    type: 'departments',
+    id: { default: 'distance-learning' }
+  },
   'institutes-centers': {
     page: '/page',
     type: 'institutes',
@@ -387,7 +392,11 @@ const translationObj = {
   austria: {
     page: '/page',
     type: 'austriaPages',
-    id: { default: 'austria', excursions: 'excursions' }
+    id: {
+      default: 'austria',
+      excursions: 'excursions',
+      studentlife: 'student-life'
+    }
   },
   registrar: {
     page: '/page',
