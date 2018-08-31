@@ -45,7 +45,7 @@ class ButtonAppBar extends Component {
 
   onSeachChange = e => this.setState({ searchText: e.target.value })
 
-  render() {
+  render () {
     const { classes, toggleDrawer } = this.props
     const { isSearchOpen, searchText } = this.state
     return (
@@ -186,6 +186,7 @@ const styles = theme => ({
     borderBottom: `solid 3px #998643`
   },
   toolbar: {
+    minHeight: '72px',
     [theme.breakpoints.down('sm')]: {
       minHeight: '80px'
     }
@@ -220,7 +221,7 @@ const styles = theme => ({
     textAlign: 'right',
     marginBottom: '8px',
     marginTop: '8px',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
       marginTop: '4px'
     }
