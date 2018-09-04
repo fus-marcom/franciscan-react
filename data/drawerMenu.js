@@ -223,12 +223,12 @@ export const admissionsMenu = [
       {
         text: 'Requirements',
         linkUrl: '/admissions/graduate-requirements',
-        asUrl: '/page?type=admissionsPagess&id=graduate-requirements'
+        asUrl: '/page?type=admissionsPages&id=graduate-requirements'
       },
       {
         text: 'Costs',
         linkUrl: '/admissions/graduate-costs',
-        asUrl: '/page?type=admissionsPagess&id=graduate-costs'
+        asUrl: '/page?type=admissionsPages&id=graduate-costs'
       }
     ]
   },
