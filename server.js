@@ -686,6 +686,14 @@ const translationObj = {
       faculty: 'mba'
     }
   },
+  'mba-online': {
+    page: { default: '/major', faculty: '/faculty-list' },
+    type: { default: 'graduatePrograms', faculty: 'faculty' },
+    id: {
+      default: 'mba-online',
+      faculty: 'mba'
+    }
+  },
   mathematicalscience: {
     page: { default: '/major', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
@@ -791,11 +799,16 @@ const translationObj = {
   },
   theology: {
     page: { default: '/major', standard: '/page', faculty: '/faculty-list' },
-    type: { default: 'majors', faculty: 'faculty' },
+    type: {
+      default: 'majors',
+      faculty: 'faculty',
+      'online-associates': 'departments'
+    },
     id: {
       default: 'theology',
       faculty: 'theology',
-      classes: 'theology-classes'
+      classes: 'theology-classes',
+      'online-associates': 'online-associates'
     }
   },
   'graduate-theology': {
