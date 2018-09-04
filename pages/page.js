@@ -23,13 +23,14 @@ class Page extends Component {
             }
             if (result.error) return <h3>{JSON.stringify(result.error)}</h3>
 
+            const imgRegex = /(<img.src=")(.+)(")(.+)(\/>)/gi
             const { data } = result
             const content = data[this.props.type].edges[0].node.content
               .replace(/<Title>/g, '<h2 class="title">')
               .replace(/<\/Title>/g, '</h2>')
               .replace(
-                /src="\//g,
-                'src="https://storage.googleapis.com/fus-wp-storage/'
+                imgRegex,
+                '<img src="https://storage.googleapis.com/fus-wp-storage/$2" $4 />'
               )
             const title = data[this.props.type].edges[0].node.title
 
