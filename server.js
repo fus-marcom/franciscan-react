@@ -1039,6 +1039,14 @@ const translationObj = {
       default: 'admissions'
     }
   },
+  online: {
+    page: { default: '/page' },
+    type: { default: 'admissionsPages', msed: 'graduatePrograms' },
+    id: {
+      default: 'online',
+      msed: 'online-msed'
+    }
+  },
   'savings-for-local-graduates': {
     page: '/page',
     type: 'admissionsPages',
