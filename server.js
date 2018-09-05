@@ -900,7 +900,13 @@ const translationObj = {
   },
   classics: {
     page: { default: '/major', faculty: '/faculty-list' },
-    type: { default: 'majors', faculty: 'faculty' },
+    type: {
+      default: 'majors',
+      faculty: 'faculty',
+      'classical-latin': 'minors',
+      'ecclesiastical-latin': 'minors',
+      'greek-minor': 'minors'
+    },
     id: {
       default: 'classics',
       classes: 'classics-classes',
