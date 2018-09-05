@@ -319,10 +319,7 @@ const translationObj = {
     page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'departments', faculty: 'faculty' },
     id: {
-      default: 'departments',
-      'hist-anthro': 'history-and-anthropology',
-      'math-cs': 'mathematical-and-computer-science',
-      'mod-lang-lit': 'modern-languages-and-literatures'
+      default: 'departments'
     }
   },
   'distance-learning': {
