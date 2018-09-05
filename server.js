@@ -377,6 +377,11 @@ const translationObj = {
     type: 'pressPages',
     id: { default: 'franciscanmagazine' }
   },
+  franciscanstudies: {
+    page: '/page',
+    type: 'minors',
+    id: { default: 'franciscanstudies' }
+  },
   'exploring-majors': {
     page: '/page',
     type: 'academicsPages',
