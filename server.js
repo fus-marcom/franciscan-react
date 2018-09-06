@@ -382,6 +382,11 @@ const translationObj = {
     type: 'minors',
     id: { default: 'franciscanstudies' }
   },
+  franciscandifference: {
+    page: '/page',
+    type: 'admissionsPages',
+    id: { default: 'franciscandifference' }
+  },
   'exploring-majors': {
     page: '/page',
     type: 'academicsPages',
