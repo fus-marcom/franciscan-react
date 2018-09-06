@@ -3,13 +3,13 @@ import { withStyles } from '@material-ui/core/styles'
 import Head from 'next/head'
 import React, { Component } from 'react'
 import { compose, Query } from 'react-apollo'
-import FacultyListItem from '../components/FacultyListItem'
+import StaffListItem from '../components/StaffListItem'
 import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
-import { FacultyListQuery } from '../lib/queries/facultyList'
+import { StaffListQuery } from '../lib/queries/staffList'
 import withData from '../lib/withData'
 
-class FacultyList extends Component {
+class StaffList extends Component {
   static async getInitialProps ({ query: { id, type } }) {
     return { id, type }
   }
@@ -18,11 +18,11 @@ class FacultyList extends Component {
     return (
       <Layout>
         <Head>
-          <link
+          {/* <link
             rel="stylesheet"
             href="/static/styles/faculty.css"
             type="text/css"
-          />
+          /> */}
           <link
             rel="stylesheet"
             href="/static/styles/faculty-list.css"
@@ -30,8 +30,8 @@ class FacultyList extends Component {
           />
         </Head>
         <Query
-          query={FacultyListQuery(this.props.type)}
-          variables={{ name: this.props.id }}
+          query={StaffListQuery(this.props.type)}
+          variables={{ name: 'admissions' }}
         >
           {result => {
             if (result.loading) {
@@ -40,8 +40,8 @@ class FacultyList extends Component {
             if (result.error) return <h3>{JSON.stringify(result.error)}</h3>
 
             const { data } = result
-            const facultyData =
-              data['facultyDepartments'].edges[0].node.faculty.edges
+            const staffData =
+              data['staffDepartments'].edges[0].node.staffMembers.edges
 
             return (
               <Grid
@@ -50,13 +50,15 @@ class FacultyList extends Component {
                 justify="center"
                 spacing={16}
               >
-                {facultyData.map(faculty => (
-                  <FacultyListItem
-                    key={faculty.node.slug}
-                    profileName={faculty.node.displayNameField.value}
-                    profileLink={`/faculty/${faculty.node.slug}`}
-                    jobTitle={faculty.node.jobTitleField.value}
-                    imageObj={faculty.node.featuredImage}
+                {staffData.map(staff => (
+                  <StaffListItem
+                    key={staff.node.slug}
+                    profileName={staff.node.displayNameField.value}
+                    profileLink={`/admissions/staff/${staff.node.slug}`}
+                    jobTitle={staff.node.jobTitleField.value}
+                    imageObj={staff.node.featuredImage}
+                    content={staff.node.content}
+                    phone={staff.node.phoneField.value}
                   />
                 ))}
               </Grid>
@@ -90,4 +92,4 @@ const styles = theme => ({
   }
 })
 
-export default compose(withRoot, withData)(withStyles(styles)(FacultyList))
+export default compose(withRoot, withData)(withStyles(styles)(StaffList))

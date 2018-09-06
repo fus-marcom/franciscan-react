@@ -8,13 +8,21 @@ import Typography from '@material-ui/core/Typography'
 import Link from 'next/link'
 import React, { Fragment } from 'react'
 
-const FacultyListItem = props => {
-  const { classes, profileName, profileLink, jobTitle, imageObj } = props
+const StaffListItem = props => {
+  const {
+    classes,
+    profileName,
+    profileLink,
+    jobTitle,
+    imageObj,
+    content,
+    phone
+  } = props
   const decodeHTML = str =>
     str.replace(/&#(\d+);/g, (_, p1) => String.fromCharCode(p1))
 
   return (
-    <Grid item xs={12} sm={9} md={6} lg={6} xl={4} className={classes.card}>
+    <Grid item xs={12} className={classes.card}>
       <Paper className={classes.cardContent}>
         <CardContent
           className={classes.textContent}
@@ -31,6 +39,17 @@ const FacultyListItem = props => {
             <Typography component="span" className={classes.quote}>
               {decodeHTML(jobTitle)}
             </Typography>
+          )}
+          {content && (
+            <Typography
+              component="span"
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+          )}
+          {jobTitle && (
+            <span className={classes.quote}>
+              <a href={`tel:${phone}`}>{phone}</a>
+            </span>
           )}
           {profileLink && (
             <CardActions className={classes.actions}>
@@ -60,8 +79,7 @@ const FacultyListItem = props => {
 
 const styles = theme => ({
   card: {
-    height: '250px',
-    maxWidth: '600px'
+    maxWidth: '1200px'
   },
   cardContent: {
     display: 'flex',
@@ -106,4 +124,4 @@ const styles = theme => ({
   }
 })
 
-export default withStyles(styles)(FacultyListItem)
+export default withStyles(styles)(StaffListItem)

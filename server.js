@@ -316,8 +316,8 @@ const translationObj = {
   major: { page: '/major' },
   minor: { page: '/minor' },
   departments: {
-    page: { default: '/page', faculty: '/faculty-list' },
-    type: { default: 'departments', faculty: 'faculty' },
+    page: { default: '/page' },
+    type: { default: 'departments' },
     id: {
       default: 'departments'
     }
@@ -1046,7 +1046,12 @@ const translationObj = {
   },
   studentprofiles: { page: '/faculty', type: 'studentProfilePages' },
   admissions: {
-    page: { default: '/admissions', standard: '/page', thirdly: '/page' },
+    page: {
+      default: '/admissions',
+      standard: '/page',
+      thirdly: '/page',
+      staff: '/staff-list'
+    },
     type: 'admissionsPages',
     id: {
       default: 'admissions'
