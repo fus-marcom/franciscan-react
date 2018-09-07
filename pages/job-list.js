@@ -123,7 +123,7 @@ class JobList extends Component {
                           />
                         </span>
                       )}
-                      <Link prefetch href={`/hr/careers/${job.node.slug}`}>
+                      <Link prefetch href={`/careers/${job.node.slug}`}>
                         <h2
                           className={classes.link}
                           dangerouslySetInnerHTML={{

@@ -288,8 +288,18 @@ function renderAndCache (req, res, pagePath, queryParams) {
 
 // TODO: split this object up into three: one for for routes with 1 param, 2params, and 3 params. Then change routing function to use the correct obj depending on the num of params
 const translationObj = {
-  about: { page: '/page', type: 'aboutPages' },
+  about: { page: '/page', type: 'aboutPages', id: { default: 'about' } },
   faculty: { page: '/faculty', type: 'faculty' },
+  students: {
+    page: '/page',
+    type: 'studentLifePages',
+    id: { default: 'students' }
+  },
+  paulmoviediscussion: {
+    page: '/page',
+    type: 'events',
+    id: { default: 'paulmoviediscussion' }
+  },
   contact: {
     page: {
       default: '/page'
@@ -298,6 +308,7 @@ const translationObj = {
     id: { default: 'contact' }
   },
   news: { page: '/news', type: 'news' },
+  careers: { page: { default: '/job-list', standard: '/job' }, type: 'jobs' },
   'oath-of-fidelity': {
     page: '/page',
     type: 'academicsPages',
@@ -1069,7 +1080,7 @@ const translationObj = {
   studentprofiles: { page: '/faculty', type: 'studentProfilePages' },
   admissions: {
     page: {
-      default: '/admissions',
+      default: '/page',
       standard: '/page',
       thirdly: '/page',
       staff: '/staff-list',
