@@ -183,6 +183,13 @@ app.prepare().then(() => {
             if (typeof translationObj[firstParam].page === 'object') {
               if (translationObj[firstParam].page[id]) {
                 page = translationObj[firstParam].page[id]
+              } else if (translationObj[firstParam].page[subtype]) {
+                // Hack to get admissions profiles to work
+                if (subtype === 'staff') {
+                  page = '/staff-member'
+                } else {
+                  page = translationObj[firstParam].page[subtype]
+                }
               } else if (translationObj[firstParam].page.thirdly) {
                 page = translationObj[firstParam].page.thirdly
               } else {
@@ -197,6 +204,8 @@ app.prepare().then(() => {
             if (typeof translationObj[firstParam].type === 'object') {
               if (translationObj[firstParam].type[id]) {
                 type = translationObj[firstParam].type[id]
+              } else if (translationObj[firstParam].type[subtype]) {
+                type = translationObj[firstParam].type[subtype]
               } else if (translationObj[firstParam].type.thirdly) {
                 type = translationObj[firstParam].type.thirdly
               } else {
@@ -1063,9 +1072,10 @@ const translationObj = {
       default: '/admissions',
       standard: '/page',
       thirdly: '/page',
-      staff: '/staff-list'
+      staff: '/staff-list',
+      'staff-member': '/staff-member'
     },
-    type: 'admissionsPages',
+    type: { default: 'admissionsPages', staff: 'staffMembers' },
     id: {
       default: 'admissions'
     }
