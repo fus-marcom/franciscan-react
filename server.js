@@ -357,6 +357,11 @@ const translationObj = {
     type: 'fiwhPages',
     id: { default: 'fiwh' }
   },
+  fals: {
+    page: '/page',
+    type: 'institutes',
+    id: { default: 'fals' }
+  },
   sabl: {
     page: '/page',
     type: 'majors',
@@ -886,12 +891,20 @@ const translationObj = {
   sacredmusic: {
     page: '/major',
     type: 'majors',
-    id: { default: 'sacred-music', classes: 'sacred-music-classes' }
+    id: {
+      default: 'sacred-music',
+      classes: 'sacred-music-classes',
+      events: 'sacred-music-events'
+    }
   },
   'sacred-music': {
     page: '/major',
     type: 'majors',
-    id: { default: 'sacred-music', classes: 'sacred-music-classes' }
+    id: {
+      default: 'sacred-music',
+      classes: 'sacred-music-classes',
+      events: 'sacred-music-events'
+    }
   },
   catechetics: {
     page: '/major',
