@@ -3,8 +3,8 @@ import { withStyles } from '@material-ui/core/styles'
 import Head from 'next/head'
 import React, { Component } from 'react'
 import { compose, Query } from 'react-apollo'
-import StaffListItem from '../components/StaffListItem'
 import Layout from '../components/Layout'
+import StaffListItem from '../components/StaffListItem'
 import withRoot from '../components/withRoot'
 import { StaffListQuery } from '../lib/queries/staffList'
 import withData from '../lib/withData'
@@ -81,7 +81,7 @@ const styles = theme => ({
   },
   contentContainer: {
     width: '100%',
-    maxWidth: '70%',
+    maxWidth: '80%',
     margin: '0 auto',
     [theme.breakpoints.down('md')]: {
       maxWidth: '85%'

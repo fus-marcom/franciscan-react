@@ -1,12 +1,10 @@
 import Button from '@material-ui/core/Button'
-import CardActions from '@material-ui/core/CardActions'
-import CardContent from '@material-ui/core/CardContent'
 import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
+import Hidden from '@material-ui/core/Hidden'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Link from 'next/link'
-import React, { Fragment } from 'react'
+import React from 'react'
 
 const StaffListItem = props => {
   const {
@@ -23,11 +21,21 @@ const StaffListItem = props => {
 
   return (
     <Grid item xs={12} className={classes.card}>
-      <Paper className={classes.cardContent}>
-        <CardContent
-          className={classes.textContent}
-          style={{ width: imageObj ? 'calc(50% - 24px)' : 'auto' }}
-        >
+      <Grid container>
+        <Hidden smUp>
+          <Grid item xs={12}>
+            {imageObj && (
+              <div className={classes.portraitWrapper}>
+                <img
+                  src={imageObj.sourceUrl}
+                  alt={imageObj.altText}
+                  className={classes.portrait}
+                />
+              </div>
+            )}
+          </Grid>
+        </Hidden>
+        <Grid item xs={12} sm={9} style={{ paddingRight: '16px' }}>
           <Typography
             variant="headline"
             component="h2"
@@ -52,35 +60,33 @@ const StaffListItem = props => {
             </span>
           )}
           {profileLink && (
-            <CardActions className={classes.actions}>
-              <Fragment>
-                <Link prefetch href={profileLink}>
-                  <Button size="small" color="primary">
-                    Learn More
-                  </Button>
-                </Link>
-              </Fragment>
-            </CardActions>
+            <Link prefetch href={profileLink}>
+              <Button size="small" color="primary">
+                Learn More
+              </Button>
+            </Link>
           )}
-        </CardContent>
-        {imageObj && (
-          <div className={classes.portraitWrapper}>
-            <img
-              src={imageObj.sourceUrl}
-              alt={imageObj.altText}
-              className={classes.portrait}
-            />
-          </div>
-        )}
-      </Paper>
+        </Grid>
+        <Hidden xsDown>
+          <Grid item xs={3}>
+            {imageObj && (
+              <div className={classes.portraitWrapper}>
+                <img
+                  src={imageObj.sourceUrl}
+                  alt={imageObj.altText}
+                  className={classes.portrait}
+                />
+              </div>
+            )}
+          </Grid>
+        </Hidden>
+      </Grid>
     </Grid>
   )
 }
 
 const styles = theme => ({
-  card: {
-    maxWidth: '1200px'
-  },
+  card: {},
   cardContent: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -93,25 +99,19 @@ const styles = theme => ({
     }
   },
   quote: {
+    display: 'block',
     fontSize: '16px',
     paddingLeft: '8px',
+    marginBottom: '16px',
     borderLeft: '4px solid rgba(0, 0, 0, 0.24)',
     [theme.breakpoints.down('xs')]: {
       fontSize: '14px'
     }
   },
-  portraitWrapper: {
-    height: '100%',
-    width: '50%',
-    overflow: 'hidden',
-    borderTopRightRadius: '2px',
-    borderBottomRightRadius: '2px'
-  },
+  portraitWrapper: {},
   portrait: {
-    objectFit: 'cover',
-    objectPosition: '0px 22%',
     width: '100%',
-    height: '100% !important'
+    maxWidth: '250px'
   },
   textContent: {
     display: 'flex',
