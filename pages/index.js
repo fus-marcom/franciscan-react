@@ -3,8 +3,8 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import Typography from '@material-ui/core/Typography'
 import React from 'react'
 import Hero from '../components/Hero'
+import InvertedButton from '../components/InvertedButton'
 import Layout from '../components/Layout'
-import TabbedSection from '../components/TabbedSection'
 import TextSection from '../components/TextSection'
 import withRoot from '../components/withRoot'
 
@@ -23,51 +23,290 @@ const IndexPage = ({ classes }) => (
       tertiaryBtnText="Visit"
       tertiaryBtnLink="https://franciscan.secure.force.com/events"
     />
+    <TextSection
+      sectionTitle="Degrees"
+      text="40+ Majors, 34 Minors, 8 Graduate Degrees"
+    />
     <Grid
       container
       className={classes.contentContainer}
       styles={{ textAlign: 'center' }}
     >
-      <Grid item className={classes.gridItemFix} xs={12}>
-        <Typography variant="display2" component="h3" gutterBottom>
-          Tuition
-        </Typography>
-      </Grid>
       <Grid item className={classes.gridItemFix} xs={12} sm={4}>
-        <Typography>$24k</Typography>
-        <Typography>Undergraduate</Typography>
+        <ul className={classes.degreeList}>
+          <li>
+            <a title="Accounting" href="/Accounting">
+              Accounting
+            </a>
+          </li>
+          <li>
+            <a title="Anthropology" href="/Anthropology/">
+              Anthropology
+            </a>
+          </li>
+          <li>
+            <a title="Art&nbsp;" href="/departments/fine-arts/">
+              Art
+            </a>
+          </li>
+          <li>
+            <a title="Biology" href="/Biology/">
+              Biology
+            </a>
+          </li>
+          <li>
+            <a title="British and American Literature" href="/English/">
+              British and American Literature
+            </a>
+          </li>
+          <li>
+            <a title="Business&nbsp;" href="/departments/acc-bus-ec/">
+              Business
+            </a>
+          </li>
+          <li>
+            <a title="Catechetics" href="/Catechetics/">
+              Catechetics
+            </a>
+          </li>
+          <li>
+            <a title="Chemistry" href="/Chemistry/">
+              Chemistry
+            </a>
+          </li>
+          <li>
+            <a title="Classics" href="/Classics/">
+              Classics
+            </a>
+          </li>
+          <li>
+            <a title="Communication Arts" href="/CommunicationArts/">
+              Communication Arts
+            </a>
+          </li>
+          <li>
+            <a title="Computer Information Science" href="/CS-CIS/">
+              Computer Information Science
+            </a>
+          </li>
+          <li>
+            <a title="Computer Science" href="/CS-CIS/">
+              Computer Science
+            </a>
+          </li>
+          <li>
+            <a title="Economics" href="/Economics/">
+              Economics
+            </a>
+          </li>
+          <li>
+            <a title="Education" href="/education/">
+              Education
+            </a>
+          </li>
+          <li>
+            <a title="Engineering" href="/Engineering/">
+              Engineering
+            </a>
+          </li>
+        </ul>
       </Grid>
 
       <Grid item className={classes.gridItemFix} xs={12} sm={4}>
-        <Typography>$18k</Typography>
-        <Typography>Graduate</Typography>
+        <ul className={classes.degreeList}>
+          {' '}
+          <li>
+            <a title="English" href="/English/">
+              English
+            </a>
+          </li>
+          <li>
+            <a title="Finance" href="/Finance/">
+              Finance
+            </a>
+          </li>
+          <li>
+            <a title="French" href="/ModernLanguages/">
+              French
+            </a>
+          </li>
+          <li>
+            <a title="German" href="/ModernLanguages/">
+              German
+            </a>
+          </li>
+          <li>
+            <a title="History" href="/History/">
+              History
+            </a>
+          </li>
+          <li>
+            <a
+              title="Humanities and Catholic Culture"
+              href="/HumanitiesAndCatholicCulture/"
+            >
+              Humanities and Catholic Culture
+            </a>
+          </li>
+          <li>
+            <a title="Internatiol Business" href="/InternationalBusiness/">
+              International Business
+            </a>
+          </li>
+          <li>
+            <a title="Communication Arts" href="/CommunicationArts/">
+              Journalism
+            </a>
+          </li>
+          <li>
+            <a title="Law School Preparation" href="/law/">
+              Law School Preparation
+            </a>
+          </li>
+          <li>
+            <a title="Management" href="/Management/">
+              Management
+            </a>
+          </li>
+          <li>
+            <a title="Marketing" href="/Marketing/">
+              Marketing
+            </a>
+          </li>
+          <li>
+            <a title="Mathematical Science" href="/MathematicalScience/">
+              Mathematical Science{' '}
+            </a>
+          </li>
+          <li>
+            <a title="Multimedia" href="/CommunicationArts/">
+              Multimedia
+            </a>
+          </li>
+          <li>
+            <a title="Music (Sacred Music)" href="/SacredMusic/">
+              Music (Sacred Music)
+            </a>
+          </li>
+        </ul>
       </Grid>
 
       <Grid item className={classes.gridItemFix} xs={12} sm={4}>
-        <Typography>$3.50</Typography>
-        <Typography>Online</Typography>
+        <ul className={classes.degreeList}>
+          {' '}
+          <li>
+            <a title="Nursing" href="/Nursing/">
+              Nursing
+            </a>
+          </li>
+          <li>
+            <a title="Pharmacy" href="/pharmacy/">
+              Pharmacy
+            </a>
+          </li>
+          <li>
+            <a title="Philosophy" href="/Philosophy/">
+              Philosophy
+            </a>
+          </li>
+          <li>
+            <a title="Political Science" href="/PoliticalScience/">
+              Political Science
+            </a>
+          </li>
+          <li>
+            <a title="Psychology-Clinical" href="/Psychology/">
+              Psychology-Clinical
+            </a>
+          </li>
+          <li>
+            <a title="Psychology-Experimental" href="/Psychology/">
+              Psychology-Experimental
+            </a>
+          </li>
+          <li>
+            <a title="Radio/Television" href="/CommunicationArts/">
+              Radio/Television
+            </a>
+          </li>
+          <li>
+            <a title="Social Work" href="/SocialWork/">
+              Social Work
+            </a>
+          </li>
+          <li>
+            <a title="Sociology" href="/Sociology/">
+              Sociology
+            </a>
+          </li>
+          <li>
+            <a title="Spanish" href="/ModernLanguages/">
+              Spanish
+            </a>
+          </li>
+          <li>
+            <a title="Theatre" href="/theatre">
+              Theatre
+            </a>
+          </li>
+          <li>
+            <a title="Theology" href="/Theology/">
+              Theology
+            </a>
+          </li>
+          <li>
+            <a title="Western and World Literature" href="/English/">
+              Western and World Literature
+            </a>
+          </li>
+          <li>
+            <a title="Writing" href="/English/">
+              Writing
+            </a>
+          </li>
+        </ul>
       </Grid>
     </Grid>
 
     <TextSection
-      sectionTitle="Degrees"
-      text=" We have lots of majors"
-      btnLink="/academics/ug/majors"
-      btnText="Learn More"
-    />
-    <TabbedSection />
-    <TextSection
-      sectionTitle="15 to 1 Student to Faculty Ratio"
+      sectionTitle="96 percent of graduates employed, in graduate school, or serving the Church within one year."
       bgColor="#21412a"
       textColor="#fff"
       borderColor="#998643"
     />
-    <TextSection
-      sectionTitle="Cost and Financial Aid"
-      text=" To educate, evangelize, and send forth joyful disciples to restore all things in Christ."
-      btnLink="/about/our-mission"
-      btnText="Calculate Cost"
-    />
+    <div className={classes.section}>
+      <div className={classes.innerContainer}>
+        <Typography variant="display2" gutterBottom>
+          Cost and Financial Aid
+        </Typography>
+
+        <Typography
+          className={classes.sectionText}
+          variant="body1"
+          gutterBottom
+        >
+          $24k Tuition
+        </Typography>
+        <Typography
+          className={classes.sectionText}
+          variant="body1"
+          gutterBottom
+        >
+          90% of students receive financial aid
+        </Typography>
+        <Grid item className={classes.heroBtn} xs={12}>
+          <InvertedButton
+            href="https://tcc.noellevitz.com/Franciscan%20University%20of%20Steubenville/Franciscan%20University%20Net%20Price%20Calculator"
+            title="Price Calculator"
+            className={classes.invertedBtn}
+            color="secondary"
+            style={{ width: '192px' }}
+          >
+            Calculate Cost
+          </InvertedButton>
+        </Grid>
+      </div>
+    </div>
   </Layout>
 )
 
@@ -115,6 +354,9 @@ const styles = theme => ({
     height: '80px',
     borderRadius: 0
   },
+  degreeList: {
+    listStyleType: 'none'
+  },
   avatarBig: {
     width: '200px',
     height: '200px',
@@ -143,6 +385,34 @@ const styles = theme => ({
     overflow: 'hidden',
     position: 'relative',
     paddingBottom: '56.25%'
+  },
+  section: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    padding: '38px 0',
+    textAlign: 'center'
+  },
+  innerContainer: {
+    width: '70%',
+    margin: '0 auto'
+  },
+  sectionText: {
+    fontSize: '28px',
+    fontWeight: 400,
+    lineHeight: 1.5
+  },
+  heroBtn: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: '16px'
+  },
+  invertedBtn: {
+    color: '#21412a',
+    backgroundColor: 'transparent',
+    border: '2px #21412a solid',
+    boxShadow: 'none'
   }
 })
 
