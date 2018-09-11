@@ -13,4 +13,9 @@
 #
 # [START runtime]
 runtime: nodejs8
-# [END runtime]
+handlers:
+  - url: /.*
+    secure: always
+    redirect_http_response_code: 301
+    script: auto
+  # [END runtime]
