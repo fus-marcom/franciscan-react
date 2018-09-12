@@ -39,7 +39,7 @@ class News extends Component {
             )
 
             return (
-              <div>
+              <div className="content-container">
                 <Typography
                   variant="headline"
                   component="h2"

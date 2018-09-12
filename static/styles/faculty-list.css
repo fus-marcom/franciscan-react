@@ -1,3 +1,7 @@
 detailviewimage img {
   max-height: 300px;
 }
+
+.link-more {
+  display: none;
+}

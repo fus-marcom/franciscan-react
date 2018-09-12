@@ -307,7 +307,7 @@ const translationObj = {
     type: { default: 'aboutPages', standard: 'directories' },
     id: { default: 'contact' }
   },
-  news: { page: '/news', type: 'news' },
+  news: { page: { default: '/news-list', standard: '/news' }, type: 'news' },
   careers: { page: { default: '/job-list', standard: '/job' }, type: 'jobs' },
   'oath-of-fidelity': {
     page: '/page',
