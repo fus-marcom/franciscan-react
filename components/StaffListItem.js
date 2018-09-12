@@ -60,7 +60,7 @@ const StaffListItem = props => {
             </span>
           )}
           {profileLink && (
-            <Link prefetch href={profileLink}>
+            <Link href={profileLink}>
               <Button size="small" color="primary">
                 Learn More
               </Button>
