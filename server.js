@@ -337,7 +337,7 @@ const translationObj = {
   //   type: 'missionsPages',
   //   id: { default: 'missionary-outreach' }
   // },
-  major: { page: '/major' },
+  major: { page: '/page' },
   minor: { page: '/minor' },
   departments: {
     page: { default: '/page' },
@@ -466,22 +466,22 @@ const translationObj = {
     id: { default: 'accommodations' }
   },
   economics: {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: { default: 'economics', classes: 'economics-classes' }
   },
   anthropology: {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: { default: 'anthropology', classes: 'anthropology-classes' }
   },
   accounting: {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: { default: 'accounting', classes: 'accounting-classes' }
   },
   biology: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'biology',
@@ -491,7 +491,7 @@ const translationObj = {
     }
   },
   english: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'english',
@@ -502,7 +502,7 @@ const translationObj = {
     }
   },
   'cs-cis': {
-    page: { default: '/major' },
+    page: { default: '/page' },
     type: { default: 'majors' },
     id: {
       default: 'cs-cis',
@@ -511,7 +511,7 @@ const translationObj = {
   },
   communicationarts: {
     page: {
-      default: '/major',
+      default: '/page',
       faculty: '/faculty-list',
       'film-studies': 'minors'
     },
@@ -527,7 +527,7 @@ const translationObj = {
   },
   'comm-arts': {
     page: {
-      default: '/major',
+      default: '/page',
       faculty: '/faculty-list',
       'film-studies': '/minor'
     },
@@ -543,7 +543,7 @@ const translationObj = {
   },
   education: {
     page: {
-      default: '/major',
+      default: '/page',
       faculty: '/faculty-list'
     },
     type: { default: 'majors', faculty: 'faculty' },
@@ -556,7 +556,7 @@ const translationObj = {
     }
   },
   engineering: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'engineering',
@@ -567,7 +567,7 @@ const translationObj = {
     }
   },
   finance: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'finance',
@@ -576,7 +576,7 @@ const translationObj = {
     }
   },
   modernlanguages: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'modernlanguages',
@@ -587,7 +587,7 @@ const translationObj = {
     }
   },
   'mod-lang-lit': {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'modernlanguages',
@@ -598,7 +598,7 @@ const translationObj = {
     }
   },
   'language-placement-exams': {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: {
       default: 'language-placement-exams',
@@ -607,7 +607,7 @@ const translationObj = {
     }
   },
   history: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'history',
@@ -616,7 +616,7 @@ const translationObj = {
     }
   },
   'hist-anthro': {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'history',
@@ -625,7 +625,7 @@ const translationObj = {
     }
   },
   humanitiesandcatholicculture: {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: {
       default: 'humanitiesandcatholicculture',
@@ -634,7 +634,7 @@ const translationObj = {
   },
 
   hcc: {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: {
       default: 'humanitiesandcatholicculture',
@@ -642,14 +642,14 @@ const translationObj = {
     }
   },
   law: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'law'
     }
   },
   management: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'management',
@@ -658,7 +658,7 @@ const translationObj = {
     }
   },
   marketing: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'marketing',
@@ -667,7 +667,7 @@ const translationObj = {
     }
   },
   'acc-bus-ec': {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'marketing',
@@ -675,7 +675,7 @@ const translationObj = {
     }
   },
   'chem-phys': {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'chem-phys',
@@ -683,7 +683,7 @@ const translationObj = {
     }
   },
   cmhc: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'cmhc',
@@ -691,7 +691,7 @@ const translationObj = {
     }
   },
   graduatephilosophy: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'graduate-philosophy',
@@ -699,7 +699,7 @@ const translationObj = {
     }
   },
   'graduate-philosophy': {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'graduate-philosophy',
@@ -707,7 +707,7 @@ const translationObj = {
     }
   },
   'graduate-education': {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'graduate-education',
@@ -715,7 +715,7 @@ const translationObj = {
     }
   },
   mba: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'mba',
@@ -723,7 +723,7 @@ const translationObj = {
     }
   },
   'mba-online': {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'mba-online',
@@ -731,7 +731,7 @@ const translationObj = {
     }
   },
   mathematicalscience: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'mathematicalscience',
@@ -740,7 +740,7 @@ const translationObj = {
     }
   },
   nursing: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'nursing',
@@ -752,7 +752,7 @@ const translationObj = {
     }
   },
   pharmacy: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'pharmacy',
@@ -761,7 +761,7 @@ const translationObj = {
     }
   },
   philosophy: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'philosophy',
@@ -771,7 +771,7 @@ const translationObj = {
     }
   },
   psychology: {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: {
       default: 'psychology',
@@ -782,7 +782,7 @@ const translationObj = {
     page: {
       default: '/department',
       faculty: '/faculty-list',
-      'psych-classes': '/major'
+      'psych-classes': '/page'
     },
     type: {
       default: 'departments',
@@ -796,7 +796,7 @@ const translationObj = {
     }
   },
   socialwork: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'social-work',
@@ -805,7 +805,7 @@ const translationObj = {
     }
   },
   sociology: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'sociology',
@@ -814,7 +814,7 @@ const translationObj = {
     }
   },
   theatre: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'theatre',
@@ -824,7 +824,7 @@ const translationObj = {
     }
   },
   drama: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'theatre',
@@ -834,7 +834,7 @@ const translationObj = {
     }
   },
   theology: {
-    page: { default: '/major', standard: '/page', faculty: '/faculty-list' },
+    page: { default: '/page', standard: '/page', faculty: '/faculty-list' },
     type: {
       default: 'majors',
       faculty: 'faculty',
@@ -886,17 +886,17 @@ const translationObj = {
   },
 
   politicalscience: {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: { default: 'political-science' }
   },
   'political-science': {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: { default: 'political-science' }
   },
   business: {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: {
       default: 'business',
@@ -905,7 +905,7 @@ const translationObj = {
     }
   },
   internationalbusiness: {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: {
       default: 'internationalbusiness',
@@ -913,7 +913,7 @@ const translationObj = {
     }
   },
   sacredmusic: {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: {
       default: 'sacred-music',
@@ -922,7 +922,7 @@ const translationObj = {
     }
   },
   'sacred-music': {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: {
       default: 'sacred-music',
@@ -931,7 +931,7 @@ const translationObj = {
     }
   },
   catechetics: {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: {
       default: 'catechetics',
@@ -941,12 +941,12 @@ const translationObj = {
     }
   },
   chemistry: {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: { default: 'chemistry' }
   },
   classics: {
-    page: { default: '/major', faculty: '/faculty-list' },
+    page: { default: '/page', faculty: '/faculty-list' },
     type: {
       default: 'majors',
       faculty: 'faculty',
@@ -962,7 +962,7 @@ const translationObj = {
     }
   },
   'honors-program': {
-    page: '/major',
+    page: '/page',
     type: 'majors',
     id: {
       default: 'honors-program',
