@@ -117,8 +117,6 @@ export const academicsMenu = [
   },
   {
     text: 'Academic Affairs',
-    linkUrl: '/academic-affairs/leadership',
-    asUrl: '/faculty-list?type=academicsPages&id=leadership',
     subMenu: [
       {
         text: 'Academic Support',
