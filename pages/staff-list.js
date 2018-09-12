@@ -10,29 +10,18 @@ import { StaffListQuery } from '../lib/queries/staffList'
 import withData from '../lib/withData'
 
 class StaffList extends Component {
-  static async getInitialProps ({ query: { id, type } }) {
-    return { id, type }
-  }
   render () {
     const { classes } = this.props
     return (
       <Layout>
         <Head>
-          {/* <link
-            rel="stylesheet"
-            href="/static/styles/faculty.css"
-            type="text/css"
-          /> */}
           <link
             rel="stylesheet"
             href="/static/styles/faculty-list.css"
             type="text/css"
           />
         </Head>
-        <Query
-          query={StaffListQuery(this.props.type)}
-          variables={{ name: 'admissions' }}
-        >
+        <Query query={StaffListQuery()} variables={{ name: 'admissions' }}>
           {result => {
             if (result.loading) {
               return <h1>Loading</h1>
