@@ -290,6 +290,10 @@ function renderAndCache (req, res, pagePath, queryParams) {
 const translationObj = {
   about: { page: '/page', type: 'aboutPages', id: { default: 'about' } },
   faculty: { page: '/faculty', type: 'faculty' },
+  events: {
+    page: { default: '/event-list', standard: '/news' },
+    type: 'events'
+  },
   students: {
     page: '/page',
     type: 'studentLifePages',
