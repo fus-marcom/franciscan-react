@@ -210,7 +210,7 @@ const styles = theme => ({
     }
   },
   mobileGridContainer: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       alignSelf: 'flex-start',
       position: 'absolute',
       left: '50%',
