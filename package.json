@@ -1,7 +1,6 @@
 {
   "name": "franciscan-university-react",
-  "description":
-    "The main website for Franciscan University of Steubenville. Built with React, NextJS, and MaterialUI.",
+  "description": "The main website for Franciscan University of Steubenville. Built with React, NextJS, and MaterialUI.",
   "version": "1.0.0",
   "author": "Jesse Weigel <jesseweigel@gmail.com>",
   "scripts": {
@@ -11,8 +10,7 @@
     "start": "NODE_ENV=production node server.js",
     "deploy": "npm run build && gcloud app deploy",
     "test-deploy": "npm run build && gcloud app deploy --no-promote",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "cm": "git-cz",
     "precommit": "lint-staged && npm run test",
     "unit": "jest .test.js --config=jest.config.json",
@@ -60,7 +58,9 @@
     "react-swipeable-views": "^0.12.16",
     "uuid": "^3.3.2"
   },
-  "keywords": ["next"],
+  "keywords": [
+    "next"
+  ],
   "license": "MIT",
   "main": "n/a",
   "devDependencies": {
@@ -97,7 +97,9 @@
     ]
   },
   "jest": {
-    "setupFiles": ["<rootDir>/shim.js"]
+    "setupFiles": [
+      "<rootDir>/shim.js"
+    ]
   },
   "config": {
     "commitizen": {
@@ -105,7 +107,10 @@
     }
   },
   "standard": {
-    "globals": ["fetch", "FormData"],
+    "globals": [
+      "fetch",
+      "FormData"
+    ],
     "parser": "babel-eslint"
   }
 }

@@ -697,7 +697,7 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@material-ui/codemod/-/codemod-1.1.0.tgz#0e75b28a086e65746b0203e567770dbb272fe570"
 
-"@material-ui/core@^3.0.0":
+"@material-ui/core@3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-3.0.0.tgz#877b08d4dda23b44ac67daf7e73d8b8e0a831e6a"
   dependencies:
@@ -729,7 +729,7 @@
     recompose "^0.28.2"
     warning "^4.0.1"
 
-"@material-ui/icons@^3.0.0":
+"@material-ui/icons@3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@material-ui/icons/-/icons-3.0.0.tgz#4a482f5c533b19d8ac7f7c5a645246dfb5b14d74"
   dependencies:
