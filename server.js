@@ -81,6 +81,7 @@ app.prepare().then(() => {
       let type = `${firstParam}Pages`
       let subtype = null
       let id = null
+      let restId = translationObj[firstParam].restId.default
       if (Object.values(req.params).filter(Boolean).length === 1) {
         // Logic for routes with 1 parameter
         console.log('one parameter')
@@ -238,7 +239,7 @@ app.prepare().then(() => {
           }
         }
       }
-      return renderAndCache(req, res, page, { id, type, subtype })
+      return renderAndCache(req, res, page, { id, type, subtype, restId })
     }
     return next()
   })
@@ -845,6 +846,9 @@ const translationObj = {
       faculty: 'theology',
       classes: 'theology-classes',
       'online-associates': 'online-associates'
+    },
+    restId: {
+      default: 'major'
     }
   },
   'graduate-theology': {

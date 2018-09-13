@@ -8,6 +8,10 @@ export const get = url => {
 
 export const getJSON = url => {
   return get(url).then(function (response) {
-    return response.json()
+    if (response.ok) {
+      return response.json()
+    } else {
+      return null
+    }
   })
 }
