@@ -401,6 +401,11 @@ const translationObj = {
     type: 'chapelPages',
     id: { default: 'chapel' }
   },
+  'chapel-ministries': {
+    page: '/page',
+    type: 'chapelPages',
+    id: { default: 'chapel' }
+  },
   franciscanmagazine: {
     page: '/page',
     type: 'pressPages',
@@ -642,6 +647,13 @@ const translationObj = {
     }
   },
   law: {
+    page: { default: '/page', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: {
+      default: 'law'
+    }
+  },
+  legalstudies: {
     page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
@@ -1040,6 +1052,16 @@ const translationObj = {
     type: 'academicsPages',
     id: { default: 'academic-affairs' }
   },
+  'academic-advising': {
+    page: '/page',
+    type: 'academicsPages',
+    id: { default: 'academic-advising' }
+  },
+  'meal-plan-details': {
+    page: '/page',
+    type: 'studentLifePages',
+    id: { default: 'meal-plan-details' }
+  },
   evangelization: {
     page: '/page',
     type: 'studentLifePages',
@@ -1154,6 +1176,11 @@ const translationObj = {
     id: { default: 'academic-orgs' }
   },
   fupress: {
+    page: '/page',
+    type: 'pressPages',
+    id: { default: 'fupress' }
+  },
+  press: {
     page: '/page',
     type: 'pressPages',
     id: { default: 'fupress' }
