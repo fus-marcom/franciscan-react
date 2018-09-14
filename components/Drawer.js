@@ -229,6 +229,20 @@ class TemporaryDrawer extends Component {
                   <ListItemText inset primary={'Give'} />
                 </ListItem>
               </a>
+              <a
+                className={classes.externalLink}
+                href="http://libguides.franciscan.edu/friendly.php?action=82&s=Welcome_to_the_JPII_Library"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Library"
+              >
+                <ListItem button>
+                  <ListItemIcon>
+                    <OpenInNewIcon />
+                  </ListItemIcon>
+                  <ListItemText inset primary={'Library'} />
+                </ListItem>
+              </a>
             </List>
           </div>
         </div>
