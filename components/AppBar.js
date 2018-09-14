@@ -22,7 +22,7 @@ class ButtonAppBar extends Component {
   }
   state = {
     isSearchOpen: false,
-    searchText: ''
+    search: ''
   }
   onSearchClick = () => {
     this.state.isSearchOpen
@@ -43,11 +43,11 @@ class ButtonAppBar extends Component {
     }
   }
 
-  onSeachChange = e => this.setState({ searchText: e.target.value })
+  onSeachChange = e => this.setState({ search: e.target.value })
 
   render () {
     const { classes, toggleDrawer } = this.props
-    const { isSearchOpen, searchText } = this.state
+    const { isSearchOpen, search } = this.state
     return (
       <div className={classes.root}>
         <AppBar className={classes.appBar} position="static">
@@ -141,7 +141,7 @@ class ButtonAppBar extends Component {
                       inputRef={inp => {
                         this.searchInput = inp
                       }}
-                      value={searchText}
+                      value={search}
                       onChange={this.onSeachChange}
                       onKeyPress={e => e.key === 'Enter' && this.handleSearch()}
                       endAdornment={
