@@ -1023,7 +1023,7 @@ const translationObj = {
   baronday: {
     page: '/page',
     type: 'admissionsPages',
-    id: { default: 'baron-day' }
+    id: { default: 'baronday' }
   },
   studentsuccess: {
     page: '/page',

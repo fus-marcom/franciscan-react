@@ -1,3 +1,5 @@
+import Hidden from '@material-ui/core/Hidden'
+import { withStyles } from '@material-ui/core/styles'
 import Head from 'next/head'
 import React, { Component } from 'react'
 import { compose, Query } from 'react-apollo'
@@ -13,6 +15,7 @@ class Page extends Component {
   }
 
   render () {
+    const { classes } = this.props
     return (
       <Layout>
         <Query
@@ -47,21 +50,33 @@ class Page extends Component {
                     type="text/css"
                   />
                 </Head>
-                {data[this.props.type].edges[0].node.menuSlugField &&
-                  data[this.props.type].edges[0].node.menuSlugField.value(
+                <Hidden lgDown>
+                  {data[this.props.type].edges[0].node.menuSlugField.value && (
                     <FloatingNav
                       menuSlug={
                         data[this.props.type].edges[0].node.menuSlugField.value
                       }
                     />
                   )}
-
-                <div
-                  data-testid="content"
-                  dangerouslySetInnerHTML={{
-                    __html: content
-                  }}
-                />
+                </Hidden>
+                <div className={classes.container}>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: content
+                    }}
+                  />
+                  <Hidden xlUp>
+                    {data[this.props.type].edges[0].node.menuSlugField
+                      .value && (
+                      <FloatingNav
+                        menuSlug={
+                          data[this.props.type].edges[0].node.menuSlugField
+                            .value
+                        }
+                      />
+                    )}
+                  </Hidden>
+                </div>
               </>
             )
           }}
@@ -71,4 +86,14 @@ class Page extends Component {
   }
 }
 
-export default compose(withRoot, withData)(Page)
+const styles = theme => ({
+  container: {
+    maxWidth: '90%',
+    margin: '0 auto',
+    [theme.breakpoints.up('sm')]: {
+      maxWidth: '70%'
+    }
+  }
+})
+
+export default compose(withRoot, withData)(withStyles(styles)(Page))

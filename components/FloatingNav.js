@@ -40,15 +40,24 @@ const styles = theme => ({
     position: 'sticky',
     top: '50px',
     float: 'right',
-    marginRight: '16px'
+    marginRight: '16px',
+    [theme.breakpoints.down('lg')]: {
+      position: 'relative',
+      float: 'left',
+      marginRight: 0,
+      top: 0
+    }
   },
   nav: {
-    listStyle: 'none'
+    listStyle: 'none',
+    margin: 0,
+    padding: 0
   },
   navItem: {
     marginBottom: '4px',
     padding: '4px',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    color: 'hsla(47, 39%, 34%, 1)'
   }
 })
 
