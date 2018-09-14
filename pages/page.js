@@ -50,7 +50,7 @@ class Page extends Component {
                     type="text/css"
                   />
                 </Head>
-                <Hidden lgDown>
+                <Hidden mdDown>
                   {data[this.props.type].edges[0].node.menuSlugField.value && (
                     <FloatingNav
                       menuSlug={
@@ -65,7 +65,7 @@ class Page extends Component {
                       __html: content
                     }}
                   />
-                  <Hidden xlUp>
+                  <Hidden lgUp>
                     {data[this.props.type].edges[0].node.menuSlugField
                       .value && (
                       <FloatingNav
@@ -92,6 +92,9 @@ const styles = theme => ({
     margin: '0 auto',
     [theme.breakpoints.up('sm')]: {
       maxWidth: '70%'
+    },
+    [theme.breakpoints.up('lg')]: {
+      maxWidth: '60%'
     }
   }
 })

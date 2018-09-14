@@ -41,11 +41,13 @@ const styles = theme => ({
     top: '50px',
     float: 'right',
     marginRight: '16px',
-    [theme.breakpoints.down('lg')]: {
+    maxWidth: '19%',
+    [theme.breakpoints.down('md')]: {
       position: 'relative',
       float: 'left',
       marginRight: 0,
-      top: 0
+      top: 0,
+      maxWidth: '100%'
     }
   },
   nav: {
