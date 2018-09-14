@@ -1,32 +1,18 @@
 import Head from 'next/head'
 import React, { Component } from 'react'
 import { compose, Query } from 'react-apollo'
+import FloatingNav from '../components/FloatingNav'
 import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 import { PageQuery } from '../lib/queries/page'
 import withData from '../lib/withData'
-import FloatingNav from '../components/FloatingNav'
-import { getJSON } from '../utils/fetch'
 
 class Page extends Component {
-  static async getInitialProps ({ query: { id, type, restId } }) {
-    return { id, type, restId }
-  }
-
-  state = {
-    data: null,
-    loading: true
-  }
-  componentDidMount () {
-    const apiUrl = 'https://wp.franciscan.university/wp-json/wp/v2/'
-    const params = `${this.props.restId}?slug=${this.props.id}`
-    getJSON(apiUrl + params).then(data =>
-      this.setState({ data: data, loading: false })
-    )
+  static async getInitialProps ({ query: { id, type } }) {
+    return { id, type }
   }
 
   render () {
-    const { loading } = this.state
     return (
       <Layout>
         <Query
@@ -61,12 +47,14 @@ class Page extends Component {
                     type="text/css"
                   />
                 </Head>
-                {!loading &&
-                  this.state.data.length > 0 && (
-                  <FloatingNav
-                    menuSlug={this.state.data[0].acf.menu.post_name}
-                  />
-                )}
+                {data[this.props.type].edges[0].node.menuSlugField &&
+                  data[this.props.type].edges[0].node.menuSlugField.value(
+                    <FloatingNav
+                      menuSlug={
+                        data[this.props.type].edges[0].node.menuSlugField.value
+                      }
+                    />
+                  )}
 
                 <div
                   data-testid="content"
