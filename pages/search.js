@@ -17,6 +17,13 @@ import React, { Component } from 'react'
 import Layout from '../components/Layout'
 import withRoot from '../components/withRoot'
 import { getJSON } from '../utils/fetch'
+import Router from 'next/router'
+
+Router.onBeforeHistoryChange = url => {
+  this.createBaseSearch()
+  this.setState({ searchTerm: window.location.search.split('=')[1] })
+  this.debouncedSearch()
+}
 
 class Search extends Component {
   state = {
@@ -63,7 +70,10 @@ class Search extends Component {
    * Render cards from api data
    */
   fetchSearchTerm = () => {
-    console.log(this.state.searchTerm)
+    Router.push({
+      pathname: '/search',
+      query: { search: this.state.searchTerm }
+    })
     this.setState({ loading: true })
     const searchType = this.state.searchType || this.state.baseSearchString
     const apiUrl = 'https://wp.franciscan.university/wp-json/wp/v2/'

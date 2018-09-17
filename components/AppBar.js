@@ -11,7 +11,6 @@ import Typography from '@material-ui/core/Typography'
 import Close from '@material-ui/icons/Close'
 import MenuIcon from '@material-ui/icons/Menu'
 import Link from 'next/link'
-import Router from 'next/router'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import AppBarMenuItem from './AppBarMenuItem'
@@ -36,10 +35,7 @@ class ButtonAppBar extends Component {
 
   handleSearch = () => {
     if (this.state.search !== '') {
-      Router.push({
-        pathname: '/search',
-        query: { search: this.state.search }
-      })
+      window.location = `/search?search=${this.state.search}`
     }
   }
 

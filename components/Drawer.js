@@ -13,7 +13,6 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 import OpenInNewIcon from '@material-ui/icons/OpenInNew'
 import SearchIcon from '@material-ui/icons/Search'
 import Link from 'next/link'
-import Router from 'next/router'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import {
@@ -45,10 +44,7 @@ class TemporaryDrawer extends Component {
 
   handleSearch = () => {
     if (this.state.search !== '') {
-      Router.push({
-        pathname: '/search',
-        query: { search: this.state.search }
-      })
+      window.location = `/search?search=${this.state.search}`
     }
   }
 
