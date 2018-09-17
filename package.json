@@ -44,7 +44,7 @@
     "graphql": "^0.13.2",
     "graphql-tag": "^2.8.0",
     "html-entities": "^1.2.1",
-    "isomorphic-unfetch": "^2.0.0",
+    "isomorphic-unfetch": "^3.0.0",
     "jsforce": "^1.9.0",
     "lodash.debounce": "^4.0.8",
     "lodash.foreach": "^4.5.0",
