@@ -299,6 +299,11 @@ const translationObj = {
     type: 'studentLifePages',
     id: { default: 'students' }
   },
+  pilgrimages: {
+    page: '/page',
+    type: 'pilgrimagesPages',
+    id: { default: 'pilgrimages' }
+  },
   paulmoviediscussion: {
     page: '/page',
     type: 'events',
