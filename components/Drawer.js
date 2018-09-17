@@ -231,6 +231,19 @@ class TemporaryDrawer extends Component {
               </a>
               <a
                 className={classes.externalLink}
+                href="https://integrityandtruth.franciscan.edu/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <ListItem button>
+                  <ListItemIcon>
+                    <OpenInNewIcon />
+                  </ListItemIcon>
+                  <ListItemText inset primary={'Integrity & Truth'} />
+                </ListItem>
+              </a>
+              <a
+                className={classes.externalLink}
                 href="http://libguides.franciscan.edu/friendly.php?action=82&s=Welcome_to_the_JPII_Library"
                 target="_blank"
                 rel="noopener noreferrer"
