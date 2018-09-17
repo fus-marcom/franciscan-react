@@ -1193,7 +1193,7 @@ const translationObj = {
   pdp: {
     page: '/page',
     type: 'pdpPages',
-    id: { default: 'priestly-discernment-program' }
+    id: { default: 'pdp' }
   },
   'military-benefits': {
     page: '/page',
