@@ -285,7 +285,7 @@ const IndexPage = ({ classes }) => (
           variant="body1"
           gutterBottom
         >
-          $24k Tuition
+          $27k Tuition
         </Typography>
         <Typography
           className={classes.sectionText}
