@@ -9,6 +9,9 @@ import withRoot from '../components/withRoot'
 import { PageQuery } from '../lib/queries/page'
 import withData from '../lib/withData'
 
+const Entities = require('html-entities').XmlEntities
+const entities = new Entities()
+
 class Page extends Component {
   static async getInitialProps ({ query: { id, type } }) {
     return { id, type }
@@ -37,7 +40,9 @@ class Page extends Component {
                 imgRegex,
                 '<img src="https://storage.googleapis.com/fus-wp-storage/$2" $4 />'
               )
-            const title = data[this.props.type].edges[0].node.title
+            const title = entities.decode(
+              data[this.props.type].edges[0].node.title
+            )
 
             return (
               <>
