@@ -1,5 +1,4 @@
 import { withStyles } from '@material-ui/core/styles'
-import Link from 'next/link'
 import React, { Component } from 'react'
 import { getJSON } from '../utils/fetch'
 const uuidv1 = require('uuid/v1')
@@ -25,9 +24,9 @@ class FloatingNav extends Component {
           {!loading &&
             data.length > 0 &&
             data[0].acf.links.map(item => (
-              <Link href={item.link_path} key={uuidv1()}>
+              <a href={item.link_path} key={uuidv1()}>
                 <li className={classes.navItem}>{item.link_name}</li>
-              </Link>
+              </a>
             ))}
         </ul>
       </div>
