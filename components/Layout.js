@@ -25,7 +25,13 @@ class Layout extends Component {
       admissions: false,
       'faith-and-life': false
     },
-    drawerSubItems: {}
+    drawerSubItems: {},
+    isIE: false
+  }
+
+  componentDidMount () {
+    // Internet Explorer 6-11
+    this.setState({ isIE: /* @cc_on!@ */ false || !!document.documentMode })
   }
 
   toggleDrawer = itemId => {
@@ -71,7 +77,18 @@ class Layout extends Component {
           expandSubItem={this.expandSubItem}
         />
         <AppBar toggleDrawer={this.toggleDrawer} />
-        <main className={classes.main}>{this.props.children}</main>
+        {this.state.isIE ? (
+          <main className={classes.main}>
+            {' '}
+            <h1>
+              Internet Explorer is not supported. We recommend using the latest
+              version of Chrome or Firefox.
+            </h1>
+          </main>
+        ) : (
+          <main className={classes.main}>{this.props.children}</main>
+        )}
+
         <Footer />
       </div>
     )
