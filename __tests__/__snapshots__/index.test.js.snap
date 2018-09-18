@@ -565,13 +565,13 @@ exports[`<Index /> should render 1`] = `
         <h1
           class="MuiTypography-root-124 MuiTypography-display2-127 MuiTypography-gutterBottom-141"
           style="color:#fff"
-        >
-          96 percent of graduates employed, in graduate school, or serving the Church within one year.
-        </h1>
+        />
         <p
           class="MuiTypography-root-124 MuiTypography-body1-133 MuiTypography-gutterBottom-141 TextSection-sectionText-278"
           style="color:#fff"
-        />
+        >
+          Our mission as a Franciscan and Catholic university that embraces the call to dynamic orthodoxy is to educate, to evangelize, and to send forth joyful disciples.
+        </p>
       </div>
     </div>
     <div
@@ -610,6 +610,64 @@ exports[`<Index /> should render 1`] = `
               class="MuiButton-label-284"
             >
               Calculate Cost
+            </span>
+            <span
+              class="MuiTouchRipple-root-117"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="TextSection-section-276"
+      style="background-color:#21412a;border-top:2px solid #998643;border-bottom:2px solid #998643"
+    >
+      <div
+        class="TextSection-innerContainer-277"
+      >
+        <h1
+          class="MuiTypography-root-124 MuiTypography-display2-127 MuiTypography-gutterBottom-141"
+          style="color:#fff"
+        />
+        <p
+          class="MuiTypography-root-124 MuiTypography-body1-133 MuiTypography-gutterBottom-141 TextSection-sectionText-278"
+          style="color:#fff"
+        >
+          96 percent of graduates employed, in graduate school, or serving the Church within one year.
+        </p>
+      </div>
+    </div>
+    <div
+      class="IndexPage-section-13"
+    >
+      <div
+        class="IndexPage-innerContainer-14"
+      >
+        <h1
+          class="MuiTypography-root-124 MuiTypography-display2-127 MuiTypography-gutterBottom-141"
+        >
+          Integrity & Truth
+        </h1>
+        <p
+          class="MuiTypography-root-124 MuiTypography-body1-133 MuiTypography-gutterBottom-141 IndexPage-sectionText-15"
+        >
+          In light of the sexual abuse within the Catholic Church and the failures of spiritual leaders to protect the vulnerable, Father Sean O. Sheridan, TOR, president of Franciscan University of Steubenville, invites the whole Franciscan University Family to stand with him for integrity and truth in these troubling times.
+        </p>
+        <div
+          class="MuiGrid-item-150 MuiGrid-grid-xs-12-189 IndexPage-heroBtn-16"
+        >
+          <a
+            class="MuiButtonBase-root-107 MuiButton-root-283 MuiButton-flatSecondary-286 IndexPage-invertedBtn-17"
+            href="https://integrityandtruth.franciscan.edu/"
+            role="button"
+            style="width:192px"
+            tabindex="0"
+            title="Integrity and Truth"
+          >
+            <span
+              class="MuiButton-label-284"
+            >
+              Learn More
             </span>
             <span
               class="MuiTouchRipple-root-117"

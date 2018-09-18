@@ -23,6 +23,7 @@ const IndexPage = ({ classes }) => (
       tertiaryBtnText="Visit"
       tertiaryBtnLink="https://franciscan.secure.force.com/events"
     />
+
     <TextSection
       sectionTitle="Degrees"
       text="40+ Majors, 34 Minors, 8 Graduate Degrees"
@@ -267,13 +268,13 @@ const IndexPage = ({ classes }) => (
         </ul>
       </Grid>
     </Grid>
-
     <TextSection
-      sectionTitle="96 percent of graduates employed, in graduate school, or serving the Church within one year."
+      text="Our mission as a Franciscan and Catholic university that embraces the call to dynamic orthodoxy is to educate, to evangelize, and to send forth joyful disciples."
       bgColor="#21412a"
       textColor="#fff"
       borderColor="#998643"
     />
+
     <div className={classes.section}>
       <div className={classes.innerContainer}>
         <Typography variant="display2" gutterBottom>
@@ -303,6 +304,42 @@ const IndexPage = ({ classes }) => (
             style={{ width: '192px' }}
           >
             Calculate Cost
+          </InvertedButton>
+        </Grid>
+      </div>
+    </div>
+    <TextSection
+      text="96 percent of graduates employed, in graduate school, or serving the Church within one year."
+      bgColor="#21412a"
+      textColor="#fff"
+      borderColor="#998643"
+    />
+    <div className={classes.section}>
+      <div className={classes.innerContainer}>
+        <Typography variant="display2" gutterBottom>
+          Integrity & Truth
+        </Typography>
+
+        <Typography
+          className={classes.sectionText}
+          variant="body1"
+          gutterBottom
+        >
+          In light of the sexual abuse within the Catholic Church and the
+          failures of spiritual leaders to protect the vulnerable, Father Sean
+          O. Sheridan, TOR, president of Franciscan University of Steubenville,
+          invites the whole Franciscan University Family to stand with him for
+          integrity and truth in these troubling times.
+        </Typography>
+        <Grid item className={classes.heroBtn} xs={12}>
+          <InvertedButton
+            href="https://integrityandtruth.franciscan.edu/"
+            title="Integrity and Truth"
+            className={classes.invertedBtn}
+            color="secondary"
+            style={{ width: '192px' }}
+          >
+            Learn More
           </InvertedButton>
         </Grid>
       </div>
