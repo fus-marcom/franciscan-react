@@ -88,8 +88,8 @@ export const academicsMenu = [
     subMenu: [
       {
         text: 'Programs',
-        linkUrl: '/academics/graduate',
-        asUrl: '/page?type=academicsPages&id=graduate'
+        linkUrl: '/academics/graduate-programs',
+        asUrl: '/page?type=academicsPages&id=graduate-programs'
       },
       {
         text: 'Graduate Catalog',
@@ -192,8 +192,8 @@ export const admissionsMenu = [
       },
       {
         text: 'International',
-        linkUrl: '/admissions/undergraduate/international-requirements/',
-        asUrl: '/page?type=admissionsPages&id=international-requirements'
+        linkUrl: '/admissions/undergraduate-international/',
+        asUrl: '/page?type=admissionsPages&id=undergraduate-international'
       },
       {
         text: 'Costs and Fees',
