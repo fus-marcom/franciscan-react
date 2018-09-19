@@ -1160,6 +1160,11 @@ const translationObj = {
     type: 'academicsPages',
     id: { default: 'core-curriculum' }
   },
+  graduationevents: {
+    page: '/page',
+    type: 'academicsPages',
+    id: { default: 'graduationevents' }
+  },
   'writing-center': {
     page: '/page',
     type: 'academicsPages',
