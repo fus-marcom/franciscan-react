@@ -1031,6 +1031,11 @@ const translationObj = {
     type: { default: '', faculty: 'faculty' },
     id: { default: 'fine-arts', faculty: 'fine-arts' }
   },
+  'anathan-theatre': {
+    page: '/page',
+    type: 'theatrePages',
+    id: { default: 'anathan-theatre' }
+  },
   associate: { page: '/associate', id: { default: 'main' } },
   studentlife: {
     page: '/page',
