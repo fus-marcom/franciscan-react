@@ -327,7 +327,7 @@ const translationObj = {
     id: { default: 'contact' }
   },
   news: { page: { default: '/news-list', standard: '/news' }, type: 'news' },
-  careers: { page: { default: '/job-list', standard: '/job' }, type: 'jobs' },
+  careers: { page: { default: '/job-list', standard: '/page' }, type: 'jobs' },
   'oath-of-fidelity': {
     page: '/page',
     type: 'academicsPages',
@@ -1118,7 +1118,7 @@ const translationObj = {
       'faculty-openings': '/job-list',
       'staff-openings': '/job-list',
       careers: '/job-list',
-      thirdly: '/job'
+      thirdly: '/page'
     },
     type: { default: 'humanResources', thirdly: 'jobs' },
     id: { default: 'employment-and-human-resources' }

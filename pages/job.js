@@ -17,7 +17,7 @@ class Job extends Component {
         <Head>
           <link
             rel="stylesheet"
-            href="/static/styles/faculty.css"
+            href="/static/styles/jobs.css"
             type="text/css"
           />
         </Head>
