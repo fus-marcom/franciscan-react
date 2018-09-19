@@ -299,6 +299,16 @@ const translationObj = {
     type: 'studentLifePages',
     id: { default: 'students' }
   },
+  'health-services': {
+    page: '/page',
+    type: 'studentLifePages',
+    id: { default: 'health-services' }
+  },
+  'counseling-services': {
+    page: '/page',
+    type: 'studentLifePages',
+    id: { default: 'counseling-services' }
+  },
   pilgrimages: {
     page: '/page',
     type: 'pilgrimagesPages',
@@ -334,6 +344,16 @@ const translationObj = {
     page: '/page',
     type: 'missionsPages',
     id: { default: 'missionary-outreach' }
+  },
+  'sent-ministries': {
+    page: '/page',
+    type: 'missionsPages',
+    id: { default: 'sent-ministries' }
+  },
+  'works-of-mercy': {
+    page: '/page',
+    type: 'missionsPages',
+    id: { default: 'works-of-mercy' }
   },
   'missions-of-peace': { page: '/missions' },
   // TODO: use the commented route below when the singleMission page is ready
@@ -474,6 +494,11 @@ const translationObj = {
     page: '/page',
     type: 'aboutPages',
     id: { default: 'accommodations' }
+  },
+  'the-inn-at-franciscan-square': {
+    page: '/page',
+    type: 'aboutPages',
+    id: { default: 'the-inn-at-franciscan-square' }
   },
   economics: {
     page: '/page',
