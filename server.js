@@ -457,12 +457,13 @@ const translationObj = {
     id: { default: 'study-abroad' }
   },
   austria: {
-    page: '/page',
-    type: 'austriaPages',
+    page: { default: '/page', faculty: '/faculty-list' },
+    type: { default: 'austriaPages', faculty: 'faculty' },
     id: {
       default: 'austria',
       excursions: 'excursions',
-      studentlife: 'student-life'
+      studentlife: 'student-life',
+      faculty: 'austria'
     }
   },
   registrar: {
@@ -748,12 +749,21 @@ const translationObj = {
       faculty: 'graduate-philosophy'
     }
   },
+
   'graduate-education': {
     page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'graduate-education',
       faculty: 'graduate-education'
+    }
+  },
+  'graduate-nursing': {
+    page: { default: '/page', faculty: '/faculty-list' },
+    type: { default: 'graduatePrograms', faculty: 'faculty' },
+    id: {
+      default: 'graduate-nursing',
+      faculty: 'graduate-nursing'
     }
   },
   mba: {
@@ -894,7 +904,7 @@ const translationObj = {
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'ma-theology',
-      faculty: 'theology',
+      faculty: 'graduate-theology',
       classes: 'theology-classes'
     }
   },
@@ -912,7 +922,7 @@ const translationObj = {
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'graduate-catechetics',
-      faculty: 'theology',
+      faculty: 'graduate-catechetics',
       classes: 'theology-classes',
       requirements: 'requirements'
     }
