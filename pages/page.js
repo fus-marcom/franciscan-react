@@ -65,6 +65,14 @@ class Page extends Component {
                   )}
                 </Hidden>
                 <div className={classes.container}>
+                  {data[this.props.type].edges[0].node.featuredImage && (
+                    <img
+                      src={
+                        data[this.props.type].edges[0].node.featuredImage
+                          .sourceUrl
+                      }
+                    />
+                  )}
                   <div
                     dangerouslySetInnerHTML={{
                       __html: content

@@ -39,7 +39,6 @@ const styles = theme => ({
     position: 'sticky',
     top: '50px',
     float: 'right',
-    marginRight: '16px',
     maxWidth: '19%',
     [theme.breakpoints.down('md')]: {
       position: 'relative',
