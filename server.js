@@ -289,6 +289,11 @@ function renderAndCache (req, res, pagePath, queryParams) {
 // TODO: split this object up into three: one for for routes with 1 param, 2params, and 3 params. Then change routing function to use the correct obj depending on the num of params
 const translationObj = {
   about: { page: '/page', type: 'aboutPages', id: { default: 'about' } },
+  fathermike: {
+    page: '/page',
+    type: 'fmsPages',
+    id: { default: 'fathermike' }
+  },
   faculty: { page: '/faculty', type: 'faculty' },
   events: {
     page: { default: '/event-list', standard: '/news' },
@@ -365,8 +370,8 @@ const translationObj = {
   major: { page: '/page' },
   minor: { page: '/minor' },
   departments: {
-    page: { default: '/page' },
-    type: { default: 'departments' },
+    page: { default: '/page', faculty: '/faculty-list' },
+    type: { default: 'departments', faculty: 'faculty' },
     id: {
       default: 'departments'
     }
@@ -375,6 +380,11 @@ const translationObj = {
     page: '/page',
     type: 'departments',
     id: { default: 'distance-learning' }
+  },
+  'canon-law-track': {
+    page: '/page',
+    type: 'departments',
+    id: { default: 'canon-law-track' }
   },
   'institutes-centers': {
     page: '/page',
@@ -538,11 +548,12 @@ const translationObj = {
     }
   },
   'cs-cis': {
-    page: { default: '/page' },
-    type: { default: 'majors' },
+    page: { default: '/page', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'cs-cis',
-      classes: 'cs-cis-classes'
+      classes: 'cs-cis-classes',
+      faculty: 'mathematical-and-computer-science'
     }
   },
   communicationarts: {
@@ -681,7 +692,8 @@ const translationObj = {
     page: { default: '/page', faculty: '/faculty-list' },
     type: { default: 'majors', faculty: 'faculty' },
     id: {
-      default: 'law'
+      default: 'law',
+      faculty: 'political-science'
     }
   },
   legalstudies: {
@@ -738,7 +750,7 @@ const translationObj = {
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'graduate-philosophy',
-      faculty: 'graduate-philosophy'
+      faculty: 'philosophy'
     }
   },
   'graduate-philosophy': {
@@ -746,7 +758,7 @@ const translationObj = {
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'graduate-philosophy',
-      faculty: 'graduate-philosophy'
+      faculty: 'philosophy'
     }
   },
 
@@ -755,7 +767,7 @@ const translationObj = {
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'graduate-education',
-      faculty: 'graduate-education'
+      faculty: 'education'
     }
   },
   'graduate-nursing': {
@@ -763,7 +775,7 @@ const translationObj = {
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'graduate-nursing',
-      faculty: 'graduate-nursing'
+      faculty: 'nursing'
     }
   },
   mba: {
@@ -904,7 +916,7 @@ const translationObj = {
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'ma-theology',
-      faculty: 'graduate-theology',
+      faculty: 'theology',
       classes: 'theology-classes'
     }
   },
@@ -922,7 +934,7 @@ const translationObj = {
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'graduate-catechetics',
-      faculty: 'graduate-catechetics',
+      faculty: 'theology',
       classes: 'theology-classes',
       requirements: 'requirements'
     }
@@ -938,14 +950,14 @@ const translationObj = {
   },
 
   politicalscience: {
-    page: '/page',
-    type: 'majors',
-    id: { default: 'political-science' }
+    page: { default: '/page', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: { default: 'political-science', faculty: 'political-science' }
   },
   'political-science': {
-    page: '/page',
-    type: 'majors',
-    id: { default: 'political-science' }
+    page: { default: '/page', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
+    id: { default: 'political-science', faculty: 'political-science' }
   },
   business: {
     page: '/page',
@@ -983,13 +995,14 @@ const translationObj = {
     }
   },
   catechetics: {
-    page: '/page',
-    type: 'majors',
+    page: { default: '/page', faculty: '/faculty-list' },
+    type: { default: 'majors', faculty: 'faculty' },
     id: {
       default: 'catechetics',
       'why-catechetics': 'why-catechetics',
       classes: 'catechetics-classes',
-      'application-information': 'catechetics-application-information'
+      'application-information': 'catechetics-application-information',
+      faculty: 'theology'
     }
   },
   chemistry: {
