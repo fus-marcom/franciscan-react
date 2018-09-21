@@ -14,8 +14,7 @@ const heroImages = [
   'https://storage.googleapis.com/fus-wp-storage/wp/2018/09/a0d77072-fr-sean-eucharist-mask-v1.jpg',
   'https://storage.googleapis.com/fus-wp-storage/wp/2018/09/f3b7a6f3-l5a6509-edit.jpg',
   'https://storage.googleapis.com/fus-wp-storage/wp/2018/09/8b9ad001-add_visit_guide___.jpg',
-  'https://storage.googleapis.com/fus-wp-storage/wp/2018/09/439dc564-hop_9173.jpg',
-  'https://storage.googleapis.com/fus-wp-storage/wp/2018/09/bfb27c53-fus-03951469.jpg'
+  'https://storage.googleapis.com/fus-wp-storage/wp/2018/09/439dc564-hop_9173.jpg'
 ]
 
 const IndexPage = ({ classes }) => (
