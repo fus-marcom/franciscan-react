@@ -31,7 +31,18 @@ export const aboutMenu = [
   {
     text: 'Employment & HR',
     linkUrl: '/hr',
-    asUrl: '/page?type=humanResources&id=employment-and-human-resources'
+    asUrl: '/page?type=humanResources&id=employment-and-human-resources',
+    subMenu: [
+      {
+        text: 'Careers',
+        linkUrl: '/careers',
+        asUrl: '/job-list?type=jobs&id=careers'
+      },
+      {
+        text: 'Integrity & Truth',
+        linkUrl: 'https://integrityandtruth.franciscan.edu/'
+      }
+    ]
   },
   {
     text: 'Consumer Information',
