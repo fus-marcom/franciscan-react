@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import {
-  InstantSearch,
-  Configure,
-  Index,
-  Highlight
-} from 'react-instantsearch/dom'
-import { connectAutoComplete } from 'react-instantsearch/connectors'
+import React, { Component } from 'react'
 import Autosuggest from 'react-autosuggest'
+import { connectAutoComplete } from 'react-instantsearch/connectors'
+import {
+  Configure,
+  Highlight,
+  Index,
+  InstantSearch
+} from 'react-instantsearch/dom'
 
 const Search = () => (
   <InstantSearch
@@ -19,6 +19,17 @@ const Search = () => (
     <Configure hitsPerPage={1} />
     <Index indexName="wp_posts_campus-security" />
     <Index indexName="wp_posts_news" />
+    <Index indexName="wp_posts_human-resource" />
+    <Index indexName="wp_posts_associate-program" />
+    <Index indexName="wp_posts_minor" />
+    <Index indexName="wp_posts_about-page" />
+    <Index indexName="wp_posts_staff-member" />
+    <Index indexName="wp_posts_event" />
+    {/* <Index indexName="wp_posts_major" /> */}
+    <Index indexName="wp_posts_fms-page" />
+    <Index indexName="wp_posts_institute" />
+    {/* <Index indexName="wp_posts_student-life-page" /> */}
+    {/* <Index indexName="wp_posts_department" /> */}
   </InstantSearch>
 )
 
