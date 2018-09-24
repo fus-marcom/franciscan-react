@@ -59,6 +59,16 @@ export const aboutMenu = [
   {
     text: 'Support Franciscan',
     linkUrl: 'http://giving.franciscan.edu/'
+  },
+  {
+    text: 'News',
+    linkUrl: '/news',
+    asUrl: '/news-list?type=news&id=news'
+  },
+  {
+    text: 'Events',
+    linkUrl: '/events',
+    asUrl: '/event-list?type=events&id=events'
   }
 ]
 
