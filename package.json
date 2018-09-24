@@ -58,7 +58,7 @@
     "react-dom": "^16.4.1",
     "react-masonry-component": "^6.0.2",
     "react-scroll": "^1.7.9",
-    "react-swipeable-views": "^0.12.16",
+    "react-swipeable-views": "^0.13.0",
     "uuid": "^3.3.2"
   },
   "keywords": [
