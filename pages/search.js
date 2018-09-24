@@ -1,111 +1,156 @@
-import PropTypes from 'prop-types'
+import Grid from '@material-ui/core/Grid'
+import { withStyles } from '@material-ui/core/styles'
+import algoliasearch from 'algoliasearch/lite'
+import Head from 'next/head'
+import Router from 'next/router'
 import React, { Component } from 'react'
-import Autosuggest from 'react-autosuggest'
-import { connectAutoComplete } from 'react-instantsearch/connectors'
 import {
-  Configure,
-  Highlight,
-  Index,
-  InstantSearch
-} from 'react-instantsearch/dom'
+  InfiniteHits,
+  InstantSearch,
+  SearchBox,
+  Stats
+} from 'react-instantsearch-dom'
+import Layout from '../components/Layout'
+import withRoot from '../components/withRoot'
 
-const Search = () => (
-  <InstantSearch
-    appId="5GFKHLOIX8"
-    apiKey="aaaf8da6ce8c3b18926dd15895c961f1"
-    indexName="wp_posts_faculty"
-  >
-    <AutoComplete />
-    <Configure hitsPerPage={1} />
-    <Index indexName="wp_posts_campus-security" />
-    <Index indexName="wp_posts_news" />
-    <Index indexName="wp_posts_human-resource" />
-    <Index indexName="wp_posts_associate-program" />
-    <Index indexName="wp_posts_minor" />
-    <Index indexName="wp_posts_about-page" />
-    <Index indexName="wp_posts_staff-member" />
-    <Index indexName="wp_posts_event" />
-    {/* <Index indexName="wp_posts_major" /> */}
-    <Index indexName="wp_posts_fms-page" />
-    <Index indexName="wp_posts_institute" />
-    {/* <Index indexName="wp_posts_student-life-page" /> */}
-    {/* <Index indexName="wp_posts_department" /> */}
-  </InstantSearch>
+const searchClient = algoliasearch(
+  '5GFKHLOIX8',
+  'aaaf8da6ce8c3b18926dd15895c961f1'
 )
 
-class Example extends Component {
-  static propTypes = {
-    hits: PropTypes.arrayOf(PropTypes.object).isRequired,
-    currentRefinement: PropTypes.string.isRequired,
-    refine: PropTypes.func.isRequired
-  }
+Router.onBeforeHistoryChange = url => {
+  this.createBaseSearch()
+  this.setState({ searchTerm: window.location.search.split('=')[1] })
+  this.debouncedSearch()
+}
 
+class Search extends Component {
   state = {
-    value: this.props.currentRefinement
+    searchTerm: {
+      query: 'admissions'
+    }
   }
-
-  onChange = (event, { newValue }) => {
+  componentDidMount () {
     this.setState({
-      value: newValue
+      searchTerm: {
+        query: window.location.search.split('=')[1] || 'admissions'
+      }
     })
   }
+  onSearchStateChange = searchState => {
+    Router.push({
+      pathname: '/search',
+      query: { search: searchState.query }
+    })
 
-  onSuggestionsFetchRequested = ({ value }) => {
-    this.props.refine(value)
+    this.setState({ searchTerm: searchState })
   }
-
-  onSuggestionsClearRequested = () => {
-    this.props.refine()
-  }
-
-  getSuggestionValue (hit) {
-    return hit.post_title
-  }
-
-  renderSuggestion (hit) {
-    console.log(hit)
-    return (
-      <>
-        <Highlight attribute="post_title" hit={hit} tagName="mark" /> <br />
-        <Highlight attribute="content" hit={hit} tagName="mark" />
-      </>
-    )
-  }
-
-  renderSectionTitle (section) {
-    return section.index
-  }
-
-  getSectionSuggestions (section) {
-    return section.hits
-  }
-
   render () {
-    const { hits } = this.props
-    const { value } = this.state
-
-    const inputProps = {
-      placeholder: 'Search for a product...',
-      onChange: this.onChange,
-      value
-    }
-
+    const Hit = ({ hit }) => (
+      <div key={hit.post_id} className={this.props.classes.searchResult}>
+        <span className={this.props.classes.type}>
+          {hit.post_type_label.replace(/-|pages/gi, ' ').trim()}
+        </span>
+        <a href={hit.search_url} className={this.props.classes.title}>
+          {hit.post_title}
+        </a>
+      </div>
+    )
+    const { classes } = this.props
     return (
-      <Autosuggest
-        suggestions={hits}
-        multiSection={true}
-        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        getSuggestionValue={this.getSuggestionValue}
-        renderSuggestion={this.renderSuggestion}
-        inputProps={inputProps}
-        renderSectionTitle={this.renderSectionTitle}
-        getSectionSuggestions={this.getSectionSuggestions}
-      />
+      <Layout>
+        <Head>
+          <title>Search | Franciscan University of Steubenville</title>
+          <link
+            rel="stylesheet"
+            href="/static/styles/page.css"
+            type="text/css"
+          />
+          <link
+            rel="stylesheet"
+            href="/static/styles/search.css"
+            type="text/css"
+          />
+        </Head>
+        <div className={classes.contentContainer}>
+          <InstantSearch
+            indexName="wp_searchable_posts"
+            searchClient={searchClient}
+            searchState={this.state.searchTerm || { query: 'admissions' }}
+            onSearchStateChange={this.onSearchStateChange}
+          >
+            <Grid container spacing={24}>
+              <Grid item s={12}>
+                <SearchBox autofocus={true} />
+                <Stats />
+
+                <InfiniteHits hitComponent={Hit} />
+              </Grid>
+              {/* TODO: Align these more precisely */}
+              {/* <Grid item s={3} style={{ alignSelf: 'center', marginTop: 4 }}>
+                <HierarchicalMenu
+                  attributes={[
+                    'post_type_label',
+                    'taxonomies_hierarchical.faculty-departments.lvl0'
+                  ]}
+                  limit={50}
+                  rootPath={null}
+                  separator=" > "
+                  showMore={false}
+                  showMoreLimit={20}
+                  showParentLevel
+                /> */}
+              {/* </Grid> */}
+            </Grid>
+          </InstantSearch>
+        </div>
+      </Layout>
     )
   }
 }
+const styles = theme => ({
+  root: {
+    '& br': {
+      display: 'unset'
+    }
+  },
+  contentContainer: {
+    width: '100%',
+    maxWidth: '70%',
+    margin: '0 auto',
+    [theme.breakpoints.down('md')]: {
+      maxWidth: '85%'
+    },
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '95%'
+    }
+  },
+  container: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(12, 1fr)',
+    gridGap: `${theme.spacing.unit * 3}px`
+  },
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 200
+  },
+  searchResult: {
+    margin: '16px 0'
+  },
+  title: {
+    fontSize: '24px',
+    fontWeight: 400,
+    display: 'block',
+    textDecoration: 'none',
+    color: 'rgba(0, 0, 0, .87)'
+  },
+  type: {
+    fontSize: '18px',
+    fontWeight: 400,
+    textTransform: 'uppercase',
+    color: theme.palette.secondary.main
+  }
+})
 
-const AutoComplete = connectAutoComplete(Example)
-
-export default Search
+export default withRoot(withStyles(styles)(Search))
