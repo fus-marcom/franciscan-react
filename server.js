@@ -1120,6 +1120,11 @@ const translationObj = {
     type: 'studentLifePages',
     id: { default: 'meal-plan-details' }
   },
+  'meal-plan-eligibility': {
+    page: '/page',
+    type: 'studentLifePages',
+    id: { default: 'meal-plan-eligibility' }
+  },
   evangelization: {
     page: '/page',
     type: 'studentLifePages',
