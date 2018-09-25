@@ -783,7 +783,8 @@ const translationObj = {
     type: { default: 'graduatePrograms', faculty: 'faculty' },
     id: {
       default: 'mba',
-      faculty: 'mba'
+      faculty: 'mba',
+      requirements: 'mba-requirements'
     }
   },
   'mba-online': {
