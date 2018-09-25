@@ -109,8 +109,8 @@ export const academicsMenu = [
     subMenu: [
       {
         text: 'Programs',
-        linkUrl: '/academics/graduate-programs',
-        asUrl: '/page?type=academicsPages&id=graduate-programs'
+        linkUrl: '/academics/graduate',
+        asUrl: '/page?type=academicsPages&id=graduate'
       },
       {
         text: 'Graduate Catalog',
