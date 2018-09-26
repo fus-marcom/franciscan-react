@@ -312,22 +312,25 @@ class TabbedSection extends React.Component {
                 <ul className={classes.degreeList}>
                   <lh style={{ fontWeight: 400 }}>On-Campus/Online</lh>
                   <li>
-                    <a title="MA Theology" href="/English/">
+                    <a title="MA Theology" href="/ma-theology/">
                       MA Theology
                     </a>
                   </li>
                   <li>
-                    <a title="MS Education" href="/English/">
+                    <a title="MS Education" href="/graduate-education/">
                       MS Education
                     </a>
                   </li>
                   <li>
-                    <a title="MS Educational Administration" href="/English/">
+                    <a
+                      title="MS Educational Administration"
+                      href="/graduate-education/"
+                    >
                       MS Educational Administration
                     </a>
                   </li>
                   <li>
-                    <a title="MBA" href="/English/">
+                    <a title="MBA" href="/mba/">
                       MBA
                     </a>
                   </li>
@@ -335,26 +338,26 @@ class TabbedSection extends React.Component {
                   <li>
                     <a
                       title="MA Catechetics and Evangelization"
-                      href="/English/"
+                      href="/graduate-catechetics/"
                     >
                       MA Catechetics and Evangelization
                     </a>
                   </li>
                   <lh style={{ fontWeight: 400 }}>On-Campus</lh>
                   <li>
-                    <a title="MA Philosophy" href="/English/">
+                    <a title="MA Philosophy" href="/graduate-philosophy/">
                       MA Philosophy
                     </a>
                   </li>
                   <li>
-                    <a title="MS Nursing" href="/English/">
+                    <a title="MS Nursing" href="/graduate-nursing/">
                       MS Nursing
                     </a>
                   </li>
                   <li>
                     <a
                       title="MA Clinical Mental Health Counseling"
-                      href="/English/"
+                      href="/cmhc/"
                     >
                       MA Clinical Mental Health Counseling
                     </a>
@@ -378,18 +381,24 @@ class TabbedSection extends React.Component {
                 <ul className={classes.degreeList}>
                   <lh style={{ fontWeight: 400 }}>High School Students</lh>
                   <li>
-                    <a title="FastTrack" href="/English/">
+                    <a title="FastTrack" href="/fasttrack/">
                       FastTrack
                     </a>
                   </li>
                   <lh style={{ fontWeight: 400 }}>Undergraduate</lh>
                   <li>
-                    <a title="Associate in Philosophy" href="/English/">
+                    <a
+                      title="Associate in Philosophy"
+                      href="/philosophy/online-associates/"
+                    >
                       Associate in Philosophy
                     </a>
                   </li>
                   <li>
-                    <a title="Associate in Theology" href="/English/">
+                    <a
+                      title="Associate in Theology"
+                      href="/theology/online-associates/"
+                    >
                       Associate in Theology
                     </a>
                   </li>
@@ -397,7 +406,7 @@ class TabbedSection extends React.Component {
                   <li>
                     <a
                       title="MA Catechetics and Evangelization"
-                      href="/English/"
+                      href="/graduate-catechetics/"
                     >
                       MA Catechetics and Evangelization
                     </a>
@@ -406,19 +415,19 @@ class TabbedSection extends React.Component {
                   <li>
                     <a
                       title="MA Theology and Christian Ministry"
-                      href="/English/"
+                      href="/ma-theology/"
                     >
                       MA Theology and Christian Ministry
                     </a>
                   </li>
 
                   <li>
-                    <a title="MBA" href="/English/">
+                    <a title="MBA Online" href="/mba-online/">
                       MBA
                     </a>
                   </li>
                   <li>
-                    <a title="MS Education" href="/English/">
+                    <a title="MS Education" href="/online/msed/">
                       MS Education
                     </a>
                   </li>
