@@ -68,6 +68,99 @@ const IndexPage = ({ classes }) => (
       <TabbedSection />
     </Grid>
     <TextSection
+      text="Over 55 percent of Franciscan University students voluntarily go to Mass two or more times a week."
+      bgColor="#21412a"
+      textColor="#fff"
+      borderColor="#998643"
+    />
+    <div className={classes.section}>
+      <Typography variant="display2" gutterBottom>
+        Passionately Catholic
+      </Typography>
+      <Grid container className={classes.contentContainer}>
+        <Grid item className={classes.gridItemFix} xs={6}>
+          <a href="/chapel/portiuncula" title="Portiuncula">
+            <Typography
+              className={classes.sectionText}
+              variant="body1"
+              gutterBottom
+            >
+              Perpetual Adoration
+            </Typography>
+            <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
+              <img
+                src="https://storage.googleapis.com/fus-wp-storage/wp/2018/09/575f4590-dsc_1452-768x513.jpg"
+                alt="Perpetual Adoration"
+              />
+            </Card>
+          </a>
+        </Grid>
+        <Grid item className={classes.gridItemFix} xs={6}>
+          <a href="/chapel" title="Chapel Ministries">
+            <Typography
+              className={classes.sectionText}
+              variant="body1"
+              gutterBottom
+            >
+              Daily Mass
+            </Typography>
+            <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
+              <img
+                src="https://storage.googleapis.com/fus-wp-storage/wp/2018/09/08a7bfe2-2006-graule-775-768x514.jpg"
+                alt="Daily Mass"
+              />
+            </Card>
+          </a>
+        </Grid>
+      </Grid>
+    </div>
+    <Grid
+      container
+      className={classes.contentContainer}
+      style={{ padding: '16px 0', textAlign: 'center' }}
+    >
+      <Grid item className={classes.gridItemFix} xs={6}>
+        <a href="/missions-of-peace" title="Mission Trips">
+          <Typography
+            className={classes.sectionText}
+            variant="body1"
+            gutterBottom
+          >
+            Mission Trips
+          </Typography>
+        </a>
+        <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
+          <iframe
+            className={classes.videoIframe}
+            src="https://www.youtube.com/embed/bHSbib2wt90"
+            frameBorder="0"
+            allow="encrypted-media"
+            allowFullScreen
+          />
+        </Card>
+      </Grid>
+      <Grid item className={classes.gridItemFix} xs={6}>
+        <a href="/sent-ministries" title="SENT Ministries">
+          <Typography
+            className={classes.sectionText}
+            variant="body1"
+            gutterBottom
+          >
+            Ministry
+          </Typography>
+        </a>
+        <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
+          <iframe
+            className={classes.videoIframe}
+            src="https://www.youtube.com/embed/GMR6zF1igYc"
+            frameBorder="0"
+            allow="encrypted-media"
+            allowFullScreen
+          />
+        </Card>
+      </Grid>
+    </Grid>
+    <TextSection
       text="96 percent of graduates employed, in graduate school, or serving the Church within one year."
       bgColor="#21412a"
       textColor="#fff"
@@ -106,44 +199,6 @@ const IndexPage = ({ classes }) => (
         </Grid>
       </div>
     </div>
-    <Grid container className={classes.contentContainer}>
-      <Grid item className={classes.gridItemFix} xs={6}>
-        <Typography
-          className={classes.sectionText}
-          variant="body1"
-          gutterBottom
-        >
-          Study Abroad
-        </Typography>
-        <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
-          <iframe
-            className={classes.videoIframe}
-            src="https://www.youtube.com/embed/HzfPBp3lHTU"
-            frameBorder="0"
-            allow="encrypted-media"
-            allowFullScreen
-          />
-        </Card>
-      </Grid>
-      <Grid item className={classes.gridItemFix} xs={6}>
-        <Typography
-          className={classes.sectionText}
-          variant="body1"
-          gutterBottom
-        >
-          Serve Others
-        </Typography>
-        <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
-          <iframe
-            className={classes.videoIframe}
-            src="https://www.youtube.com/embed/GMR6zF1igYc"
-            frameBorder="0"
-            allow="encrypted-media"
-            allowFullScreen
-          />
-        </Card>
-      </Grid>
-    </Grid>
   </Layout>
 )
 
