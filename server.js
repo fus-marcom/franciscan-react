@@ -1136,10 +1136,9 @@ const translationObj = {
       default: '/page',
       'faculty-openings': '/job-list',
       'staff-openings': '/job-list',
-      careers: '/job-list',
-      thirdly: '/page'
+      careers: '/job-list'
     },
-    type: { default: 'humanResources', thirdly: 'jobs' },
+    type: { default: 'humanResources' },
     id: { default: 'employment-and-human-resources' }
   },
   'consumer-information': {
