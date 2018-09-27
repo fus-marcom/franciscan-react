@@ -69,7 +69,7 @@
   "main": "n/a",
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "^8.2.3",
+    "babel-eslint": "^10.0.1",
     "babel-jest": "^23.0.1",
     "chai": "^4.1.2",
     "commitizen": "^2.9.6",
