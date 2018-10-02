@@ -1,56 +1,50 @@
+import React from 'react'
+import Link from 'next/link'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
-import Link from 'next/link'
-import React, { Component } from 'react'
+
+const AppBarMenuItem = ({
+  classes,
+  content,
+  toggleDrawer,
+  linkId,
+  asUrl,
+  linkUrl
+}) => (
+  <li className={classes.item}>
+    <Typography
+      variant={'headline'}
+      id={linkId}
+      title={content}
+      className={classes.content}
+      onClick={() => toggleDrawer && toggleDrawer(linkId)}
+    >
+      {linkId ? (
+        content
+      ) : (
+        <Link
+          prefetch={asUrl && true}
+          href={asUrl || linkUrl}
+          as={asUrl && linkUrl}
+        >
+          <a style={{ color: 'rgba(0,0,0,0.87)' }}>{content}</a>
+        </Link>
+      )}
+    </Typography>
+  </li>
+)
 
 const styles = theme => ({
-  listLi: {
+  item: {
     margin: '0',
-    padding: '0 8px'
+    padding: '0 12px'
   },
-  ulLink: {
+  content: {
     textDecoration: 'none',
     paddingBottom: '6px',
     cursor: 'pointer',
-    display: 'inline-block',
-    padding: '0 4px'
+    display: 'inline-block'
   }
 })
-
-class AppBarMenuItem extends Component {
-  render () {
-    const {
-      classes,
-      toggleDrawer,
-      linkId,
-      content,
-      asUrl,
-      linkUrl
-    } = this.props
-    return (
-      <li className={classes.listLi}>
-        <Typography
-          variant={'headline'}
-          id={linkId}
-          title={content}
-          className={classes.ulLink}
-          onClick={() => toggleDrawer && toggleDrawer(linkId)}
-        >
-          {linkId ? (
-            content
-          ) : (
-            <Link
-              prefetch={asUrl && true}
-              href={asUrl || linkUrl}
-              as={asUrl && linkUrl}
-            >
-              <a style={{ color: 'rgba(0,0,0,0.87)' }}>{content}</a>
-            </Link>
-          )}
-        </Typography>
-      </li>
-    )
-  }
-}
 
 export default withStyles(styles)(AppBarMenuItem)
