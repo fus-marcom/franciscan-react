@@ -82,7 +82,7 @@ class Layout extends Component {
             {' '}
             <h1>
               Internet Explorer is not supported. We recommend using the latest
-              version of Chrome or Firefox.
+              version of <a href="https://www.google.com/chrome/">Chrome</a> or <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>.
             </h1>
           </main>
         ) : (
