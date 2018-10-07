@@ -197,6 +197,7 @@ class SingleMission extends Component {
                 <iframe
                   className={classes.videoIframe}
                   src="https://www.youtube.com/embed/bHSbib2wt90"
+                  title="YouTube video: Serve. Inspire. Evangelize. Missions of Peace at Franciscan University."
                   frameBorder="0"
                   allow="encrypted-media"
                   allowFullScreen
