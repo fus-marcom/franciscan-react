@@ -2,17 +2,14 @@ require('dotenv').config()
 const express = require('express')
 const next = require('next')
 const LRUCache = require('lru-cache')
+const { join } = require('path')
+const { parse } = require('url')
 
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dir: '.', dev })
 const handle = app.getRequestHandler()
-const jsforce = require('jsforce')
 
-const username = process.env.SALESFORCE_USERNAME
-const password = process.env.SALESFORCE_PASSWORD
-
-// This is where we cache our rendered HTML pages
 const ssrCache = new LRUCache({
   max: 100,
   maxAge: dev ? 5 : 1000 * 60 * 60 // 1hour
@@ -20,43 +17,6 @@ const ssrCache = new LRUCache({
 
 app.prepare().then(() => {
   const server = express()
-
-  // Handle Inquiry form submissions
-  server.post('/inquiry-submit', function (req, res) {
-    const conn = new jsforce.Connection({
-      // you can change loginUrl to connect to sandbox or prerelease env.
-      loginUrl: 'https://fus.my.salesforce.com/'
-    })
-    conn.login(username, password, function (err, userInfo) {
-      if (err) {
-        return console.error(err)
-      }
-      // Now you can get the access token and instance URL information.
-      // Save them to establish connection next time.
-      console.log(conn.accessToken)
-      console.log(conn.instanceUrl)
-      // logged in user property
-      console.log('User ID: ' + userInfo.id)
-      console.log('Org ID: ' + userInfo.organizationId)
-      // ...
-
-      // Single record creation
-      conn.sobject('Contact').create(
-        {
-          FirstName: 'Janie',
-          LastName: 'Doer',
-          Email: 'tester1235@test.com'
-          // "UG/GRStudentStage": 'inquiry'
-        },
-        function (err, ret) {
-          if (err || !ret.success) {
-            return console.error(err, ret)
-          }
-          console.log('Created record id : ' + ret.id)
-        }
-      )
-    })
-  })
 
   // Use the `renderAndCache` utility defined below to serve pages
   server.get('/', (req, res) => renderAndCache(req, res, '/'))
@@ -244,7 +204,16 @@ app.prepare().then(() => {
   })
 
   server.get('*', (req, res) => {
-    return handle(req, res)
+    const parsedUrl = parse(req.url, true)
+    const { pathname } = parsedUrl
+
+    if (pathname === '/service-worker.js') {
+      const filePath = join(__dirname, '.next', pathname)
+
+      app.serveStatic(req, res, filePath)
+    } else {
+      handle(req, res, parsedUrl)
+    }
   })
 
   server.listen(port, err => {

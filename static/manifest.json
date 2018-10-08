@@ -11,6 +11,16 @@
       "src": "/static/desktop.jpg",
       "sizes": "347x400",
       "type": "image/jpg"
+    },
+    {
+      "src": "/static/img/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/static/img/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/jpg"
     }
   ],
   "start_url": "/",
