@@ -48,6 +48,7 @@ const IndexPage = ({ classes }) => (
           <iframe
             className={classes.videoIframe}
             src="https://www.youtube.com/embed/HpzwoD2oVSQ"
+            title="YouTube video: Be Singular."
             frameBorder="0"
             allow="encrypted-media"
             allowFullScreen
@@ -133,6 +134,7 @@ const IndexPage = ({ classes }) => (
           <iframe
             className={classes.videoIframe}
             src="https://www.youtube.com/embed/bHSbib2wt90"
+            title="YouTube video: Serve. Inspire. Evangelize. Missions of Peace at Franciscan University."
             frameBorder="0"
             allow="encrypted-media"
             allowFullScreen
@@ -153,6 +155,7 @@ const IndexPage = ({ classes }) => (
           <iframe
             className={classes.videoIframe}
             src="https://www.youtube.com/embed/GMR6zF1igYc"
+            title="YouTube video: SENT Ministries, a missionary outreach of Franciscan University of Steubenville."
             frameBorder="0"
             allow="encrypted-media"
             allowFullScreen
