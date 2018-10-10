@@ -314,6 +314,11 @@ const translationObj = {
     type: 'studentLifePages',
     id: { default: 'counseling-services' }
   },
+  'alumni-outcomes': {
+    page: '/page',
+    type: 'alumniOutcomes',
+    id: { default: 'alumni-outcomes' }
+  },
   pilgrimages: {
     page: '/page',
     type: 'pilgrimagesPages',
