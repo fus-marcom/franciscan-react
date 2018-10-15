@@ -40,10 +40,20 @@ const IndexPage = ({ classes }) => (
       textColor="#fff"
       borderColor="#998643"
       padding="12px 0"
+      btnLink="/about/vision-charisms"
+      btnText="Read Our Vision and Charisms"
+      darkBg={true}
     />
 
     <Grid container className={classes.contentContainer}>
       <Grid item className={classes.gridItemFix} xs={12}>
+        <Typography
+          variant="display2"
+          gutterBottom
+          style={{ textAlign: 'center' }}
+        >
+          Be Singular
+        </Typography>
         <Card className={`${classes.card} ${classes.videoIframeContainer}`}>
           <iframe
             className={classes.videoIframe}
