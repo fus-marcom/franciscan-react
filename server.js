@@ -284,7 +284,7 @@ const translationObj = {
     id: { default: 'counseling-services' }
   },
   'alumni-outcomes': {
-    page: '/page',
+    page: '/alumni-list',
     type: 'alumniOutcomes',
     id: { default: 'alumni-outcomes' }
   },
