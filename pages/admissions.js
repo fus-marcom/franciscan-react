@@ -4,9 +4,10 @@ import Link from 'next/link'
 import React from 'react'
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
-import ProfileCard from '../components/ProfileCard'
 import TextSection from '../components/TextSection'
 import withRoot from '../components/withRoot'
+import InvertedButton from '../components/InvertedButton'
+import Typography from '@material-ui/core/Typography'
 
 const Admissions = ({ classes }) => (
   <Layout>
@@ -26,38 +27,31 @@ const Admissions = ({ classes }) => (
     />
 
     <Grid container className={classes.contentContainer}>
-      <Grid item className={classes.gridItemFix} xs={12} sm={4} lg={4}>
-        <ProfileCard
-          profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Alumni_Profiles/IMG_1132.JPG"
-          profileImgTitle="Maggie McDermott"
-          profileType="Alumni Profile"
-          profileName="Maggie McDermott"
-          content="My choice to say Yes to giving my all even in those trying moments can be attributed to the growth and education I received at Franciscan."
-          bgContain
-        />
+      <Grid item xs={12} sm={4} md={4} lg={4}>
+        <Typography>
+          Where are you going? Who do you want to be? How do you want to serve?
+          Those are real questions, with real answers—answers that will shape
+          your future and the future of the world in which you live.
+        </Typography>
       </Grid>
-
-      <Grid item className={classes.gridItemFix} xs={12} sm={4} lg={4}>
-        <ProfileCard
-          profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Alumni_Profiles/IMG_1132.JPG"
-          profileImgTitle="Maggie McDermott"
-          profileType="Alumni Profile"
-          profileName="Maggie McDermott"
-          content="My choice to say Yes to giving my all even in those trying moments can be attributed to the growth and education I received at Franciscan."
-          bgContain
-        />
+      <Grid item xs={12} sm={4} md={4} lg={4}>
+        <Typography>
+          Do you want to grow in mind, body, and spirit? Do you want to expand
+          your intellectual horizons or take the next step in your career? Do
+          you want to serve God and your fellow man in a new way?
+        </Typography>
       </Grid>
-      <Grid item className={classes.gridItemFix} xs={12} sm={4} lg={4}>
-        <ProfileCard
-          profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Alumni_Profiles/IMG_1132.JPG"
-          profileImgTitle="Maggie McDermott"
-          profileType="Alumni Profile"
-          profileName="Maggie McDermott"
-          content="My choice to say Yes to giving my all even in those trying moments can be attributed to the growth and education I received at Franciscan."
-          bgContain
-        />
+      <Grid item xs={12} sm={4} md={4} lg={4}>
+        <Typography>
+          Learning is always personal. Whether it takes place in a classroom or
+          “the cloud,” education is about people: your teachers, your
+          classmates, and you. It’s about your shared desire to grow in
+          knowledge, discover truth, and help one another better serve God and
+          others in the world.
+        </Typography>
       </Grid>
     </Grid>
+
     <TextSection
       sectionTitle="Our mission as a Franciscan and Catholic university that embraces the call to dynamic orthodoxy is to educate, to evangelize, and to send forth joyful disciples."
       bgColor="#21412a"
@@ -124,6 +118,39 @@ const Admissions = ({ classes }) => (
         </section>
       </Grid>
     </Grid>
+    <div className={classes.section}>
+      <div className={classes.innerContainer}>
+        <Typography variant="display2" gutterBottom>
+          Cost and Financial Aid
+        </Typography>
+
+        <Typography
+          className={classes.sectionText}
+          variant="body1"
+          gutterBottom
+        >
+          $27k Tuition
+        </Typography>
+        <Typography
+          className={classes.sectionText}
+          variant="body1"
+          gutterBottom
+        >
+          90% of students receive financial aid
+        </Typography>
+        <Grid item className={classes.heroBtn} xs={12}>
+          <InvertedButton
+            href="https://tcc.noellevitz.com/Franciscan%20University%20of%20Steubenville/Franciscan%20University%20Net%20Price%20Calculator"
+            title="Price Calculator"
+            className={classes.invertedBtn}
+            color="secondary"
+            style={{ width: '192px' }}
+          >
+            Calculate Cost
+          </InvertedButton>
+        </Grid>
+      </div>
+    </div>
     {/* <Grid container className={classes.contentContainer}>
       {majors.map((list, i) => {
         if (i < 3) {
@@ -257,6 +284,34 @@ const styles = theme => ({
     margin: '4px 0',
     fontWeight: 400,
     fontSize: '24px'
+  },
+  section: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    padding: '38px 0',
+    textAlign: 'center'
+  },
+  innerContainer: {
+    width: '70%',
+    margin: '0 auto'
+  },
+  sectionText: {
+    fontSize: '28px',
+    fontWeight: 400,
+    lineHeight: 1.5
+  },
+  heroBtn: {
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: '16px'
+  },
+  invertedBtn: {
+    color: '#21412a',
+    backgroundColor: 'transparent',
+    border: '2px #21412a solid',
+    boxShadow: 'none'
   }
 })
 

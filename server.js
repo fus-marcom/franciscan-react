@@ -1143,7 +1143,7 @@ const translationObj = {
   studentprofiles: { page: '/faculty', type: 'studentProfilePages' },
   admissions: {
     page: {
-      default: '/page',
+      default: '/admissions',
       standard: '/page',
       thirdly: '/page',
       staff: '/staff-list',

@@ -8,6 +8,8 @@ import InvertedButton from '../components/InvertedButton'
 import Layout from '../components/Layout'
 import TabbedSection from '../components/TabbedSection'
 import TextSection from '../components/TextSection'
+import ProfileCard from '../components/ProfileCard'
+
 import withRoot from '../components/withRoot'
 
 const heroImages = [
@@ -212,6 +214,39 @@ const IndexPage = ({ classes }) => (
         </Grid>
       </div>
     </div>
+    <Grid container className={classes.contentContainer}>
+      <Grid item className={classes.gridItemFix} xs={12} sm={4} lg={4}>
+        <ProfileCard
+          profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Alumni_Profiles/IMG_1132.JPG"
+          profileImgTitle="Maggie McDermott"
+          profileType="Alumni Profile"
+          profileName="Maggie McDermott"
+          content="My choice to say Yes to giving my all even in those trying moments can be attributed to the growth and education I received at Franciscan."
+          bgContain
+        />
+      </Grid>
+
+      <Grid item className={classes.gridItemFix} xs={12} sm={4} lg={4}>
+        <ProfileCard
+          profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Alumni_Profiles/IMG_1132.JPG"
+          profileImgTitle="Maggie McDermott"
+          profileType="Alumni Profile"
+          profileName="Maggie McDermott"
+          content="My choice to say Yes to giving my all even in those trying moments can be attributed to the growth and education I received at Franciscan."
+          bgContain
+        />
+      </Grid>
+      <Grid item className={classes.gridItemFix} xs={12} sm={4} lg={4}>
+        <ProfileCard
+          profileImg="https://www.franciscan.edu/uploadedImages/Content/Faculty_and_Students/Alumni_Profiles/IMG_1132.JPG"
+          profileImgTitle="Maggie McDermott"
+          profileType="Alumni Profile"
+          profileName="Maggie McDermott"
+          content="My choice to say Yes to giving my all even in those trying moments can be attributed to the growth and education I received at Franciscan."
+          bgContain
+        />
+      </Grid>
+    </Grid>
   </Layout>
 )
 
