@@ -786,9 +786,10 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@types/async@2.0.47":
-  version "2.0.47"
-  resolved "https://registry.yarnpkg.com/@types/async/-/async-2.0.47.tgz#f49ba1dd1f189486beb6e1d070a850f6ab4bd521"
+"@types/async@2.0.50":
+  version "2.0.50"
+  resolved "https://registry.yarnpkg.com/@types/async/-/async-2.0.50.tgz#117540e026d64e1846093abbd5adc7e27fda7bcb"
+  integrity sha512-VMhZMMQgV1zsR+lX/0IBfAk+8Eb7dPVMWiQGFAt3qjo5x7Ml6b77jUo0e1C3ToD+XRDXqtrfw+6AB0uUsPEr3Q==
 
 "@types/jss@^9.5.3":
   version "9.5.4"
@@ -817,9 +818,14 @@
   dependencies:
     csstype "^2.2.0"
 
-"@types/zen-observable@0.5.3", "@types/zen-observable@^0.5.3":
+"@types/zen-observable@0.5.3":
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/@types/zen-observable/-/zen-observable-0.5.3.tgz#91b728599544efbb7386d8b6633693a3c2e7ade5"
+
+"@types/zen-observable@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@types/zen-observable/-/zen-observable-0.8.0.tgz#8b63ab7f1aa5321248aad5ac890a485656dcea4d"
+  integrity sha512-te5lMAWii1uEJ4FwLjzdlbw3+n0FZNOvFXHxQDKeT0dilh7HOzdMzV2TrJVUzq8ep7J4Na8OUYPRLSQkJHAlrg==
 
 "@webassemblyjs/ast@1.7.8":
   version "1.7.8"
@@ -1158,25 +1164,33 @@ apollo-cache-inmemory@^1.1.12:
     apollo-utilities "^1.0.11"
     graphql-anywhere "^4.1.8"
 
+apollo-cache@1.1.22:
+  version "1.1.22"
+  resolved "https://registry.yarnpkg.com/apollo-cache/-/apollo-cache-1.1.22.tgz#d4682ea6e8b2508a934f61c2fd9e36b4a65041d9"
+  integrity sha512-8PoxhQLISj2oHwT7i/r4l+ly4y3RKZls+dtXzAewu3U77P9dNZKhYkRNAhx9iEfsrNoHgXBV8vMp64hb1uYh+g==
+  dependencies:
+    apollo-utilities "^1.0.27"
+
 apollo-cache@^1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/apollo-cache/-/apollo-cache-1.1.7.tgz#5817018a2fbfc05a21ba319bd17a3e7538110cc5"
   dependencies:
     apollo-utilities "^1.0.11"
 
-apollo-client@^2.2.8:
-  version "2.2.8"
-  resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-2.2.8.tgz#b604d31ab2d2dd00db3105d8793b93ee02ce567e"
+apollo-client@^2.4.8:
+  version "2.4.8"
+  resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-2.4.8.tgz#3a798f1076243465a59061d44d11bd030b68deb9"
+  integrity sha512-OAFbCTnGPtaIv0j+EZYzY20d+MD2JNbJ/YXZ4s0/oZlSg87bb0gjcIbccw2lnytipymZcZNr5ArFFeh0saGEwA==
   dependencies:
-    "@types/zen-observable" "^0.5.3"
-    apollo-cache "^1.1.7"
+    "@types/zen-observable" "^0.8.0"
+    apollo-cache "1.1.22"
     apollo-link "^1.0.0"
     apollo-link-dedup "^1.0.0"
-    apollo-utilities "^1.0.11"
+    apollo-utilities "1.0.27"
     symbol-observable "^1.0.2"
-    zen-observable "^0.7.0"
+    zen-observable "^0.8.0"
   optionalDependencies:
-    "@types/async" "2.0.47"
+    "@types/async" "2.0.50"
 
 apollo-link-dedup@^1.0.0:
   version "1.0.5"
@@ -1212,6 +1226,13 @@ apollo-link@^1.2.1:
     "@types/node" "^9.4.6"
     apollo-utilities "^1.0.0"
     zen-observable-ts "^0.8.6"
+
+apollo-utilities@1.0.27, apollo-utilities@^1.0.27:
+  version "1.0.27"
+  resolved "https://registry.yarnpkg.com/apollo-utilities/-/apollo-utilities-1.0.27.tgz#77c550f9086552376eca3a48e234a1466b5b057e"
+  integrity sha512-nzrMQ89JMpNmYnVGJ4t8zN75gQbql27UDhlxNi+3OModp0Masx5g+fQmQJ5B4w2dpRuYOsdwFLmj3lQbwOKV1Q==
+  dependencies:
+    fast-json-stable-stringify "^2.0.0"
 
 apollo-utilities@^1.0.0:
   version "1.0.5"
@@ -9447,3 +9468,8 @@ zen-observable@^0.6.0:
 zen-observable@^0.7.0:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/zen-observable/-/zen-observable-0.7.1.tgz#f84075c0ee085594d3566e1d6454207f126411b3"
+
+zen-observable@^0.8.0:
+  version "0.8.11"
+  resolved "https://registry.yarnpkg.com/zen-observable/-/zen-observable-0.8.11.tgz#d3415885eeeb42ee5abb9821c95bb518fcd6d199"
+  integrity sha512-N3xXQVr4L61rZvGMpWe8XoCGX8vhU35dPyQ4fm5CY/KDlG0F75un14hjbckPXTDuKUY6V0dqR2giT6xN8Y4GEQ==
