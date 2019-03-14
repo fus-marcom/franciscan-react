@@ -37,7 +37,7 @@
     "algoliasearch": "^3.30.0",
     "apollo-cache-inmemory": "^1.1.12",
     "apollo-client": "^2.2.8",
-    "apollo-link-http": "^1.5.3",
+    "apollo-link-http": "^1.5.13",
     "change-case": "^3.0.2",
     "classnames": "^2.2.5",
     "dotenv": "^6.0.0",
