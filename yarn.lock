@@ -667,6 +667,13 @@
     core-js "^2.5.7"
     regenerator-runtime "^0.12.0"
 
+"@babel/runtime@^7.1.2":
+  version "7.4.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.5.tgz#582bb531f5f9dc67d2fcb682979894f75e253f12"
+  integrity sha512-TuI4qpWZP6lGOGIuGWtp9sPluqYICmbk8T/1vpSysqJxRPkudh/ofFWyqdcMsDf2s7KvDL4/YHgKyvcS3g9CJQ==
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
 "@babel/template@7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.0.0.tgz#c2bc9870405959c89a9c814376a2ecb247838c80"
@@ -7291,24 +7298,28 @@ react-event-listener@^0.6.2:
     prop-types "^15.6.0"
     warning "^4.0.1"
 
-react-instantsearch-core@^5.2.3:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-5.3.0.tgz#31570d29b5967505436deaf373d0e2f24a9adfd4"
+react-instantsearch-core@^5.7.0:
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-core/-/react-instantsearch-core-5.7.0.tgz#6979ec419d2711033f6c83181de6cae9e1f064c2"
+  integrity sha512-fjexlv+hR8OyZraAmjwM+GmiVcJFzLUnufIKPMLO7/L4Mg5h0pETSXNBT22cCXTnda6XML//+GqQmWJFf+PBrA==
   dependencies:
+    "@babel/runtime" "^7.1.2"
     algoliasearch-helper "^2.26.0"
     lodash "^4.17.4"
     prop-types "^15.5.10"
 
-react-instantsearch-dom@^5.2.3:
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/react-instantsearch-dom/-/react-instantsearch-dom-5.2.3.tgz#d83d7db0cb4c0c096f17fdad7dd271ff28534e00"
+react-instantsearch-dom@^5.7.0:
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/react-instantsearch-dom/-/react-instantsearch-dom-5.7.0.tgz#5a9b0cfb461c08a349a5fdc5d1cff50b8f5fcf56"
+  integrity sha512-FwFZZXwgaYtLrXD9KJNlrPVkfw8JOqVgpDBvra547udF4zbacZUuX7/qTyMHjVW/Lz59t5T25vCGLzmQiO89YA==
   dependencies:
+    "@babel/runtime" "^7.1.2"
     algoliasearch "^3.27.1"
     algoliasearch-helper "^2.26.0"
     classnames "^2.2.5"
     lodash "^4.17.4"
     prop-types "^15.5.10"
-    react-instantsearch-core "^5.2.3"
+    react-instantsearch-core "^5.7.0"
 
 react-jss@^8.1.0:
   version "8.6.1"
@@ -7521,6 +7532,11 @@ regenerator-runtime@^0.11.0, regenerator-runtime@^0.11.1:
 regenerator-runtime@^0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.12.0.tgz#8052ac952d85b10f3425192cd0c53f45cf65c6cb"
+
+regenerator-runtime@^0.13.2:
+  version "0.13.2"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.2.tgz#32e59c9a6fb9b1a4aff09b4930ca2d4477343447"
+  integrity sha512-S/TQAZJO+D3m9xeN1WTI8dLKBBiRgXBlTJvbWjCThHWZj9EvHK70Ff50/tYj2J/fvBY6JtFVwRuazHN2E7M9BA==
 
 regenerator-transform@^0.13.3:
   version "0.13.3"
