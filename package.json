@@ -74,7 +74,7 @@
     "babel-jest": "^23.0.1",
     "chai": "^4.1.2",
     "commitizen": "^2.9.6",
-    "cz-conventional-changelog": "^2.1.0",
+    "cz-conventional-changelog": "^3.0.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.3",
