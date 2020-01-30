@@ -57,7 +57,7 @@
     "react": "^16.4.1",
     "react-apollo": "^2.1.0",
     "react-dom": "^16.4.1",
-    "react-instantsearch-dom": "^5.2.3",
+    "react-instantsearch-dom": "^6.3.0",
     "react-masonry-component": "^6.0.2",
     "react-scroll": "^1.7.9",
     "react-swipeable-views": "^0.12.16",
